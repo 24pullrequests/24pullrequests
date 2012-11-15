@@ -24,10 +24,12 @@ h1 span{
   font-size: 24px;
   letter-spacing:0;
 }
+
 .forkme{
   position: fixed;
   display:block;
-  top: 0;
+  top: 40px;
+  z-index: -1;
   right: 0;
 }
 
