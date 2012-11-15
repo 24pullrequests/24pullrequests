@@ -1,0 +1,8 @@
+<p>Hey looks like we couldn't get an email for your profile from Github.</p>
+
+<p>If you want to receive notifications from 24PullRequests please enter your email below.</p>
+
+<%= simple_form_for profile, :url => profile_path, :method => 'put' do |f| %>
+  <%= f.input :email %>
+  <%= f.button :submit, "Add" %>
+<% end %>

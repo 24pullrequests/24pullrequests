@@ -18,6 +18,10 @@ class User < ActiveRecord::Base
     nickname
   end
 
+  def email_missing?
+    email.blank?
+  end
+
   private
   def self.extract_info(hash)
     provider = hash.fetch('provider')

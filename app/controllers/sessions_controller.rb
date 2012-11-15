@@ -9,7 +9,12 @@ class SessionsController < ApplicationController
                   User.create_from_auth_hash(auth_hash)
 
     session[:user_id] = user.id
-    redirect_to dashboard_path()
+
+    if user.email_missing?
+      redirect_to add_email_profile_path()
+    else
+      redirect_to dashboard_path()
+    end
   end
 
   def destroy

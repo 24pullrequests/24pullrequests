@@ -1,6 +1,8 @@
 Tfpullrequests::Application.routes.draw do
-  resources :users
-  resource  :dashboard # Singular, only applies to current user
+  resource  :dashboard   # Singular, the logged in homepage for the current user
+  resource  :profile do  # Singular, the editable profile for the current user
+    get :add_email, :on => :member
+  end
 
   match '/login',  to: 'sessions#new',     as: 'login'
   match '/logout', to: 'sessions#destroy', as: 'logout'
