@@ -7,18 +7,18 @@ body{
   text-shadow:rgba(0, 0, 0, 0.398438) 0px 1px 3px;
   color:#fff;
 }
-  canvas{
-    position:absolute;
-    top:0
-  }
-  h1{
-    font-size: 120px;
-    line-height: 1;
-    letter-spacing: -2px;
-    text-rendering: optimizelegibility;
-    text-align:center;
-  }
-  #wrapper{
-    width:70%;
-    margin:0 auto;
-  }
+canvas{
+  position:absolute;
+  top:0;
+  z-index:-1;
+}
+h1{
+  font-size: 120px;
+  line-height: 1;
+  letter-spacing: -2px;
+  text-align:center;
+}
+#wrapper{
+  width:70%;
+  margin:0 auto;
+}
