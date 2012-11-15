@@ -4,6 +4,8 @@ gem 'rails', '3.2.9'
 gem 'pg'
 gem 'unicorn'
 gem 'foreman'
+gem 'omniauth'
+gem 'omniauth-github'
 
 # Gems used only for assets and not required
 # in production environments by default.
