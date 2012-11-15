@@ -2,10 +2,11 @@ body{
   background:red;
   margin:0;
   padding:0;
-  overflow:hidden;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-shadow:rgba(0, 0, 0, 0.398438) 0px 1px 3px;
   color:#fff;
+  font-size:18px;
+  line-height:1.2em;
 }
 canvas{
   position:absolute;
@@ -17,8 +18,68 @@ h1{
   line-height: 1;
   letter-spacing: -2px;
   text-align:center;
+  margin:60px;
 }
+h1 span{
+  display:block;
+  margin-top:20px;
+  font-size: 24px;
+  letter-spacing:0;
+}
+
 #wrapper{
   width:70%;
   margin:0 auto;
+}
+
+.grid-4{
+  width:29%;
+  float:left;
+  margin:0 2%;
+  font-size:14px;
+}
+
+.grid-alpha{
+  margin-left:0;
+}
+
+.grid-omega{
+  margin-right:0;
+}
+
+.forkme{
+  position: fixed;
+  display:block;
+  top: 0;
+  right: 0;
+}
+
+.forkme img{
+  border: 0;
+}
+
+footer{
+  font-size:14px;
+  margin:20px 0;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+ 
+.clearfix {
+  display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+  display: block;
+}
+ 
+* html .clearfix {
+  height: 1%;
 }
