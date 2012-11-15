@@ -1,0 +1,16 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: tfpullrequests_development
+  pool: 5
+  username: tfpullrequests
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: tfpullrequests_test
+  pool: 5
+  username: tfpullrequests
+  password:
+
