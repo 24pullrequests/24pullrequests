@@ -18,6 +18,20 @@ h1{
   text-align:center;
   margin:60px;
 }
+
+@media (min-width: 480px) and (max-width: 767px) {
+  h1{
+    font-size:80px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  h1{
+    font-size:60px;
+  }
+}
+
 h1 span{
   display:block;
   margin-top:20px;
