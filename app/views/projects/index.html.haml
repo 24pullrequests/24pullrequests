@@ -10,7 +10,4 @@
       = link_to language, '#', :data => {:language => language}
 
 .row#projects
-  - @projects.each do |project|
-    .span4{:class => project.main_language, :data => {:id => project.id}}
-      %h3= link_to project.name, project.github_url, :target => '_blank'
-      = project.description
+  = render @projects
