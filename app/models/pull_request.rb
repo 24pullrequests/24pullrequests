@@ -10,7 +10,7 @@ class PullRequest
   end
   
   def initialize(json)
-    ["title", "changed_files", "issue", "created_at", "state", "body", "merged"].each do |f|
+    ["title", "changed_files", "issue", 'issue_url', "created_at", "state", "body", "merged"].each do |f|
       value = json["payload"]["pull_request"][f]
       instance_variable_set("@#{f}", value)
     end

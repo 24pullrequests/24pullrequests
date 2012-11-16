@@ -1,8 +1,11 @@
-Welcome back #{user.nickname}
+%h2 Welcome back #{user.nickname}
+
+%p This is where you can see all the activity we've track for you over Christmas.
+
+%h3 Recent Pull Requests
 
 %ul
   - for pull in pull_requests
     %li
-      = pull.title
-      .span
-        = pull.body
+      %h4= link_to pull.title, pull.issue_url, :target => :blank
+      = pull.body
