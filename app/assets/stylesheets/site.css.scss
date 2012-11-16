@@ -69,3 +69,31 @@ footer{
 .alert{
   margin-top:10px;
 }
+
+#languages{
+  margin:0;
+  li{
+    box-shadow:rgba(0, 0, 0, 0.398438) 0px 1px 3px;
+    float:left;
+    display:inline-block;
+    height:20px;
+    background:#fff;
+    padding:3px 10px;
+    list-style:none;
+    border-radius:10px;
+    margin-right:10px;
+    margin-bottom:5px;
+    transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    a{
+      color:red; 
+      text-shadow:none;
+      text-decoration:none;
+    }
+    &.disabled{
+      opacity:0.5;
+    }
+  }
+}

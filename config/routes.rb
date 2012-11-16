@@ -1,5 +1,6 @@
 Tfpullrequests::Application.routes.draw do
   resources :users
+  resources :projects, :only => [:index, :new, :create]
   resource  :dashboard # Singular, only applies to current user
 
   match '/login',  to: 'sessions#new',     as: 'login'
