@@ -25,6 +25,16 @@ h1{
   }
 }
 
+a{
+  color: #fff;
+  text-decoration:underline;
+  &:hover{
+    color: #ddd;
+  }
+  &.btn{
+    text-decoration:none;
+  }
+}
 
 @media (max-width: 480px) {
   h1{
@@ -54,4 +64,8 @@ h1 span{
 footer{
   font-size:14px;
   margin:20px 0;
+}
+
+.alert{
+  margin-top:10px;
 }
