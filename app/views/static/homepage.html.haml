@@ -5,6 +5,8 @@
 %p 24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Xmas.
 %p This is the site to help promote the project, highlighting why, how and where to send your pull requests.
 
+%hr
+
 .row.clearfix
   .span4
     %h2 'Tis the season
@@ -16,3 +18,16 @@
     %h2 Build your profile
     %p Contributing to open source projects is also a great way to build your profile in the community and improve your cv.
     %p It's really easy to get started, even small contributions can be really valuable to a project.
+
+%hr
+
+.row.clearfix
+  .span12
+    %h2
+      Suggested Projects
+      = link_to 'Suggest a project', new_project_path, :class => 'btn pull-right'
+    %p
+      Can't think of a project you would like to help out? We've put together a list of popular projects,
+      = link_to 'browse them all here.', projects_path
+      
+  = render @projects
