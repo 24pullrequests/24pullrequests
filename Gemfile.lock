@@ -119,6 +119,8 @@ GEM
     rake (10.0.1)
     rdoc (3.12)
       json (~> 1.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     sass (3.2.3)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -165,6 +167,7 @@ DEPENDENCIES
   omniauth-github
   pg
   rails (= 3.2.9)
+  rest-client
   sass-rails (~> 3.2.3)
   simple_form
   therubyracer

@@ -7,6 +7,7 @@ gem 'foreman'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'haml-rails'
+gem 'rest-client'
 
 # Gems used only for assets and not required
 # in production environments by default.

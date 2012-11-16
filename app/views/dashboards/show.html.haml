@@ -1,1 +1,8 @@
 Welcome back #{user.nickname}
+
+%ul
+  - for pull in pull_requests
+    %li
+      = pull.title
+      .span
+        = pull.body
