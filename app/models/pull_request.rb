@@ -5,7 +5,7 @@ class PullRequest
   
   def self.find_by_nickname(nickname)
     @nickname = nickname
-    parse_events(get_event_pages)
+    parse_events(get_event_pages(10))
   end
   
   def initialize(json)
@@ -29,11 +29,17 @@ class PullRequest
   
   def self.parse_events(event_pages)
     events = event_pages.inject([]) {|col, ep| col.concat( JSON.parse(ep) ); col }
-    events.select{|e| is_a_pull?(e) && pulled_by_user(e) }.map {|pr| PullRequest.new(pr) }
+    events.select{|e| is_a_pull?(e) && pulled_by_user?(e) }.map {|pr| PullRequest.new(pr) }
   end
   
-  def self.is_a_pull?(event); event['type'] == 'PullRequestEvent'; end
-  def self.pulled_by_user(event); event['payload']['pull_request']['user']['login'] == @nickname; end
+  def self.is_a_pull?(event)
+    # No user object looks like an old style pull request/issue
+    event['type'] == 'PullRequestEvent' && !event['payload']['pull_request']['user'].nil?
+  end
+  
+  def self.pulled_by_user?(event)
+    event['payload']['pull_request']['user']['login'] == @nickname
+  end
   
   # Not in use, enable before go live, only provide events from dec first onward
   def self.pulled_in_december?(event)
