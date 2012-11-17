@@ -7,7 +7,7 @@
     = link_to 'Everything', '#'
   - Project::LANGUAGES.each do |language|
     %li
-      = link_to language, '#', :data => {:language => language}
+      = link_to language, '#', :data => {:language => parameterize_language(language)}
 
 .row#projects
   = render @projects
