@@ -8,6 +8,7 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'haml-rails'
 gem 'rest-client'
+gem 'typhoeus'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -26,3 +27,8 @@ gem 'jquery-rails'
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem 'simple_form'
+
+# I'm using mysql for dev (baris)
+group :development do
+  gem 'mysql2'
+end
