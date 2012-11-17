@@ -4,9 +4,8 @@ class PullRequest
   EARLIEST_PULL_DATE = 1354320000
   
   def self.find_by_nickname(nickname)
-    event_stream = RestClient.get "https://api.github.com/users/#{nickname}/events/public"
-    events = JSON.parse(event_stream)
-    events.select{|e| is_a_pull?(e) }.map {|pr| PullRequest.new(pr) }
+    @nickname = nickname
+    parse_events(get_event_pages)
   end
   
   def initialize(json)
@@ -16,8 +15,25 @@ class PullRequest
     end
   end
   
+
   private
+  
+  def self.get_event_pages(count = 5)
+    hydra = Typhoeus::Hydra.new
+    requests = (1..count).map {|i| Typhoeus::Request.new( "https://api.github.com/users/#{@nickname}/events/public?page=#{i}" ) }
+    requests.each {|r| hydra.queue(r) }
+    hydra.run
+    
+    requests.map {|r| r.response.body }
+  end
+  
+  def self.parse_events(event_pages)
+    events = event_pages.inject([]) {|col, ep| col.concat( JSON.parse(ep) ); col }
+    events.select{|e| is_a_pull?(e) && pulled_by_user(e) }.map {|pr| PullRequest.new(pr) }
+  end
+  
   def self.is_a_pull?(event); event['type'] == 'PullRequestEvent'; end
+  def self.pulled_by_user(event); event['payload']['pull_request']['user']['login'] == @nickname; end
   
   # Not in use, enable before go live, only provide events from dec first onward
   def self.pulled_in_december?(event)
