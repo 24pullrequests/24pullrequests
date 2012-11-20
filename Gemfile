@@ -20,6 +20,11 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+
+  # for heroku db:pull with rbenv
+  gem 'heroku'
+  gem 'taps'
+  gem 'sqlite3'
 end
 
 gem 'jquery-rails'
