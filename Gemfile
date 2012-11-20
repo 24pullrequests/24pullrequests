@@ -21,10 +21,6 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 
-  # for heroku db:pull with rbenv
-  gem 'heroku'
-  gem 'taps'
-  gem 'sqlite3'
 end
 
 gem 'jquery-rails'
@@ -36,4 +32,9 @@ gem 'simple_form'
 # I'm using mysql for dev (baris)
 group :development do
   gem 'mysql2'
+
+  # for heroku db:pull with rbenv
+  gem 'heroku'
+  gem 'taps'
+  gem 'sqlite3'
 end
