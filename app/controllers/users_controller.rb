@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def show
     user = User.find(params[:id])
-    render :show, :locals => { :user => user }
+    pulls = PullRequest.find_by_nickname(user.nickname)
+    render :show, :locals => { :user => user, :pull_requests => pulls }
   end
 end
