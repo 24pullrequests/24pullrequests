@@ -1,5 +1,6 @@
 class StaticController < ApplicationController
   def homepage
-    @projects = Project.all.sample(6)
+    @projects = Project.limit(100).sample(6)
+    @users = User.limit(100).sample(40)
   end
 end
