@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :uid, :provider, :nickname, :email
+  attr_accessible :uid, :provider, :nickname, :email, :gravatar_id
 
   def self.create_from_auth_hash(hash)
     create!(extract_info(hash))
