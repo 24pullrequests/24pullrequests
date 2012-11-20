@@ -5,7 +5,4 @@
 %h3 Recent Pull Requests
 
 %ul
-  - for pull in pull_requests
-    %li
-      %h4= link_to pull.title, pull.issue_url, :target => :blank
-      = pull.body
+  = render :partial => 'pull_requests/pull_request', :collection => pull_requests
