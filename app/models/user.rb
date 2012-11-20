@@ -20,11 +20,18 @@ class User < ActiveRecord::Base
 
   private
   def self.extract_info(hash)
-    provider = hash.fetch('provider')
-    uid      = hash.fetch('uid')
-    nickname = hash.fetch('info',{}).fetch('nickname')
-    email    = hash.fetch('info',{}).fetch('email', nil)
+    provider    = hash.fetch('provider')
+    uid         = hash.fetch('uid')
+    nickname    = hash.fetch('info',{}).fetch('nickname')
+    email       = hash.fetch('info',{}).fetch('email', nil)
+    gravatar_id = hash.fetch('info',{}).fetch('gravatar_id', nil)
 
-    { :provider => provider, :uid => uid, :nickname => nickname, :email => email }
+    {
+      :provider => provider,
+      :uid => uid,
+      :nickname => nickname,
+      :email => email,
+      :gravatar_id => gravatar_id
+    }
   end
 end
