@@ -64,6 +64,8 @@ module Tfpullrequests
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    config.middleware.use Rack::GoogleAnalytics, :tracker => 'UA-265870-31'
 
     config.assets.initialize_on_precompile = false
   end
