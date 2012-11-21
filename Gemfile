@@ -29,6 +29,8 @@ gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem 'simple_form'
 
+gem 'rack-google-analytics'
+
 # I'm using mysql for dev (baris)
 group :development do
   gem 'mysql2'
