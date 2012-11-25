@@ -1,9 +1,11 @@
 class User < ActiveRecord::Base
-  attr_accessible :uid, :provider, :nickname, :email, :gravatar_id, :token
+  attr_accessible :uid, :provider, :nickname, :email, :gravatar_id, :token, :email_frequency
 
   has_many :pull_requests
 
   after_create :download_pull_requests
+  
+  validates_presence_of :email, :if => :send_regular_emails?
 
   def self.create_from_auth_hash(hash)
     create!(extract_info(hash))
@@ -16,6 +18,10 @@ class User < ActiveRecord::Base
 
   def self.find(nickname)
     where(:nickname => nickname).first!
+  end
+
+  def send_regular_emails?
+    ['daily', 'weekly'].include? email_frequency
   end
 
   def to_param
