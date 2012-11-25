@@ -11,6 +11,6 @@ test:
   encoding: unicode
   database: tfpullrequests_test
   pool: 5
-  username: tfpullrequests
+  host: localhost
   password:
 
