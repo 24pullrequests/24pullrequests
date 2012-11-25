@@ -1,4 +1,6 @@
 %li
   %h4
     = link_to pull_request.title, pull_request.issue_url, :target => :blank
+    on
+    = link_to pull_request.repo_name, "https://github.com/#{pull_request.repo_name}", :target => :blank
   = truncate pull_request.body, :length => 200

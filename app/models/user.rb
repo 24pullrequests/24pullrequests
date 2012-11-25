@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :uid, :provider, :nickname, :email, :gravatar_id
+  attr_accessible :uid, :provider, :nickname, :email, :gravatar_id, :token
 
   def self.create_from_auth_hash(hash)
     create!(extract_info(hash))
@@ -17,6 +17,20 @@ class User < ActiveRecord::Base
   def to_param
     nickname
   end
+  
+  def github_client
+    @github_client ||= Octokit::Client.new(:login => nickname, :oauth_token => token, :auto_traversal => true)
+  end
+  
+  def download_pull_requests
+    events = github_client.user_events('andrew')
+    events.select{|e| e.type == 'PullRequestEvent' && e.payload.action == 'opened' }.map {|pr| PullRequest.new(pr) }
+  end
+  
+  def pull_requests
+    # to be replaced with an active record association
+    @pull_requests ||= download_pull_requests
+  end
 
   private
   def self.extract_info(hash)
@@ -25,9 +39,11 @@ class User < ActiveRecord::Base
     nickname    = hash.fetch('info',{}).fetch('nickname')
     email       = hash.fetch('info',{}).fetch('email', nil)
     gravatar_id = hash.fetch('info',{}).fetch('gravatar_id', nil)
+    token       = hash.fetch('credentials', {}).fetch('token')
 
     {
       :provider => provider,
+      :token => token,
       :uid => uid,
       :nickname => nickname,
       :email => email,
