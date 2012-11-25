@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
   attr_accessible :uid, :provider, :nickname, :email, :gravatar_id, :token
 
+  has_many :pull_requests
+
+  after_create :download_pull_requests
+
   def self.create_from_auth_hash(hash)
     create!(extract_info(hash))
   end
@@ -24,12 +28,13 @@ class User < ActiveRecord::Base
   
   def download_pull_requests
     events = github_client.user_events(nickname)
-    events.select{|e| e.type == 'PullRequestEvent' && e.payload.action == 'opened' }.map {|pr| PullRequest.new(pr) }
-  end
-  
-  def pull_requests
-    # to be replaced with an active record association
-    @pull_requests ||= download_pull_requests
+    events.select{|e| e.type == 'PullRequestEvent' && e.payload.action == 'opened' }.map do |pr|
+      unless self.pull_requests.find_by_issue_url(pr["payload"]["pull_request"]['issue_url'])
+        hash = PullRequest.initialize_from_github(pr)
+        p hash
+        pull_request = self.pull_requests.create(hash)
+      end
+    end
   end
 
   private

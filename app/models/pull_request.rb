@@ -1,14 +1,18 @@
-class PullRequest
-  attr_reader :title, :changed_files, :issue_url, :body, :state, :merged, :created_at, :repo_name
+class PullRequest  < ActiveRecord::Base
+  attr_accessible :title, :issue_url, :body, :state, :merged, :created_at, :repo_name
 
   EARLIEST_PULL_DATE = 1354320000
 
-  def initialize(json)
-    ["title", "changed_files", "issue", 'issue_url', "created_at", "state", "body", "merged"].each do |f|
-      value = json["payload"]["pull_request"][f]
-      instance_variable_set("@#{f}", value)
-    end
-    @repo_name = json['repo']['name']
+  def self.initialize_from_github(json)
+    {
+      :title          => json["payload"]["pull_request"]['title'],
+      :issue_url      => json["payload"]["pull_request"]['issue_url'],
+      :created_at     => json["payload"]["pull_request"]['created_at'],
+      :state          => json["payload"]["pull_request"]['state'],
+      :body           => json["payload"]["pull_request"]['body'],
+      :merged         => json["payload"]["pull_request"]['merged'],
+      :repo_name      => json['repo']['name']
+    }
   end
 
   private
