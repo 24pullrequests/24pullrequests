@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
   end
   
   def download_pull_requests
-    events = github_client.user_events('andrew')
+    events = github_client.user_events(nickname)
     events.select{|e| e.type == 'PullRequestEvent' && e.payload.action == 'opened' }.map {|pr| PullRequest.new(pr) }
   end
   
