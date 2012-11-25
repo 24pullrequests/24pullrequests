@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+  - 1.9.3
+env:
+  - DB=postgresql
+script:
+  - RAILS_ENV=test bundle exec rake --trace db:migrate test
+before_script:
+  - psql -c 'create database tfpullrequests_test' -U postgres
