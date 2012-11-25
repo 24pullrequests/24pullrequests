@@ -4,8 +4,12 @@
   .span8
     %h2 Viewing #{user.nickname}'s public profile
     = link_to 'Github Profile', "https://github.com/#{user.nickname}", :target => :blank
-    
-    %h3 Recent Pull Requests
 
-    %ul
-      = render :partial => 'pull_requests/pull_request', :collection => pull_requests
+    %h3 Recent Pull Requests
+    - if pull_requests.any?
+      %ul
+        = render :partial => 'pull_requests/pull_request', :collection => pull_requests
+    - else
+      %p
+        = user.nickname
+        hasn't sent any pull requests yet, what a grinch!
