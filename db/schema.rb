@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121125194342) do
+ActiveRecord::Schema.define(:version => 20121125210249) do
 
   create_table "projects", :force => true do |t|
     t.string   "name"
@@ -20,6 +20,17 @@ ActiveRecord::Schema.define(:version => 20121125194342) do
     t.string   "main_language"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "pull_requests", :force => true do |t|
+    t.string   "title"
+    t.string   "issue_url"
+    t.text     "body"
+    t.string   "state"
+    t.boolean  "merged"
+    t.datetime "created_at"
+    t.string   "repo_name"
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|
