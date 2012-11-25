@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
     uid         = hash.fetch('uid')
     nickname    = hash.fetch('info',{}).fetch('nickname')
     email       = hash.fetch('info',{}).fetch('email', nil)
-    gravatar_id = hash.fetch('info',{}).fetch('gravatar_id', nil)
+    gravatar_id = hash.fetch('extra',{}).fetch('raw_info',{}).fetch('gravatar_id', nil)
     token       = hash.fetch('credentials', {}).fetch('token')
 
     {
