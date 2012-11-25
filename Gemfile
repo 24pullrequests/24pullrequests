@@ -38,4 +38,17 @@ group :development do
   gem 'heroku'
   gem 'taps'
   gem 'sqlite3'
+
+  gem 'quiet_assets'
+  gem 'guard-rspec'
+  gem 'rb-fsevent', '~> 0.9.1'
+end
+
+gem "rspec-rails", :group => [:test, :development]
+
+group :test do
+  gem "factory_girl_rails"
+  gem "capybara"
+  gem "guard-rspec"
+  gem 'rb-fsevent', '~> 0.9.1'
 end
