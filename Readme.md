@@ -1,5 +1,7 @@
 # 24 Pull Requests
 
+[![Build Status](https://secure.travis-ci.org/andrew/24pullrequests.png?branch=master)](https://travis-ci.org/andrew/24pullrequests)
+
 “Giving back little gifts of code”
 
 24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Xmas.
