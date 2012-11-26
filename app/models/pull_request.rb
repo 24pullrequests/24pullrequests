@@ -25,4 +25,5 @@ class PullRequest  < ActiveRecord::Base
       }
     end
   end
+
 end
