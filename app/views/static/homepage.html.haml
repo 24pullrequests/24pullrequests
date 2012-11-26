@@ -1,3 +1,13 @@
+#fb-root
+:javascript
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
 %h1
   24 Pull Requests
   %span Giving back little gifts of code for Christmas
@@ -6,6 +16,21 @@
 
 %p 24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Xmas.
 %p This is the site to help promote the project, highlighting why, how and where to send your pull requests.
+
+%hr
+
+.row.clearfix
+  .span3
+    %a{:href => "https://twitter.com/share", :class => 'twitter-share-button', :'data-url' => 'http://24pullrequests.com/', :'data-hashtags' => '24pr'} Tweet
+    :javascript
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  .span3
+    %a{:href => 'http://pinterest.com/pin/create/button/?url=http%3A%2F%2F24pullrequests.com%2F&media=http%3A%2F%2F24pullrequests.com%2F&description=24pullrequests%20-%20Giving%20back%20little%20gifts%20of%20code%20for%20Christmas!', :class => "pin-it-button", :'count-layout' => "horizontal"}
+      %img{:border => '0', :src => "//assets.pinterest.com/images/PinExt.png", :title =>"Pin It"}
+  .span3
+    .fb-like{:'data-href' => 'http://24pullrequests.com/', :'data-send' => "false", :'data-layout' => "button_count", :'data-width' => '450', :'data-show-faces' => 'false'}
+  .span3
+    %iframe{:frameborder => "no", :scrolling => "no", :height => "50px", :width => "350px", :src => 'http://hnlike.com/upvote.php?link=http%3A%2F%2F24pullrequests.com%2F&title=24pullrequests%21'} iframes are not supported by your browser.
 
 %hr
 
