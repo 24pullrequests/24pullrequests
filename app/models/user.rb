@@ -1,9 +1,12 @@
 class User < ActiveRecord::Base
   attr_accessible :uid, :provider, :nickname, :email, :gravatar_id, :token, :email_frequency, :skills_attributes
 
+  attr_writer :gift_factory
+
   has_many :pull_requests
   has_many :skills
-  
+  has_many :gifts
+
   paginates_per 99
 
   accepts_nested_attributes_for :skills, :reject_if => proc { |attributes| !Project::LANGUAGES.include?(attributes['language']) }
@@ -27,15 +30,15 @@ class User < ActiveRecord::Base
       skills.create(:language => language)
     end
   end
-  
+
   def languages
     skills.any? ? skills.order(:language).map(&:language) : Project::LANGUAGES
   end
-  
+
   def github_client
     @github_client ||= Octokit::Client.new(:login => nickname, :oauth_token => token, :auto_traversal => true)
   end
-  
+
   def send_notification_email
     if send_daily?
       ReminderMailer.daily(self).deliver
@@ -46,17 +49,27 @@ class User < ActiveRecord::Base
     end
     update_attribute(:last_sent_at, Time.now.utc)
   end
-  
+
   def send_daily?
     if email_frequency == 'daily'
       last_sent_at.nil? || last_sent_at < 1.day.ago
     end
   end
-  
+
   def send_weekly?
     if email_frequency == 'weekly'
       last_sent_at.nil? || last_sent_at < 7.days.ago
     end
+  end
+
+  def new_gift(attrs={})
+    gift = gift_factory.call(attrs)
+    gift.user = self
+    gift
+  end
+
+  def gift_for(date)
+    Gift.find(id, date)
   end
 
   def send_regular_emails?
@@ -94,5 +107,9 @@ class User < ActiveRecord::Base
       :email => email,
       :gravatar_id => gravatar_id
     }
+  end
+
+  def gift_factory
+    @gift_factory ||= Gift.public_method(:new)
   end
 end
