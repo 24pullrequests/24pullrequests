@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   has_many :pull_requests
 
   after_create :download_pull_requests
-  
+
   validates_presence_of :email, :if => :send_regular_emails?
 
   def self.create_from_auth_hash(hash)
@@ -27,17 +27,12 @@ class User < ActiveRecord::Base
   def to_param
     nickname
   end
-  
-  def github_client
-    @github_client ||= Octokit::Client.new(:login => nickname, :oauth_token => token, :auto_traversal => true)
-  end
-  
+
   def download_pull_requests
-    events = github_client.user_events(nickname)
-    events.select{|e| e.type == 'PullRequestEvent' && e.payload.action == 'opened' }.map do |pr|
+    downloader = Rails.application.config.pull_request_downloader.call(self)
+    downloader.pull_requests.each do |pr|
       unless self.pull_requests.find_by_issue_url(pr["payload"]["pull_request"]['issue_url'])
         hash = PullRequest.initialize_from_github(pr)
-        p hash
         pull_request = self.pull_requests.create(hash)
       end
     end
