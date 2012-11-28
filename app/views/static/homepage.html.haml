@@ -12,6 +12,14 @@
 = render :partial => 'shared/social_buttons'
 
 %hr
+  .span12
+    %h2= @quote.comment
+    %p
+      = @quote.name
+      %span= @quote.company
+      %span= @quote.twitter_handle || @quote.github_handle
+
+%hr
 
 .row.clearfix
   .span4
