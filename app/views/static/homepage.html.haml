@@ -16,7 +16,8 @@
     %h2= @quote.comment
     %p
       = @quote.name
-      %span= @quote.company
+      - if @quote.company
+        %span= @quote.company
       %span= @quote.twitter_handle || @quote.github_handle
 
 %hr
