@@ -11,6 +11,7 @@ class Quote
   
   def self.all
     [
+      Quote.new('Peter Cooper', 'peterc', nil, nil, 'An interesting, programmer-related spin on the advent calendar!'),
       Quote.new('Bishop', '341-B', '341b', 'Weyland Wutani', "I may be synthetic but I'm not stupid.")
       ]
   end
