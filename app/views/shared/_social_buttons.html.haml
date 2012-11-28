@@ -1,0 +1,33 @@
+= content_for(:body_open) do
+  #fb-root
+  :javascript
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    
+.row.clearfix
+  .span2
+    %a{:href => "https://twitter.com/share", :class => 'twitter-share-button', :'data-url' => 'http://24pullrequests.com/', :'data-hashtags' => '24pr'} Tweet
+    :javascript
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  .span2
+    %a{:href => 'http://pinterest.com/pin/create/button/?url=http%3A%2F%2F24pullrequests.com%2F&media=http%3A%2F%2F24pullrequests.com%2F&description=24pullrequests%20-%20Giving%20back%20little%20gifts%20of%20code%20for%20Christmas!', :class => "pin-it-button", :'count-layout' => "horizontal"}
+      %img{:border => '0', :src => "//assets.pinterest.com/images/PinExt.png", :title =>"Pin It"}
+  .span2
+    .fb-like{:'data-href' => 'http://24pullrequests.com/', :'data-send' => "false", :'data-layout' => "button_count", :'data-width' => '450', :'data-show-faces' => 'false'}
+  .span2
+    .g-plusone{:'data-size' => 'medium'}
+    :javascript
+      window.___gcfg = {lang: 'en-GB'};
+
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+  .span2
+    %iframe{:frameborder => "no", :scrolling => "no", :height => "50px", :width => "350px", :src => 'http://hnlike.com/upvote.php?link=http%3A%2F%2F24pullrequests.com%2F&title=24pullrequests%21'} iframes are not supported by your browser.
