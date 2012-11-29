@@ -1,6 +1,6 @@
 %h2
   Suggested Projects
-  = link_to 'Suggest a project', new_project_path, :class => 'btn'
+  = link_to 'Suggest a project', new_project_path, :class => 'btn pull-right'
 
 %ul#languages.row
   %li
@@ -9,5 +9,8 @@
     %li
       = link_to language, '#', :data => {:language => parameterize_language(language)}
 
-.row#projects
-  = render @projects
+#projects
+  - @projects.each_slice(2) do |projects|
+    .row-fluid.clearfix
+      = render projects
+
