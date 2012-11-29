@@ -4,10 +4,15 @@
 
 .row-fluid.clearfix
   .span6
-    %h2 What it's all about
+    %h2 What it's all about?
+    %hr
     %p 24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Xmas.
     %p This is the site to help promote the project, highlighting why, how and where to send your pull requests.
-    %p= link_to 'Login with Github',  login_path, :class => 'btn'
+    %hr
+    %p
+      = link_to login_path, :class => 'btn' do
+        %strong Login with Github
+    %hr
     = render :partial => 'shared/social_buttons'
 
   .span6

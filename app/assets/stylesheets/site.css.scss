@@ -74,24 +74,33 @@ article {
   box-shadow: 0 0 3px 0px #333;
 
   /* Thanks http://border-radius.com */
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 footer {
   position:relative;
-  margin-top: 25px;
   width: 100%;
   height: 60px;
   text-align: center;
-  color: #666;
 
-  text-shadow: rgba(255,255,255,0.7) 2px 1px 0px;
-
+  .dark{
+    background:#434343;
+    height:60px;
+    padding-top:40px;
+  }
+  
   .ftw {
+    color: #000;
+    text-shadow: rgba(255,255,255,0.7) 2px 1px 0px;
     width: 100%;
     height: 40px;
+    margin-top:20px;
+    font-size:12px;
     text-align: center;
     background-color: #e3e3e3;
   }
@@ -187,4 +196,9 @@ footer {
 
 hr{
   border-top:none;
+  border-bottom: 1px dashed #e3e3e3;
+}
+
+h2 .btn{
+  margin-left:10px;
 }
