@@ -1,10 +1,30 @@
-%h2 Welcome back #{user.nickname}
+%h2
+  Welcome back #{user.nickname}
+  = link_to 'Change Email Prefences', email_path, :class => 'btn pull-right'
 
-%p This is where you can see all the activity we've tracked for you over Christmas.
+%p This is where you can see all the activity we've tracked for in the run up to Xmas.
 
-= link_to 'Change Email Prefences', email_path, :class => 'btn'
+%hr
 
-%h3 Recent Pull Requests
+%h3 Your Pull Requests
 
-%ul
-  = render :partial => 'pull_requests/pull_request', :collection => pull_requests
+- if pull_requests.any?
+  %ul
+    = render :partial => 'pull_requests/pull_request', :collection => pull_requests
+- else
+  %p You've not sent any pull requests, what are you waiting for?!
+
+%hr
+.row-fluid.clearfix
+  .span12
+    %h3
+      Suggested Projects
+      = link_to 'Suggest a project', new_project_path, :class => 'btn pull-right'
+      = link_to 'View All', projects_path, :class => 'btn pull-right'
+    %p
+      Can't think of a project you would like to help out? We've put together a list of popular projects.
+
+  #projects
+    - projects.each_slice(2) do |projects|
+      .row-fluid.clearfix
+        = render projects
