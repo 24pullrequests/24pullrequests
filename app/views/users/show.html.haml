@@ -1,8 +1,10 @@
-.row.clearfix
+.row-fluid.clearfix
   .span4
-    = image_tag(gravatar_url(user.gravatar_id, 400), :width => 400, :alt =>user.nickname)
+    .avatar= image_tag(gravatar_url(user.gravatar_id, 400), :width => 400, :alt =>user.nickname)
   .span8
-    %h2 Viewing #{user.nickname}'s public profile
+    %h2
+      #{user.nickname}'s
+      Pull Requests
     = link_to 'Github Profile', "https://github.com/#{user.nickname}", :target => :blank
 
     %h3 Recent Pull Requests

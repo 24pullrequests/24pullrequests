@@ -199,8 +199,13 @@ hr{
   border-bottom: 1px dashed #e3e3e3;
 }
 
-h2, h3{
+h1, h2, h3{
+  text-transform:uppercase;
   .btn{
     margin-left:10px;
   }
+}
+
+.avatar{
+  margin-top:15px;
 }
