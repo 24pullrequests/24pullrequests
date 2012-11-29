@@ -33,7 +33,7 @@
 
 #users.row-fluid.clearfix
   .span12
-    %h2 Developers already involved
+    %h3 Developers already involved
 
     %ul
       - @users.each do |user|
@@ -42,7 +42,7 @@
 
 .row-fluid.clearfix
   .span12
-    %h2
+    %h3
       Suggested Projects
       = link_to 'Suggest a project', new_project_path, :class => 'btn pull-right'
       = link_to 'View All', projects_path, :class => 'btn pull-right'
