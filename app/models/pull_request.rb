@@ -1,7 +1,8 @@
 class PullRequest  < ActiveRecord::Base
   attr_accessible :title, :issue_url, :body, :state, :merged, :created_at, :repo_name
 
-  EARLIEST_PULL_DATE = 1354320000
+  EARLIEST_PULL_DATE = Date.parse('01/12/2012').midnight
+  LATEST_PULL_DATE   = Date.parse('25/12/2012').midnight
 
   def self.initialize_from_github(json)
     {
@@ -15,11 +16,4 @@ class PullRequest  < ActiveRecord::Base
     }
   end
 
-  private
-
-  # Not in use, enable before go live, only provide events from dec first onward
-  def self.pulled_in_december?(event)
-    event_date = DateTime.parse(event['payload']['pull_request']['created_at']).strftime("%s").to_i
-    event_date >= EARLIEST_PULL_DATE
-  end
 end
