@@ -1,0 +1,7 @@
+.span12
+  %h2= @quote.comment
+  %p
+    = @quote.name
+    - if @quote.company
+      %span= @quote.company
+    %span= @quote.twitter_handle || @quote.github_handle
