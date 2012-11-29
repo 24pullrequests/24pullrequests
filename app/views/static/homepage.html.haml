@@ -22,7 +22,7 @@
 
 %hr
 
-.row.clearfix
+.row-fluid.clearfix
   .span4
     %h2 'Tis the season
     %p You've been benefiting from the use of open source projects all year, now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love recieving pull requests!
@@ -36,23 +36,23 @@
 
 %hr
 
-.row.clearfix
+.row-fluid.clearfix
   .span12
     %h2
       Suggested Projects
       = link_to 'Suggest a project', new_project_path, :class => 'btn pull-right'
     %p
       Can't think of a project you would like to help out? We've put together a list of popular projects,
-      = link_to 'browse them all here.', projects_path
-      
+      = link_to '.row-fluidse them all here.', projects_path
+
   #projects= render @projects
 
 %hr
 
-.row.clearfix
+.row-fluid.clearfix
   .span12
     %h2 Developers already involved
-  
+
     %ul#users
       - @users.each do |user|
         %li
