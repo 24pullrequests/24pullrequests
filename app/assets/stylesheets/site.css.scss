@@ -11,6 +11,10 @@ body {
   background: #a63636 url('/assets/header-snow.png') no-repeat;
 }
 
+.container-fluid{
+  min-height:600px;
+}
+
 header {
   position: relative;
 
@@ -127,7 +131,7 @@ footer {
     -webkit-transition: opacity 0.5s;
     -o-transition: opacity 0.5s;
     a{
-      color:red;
+      color:#bc3b3b;
       text-shadow:none;
       text-decoration:none;
     }
@@ -139,16 +143,45 @@ footer {
 
 #projects{
   .project{
-    height:200px;
+    margin:15px 0;
+    padding-right:20px;
+    .title{
+      padding:5px 0;
+      margin-bottom:5px;
+      border-bottom: 1px dashed #e3e3e3;
+      h4{
+        display:inline;
+        border-right:1px solid #e3e3e3;
+        padding-right:10px;
+        margin-right:10px;
+        text-transform:uppercase;
+      }
+      a{
+        font-size:12px;
+        color: #bc3b3b;
+      }
+    }
   }
 }
 
 #users{
-  list-style:none;
-  margin:20px 0;
-  padding:0;
-  li{
-    float:left;
+  background:#fafafa;
+  h2{
+    text-align:center;
+  }
+  ul{
+    list-style:none;
+    margin:20px 0;
+    padding:0;
+    li{
+      float:left;
+      border:2px solid #fff;
+      box-shadow:rgba(0, 0, 0, 0.398438) 0px 1px 1px;
+      margin:0 10px 0 0;
+      &:hover{
+        border-color:#bc3b3b;
+      }
+    }
   }
 }
 

@@ -1,3 +1,5 @@
-.span4.project{:class => parameterize_language(project.main_language), :data => {:id => project.id}}
-  %h3= link_to project.name, project.github_url, :target => '_blank'
+.span6.project{:class => parameterize_language(project.main_language), :data => {:id => project.id}}
+  .title.clearfix
+    %h4= project.name
+    = link_to project.github_url, project.github_url, :target => '_blank'
   = project.description

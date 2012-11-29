@@ -1,53 +1,47 @@
-%h1
-  24 Pull Requests
-  %span Giving back little gifts of code for Christmas
-
-= link_to 'Login with Github',  login_path, :class => 'btn'
-
-%p 24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Xmas.
-%p This is the site to help promote the project, highlighting why, how and where to send your pull requests.
-
-%hr
-
-= render :partial => 'shared/social_buttons'
-
-%hr
-= render 'shared/quote'
-
-%hr
+.visible-phone
+  %h1 24 Pull Requests
+  %h2 Giving back little gifts of code for Christmas
 
 .row-fluid.clearfix
-  .span4
-    %h2 'Tis the season
+  .span6
+    %h2 What it's all about
+    %p 24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Xmas.
+    %p This is the site to help promote the project, highlighting why, how and where to send your pull requests.
+    %p= link_to 'Login with Github',  login_path, :class => 'btn'
+    = render :partial => 'shared/social_buttons'
+
+  .span6
+    %h3 'Tis the season
     %p You've been benefiting from the use of open source projects all year, now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love recieving pull requests!
-  .span4
-    %h2 Get involved
+
+    %h3 Get involved
     %p There are loads of ways to get involved in an open source project, improving documentation, helping fix existing issues and bugs, improving code quality and test coverage or adding missing features.
-  .span4
-    %h2 Build your profile
+
+    %h3 Build your profile
     %p Contributing to open source projects is also a great way to build your profile in the community and improve your cv.
     %p It's really easy to get started, even small contributions can be really valuable to a project.
 
-%hr
+#users.row-fluid.clearfix
+  .span12
+    %h2 Developers already involved
+
+    %ul
+      - @users.each do |user|
+        %li
+          = link_to image_tag(gravatar_url(user.gravatar_id), :width => 80, :height => 80, :alt =>user.nickname), user.nickname, :title => user.nickname
 
 .row-fluid.clearfix
   .span12
     %h2
       Suggested Projects
       = link_to 'Suggest a project', new_project_path, :class => 'btn pull-right'
+      = link_to 'View All', projects_path, :class => 'btn pull-right'
     %p
-      Can't think of a project you would like to help out? We've put together a list of popular projects,
-      = link_to 'See them all here.', projects_path
+      Can't think of a project you would like to help out? We've put together a list of popular projects.
 
-  #projects= render @projects
-
+  #projects
+    - @projects.each_slice(2) do |projects|
+      .row-fluid.clearfix
+        = render projects
 %hr
 
-.row-fluid.clearfix
-  .span12
-    %h2 Developers already involved
-
-    %ul#users
-      - @users.each do |user|
-        %li
-          = link_to image_tag(gravatar_url(user.gravatar_id), :width => 80, :alt =>user.nickname), user.nickname
