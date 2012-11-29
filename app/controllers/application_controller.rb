@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   def ensure_logged_in
     unless logged_in?
       flash[:notice] = "You must be logged in to view this content."
-      redirect_to root_url() # back or home might be more useful
+      redirect_to login_path
     end
   end
 
