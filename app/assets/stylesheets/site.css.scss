@@ -1,52 +1,101 @@
-body{
-  background:red;
-  margin:0;
-  padding:0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-shadow:rgba(0, 0, 0, 0.398438) 0px 1px 3px;
-  color:#fff;
+body {
+  background-color: #e3e3e3;
 }
-canvas{
-  position:absolute;
+
+.deck {
+  position: absolute;
   top:0;
-  z-index:-1;
-}
-h1{
-  font-size: 120px;
-  line-height: 1;
-  letter-spacing: -2px;
-  text-align:center;
-  margin:40px 0 60px;
+  left:0;
+  width: 100%;
 }
 
-@media (min-width: 480px) and (max-width: 767px) {
-  h1{
-    font-size:80px;
+.header-background {
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  background: #a63636 url('/assets/header-snow.png') no-repeat;
+}
+
+header {
+  position: relative;
+
+  .bar {
+    position: absolute;
+    width: 100%;
+    height: 13px;
+    background-color: #942f2f;
+  }
+
+  .logo {
+    $width: 180px;
+    $height: 76px;
+
+    position: relative;
+    width: $width;
+    height: $height;
+    left: 50%;
+    margin-left: -$width/2;
+    padding-top: 40px;
+    background: url('/assets/logo.png') no-repeat bottom;
+
+    a {
+      position: absolute;
+      width: $width;
+      height: $height;
+      color: transparent;
+    }
+  }
+
+  .tagline {
+    $width: 620px;
+    $height: 110px;
+
+    position: relative;
+    width: $width;
+    height: $height;
+    left: 50%;
+    margin-left: -$width/2;
+    padding-top: 40px;
+    background: transparent url('/assets/tagline.png') no-repeat bottom;
   }
 }
 
-a{
-  color: #fff;
-  text-decoration:underline;
-  &:hover{
-    color: #ddd;
-  }
-  &.btn{
-    text-decoration:none;
-  }
+article {
+  $side-padding: 15px;
+  $width: 940px-($side-padding*2);
+
+  position: relative;
+  width: $width;
+  margin: 50px auto 0;
+  padding: 10px $side-padding;
+  background-color: #fff;
+
+  -moz-box-shadow: 0 0 3px 0px #333;
+  -webkit-box-shadow: 0 0 3px 0px #333;
+  box-shadow: 0 0 3px 0px #333;
+
+  /* Thanks http://border-radius.com */
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
-@media (max-width: 480px) {
-  h1{
-    font-size:60px;
-  }
-}
+footer {
+  position:relative;
+  margin-top: 25px;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  color: #666;
 
-h1 span{
-  display:block;
-  margin-top:20px;
-  font-size: 24px;
-  letter-spacing:0;
+  text-shadow: rgba(255,255,255,0.7) 2px 1px 0px;
+
+  .ftw {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: #e3e3e3;
+  }
 }
 
 .forkme{
@@ -59,11 +108,6 @@ h1 span{
 
 .forkme img{
   border: 0;
-}
-
-footer{
-  font-size:14px;
-  margin:20px 0;
 }
 
 .alert{
@@ -88,7 +132,7 @@ footer{
     -webkit-transition: opacity 0.5s;
     -o-transition: opacity 0.5s;
     a{
-      color:red; 
+      color:red;
       text-shadow:none;
       text-decoration:none;
     }
