@@ -16,16 +16,58 @@
 // Font Awesome
 @import "fontawesome";
 
-// Glyphicons
-//@import "twitter/bootstrap/sprites.less";
+// Gives us our custom designed buttons
+@buttonRadius:  20px;
+@btnBorder:     #c3c3c3;
+@btnBackground: #e4e4e4;
 
-// Your custom LESS stylesheets goes here
-//
-// Since bootstrap was imported above you have access to its mixins which
-// you may use and inherit here
-//
-// If you'd like to override bootstrap's own variables, you can do so here as well
-// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
-//
-// Example:
-// @linkColor: #ff0000;
+// Gives us our flat buttons
+.buttonBackgroundOverrides(@color, @textColor: #fff, @textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
+  .buttonBackground(@color, @color, @textColor, @textShadow);
+
+  &:hover, &:active, &.active, &.disabled, &[disabled] {
+    background-color: darken(@color, 5%);
+  }
+}
+
+.btn {
+  .border-radius(@buttonRadius);
+  .box-shadow(~"inset 0 3px 2px rgba(255,255,255,.5), 0 1px 2px rgba(0,0,0,.2)");
+  .buttonBackgroundOverrides(@btnBackground, @grayDark, 0 1px 1px rgba(255,255,255,.75));
+  padding: 7px 12px;
+
+  &:hover {
+    background-position: 0 -40px;
+  }
+}
+
+.btn-large {
+  padding: @paddingLarge;
+  .border-radius(@buttonRadius*1.5);
+}
+
+.btn-small {
+  padding: @paddingSmall;
+  .border-radius(@buttonRadius/1.5);
+}
+
+
+.btn-primary {
+  .buttonBackgroundOverrides(@btnPrimaryBackground);
+}
+.btn-warning {
+  .buttonBackgroundOverrides(@btnWarningBackground);
+}
+.btn-danger {
+  .buttonBackgroundOverrides(@btnDangerBackground);
+}
+.btn-success {
+  .buttonBackgroundOverrides(@btnSuccessBackground);
+}
+.btn-info {
+  .buttonBackgroundOverrides(@btnInfoBackground);
+}
+.btn-inverse {
+  .buttonBackgroundOverrides(@btnInverseBackground);
+}
+
