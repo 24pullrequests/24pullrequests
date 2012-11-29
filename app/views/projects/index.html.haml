@@ -2,13 +2,18 @@
   Suggested Projects
   = link_to 'Suggest a project', new_project_path, :class => 'btn pull-right'
 
+%p Can't think of a project to contribute to? We've collected a list of brilliant open source projects who would love your pull requests.
+
+%p You can also suggest projects that should be added to the list, or add your own project if you would like some help with it.
+%hr
+%h4 Filter by Language:
 %ul#languages.row
   %li
     = link_to 'Everything', '#'
   - Project::LANGUAGES.each do |language|
     %li
       = link_to language, '#', :data => {:language => parameterize_language(language)}
-
+%hr
 #projects
   - @projects.each_slice(2) do |projects|
     .row-fluid.clearfix
