@@ -3,7 +3,7 @@
   %head
     %meta{ :charset => "utf-8" }
     %meta{ :'http-equiv' => 'X-UA-Compatible', :content => "IE=Edge,chrome=1" }
-    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0"  }
+    %meta{ :name => "viewport", :content => "user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0;"  }
     %title= content_for?(:title) ? yield(:title) : "24 Pull Requests"
     = csrf_meta_tags
 
@@ -41,33 +41,33 @@
     %a.forkme{ :href => "https://github.com/andrew/24pullrequests", :target => '_blank'}
       %img{ :src => 'https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png', :alt => 'Fork me on GitHub'}
 
-    .deck
-      .header-background
 
-      %header
-        .bar
-        .logo
-          = link_to 'homepage', root_path()
+    .header-background
 
-        - # It sucks but its quick! Sorry
-        - if params[:action] == 'homepage'
-          .tagline
+    %header
+      .bar
+      .logo
+        = link_to 'homepage', root_path()
 
-      %article
-        .container-fluid
-          .row-fluid
-            .alert.alert-info.span12
-              %strong Warning!
-              This project is not quite ready for everyone yet, come back a bit closer to Christmas!
+      - # It sucks but its quick! Sorry
+      - if params[:action] == 'homepage'
+        .tagline.hidden-phone
 
-          .row-fluid
-            .span12
-              = yield
+    %article
+      .container-fluid
+        .row-fluid
+          .alert.alert-info.span12
+            %strong Warning!
+            This project is not quite ready for everyone yet, come back a bit closer to Christmas!
 
-      %footer
-        %p Some footery related things down here!
+        .row-fluid
+          .span12
+            = yield
 
-        .ftw
-          %h5 Open Source FTW! 2012
+    %footer
+      %p Some footery related things down here!
+
+      .ftw
+        %h5 Open Source FTW! 2012
 
     = javascript_include_tag "application"

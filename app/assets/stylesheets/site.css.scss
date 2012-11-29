@@ -1,12 +1,7 @@
 body {
   background-color: #e3e3e3;
-}
-
-.deck {
-  position: absolute;
-  top:0;
-  left:0;
-  width: 100%;
+  margin:0;
+  padding:0;
 }
 
 .header-background {
@@ -65,7 +60,7 @@ article {
   $width: 940px-($side-padding*2);
 
   position: relative;
-  width: $width;
+  max-width: $width;
   margin: 50px auto 0;
   padding: 10px $side-padding;
   background-color: #fff;
