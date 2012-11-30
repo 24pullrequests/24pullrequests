@@ -4,6 +4,13 @@ body{
   padding:0;
 }
 
+a{
+  color: #bc3b3b;
+  &:hover{
+    color: #953030;
+  }
+}
+
 .header-background {
   position: absolute;
   width: 100%;
@@ -167,7 +174,6 @@ footer {
       }
       a{
         font-size:12px;
-        color: #bc3b3b;
       }
     }
   }
