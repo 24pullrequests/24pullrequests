@@ -7,7 +7,11 @@
       Pull Requests
     = link_to 'Github Profile', "https://github.com/#{user.nickname}", :target => :blank
 
-    %h3 Recent Pull Requests
+    - if user.skills.any?
+      %h4 Preferred Languages
+      = user.languages.to_sentence
+
+    %h4 Recent Pull Requests
     - if pull_requests.any?
       %ul
         = render :partial => 'pull_requests/pull_request', :collection => pull_requests
