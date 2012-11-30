@@ -2,7 +2,17 @@
 
 = simple_form_for current_user, :url => update_email_path, :html => {:class => 'form-horizontal'}  do |form|
   = form.input :email
-  = form.input :email_frequency, :collection => [['None', 'none'], ['Daily', 'daily'], ['Weekly', 'weekly']], :selected => 'daily'
+  = form.input :email_frequency, :collection => [['Never', 'none'], ['Daily', 'daily'], ['Weekly', 'weekly']], :selected => 'daily'
+
+  %h3 Which languages do you know?
+  #skills.clearfix
+    = form.simple_fields_for :skills, Project::LANGUAGES.map{|l| Skill.new(:language => l)} do |skill_form|
+      - language = skill_form.object.language
+      .control-group.string
+        %label.control-label{:for => language}= language
+        .controls
+          = skill_form.check_box :language, {:id => language, :checked => current_user.skills.map(&:language).include?(language)}, language
+
   .control-group
     .controls
-      = form.button :submit, 'Continue'
+      = form.button :submit, 'Save and Continue'

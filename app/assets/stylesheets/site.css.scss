@@ -326,3 +326,26 @@ h1, h2, h3, h4{
   margin-bottom:-16px;
   margin-left:-8px;
 }
+
+#skills{
+  margin-bottom:20px;
+  .control-group.string{
+    width:25%;
+    margin:0;
+    float:left;
+    @media (max-width: 767px) {
+      width:30%;
+    }
+    @media (max-width: 480px) {
+      width:100%;
+      label{
+        float:left;
+        width:160px;
+        text-align:right;
+      }
+      .controls{
+        margin-left:180px
+      }
+    }
+  }
+}
