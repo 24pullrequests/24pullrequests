@@ -11,6 +11,10 @@ a{
   }
 }
 
+section {
+  margin: 20px 0;
+}
+
 .header-background {
   position: absolute;
   width: 100%;
@@ -73,14 +77,20 @@ header {
   }
 }
 
-article {
+.constrained {
   $side-padding: 15px;
   $width: 940px-($side-padding*2);
 
   position: relative;
   max-width: $width;
-  margin: 50px auto 0;
+  margin: 0 auto 0;
   padding: 10px $side-padding;
+}
+
+article {
+  @extend .constrained;
+
+  margin-top: 50px;
   background-color: #fff;
 
   -moz-box-shadow: 0 0 3px 0px #333;
@@ -99,12 +109,35 @@ article {
 footer {
   position:relative;
   width: 100%;
-  height: 60px;
-  text-align: center;
 
   .dark{
-    padding: 20px 0;
+    color: #e3e3e3;
+    padding: 10px 0;
     background:#434343;
+
+    ul {
+      margin-top: 30px;
+      li {
+        border-left: 1px solid #333;
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 7px;
+
+        &:first-child {
+          border-left: none;
+          padding-left: 0;
+        }
+      }
+    }
+
+    a {
+      font-weight: 800;
+      font-size: 110%;
+    }
+
+    .dark-inner {
+      @extend .constrained;
+    }
   }
 
   .ftw {
