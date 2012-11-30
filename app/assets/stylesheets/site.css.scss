@@ -244,6 +244,14 @@ footer {
   .project{
     margin:15px 0 60px;
     padding-right:20px;
+    width:45%;
+    min-height:100px;
+    float:left;
+    @media (max-width: 767px) {
+      width:100%;
+      min-height:0;
+      margin-bottom:20px;
+    }
     .title{
       padding:5px 0;
       margin-bottom:5px;

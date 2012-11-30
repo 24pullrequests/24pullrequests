@@ -15,7 +15,5 @@
       = link_to language, '#', :data => {:language => parameterize_language(language)}
 %hr
 #projects
-  - @projects.each_slice(2) do |projects|
-    .row-fluid.clearfix
-      = render projects
+  = render @projects
 
