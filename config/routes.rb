@@ -12,6 +12,8 @@ Tfpullrequests::Application.routes.draw do
   match '/auth/:provider/callback', to: 'sessions#create'
   match '/auth/failure',            to: 'sessions#failure'
 
+  match 'about', :to => 'static#about'
+
   root :to => 'static#homepage'
 
   match '/:id', to: 'users#show' # User public vanity url, must be lowest priority
