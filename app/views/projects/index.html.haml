@@ -17,3 +17,7 @@
 #projects
   = render @projects
 
+#noprojects
+  %p
+    There no project for that language yet, why not add
+    = link_to 'suggest one?', new_project_path
