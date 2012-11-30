@@ -4,7 +4,7 @@ class DashboardsController < ApplicationController
 
   def show
     pull_requests = current_user.pull_requests
-    projects = Project.limit(100).sample(12)
+    projects = Project.limit(100).sample(12).sort_by(&:name)
     render :show, :locals => { :user => current_user, :pull_requests => pull_requests, :projects => projects }
   end
 
