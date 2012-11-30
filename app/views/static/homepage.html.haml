@@ -33,7 +33,9 @@
 
 #users.row-fluid.clearfix
   .span12
-    %h3 Developers already involved
+    %h3
+      = User.count
+      Developers already involved
 
     %ul.clearfix
       - @users.each do |user|
