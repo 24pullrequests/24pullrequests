@@ -1,3 +1,5 @@
+$link-color: #bc3b3b;
+
 body{
   background-color: #e3e3e3;
   margin:0;
@@ -5,7 +7,8 @@ body{
 }
 
 a{
-  color: #bc3b3b;
+  color: $link-color;
+
   &:hover{
     color: #953030;
   }
@@ -87,10 +90,49 @@ header {
   padding: 10px $side-padding;
 }
 
+nav, .faulx-nav {
+  @extend .constrained;
+  margin-top: 25px;
+}
+
+.faulx-nav {
+  height: 5px;
+}
+
+nav {
+  a {
+    color: #efefef;
+  }
+
+  .nav {
+    margin-bottom: 0;
+  }
+
+  .nav-pills a {
+    background-color: darken($link-color, 12%);
+
+    &:hover {
+      $shadow: inset 0 3px 2px rgba(0,0,0,0.05);
+
+      -webkit-box-shadow: $shadow;
+         -moz-box-shadow: $shadow;
+              box-shadow: $shadow;
+
+      color: #efefef;
+      background-color: darken($link-color, 15%);
+    }
+  }
+
+  .nav-pills > .active > a,
+  .nav-pills > .active > a:hover {
+    color: #efefef;
+    background-color: darken($link-color, 25%);
+  }
+}
+
 article {
   @extend .constrained;
 
-  margin-top: 50px;
   background-color: #fff;
 
   -moz-box-shadow: 0 0 3px 0px #333;
