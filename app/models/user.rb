@@ -1,7 +1,10 @@
 class User < ActiveRecord::Base
-  attr_accessible :uid, :provider, :nickname, :email, :gravatar_id, :token, :email_frequency
+  attr_accessible :uid, :provider, :nickname, :email, :gravatar_id, :token, :email_frequency, :skills_attributes
 
   has_many :pull_requests
+  has_many :skills
+  
+  accepts_nested_attributes_for :skills, :reject_if => proc { |attributes| !Project::LANGUAGES.include?(attributes['language']) }
 
   after_create :download_pull_requests
 
@@ -18,6 +21,17 @@ class User < ActiveRecord::Base
 
   def self.find(nickname)
     where(:nickname => nickname).first!
+  end
+
+  def estimate_skills
+    languages = github_client.repos.map(&:language).uniq.compact
+    (Project::LANGUAGES & languages).each do |language|
+      skills.create(:language => language)
+    end
+  end
+  
+  def github_client
+    @github_client ||= Octokit::Client.new(:login => nickname, :oauth_token => token, :auto_traversal => true)
   end
 
   def send_regular_emails?

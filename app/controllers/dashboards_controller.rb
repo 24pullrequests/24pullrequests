@@ -9,6 +9,7 @@ class DashboardsController < ApplicationController
   end
 
   def update_email
+    current_user.skills.delete_all
     if current_user.update_attributes(params[:user])
       redirect_to dashboard_path
     else
