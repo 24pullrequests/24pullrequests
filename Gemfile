@@ -3,7 +3,7 @@ ruby "1.9.3"
 
 gem 'rails', '3.2.9'
 gem 'pg'
-gem 'thin'
+gem 'unicorn'
 gem 'foreman'
 gem 'omniauth'
 gem 'omniauth-github'
@@ -36,7 +36,7 @@ gem 'rack-google-analytics'
 # I'm using mysql for dev (baris)
 group :development do
   gem 'mysql2'
-
+  gem 'thin'
   # for heroku db:pull with rbenv
   gem 'heroku'
   gem 'taps'
