@@ -30,6 +30,10 @@ class User < ActiveRecord::Base
     end
   end
   
+  def languages
+    skills.any? ? skills.order(:language).map(&:language) : Project::LANGUAGES
+  end
+  
   def github_client
     @github_client ||= Octokit::Client.new(:login => nickname, :oauth_token => token, :auto_traversal => true)
   end
