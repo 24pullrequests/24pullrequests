@@ -10,6 +10,7 @@ gem 'omniauth-github'
 gem 'haml-rails'
 gem 'octokit'
 gem "bugsnag"
+gem 'newrelic_rpm'
 
 # Gems used only for assets and not required
 # in production environments by default.
