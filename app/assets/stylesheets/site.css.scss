@@ -242,10 +242,10 @@ footer {
 
 #projects{
   .project{
-    margin:15px 0 60px;
+    margin:15px 0 40px;
     padding-right:20px;
     width:45%;
-    min-height:100px;
+    min-height:120px;
     float:left;
     @media (max-width: 767px) {
       width:100%;
