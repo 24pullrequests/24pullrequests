@@ -3,7 +3,7 @@ ruby "1.9.3"
 
 gem 'rails', '3.2.9'
 gem 'pg'
-gem 'unicorn'
+gem 'thin'
 gem 'foreman'
 gem 'omniauth'
 gem 'omniauth-github'
