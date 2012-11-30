@@ -275,7 +275,7 @@ footer {
 
 #users{
   background:#fafafa;
-  h2{
+  h3{
     text-align:center;
   }
   ul{
@@ -299,8 +299,9 @@ hr{
   border-bottom: 1px dashed #e3e3e3;
 }
 
-h1, h2, h3{
+h1, h2, h3, h4{
   text-transform:uppercase;
+  font-family:"proxima-nova";
   .btn{
     margin-left:10px;
   }
