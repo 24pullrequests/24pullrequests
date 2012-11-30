@@ -2,4 +2,4 @@
   .title.clearfix
     %h4= project.name
     = link_to project.github_url, project.github_url, :target => '_blank'
-  = project.description
+  = truncate project.description, :length => 200

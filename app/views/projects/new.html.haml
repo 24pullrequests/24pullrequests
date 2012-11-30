@@ -3,7 +3,7 @@
 = simple_form_for @project, :html => {:class => 'form-horizontal'} do |form|
   = form.input :name, :input_html => {:class => "span4"}
   = form.input :github_url, :input_html => {:class => "span4"}
-  = form.input :description, :input_html => {:rows => 5, :class => "span4"}
+  = form.input :description, :input_html => {:rows => 5, :class => "span4"}, :label => 'Summary'
   = form.input :main_language, :input_html => {:class => "span4", :data => {:provide => "typeahead", :source => Project::LANGUAGES}, :autocomplete => 'off'}
   .control-group
     .controls
