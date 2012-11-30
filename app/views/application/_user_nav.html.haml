@@ -1,0 +1,13 @@
+- if logged_in?
+  %nav
+    %ul.nav.nav-pills
+      %li
+        = link_to 'Dashboard', dashboard_path
+      %li
+        = link_to 'Email Prefences', email_path
+
+      %li.pull-right
+        = link_to 'Logout', logout_path
+
+- else # Just for padding
+  .faulx-nav
