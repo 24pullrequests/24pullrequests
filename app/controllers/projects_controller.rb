@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_filter :ensure_logged_in, :except => [:index]
   
   def index
-    @projects = Project.all
+    @projects = Project.order(:name).all
   end
 
   def new
