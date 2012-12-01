@@ -17,7 +17,14 @@ describe Project do
 
   describe '.github_url' do
     subject { project }
-    it { should be_valid }
-    its(:github_url) { should =~ /https:\/\/github.com.*/ }
+
+    context 'when valid' do
+      before do
+        project.github_url = 'user/repo'
+      end
+
+      it { should be_valid }
+      its(:github_url) { should eq 'https://github.com/user/repo' }
+    end
   end
 end
