@@ -8,8 +8,10 @@
 
 This is the site to help promote the project, highlighting why, how and where to send your pull requests.
 
+## Get started!
+
 * [Explore projects to help](http://24pullrequests.com/projects)
-* [Submit your project](http://24pullrequests.com/projects/new)
+* [Submit your project to get help](http://24pullrequests.com/projects/new)
 
 ## Authors
 
