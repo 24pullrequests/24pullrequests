@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.order(:nickname).page params[:page]
+    @users = User.order('pull_requests_count desc').page params[:page]
   end
 
   def show
