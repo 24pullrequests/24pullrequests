@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe PullRequest do
+  it { should belong_to(:user) }
   it { should allow_mass_assignment_of(:title) }
   it { should allow_mass_assignment_of(:issue_url) }
   it { should allow_mass_assignment_of(:body) }
@@ -8,6 +9,7 @@ describe PullRequest do
   it { should allow_mass_assignment_of(:merged) }
   it { should allow_mass_assignment_of(:created_at) }
   it { should allow_mass_assignment_of(:repo_name) }
+  it { should validate_uniqueness_of(:issue_url).scoped_to(:user_id) }
 
   describe '#create_from_github' do
     let(:json) { mock_pull_request }
