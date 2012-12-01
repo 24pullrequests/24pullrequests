@@ -47,7 +47,7 @@ class User < ActiveRecord::Base
   end
 
   def download_pull_requests
-    downloader = Rails.application.config.pull_request_downloader.call(self)
+    downloader = Rails.application.config.pull_request_downloader.call(nickname, token)
     downloader.pull_requests.each do |pr|
       unless self.pull_requests.find_by_issue_url(pr["payload"]["pull_request"]['issue_url'])
         hash = PullRequest.initialize_from_github(pr)
