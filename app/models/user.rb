@@ -56,7 +56,7 @@ class User < ActiveRecord::Base
 
   private
   def pull_request_downloader
-    Rails.application.config.pull_request_downloader.call(self)
+    Rails.application.config.pull_request_downloader.call(nickname, token)
   end
 
   def self.extract_info(hash)
