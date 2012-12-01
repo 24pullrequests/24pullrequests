@@ -82,6 +82,23 @@ describe User do
     end
   end
 
+  describe '.pull_requests_count' do
+    subject { user.pull_requests_count }
+
+    context 'by default' do
+      it { should eq 0}
+    end
+
+    context 'when a pull request is added' do
+      before do
+        create :pull_request, user: user
+        user.reload
+      end
+
+      it { should eq 1 }
+    end
+  end
+
   describe '.to_param' do
     subject { user.to_param }
     it { should eq user.nickname }

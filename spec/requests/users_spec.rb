@@ -5,10 +5,7 @@ describe 'Users' do
 
   describe 'viewing the list of users' do
     before do
-      5.times do
-        create :user
-      end
-
+      5.times { create :user }
       visit users_path
     end
 
