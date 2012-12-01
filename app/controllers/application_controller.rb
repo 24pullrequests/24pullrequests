@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     unless logged_in?
       flash[:notice] = "You must be logged in to view this content."
 
-      session[:pre_login_destination] = "http://#{request.env['HTTP_HOST']}#{request.env['REQUEST_URI']}"
+      session[:pre_login_destination] = "http://#{request.host}#{request.path}"
       redirect_to login_path
     end
   end
