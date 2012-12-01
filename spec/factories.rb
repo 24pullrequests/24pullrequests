@@ -13,7 +13,14 @@ FactoryGirl.define do
     gravatar_id { Faker::Internet.email }
     token { SecureRandom.hex }
   end
-  
+
+  factory :project do
+    sequence(:name) {|n| "Project #{n}" }
+    description { 'This is a valid project description.' }
+    github_url { Faker::Internet.url }
+    main_language { Project::LANGUAGES.sample }
+  end
+
   factory :skill do
     user
     language { Project::LANGUAGES.sample }

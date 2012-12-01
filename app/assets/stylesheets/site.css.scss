@@ -248,6 +248,12 @@ footer {
     &.disabled{
       opacity:0.5;
     }
+    &.highlighted{
+      background: #bc3b3b;
+      a{
+        color: #fff;
+      }
+    }
   }
 }
 
