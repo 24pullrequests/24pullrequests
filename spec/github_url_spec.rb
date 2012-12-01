@@ -1,4 +1,4 @@
-require 'github_url'
+require 'spec_helper'
 
 describe GithubUrl do
   it "leaves a fully qualified url unchanged" do
