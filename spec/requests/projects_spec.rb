@@ -17,7 +17,6 @@ describe 'Projects' do
       fill_in 'Summary', with: Faker::Lorem.paragraphs.first
       fill_in 'Main language', with: 'Ruby'
       click_on 'Submit Project'
-      Project.count.should eq 1
     end
   end
 end
