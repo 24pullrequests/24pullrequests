@@ -1,6 +1,6 @@
 class ReminderMailer < ActionMailer::Base
 
-  default :from => "noreply@24pullrequests.com"
+  default :from => "info@24pullrequests.com"
 
   def daily(user)
     @user = user
