@@ -8,6 +8,11 @@
 
 This is the site to help promote the project, highlighting why, how and where to send your pull requests.
 
+## Get started!
+
+* [Explore projects to help](http://24pullrequests.com/projects)
+* [Submit your project to get help](http://24pullrequests.com/projects/new)
+
 ## Authors
 
 * Andrew Nesbitt
@@ -17,7 +22,7 @@ This is the site to help promote the project, highlighting why, how and where to
 ## Development
 
 Source hosted at [GitHub](http://github.com/andrew/24pullrequests).
-Report Issues/Feature requests on [GitHub Issues](http://github.com/andrew/24pullrequests/issues).
+Report Issues/Feature requests on [GitHub Issues](http://github.com/andrew/24pullrequests/issues). Follow us on Twitter [@24pullrequests](https://twitter.com/24pullrequests).
 
 ### Note on Patches/Pull Requests
 
