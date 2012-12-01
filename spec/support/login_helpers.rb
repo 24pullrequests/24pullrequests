@@ -1,0 +1,25 @@
+module LoginHelpers
+  def login(user)
+    OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(
+      provider: 'github',
+      uid: user.uid,
+      info: {
+        nickname: user.nickname,
+        email: user.email
+      },
+      extra: {
+        raw_info: {
+          gravatar_id: user.gravatar_id
+        }
+      },
+      credentials: {
+        token: user.token
+      }
+    )
+    visit login_path
+  end
+end
+
+RSpec.configure do |config|
+  config.include LoginHelpers, type: :request
+end
