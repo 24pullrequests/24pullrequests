@@ -106,6 +106,9 @@ GEM
     json (1.7.5)
     jwt (0.1.5)
       multi_json (>= 1.0)
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     kgio (2.7.4)
     launchy (2.1.2)
       addressable (~> 2.3)
@@ -273,6 +276,7 @@ DEPENDENCIES
   haml-rails
   heroku
   jquery-rails
+  kaminari
   less-rails
   mysql2
   newrelic_rpm
