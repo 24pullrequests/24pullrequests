@@ -54,5 +54,9 @@ group :test do
   gem "factory_girl_rails"
   gem "capybara"
   gem "guard-rspec"
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'webmock'
   gem 'rb-fsevent', '~> 0.9.1'
 end
