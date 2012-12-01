@@ -58,5 +58,6 @@ group :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'webmock'
+  gem 'poltergeist'
   gem 'rb-fsevent', '~> 0.9.1'
 end
