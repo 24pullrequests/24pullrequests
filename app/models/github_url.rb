@@ -1,4 +1,4 @@
-module GithubUrl
+class GithubUrl
   REGEX = /\A(https?\:\/\/|git@)?(github\.com[:\/])?(?<username>[.1-9a-zA-Z_-]*)\/(?<repo>[.1-9a-zA-Z_-]*)/
 
   # Accepts the following formats:
