@@ -2,6 +2,7 @@ Tfpullrequests::Application.routes.draw do
   resources :users
   resources :projects, :only => [:index, :new, :create]
   resource  :dashboard # Singular, only applies to current user
+  resource  :pull_request_download, :only => :create
 
   match '/email', to: 'dashboards#email', as: 'email'
   match '/email/update', to: 'dashboards#update_email', as: 'update_email'
