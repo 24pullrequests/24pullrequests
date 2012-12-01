@@ -56,7 +56,6 @@ group :test do
   gem "capybara"
   gem "guard-rspec"
   gem 'shoulda-matchers'
-  gem 'factory_girl_rails'
   gem 'faker'
   gem 'webmock'
   gem 'poltergeist'
