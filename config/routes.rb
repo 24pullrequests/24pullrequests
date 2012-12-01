@@ -1,6 +1,7 @@
 Tfpullrequests::Application.routes.draw do
   resources :users
   resources :projects, :only => [:index, :new, :create]
+  resources :pull_requests, :only => [:index]
   resource  :dashboard # Singular, only applies to current user
 
   match '/email', to: 'dashboards#email', as: 'email'
