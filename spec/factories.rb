@@ -7,7 +7,7 @@ FactoryGirl.define do
 
   factory :user do
     uid { SecureRandom.hex }
-    provider 'Github'
+    provider 'github'
     nickname { Faker::Name.name.parameterize }
     email
     gravatar_id { Faker::Internet.email }
