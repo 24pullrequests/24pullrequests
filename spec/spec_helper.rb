@@ -43,6 +43,11 @@ RSpec.configure do |config|
   config.infer_base_class_for_anonymous_controllers = false
 
   config.include FactoryGirl::Syntax::Methods
+
+  # Globally stub out markdown rendering
+  config.before do
+    Octokit.stub(:markdown) { |text| text }
+  end
 end
 
 # Creates a mock pull request in json format.

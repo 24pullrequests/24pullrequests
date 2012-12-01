@@ -5,6 +5,8 @@ class PullRequest  < ActiveRecord::Base
 
   validates_uniqueness_of :issue_url, scope: :user_id
 
+  before_save :render_markdown
+
   EARLIEST_PULL_DATE = Date.parse('01/12/2012').midnight
   LATEST_PULL_DATE   = Date.parse('25/12/2012').midnight
 
@@ -25,4 +27,9 @@ class PullRequest  < ActiveRecord::Base
       }
     end
   end
+
+  def render_markdown
+    self.body = Octokit.markdown(body, mode: 'gfm', context: repo_name) rescue nil
+  end
+
 end
