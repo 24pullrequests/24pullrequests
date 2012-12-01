@@ -56,5 +56,6 @@ group :test do
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'webmock'
   gem 'rb-fsevent', '~> 0.9.1'
 end
