@@ -40,6 +40,14 @@
 
     %ul.clearfix
       = render @users
+.row-fluid.clearfix
+  .span12
+    %h3
+      Latest Pull Requests
+      = link_to 'View All', pull_requests_path, :class => 'btn pull-right'
+
+  #pull_requests
+    = render @pull_requests
 
 .row-fluid.clearfix
   .span12
