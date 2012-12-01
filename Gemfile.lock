@@ -30,6 +30,8 @@ GEM
       multi_json (~> 1.0)
     addressable (2.3.2)
     arel (3.0.2)
+    bourne (1.1.2)
+      mocha (= 0.10.5)
     bugsnag (1.2.5)
       httparty (>= 0.5, < 1.0)
       multi_json (~> 1.0)
@@ -123,8 +125,11 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.1)
     method_source (0.8.1)
     mime-types (1.19)
+    mocha (0.10.5)
+      metaclass (~> 0.0.1)
     multi_json (1.3.7)
     multi_xml (0.5.1)
     multipart-post (1.1.5)
@@ -216,6 +221,9 @@ GEM
       multi_json (~> 1.0)
       rubyzip
     sequel (3.20.0)
+    shoulda-matchers (1.4.2)
+      activesupport (>= 3.0.0)
+      bourne (~> 1.1.2)
     simple_form (2.0.4)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -286,6 +294,7 @@ DEPENDENCIES
   rb-fsevent (~> 0.9.1)
   rspec-rails
   sass-rails (~> 3.2.3)
+  shoulda-matchers
   simple_form
   sqlite3
   taps
