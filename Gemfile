@@ -12,6 +12,7 @@ gem 'octokit'
 gem "bugsnag"
 gem 'newrelic_rpm'
 gem 'simplecov'
+gem 'kaminari'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -54,5 +55,10 @@ group :test do
   gem "factory_girl_rails"
   gem "capybara"
   gem "guard-rspec"
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'webmock'
+  gem 'poltergeist'
   gem 'rb-fsevent', '~> 0.9.1'
 end

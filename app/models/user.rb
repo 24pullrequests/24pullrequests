@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   has_many :pull_requests
   has_many :skills
   
+  paginates_per 99
+
   accepts_nested_attributes_for :skills, :reject_if => proc { |attributes| !Project::LANGUAGES.include?(attributes['language']) }
 
   after_create :download_pull_requests
@@ -47,16 +49,16 @@ class User < ActiveRecord::Base
   end
 
   def download_pull_requests
-    downloader = Rails.application.config.pull_request_downloader.call(self)
-    downloader.pull_requests.each do |pr|
-      unless self.pull_requests.find_by_issue_url(pr["payload"]["pull_request"]['issue_url'])
-        hash = PullRequest.initialize_from_github(pr)
-        pull_request = self.pull_requests.create(hash)
-      end
+    pull_request_downloader.pull_requests.each do |pr|
+      pull_requests.create_from_github(pr) unless pull_requests.find_by_issue_url(pr['payload']['pull_request']['issue_url'])
     end
   end
 
   private
+  def pull_request_downloader
+    Rails.application.config.pull_request_downloader.call(nickname, token)
+  end
+
   def self.extract_info(hash)
     provider    = hash.fetch('provider')
     uid         = hash.fetch('uid')
