@@ -49,7 +49,7 @@
     %header
       .bar
       .logo
-        = link_to 'homepage', root_path()
+        = link_to 'homepage', root_path
 
       - # It sucks but its quick! Sorry
       - if params[:action] == 'homepage'
@@ -76,7 +76,7 @@
             
         %ul.unstyled.pull-left
           %li
-            = link_to 'About', about_path()
+            = link_to 'About', about_path
 
     .ftw
       Open Source FTW!
