@@ -9,7 +9,12 @@ class SessionsController < ApplicationController
                   User.create_from_auth_hash(auth_hash)
 
     session[:user_id] = user.id
-    redirect_to dashboard_path
+    
+    if session[:pre_login_destination].nil?
+      redirect_to dashboard_path
+    end
+    
+    redirect_to session[:pre_login_destination]
   end
 
   def destroy
