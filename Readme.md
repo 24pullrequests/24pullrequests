@@ -12,6 +12,7 @@ This is the site to help promote the project, highlighting why, how and where to
 
 * Andrew Nesbitt
 * Chris Lowder
+* Baris Balic
 
 ## Development
 
