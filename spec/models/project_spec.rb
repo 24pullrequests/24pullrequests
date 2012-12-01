@@ -18,26 +18,13 @@ describe Project do
   describe '.github_url' do
     subject { project }
 
-    context 'when valid' do
+    context 'when a github url' do
       before do
         project.github_url = 'user/repo'
       end
 
       it { should be_valid }
       its(:github_url) { should eq 'https://github.com/user/repo' }
-    end
-
-    context 'when invalid' do
-      before do
-        project.github_url = 'not_a_repo'
-      end
-
-      it { should_not be_valid }
-      it 'raises an exception' do
-        expect { project.save! }.to raise_error ActiveRecord::RecordInvalid,
-          "Validation failed: Github url must be a github repository, e.g. " \
-          "'user/repo', or 'https://github.com/user/repo'"
-      end
     end
   end
 end
