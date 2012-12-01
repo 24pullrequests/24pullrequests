@@ -15,7 +15,7 @@ describe ReminderMailer do
     end
  
     it 'renders the sender email' do
-      mail.from.should == ['noreply@24pullrequests.com']
+      mail.from.should == ['info@24pullrequests.com']
     end
  
     it 'uses nickname' do
@@ -41,7 +41,7 @@ describe ReminderMailer do
     end
  
     it 'renders the sender email' do
-      mail.from.should == ['noreply@24pullrequests.com']
+      mail.from.should == ['info@24pullrequests.com']
     end
  
     it 'uses nickname' do
