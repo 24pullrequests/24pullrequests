@@ -29,4 +29,11 @@ FactoryGirl.define do
     created_at { DateTime.now.to_s }
     repo_name { Faker::Lorem.words.first }
   end
+
+  factory :project do
+    description { Faker::Lorem.paragraphs.first[0..199] }
+    github_url { Faker::Internet.url }
+    name { Faker::Lorem.words.first }
+    main_language { Project::LANGUAGES.sample }
+  end
 end
