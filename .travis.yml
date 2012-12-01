@@ -4,6 +4,8 @@ rvm:
 env:
   - DB=postgresql
 script:
-  - RAILS_ENV=test bundle exec rake --trace db:migrate spec
+  - RAILS_ENV=test CI=true bundle exec rake --trace db:migrate spec
 before_script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
   - psql -c 'create database tfpullrequests_test' -U postgres

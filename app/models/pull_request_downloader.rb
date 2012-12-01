@@ -1,8 +1,8 @@
 class PullRequestDownloader
-  attr_reader :user
+  attr_reader :login, :oauth_token
 
-  def initialize(user)
-    @user = user
+  def initialize(login, oauth_token)
+    @login, @oauth_token = login, oauth_token
   end
 
   def pull_requests
@@ -11,12 +11,12 @@ class PullRequestDownloader
 
   private
   def github_client
-    @github_client ||= Octokit::Client.new(:login => user.nickname, :oauth_token => user.token, :auto_traversal => true)
+    @github_client ||= Octokit::Client.new(:login => login, :oauth_token => oauth_token, :auto_traversal => true)
   end
 
   def download_pull_requests
     begin
-      events = github_client.user_events(user.nickname)
+      events = github_client.user_events(login)
       events.select do |e| 
         event_date = DateTime.parse(e['created_at'])
         e.type == 'PullRequestEvent' && 
