@@ -7,5 +7,6 @@ class Project < ActiveRecord::Base
 
   LANGUAGES = ["ActionScript", "Assembly", "C", "C#", "C++", "Clojure", "CoffeeScript",
                "CSS", "Emacs Lisp", "Erlang", "Haskell", "HTML", "Java", "JavaScript", 
-               "Lua", "Objective-C", "Perl", "PHP", "PowerShell", "Python", "Ruby", "Scala", "Scheme"]
+               "Lua", "Objective-C", "Perl", "PHP", "PowerShell", "Python", "Ruby",
+               "Scala", "Scheme", "Shell"]
 end
