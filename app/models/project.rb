@@ -9,4 +9,8 @@ class Project < ActiveRecord::Base
                "ColdFusion", "CSS", "Emacs Lisp", "Erlang", "Haskell", "HTML", "Java", "JavaScript", 
                "Lua", "Objective-C", "Perl", "PHP", "PowerShell", "Python", "Ruby",
                "Scala", "Scheme", "Shell"]
+                         
+  def has_http_url?
+    (self.github_url =~ /^git@/).nil?
+  end
 end
