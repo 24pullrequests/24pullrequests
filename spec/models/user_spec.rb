@@ -57,6 +57,31 @@ describe User do
     end
   end
 
+  describe '.download_pull_requests' do
+    let(:downloader)    { double('downloader') }
+    let(:pull_request)  { mock_pull_request }
+
+    before do
+      downloader.should_receive(:pull_requests).and_return([pull_request])
+      user.stub(:pull_request_downloader).and_return(downloader)
+      user.download_pull_requests
+    end
+
+    subject { user }
+
+    context 'when the pull request does not exist' do
+      its(:pull_requests) { should have(1).pull_request }
+    end
+
+    context 'when the pull request already exists' do
+      before do
+        user.pull_requests.should_receive(:create).never
+      end
+
+      its(:pull_requests) { should have(1).pull_request }
+    end
+  end
+
   describe '.to_param' do
     subject { user.to_param }
     it { should eq user.nickname }

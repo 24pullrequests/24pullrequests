@@ -47,16 +47,16 @@ class User < ActiveRecord::Base
   end
 
   def download_pull_requests
-    downloader = Rails.application.config.pull_request_downloader.call(self)
-    downloader.pull_requests.each do |pr|
-      unless self.pull_requests.find_by_issue_url(pr["payload"]["pull_request"]['issue_url'])
-        hash = PullRequest.initialize_from_github(pr)
-        pull_request = self.pull_requests.create(hash)
-      end
+    pull_request_downloader.pull_requests.each do |pr|
+      pull_requests.create_from_github(pr) unless pull_requests.find_by_issue_url(pr['payload']['pull_request']['issue_url'])
     end
   end
 
   private
+  def pull_request_downloader
+    Rails.application.config.pull_request_downloader.call(self)
+  end
+
   def self.extract_info(hash)
     provider    = hash.fetch('provider')
     uid         = hash.fetch('uid')
