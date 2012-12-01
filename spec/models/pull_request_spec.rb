@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe PullRequest do
+  let(:pull_request) { create :pull_request }
+
   it { should belong_to(:user) }
   it { should allow_mass_assignment_of(:title) }
   it { should allow_mass_assignment_of(:issue_url) }
@@ -22,5 +24,17 @@ describe PullRequest do
     its(:body)       { should eq json['payload']['pull_request']['body'] }
     its(:merged)     { should eq json['payload']['pull_request']['merged'] }
     its(:repo_name)  { should eq json['repo']['name'] }
+  end
+
+  context 'when the github api is having issues' do
+    before do
+      Octokit.unstub(:markdown)
+      Octokit.stub(:markdown).and_raise('Shit hit the fan!')
+    end
+
+    it 'keeps calm and carries on' do
+      pull_request.body = '**foobar**'
+      expect { pull_request.save! }.to_not raise_error
+    end
   end
 end
