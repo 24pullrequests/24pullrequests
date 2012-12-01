@@ -36,6 +36,7 @@
     %h3
       = User.count
       Developers already involved
+      = link_to 'View All', users_path, :class => 'btn'
 
     %ul.clearfix
       = render @users
