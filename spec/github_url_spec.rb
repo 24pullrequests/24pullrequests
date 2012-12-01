@@ -22,8 +22,12 @@ describe GithubUrl do
     GithubUrl.normalize('2andrew/24pullrequests').should eq('https://github.com/2andrew/24pullrequests')
   end
 
+  it 'normalizes username/repo with periods' do
+    GithubUrl.normalize('ejholmes/ejholmes.github.com').should eq('https://github.com/ejholmes/ejholmes.github.com')
+  end
+
   it 'normalizes a git repo' do
-    GithubUrl.normalize('git@github.com:handle/code.git').should eq('https://github.com/handle/code')
+    GithubUrl.normalize('git@github.com:handle/code.git').should eq('https://github.com/handle/code.git')
   end
 
   it 'normalizes deeply linked github paths' do
