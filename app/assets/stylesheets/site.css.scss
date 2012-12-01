@@ -162,7 +162,14 @@ footer {
     background:#434343;
 
     ul {
-      margin-top: 30px;
+      margin-top: -45px;
+
+      @media (max-width: 767px) {
+        float: none;
+        text-align: center;
+        margin: 15px 0;
+      }
+
       li {
         border-left: 1px solid #333;
         display: inline-block;

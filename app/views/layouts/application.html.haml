@@ -66,19 +66,17 @@
   %footer
     .dark
       .dark-inner
-        %ul.unstyled.pull-left
-          %li
-            = link_to 'About', about_path()
-
+        .logo.logo-dark
         %ul.unstyled.pull-right
           %li
             Sponsored by&nbsp;
             = link_to 'DNSimple', 'http://dnsimple.com'
             &nbsp;&amp;&nbsp;
             = link_to 'Cooper Press', 'http://cooperpress.com'
-
-        .logo.logo-dark
-
+            
+        %ul.unstyled.pull-left
+          %li
+            = link_to 'About', about_path()
 
     .ftw
       Open Source FTW!
