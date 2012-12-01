@@ -29,4 +29,16 @@ describe 'Dashboard' do
       it { should have_content "You've not sent any pull requests, what are you waiting for?!" }
     end
   end
+
+  describe 'email preferences' do
+    before do
+      visit email_path
+    end
+
+    it 'allows the user to set their preferences' do
+      check 'Ruby'
+      click_on 'Save and Continue'
+      user.languages.should eq ['Ruby']
+    end
+  end
 end
