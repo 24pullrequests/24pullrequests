@@ -11,17 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121130205728) do
-
-  create_table "gifts", :force => true do |t|
-    t.integer  "user_id",         :null => false
-    t.integer  "pull_request_id", :null => false
-    t.date     "date",            :null => false
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-  end
-
-  add_index "gifts", ["user_id", "pull_request_id"], :name => "index_gifts_on_user_id_and_pull_request_id"
+ActiveRecord::Schema.define(:version => 20121201194057) do
 
   create_table "projects", :force => true do |t|
     t.string   "name"
@@ -51,15 +41,16 @@ ActiveRecord::Schema.define(:version => 20121130205728) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "uid",             :null => false
-    t.string   "provider",        :null => false
-    t.string   "nickname",        :null => false
+    t.string   "uid",                                :null => false
+    t.string   "provider",                           :null => false
+    t.string   "nickname",                           :null => false
     t.string   "email"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
     t.string   "gravatar_id"
     t.string   "token"
     t.string   "email_frequency"
+    t.integer  "pull_requests_count", :default => 0
   end
 
   add_index "users", ["nickname"], :name => "index_users_on_nickname"
