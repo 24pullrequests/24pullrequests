@@ -358,9 +358,9 @@ h1, h2, h3, h4{
 
 @keyframes snow_falling
 {
-  0% { background-position: 1580px 0; opacity: .4; }
-  50% { background-position: 940px 0; opacity: .2; }
-  100% { background-position: 300px 0; opacity: .4; }
+  0% { background-position: 0 0; }
+  50% { background-position: 0 300px; }
+  100% { background-position: 0 600px; }
 }
 
 @-webkit-keyframes snow_falling
