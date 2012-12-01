@@ -25,4 +25,8 @@ describe GithubUrl do
     GithubUrl.normalize("http://github.com/your/project/some/path/to/file").should eq("https://github.com/your/project")
   end
 
+  it "leaves un-normalizable urls alone" do
+    GithubUrl.normalize("arbitrary_string").should eq("arbitrary_string")
+  end
+
 end
