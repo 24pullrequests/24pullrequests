@@ -1,0 +1,10 @@
+#users.row-fluid.clearfix
+  .span12
+    %h3
+      = User.count
+      Developers already involved
+
+    %ul.clearfix
+      = render @users
+
+= paginate @users

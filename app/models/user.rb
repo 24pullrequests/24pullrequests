@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   has_many :pull_requests
   has_many :skills
   
+  paginates_per 99
+
   accepts_nested_attributes_for :skills, :reject_if => proc { |attributes| !Project::LANGUAGES.include?(attributes['language']) }
 
   after_create :download_pull_requests
