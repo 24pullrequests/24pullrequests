@@ -55,5 +55,6 @@ group :test do
   gem "guard-rspec"
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
+  gem 'faker'
   gem 'rb-fsevent', '~> 0.9.1'
 end
