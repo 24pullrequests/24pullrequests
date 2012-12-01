@@ -22,7 +22,11 @@ section {
   position: absolute;
   width: 100%;
   height: 600px;
-  background: #a63636 url('/assets/header-snow.png') no-repeat center 0;
+  background: #a63636 url('/assets/header-snow.png') repeat;
+  -webkit-animation: snow_falling 20s normal infinite linear;
+  -moz-animation: snow_falling 20s normal infinite linear;
+  -o-animation: snow_falling 20s normal infinite linear;
+  -animation: snow_falling 20s normal infinite linear;
 }
 
 .container-fluid{
@@ -349,3 +353,35 @@ h1, h2, h3, h4{
     }
   }
 }
+
+/* snow falling animation */
+
+@keyframes snow_falling
+{
+  0% { background-position: 1580px 0; opacity: .4; }
+  50% { background-position: 940px 0; opacity: .2; }
+  100% { background-position: 300px 0; opacity: .4; }
+}
+
+@-webkit-keyframes snow_falling
+{
+  0% { background-position: 0 0; }
+  50% { background-position: 0 300px; }
+  100% { background-position: 0 600px; }
+}
+
+@-moz-keyframes snow_falling
+{
+  0% { background-position: 0 0; }
+  50% { background-position: 0 300px; }
+  100% { background-position: 0 600px; }
+}
+
+@-o-keyframes snow_falling
+{
+  0% { background-position: 0 0; }
+  50% { background-position: 0 300px; }
+  100% { background-position: 0 600px; }
+}
+
+/* end snow falling animation */
