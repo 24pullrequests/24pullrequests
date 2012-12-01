@@ -6,12 +6,12 @@ class PullRequest  < ActiveRecord::Base
 
   def self.initialize_from_github(json)
     {
-      :title          => json["payload"]["pull_request"]['title'],
-      :issue_url      => json["payload"]["pull_request"]['issue_url'],
-      :created_at     => json["payload"]["pull_request"]['created_at'],
-      :state          => json["payload"]["pull_request"]['state'],
-      :body           => json["payload"]["pull_request"]['body'],
-      :merged         => json["payload"]["pull_request"]['merged'],
+      :title          => json['payload']['pull_request']['title'],
+      :issue_url      => json['payload']['pull_request']['issue_url'],
+      :created_at     => json['payload']['pull_request']['created_at'],
+      :state          => json['payload']['pull_request']['state'],
+      :body           => json['payload']['pull_request']['body'],
+      :merged         => json['payload']['pull_request']['merged'],
       :repo_name      => json['repo']['name']
     }
   end
