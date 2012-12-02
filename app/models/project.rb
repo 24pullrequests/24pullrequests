@@ -1,3 +1,5 @@
+require 'github_url'
+
 class Project < ActiveRecord::Base
   attr_accessible :description, :github_url, :name, :main_language
 
@@ -9,8 +11,9 @@ class Project < ActiveRecord::Base
                "ColdFusion", "CSS", "Emacs Lisp", "Erlang", "Haskell", "HTML", "Java", "JavaScript", 
                "Lua", "Objective-C", "Perl", "PHP", "PowerShell", "Python", "Ruby",
                "Scala", "Scheme", "Shell"]
-                         
-  def has_http_url?
-    (self.github_url =~ /^git@/).nil?
+
+  def github_url=(url)
+    write_attribute(:github_url, GithubUrl.normalize(url))
   end
+
 end
