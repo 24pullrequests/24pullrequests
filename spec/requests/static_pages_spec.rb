@@ -15,6 +15,7 @@ describe 'Static pages' do
     it { should have_content('2 Suggested Projects') }
     it { should have_link('View All', href: users_path) }
     it { should have_link('View All', href: projects_path) }
+    it { should have_link('View All', href: pull_requests_path) }
     it { should have_link('Suggest a project', href: new_project_path) }
   end
 end

@@ -1,0 +1,8 @@
+.row-fluid.clearfix
+  %h4
+    = PullRequest.count
+    Pull Requests already made!
+  %ul
+    = render @pull_requests
+
+= paginate @pull_requests
