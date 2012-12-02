@@ -1,5 +1,6 @@
 module ProjectsHelper
   def format_url(path)
-    path = path =~ /^github.com\// ? "https://#{path}" : path
+    return "https://#{path}" if path =~ /^github.com\//
+    path
   end
 end
