@@ -253,6 +253,7 @@ footer {
 
 #projects{
   .project{
+    box-sizing:border-box;
     margin:15px 0 40px;
     padding-right:20px;
     width:45%;
@@ -280,6 +281,11 @@ footer {
     }
   }
 }
+
+.social-buttons{
+  overflow:hidden;
+}
+
 #noprojects{
   display:none;
 }
@@ -293,8 +299,8 @@ footer {
     padding:0 35px;
   }
   @media (max-width: 767px) {
-    margin:20px -20px;
-    padding:0 20px;
+    margin:20px -15px;
+    padding:0 15px;
   }
   h3{
     text-align:center;
