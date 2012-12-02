@@ -16,7 +16,7 @@
       = language_link @current_user_languages, 'Suggested for you'
   - Project::LANGUAGES.each do |language|
     %li
-      = language_link language
+      = language_link language, language
 %hr
 #projects
   = render @projects
