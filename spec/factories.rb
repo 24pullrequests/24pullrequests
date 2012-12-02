@@ -13,7 +13,7 @@ FactoryGirl.define do
     gravatar_id { Faker::Internet.email }
     token { SecureRandom.hex }
   end
-  
+
   factory :skill do
     user
     language { Project::LANGUAGES.sample }

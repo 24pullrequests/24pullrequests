@@ -1,4 +1,5 @@
 %h2
+  = Project.count
   Suggested Projects
   = link_to 'Suggest a project', new_project_path, :class => 'btn pull-right'
 
@@ -8,11 +9,14 @@
 %hr
 %h4 Filter by Language:
 %ul#languages.row
-  %li
+  %li.highlighted
     = link_to 'Everything', '#'
+  - if current_user
+    %li.highlighted
+      = language_link @current_user_languages, 'Suggested for you'
   - Project::LANGUAGES.each do |language|
     %li
-      = link_to language, '#', :data => {:language => parameterize_language(language)}
+      = language_link language, language
 %hr
 #projects
   = render @projects
