@@ -4,6 +4,15 @@ describe 'Projects' do
   let(:user) { create :user, email_frequency: 'daily' }
   subject { page }
 
+  describe 'project index' do
+    before do
+      2.times { create :project }
+      visit projects_path
+    end
+
+    it { should have_content '2 Suggested Projects' }
+  end
+
   describe 'suggesting a new project' do
     before do
       login user
