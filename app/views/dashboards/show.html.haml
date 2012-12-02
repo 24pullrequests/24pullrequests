@@ -1,5 +1,5 @@
 %h2
-  Welcome back #{user.nickname}
+  Welcome back, #{user.nickname}
 
 %p This is where you can see all the activity we've tracked for in the run up to Xmas.
 
@@ -20,7 +20,7 @@
       = link_to 'Suggest a project', new_project_path, :class => 'btn pull-right'
       = link_to 'View All', projects_path, :class => 'btn pull-right'
     %p
-      Can't think of a project you would like to help out? We've put together a list of popular projects.
+      Can't think of a project you would like to help out? We've put together a list of popular projects:
 
   #projects
     = render projects
