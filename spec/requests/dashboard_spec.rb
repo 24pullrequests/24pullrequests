@@ -23,7 +23,7 @@ describe 'Dashboard' do
       visit dashboard_path
     end
 
-    it { should have_content "Welcome back #{user.nickname}" }
+    it { should have_content "Welcome back, #{user.nickname}" }
 
     context 'when the user has not sent any pull requests' do
       it { should have_content "You've not sent any pull requests, what are you waiting for?!" }
