@@ -1,11 +1,7 @@
 .project{:class => parameterize_language(project.main_language), :data => {:id => project.id}}
   .title.clearfix
     %h4= project.name
-    - if project.has_http_url?
-      = link_to project.github_url, project.github_url, :target => '_blank'
-    - else
-      %span
-        = project.github_url
+    = link_to project.github_repository, project.github_url, :target => '_blank'
   %p
     = truncate project.description, :length => 200
   .language.label.label-info
