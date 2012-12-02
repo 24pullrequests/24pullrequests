@@ -26,9 +26,8 @@ describe ApplicationHelper do
     end
 
     it 'returns a link for multiple languages' do
-      puts "", helper.language_link(['C#', 'Ruby'], 'Foobar'), ""
       helper.language_link(['C#', 'Ruby'], 'Foobar').should eql('<a href="#" data-language="[&quot;csharp&quot;,&quot;ruby&quot;]">Foobar</a>')
-          end
+    end
 
     it 'returns a link for multiple languages without a label' do
       helper.language_link(['C#', 'Ruby']).should eql('<a href="#" data-language="[&quot;csharp&quot;,&quot;ruby&quot;]">csharp, ruby</a>')
