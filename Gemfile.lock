@@ -43,6 +43,9 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
+    chai-jquery-rails (0.0.3)
+      railties (~> 3.1)
+      sprockets
     childprocess (0.3.6)
       ffi (~> 1.0, >= 1.0.6)
     coderay (1.0.8)
@@ -53,10 +56,12 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
+    colorize (0.5.8)
     commonjs (0.2.6)
     crack (0.3.1)
     daemons (1.1.9)
     diff-lcs (1.1.3)
+    ejs (1.1.1)
     erubis (2.7.0)
     eventmachine (1.0.0)
     excon (0.16.10)
@@ -118,6 +123,12 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.7.4)
+    konacha (2.1.0)
+      actionpack (~> 3.1)
+      capybara
+      colorize
+      railties (~> 3.1)
+      sprockets
     launchy (2.1.2)
       addressable (~> 2.3)
     less (2.2.2)
@@ -248,6 +259,10 @@ GEM
     simplecov-html (0.7.1)
     sinatra (1.0)
       rack (>= 1.0)
+    sinon-chai-rails (1.0.2)
+      railties (>= 3.1)
+    sinon-rails (1.4.2.1)
+      railties (>= 3.1)
     slop (3.3.3)
     sprockets (2.2.1)
       hike (~> 1.2)
@@ -296,7 +311,9 @@ PLATFORMS
 DEPENDENCIES
   bugsnag
   capybara
+  chai-jquery-rails
   coffee-rails (~> 3.2.1)
+  ejs
   factory_girl_rails
   faker
   foreman
@@ -305,6 +322,7 @@ DEPENDENCIES
   heroku
   jquery-rails
   kaminari
+  konacha
   less-rails
   mysql2
   newrelic_rpm
@@ -322,6 +340,8 @@ DEPENDENCIES
   shoulda-matchers
   simple_form
   simplecov
+  sinon-chai-rails
+  sinon-rails
   sqlite3
   taps
   therubyracer
