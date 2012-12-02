@@ -5,12 +5,12 @@
 
 %hr
 
-%h3 Your Pull Requests
+%h3
+  Your Pull Requests
+  = link_to 'Syncronize Pull Requests', pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn pull-right'
 
 %div#pull-requests
   = render :partial => 'pull_requests_if_any', :locals => { :pull_requests => current_user.pull_requests }
-
-= link_to 'Syncronize Pull Requests Now', pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn pull-right'
 
 %hr
 .row-fluid.clearfix
