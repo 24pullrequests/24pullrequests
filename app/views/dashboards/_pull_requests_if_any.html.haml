@@ -1,4 +1,4 @@
-- if pull_requests.any?
+- if current_user.pull_requests.length > 0
   %ul
     = render :partial => 'pull_requests/pull_request', :collection => pull_requests
 - else
