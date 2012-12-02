@@ -6,4 +6,7 @@
     - else
       %span
         = project.github_url
-  = truncate project.description, :length => 200
+  %p
+    = truncate project.description, :length => 200
+  .language.label.label-info
+    = project.main_language
