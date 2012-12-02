@@ -14,7 +14,7 @@
     %h4 Recent Pull Requests
     - if pull_requests.any?
       %ul
-        = render :partial => 'pull_requests/pull_request', :collection => pull_requests
+        = render pull_requests
     - else
       %p
         = user.nickname

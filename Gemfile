@@ -45,19 +45,28 @@ group :development do
   gem 'sqlite3'
 
   gem 'quiet_assets'
-  gem 'guard-rspec'
   gem 'rb-fsevent', '~> 0.9.1'
 end
 
-gem "rspec-rails", :group => [:test, :development]
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+
+  # Javascript
+  gem 'konacha'
+  gem 'chai-jquery-rails'
+  gem 'sinon-chai-rails'
+  gem 'sinon-rails'
+  gem 'ejs'
+end
 
 group :test do
   gem "factory_girl_rails"
   gem "capybara"
-  gem "guard-rspec"
+  gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'faker'
-  gem 'webmock'
+  gem 'webmock', require: false
   gem 'poltergeist'
   gem 'rb-fsevent', '~> 0.9.1'
 end
