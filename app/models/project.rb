@@ -6,7 +6,11 @@ class Project < ActiveRecord::Base
   validates_length_of :description, :within => 20..200
 
   LANGUAGES = ["ActionScript", "Assembly", "C", "C#", "C++", "Clojure", "CoffeeScript",
-               "CSS", "Emacs Lisp", "Erlang", "Haskell", "HTML", "Java", "JavaScript", 
+               "ColdFusion", "CSS", "Emacs Lisp", "Erlang", "Haskell", "HTML", "Java", "JavaScript", 
                "Lua", "Objective-C", "Perl", "PHP", "PowerShell", "Python", "Ruby",
                "Scala", "Scheme", "Shell"]
+                         
+  def has_http_url?
+    (self.github_url =~ /^git@/).nil?
+  end
 end

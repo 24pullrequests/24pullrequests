@@ -21,10 +21,6 @@ class User < ActiveRecord::Base
     where(conditions).first
   end
 
-  def self.find(nickname)
-    where(:nickname => nickname).first!
-  end
-
   def estimate_skills
     languages = github_client.repos.map(&:language).uniq.compact
     (Project::LANGUAGES & languages).each do |language|
