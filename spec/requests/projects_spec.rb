@@ -43,8 +43,8 @@ describe 'Projects' do
 
     context 'as logged-in user' do
       before do
-        create :project, name: 'Ruby project', main_language: 'ruby'
-        create :project, name: 'Java project', main_language: 'java'
+        create :project, name: 'Ruby project', main_language: 'Ruby'
+        create :project, name: 'Java project', main_language: 'Java'
         user.skills.create! language: 'Ruby'
         login user
         visit projects_path
@@ -64,7 +64,7 @@ describe 'Projects' do
       end
 
       it 'should filter projects in languages other than the selected' do
-        click_link 'ruby'
+        click_link 'Ruby'
         within '#projects' do
           page.should have_css('.ruby')
           page.should_not have_css('.java')
@@ -80,7 +80,7 @@ describe 'Projects' do
       end
 
       it 'should reset an active filter when clicking "Everything"' do
-        click_link 'ruby'
+        click_link 'Ruby'
         click_link 'Everything'
         within '#projects' do
           page.should have_css('.ruby')
