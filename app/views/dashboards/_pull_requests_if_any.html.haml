@@ -1,0 +1,5 @@
+- if pull_requests.any?
+  %ul
+    = render :partial => 'pull_requests/pull_request', :collection => pull_requests
+- else
+  %p You've not sent any pull requests, what are you waiting for?!

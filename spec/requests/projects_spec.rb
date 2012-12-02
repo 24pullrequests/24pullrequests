@@ -20,7 +20,7 @@ describe 'Projects' do
     end
   end
 
-  describe 'filtering the project list' do
+  describe 'filtering the project list', :js do
 
     context 'as anonymous user' do
       before { visit projects_path }
@@ -57,16 +57,16 @@ describe 'Projects' do
       it 'should filter projects in languages other than the selected' do
         click_link 'ruby'
         within '#projects' do
-          page.should have_css('.ruby', visible: true)
-          page.should have_css('.java', visible: false)
+          page.should have_css('.ruby')
+          page.should_not have_css('.java')
         end
       end
 
       it 'should show only the Ruby project when clicking "Suggested for you"' do
         click_link 'Suggested for you'
         within '#projects' do
-          page.should have_css('.ruby', visible: true)
-          page.should have_css('.java', visible: false)
+          page.should have_css('.ruby')
+          page.should_not have_css('.java')
         end
       end
 
@@ -74,8 +74,8 @@ describe 'Projects' do
         click_link 'ruby'
         click_link 'Everything'
         within '#projects' do
-          page.should have_css('.ruby', visible: true)
-          page.should have_css('.java', visible: true)
+          page.should have_css('.ruby')
+          page.should have_css('.java')
         end
       end
 

@@ -1,5 +1,5 @@
 module LoginHelpers
-  def login(user)
+  def mock_github_auth(user)
     OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(
       provider: 'github',
       uid: user.uid,
@@ -16,6 +16,10 @@ module LoginHelpers
         token: user.token
       }
     )
+  end
+
+  def login(user)
+    mock_github_auth(user)
     visit login_path
   end
 end

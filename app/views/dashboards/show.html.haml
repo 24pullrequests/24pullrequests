@@ -7,11 +7,10 @@
 
 %h3 Your Pull Requests
 
-- if pull_requests.any?
-  %ul
-    = render :partial => 'pull_requests/pull_request', :collection => pull_requests
-- else
-  %p You've not sent any pull requests, what are you waiting for?!
+%div#pull-requests
+  = render :partial => 'pull_requests_if_any', :locals => { :pull_requests => current_user.pull_requests }
+
+= link_to 'Syncronize Pull Requests Now', pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn pull-right'
 
 %hr
 .row-fluid.clearfix

@@ -1,0 +1,27 @@
+Hi <%= @user.nickname %>,
+
+Only <%= 25 - Date.today.day %> days left until Christmas!
+
+We've got some suggested projects for you to send pull requests to today.
+
+<% if @user.skills.any? %>
+We've guessed what languages you know based on the repos in your GitHub profile, if you'd like to change them, you can do that here: http://24pullrequests.com/email
+<% else %>
+You can customise which types of project we suggest by setting your favourite languages in the preferences area here: http://24pullrequests.com/email
+<% end %>
+
+Suggested Projects
+
+<% @suggested_projects.each do |project| %>
+<%= project.name %>
+<%= link_to project.github_url, project.github_url %>
+<%= project.description %>
+
+<% end %>
+Are you new to sending pull requests? Check out the guides here: http://24pullrequests.com/contributing
+
+You can also follow @24pullrequests on twitter: http://twitter.com/24pullrequests
+
+Unsubscribe or change frequency of these emails: http://24pullrequests.com/email
+
+See you tomorrow!

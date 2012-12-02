@@ -14,13 +14,6 @@ FactoryGirl.define do
     token { SecureRandom.hex }
   end
 
-  factory :project do
-    sequence(:name) {|n| "Project #{n}" }
-    description { 'This is a valid project description.' }
-    github_url { Faker::Internet.url }
-    main_language { Project::LANGUAGES.sample }
-  end
-
   factory :skill do
     user
     language { Project::LANGUAGES.sample }
@@ -35,5 +28,12 @@ FactoryGirl.define do
     merged false
     created_at { DateTime.now.to_s }
     repo_name { Faker::Lorem.words.first }
+  end
+
+  factory :project do
+    description { Faker::Lorem.paragraphs.first[0..199] }
+    github_url { Faker::Internet.url }
+    name { Faker::Lorem.words.first }
+    main_language { Project::LANGUAGES.sample }
   end
 end
