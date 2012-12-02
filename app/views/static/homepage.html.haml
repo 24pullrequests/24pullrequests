@@ -44,6 +44,7 @@
 .row-fluid.clearfix
   .span12
     %h3
+      = Project.count
       Suggested Projects
       = link_to 'Suggest a project', new_project_path, :class => 'btn pull-right'
       = link_to 'View All', projects_path, :class => 'btn pull-right'
