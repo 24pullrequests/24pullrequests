@@ -66,7 +66,7 @@ group :test do
   gem "guard-rspec"
   gem 'shoulda-matchers'
   gem 'faker'
-  gem 'webmock'
+  gem 'webmock', require: false
   gem 'poltergeist'
   gem 'rb-fsevent', '~> 0.9.1'
 end
