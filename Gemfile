@@ -64,6 +64,7 @@ group :test do
   gem "factory_girl_rails"
   gem "capybara"
   gem "guard-rspec"
+  gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'faker'
   gem 'webmock', require: false
