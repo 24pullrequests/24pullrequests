@@ -4,6 +4,9 @@ $ ->
   languages = []
   $('#languages a').click (e) ->
     clicked_language = $(this).data().language
+
+    return false unless clicked_language?
+
     unless event.ctrlKey or event.metaKey
       languages = [$(this).data().language]
     else
