@@ -8,8 +8,8 @@ class Project < ActiveRecord::Base
   validate :main_language_available?, :message => " can not add this language"
 
   LANGUAGES = ["ActionScript", "Assembly", "C", "C#", "C++", "Clojure", "CoffeeScript",
-               "ColdFusion", "CSS", "Emacs Lisp", "Erlang", "Haskell", "HTML", "Java", "JavaScript", 
-               "Lua", "Objective-C", "Perl", "PHP", "PowerShell", "Python", "Ruby",
+               "ColdFusion", "CSS", "Emacs Lisp", "Erlang", "Groovy", "Haskell", "HTML", "Java", "JavaScript", 
+               "Lua", "Objective-C", "OCaml", "Perl", "PHP", "PowerShell", "Python", "Ruby",
                "Scala", "Scheme", "Shell"]
 
   def github_repository
