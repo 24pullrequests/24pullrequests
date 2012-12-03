@@ -6,10 +6,7 @@ $ ->
     clicked_language = $(this).data().language
 
     unless clicked_language?
-      $('#languages li').removeClass('disabled')
-      $('#projects').html(projects.find('.project'))
-      projects = $('#projects').clone()
-      $('#projects').css('height', 'auto')
+      resetLanguage()
       return
 
     unless e.ctrlKey or e.metaKey
@@ -22,7 +19,9 @@ $ ->
 
     $('#noprojects').hide()
 
-    if languages.length > 0
+    unless languages.length > 0
+      resetLanguage()
+    else
       $('#languages li')
         .addClass('disabled')
         .find($.map(languages, (l) -> "a[data-language=#{l}]").join(','))
@@ -32,3 +31,9 @@ $ ->
       $('#projects').quicksand $(projects).find(".#{languages.join(', .')}"), duration: 0, ->
         if $('#projects .project:visible').length == 0
           $('#noprojects').show()
+
+  resetLanguage = ->
+      $('#languages li').removeClass('disabled')
+      $('#projects').html(projects.find('.project'))
+      projects = $('#projects').clone()
+      $('#projects').css('height', 'auto')
