@@ -1,6 +1,6 @@
 %h2 Set your Email Preferences 
 
-= simple_form_for current_user, :url => update_email_path, :html => {:class => 'form-horizontal'}  do |form|
+= simple_form_for current_user, :url => update_preferences_path, :html => {:class => 'form-horizontal'}  do |form|
   = form.input :email
   = form.input :email_frequency, :collection => [['Never', 'none'], ['Daily', 'daily'], ['Weekly', 'weekly']], :selected => 'daily'
 
