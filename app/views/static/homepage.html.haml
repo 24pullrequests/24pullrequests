@@ -11,10 +11,11 @@
     %p This is the site to help promote the project, highlighting why, how and where to send your pull requests.
     %p Log in with your Github account and we'll track and highlight all your pull requests and suggest projects to work on.
     %hr
-    %p
-      = link_to login_path, :class => 'btn' do
-        %strong Log in with Github
-    %hr
+    - unless logged_in?
+      %p
+        = link_to login_path, :class => 'btn' do
+          %strong Log in with Github
+      %hr
     = render :partial => 'shared/social_buttons'
 
   .span6
