@@ -8,7 +8,7 @@ $ ->
     return false unless clicked_language?
 
     unless event.ctrlKey or event.metaKey
-      languages = [$(this).data().language]
+      languages.concat $(this).data().language
     else
       unless clicked_language in languages
         languages.push clicked_language
