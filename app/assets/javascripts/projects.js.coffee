@@ -1,22 +1,30 @@
 $ ->
   projects = $('#projects').clone()
 
+  languages = []
   $('#languages a').click (e) ->
-    language = $(this).data().language
+    clicked_language = $(this).data().language
+
+    return false unless clicked_language?
+
+    unless event.ctrlKey or event.metaKey
+      languages.concat $(this).data().language
+    else
+      unless clicked_language in languages
+        languages.push clicked_language
+      else
+        languages = (language for language in languages when language != clicked_language)
 
     $('#noprojects').hide()
 
-    if language?
-      language = [language] unless $.isArray(language)
-
+    if languages.length > 0
       $('#languages li')
         .addClass('disabled')
-        .find($.map(language, (l) -> "a[data-language=#{l}]").join(','))
-        .add(this)
+        .find($.map(languages, (l) -> "a[data-language=#{l}]").join(','))
         .parent('li')
         .removeClass('disabled')
 
-      $('#projects').quicksand $(projects).find(".#{language.join(', .')}"), duration: 0, ->
+      $('#projects').quicksand $(projects).find(".#{languages.join(', .')}"), duration: 0, ->
         if $('#projects .project:visible').length == 0
           $('#noprojects').show()
 
