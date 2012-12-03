@@ -1,4 +1,4 @@
 desc "Send daily emails"
 task :send_emails => :environment do
-  User.all.each(&:send_notification_email)
+  User.all.each {|u| u.send_notification_email rescue nil }
 end
