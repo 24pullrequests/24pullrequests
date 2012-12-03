@@ -25,4 +25,10 @@ describe Project do
     project.main_language = "Ruby"
     project.valid?.should be_true
   end
+  
+  it "Validation should pass on github urls with periods" do
+    project = FactoryGirl.build(:project)
+    project.github_url = "https://github.com/kangax/fabric.js"
+    project.valid?.should be_true
+  end
 end
