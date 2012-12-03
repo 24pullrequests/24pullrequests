@@ -32,7 +32,7 @@ FactoryGirl.define do
 
   factory :project do
     description { Faker::Lorem.paragraphs.first[0..199] }
-    github_url { Faker::Internet.url }
+    github_url { "https://github.com/#{Faker::Lorem.words.first}/#{Faker::Lorem.words.first}" }
     name { Faker::Lorem.words.first }
     main_language { Project::LANGUAGES.sample }
   end

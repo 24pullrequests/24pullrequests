@@ -43,7 +43,7 @@
 .row-fluid.clearfix
   .span12
     %h3
-      Latest Pull Requests
+      Latest Pull Requests (#{PullRequest.count} total)
       = link_to 'View All', pull_requests_path, :class => 'btn pull-right'
 
   #pull_requests
