@@ -7,7 +7,7 @@ $ ->
 
     unless clicked_language?
       resetLanguage()
-      return
+      return false
 
     unless e.ctrlKey or e.metaKey
       languages = [].concat(clicked_language)
@@ -31,6 +31,7 @@ $ ->
       $('#projects').quicksand $(projects).find(".#{languages.join(', .')}"), duration: 0, ->
         if $('#projects .project:visible').length == 0
           $('#noprojects').show()
+    return false
 
   resetLanguage = ->
       $('#languages li').removeClass('disabled')
