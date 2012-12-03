@@ -2,7 +2,7 @@
 
 = simple_form_for current_user, :url => update_preferences_path, :html => {:class => 'form-horizontal'}  do |form|
   = form.input :email
-  = form.input :email_frequency, :collection => [['Never', 'none'], ['Daily', 'daily'], ['Weekly', 'weekly']], :selected => 'daily'
+  = form.input :email_frequency, :collection => [['Never', 'none'], ['Daily', 'daily'], ['Weekly', 'weekly']], :selected => (form.object.email_frequency || 'daily')
 
   %h3 Which languages do you know?
   #skills.clearfix
