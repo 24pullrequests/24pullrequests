@@ -7,9 +7,9 @@ describe 'Logging in' do
   context 'when a guest navigates to a page that requires a user session' do
     before do
       mock_github_auth user
-      visit email_path
+      visit preferences_path
     end
 
-    specify { current_path.should eq email_path }
+    specify { current_path.should eq preferences_path }
   end
 end
