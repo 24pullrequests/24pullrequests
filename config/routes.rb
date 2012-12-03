@@ -19,5 +19,5 @@ Tfpullrequests::Application.routes.draw do
 
   root :to => 'static#homepage'
 
-  match '/:id', to: 'users#show' # User public vanity url, must be lowest priority
+  match '/:id' => redirect('/users/%{id}') # User public vanity url, must be lowest priority
 end
