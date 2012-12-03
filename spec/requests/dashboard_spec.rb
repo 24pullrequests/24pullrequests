@@ -13,7 +13,7 @@ describe 'Dashboard' do
       visit dashboard_path
     end
 
-    specify { current_path.should eq email_path }
+    specify { current_path.should eq preferences_path }
   end
 
   context 'when the user has set their email preferences' do
@@ -32,7 +32,7 @@ describe 'Dashboard' do
 
   describe 'email preferences' do
     before do
-      visit email_path
+      visit preferences_path
     end
 
     it 'allows the user to set their preferences' do
