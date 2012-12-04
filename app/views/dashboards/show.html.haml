@@ -1,9 +1,14 @@
 %h2
   Welcome back, #{user.nickname}
 
-%p This is where you can see all the activity we've tracked for in the run up to Xmas.
+%p This is where you can see all the activity we've tracked for you in the run up to Xmas.
 
 %hr
+
+- if gift_form
+  Looks like you haven't gifted any code today. Would you like too gift
+  = render :partial => 'gifts/mini_form', :locals => { :gift_form => gift_form }
+  %hr
 
 %h3
   Your Pull Requests
