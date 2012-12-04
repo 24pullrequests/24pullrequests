@@ -1,0 +1,17 @@
+.calendar
+  %ol.unstyled.clearfix.calendar-inner
+    - 1.upto(calendar.start_padding) do
+      %li.calendar-day.calendar-padding
+
+    - calendar.each_day do |date, gift|
+      %li.calendar-day
+        .calendar-inner
+          %span{ :class => date == Date.today ? 'calendar-mday calendar-mday-today' : 'calendar-mday' }
+            = date.mday
+          %p
+            = link_to gift.pull_request_title, gift.pull_request_issue_url, :target => :blank if gift.present?
+
+    %li.calendar-day.calendar-christmas
+      .calendar-inner
+        %span.calendar-mday 25
+        %h4 Merry Christmas

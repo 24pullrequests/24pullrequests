@@ -1,21 +1,19 @@
-.row-fluid.clearfix
-  .span4
-    .avatar= image_tag(gravatar_url(user.gravatar_id, 400), :width => 400, :alt =>user.nickname)
-  .span8
+.row-fluid
+  .span10
     %h2
-      #{user.nickname}'s
-      Pull Requests
+      #{user.nickname}
     = link_to 'Github Profile', "https://github.com/#{user.nickname}", :target => :blank
 
     - if user.skills.any?
       %h4 Preferred Languages
       = user.languages.to_sentence
 
-    %h4 Recent Pull Requests
-    - if pull_requests.any?
-      %ul
-        = render pull_requests
-    - else
-      %p
-        = user.nickname
-        hasn't sent any pull requests yet, what a grinch!
+  .span2
+    .avatar= image_tag(gravatar_url(user.gravatar_id, 100), :width => 100, :alt => user.nickname)
+
+.row-fluid
+  .span12
+
+    %h3 24 Pull Requests
+    = render :partial => 'calendar', :object => calendar
+

@@ -1,4 +1,7 @@
 Tfpullrequests::Application.routes.draw do
+  resources :gifts
+
+
   resources :users
   resources :projects, :only => [:index, :new, :create]
   resources :pull_requests, :only => [:index]

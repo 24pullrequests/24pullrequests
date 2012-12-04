@@ -1,0 +1,22 @@
+%h2 Gifted Code
+
+%p Here you can manage your pull requests and select & curate your own set of "24 Pull Requests".
+
+%p All your gifts will be show on your #{ link_to 'public calendar', current_user.nickname }.
+
+%dl.dl-horizontal.dl-gifts
+  - calendar.each_day do |date, gift|
+    %dt
+      = "#{ date.strftime('%B') } #{ date.mday.ordinalize }"
+
+    - if gift
+      %dd
+        = gift.pull_request_title
+        = link_to 'Change', edit_gift_path(gift), :class => 'btn btn-small pull-right'
+
+    - else
+      %dd
+        Nothing gifted yet.
+        = link_to 'Change', new_gift_path(), :class => 'btn btn-small pull-right'
+
+

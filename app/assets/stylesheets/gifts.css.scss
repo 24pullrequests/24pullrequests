@@ -1,0 +1,19 @@
+#new_gift.form-inline {
+  display: inline-block;
+  margin-left: 10px;
+  margin-bottom: 0;
+
+  input[type='submit'] {
+    margin-left: 15px;
+  }
+}
+
+.dl-gifts {
+  dt {
+    text-align: left;
+  }
+
+  dt, dd {
+    line-height: 35px;
+  }
+}
