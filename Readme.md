@@ -4,7 +4,7 @@
 
 “Giving back little gifts of code”
 
-24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Xmas.
+24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas.
 
 This is the site to help promote the project, highlighting why, how and where to send your pull requests.
 
@@ -22,7 +22,7 @@ This is the site to help promote the project, highlighting why, how and where to
 ## Development
 
 Source hosted at [GitHub](http://github.com/andrew/24pullrequests).
-Report Issues/Feature requests on [GitHub Issues](http://github.com/andrew/24pullrequests/issues). Follow us on Twitter [@24pullrequests](https://twitter.com/24pullrequests).
+Report issues/feature requests on [GitHub Issues](http://github.com/andrew/24pullrequests/issues). Follow us on Twitter [@24pullrequests](https://twitter.com/24pullrequests).
 
 ### Getting Started
 
