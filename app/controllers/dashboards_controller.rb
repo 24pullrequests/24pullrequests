@@ -3,7 +3,7 @@ class DashboardsController < ApplicationController
   before_filter :set_email_preferences, :except => [:preferences, :update_preferences]
 
   def show
-    pull_requests = current_user.pull_requests
+    pull_requests = current_user.pull_requests.order('created_at desc')
     projects = Project.where(:main_language => current_user.languages).limit(100).sample(12).sort_by(&:name)
     render :show, :locals => { :user => current_user, :pull_requests => pull_requests, :projects => projects }
   end
