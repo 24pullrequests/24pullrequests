@@ -1,0 +1,6 @@
+clowder:
+  id: 1
+  uid: clowder
+  provider: github
+  nickname: clowder
+  email: clowder@gmail.com

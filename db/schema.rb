@@ -13,6 +13,16 @@
 
 ActiveRecord::Schema.define(:version => 20121203140250) do
 
+  create_table "gifts", :force => true do |t|
+    t.integer  "user_id",         :null => false
+    t.integer  "pull_request_id", :null => false
+    t.date     "date",            :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "gifts", ["user_id", "pull_request_id"], :name => "index_gifts_on_user_id_and_pull_request_id"
+
   create_table "projects", :force => true do |t|
     t.string   "name"
     t.text     "description"

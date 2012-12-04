@@ -19,20 +19,6 @@ describe 'Users' do
       visit user_path(user)
     end
 
-    it { should have_content "#{user.nickname}'s Pull Requests"}
     it { should have_link('Github Profile', href: "https://github.com/#{user.nickname}") }
-
-    context 'if the user has not submited any pull requests' do
-      it { should have_content "hasn't sent any pull requests yet, what a grinch!" }
-    end
-
-    context 'if the user has submitted a pull request' do
-      before do
-        create :pull_request, user: user
-        visit user_path(user)
-      end
-
-      it { should_not have_content "hasn't sent any pull requests yet, what a grinch!" }
-    end
   end
 end

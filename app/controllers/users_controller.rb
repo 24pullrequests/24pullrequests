@@ -4,8 +4,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    user = User.find_by_nickname!(params[:id])
-    pull_requests = user.pull_requests.order('created_at desc')
-    render :show, :locals => { :user => user, :pull_requests => pull_requests }
+    user      = User.find_by_nickname!(params[:id])
+    calendar  = Calendar.new(Gift.giftable_dates, user.gifts)
+
+    render :show, :locals => { :user => user, :calendar => calendar }
   end
 end

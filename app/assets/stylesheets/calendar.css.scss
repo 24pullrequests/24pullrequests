@@ -1,0 +1,69 @@
+@import 'variables.css.scss';
+
+$calendar-background: $header-background;
+
+.calendar {
+  padding: 15px 10px 15px 15px;
+  background-color: $calendar-background;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  h4 {
+    margin-top: 20px;
+  }
+}
+
+.calendar-inner {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.calendar-day {
+  display: block;
+  float: left;
+  background-color: #fff;
+
+  $total-width: 100%;
+  $relative-width: $total-width/7;
+
+  width: $relative-width;
+  height: 100px;
+  overflow: hidden;
+
+  line-height: 100%;
+
+  .calendar-inner {
+    /* hack */
+    display: table;
+    table-layout: fixed;
+    /* end */
+    width: 100%;
+    height: 100%;
+    padding: 5px 5px;
+    border: 1px solid $calendar-background;
+  }
+}
+
+.calendar-mday {
+  float: right;
+  font-size: 110%;
+  padding: 0 10px 2px 2px;
+  color: #666;
+}
+
+.calendar-mday-today {
+  font-size: 120%;
+  font-weight: 800;
+  color: #333;
+}
+
+.calendar-padding {
+  background-color: $calendar-background;
+}
+
+.calendar-christmas {
+  text-align: center;
+}
