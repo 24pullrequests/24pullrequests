@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    user      = User.find_by_nickname!(params[:id])
+    user      = User.find(:first, :conditions => ["lower(nickname) =?", params[:id].downcase ]) 
     calendar  = Calendar.new(Gift.giftable_dates, user.gifts)
 
     render :show, :locals => { :user => user, :calendar => calendar }
