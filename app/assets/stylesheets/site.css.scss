@@ -13,7 +13,9 @@ a{
     color: #953030;
   }
 }
-
+.ntd{
+  text-decoration: none; 
+}
 section {
   margin: 20px 0;
 }
@@ -163,6 +165,7 @@ footer {
 
     ul {
       margin-top: -45px;
+      position: relative;
 
       @media (max-width: 767px) {
         float: none;
@@ -325,6 +328,11 @@ footer {
       }
     }
   }
+}
+
+#users ul li a img {
+  height: 80px;
+  width: 80px;
 }
 
 hr{

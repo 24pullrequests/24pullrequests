@@ -5,8 +5,8 @@ Tfpullrequests::Application.routes.draw do
   resource  :dashboard # Singular, only applies to current user
   resource  :pull_request_download, :only => :create
 
-  match '/email', to: 'dashboards#email', as: 'email'
-  match '/email/update', to: 'dashboards#update_email', as: 'update_email'
+  match '/preferences', to: 'dashboards#preferences', as: 'preferences'
+  match '/preferences/update', to: 'dashboards#update_preferences', as: 'update_preferences'
 
   match '/login',  to: 'sessions#new',     as: 'login'
   match '/logout', to: 'sessions#destroy', as: 'logout'
@@ -19,5 +19,7 @@ Tfpullrequests::Application.routes.draw do
 
   root :to => 'static#homepage'
 
-  match '/:id', to: 'users#show' # User public vanity url, must be lowest priority
+  match '/email' => redirect('/preferences') # old preferences URL
+
+  match '/:id' => redirect('/users/%{id}') # User public vanity url, must be lowest priority
 end

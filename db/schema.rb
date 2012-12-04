@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121201194057) do
+ActiveRecord::Schema.define(:version => 20121203140250) do
 
   create_table "projects", :force => true do |t|
     t.string   "name"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(:version => 20121201194057) do
     t.string   "token"
     t.string   "email_frequency"
     t.integer  "pull_requests_count", :default => 0
+    t.datetime "last_sent_at"
   end
 
   add_index "users", ["nickname"], :name => "index_users_on_nickname"
