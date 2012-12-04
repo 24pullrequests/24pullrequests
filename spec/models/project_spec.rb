@@ -16,13 +16,19 @@ describe Project do
   it "Validation should not pass on wrong programming language" do
     project = FactoryGirl.build(:project)
     project.main_language = "English"
-    project.valid?
-    project.errors[:main_language].include?(" must be a programming language").should be_true
+    project.valid?.should_not be_true
+    project.errors[:main_language].include?('must be a programming language').should be_true
   end
 
   it "Validation should pass on correct programming language" do
     project = FactoryGirl.build(:project)
     project.main_language = "Ruby"
+    project.valid?.should be_true
+  end
+  
+  it "Validation should pass on github urls with periods" do
+    project = FactoryGirl.build(:project)
+    project.github_url = "https://github.com/kangax/fabric.js"
     project.valid?.should be_true
   end
 end

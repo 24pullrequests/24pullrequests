@@ -1,6 +1,6 @@
 # 24 Pull Requests
 
-[![Build Status](https://secure.travis-ci.org/andrew/24pullrequests.png?branch=master)](https://travis-ci.org/andrew/24pullrequests)
+[![Build Status](https://secure.travis-ci.org/andrew/24pullrequests.png?branch=master)](https://travis-ci.org/andrew/24pullrequests) [![Dependency Status](https://gemnasium.com/andrew/24pullrequests.png)](https://gemnasium.com/andrew/24pullrequests)
 
 “Giving back little gifts of code”
 

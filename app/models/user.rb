@@ -35,6 +35,29 @@ class User < ActiveRecord::Base
   def github_client
     @github_client ||= Octokit::Client.new(:login => nickname, :oauth_token => token, :auto_traversal => true)
   end
+  
+  def send_notification_email
+    if send_daily?
+      ReminderMailer.daily(self).deliver
+    elsif send_weekly?
+      ReminderMailer.weekly(self).deliver
+    else
+      return
+    end
+    update_attribute(:last_sent_at, Time.now.utc)
+  end
+  
+  def send_daily?
+    if email_frequency == 'daily'
+      last_sent_at.nil? || last_sent_at < 1.day.ago
+    end
+  end
+  
+  def send_weekly?
+    if email_frequency == 'weekly'
+      last_sent_at.nil? || last_sent_at < 7.days.ago
+    end
+  end
 
   def send_regular_emails?
     ['daily', 'weekly'].include? email_frequency
