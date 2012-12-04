@@ -24,6 +24,48 @@ This is the site to help promote the project, highlighting why, how and where to
 Source hosted at [GitHub](http://github.com/andrew/24pullrequests).
 Report Issues/Feature requests on [GitHub Issues](http://github.com/andrew/24pullrequests/issues). Follow us on Twitter [@24pullrequests](https://twitter.com/24pullrequests).
 
+### Getting Started
+
+New to Ruby? No worries!
+
+First things first, you'll need to install Ruby 1.9.3. I recommend using the excellent [rbenv](https://github.com/sstephenson/rbenv),
+and [ruby-build](https://github.com/sstephenson/ruby-build)
+
+```bash
+rbenv install 1.9.3-p194
+rbenv global 1.9.3-p194
+```
+
+Next, you'll need to make sure that you have postgres installed. This can be
+done easily using [Homebrew](http://mxcl.github.com/homebrew/)
+
+```bash
+brew install postgres
+```
+
+Now, let's install the gems from the `Gemfile` ("Gems" are synonymous with libraries in other
+languages).
+
+```bash
+gem install bundler && rbenv rehash
+bundle install
+```
+
+Once all the gems are installed, we'll need to create the databases and
+tables. Rails makes this easy through the use of "Rake" tasks.
+
+```bash
+bundle exec rake db:create:all
+bundle exec rake db:migrate
+```
+
+Almost there! Now all we have to do is start up the Rails server and point
+our browser to <http://localhost:3000>
+
+```bash
+bundle exec rails s
+```
+
 ### Tests
 
 Standard RSpec/Capybara tests are used for testing the application. The
