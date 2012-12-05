@@ -17,6 +17,8 @@ Tfpullrequests::Application.routes.draw do
   match '/logout', to: 'sessions#destroy', as: 'logout'
 
   match '/auth/twitter/callback',   to: 'twitter#authorize'
+  delete '/twitter/remove',         to: 'twitter#remove'
+
   match '/auth/:provider/callback', to: 'sessions#create'
   match '/auth/failure',            to: 'sessions#failure'
 

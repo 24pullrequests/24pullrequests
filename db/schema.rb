@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121205014649) do
+ActiveRecord::Schema.define(:version => 20121205214829) do
 
   create_table "gifts", :force => true do |t|
     t.integer  "user_id",         :null => false
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(:version => 20121205014649) do
     t.datetime "last_sent_at"
     t.string   "twitter_token"
     t.string   "twitter_secret"
+    t.string   "twitter_nickname"
   end
 
   add_index "users", ["nickname"], :name => "index_users_on_nickname"
