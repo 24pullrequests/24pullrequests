@@ -28,6 +28,16 @@ class User < ActiveRecord::Base
     where(conditions).first
   end
 
+  def authorize_twitter!(token, secret)
+    self.twitter_token  = token
+    self.twitter_secret = secret
+    self.save!
+  end
+
+  def twitter_linked?
+    twitter_token.present? && twitter_secret.present?
+  end
+
   def estimate_skills
     languages = github_client.repos.map(&:language).uniq.compact
     (Project::LANGUAGES & languages).each do |language|
@@ -88,6 +98,15 @@ class User < ActiveRecord::Base
     pull_request_downloader.pull_requests.each do |pr|
       pull_requests.create_from_github(pr) unless pull_requests.find_by_issue_url(pr['payload']['pull_request']['issue_url'])
     end
+  end
+
+  def twitter
+    @twitter ||= Twitter::Client.new(
+      consumer_key: ENV['TWITTER_KEY'],
+      consumer_secret: ENV['TWITTER_SECRET'],
+      oauth_token: twitter_token,
+      oauth_token_secret: twitter_secret
+    )
   end
 
   private

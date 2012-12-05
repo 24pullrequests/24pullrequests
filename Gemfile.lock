@@ -160,6 +160,7 @@ GEM
     netrc (0.7.7)
     newrelic_rpm (3.5.2.17)
     nokogiri (1.5.5)
+    oauth (0.4.7)
     oauth2 (0.8.0)
       faraday (~> 0.8)
       httpauth (~> 0.1)
@@ -178,9 +179,15 @@ GEM
     omniauth-github (1.0.3)
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.1)
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
+    omniauth-twitter (0.0.14)
+      multi_json (~> 1.3)
+      omniauth-oauth (~> 1.0)
     pg (0.14.1)
     poltergeist (1.0.2)
       capybara (~> 1.1)
@@ -258,6 +265,7 @@ GEM
     simple_form (2.0.4)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
+    simple_oauth (0.1.9)
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
@@ -291,6 +299,10 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
+    twitter (4.4.0)
+      faraday (~> 0.8)
+      multi_json (~> 1.3)
+      simple_oauth (~> 0.1.6)
     twitter-bootstrap-rails (2.1.6)
       actionpack (>= 3.1)
       execjs
@@ -335,6 +347,7 @@ DEPENDENCIES
   octokit
   omniauth
   omniauth-github
+  omniauth-twitter
   pg
   poltergeist
   quiet_assets
@@ -352,6 +365,7 @@ DEPENDENCIES
   taps
   therubyracer
   thin
+  twitter
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
   unicorn

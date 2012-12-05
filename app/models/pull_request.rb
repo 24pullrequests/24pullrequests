@@ -5,6 +5,8 @@ class PullRequest  < ActiveRecord::Base
 
   validates_uniqueness_of :issue_url, scope: :user_id
 
+  after_create :post_tweet
+
   EARLIEST_PULL_DATE = Date.parse('01/12/2012').midnight
   LATEST_PULL_DATE   = Date.parse('25/12/2012').midnight
 
@@ -24,6 +26,10 @@ class PullRequest  < ActiveRecord::Base
         :repo_name      => json['repo']['name']
       }
     end
+  end
+
+  def post_tweet
+    user.twitter.update(I18n.t 'pull_request.twitter_message', issue_url: issue_url)
   end
 
 end
