@@ -1,5 +1,5 @@
 class TwitterController < ApplicationController
-  def create
+  def authorize
     auth_hash = request.env['omniauth.auth']
     current_user.authorize_twitter!(auth_hash.credentials.token, auth_hash.credentials.secret)
     flash[:notice] = "Your twitter account has been linked! We'll post a tweet whenever you open a pull request."
