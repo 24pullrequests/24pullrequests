@@ -5,6 +5,7 @@ class GiftForm
     @gift = args.fetch(:gift)
     @giftable_dates = args.fetch(:giftable_dates, [])
     @pull_requests = args.fetch(:pull_requests)
+    @gift.date = args.fetch(:date) if args.fetch(:date, nil)
   end
 
   def pull_requests

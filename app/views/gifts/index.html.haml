@@ -4,19 +4,16 @@
 
 %p All your gifts will be show on your #{ link_to 'public calendar', current_user.nickname }.
 
-%dl.dl-horizontal.dl-gifts
-  - calendar.each_day do |date, gift|
-    %dt
-      = "#{ date.strftime('%B') } #{ date.mday.ordinalize }"
-
-    - if gift
-      %dd
-        = gift.pull_request_title
-        = link_to 'Change', edit_gift_path(gift), :class => 'btn btn-small pull-right'
-
-    - else
-      %dd
-        Nothing gifted yet.
-        = link_to 'Change', new_gift_path(), :class => 'btn btn-small pull-right'
-
-
+%table.table.table-striped.table-condensed.table-hover#gifts
+  .tbody
+    - calendar.each_day do |date, gift|
+      %tr
+        %td
+          %strong= "#{ date.strftime('%B') } #{ date.mday.ordinalize }"
+        %td
+          - if gift
+            = gift.pull_request_title
+            = link_to 'Change', edit_gift_path(gift), :class => 'btn btn-small pull-right'
+          - else
+            Nothing gifted yet.
+            = link_to 'Change', new_gift_path(:date => date), :class => 'btn btn-small pull-right'
