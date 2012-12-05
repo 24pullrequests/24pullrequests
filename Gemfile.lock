@@ -156,7 +156,6 @@ GEM
     multi_json (1.4.0)
     multi_xml (0.5.1)
     multipart-post (1.1.5)
-    mysql2 (0.3.11)
     netrc (0.7.7)
     newrelic_rpm (3.5.3.24)
     nokogiri (1.5.5)
@@ -342,7 +341,6 @@ DEPENDENCIES
   kaminari
   konacha
   less-rails
-  mysql2
   newrelic_rpm
   octokit
   omniauth
