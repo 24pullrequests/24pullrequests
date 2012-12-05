@@ -18,7 +18,5 @@ describe 'Users' do
     before do
       visit user_path(user)
     end
-
-    it { should have_link('Github Profile', href: "https://github.com/#{user.nickname}") }
   end
 end
