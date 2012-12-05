@@ -1,6 +1,9 @@
 module LoginHelpers
   def mock_twitter_auth
     OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new(
+      info: {
+        nickname: Faker::Lorem.word
+      },
       credentials: {
         token: SecureRandom.hex,
         secret: SecureRandom.hex
