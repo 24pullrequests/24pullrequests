@@ -15,6 +15,10 @@ class User < ActiveRecord::Base
 
   validates_presence_of :email, :if => :send_regular_emails?
 
+  def self.find_by_nickname!(nickname)
+    where(['lower(nickname) =?', nickname.downcase]).first!
+  end
+
   def self.create_from_auth_hash(hash)
     create!(extract_info(hash))
   end
