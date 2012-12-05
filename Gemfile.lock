@@ -138,6 +138,7 @@ GEM
     less-rails (2.2.6)
       actionpack (>= 3.1)
       less (~> 2.2.0)
+    libv8 (3.3.10.4)
     libwebsocket (0.1.7.1)
       addressable
       websocket
@@ -229,7 +230,6 @@ GEM
     rb-fsevent (0.9.2)
     rdoc (3.12)
       json (~> 1.4)
-    ref (1.0.2)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rspec (2.12.0)
@@ -288,8 +288,8 @@ GEM
       rest-client (>= 1.4.0, < 1.7.0)
       sequel (~> 3.20.0)
       sinatra (~> 1.0.0)
-    therubyracer (0.11.0)
-      ref
+    therubyracer (0.10.2)
+      libv8 (~> 3.3.10)
     thin (1.5.0)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -363,7 +363,7 @@ DEPENDENCIES
   sinon-rails
   sqlite3
   taps
-  therubyracer
+  therubyracer (= 0.10.2)
   thin
   twitter
   twitter-bootstrap-rails
