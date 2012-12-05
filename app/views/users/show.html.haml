@@ -3,6 +3,8 @@
     %h2
       #{user.nickname}
     = link_to 'Github Profile', "https://github.com/#{user.nickname}", :target => :blank
+    - if user.twitter_linked?
+      = link_to 'Twitter Profile', "https://twitter.com/#{user.twitter_nickname}", :target => :blank
 
     - if user.skills.any?
       %h4 Preferred Languages
