@@ -13,9 +13,8 @@ You can customise which types of project we suggest by setting your favourite la
 Suggested Projects
 
 <% @suggested_projects.each do |project| %>
-<%= project.name %>
+<%= project.name %> (<%= project.main_language %>)
 <%= link_to project.github_url, project.github_url %>
-<%= project.main_language %>
 <%= project.description %>
 
 <% end %>
