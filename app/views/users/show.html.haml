@@ -2,9 +2,16 @@
   .span10
     %h2
       #{user.nickname}
-    = link_to 'Github Profile', "https://github.com/#{user.nickname}", :target => :blank
-    - if user.twitter_linked?
-      = link_to 'Twitter Profile', "https://twitter.com/#{user.twitter_nickname}", :target => :blank
+    .row-fluid.clearfix.social-buttons
+      .span3
+        %iframe(src="http://ghbtns.com/github-btn.html?user=#{user.nickname}&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20")
+      - if user.twitter_nickname.present?
+        .span6
+          %a{:href => "https://twitter.com/#{user.twitter_nickname}", :class => 'twitter-follow-button'}
+            Follow
+            @#{user.twitter_nickname}
+          :javascript
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
     - if user.skills.any?
       %h4 Preferred Languages
