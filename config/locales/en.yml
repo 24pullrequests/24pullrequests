@@ -3,4 +3,4 @@
 
 en:
   pull_request:
-    twitter_message: "Just opened a pull request for http://24pullrequests.com! %{issue_url}"
+    twitter_message: "I just opened a pull request for http://24pullrequests.com! %{issue_url}"
