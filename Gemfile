@@ -37,9 +37,7 @@ gem 'simple_form'
 
 gem 'rack-google-analytics'
 
-# I'm using mysql for dev (baris)
 group :development do
-  gem 'mysql2'
   gem 'thin'
   # for heroku db:pull with rbenv
   gem 'heroku'

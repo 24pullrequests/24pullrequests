@@ -37,7 +37,7 @@ rbenv global 1.9.3-p194
 ```
 
 Next, you'll need to make sure that you have postgres installed. This can be
-done easily using [Homebrew](http://mxcl.github.com/homebrew/)
+done easily using [Homebrew](http://mxcl.github.com/homebrew/) or by using http://postgresapp.com
 
 ```bash
 brew install postgres
