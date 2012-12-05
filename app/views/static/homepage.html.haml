@@ -7,14 +7,14 @@
   .span6
     %h2 What it's all about?
     %hr
-    %p 24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Xmas.
+    %p 24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas.
     %p This is the site to help promote the project, highlighting why, how and where to send your pull requests.
-    %p Log in with your Github account and we'll track and highlight all your pull requests and suggest projects to work on.
+    %p Log in with your GitHub account and we'll track and highlight all your pull requests and suggest projects to work on.
     %hr
     - unless logged_in?
       %p
         = link_to login_path, :class => 'btn' do
-          %strong Log in with Github
+          %strong Log in with GitHub
       %hr
     = render :partial => 'shared/social_buttons'
 
@@ -29,7 +29,7 @@
 
     %h4 Build your profile
     %hr
-    %p Contributing to open source projects is also a great way to build your profile in the community and improve your cv.
+    %p Contributing to open source projects is also a great way to build your profile in the community and improve your CV.
     %p It's really easy to get started, even small contributions can be really valuable to a project.
 
 #users.row-fluid.clearfix
