@@ -1,4 +1,6 @@
 class GiftsController < ApplicationController
+  before_filter :ensure_logged_in
+
   def index
     calendar  = Calendar.new(Gift.giftable_dates, current_user.gifts)
 
