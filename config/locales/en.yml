@@ -6,6 +6,7 @@ en:
     twitter_message: "I just opened a pull request for http://24pullrequests.com! %{issue_url}"
   twitter:
     account_linked: "Your twitter account has been linked! We'll post a tweet whenever you open a pull request."
+    account_removed: "Your twitter account has been removed."
     link_account:
       text: "Link Your Twitter Account"
       tooltip: "If you link your twitter account, we'll post a new tweet whenever you open a pull request!"
