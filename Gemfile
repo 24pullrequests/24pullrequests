@@ -45,12 +45,12 @@ group :development do
   gem 'sqlite3'
 
   gem 'quiet_assets'
-  gem 'rb-fsevent', '~> 0.9.1'
 end
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec'
+  gem 'rb-fsevent', '~> 0.9.1'
 
   # Javascript
   gem 'konacha'
@@ -68,5 +68,4 @@ group :test do
   gem 'faker'
   gem 'webmock', require: false
   gem 'poltergeist'
-  gem 'rb-fsevent', '~> 0.9.1'
 end
