@@ -11,6 +11,7 @@ end
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :developer2, :fields => [:nickname], :uid_field => :nickname unless Rails.env.production?
   provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET']
+  provider :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
 end
 
 Rails.application.config.default_provider = Rails.env.development? ? :developer2 : :github
