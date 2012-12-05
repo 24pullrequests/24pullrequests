@@ -1,7 +1,9 @@
 Tfpullrequests::Application.routes.draw do
+  match '/404', :to => 'errors#not_found'
+  match '/422', :to => 'errors#unprocessable'
+  match '/500', :to => 'errors#internal'
+
   resources :gifts
-
-
   resources :users
   resources :projects, :only => [:index, :new, :create]
   resources :pull_requests, :only => [:index]
