@@ -1,4 +1,13 @@
 module LoginHelpers
+  def mock_twitter_auth
+    OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new(
+      credentials: {
+        token: SecureRandom.hex,
+        secret: SecureRandom.hex
+      }
+    )
+  end
+
   def mock_github_auth(user)
     OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(
       provider: 'github',
