@@ -12,11 +12,13 @@
 
 %h3
   Your Pull Requests
-  = link_to 'Link Your Twitter Account', '/auth/twitter'
+  = link_to 'Link Your Twitter Account', '/auth/twitter' unless current_user.twitter_linked?
   = link_to 'Synchronize Pull Requests', pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn pull-right'
 
-%div#pull-requests
+%div#pull-requests.clearfix
   = render :partial => 'pull_requests_if_any', :locals => { :pull_requests => current_user.pull_requests }
+  = link_to '<i class="icon-twitter"></i> Link Your Twitter Account'.html_safe, '/auth/twitter', :class => 'btn btn-info pull-right',
+    rel: 'tooltip', title: "If you link your twitter account, we'll post a new tweet whenever you open a pull request!" unless current_user.twitter_linked?
 
 %hr
 .row-fluid.clearfix
