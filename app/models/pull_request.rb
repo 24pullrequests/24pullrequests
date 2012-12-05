@@ -29,7 +29,7 @@ class PullRequest  < ActiveRecord::Base
   end
 
   def post_tweet
-    user.twitter.update(I18n.t 'pull_request.twitter_message', issue_url: issue_url)
+    user.twitter.update(I18n.t 'pull_request.twitter_message', issue_url: issue_url) if user.twitter_linked?
   end
 
 end
