@@ -2,4 +2,5 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  pull_request:
+    twitter_message: "Just opened a pull request for http://24pullrequests.com! %{issue_url}"
