@@ -7,12 +7,14 @@ gem 'unicorn'
 gem 'foreman'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'omniauth-twitter'
 gem 'haml-rails'
 gem 'octokit'
 gem "bugsnag"
 gem 'newrelic_rpm'
 gem 'simplecov'
 gem 'kaminari'
+gem 'twitter'
 
 # Gems used only for assets and not required
 # in production environments by default.
