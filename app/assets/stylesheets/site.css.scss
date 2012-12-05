@@ -20,15 +20,33 @@ section {
   margin: 20px 0;
 }
 
-.header-background {
+.hb {
   position: absolute;
   width: 100%;
   height: 600px;
-  background: $header-background url('/assets/header-snow.png') repeat;
-  -webkit-animation: snow_falling 20s normal infinite linear;
-  -moz-animation: snow_falling 20s normal infinite linear;
-  -o-animation: snow_falling 20s normal infinite linear;
-  -animation: snow_falling 20s normal infinite linear;
+  background-image: url('/assets/header-snow.png');
+  background-repeat: repeat;
+}
+.header-background {
+  background-color: $header-background;
+  -webkit-animation: snow_falling 50s normal infinite linear;
+  -moz-animation: snow_falling 50s normal infinite linear;
+  -o-animation: snow_falling 50s normal infinite linear;
+  -animation: snow_falling 50s normal infinite linear;
+}
+.header-background-2 {
+  background-color: transparent;
+  -webkit-animation: snow_falling_2 30s normal infinite linear;
+  -moz-animation: snow_falling_2 30s normal infinite linear;
+  -o-animation: snow_falling_2 30s normal infinite linear;
+  -animation: snow_falling_2 30s normal infinite linear;
+}
+.header-background-3 {
+  background-color: transparent;
+  -webkit-animation: snow_falling_3 10s normal infinite linear;
+  -moz-animation: snow_falling_3 10s normal infinite linear;
+  -o-animation: snow_falling_3 10s normal infinite linear;
+  -animation: snow_falling_3 10s normal infinite linear;
 }
 
 .container-fluid{
@@ -396,12 +414,36 @@ h1, h2, h3, h4{
   50% { background-position: 0 300px; }
   100% { background-position: 0 600px; }
 }
+@keyframes snow_falling_2
+{
+  0% { background-position: 450px 0; }
+  50% { background-position: 450px 300px; }
+  100% { background-position: 450px 600px; }
+}
+@keyframes snow_falling_3
+{
+  0% { background-position: 700px 0; }
+  50% { background-position: 700px 300px; }
+  100% { background-position: 700px 600px; }
+}
 
 @-webkit-keyframes snow_falling
 {
   0% { background-position: 0 0; }
   50% { background-position: 0 300px; }
   100% { background-position: 0 600px; }
+}
+@-webkit-keyframes snow_falling_2
+{
+  0% { background-position: 450px 0; }
+  50% { background-position: 450px 300px; }
+  100% { background-position: 450px 600px; }
+}
+@-webkit-keyframes snow_falling_3
+{
+  0% { background-position: 700px 0; }
+  50% { background-position: 700px 300px; }
+  100% { background-position: 700px 600px; }
 }
 
 @-moz-keyframes snow_falling
@@ -410,12 +452,36 @@ h1, h2, h3, h4{
   50% { background-position: 0 300px; }
   100% { background-position: 0 600px; }
 }
+@-moz-keyframes snow_falling_2
+{
+  0% { background-position: 450px 0; }
+  50% { background-position: 450px 300px; }
+  100% { background-position: 450px 600px; }
+}
+@-moz-keyframes snow_falling_3
+{
+  0% { background-position: 700px 0; }
+  50% { background-position: 700px 300px; }
+  100% { background-position: 700px 600px; }
+}
 
 @-o-keyframes snow_falling
 {
   0% { background-position: 0 0; }
   50% { background-position: 0 300px; }
   100% { background-position: 0 600px; }
+}
+@-o-keyframes snow_falling_2
+{
+  0% { background-position: 450px 0; }
+  50% { background-position: 450px 300px; }
+  100% { background-position: 450px 600px; }
+}
+@-o-keyframes snow_falling_3
+{
+  0% { background-position: 700px 0; }
+  50% { background-position: 700px 300px; }
+  100% { background-position: 700px 600px; }
 }
 
 /* end snow falling animation */
