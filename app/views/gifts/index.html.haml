@@ -12,7 +12,7 @@
           %strong= "#{ date.strftime('%B') } #{ date.mday.ordinalize }"
         %td
           - if gift
-            = gift.pull_request_title
+            = link_to gift.pull_request_title, gift.pull_request_issue_url
             = link_to 'Change', edit_gift_path(gift), :class => 'btn btn-small pull-right'
           - else
             Nothing gifted yet.
