@@ -12,7 +12,7 @@
 
 %h3
   Your Pull Requests
-  = link_to 'Link Your Twitter Account', '/auth/twitter' unless current_user.twitter_linked?
+  = link_to 'Link Your Twitter Account', '/auth/twitter'
   = link_to 'Synchronize Pull Requests', pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn pull-right'
 
 %div#pull-requests
