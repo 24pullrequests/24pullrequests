@@ -3,6 +3,12 @@
 = simple_form_for current_user, :url => update_preferences_path, :html => {:class => 'form-horizontal'}  do |form|
   = form.input :email
   = form.input :email_frequency, :collection => [['Never', 'none'], ['Daily', 'daily'], ['Weekly', 'weekly']], :selected => (form.object.email_frequency || 'daily')
+  - if current_user.twitter_linked?
+    .control-group
+      %label.control-label Twitter Account
+      .controls
+        = link_to "@#{current_user.twitter_nickname}", "https://twitter.com/#{current_user.twitter_nickname}", target: '_blank'
+        = link_to '<i class="icon-twitter"></i> Remove Account'.html_safe, twitter_remove_path, method: :delete, class: 'btn btn-danger'
 
   %h3 Which languages do you know?
   #skills.clearfix

@@ -28,9 +28,17 @@ class User < ActiveRecord::Base
     where(conditions).first
   end
 
-  def authorize_twitter!(token, secret)
-    self.twitter_token  = token
-    self.twitter_secret = secret
+  def authorize_twitter!(nickname, token, secret)
+    self.twitter_nickname = nickname
+    self.twitter_token    = token
+    self.twitter_secret   = secret
+    self.save!
+  end
+
+  def remove_twitter!
+    self.twitter_nickname = nil
+    self.twitter_token    = nil
+    self.twitter_secret   = nil
     self.save!
   end
 
