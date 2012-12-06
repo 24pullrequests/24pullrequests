@@ -68,5 +68,14 @@ module Tfpullrequests
     config.assets.initialize_on_precompile = false
 
     config.exceptions_app = self.routes
+
+    # Memoize at boot up to prevent github's rate limiting. This should work
+    # fine for now.
+    config.collaborators = begin
+      Octokit.collaborators('andrew/24pullrequests')
+    rescue => e
+      puts e.inspect
+      nil
+    end
   end
 end

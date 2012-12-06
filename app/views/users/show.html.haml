@@ -4,7 +4,7 @@
       #{@user.nickname}
     .row-fluid.clearfix.social-buttons
       .span4
-        %iframe(src="http://ghbtns.com/github-btn.html?user=#{@user.nickname}&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="300" height="20")
+        = github_button @user.nickname
       - if @user.twitter_nickname.present?
         .span6
           %a{:href => "https://twitter.com/#{@user.twitter_nickname}", :class => 'twitter-follow-button'}
