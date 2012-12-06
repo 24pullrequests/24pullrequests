@@ -4,6 +4,8 @@
 en:
   pull_request:
     twitter_message: "I just opened a pull request for http://24pullrequests.com, check it out: %{issue_url}"
+    download:
+      tooltip: "Usually we check for pull requests every hour, but you can check now if you really want."
   twitter:
     account_linked: "Your twitter account has been linked! We'll post a tweet whenever you open a pull request."
     account_removed: "Your twitter account has been removed."
