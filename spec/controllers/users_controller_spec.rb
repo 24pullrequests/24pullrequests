@@ -4,6 +4,10 @@ describe UsersController do
   let(:user) { create :user }
 
   describe 'GET index' do
+    before do
+      create :user
+    end
+
     context 'as html' do
       before do
         get :index
