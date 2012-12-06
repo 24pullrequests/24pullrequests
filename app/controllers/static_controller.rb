@@ -5,4 +5,8 @@ class StaticController < ApplicationController
     @pull_requests = PullRequest.order('created_at desc').limit(5)
     @quote = Quote.random
   end
+
+  def about
+    @collaborators = User.collaborators
+  end
 end

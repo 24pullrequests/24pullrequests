@@ -42,4 +42,8 @@ if Rails.env.development? && User.count == 0
   PROJECTS.times do
     project = create :project
   end
+
+  Rails.configuration.collaborators.each do |collaborator|
+    user = create :user, nickname: collaborator.login, gravatar_id: collaborator.gravatar_id
+  end
 end
