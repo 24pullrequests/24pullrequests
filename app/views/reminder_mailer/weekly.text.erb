@@ -4,6 +4,12 @@ Only <%= 25 - Date.today.day %> days left until Christmas!
 
 We've got some suggested projects for you to send pull requests to this week.
 
+<% if @user.pull_requests.any? %>
+You can view the pull requests you've made so far at http://24pullrequests.com/dashboard/.
+<% else %>
+You haven't sent any pull requests yet. Once you send a pull request, you can view your progress at http://24pullrequests.com/dashboard/.
+<% end %>
+
 <% if @user.skills.any? %>
 We've guessed what languages you know based on the repos in your GitHub profile, if you'd like to change them, you can do that here: http://24pullrequests.com/email
 <% else %>
