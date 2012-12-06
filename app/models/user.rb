@@ -131,6 +131,11 @@ class User < ActiveRecord::Base
     )
   end
 
+  def unspent_pull_requests
+    gifted_pull_requests = gifts.map {|g| g.pull_request }
+    pull_requests.reject{|pr| gifted_pull_requests.include?(pr) }
+  end
+  
   private
   def pull_request_downloader
     Rails.application.config.pull_request_downloader.call(nickname, token)
