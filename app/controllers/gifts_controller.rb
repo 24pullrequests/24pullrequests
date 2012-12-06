@@ -17,22 +17,14 @@ class GiftsController < ApplicationController
   end
 
   def create
-    pull_request = current_user.pull_requests.find_by_id(pull_request_id)
-    gift_params  = post_params.merge(:pull_request => pull_request)
-    gift         = current_user.new_gift(gift_params)
+    gift = current_user.new_gift(gift_params)
 
     if gift.save
-      flash[:notice] = "Your code has been gifted."
-      redirect_to gifts_path()
+      gift_given
     else
-      gift_form = GiftForm.new(:gift => gift,
-                               :pull_requests => current_user.pull_requests,
-                               :giftable_dates => Gift.giftable_dates)
-
-      render :new, :locals => { :gift_form => gift_form }
+      gift_failed(gift)
     end
   end
-
 
   def edit
     gift = current_user.gift_for(params[:id])
@@ -45,23 +37,35 @@ class GiftsController < ApplicationController
 
 
   def update
-    pull_request = current_user.pull_requests.find_by_id(pull_request_id)
-    gift_params  = post_params.merge(:pull_request => pull_request)
-    gift         = current_user.gift_for(params[:id])
+    gift = current_user.gift_for(params[:id])
 
     if gift.update_attributes(gift_params)
-      flash[:notice] = "Your code has been gifted."
-      redirect_to gifts_path()
+      gift_given
     else
-      gift_form = GiftForm.new(:gift => gift,
-                               :pull_requests => current_user.pull_requests,
-                               :giftable_dates => Gift.giftable_dates)
-
-      render :new, :locals => { :gift_form => gift_form }
+      gift_failed(gift)
     end
   end
 
   private
+
+  def gift_params
+    pull_request = current_user.pull_requests.find_by_id(pull_request_id)
+    post_params.merge(:pull_request => pull_request)
+  end
+
+  def gift_given
+    flash[:notice] = "Your code has been gifted."
+    redirect_to gifts_path()
+  end
+
+  def gift_failed(gift)
+    gift_form = GiftForm.new(:gift => gift,
+                             :pull_requests => current_user.pull_requests,
+                             :giftable_dates => Gift.giftable_dates)
+
+    render :new, :locals => { :gift_form => gift_form }
+  end
+
   def pull_request_id
     params[:gift][:pull_request_id]
   end
