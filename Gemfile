@@ -11,6 +11,7 @@ gem 'omniauth-twitter'
 gem 'haml-rails'
 gem 'octokit'
 gem "bugsnag"
+gem 'rabl'
 gem 'newrelic_rpm'
 gem 'simplecov'
 gem 'kaminari'
