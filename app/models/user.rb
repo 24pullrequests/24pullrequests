@@ -30,7 +30,8 @@ class User < ActiveRecord::Base
 
   def self.collaborators
     collaborators = Rails.configuration.collaborators.map(&:login)
-    where('nickname in (?)', collaborators)
+    result = where('nickname in (?)', collaborators)
+    collaborators.map { |c| result.find { |u| u.nickname == c } }
   end
 
   def authorize_twitter!(nickname, token, secret)
