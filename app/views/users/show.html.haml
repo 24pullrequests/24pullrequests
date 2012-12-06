@@ -24,5 +24,10 @@
   .span12
 
     %h3 24 Pull Requests
+    %h4
+      =@user.nickname
+      has made
+      =@user.pull_requests.count
+      total pull requests so far.
     = render :partial => 'calendar', :object => @calendar
 
