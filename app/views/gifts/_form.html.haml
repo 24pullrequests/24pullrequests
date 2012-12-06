@@ -3,7 +3,7 @@
   - if gift_form.giftable_dates.any?
     = form.input :date, :collection => gift_form.giftable_dates
 
-  = form.input :pull_request_id, :collection => gift_form.pull_requests
+  = form.input :pull_request_id, :collection => gift_form.pull_requests_for_select
 
   .control-group
     .controls
