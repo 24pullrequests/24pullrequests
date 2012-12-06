@@ -1,0 +1,19 @@
+%section
+  %h3 Core Contributors
+  .row-fluid.clearfix
+    - users.each_slice(4) do |row|
+      %ul.thumbnails
+        - row.each do |user|
+          %li.thumbnail.collaborator.span3
+            = link_to image_tag(gravatar_url(user.gravatar_id, 200), :width => 200, :alt => user.nickname).html_safe, user.github_profile, target: '_blank'
+            .caption
+              %p
+                %strong= link_to "@#{user.nickname}", user.github_profile, target: '_blank'
+              %p
+                = github_button user.nickname
+              - if user.twitter_linked?
+                %a{:href => "https://twitter.com/#{user.twitter_nickname}", :class => 'twitter-follow-button'}
+                  Follow
+                  @#{user.twitter_nickname}
+                :javascript
+                  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

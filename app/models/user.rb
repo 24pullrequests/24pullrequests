@@ -28,6 +28,11 @@ class User < ActiveRecord::Base
     where(conditions).first
   end
 
+  def self.collaborators
+    collaborators = Rails.configuration.collaborators.map(&:login)
+    where('nickname in (?)', collaborators)
+  end
+
   def authorize_twitter!(nickname, token, secret)
     self.twitter_nickname = nickname
     self.twitter_token    = token

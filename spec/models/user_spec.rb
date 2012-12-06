@@ -28,6 +28,18 @@ describe User do
     end
   end
 
+  describe '#collaborators' do
+    let!(:user) { create :user, nickname: 'foobar' }
+
+    before do
+      3.times { create :user }
+      Rails.configuration.stub(:collaborators).and_return([ Hashie::Mash.new(login: 'foobar') ])
+    end
+
+    subject { described_class.collaborators }
+    it { should eq [user] }
+  end
+
   describe '.estimate_skills' do
     let(:github_client) { double('github client') }
     let(:repos) { Project::LANGUAGES.sample(3).map { |l| Hashie::Mash.new(language: l) } }
