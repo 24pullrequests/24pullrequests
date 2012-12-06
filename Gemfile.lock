@@ -201,6 +201,9 @@ GEM
       slop (~> 3.3.1)
     quiet_assets (1.0.1)
       railties (~> 3.1)
+    rabl (0.7.6)
+      activesupport (>= 2.3.14)
+      multi_json (~> 1.0)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -349,6 +352,7 @@ DEPENDENCIES
   pg
   poltergeist
   quiet_assets
+  rabl
   rack-google-analytics
   rails (= 3.2.9)
   rb-fsevent (~> 0.9.1)
