@@ -9,7 +9,7 @@ class GiftsController < ApplicationController
 
   def new
     gift_form = GiftForm.new(:gift           => current_user.new_gift,
-                             :pull_requests  => current_user.pull_requests,
+                             :pull_requests  => current_user.unspent_pull_requests,
                              :giftable_dates => Gift.giftable_dates,
                              :date => params[:date])
 
