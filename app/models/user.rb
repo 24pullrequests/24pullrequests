@@ -46,6 +46,14 @@ class User < ActiveRecord::Base
     twitter_token.present? && twitter_secret.present?
   end
 
+  def twitter_profile
+    "https://twitter.com/#{twitter_nickname}" if twitter_nickname.present?
+  end
+
+  def github_profile
+    "https://github.com/#{nickname}" if nickname.present?
+  end
+
   def estimate_skills
     languages = github_client.repos.map(&:language).uniq.compact
     (Project::LANGUAGES & languages).each do |language|
