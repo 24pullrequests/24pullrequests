@@ -29,11 +29,11 @@ describe User do
   end
 
   describe '#collaborators' do
-    let!(:user) { create :user, nickname: 'foobar' }
+    let!(:user) { create :user, :nickname => 'foobar' }
 
     before do
       3.times { create :user }
-      Rails.configuration.stub(:collaborators).and_return([ Hashie::Mash.new(login: 'foobar') ])
+      Rails.configuration.stub(:collaborators).and_return([ Hashie::Mash.new(:login => 'foobar') ])
     end
 
     subject { described_class.collaborators }
@@ -42,7 +42,7 @@ describe User do
 
   describe '.estimate_skills' do
     let(:github_client) { double('github client') }
-    let(:repos) { Project::LANGUAGES.sample(3).map { |l| Hashie::Mash.new(language: l) } }
+    let(:repos) { Project::LANGUAGES.sample(3).map { |l| Hashie::Mash.new(:language => l) } }
 
     before do
       user.stub(:github_client).and_return(github_client)
@@ -63,7 +63,7 @@ describe User do
 
     context 'when the user has skillz' do
       before do
-        create :skill, language: 'JavaScript', user: user
+        create :skill, :language => 'JavaScript', :user => user
       end
 
       it { should eq ['JavaScript'] }
@@ -104,7 +104,7 @@ describe User do
 
     context 'when a pull request is added' do
       before do
-        create :pull_request, user: user
+        create :pull_request, :user => user
         user.reload
       end
 

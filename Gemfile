@@ -67,6 +67,6 @@ group :test do
   gem "capybara"
   gem 'database_cleaner'
   gem 'shoulda-matchers'
-  gem 'webmock', require: false
+  gem 'webmock', :require => false
   gem 'poltergeist'
 end

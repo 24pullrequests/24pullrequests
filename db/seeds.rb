@@ -31,11 +31,11 @@ if Rails.env.development? && User.count == 0
   puts 'Inserting some test data'
 
   USERS.times do
-    user = create :user, gravatar_id: GRAVATARS.sample
+    user = create :user, :gravatar_id => GRAVATARS.sample
     user.uid = user.nickname # For developer2 omniauth
     user.save!
     PULL_REQUESTS.to_a.sample.times do
-      create :pull_request, user: user
+      create :pull_request, :user => user
     end
   end
 
@@ -44,6 +44,6 @@ if Rails.env.development? && User.count == 0
   end
 
   Rails.configuration.collaborators.each do |collaborator|
-    user = create :user, nickname: collaborator.login, gravatar_id: collaborator.gravatar_id
+    user = create :user, :nickname => collaborator.login, :gravatar_id => collaborator.gravatar_id
   end
 end

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'Twitter' do
-  let(:user) { create :user, email_frequency: 'never' }
+  let(:user) { create :user, :email_frequency => 'never' }
   subject { page }
 
   before do
@@ -11,7 +11,7 @@ describe 'Twitter' do
 
   describe 'Linking twitter account' do
     context 'when the user has not linked their twitter account' do
-      it { should have_link('Link Your Twitter Account', href: '/auth/twitter') }
+      it { should have_link('Link Your Twitter Account', :href  => '/auth/twitter') }
 
       it 'allows the user to link their twitter account' do
         mock_twitter_auth
@@ -23,23 +23,23 @@ describe 'Twitter' do
     end
 
     context 'when the user has already linked their twitter account' do
-      let(:user) { create :user, email_frequency: 'never', twitter_token: 'foo', twitter_secret: 'bar' }
+      let(:user) { create :user, :email_frequency => 'never', :twitter_token => 'foo', :twitter_secret => 'bar' }
       it { should_not have_link('Link Your Twitter Account') }
     end
   end
 
   describe 'removing twitter account' do
     context 'when the user has linked their twitter account' do
-      let(:user) { create :user, email_frequency: 'never',
-                   twitter_nickname: Faker::Lorem.word,
-                   twitter_token: SecureRandom.hex,
-                   twitter_secret: SecureRandom.hex }
+      let(:user) { create :user, :email_frequency => 'never',
+                   :twitter_nickname => Faker::Lorem.word,
+                   :twitter_token => SecureRandom.hex,
+                   :twitter_secret => SecureRandom.hex }
       before do
         visit preferences_path
       end
 
-      it { should have_link("@#{user.twitter_nickname}", href: "https://twitter.com/#{user.twitter_nickname}")}
-      it { should have_link('Remove Account', href: twitter_remove_path) }
+      it { should have_link("@#{user.twitter_nickname}", :href  => "https://twitter.com/#{user.twitter_nickname}")}
+      it { should have_link('Remove Account', :href  => twitter_remove_path) }
 
       describe 'clicking remove account' do
         before do
