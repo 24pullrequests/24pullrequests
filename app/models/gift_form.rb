@@ -9,7 +9,7 @@ class GiftForm
   end
 
   def pull_requests_for_select
-    @pull_requests.includes(:gifts).sort{ |pr1, pr2| pr2.gifted_state <=> pr1.gifted_state }.map{ |pr|
+    @pull_requests.sort{ |pr1, pr2| pr2.gifted_state <=> pr1.gifted_state }.map{ |pr|
       ["#{pr.gifted_state.to_s.humanize}: #{pr.title}", pr.to_param]
     }
   end
