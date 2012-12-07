@@ -59,14 +59,14 @@ group :development, :test do
   gem 'sinon-chai-rails'
   gem 'sinon-rails'
   gem 'ejs'
+  gem "factory_girl_rails"
+  gem 'faker'
 end
 
 group :test do
-  gem "factory_girl_rails"
   gem "capybara"
   gem 'database_cleaner'
   gem 'shoulda-matchers'
-  gem 'faker'
   gem 'webmock', require: false
   gem 'poltergeist'
 end
