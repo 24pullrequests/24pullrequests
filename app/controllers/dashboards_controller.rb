@@ -9,7 +9,7 @@ class DashboardsController < ApplicationController
 
     if is_decemeber? && !current_user.gift_for(today)
       gift      = current_user.new_gift
-      gift_form = GiftForm.new(:gift => gift, :pull_requests => pull_requests)
+      gift_form = GiftForm.new(:gift => gift, :pull_requests => current_user.unspent_pull_requests)
     end
 
     render :show, :locals => { :user => current_user,
