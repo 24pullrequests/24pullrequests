@@ -1,12 +1,14 @@
 require 'spec_helper'
 
 describe GiftForm do
-  it "formats pull requests for select boxes" do
-    pull_requests = [mock('pr', :to_param => '1', :title => 'Foo')]
-    form = GiftForm.new(:gift => mock('gift'),
-                        :pull_requests => pull_requests)
+  context '.pull_requests_for_select' do
+    it "formats pull requests for select boxes" do
+      pull_requests = stub(:includes => [mock('pr', :to_param => '1', :title => 'Foo', :gifted_state => :gifted)])
+      form = GiftForm.new(:gift => mock('gift'),
+                          :pull_requests => pull_requests)
 
-    form.pull_requests.should == [['Foo', '1']]
+      form.pull_requests_for_select.should == [['Gifted: Foo', '1']]
+    end
   end
 
   it "formats dates for select boxes" do

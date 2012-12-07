@@ -8,8 +8,10 @@ class GiftForm
     @gift.date = args.fetch(:date) if args.fetch(:date, nil)
   end
 
-  def pull_requests
-    @pull_requests.map { |pr| [pr.title, pr.to_param] }
+  def pull_requests_for_select
+    @pull_requests.includes(:gifts).sort{ |pr1, pr2| pr2.gifted_state <=> pr1.gifted_state }.map{ |pr|
+      ["#{pr.gifted_state.to_s.humanize}: #{pr.title}", pr.to_param]
+    }
   end
 
   def giftable_dates
