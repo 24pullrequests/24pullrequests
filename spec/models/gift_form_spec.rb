@@ -3,7 +3,8 @@ require 'spec_helper'
 describe GiftForm do
   context '.pull_requests_for_select' do
     it "formats pull requests for select boxes" do
-      pull_requests = stub(:includes => [mock('pr', :to_param => '1', :title => 'Foo', :gifted_state => :gifted)])
+      gifts = [mock('pr', :to_param => '1', :title => 'Foo', :gifted_state => :gifted)]
+      pull_requests = stub(:includes => gifts, :sort => gifts)
       form = GiftForm.new(:gift => mock('gift'),
                           :pull_requests => pull_requests)
 
