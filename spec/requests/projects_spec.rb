@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'Projects' do
-  let(:user) { create :user, email_frequency: 'daily' }
+  let(:user) { create :user, :email_frequency => 'daily' }
   subject { page }
 
   describe 'project index' do
@@ -21,10 +21,10 @@ describe 'Projects' do
 
     it 'allows the user to suggest a project to contribute to' do
       click_link 'Suggest a project'
-      fill_in 'Name', with: Faker::Lorem.words.first
-      fill_in 'Github url', with: 'http://github.com/andrew/24pullrequests'
-      fill_in 'Summary', with: Faker::Lorem.paragraphs.first
-      fill_in 'Main language', with: 'Ruby'
+      fill_in 'Name', :with => Faker::Lorem.words.first
+      fill_in 'Github url', :with => 'http://github.com/andrew/24pullrequests'
+      fill_in 'Summary', :with => Faker::Lorem.paragraphs.first
+      fill_in 'Main language', :with => 'Ruby'
       click_on 'Submit Project'
     end
   end
@@ -43,9 +43,9 @@ describe 'Projects' do
 
     context 'as logged-in user' do
       before do
-        create :project, name: 'Ruby project', main_language: 'Ruby'
-        create :project, name: 'Java project', main_language: 'Java'
-        user.skills.create! language: 'Ruby'
+        create :project, :name  => 'Ruby project', :main_language => 'Ruby'
+        create :project, :name  => 'Java project', :main_language => 'Java'
+        user.skills.create! :language => 'Ruby'
         login user
         visit projects_path
       end

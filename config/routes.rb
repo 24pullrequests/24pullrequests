@@ -10,17 +10,17 @@ Tfpullrequests::Application.routes.draw do
   resource  :dashboard # Singular, only applies to current user
   resource  :pull_request_download, :only => :create
 
-  match '/preferences', to: 'dashboards#preferences', as: 'preferences'
-  match '/preferences/update', to: 'dashboards#update_preferences', as: 'update_preferences'
+  match '/preferences', :to => 'dashboards#preferences', :as => 'preferences'
+  match '/preferences/update', :to => 'dashboards#update_preferences', :as => 'update_preferences'
 
-  match '/login',  to: 'sessions#new',     as: 'login'
-  match '/logout', to: 'sessions#destroy', as: 'logout'
+  match '/login',  :to => 'sessions#new',     :as => 'login'
+  match '/logout', :to => 'sessions#destroy', :as => 'logout'
 
-  match '/auth/twitter/callback',   to: 'twitter#authorize'
-  delete '/twitter/remove',         to: 'twitter#remove'
+  match '/auth/twitter/callback',   :to => 'twitter#authorize'
+  delete '/twitter/remove',         :to => 'twitter#remove'
 
-  match '/auth/:provider/callback', to: 'sessions#create'
-  match '/auth/failure',            to: 'sessions#failure'
+  match '/auth/:provider/callback', :to => 'sessions#create'
+  match '/auth/failure',            :to => 'sessions#failure'
 
   match 'about', :to => 'static#about'
   match 'contributing', :to => 'static#contributing'

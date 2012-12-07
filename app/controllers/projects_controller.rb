@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   before_filter :ensure_logged_in, :except => [:index]
   respond_to :html
-  respond_to :json, only: :index
+  respond_to :json, :only => :index
 
   def index
     @projects = Project.order(:name).all

@@ -1,9 +1,9 @@
 class PullRequest  < ActiveRecord::Base
   attr_accessible :title, :issue_url, :body, :state, :merged, :created_at, :repo_name
 
-  belongs_to :user, counter_cache: true
+  belongs_to :user, :counter_cache => true
 
-  validates_uniqueness_of :issue_url, scope: :user_id
+  validates_uniqueness_of :issue_url, :scope => :user_id
 
   after_create :post_tweet
 
@@ -31,7 +31,7 @@ class PullRequest  < ActiveRecord::Base
   end
 
   def post_tweet
-    user.twitter.update(I18n.t 'pull_request.twitter_message', issue_url: issue_url) if user && user.twitter_linked?
+    user.twitter.update(I18n.t 'pull_request.twitter_message', :issue_url => issue_url) if user && user.twitter_linked?
   end
 
   def gifted_state

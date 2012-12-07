@@ -26,11 +26,11 @@ describe PullRequest do
     its(:repo_name)  { should eq json['repo']['name'] }
 
     context 'when the user has authed their twitter account' do
-      let(:user) { create :user, twitter_token: 'foo', twitter_secret: 'bar' }
+      let(:user) { create :user, :twitter_token => 'foo', :twitter_secret => 'bar' }
 
       it 'tweets the pull request' do
         Twitter::Client.any_instance.should_receive(:update)
-          .with(I18n.t 'pull_request.twitter_message', issue_url: json['payload']['pull_request']['issue_url'])
+          .with(I18n.t 'pull_request.twitter_message', :issue_url => json['payload']['pull_request']['issue_url'])
         user.pull_requests.create_from_github(json)
       end
     end

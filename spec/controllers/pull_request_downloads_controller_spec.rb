@@ -3,7 +3,7 @@ require 'spec_helper'
 describe PullRequestDownloadsController do
 
   describe "POST 'create'" do
-    let(:user) { stub(:user, id: 1, pull_requests: []) }
+    let(:user) { stub(:user, :id => 1, :pull_requests => []) }
 
     before do
       session[:user_id] = user.id

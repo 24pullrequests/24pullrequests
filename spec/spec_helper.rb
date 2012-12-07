@@ -11,7 +11,7 @@ require 'webmock'
 
 OmniAuth.config.test_mode = true
 
-WebMock.disable_net_connect! allow_localhost: true
+WebMock.disable_net_connect! :allow_localhost => true
 
 if ENV['CI']
   require 'capybara/poltergeist'
@@ -50,7 +50,7 @@ RSpec.configure do |config|
     DatabaseCleaner.strategy = :transaction
   end
 
-  config.before(:each, js: true) do
+  config.before(:each, :js => true) do
     DatabaseCleaner.strategy = :truncation
   end
 

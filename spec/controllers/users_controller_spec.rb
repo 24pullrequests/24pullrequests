@@ -18,7 +18,7 @@ describe UsersController do
 
     context 'as json' do
       before do
-        get :index, format: :json
+        get :index, :format  => :json
       end
 
       it { should respond_with_content_type(:json) }
@@ -29,7 +29,7 @@ describe UsersController do
     context 'as html' do
       context 'when the case matches' do
         before do
-          get :show, id: user.nickname
+          get :show, :id  => user.nickname
         end
 
         it { should respond_with(200) }
@@ -37,7 +37,7 @@ describe UsersController do
 
       context 'when the case does not match' do
         before do
-          get :show, id: user.nickname.upcase
+          get :show, :id  => user.nickname.upcase
         end
 
         it { should respond_with(200) }
@@ -46,7 +46,7 @@ describe UsersController do
 
     context 'as json' do
       before do
-        get :show, id: user.nickname, format: :json
+        get :show, :id  => user.nickname, :format  => :json
       end
 
       it { should respond_with_content_type(:json) }

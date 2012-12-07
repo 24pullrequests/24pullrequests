@@ -124,10 +124,10 @@ class User < ActiveRecord::Base
 
   def twitter
     @twitter ||= Twitter::Client.new(
-      consumer_key: ENV['TWITTER_KEY'],
-      consumer_secret: ENV['TWITTER_SECRET'],
-      oauth_token: twitter_token,
-      oauth_token_secret: twitter_secret
+      :consumer_key       => ENV['TWITTER_KEY'],
+      :consumer_secret    => ENV['TWITTER_SECRET'],
+      :oauth_token        => twitter_token,
+      :oauth_token_secret => twitter_secret
     )
   end
 
