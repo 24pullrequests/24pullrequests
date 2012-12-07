@@ -157,7 +157,7 @@ GEM
     multi_xml (0.5.1)
     multipart-post (1.1.5)
     netrc (0.7.7)
-    newrelic_rpm (3.5.3.24)
+    newrelic_rpm (3.5.3.25)
     nokogiri (1.5.5)
     oauth (0.4.7)
     oauth2 (0.8.0)
@@ -344,7 +344,7 @@ DEPENDENCIES
   kaminari
   konacha
   less-rails
-  newrelic_rpm
+  newrelic_rpm (>= 3.5.3.25)
   octokit
   omniauth
   omniauth-github
