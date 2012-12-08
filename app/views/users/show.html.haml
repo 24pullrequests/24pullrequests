@@ -17,6 +17,9 @@
       %h4 Preferred Languages
       = @user.languages.to_sentence
 
+    %h4 Coderwall Badges
+    #coderwall-content{:data => {:nickname => "#{@user.nickname}"}}
+
   .span2
     .avatar= image_tag(gravatar_url(@user.gravatar_id, 100), :width => 100, :alt => @user.nickname)
 
