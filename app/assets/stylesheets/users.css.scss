@@ -9,15 +9,20 @@
   }
 }
 
-#team_box li{
-	float: left;
-	list-style: none;
-	padding: 1em;
-	.badge-name{
-		text-align: center;
-	}
+#team_box{
+  margin:0;
+  li{
+    float: left;
+    list-style: none;
+    padding: 5px;
+    width:100px;
+    height:100px;
+    overflow:none;
+    text-align: center;
+  }
 }
+
 .team-coders{
-	clear: both;
-	float: none;
+  clear: both;
+  float: none;
 }
