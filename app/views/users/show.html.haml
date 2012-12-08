@@ -17,9 +17,6 @@
       %h4 Preferred Languages
       = @user.languages.to_sentence
 
-    %h4 Coderwall Badges
-    #coderwall-content{:data => {:nickname => "#{@user.nickname}"}}
-
   .span2
     .avatar= image_tag(gravatar_url(@user.gravatar_id, 100), :width => 100, :alt => @user.nickname)
 
@@ -34,3 +31,6 @@
       total pull requests so far.
     = render :partial => 'calendar', :object => @calendar
 
+.row-fluid
+  %h3 Coderwall Badges
+  #coderwall-content{:data => {:nickname => "#{@user.nickname}"}}
