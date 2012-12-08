@@ -1,4 +1,6 @@
 %h2 Suggest a Project
+%p One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We've selected our favorites, but we're always open to suggestions. Have some ideas? Share them below!
+
 
 = simple_form_for @project, :html => {:class => 'form-horizontal'} do |form|
   = form.input :name, :input_html => {:class => "span4"}, :label => 'Project Name'
@@ -8,3 +10,9 @@
   .control-group
     .controls
       = form.button :submit, 'Submit Project'
+      or
+      = link_to 'Cancel', '/projects'
+%p 
+  Have a suggestion for this project? We're all ears! If there's something you'd like fixed, feel free to submit an
+  = succeed('.') do
+    = link_to 'issue', 'https://github.com/andrew/24pullrequests/issues'
