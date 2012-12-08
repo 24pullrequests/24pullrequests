@@ -8,3 +8,16 @@
     color: #BC3B3B;
   }
 }
+
+#team_box li{
+	float: left;
+	list-style: none;
+	padding: 1em;
+	.badge-name{
+		text-align: center;
+	}
+}
+.team-coders{
+	clear: both;
+	float: none;
+}
