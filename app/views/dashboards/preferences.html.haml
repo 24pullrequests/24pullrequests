@@ -1,5 +1,10 @@
 %h2 Set your Email Preferences 
 
+%p At the frequency you choose, we'll send you helpful emails from now until the project is over, highlighting some suggested projects you might consider contributing to. As an added bonus, we'll take the liberty of personalizing our suggestions to your language proficiency you've demonstrated in your Github profile based on your repos. Alterately, you can choose your languages below.
+
+%p 
+  %em You can always change your email preferences later.
+
 = simple_form_for current_user, :url => update_preferences_path, :html => {:class => 'form-horizontal'}  do |form|
   = form.input :email
   = form.input :email_frequency, :collection => [['Never', 'none'], ['Daily', 'daily'], ['Weekly', 'weekly']], :selected => (form.object.email_frequency || 'daily')
