@@ -5,6 +5,11 @@ describe Gift do
   let(:pull_request) { gift.pull_request }
   let(:user) { gift.user }
 
+  it { should validate_presence_of(:user) }
+  it { should validate_presence_of(:pull_request) }
+  it { should validate_presence_of(:date) }
+  it { should ensure_inclusion_of(:date).in_array(Gift.giftable_dates) }
+
   describe '#find' do
     subject { described_class.find(user, Time.zone.now.to_date)}
     it { should eq gift }
