@@ -70,3 +70,7 @@ group :test do
   gem 'webmock', :require => false
   gem 'poltergeist'
 end
+
+group :production do
+  gem 'dalli'
+end
