@@ -149,6 +149,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memcachier (0.0.1)
     metaclass (0.0.1)
     method_source (0.8.1)
     mime-types (1.19)
@@ -346,6 +347,7 @@ DEPENDENCIES
   kaminari
   konacha
   less-rails
+  memcachier
   newrelic_rpm (>= 3.5.3.25)
   octokit
   omniauth
