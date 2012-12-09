@@ -3,7 +3,12 @@ require "spec_helper"
 describe ReminderMailer do
   
   describe 'daily' do
-    let(:user) { mock_model(User, :nickname => 'David', :email => 'david@example.com', :languages => ['Ruby'], :skills => [], :pull_requests => []) }
+    let(:user) { mock_model(User, :nickname => 'David', 
+                                  :email => 'david@example.com', 
+                                  :languages => ['Ruby'], 
+                                  :skills => [], 
+                                  :pull_requests => [],
+                                  :suggested_projects => []) }
     let(:mail) { ReminderMailer.daily(user) }
  
     it 'renders the subject' do
@@ -29,7 +34,12 @@ describe ReminderMailer do
   end
 
   describe 'weekly' do
-    let(:user) { mock_model(User, :nickname => 'David', :email => 'david@example.com', :languages => ['Ruby'], :skills => [], :pull_requests => []) }
+    let(:user) { mock_model(User, :nickname => 'David', 
+                                  :email => 'david@example.com', 
+                                  :languages => ['Ruby'], 
+                                  :skills => [], 
+                                  :pull_requests => [],
+                                  :suggested_projects => []) }
     let(:mail) { ReminderMailer.weekly(user) }
  
     it 'renders the subject' do
