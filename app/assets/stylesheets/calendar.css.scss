@@ -35,6 +35,10 @@ $calendar-background: $header-background;
 
   line-height: 100%;
 
+  @media (max-width: 500px) {
+    height: 50px;
+  }
+
   .calendar-inner {
     /* hack */
     display: table;
@@ -44,6 +48,17 @@ $calendar-background: $header-background;
     height: 100%;
     padding: 5px 5px;
     border: 1px solid $calendar-background;
+    p.small {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      p.large {
+        display: none;
+      }
+      p.small {
+        display: block;
+      }
+    }
   }
 }
 
@@ -65,5 +80,22 @@ $calendar-background: $header-background;
 }
 
 .calendar-christmas {
-  text-align: center;
+  text-align: center;  
+  h4 {
+    @media (max-width: 1024px) {
+      font-size: 14px;
+    }
+    @media (max-width: 500px) {
+      float: left;
+      text-indent: -999px;
+      background: url(#{image_path('star.png')}) center 0 no-repeat;
+      margin-top: 0;
+      padding-bottom: 10px;
+      width: 100%;
+    }
+    @media (-webkit-min-device-pixel-ratio: 1.5) {
+      background: url(#{image_path('star@2x.png')}) 0 0 no-repeat;
+      background-size: 25px 25px;
+    }
+  }
 }
