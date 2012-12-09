@@ -18,11 +18,8 @@ class Gift < ActiveRecord::Base
 
   delegate :title, :issue_url, :to => :pull_request, :prefix => true
 
-  def initialize(*args)
-    result = super
-    self.date = date || Gift.default_date
-
-    result
+  after_initialize do
+    self.date ||= Gift.default_date
   end
 
   def self.find(user_id, date)
