@@ -60,6 +60,10 @@ class User < ActiveRecord::Base
     "https://github.com/#{nickname}" if nickname.present?
   end
 
+  def suggested_projects
+    Project.where(:main_language => languages).not_owner(nickname)
+  end
+
   def estimate_skills
     languages = github_client.repos.map(&:language).uniq.compact
     (Project::LANGUAGES & languages).each do |language|
