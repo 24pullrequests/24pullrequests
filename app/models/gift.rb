@@ -13,7 +13,7 @@ class Gift < ActiveRecord::Base
   validates :date, :presence => true,
                    :uniqueness => { :scope => :user_id,
                                     :message => "you only need one gift per day. Save it for tomorrow!" },
-                   :inclusion => { :in => Proc.new { Gift.giftable_dates },
+                   :inclusion => { :in => proc { Gift.giftable_dates },
                                    :message => "your gift should be for the month of December." }
 
   delegate :title, :issue_url, :to => :pull_request, :prefix => true
