@@ -36,4 +36,9 @@ FactoryGirl.define do
     name { Faker::Lorem.words.first }
     main_language { Project::LANGUAGES.sample }
   end
+
+  factory :gift do
+    user
+    pull_request
+  end
 end
