@@ -92,13 +92,13 @@ class User < ActiveRecord::Base
 
   def send_daily?
     if email_frequency == 'daily'
-      last_sent_at.nil? || last_sent_at < 1.day.ago
+      last_sent_at.nil? || last_sent_at < 23.hours.ago
     end
   end
 
   def send_weekly?
     if email_frequency == 'weekly'
-      last_sent_at.nil? || last_sent_at < 7.days.ago
+      last_sent_at.nil? || last_sent_at < (6.days + 23.hours).ago
     end
   end
 
