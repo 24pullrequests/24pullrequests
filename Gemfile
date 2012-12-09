@@ -36,10 +36,15 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'guard-rspec'
   gem 'rb-fsevent', '~> 0.9.1'
-  gem "factory_girl_rails"
+  gem 'factory_girl_rails'
   gem 'faker'
+
+  # Auto testing
+  gem 'guard-rspec'
+  gem 'guard-spork'
+  gem 'ruby_gntp'
+  gem 'rb-fsevent', '~> 0.9.1'
 
   # Javascript
   gem 'konacha'

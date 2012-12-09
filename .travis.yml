@@ -4,7 +4,7 @@ rvm:
 env:
   - DB=postgresql
 script:
-  - RAILS_ENV=test CI=true bundle exec rake --trace db:migrate spec konacha:run
+  - RAILS_ENV=test POLTERGEIST=true bundle exec rake --trace db:migrate spec konacha:run
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
