@@ -41,6 +41,7 @@ describe User do
   end
 
   describe '.estimate_skills' do
+    ENV['GITHUB_KEY'] = 'foobar'
     let(:github_client) { double('github client') }
     let(:repos) { Project::LANGUAGES.sample(3).map { |l| Hashie::Mash.new(:language => l) } }
 
