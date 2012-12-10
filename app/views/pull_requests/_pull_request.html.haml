@@ -1,7 +1,6 @@
 .pull_request.row-fluid.clearfix
   .span12
-    .image
-      = image_tag(gravatar_url(pull_request.user.gravatar_id), :width => 80, :height => 80, :alt => pull_request.user.nickname)
+    = link_to image_tag(gravatar_url(pull_request.user.gravatar_id), :width => 80, :height => 80, :alt => pull_request.user.nickname), pull_request.user.nickname, :rel => 'tooltip', :data => { :original_title => pull_request.user.nickname }, :class => 'image'
     %h4
       = link_to pull_request.title, pull_request.issue_url, :target => :blank
       %span.meta
@@ -10,7 +9,6 @@
         %small
           = distance_of_time_in_words_to_now pull_request.created_at
           ago
-    
     %p= truncate pull_request.body, :length => 300
     %hr
   
