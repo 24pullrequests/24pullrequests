@@ -13,12 +13,6 @@ FactoryGirl.define do
     email
     gravatar_id { Faker::Internet.email }
     token { SecureRandom.hex }
-    before(:create) do |user|
-      github_client = RSpec::Mocks::Mock.new('github client')
-
-      user.stub(:github_client).and_return(github_client)
-      github_client.should_receive(:repos).and_return([])
-    end
   end
 
   factory :skill do

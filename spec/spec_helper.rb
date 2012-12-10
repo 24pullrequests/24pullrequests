@@ -83,6 +83,7 @@ Spork.each_run do
   I18n.backend.reload!
   RSpec.configure do |config|
     config.before do
+      User.any_instance.stub(:estimate_skills).and_return(nil)
       Twitter::Client.any_instance.stub(:update)
     end
   end

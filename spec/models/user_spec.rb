@@ -45,9 +45,9 @@ describe User do
     let(:repos) { Project::LANGUAGES.sample(3).map { |l| Hashie::Mash.new(:language => l) } }
 
     before do
-      user.stub(:github_client).and_return(github_client)
+      User.any_instance.unstub(:estimate_skills)
+      User.any_instance.stub(:github_client).and_return(github_client)
       github_client.should_receive(:repos).and_return(repos)
-      user.estimate_skills
     end
 
     subject { user }
