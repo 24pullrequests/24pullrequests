@@ -2,7 +2,5 @@
   %h2
     = PullRequest.count
     Pull Requests already made!
-  %ul
-    = render @pull_requests
-
+  = render @pull_requests
 = paginate @pull_requests
