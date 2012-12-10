@@ -1,5 +1,4 @@
 - if current_user.pull_requests.length > 0
-  %ul
-    = render :partial => 'pull_requests/pull_request', :collection => pull_requests
+  = render :partial => 'pull_requests/pull_request', :collection => pull_requests
 - else
   %p You've not sent any pull requests, what are you waiting for?!
