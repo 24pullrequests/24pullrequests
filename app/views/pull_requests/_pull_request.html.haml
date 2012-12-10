@@ -1,9 +1,16 @@
-%li
-  %h4
-    = link_to pull_request.title, pull_request.issue_url, :target => :blank
-    on
-    = link_to pull_request.repo_name, "https://github.com/#{pull_request.repo_name}", :target => :blank
-    \-
-    = distance_of_time_in_words_to_now pull_request.created_at
-    ago
-  = truncate pull_request.body, :length => 200
+.pull_request.row-fluid.clearfix
+  .span12
+    .image
+      = image_tag(gravatar_url(pull_request.user.gravatar_id), :width => 80, :height => 80, :alt => pull_request.user.nickname)
+    %h4
+      = link_to pull_request.title, pull_request.issue_url, :target => :blank
+      %span.meta
+        on
+        = link_to pull_request.repo_name, "https://github.com/#{pull_request.repo_name}", :target => :blank
+        %small
+          = distance_of_time_in_words_to_now pull_request.created_at
+          ago
+    
+    %p= truncate pull_request.body, :length => 300
+    %hr
+  
