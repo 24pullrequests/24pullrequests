@@ -66,9 +66,11 @@ class User < ActiveRecord::Base
   end
 
   def estimate_skills
-    languages = github_client.repos.map(&:language).uniq.compact
-    (Project::LANGUAGES & languages).each do |language|
-      skills.create(:language => language)
+    if ENV['GITHUB_KEY'].present?
+      languages = github_client.repos.map(&:language).uniq.compact
+      (Project::LANGUAGES & languages).each do |language|
+        skills.create(:language => language)
+      end
     end
   end
 
