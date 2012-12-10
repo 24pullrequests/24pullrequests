@@ -73,7 +73,7 @@ class User < ActiveRecord::Base
   end
 
   def languages
-    skills.any? ? skills.order(:language).map(&:language) : Project::LANGUAGES
+    skills.any? ? skills.order(:language).pluck(:language) : Project::LANGUAGES
   end
 
   def github_client
