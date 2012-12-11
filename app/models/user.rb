@@ -30,7 +30,9 @@ class User < ActiveRecord::Base
   end
 
   def self.collaborators
-    collaborators = Rails.configuration.collaborators.map(&:login)
+    collabs = Rails.configuration.collaborators
+    return [] if collabs.nil?
+    collaborators = collabs.map(&:login)
     result = where('nickname in (?)', collaborators)
     collaborators.map { |c| result.find { |u| u.nickname == c } }
   end
