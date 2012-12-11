@@ -11,6 +11,11 @@
     %p This is the site to help promote the project, highlighting why, how and where to send your pull requests.
     %p Log in with your GitHub account and we'll track and highlight all your pull requests and suggest projects to work on.
     %hr
+    %h4 'Tis the season
+    %hr
+    %p You've been benefiting from the use of open source projects all year, now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving pull requests!
+    
+    %hr
     - unless logged_in?
       %p
         = link_to login_path, :class => 'btn' do
@@ -18,10 +23,14 @@
       %hr
     = render :partial => 'shared/social_buttons'
 
-  .span6
-    %h4 'Tis the season
-    %hr
-    %p You've been benefiting from the use of open source projects all year, now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving pull requests!
+
+  .span6#info
+    #coderwall
+      %h4 Earn Coderwall badges
+      %p We've teamed up with coderwall and created some kickass badges to unlock for participating.
+      .center
+        = link_to image_tag('24-participant.png'), '#', :rel => 'tooltip', :title => 'Participant - Get involved, send at least one pull request before Christmas'
+        = link_to image_tag('24-continuous-sync.png'), '#', :rel => 'tooltip', :title => "Continous Sync - You're an open source machine, send 24 pull requests during December"
 
     %h4 Get involved
     %hr
