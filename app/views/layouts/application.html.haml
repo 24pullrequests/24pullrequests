@@ -1,6 +1,15 @@
 !!!
-%html{ :lang => 'en' }
+%html{ :lang => 'en', :"xmlnsns:og" => 'http://ogp.me/ns#', :"xmlns:fb" => 'http://http://www.facebook.com/2008/fbml' }
   %head
+    
+    / Facebook open graph api
+    %meta{ :property => 'og:title', :content => '24 Pull Requests' }
+    %meta{ :property => 'og:type', :content => 'non-profit' }
+    %meta{ :property => 'og:url', :content => 'http://24pullrequests.org' }
+    %meta{ :property => 'og:image', :content => request.protocol + request.host_with_port + image_path('logo.png') } 
+    %meta{ :property => 'og:description', :content => "24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas." } 
+
+    
     %meta{ :charset => "utf-8" }
     %meta{ :'http-equiv' => 'X-UA-Compatible', :content => "IE=Edge,chrome=1" }
     %meta{ :name => "viewport", :content => "user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"  }
