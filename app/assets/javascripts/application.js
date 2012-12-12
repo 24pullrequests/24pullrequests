@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require coderwall
+//= require jquery.timeago
 //= require_tree .

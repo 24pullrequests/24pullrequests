@@ -8,7 +8,6 @@
           on
           = link_to pull_request.repo_name, "https://github.com/#{pull_request.repo_name}", :target => :blank
           %small
-            = distance_of_time_in_words_to_now pull_request.created_at
-            ago
+            %abbr.timeago{:title => pull_request.created_at.iso8601}= pull_request.created_at
       %p= truncate pull_request.body, :length => 300
       %hr
