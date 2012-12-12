@@ -3,8 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .collaborator {
   text-align: center;
+  .caption {
+    padding: 9px 2px;
+    overflow: hidden;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 1em;
+      background: -webkit-linear-gradient(left, rgba(#fff,0), #fff);
+      background: linear-gradient(left, rgba(#fff,0), #fff);
+    }
+  }
 }
-
 #info h4{
   margin-top:30px;
 }
