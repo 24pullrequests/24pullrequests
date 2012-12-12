@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121205214829) do
+ActiveRecord::Schema.define(:version => 20121212160611) do
 
   create_table "gifts", :force => true do |t|
     t.integer  "user_id",         :null => false
@@ -43,12 +43,16 @@ ActiveRecord::Schema.define(:version => 20121205214829) do
     t.integer  "user_id"
   end
 
+  add_index "pull_requests", ["user_id"], :name => "index_pull_requests_on_user_id"
+
   create_table "skills", :force => true do |t|
     t.integer  "user_id"
     t.string   "language"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "skills", ["user_id"], :name => "index_skills_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "uid",                                :null => false
