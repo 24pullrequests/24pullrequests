@@ -1,0 +1,117 @@
+%h1 JSON API
+
+%p Little know fact that there is a JSON api for 24 Pull Requests, details of each end point below:
+
+%h3 Pagination
+
+%p Requests that return multiple items will be paginated to 99 items by default. You can specify further pages with the ?page parameter. 
+
+%pre
+  :plain
+    $ curl http://24pullrequests.com/users.json?page=2
+
+%h3 JSON-P Callbacks
+
+%p You can send a ?callback parameter to any GET call to have the results wrapped in a JSON function. This is typically used when browsers want to embed content in web pages by getting around cross domain issues. The response includes the same data output as the regular API.
+
+%pre
+  :plain
+    $ curl http://24pullrequests.com/users.json?callback=foo
+
+    foo([
+          {
+            "id":1,
+            "nickname":"andrew",
+            "gravatar_id":"8ddbf811da78bb0daeeb3cacd7cf743f",
+            "github_profile":"https://github.com/andrew",
+            "twitter_profile":"https://twitter.com/teabass",
+            "pull_requests_count":11,
+            "link":"http://24pullrequests.com/users/andrew",
+            "pull_requests":[
+              {
+                "title":"Daily and weekly reminder email content",
+                "issue_url":"https://github.com/andrew/24pullrequests/issues/66",
+                "repo_name":"andrew/24pullrequests",
+                "body":"Fix all the things!"
+              }
+            ]
+          }
+        ]
+      }
+    )
+
+.alert.alert-info
+  %strong What more options?
+  Open an issue on
+  = link_to 'GitHub', 'https://github.com/andrew/24pullrequests'
+  if you would like more features in the API, or even send us a pull request!
+
+%h2 Projects
+
+%p All suggested projects on the site, ordered alphabetically.
+
+%pre
+  :plain
+    $ curl http://24pullrequests.com/projects.json
+
+    [
+      {
+        "description":"This very site!",
+        "github_url":"https://github.com/andrew/24pullrequests",
+        "main_language":"Ruby"
+      }
+    ]
+
+%h2 Pull Requests
+
+%p Load all pull requests by users of the site during september, ordered by newest first, also includes the user who made the pull request.
+
+%pre
+  :plain
+    $ curl http://24pullrequests.com/pull_requests.json
+
+    [
+      {
+        "title":"Fix Date Due search and capture Monthly Charge search error",
+        "issue_url":"https://github.com/poundifdef/VirginMobileMinutesChecker/issues/31",
+        "repo_name":"poundifdef/VirginMobileMinutesChecker",
+        "body":"Fixes widget display and prevents displaying incorrect data when search fails",
+        "user":{
+          "id":153,
+          "nickname":"christophermanning",
+          "gravatar_id":"3f9394a7fb1070144a59644462eb4916",
+          "github_profile":"https://github.com/christophermanning",
+          "twitter_profile":null,
+          "pull_requests_count":12,
+          "link":"http://24pullrequests.com/users/christophermanning"
+        }
+      }
+    ]
+
+%h2 Users
+
+%p Load all users who have signed up to the site, ordered by how many pull requests they have sent so far in december, also includes their pull requests.
+
+%pre
+  :plain
+    $ curl http://24pullrequests.com/users.json
+
+    [
+      {
+        "id":1,
+        "nickname":"andrew",
+        "gravatar_id":"8ddbf811da78bb0daeeb3cacd7cf743f",
+        "github_profile":"https://github.com/andrew",
+        "twitter_profile":"https://twitter.com/teabass",
+        "pull_requests_count":11,
+        "link":"http://24pullrequests.com/users/andrew",
+        "pull_requests":[
+          {
+            "title":"Daily and weekly reminder email content",
+            "issue_url":"https://github.com/andrew/24pullrequests/issues/66",
+            "repo_name":"andrew/24pullrequests",
+            "body":"Fix all the things!"
+          }
+        ]
+      }
+    ]
