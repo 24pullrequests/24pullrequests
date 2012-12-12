@@ -23,6 +23,7 @@ Tfpullrequests::Application.routes.draw do
   match '/auth/failure',            :to => 'sessions#failure'
 
   match 'about', :to => 'static#about'
+  match 'api', :to => 'static#api'
   match 'contributing', :to => 'static#contributing'
 
   root :to => 'static#homepage'
