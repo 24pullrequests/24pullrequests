@@ -1,7 +1,7 @@
 @import 'variables.css.scss';
 
 body{
-  background-color: #e3e3e3;
+  background-color: #a63636;
   margin:0;
   padding:0;
 }
@@ -181,7 +181,7 @@ footer {
   width: 100%;
 
   .dark{
-    color: #e3e3e3;
+    color: rgba(255,255,255,.2);
     padding: 10px 0;
     background:#434343;
 
@@ -211,8 +211,12 @@ footer {
     a {
       font-weight: 800;
       font-size: 110%;
-      color:#fff;
-      text-decoration:underline;
+      color:#a63636;
+      text-decoration:none;
+
+      &:hover {
+        border-bottom: 1px dashed #a63636;
+      }
     }
 
     .dark-inner {
@@ -221,14 +225,13 @@ footer {
   }
 
   .ftw {
-    color: #000;
-    text-shadow: rgba(255,255,255,0.7) 2px 1px 0px;
+    color: #444;
     width: 100%;
     height: 40px;
-    margin-top:20px;
+    padding: 20px 0 0 0;
     font-size:12px;
     text-align: center;
-    background-color: #e3e3e3;
+    background-color: #eee;
   }
 }
 
