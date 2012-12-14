@@ -13,6 +13,7 @@
 = link_to "<i class='icon-twitter'></i> #{I18n.t 'twitter.link_account.text'}".html_safe, '/auth/twitter', :class => 'btn btn-info pull-right',
   rel: 'tooltip', title: I18n.t('twitter.link_account.tooltip') unless current_user.twitter_linked?
 = link_to 'Synchronize Pull Requests', pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn pull-right', :rel => 'tooltip', :title => I18n.t('pull_request.download.tooltip')
+
 #spinner
   = image_tag "spinner.gif", :class => 'pull-right'
 
@@ -21,7 +22,6 @@
 
 %div#pull-requests.clearfix
   = render :partial => 'pull_requests_if_any', :locals => { :pull_requests => pull_requests }
-
 
 %hr
 .row-fluid.clearfix
