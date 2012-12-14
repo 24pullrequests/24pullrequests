@@ -12,7 +12,3 @@ $ ->
       success: (data) ->
         $('#pull-requests').html(data)
         $("#spinner, #search_button").toggle()
-
-
-
-

@@ -9,3 +9,6 @@
 /tmp
 coverage
 .idea
+
+# Ignore ds_store
+.DS_Store
