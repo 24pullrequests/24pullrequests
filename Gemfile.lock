@@ -226,6 +226,8 @@ GEM
     rb-fsevent (0.9.2)
     rdoc (3.12)
       json (~> 1.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec (2.12.0)
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)
@@ -327,6 +329,7 @@ DEPENDENCIES
   guard-spork
   haml-rails
   jquery-rails
+  json
   kaminari
   konacha
   less-rails
@@ -343,6 +346,7 @@ DEPENDENCIES
   rack-google-analytics
   rails (= 3.2.9)
   rb-fsevent (~> 0.9.1)
+  rest-client
   rspec-rails
   ruby_gntp
   sass-rails (~> 3.2.3)

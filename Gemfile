@@ -22,6 +22,9 @@ gem "twitter-bootstrap-rails"
 gem 'simple_form'
 gem 'rack-google-analytics'
 
+gem 'json'
+gem 'rest-client'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
