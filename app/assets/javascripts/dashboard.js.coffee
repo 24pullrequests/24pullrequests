@@ -4,7 +4,6 @@ $ ->
     event.preventDefault()
     $("#spinner, #search_button").toggle()
 
-
     $.ajax '/pull_request_download',
       dataType:'html',
       type: 'post',
