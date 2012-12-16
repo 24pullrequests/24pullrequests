@@ -11,4 +11,10 @@ class UsersController < ApplicationController
     @calendar  = Calendar.new(Gift.giftable_dates, @user.gifts)
     respond_with @user
   end
+
+  def destroy
+    current_user.delete
+    flash[:notice] = "Your account was successfully deleted."
+    redirect_to root_path
+  end
 end
