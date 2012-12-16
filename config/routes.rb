@@ -7,7 +7,12 @@ Tfpullrequests::Application.routes.draw do
   resources :users
   resources :projects, :only => [:index, :new, :create]
   resources :pull_requests, :only => [:index]
-  resource  :dashboard # Singular, only applies to current user
+  resource  :dashboard do 
+    member do
+      get :delete
+      delete :destroy
+    end
+  end
   resource  :pull_request_download, :only => :create
 
   match '/preferences', :to => 'dashboards#preferences', :as => 'preferences'
