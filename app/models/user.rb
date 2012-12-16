@@ -3,9 +3,9 @@ class User < ActiveRecord::Base
 
   attr_writer :gift_factory
 
-  has_many :pull_requests
-  has_many :skills
-  has_many :gifts
+  has_many :pull_requests, :dependent => :destroy
+  has_many :skills,        :dependent => :destroy
+  has_many :gifts,         :dependent => :destroy
 
   paginates_per 99
 
