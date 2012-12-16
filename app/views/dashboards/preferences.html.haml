@@ -2,6 +2,9 @@
 
 %p At the frequency you choose, we'll send you helpful emails from now until the project is over, highlighting some suggested projects you might consider contributing to. As an added bonus, we'll take the liberty of personalizing our suggestions to your language proficiency based on the repos in your GitHub profile. Alternatively, you can choose your languages below.
 
+- if current_user.email_frequency.present?
+  %small= link_to 'Want to delete your account?', delete_dashboard_path, :class => 'pull-right'
+
 %p 
   %em You can always change your email preferences later.
 
@@ -27,3 +30,4 @@
   .control-group
     .controls
       = form.button :submit, 'Save and Continue'
+

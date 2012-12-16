@@ -27,6 +27,13 @@ class DashboardsController < ApplicationController
     end
   end
 
+  def destroy
+    current_user.destroy
+    session.delete(:user_id)
+    flash[:notice] = "Your account was successfully deleted"
+    redirect_to root_path
+  end
+
   protected
   def today
     Time.zone.now.to_date
