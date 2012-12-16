@@ -1,0 +1,11 @@
+%h1 Delete your account
+
+%p We just wanted to check that you really do wish to delete your account, this will remove your profile and all pull requests from the site, although any suggested projects will remain.
+
+%p
+  If you simply want to stop recieving email notifications you can change your #{link_to 'email preferences', preferences_path}.
+
+%p
+  = link_to 'Confirm Deletion', dashboard_path, :method => :delete, :class => 'btn'
+  or
+  = link_to 'I changed my mind, take me back!', dashboard_path
