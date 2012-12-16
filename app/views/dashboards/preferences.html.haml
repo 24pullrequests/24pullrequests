@@ -27,3 +27,4 @@
   .control-group
     .controls
       = form.button :submit, 'Save and Continue'
+      = link_to "Delete my account", current_user, :confirm => "Are you sure?", :method => :delete, class: 'pull-right btn btn-danger'
