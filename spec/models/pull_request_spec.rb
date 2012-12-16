@@ -35,4 +35,20 @@ describe PullRequest do
       end
     end
   end
+
+  describe '#autogift' do
+    context 'when PR body contains "24 pull requests"' do
+      it 'creates a gift' do
+        pull_request = FactoryGirl.create :pull_request, body: 'happy 24 pull requests!'
+        pull_request.gifts.should_not be_empty
+      end
+    end
+
+    context 'when PR body does not contain "24 pull requests"' do
+      it 'does not create a gift' do
+        pull_request = FactoryGirl.create :pull_request, body: "...and a merry christmas!"
+        pull_request.gifts.should be_empty
+      end
+    end
+  end
 end
