@@ -109,6 +109,7 @@ class User < ActiveRecord::Base
 
   def new_gift(attrs={})
     gift = gift_factory.call(attrs)
+    gift.date ||= closest_free_gift_date
     gift.user = self
     gift
   end
@@ -144,7 +145,12 @@ class User < ActiveRecord::Base
     gifted_pull_requests = gifts.map {|g| g.pull_request }
     pull_requests.reject{|pr| gifted_pull_requests.include?(pr) }
   end
-  
+
+  def closest_free_gift_date
+    last_gift = self.gifts.last
+    last_gift.nil? ? PullRequest::EARLIEST_PULL_DATE : last_gift.date + 1.day
+  end
+
   private
   def pull_request_downloader
     Rails.application.config.pull_request_downloader.call(nickname, token)
@@ -171,4 +177,5 @@ class User < ActiveRecord::Base
   def gift_factory
     @gift_factory ||= Gift.public_method(:new)
   end
+
 end
