@@ -8,3 +8,6 @@
 /log/*.log
 /tmp
 coverage
+
+# Ignore thumbs.db
+Thumbs.db
