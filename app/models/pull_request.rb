@@ -6,6 +6,7 @@ class PullRequest  < ActiveRecord::Base
   validates_uniqueness_of :issue_url, :scope => :user_id
 
   after_create :post_tweet
+  after_create :autogift
 
   has_many :gifts
 
@@ -38,4 +39,9 @@ class PullRequest  < ActiveRecord::Base
     gifts.size > 0 ? :gifted : :not_gifted
   end
 
+  def autogift
+    if body && body.scan(/24 ?pull ?request/i).size > 0
+      user.new_gift(pull_request: self).save
+    end
+  end
 end
