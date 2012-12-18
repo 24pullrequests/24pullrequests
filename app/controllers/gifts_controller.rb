@@ -27,8 +27,6 @@ class GiftsController < ApplicationController
   end
 
   def edit
-    gift = current_user.gift_for(params[:id])
-
     gift_form = GiftForm.new(:gift => gift,
                              :pull_requests => current_user.pull_requests)
 
@@ -37,8 +35,6 @@ class GiftsController < ApplicationController
 
 
   def update
-    gift = current_user.gift_for(params[:id])
-
     if gift.update_attributes(gift_params)
       gift_given
     else
@@ -46,7 +42,17 @@ class GiftsController < ApplicationController
     end
   end
 
+  def destroy
+    gift.destroy
+
+    redirect_to user_path(current_user), :alert => "Gift removed"
+  end
+
   private
+
+  def gift
+    @gift ||= current_user.gift_for(params[:id])
+  end
 
   def gift_params
     pull_request = current_user.pull_requests.find_by_id(pull_request_id)
