@@ -8,7 +8,7 @@
         .calendar-inner
           %span{ :class => date == Date.today ? 'calendar-mday calendar-mday-today' : 'calendar-mday' }
             = date.mday
-          - if gift.present?
+          - if gift.present? && gift.user == current_user
             %small
               = link_to "x", gift_path(gift), :title => "Remove gift", :method => :delete, "data-confirm" => "Remove this gift?"
           %p.large
