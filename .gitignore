@@ -7,8 +7,11 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
 coverage
 .idea
 
 # Ignore ds_store
 .DS_Store
+
+Thumbs.db
