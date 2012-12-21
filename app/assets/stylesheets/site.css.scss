@@ -326,11 +326,11 @@ footer {
   border-bottom:1px solid #ddd;
   @media (min-width: 767px) {
     margin: 20px -35px;
-    padding:0 35px;
+    padding: 20px 35px;
   }
   @media (max-width: 767px) {
     margin:20px -15px;
-    padding:0 15px;
+    padding: 10px 15px;
   }
   h3{
     text-align:center;
@@ -365,6 +365,9 @@ h1, h2, h3, h4{
   text-transform:uppercase;
   font-family:"proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   .btn{
+	font-size: 15px;
+	font-weight: normal;
+    margin-bottom:4px;
     margin-left:10px;
   }
 }
