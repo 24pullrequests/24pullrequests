@@ -74,7 +74,7 @@
             %h3 24 Pull Requests has finished for this year
             %p
               Over the past 24 days,
-              %strong= User.where('pull_requests_count > 1').count
+              %strong= PullRequest.all.map(&:user_id).uniq.length
               developers have submitted
               %strong= PullRequest.count
               pull requests to
