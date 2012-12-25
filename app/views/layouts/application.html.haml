@@ -62,7 +62,6 @@
       .logo
         = link_to 'homepage', root_path
 
-      - # It sucks but its quick! Sorry
       - if params[:action] == 'homepage'
         .tagline.hidden-phone
 
@@ -70,6 +69,31 @@
 
     %article
       .container-fluid
+        .row-fluid
+          .alert.alert-info
+            %h3 24 Pull Requests has finished for this year
+            %p
+              Over the past 24 days,
+              %strong= User.where('pull_requests_count > 1').count
+              developers have submitted
+              %strong= PullRequest.count
+              pull requests to
+              %strong= PullRequest.select(:repo_name).map(&:repo_name).uniq.count
+              different open source projects.
+
+            %p Merry Christmas and see you all next year when we do it all again!
+            %hr
+            %p Still want to help out with open source projects? Check out these other great initialitives:
+
+            %h4= link_to 'CodeTriage', 'http://www.codetriage.com/'
+            
+            %p Give back to open source, one issue at a time, with CodeTriage. You'll get one issue from your favorite repo per day to help you dig deeper, learn more, and stay involved with the code you rely on.
+            
+            %h4= link_to 'ContribHub', 'http://contribhub.co/'
+            
+            %p Do you know you have a neighbor needing some help with a really cool project? With ContribHub you will!
+            %p ContribHub is a GitHub-based application that makes easier to find projects to contribute and grow community around it.
+            
         .row-fluid
           .span12
             - if flash.any?
