@@ -85,6 +85,11 @@ Spork.each_run do
     config.before do
       User.any_instance.stub(:estimate_skills).and_return(nil)
       Twitter::Client.any_instance.stub(:update)
+      Timecop.freeze(Date.parse('12/12/2012'))
+    end
+
+    config.after do
+      Timecop.return
     end
   end
 end

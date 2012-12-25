@@ -60,6 +60,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'webmock', :require => false
   gem 'poltergeist'
+  gem 'timecop'
 end
 
 group :production do
