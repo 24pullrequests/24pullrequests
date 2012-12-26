@@ -11,8 +11,8 @@ class PullRequest  < ActiveRecord::Base
   has_many :gifts
 
   EARLIEST_PULL_DATE = Date.parse('01/12/2012').midnight
-  LATEST_PULL_DATE   = Date.parse('25/12/2012').midnight
-
+  LATEST_PULL_DATE   = Date.parse('31/12/2012').midnight
+  
   class << self
     def create_from_github(json)
       create(initialize_from_github(json))
