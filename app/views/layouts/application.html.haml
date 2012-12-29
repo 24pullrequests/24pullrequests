@@ -43,9 +43,6 @@
     / For all other devices
     / Size should be 32 x 32 pixels
     = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
-    %script(type="text/javascript" src="//use.typekit.net/ghm4aoe.js")
-    :javascript
-      try{Typekit.load();}catch(e){}
   %body
     = content_for :body_open unless content_for(:body_open).nil?
 
