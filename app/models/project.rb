@@ -2,8 +2,8 @@ class Project < ActiveRecord::Base
   attr_accessible :description, :github_url, :name, :main_language
 
   LANGUAGES = ["ActionScript", "Assembly", "C", "C#", "C++", "Clojure", "CoffeeScript",
-               "ColdFusion", "CSS", "Emacs Lisp", "Erlang", "Go", "Groovy", "Haskell", "HTML", "Java", "JavaScript", 
-               "Lua", "Objective-C", "OCaml", "Perl", "PHP", "PowerShell", "Python", "Ruby",
+               "ColdFusion", "CSS","Delphi", "Emacs Lisp", "Erlang", "Go", "Groovy", "Haskell", "HTML", "Java", "JavaScript", 
+               "Lua", "Objective-C", "OCaml","Pascal", "Perl", "PHP", "PowerShell", "Python", "Ruby",
                "Scala", "Scheme", "Shell", "VimL"]
 
   validates_presence_of :description, :github_url, :name, :main_language
