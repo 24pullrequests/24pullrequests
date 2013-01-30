@@ -16,7 +16,7 @@ gem 'newrelic_rpm', '>= 3.5.3.25'
 gem 'simplecov'
 gem 'kaminari'
 gem 'twitter'
-gem 'jquery-rails'
+gem 'jquery-rails', '2.1.4'
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem 'simple_form'
