@@ -333,7 +333,7 @@ DEPENDENCIES
   konacha
   less-rails
   memcachier
-  newrelic_rpm (>= 3.5.3.25)
+  newrelic_rpm
   octokit
   omniauth
   omniauth-github

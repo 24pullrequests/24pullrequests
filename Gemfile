@@ -12,7 +12,7 @@ gem 'haml-rails'
 gem 'octokit'
 gem "bugsnag"
 gem 'rabl'
-gem 'newrelic_rpm', '>= 3.5.3.25'
+gem 'newrelic_rpm'
 gem 'simplecov'
 gem 'kaminari'
 gem 'twitter'
