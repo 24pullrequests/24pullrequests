@@ -18,7 +18,7 @@ gem 'kaminari'
 gem 'twitter'
 gem 'jquery-rails', '2.1.4'
 gem "less-rails"
-gem "twitter-bootstrap-rails"
+gem "twitter-bootstrap-rails", '2.2.4'
 gem 'simple_form'
 gem 'rack-google-analytics'
 
