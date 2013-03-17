@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 ruby "2.0.0"
 
 gem 'rails', '3.2.12'
@@ -61,6 +61,7 @@ group :test do
   gem 'webmock', :require => false
   gem 'poltergeist'
   gem 'timecop'
+  gem 'minitest', '3.5.0'
 end
 
 group :production do
