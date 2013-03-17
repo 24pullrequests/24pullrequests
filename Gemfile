@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 ruby "2.0.0"
 
 gem 'rails', '3.2.12'
+
+gem 'jquery-rails', '2.1.4'
+
 gem 'pg'
 gem 'unicorn'
 gem 'foreman'
@@ -16,17 +19,16 @@ gem 'newrelic_rpm'
 gem 'simplecov'
 gem 'kaminari'
 gem 'twitter'
-gem 'jquery-rails', '2.1.4'
 gem "less-rails"
-gem "twitter-bootstrap-rails", '2.2.4'
+gem "twitter-bootstrap-rails"
 gem 'simple_form'
 gem 'rack-google-analytics'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'therubyracer', '0.10.2', :platforms => :ruby
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'therubyracer', :platforms => :ruby
+  gem 'uglifier'
 end
 
 group :development do
@@ -36,7 +38,6 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'rb-fsevent', '~> 0.9.1'
   gem 'factory_girl_rails'
   gem 'faker'
 
@@ -44,7 +45,7 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'ruby_gntp'
-  gem 'rb-fsevent', '~> 0.9.1'
+  gem 'rb-fsevent'
 
   # Javascript
   gem 'konacha'
