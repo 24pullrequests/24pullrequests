@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 ruby "2.0.0"
 
 gem 'rails', '3.2.12'
@@ -55,12 +55,16 @@ group :development, :test do
 end
 
 group :test do
-  gem "capybara", '1.1.4'
+  gem "capybara"
+  gem 'capybara-webkit'
+  gem 'launchy'
+
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'webmock', :require => false
   gem 'poltergeist'
   gem 'timecop'
+  gem 'minitest', '3.5.0'
 end
 
 group :production do
