@@ -55,7 +55,10 @@ group :development, :test do
 end
 
 group :test do
-  gem "capybara", '1.1.4'
+  gem "capybara"
+  gem 'capybara-webkit'
+  gem 'launchy'
+
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'webmock', :require => false
