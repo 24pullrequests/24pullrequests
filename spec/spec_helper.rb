@@ -20,6 +20,8 @@ Spork.prefork do
 
   WebMock.disable_net_connect! :allow_localhost => true
 
+  # To run specs headless, use :webkit driver:
+  Capybara.javascript_driver = :webkit
   if ENV['POLTERGEIST']
     require 'capybara/poltergeist'
     Capybara.javascript_driver = :poltergeist
@@ -75,6 +77,7 @@ Spork.prefork do
     config.infer_base_class_for_anonymous_controllers = false
 
     config.include FactoryGirl::Syntax::Methods
+    config.include Capybara::DSL
   end
 end
 
@@ -85,7 +88,7 @@ Spork.each_run do
     config.before do
       User.any_instance.stub(:estimate_skills).and_return(nil)
       Twitter::Client.any_instance.stub(:update)
-      Timecop.freeze(Date.parse('12/12/2012'))
+      Timecop.travel(Date.parse('12/12/2012'))
     end
 
     config.after do
