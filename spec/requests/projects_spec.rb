@@ -58,8 +58,8 @@ describe 'Projects' do
 
       it 'should show both projects by default' do
         within '#projects' do
-          page.should have_content 'Ruby project'
-          page.should have_content 'Java project'
+          page.should have_selector('h4', text: /Java project/i)
+          page.should have_selector('h4', text: /Ruby project/i)
         end
       end
 
