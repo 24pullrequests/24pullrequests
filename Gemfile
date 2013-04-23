@@ -57,12 +57,12 @@ group :development, :test do
 end
 
 group :test do
-  gem "capybara"
+  gem "capybara", '~> 2.0.0'
   gem 'capybara-webkit'
   gem 'launchy'
 
   gem 'database_cleaner'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', '~> 1.5.0'
   gem 'webmock', :require => false
   gem 'poltergeist'
   gem 'timecop'
