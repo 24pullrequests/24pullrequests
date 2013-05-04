@@ -30,8 +30,6 @@ GEM
       multi_json (~> 1.0)
     addressable (2.3.4)
     arel (3.0.2)
-    bourne (1.4.0)
-      mocha (~> 0.13.2)
     brakeman (1.9.5)
       erubis (~> 2.6)
       fastercsv (~> 1.5)
@@ -47,13 +45,12 @@ GEM
       httparty (>= 0.6, < 1.0)
       multi_json (~> 1.0)
     builder (3.0.4)
-    capybara (2.0.3)
+    capybara (2.1.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
-      selenium-webdriver (~> 2.0)
-      xpath (~> 1.0.0)
+      xpath (~> 2.0)
     chai-jquery-rails (1.1.1)
       railties (~> 3.1)
       sprockets
@@ -163,12 +160,9 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     memcachier (0.0.2)
-    metaclass (0.0.1)
     method_source (0.8.1)
     mime-types (1.23)
-    minitest (3.5.0)
-    mocha (0.13.3)
-      metaclass (~> 0.0.1)
+    minitest (4.7.4)
     multi_json (1.7.2)
     multi_xml (0.5.3)
     multipart-post (1.2.0)
@@ -205,8 +199,8 @@ GEM
       multi_json (~> 1.3)
       omniauth-oauth (~> 1.0)
     pg (0.15.1)
-    poltergeist (1.1.1)
-      capybara (~> 2.0.1)
+    poltergeist (1.2.0)
+      capybara (~> 2.1.0)
       faye-websocket (~> 0.4, >= 0.4.4)
       http_parser.rb (~> 0.5.3)
     polyglot (0.3.3)
@@ -272,21 +266,14 @@ GEM
     ruby_gntp (0.3.4)
     ruby_parser (3.1.3)
       sexp_processor (~> 4.1)
-    rubyzip (0.9.9)
     sass (3.2.8)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
-    selenium-webdriver (2.32.1)
-      childprocess (>= 0.2.5)
-      multi_json (~> 1.0)
-      rubyzip
-      websocket (~> 1.0.4)
     sexp_processor (4.2.1)
-    shoulda-matchers (1.5.6)
+    shoulda-matchers (2.0.0)
       activesupport (>= 3.0.0)
-      bourne (~> 1.3)
     simple_form (2.1.0)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -344,8 +331,7 @@ GEM
     webmock (1.11.0)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
-    websocket (1.0.7)
-    xpath (1.0.0)
+    xpath (2.0.0)
       nokogiri (~> 1.3)
 
 PLATFORMS
@@ -354,7 +340,7 @@ PLATFORMS
 DEPENDENCIES
   brakeman
   bugsnag
-  capybara (~> 2.0.0)
+  capybara
   chai-jquery-rails
   coffee-rails
   dalli
@@ -372,7 +358,7 @@ DEPENDENCIES
   launchy
   less-rails
   memcachier
-  minitest (= 3.5.0)
+  minitest
   newrelic_rpm
   octokit
   omniauth
@@ -388,7 +374,7 @@ DEPENDENCIES
   rspec-rails
   ruby_gntp
   sass-rails
-  shoulda-matchers (~> 1.5.0)
+  shoulda-matchers
   simple_form
   simplecov
   sinon-chai-rails
