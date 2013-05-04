@@ -13,7 +13,6 @@ describe UsersController do
         get :index
       end
 
-      #it { should assign_to(:users).with(User.order('pull_requests_count desc').page(0)) }
       it { assigns(:users).with(User.order('pull_requests_count desc').page(0) ).should be_true }
     end
 
