@@ -15,4 +15,3 @@ coverage
 .DS_Store
 
 Thumbs.db
-/config/database.yml
