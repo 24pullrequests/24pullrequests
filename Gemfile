@@ -6,6 +6,7 @@ gem 'rails', '3.2.13'
 gem 'jquery-rails', '2.1.4'
 
 gem 'pg'
+gem 'sqlite3'
 gem 'unicorn'
 gem 'foreman'
 gem 'omniauth'
@@ -58,7 +59,7 @@ end
 
 group :test do
   gem "capybara", '~> 2.0.0'
-  gem 'capybara-webkit'
+  gem 'capybara-webkit'  if RUBY_PLATFORM !~ /linux/i
   gem 'launchy'
 
   gem 'database_cleaner'
