@@ -58,8 +58,8 @@ group :development, :test do
 end
 
 group :test do
-  gem "capybara"
-  gem 'capybara-webkit'  if RUBY_PLATFORM !~ /linux/i
+  gem "capybara", '2.0.2'
+  gem 'capybara-webkit'
   gem 'launchy'
 
   gem 'database_cleaner'
