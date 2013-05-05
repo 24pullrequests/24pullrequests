@@ -8,7 +8,7 @@ describe PullRequestsController do
         get :index, :format => :json
       end
 
-      it { should respond_with_content_type(:json) }
+      it { response.header['Content-Type'].should include 'application/json' }
     end
   end
 end

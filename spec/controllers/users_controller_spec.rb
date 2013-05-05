@@ -13,7 +13,7 @@ describe UsersController do
         get :index
       end
 
-      it { should assign_to(:users).with(User.order('pull_requests_count desc').page(0)) }
+      it { assigns(:users).with(User.order('pull_requests_count desc').page(0) ).should be_true }
     end
 
     context 'as json' do
@@ -21,7 +21,7 @@ describe UsersController do
         get :index, :format  => :json
       end
 
-      it { should respond_with_content_type(:json) }
+      it { response.header['Content-Type'].should include 'application/json' }
     end
   end
 
@@ -49,7 +49,7 @@ describe UsersController do
         get :show, :id  => user.nickname, :format  => :json
       end
 
-      it { should respond_with_content_type(:json) }
+      it { response.header['Content-Type'].should include 'application/json' }
     end
   end
 end

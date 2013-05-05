@@ -13,3 +13,4 @@ test:
   pool: 5
   host: localhost
   password:
+
