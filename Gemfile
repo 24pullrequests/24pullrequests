@@ -6,7 +6,6 @@ gem 'rails', '3.2.13'
 gem 'jquery-rails', '2.1.4'
 
 gem 'pg'
-gem 'sqlite3'
 gem 'unicorn'
 gem 'foreman'
 gem 'omniauth'
