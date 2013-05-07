@@ -85,3 +85,4 @@ should be placed in `spec/javascripts`. Run the JavaScript specs with
 ## Copyright
 
 Copyright (c) 2013 Andrew Nesbitt. See [LICENSE](https://github.com/andrew/24pullrequests/blob/master/LICENSE) for details.
+
