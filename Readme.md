@@ -79,7 +79,7 @@ If you are using the omniauth environment variables
 (GITHUB_KEY, GITHUB_SECRET, TWITTER_KEY, TWITTER_SECRET)
 for **another** project, you will need to either
  * unset them before running your tests or
- * reset GITHUB_KEY and GITHUB_SECRET after creating a Github (omniauth) application for this project
+ * reset the omniauth environment variables after creating a Github (omniauth) application for this project
 
 as it will use it to learn more about the developers and for pull requests.
 
