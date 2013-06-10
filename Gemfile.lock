@@ -98,7 +98,7 @@ GEM
     fastercsv (1.5.5)
     faye-websocket (0.4.7)
       eventmachine (>= 0.12.0)
-    ffi (1.8.1)
+    ffi (1.9.0)
     foreman (0.63.0)
       dotenv (>= 0.7)
       thor (>= 0.13.6)
