@@ -55,7 +55,7 @@ group :development, :test do
 end
 
 group :test do
-  gem "capybara", '2.0.2'
+  gem "capybara"
   gem 'capybara-webkit'
   gem 'launchy'
 
