@@ -31,7 +31,7 @@ Github site: http://github.com/razorjack/quicksand
         };
         $.extend(options, customOptions);
         
-        if ($.browser.msie || (typeof($.fn.scale) == 'undefined')) {
+        if (navigator.userAgent.match(/msie [6]/i) || (typeof($.fn.scale) == 'undefined')) {
             // Got IE and want scaling effect? Kiss my ass.
             options.useScaling = false;
         }
@@ -60,7 +60,7 @@ Github site: http://github.com/razorjack/quicksand
             var $source = $(this).find(options.selector); // source collection items
             
             // Replace the collection and quit if IE6
-            if ($.browser.msie && $.browser.version.substr(0,1)<7) {
+            if (navigator.userAgent.match(/msie [6]/i) && $.browser.version.substr(0,1)<7) {
                 $sourceParent.html('').append($collection);
                 return;
             }
