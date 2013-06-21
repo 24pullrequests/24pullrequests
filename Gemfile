@@ -64,7 +64,6 @@ group :test do
   gem 'webmock', :require => false
   gem 'poltergeist'
   gem 'timecop'
-  gem 'minitest', '4.7.4'
 end
 
 group :production do
