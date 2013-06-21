@@ -162,7 +162,6 @@ GEM
     method_source (0.8.1)
     mime-types (1.23)
     mini_portile (0.5.0)
-    minitest (4.7.4)
     multi_json (1.7.7)
     multi_xml (0.5.4)
     multipart-post (1.2.0)
@@ -352,7 +351,6 @@ DEPENDENCIES
   konacha
   launchy
   memcachier
-  minitest (= 4.7.4)
   newrelic_rpm
   octokit
   omniauth
