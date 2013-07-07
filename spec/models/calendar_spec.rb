@@ -9,9 +9,9 @@ describe Calendar do
   end
 
   it "yields the right gift for the right day" do
-    the_first  = mock('gift', :date => Date.parse('2012-12-1'))
-    the_fourth = mock('gift', :date => Date.parse('2012-12-4'))
-    the_end    = mock('gift', :date => Date.parse('2012-12-24'))
+    the_first  = double('gift', :date => Date.parse('2012-12-1'))
+    the_fourth = double('gift', :date => Date.parse('2012-12-4'))
+    the_end    = double('gift', :date => Date.parse('2012-12-24'))
 
     gifts          = [the_end, the_fourth, the_first]
     giftable_dates = 1.upto(24).map { |day| Date.new(2012,12,day) }
