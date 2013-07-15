@@ -18,19 +18,25 @@ describe ApplicationHelper do
 
   describe '#language_link' do
     it 'returns a link for a language' do
-      helper.language_link('C#').should eql('<a href="#" data-language="csharp">csharp</a>')
+      helper.language_link('C#').should eql(
+        '<a href="#" data-language="csharp">csharp</a>')
     end
 
     it 'returns a link with a label' do
-      helper.language_link('C#', 'Foobar').should eql('<a href="#" data-language="csharp">Foobar</a>')
+      helper.language_link('C#', 'Foobar').should eql(
+        '<a href="#" data-language="csharp">Foobar</a>')
     end
 
     it 'returns a link for multiple languages' do
-      helper.language_link(['C#', 'Ruby'], 'Foobar').should eql('<a href="#" data-language="[&quot;csharp&quot;,&quot;ruby&quot;]">Foobar</a>')
+      helper.language_link(['C#', 'Ruby'], 'Foobar').should eql(
+        '<a href="#" data-language="[&quot;' +
+        'csharp&quot;,&quot;ruby&quot;]">Foobar</a>')
     end
 
     it 'returns a link for multiple languages without a label' do
-      helper.language_link(['C#', 'Ruby']).should eql('<a href="#" data-language="[&quot;csharp&quot;,&quot;ruby&quot;]">csharp, ruby</a>')
+      helper.language_link(['C#', 'Ruby']).should eql(
+        '<a href="#" data-language="[&quot;csharp&qu' +
+        'ot;,&quot;ruby&quot;]">csharp, ruby</a>')
     end
   end
 

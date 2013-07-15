@@ -71,7 +71,7 @@ describe 'Projects' do
         end
       end
 
-      it 'should show only the Ruby project when clicking "Suggested for you"' do
+      it 'should show only Ruby project when clicking "Suggested for you"' do
         click_link 'Suggested for you'
         within '#projects' do
           page.should have_css('.ruby')

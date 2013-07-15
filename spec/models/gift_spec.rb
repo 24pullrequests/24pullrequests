@@ -15,10 +15,12 @@ describe Gift do
     it { should eq gift }
   end
 
-  it 'raises a validation error when a gift has already been given for the current day' do
+  it 'raises a valn error when a gift has already been given for current day' do
     expect {
       user.gifts.create!(:pull_request => pull_request, :date => gift.date)
-    }.to raise_error ActiveRecord::RecordInvalid, 'Validation failed: Date you only need one gift per day. Save it for tomorrow!'
+    }.to raise_error ActiveRecord::RecordInvalid,
+      'Validation failed: Date you only need one gift per day.' +
+      ' Save it for tomorrow!'
   end
 
   describe '.date' do

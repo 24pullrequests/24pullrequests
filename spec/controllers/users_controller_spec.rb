@@ -13,7 +13,8 @@ describe UsersController do
         get :index
       end
 
-      it { assigns(:users).with(User.order('pull_requests_count desc').page(0) ).should be_true }
+      it { assigns(:users).with(User.order('pull_requests_count desc'
+        ).page(0) ).should be_true }
     end
 
     context 'as json' do

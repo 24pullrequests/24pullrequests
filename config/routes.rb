@@ -7,7 +7,7 @@ Tfpullrequests::Application.routes.draw do
   resources :users
   resources :projects, :only => [:index, :new, :create]
   resources :pull_requests, :only => [:index]
-  resource  :dashboard do 
+  resource  :dashboard do
     member do
       get :delete
       delete :destroy

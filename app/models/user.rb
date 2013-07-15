@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  attr_accessible :uid, :provider, :nickname, :email, :gravatar_id, :token, :email_frequency, :skills_attributes, :twitter_token
+  attr_accessible :uid, :provider, :nickname, :email, :gravatar_id,
+    :token, :email_frequency, :skills_attributes, :twitter_token
 
   attr_writer :gift_factory
 
@@ -9,12 +10,15 @@ class User < ActiveRecord::Base
 
   paginates_per 99
 
-  accepts_nested_attributes_for :skills, :reject_if => proc { |attributes| !Project::LANGUAGES.include?(attributes['language']) }
+  accepts_nested_attributes_for :skills, :reject_if => proc { |attributes|
+    !Project::LANGUAGES.include?(attributes['language']) }
 
   after_create :download_pull_requests, :estimate_skills
 
   validates_presence_of :email, :if => :send_regular_emails?
-  validates_format_of :email, :with => /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, :allow_blank => true, :on => :update
+  validates_format_of :email, :with =>
+    /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/,
+    :allow_blank => true, :on => :update
 
   def self.find_by_nickname!(nickname)
     where(['lower(nickname) =?', nickname.downcase]).first!
@@ -81,7 +85,8 @@ class User < ActiveRecord::Base
   end
 
   def github_client
-    @github_client ||= Octokit::Client.new(:login => nickname, :oauth_token => token, :auto_traversal => true)
+    @github_client ||= Octokit::Client.new(:login => nickname,
+      :oauth_token => token, :auto_traversal => true)
   end
 
   def send_notification_email
@@ -128,7 +133,9 @@ class User < ActiveRecord::Base
 
   def download_pull_requests
     pull_request_downloader.pull_requests.each do |pr|
-      pull_requests.create_from_github(pr) unless pull_requests.find_by_issue_url(pr['payload']['pull_request']['issue_url'])
+      pull_requests.create_from_github(pr) unless
+        pull_requests.find_by_issue_url(
+          pr['payload']['pull_request']['issue_url'])
     end
   end
 
@@ -148,7 +155,8 @@ class User < ActiveRecord::Base
 
   def closest_free_gift_date
     last_gift = self.gifts.last
-    last_gift.nil? ? PullRequest::EARLIEST_PULL_DATE : last_gift.date + 1.day
+    last_gift.nil? ? PullRequest::EARLIEST_PULL_DATE :
+      last_gift.date + 1.day
   end
 
   private
@@ -161,7 +169,8 @@ class User < ActiveRecord::Base
     uid         = hash.fetch('uid')
     nickname    = hash.fetch('info',{}).fetch('nickname')
     email       = hash.fetch('info',{}).fetch('email', nil)
-    gravatar_id = hash.fetch('extra',{}).fetch('raw_info',{}).fetch('gravatar_id', nil)
+    gravatar_id = hash.fetch('extra',{}).fetch('raw_info',{}).fetch(
+      'gravatar_id', nil)
     token       = hash.fetch('credentials', {}).fetch('token')
 
     {

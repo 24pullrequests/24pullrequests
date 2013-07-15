@@ -1,5 +1,6 @@
 class PullRequest  < ActiveRecord::Base
-  attr_accessible :title, :issue_url, :body, :state, :merged, :created_at, :repo_name
+  attr_accessible :title, :issue_url, :body, :state, :merged,
+    :created_at, :repo_name
 
   belongs_to :user, :counter_cache => true
 
@@ -12,7 +13,7 @@ class PullRequest  < ActiveRecord::Base
 
   EARLIEST_PULL_DATE = Date.parse('01/12/2012').midnight
   LATEST_PULL_DATE   = Date.parse('01/01/2013').midnight
-  
+
   class << self
     def create_from_github(json)
       create(initialize_from_github(json))
@@ -32,7 +33,8 @@ class PullRequest  < ActiveRecord::Base
   end
 
   def post_tweet
-    user.twitter.update(I18n.t 'pull_request.twitter_message', :issue_url => issue_url) if user && user.twitter_linked?
+    user.twitter.update(I18n.t 'pull_request.twitter_message',
+      :issue_url => issue_url) if user && user.twitter_linked?
   end
 
   def gifted_state
