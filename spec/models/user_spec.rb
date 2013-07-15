@@ -33,7 +33,8 @@ describe User do
 
     before do
       3.times { create :user }
-      Rails.configuration.stub(:collaborators).and_return([ Hashie::Mash.new(:login => 'foobar') ])
+      Rails.configuration.stub(:collaborators).and_return(
+        [ Hashie::Mash.new(:login => 'foobar') ])
     end
 
     subject { described_class.collaborators }
@@ -43,7 +44,8 @@ describe User do
   describe '.estimate_skills' do
     ENV['GITHUB_KEY'] = 'foobar'
     let(:github_client) { double('github client') }
-    let(:repos) { Project::LANGUAGES.sample(3).map { |l| Hashie::Mash.new(:language => l) } }
+    let(:repos) { Project::LANGUAGES.sample(3).map { |l|
+      Hashie::Mash.new(:language => l) } }
 
     before do
       User.any_instance.unstub(:estimate_skills)

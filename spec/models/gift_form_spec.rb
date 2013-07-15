@@ -17,12 +17,16 @@ describe GiftForm do
     subject { gift_form.pull_requests_for_select }
 
     context 'when a pull request has not been gifted' do
-      it { should include ["Not gifted: #{pull_request.repo_name} - #{pull_request.title}", pull_request.to_param] }
+      it { should include [
+        "Not gifted: #{pull_request.repo_name} - #{pull_request.title}",
+        pull_request.to_param] }
     end
 
     context 'when a pull request has been gifted' do
       let(:pull_request) { gift.pull_request }
-      it { should include ["Gifted: #{pull_request.repo_name} - #{pull_request.title}", pull_request.to_param] }
+      it { should include [
+        "Gifted: #{pull_request.repo_name} - #{pull_request.title}",
+        pull_request.to_param] }
     end
   end
 

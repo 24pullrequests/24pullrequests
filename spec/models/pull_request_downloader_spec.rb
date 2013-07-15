@@ -13,7 +13,8 @@ describe PullRequestDownloader do
     end
 
     before do
-      Octokit::Client.any_instance.should_receive(:user_events).and_return([event])
+      Octokit::Client.any_instance.should_receive(:user_events
+        ).and_return([event])
     end
 
     subject { pull_request_downloader.pull_requests }

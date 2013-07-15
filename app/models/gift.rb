@@ -11,10 +11,10 @@ class Gift < ActiveRecord::Base
   validates :user, :presence => true
   validates :pull_request, :presence => true
   validates :date, :presence => true,
-                   :uniqueness => { :scope => :user_id,
-                                    :message => "you only need one gift per day. Save it for tomorrow!" },
-                   :inclusion => { :in => proc { Gift.giftable_dates },
-                                   :message => "your gift should be for the month of December." }
+    :uniqueness => { :scope => :user_id,
+      :message => "you only need one gift per day. Save it for tomorrow!" },
+    :inclusion => { :in => proc { Gift.giftable_dates },
+      :message => "your gift should be for the month of December." }
 
   delegate :title, :issue_url, :to => :pull_request, :prefix => true
 

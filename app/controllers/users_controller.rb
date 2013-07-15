@@ -2,7 +2,8 @@ class UsersController < ApplicationController
   respond_to :html, :json
 
   def index
-    @users = User.order('pull_requests_count desc').includes(:pull_requests).page params[:page]
+    @users = User.order('pull_requests_count desc').includes(
+      :pull_requests).page params[:page]
     respond_with @users
   end
 

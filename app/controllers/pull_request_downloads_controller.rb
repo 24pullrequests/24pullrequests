@@ -5,6 +5,7 @@ class PullRequestDownloadsController < ApplicationController
     current_user.download_pull_requests
 
     pull_requests = current_user.pull_requests.order('created_at desc')
-    render :create, :locals => { :pull_requests => pull_requests }, :layout => false
+    render :create, :locals => { :pull_requests => pull_requests },
+      :layout => false
   end
 end

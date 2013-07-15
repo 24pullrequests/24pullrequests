@@ -26,7 +26,8 @@ describe 'Dashboard' do
     it { should have_content "Welcome back, #{user.nickname}" }
 
     context 'when the user has not sent any pull requests' do
-      it { should have_content "You've not sent any pull requests, what are you waiting for?!" }
+      it { should have_content
+        "You've not sent any pull requests, what are you waiting for?!" }
     end
   end
 
