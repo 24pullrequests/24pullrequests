@@ -162,7 +162,7 @@ GEM
     method_source (0.8.2)
     mime-types (1.23)
     mini_portile (0.5.1)
-    multi_json (1.7.7)
+    multi_json (1.7.8)
     multi_xml (0.5.4)
     multipart-post (1.2.0)
     netrc (0.7.7)
@@ -304,7 +304,7 @@ GEM
       rack (>= 1.0.0)
     thor (0.18.1)
     tilt (1.4.1)
-    timecop (0.6.2.2)
+    timecop (0.6.3)
     treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
