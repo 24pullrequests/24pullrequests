@@ -330,7 +330,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  anjlab-bootstrap-rails
+  anjlab-bootstrap-rails (~> 2.3.1)
   brakeman
   bugsnag
   capybara
