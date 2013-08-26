@@ -19,7 +19,7 @@ gem 'newrelic_rpm'
 gem 'simplecov'
 gem 'kaminari'
 gem 'twitter'
-gem 'anjlab-bootstrap-rails', '2.3.1.2', :require => 'bootstrap-rails'
+gem 'anjlab-bootstrap-rails', '~> 2.3.1', :require => 'bootstrap-rails'
 gem 'simple_form'
 gem 'rack-google-analytics'
 
