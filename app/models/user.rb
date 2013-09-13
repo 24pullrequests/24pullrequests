@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 
   accepts_nested_attributes_for :skills, :reject_if => proc { |attributes| !Project::LANGUAGES.include?(attributes['language']) }
 
+  before_save :check_email_changed
   after_create :download_pull_requests, :estimate_skills
 
   validates_presence_of :email, :if => :send_regular_emails?
@@ -84,7 +85,43 @@ class User < ActiveRecord::Base
     @github_client ||= Octokit::Client.new(:login => nickname, :oauth_token => token, :auto_traversal => true)
   end
 
+  def confirmed?
+    !!confirmed_at
+  end
+
+  def confirm!
+    if email.present? && !confirmed?
+      self.confirmation_token = nil
+      self.confirmed_at = Time.now.utc
+      save
+    elsif confirmed?
+      errors.add(:email, :already_confirmed)
+      false
+    else
+      errors.add(:email, :required_for_confirmation)
+      false
+    end
+  end
+
+  def generate_confirmation_token
+    self.confirmation_token = loop do
+      token = SecureRandom.urlsafe_base64
+      break token unless User.where(confirmation_token: token).exists?
+    end
+  end
+
+  def check_email_changed
+    return unless self.email_changed?
+
+    self.generate_confirmation_token
+    self.confirmed_at = nil
+
+    ConfirmationMailer.confirmation(self).deliver
+  end
+
   def send_notification_email
+    return unless confirmed?
+
     if send_daily?
       ReminderMailer.daily(self).deliver
     elsif send_weekly?
