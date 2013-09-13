@@ -1,0 +1,5 @@
+Hi <%= @user.nickname %>,
+
+Someone entered this email address into our website. If this was you, please confirm this by clicking the following link:
+
+http://24pullrequests.com/confirm/<%= @user.confirmation_token %>
