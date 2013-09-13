@@ -2,6 +2,14 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              required_for_confirmation: "%{attribute} is required for confirmation"
+              already_confirmed: "%{attribute} is already confirmed"
   pull_request:
     twitter_message: "I just opened a pull request for http://24pullrequests.com, check it out: %{issue_url}"
     download:
