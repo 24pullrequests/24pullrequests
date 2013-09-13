@@ -28,12 +28,12 @@ Report issues/feature requests on [GitHub Issues](http://github.com/andrew/24pul
 
 New to Ruby? No worries!
 
-First things first, you'll need to install Ruby 1.9.3. I recommend using the excellent [rbenv](https://github.com/sstephenson/rbenv),
+First things first, you'll need to install Ruby 2.0. I recommend using the excellent [rbenv](https://github.com/sstephenson/rbenv),
 and [ruby-build](https://github.com/sstephenson/ruby-build)
 
 ```bash
-rbenv install 1.9.3-p194
-rbenv global 1.9.3-p194
+rbenv install 2.0.0-p247
+rbenv global 2.0.0-p247
 ```
 
 Next, you'll need to make sure that you have postgres installed. This can be
