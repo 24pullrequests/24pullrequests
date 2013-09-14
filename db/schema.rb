@@ -17,19 +17,19 @@ ActiveRecord::Schema.define(:version => 20130913073803) do
     t.integer  "user_id",         :null => false
     t.integer  "pull_request_id", :null => false
     t.date     "date",            :null => false
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  add_index "gifts", ["user_id", "pull_request_id"], :name => "index_gifts_on_user_id_and_pull_request_id"
+  add_index "gifts", ["user_id", "pull_request_id"], :name => "index_gifts_on_user_id_and_pull_request_id", :unique => true
 
   create_table "projects", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.string   "github_url"
     t.string   "main_language"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "pull_requests", :force => true do |t|
@@ -48,8 +48,8 @@ ActiveRecord::Schema.define(:version => 20130913073803) do
   create_table "skills", :force => true do |t|
     t.integer  "user_id"
     t.string   "language"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "skills", ["user_id"], :name => "index_skills_on_user_id"
@@ -59,8 +59,8 @@ ActiveRecord::Schema.define(:version => 20130913073803) do
     t.string   "provider",                           :null => false
     t.string   "nickname",                           :null => false
     t.string   "email"
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "gravatar_id"
     t.string   "token"
     t.string   "email_frequency"
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(:version => 20130913073803) do
     t.datetime "confirmed_at"
   end
 
-  add_index "users", ["nickname"], :name => "index_users_on_nickname"
-  add_index "users", ["uid", "provider"], :name => "index_users_on_uid_and_provider"
+  add_index "users", ["nickname"], :name => "index_users_on_nickname", :unique => true
+  add_index "users", ["uid", "provider"], :name => "index_users_on_uid_and_provider", :unique => true
 
 end
