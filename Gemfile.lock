@@ -62,7 +62,7 @@ GEM
       sprockets
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
-    cliver (0.2.1)
+    cliver (0.2.2)
     coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -255,7 +255,7 @@ GEM
     ruby_gntp (0.3.4)
     ruby_parser (3.2.2)
       sexp_processor (~> 4.1)
-    safe_yaml (0.9.6)
+    safe_yaml (0.9.7)
     sass (3.2.10)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
