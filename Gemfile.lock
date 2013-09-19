@@ -33,7 +33,7 @@ GEM
       railties (>= 3.0)
       sass (>= 3.2)
     arel (3.0.2)
-    brakeman (2.1.1)
+    brakeman (2.1.2)
       erubis (~> 2.6)
       fastercsv (~> 1.5)
       haml (>= 3.0, < 5.0)
