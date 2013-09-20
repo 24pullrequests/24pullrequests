@@ -265,7 +265,7 @@ GEM
       faraday (~> 0.8, < 0.10)
       uri_template (~> 0.5.0)
     sexp_processor (4.3.0)
-    shoulda-matchers (2.3.0)
+    shoulda-matchers (2.4.0)
       activesupport (>= 3.0.0)
     simple_form (2.1.0)
       actionpack (~> 3.0)
