@@ -1,6 +1,6 @@
 class DashboardsController < ApplicationController
-  before_filter :ensure_logged_in
-  before_filter :set_email_preferences, :except => [:preferences, :update_preferences]
+  before_filter :ensure_logged_in, except: [:confirm_email]
+  before_filter :set_email_preferences, :except => [:preferences, :update_preferences, :confirm_email]
 
   def show
     pull_requests = current_user.pull_requests.order('created_at desc')
@@ -31,6 +31,21 @@ class DashboardsController < ApplicationController
     current_user.destroy
     session.delete(:user_id)
     flash[:notice] = "Your account was successfully deleted"
+    redirect_to root_path
+  end
+
+  def confirm_email
+    if params[:confirmation_token].present?
+      user = User.where(confirmation_token: params[:confirmation_token]).first
+
+      if user.present?
+        user.confirm!
+        flash[:notice] = "Email address confirmed"
+      else
+        flash[:notice] = "Unknown confirmation token"
+      end
+    end
+
     redirect_to root_path
   end
 

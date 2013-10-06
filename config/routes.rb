@@ -15,6 +15,8 @@ Tfpullrequests::Application.routes.draw do
   end
   resource  :pull_request_download, :only => :create
 
+  get '/confirm/:confirmation_token', to: 'dashboards#confirm_email', as: 'confirm_email'
+
   match '/preferences', :to => 'dashboards#preferences', :as => 'preferences'
   match '/preferences/update', :to => 'dashboards#update_preferences', :as => 'update_preferences'
 
