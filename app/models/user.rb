@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
     return [] if collabs.nil?
     collaborators = collabs.map(&:login)
     result = where('nickname in (?)', collaborators)
-    collaborators.map { |c| result.find { |u| u.nickname == c } }
+    collaborators.compact.map { |c| result.find { |u| u.nickname == c } }
   end
 
   def authorize_twitter!(nickname, token, secret)
