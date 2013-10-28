@@ -22,6 +22,7 @@ gem 'twitter'
 gem 'anjlab-bootstrap-rails', '~> 2.3.1', :require => 'bootstrap-rails'
 gem 'simple_form'
 gem 'rack-google-analytics'
+gem 'ffi', '1.9.0'
 
 group :assets do
   gem 'sass-rails'
