@@ -147,7 +147,7 @@ GEM
       sprockets
     launchy (2.3.0)
       addressable (~> 2.3)
-    listen (2.1.1)
+    listen (2.1.2)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
