@@ -68,19 +68,19 @@
       .container-fluid
         .row-fluid
           .alert.alert-info
-            %h3 24 Pull Requests has finished for this year
+            %h3 24 Pull Requests 2013 is upon us
             %p
-              Over the past 24 days,
+              In 2012, over 24 days,
               %strong= PullRequest.all.map(&:user_id).uniq.length
-              developers have submitted
+              developers submitted
               %strong= PullRequest.count
               pull requests to
               %strong= PullRequest.select(:repo_name).map(&:repo_name).uniq.count
               different open source projects.
 
-            %p Merry Christmas and see you all next year when we do it all again!
+            %p Get ready for 24 Pull Requests 2013 when we do it all again!
             %hr
-            %p Still want to help out with open source projects? Check out these other great initiatives:
+            %p Want to help out with open source projects in the meantime? Check out these other great initiatives:
 
             %h4= link_to 'CodeTriage', 'http://www.codetriage.com/'
             
