@@ -11,7 +11,7 @@ class PullRequestDownloader
 
   private
   def github_client
-    @github_client ||= Octokit::Client.new(:login => login, :oauth_token => oauth_token, :auto_traversal => true)
+    @github_client ||= Octokit::Client.new(:login => login, :access_token => oauth_token, :auto_paginate => true)
   end
 
   def download_pull_requests

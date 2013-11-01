@@ -82,7 +82,7 @@ class User < ActiveRecord::Base
   end
 
   def github_client
-    @github_client ||= Octokit::Client.new(:login => nickname, :oauth_token => token, :auto_traversal => true)
+    @github_client ||= Octokit::Client.new(:login => nickname, :access_token => token, :auto_paginate => true)
   end
 
   def confirmed?
