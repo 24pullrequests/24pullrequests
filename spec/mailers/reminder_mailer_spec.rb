@@ -7,7 +7,7 @@ describe ReminderMailer do
                                   :email => 'david@example.com', 
                                   :languages => ['Ruby'], 
                                   :skills => [], 
-                                  :pull_requests => [],
+                                  :pull_requests => double(:pull_request, :year => []),
                                   :suggested_projects => []) }
     let(:mail) { ReminderMailer.daily(user) }
  
@@ -38,7 +38,7 @@ describe ReminderMailer do
                                   :email => 'david@example.com', 
                                   :languages => ['Ruby'], 
                                   :skills => [], 
-                                  :pull_requests => [],
+                                  :pull_requests => double(:pull_request, :year => []),
                                   :suggested_projects => []) }
     let(:mail) { ReminderMailer.weekly(user) }
  
