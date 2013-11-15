@@ -28,7 +28,8 @@
       =@user.nickname
       has made
       =@user.pull_requests.count
-      total pull requests so far.
+      total pull requests so far in
+      = @year
     = render :partial => 'calendar', :object => @calendar
 
 .row-fluid
