@@ -10,6 +10,8 @@ class PullRequest  < ActiveRecord::Base
 
   has_many :gifts
 
+  scope :year, lambda {|year| where('EXTRACT(year FROM "created_at") = ?', year) }
+
   EARLIEST_PULL_DATE = Date.parse("01/12/#{CURRENT_YEAR}").midnight
   LATEST_PULL_DATE   = Date.parse("01/01/#{CURRENT_YEAR+1}").midnight
   
