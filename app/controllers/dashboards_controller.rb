@@ -55,7 +55,7 @@ class DashboardsController < ApplicationController
   end
 
   def is_decemeber?
-    today > Date.new(2012,12,1)
+    today > Date.new(CURRENT_YEAR,12,1)
   end
 
   def set_email_preferences

@@ -8,7 +8,7 @@ describe PullRequestDownloader do
       double('event').tap do |event|
         event.stub(:type).and_return('PullRequestEvent')
         event.stub_chain(:payload, :action).and_return('opened')
-        event.stub(:[]).with('created_at').and_return('24/12/2012')
+        event.stub(:[]).with('created_at').and_return('24/12/2013')
       end
     end
 

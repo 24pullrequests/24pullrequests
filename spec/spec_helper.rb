@@ -88,7 +88,7 @@ Spork.each_run do
     config.before do
       User.any_instance.stub(:estimate_skills).and_return(nil)
       Twitter::Client.any_instance.stub(:update)
-      Timecop.travel(Date.parse('12/12/2012'))
+      Timecop.travel(Date.parse('12/12/2013'))
     end
 
     config.after do
