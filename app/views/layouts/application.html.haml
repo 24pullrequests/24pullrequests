@@ -122,6 +122,6 @@
     .ftw
       = link_to image_tag('humanstxt-isolated-blank.gif'), '/humans.txt'
       Open Source FTW!
-      %strong 2012
+      %strong= Time.now.year
 
     = javascript_include_tag "application"
