@@ -5,11 +5,11 @@ namespace :coderwall do
     api_key = ENV['CODERWALL_API_KEY']
     if api_key.present?
       User.all.each do |user|
-        if user.pull_requests.any?
+        if user.pull_requests.year(CURRENT_YEAR).any?
           payload = {github:user.nickname, badge:"TwentyFourPullRequestsParticipant", date:"12/25/#{CURRENT_YEAR}", api_key:api_key}
           resp = conn.post '/award', payload.to_json, 'Content-Type' => 'application/json', :accept => 'application/json'
         end
-        if user.pull_requests.length > 23
+        if user.pull_requests.year(CURRENT_YEAR).length > 23
           payload = {github:user.nickname, badge:"TwentyFourPullRequestsContinuous", date:"12/25/#{CURRENT_YEAR}", api_key:api_key}
           resp = conn.post '/award', payload.to_json, 'Content-Type' => 'application/json', :accept => 'application/json'
         end
