@@ -5,8 +5,8 @@ describe 'Static pages' do
 
   describe 'home page' do
     before do
-      5.times { create :user }
       2.times { create :project }
+      5.times { create :pull_request}
       visit root_path
     end
 

@@ -71,11 +71,11 @@
             %h3 24 Pull Requests 2013 is upon us
             %p
               In 2012, over 24 days,
-              %strong= PullRequest.all.map(&:user_id).uniq.length
+              %strong= PullRequest.year(2012).all.map(&:user_id).uniq.length
               developers submitted
-              %strong= PullRequest.count
+              %strong= PullRequest.year(2012).count
               pull requests to
-              %strong= PullRequest.select(:repo_name).map(&:repo_name).uniq.count
+              %strong= PullRequest.year(2012).select(:repo_name).map(&:repo_name).uniq.count
               different open source projects.
 
             %p Get ready for 24 Pull Requests 2013 when we do it all again!

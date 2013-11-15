@@ -1,6 +1,6 @@
 .row-fluid.clearfix
   %h2
-    = PullRequest.count
+    = PullRequest.year(current_year).count
     Pull Requests already made!
   = render @pull_requests
 = paginate @pull_requests

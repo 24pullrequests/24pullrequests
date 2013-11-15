@@ -28,7 +28,7 @@ class GiftsController < ApplicationController
 
   def edit
     gift_form = GiftForm.new(:gift => gift,
-                             :pull_requests => current_user.pull_requests)
+                             :pull_requests => current_user.pull_requests.year(current_year))
 
     render :new, :locals => { :gift_form => gift_form }
   end
@@ -55,7 +55,7 @@ class GiftsController < ApplicationController
   end
 
   def gift_params
-    pull_request = current_user.pull_requests.find_by_id(pull_request_id)
+    pull_request = current_user.pull_requests.year(current_year).find_by_id(pull_request_id)
     post_params.merge(:pull_request => pull_request)
   end
 
@@ -66,7 +66,7 @@ class GiftsController < ApplicationController
 
   def gift_failed(gift)
     gift_form = GiftForm.new(:gift => gift,
-                             :pull_requests => current_user.pull_requests,
+                             :pull_requests => current_user.pull_requests.year(current_year),
                              :giftable_dates => Gift.giftable_dates)
 
     render :new, :locals => { :gift_form => gift_form }
