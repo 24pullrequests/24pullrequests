@@ -3,7 +3,7 @@ require 'spec_helper'
 describe PullRequestDownloadsController do
 
   describe "POST 'create'" do
-    let(:pull_requests) { double(:pull_request, :order => [])}
+    let(:pull_requests) { double(:pull_request, :year => double(:pull_request, :order => []))}
     let(:user) { double(:user, :id => 1, :pull_requests => pull_requests) }
 
     before do

@@ -3,11 +3,11 @@ class DashboardsController < ApplicationController
   before_filter :set_email_preferences, :except => [:preferences, :update_preferences, :confirm_email]
 
   def show
-    pull_requests = current_user.pull_requests.order('created_at desc')
+    pull_requests = current_user.pull_requests.year(current_year).order('created_at desc')
     projects      = current_user.suggested_projects.limit(100).sample(12).sort_by(&:name)
     gifted_today  = current_user.gift_for(Time.zone.now.to_date)
 
-    if is_decemeber? && current_user.pull_requests.any? && !current_user.gift_for(today)
+    if is_decemeber? && current_user.pull_requests.year(current_year).any? && !current_user.gift_for(today)
       gift      = current_user.new_gift
       gift_form = GiftForm.new(:gift => gift, :pull_requests => current_user.unspent_pull_requests)
     end

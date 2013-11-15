@@ -27,9 +27,9 @@
     %h4
       =@user.nickname
       has made
-      =@user.pull_requests.count
+      =@user.pull_requests.year(current_year).count
       total pull requests so far in
-      = @year
+      = current_year
     = render :partial => 'calendar', :object => @calendar
 
 .row-fluid
