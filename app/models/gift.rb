@@ -26,8 +26,8 @@ class Gift < ActiveRecord::Base
     where(:user_id => user_id, :date => date).first
   end
 
-  def self.giftable_dates
-    1.upto(24).map { |day| Date.new(2012,12,day) }
+  def self.giftable_dates(year = 2013)
+    1.upto(24).map { |day| Date.new(year,12,day) }
   end
 
   def self.default_date

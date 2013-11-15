@@ -5,6 +5,8 @@ Tfpullrequests::Application.routes.draw do
 
   resources :gifts
   resources :users
+  match '/users/:id/:year', :to => 'users#show'
+  
   resources :projects, :only => [:index, :new, :create]
   resources :pull_requests, :only => [:index]
   resource  :dashboard do 
