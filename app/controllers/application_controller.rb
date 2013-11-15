@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  helper_method :current_user, :logged_in?
+  helper_method :current_user, :logged_in?, :current_year
 
   private
   def ensure_logged_in
@@ -11,6 +11,10 @@ class ApplicationController < ActionController::Base
       session[:pre_login_destination] = "http://#{request.host}#{request.path}"
       redirect_to login_path
     end
+  end
+
+  def current_year
+    @year ||= (params[:year].try(:to_i) || Time.now.year)
   end
 
   def current_user
