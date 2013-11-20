@@ -159,7 +159,6 @@ GEM
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
-    lockfile (2.1.0)
     lumberjack (1.0.4)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -282,9 +281,8 @@ GEM
       actionpack (~> 3.0)
       activemodel (~> 3.0)
     simple_oauth (0.2.0)
-    simplecov (0.8.1)
+    simplecov (0.8.2)
       docile (~> 1.1.0)
-      lockfile (>= 2.1.0)
       multi_json
       simplecov-html (~> 0.8.0)
     simplecov-html (0.8.0)
