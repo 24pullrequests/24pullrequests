@@ -1,5 +1,4 @@
 class Gift < ActiveRecord::Base
-  attr_accessible :user, :pull_request, :date
 
   class << self
     attr_writer :default_date

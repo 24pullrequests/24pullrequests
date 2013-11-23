@@ -11,7 +11,7 @@ describe 'Twitter' do
 
   describe 'Linking twitter account' do
     context 'when the user has not linked their twitter account' do
-      it { should have_link('Link Your Twitter Account', :href  => '/auth/twitter') }
+      it { should have_link('Link Your Twitter Account', :href => '/auth/twitter') }
 
       it 'allows the user to link their twitter account' do
         mock_twitter_auth

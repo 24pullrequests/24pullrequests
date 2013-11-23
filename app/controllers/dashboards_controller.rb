@@ -7,7 +7,7 @@ class DashboardsController < ApplicationController
     projects      = current_user.suggested_projects.limit(100).sample(12).sort_by(&:name)
     gifted_today  = current_user.gift_for(Time.zone.now.to_date)
 
-    if is_decemeber? && current_user.pull_requests.year(current_year).any? && !current_user.gift_for(today)
+    if is_december? && current_user.pull_requests.year(current_year).any? && !current_user.gift_for(today)
       gift      = current_user.new_gift
       gift_form = GiftForm.new(:gift => gift, :pull_requests => current_user.unspent_pull_requests)
     end
@@ -20,7 +20,7 @@ class DashboardsController < ApplicationController
 
   def update_preferences
     current_user.skills.delete_all
-    if current_user.update_attributes(params[:user])
+    if current_user.update_attributes(user_params)
       redirect_to dashboard_path
     else
       render :preferences
@@ -54,11 +54,15 @@ class DashboardsController < ApplicationController
     Time.zone.now.to_date
   end
 
-  def is_decemeber?
+  def is_december?
     today > Date.new(CURRENT_YEAR,12,1)
   end
 
   def set_email_preferences
     redirect_to preferences_path unless current_user.email_frequency.present?
+  end
+
+  def user_params
+    params.require(:user).permit(:uid, :provider, :nickname, :email, :gravatar_id, :token, :email_frequency, :twitter_token, skills_attributes: [:language])
   end
 end

@@ -1,11 +1,6 @@
 require 'spec_helper'
 
 describe Project do
-  it { should allow_mass_assignment_of(:description) }
-  it { should allow_mass_assignment_of(:github_url) }
-  it { should allow_mass_assignment_of(:name) }
-  it { should allow_mass_assignment_of(:main_language) }
-
   it { should validate_presence_of(:description) }
   it { should validate_presence_of(:github_url) }
   it { should validate_presence_of(:name) }
