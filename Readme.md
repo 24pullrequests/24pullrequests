@@ -32,8 +32,8 @@ First things first, you'll need to install Ruby 2.0. I recommend using the excel
 and [ruby-build](https://github.com/sstephenson/ruby-build)
 
 ```bash
-rbenv install 2.0.0-p247
-rbenv global 2.0.0-p247
+rbenv install 2.0.0-p353
+rbenv global 2.0.0-p353
 ```
 
 Next, you'll need to make sure that you have postgres installed. This can be
