@@ -8,6 +8,6 @@ class CreateGifts < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :gifts, [:user_id, :pull_request_id], :uniq => true
+    add_index :gifts, [:user_id, :pull_request_id], :unique => true
   end
 end

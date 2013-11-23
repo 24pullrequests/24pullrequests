@@ -14,11 +14,17 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(params[:project])
+    @project = Project.new(project_params)
     if @project.save
       redirect_to projects_path
     else
       render :new
     end
+  end
+
+  protected
+
+  def project_params
+    params.require(:project).permit(:description, :github_url, :name, :main_language)
   end
 end
