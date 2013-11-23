@@ -71,7 +71,7 @@
             %h3 24 Pull Requests 2013 is upon us
             %p
               In 2012, over 24 days,
-              %strong= PullRequest.year(2012).all.map(&:user_id).uniq.length
+              %strong= PullRequest.year(2012).load.map(&:user_id).uniq.length
               developers submitted
               %strong= PullRequest.year(2012).count
               pull requests to
