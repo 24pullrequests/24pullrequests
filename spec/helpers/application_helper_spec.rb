@@ -35,7 +35,13 @@ describe ApplicationHelper do
   end
 
   describe '#gravatar_url' do
+    it "returns a gravatar url with no digest, if none is set" do
+      helper.gravatar_url.should eql("https://secure.gravatar.com/avatar/.png?s=80&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png")
+    end
 
+    it "returns a gravatar url with the specified size, when size is defined" do
+      helper.gravatar_url('andrew', 100).should eql("https://secure.gravatar.com/avatar/andrew.png?s=100&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png")
+    end
   end
 
 end
