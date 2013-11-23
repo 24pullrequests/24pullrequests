@@ -9,7 +9,7 @@ describe GiftsController do
       session[:user_id] = user.id
       delete :destroy, :id => gift.date
 
-      Gift.find_by_id(gift.id).should be_nil
+      Gift.find_by(id: gift.id).should be_nil
     end
   end
 end

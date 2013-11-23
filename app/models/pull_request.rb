@@ -1,6 +1,4 @@
 class PullRequest  < ActiveRecord::Base
-  attr_accessible :title, :issue_url, :body, :state, :merged, :created_at, :repo_name
-
   belongs_to :user, :counter_cache => true
 
   validates_uniqueness_of :issue_url, :scope => :user_id

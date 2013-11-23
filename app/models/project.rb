@@ -1,5 +1,4 @@
 class Project < ActiveRecord::Base
-  attr_accessible :description, :github_url, :name, :main_language
 
   LANGUAGES = ["ActionScript", "Assembly", "C", "C#", "C++", "Clojure", "CoffeeScript",
                "ColdFusion", "CSS","Delphi", "Emacs Lisp", "Erlang", "Go", "Groovy", "Haskell", "HTML", "Java", "JavaScript", 
