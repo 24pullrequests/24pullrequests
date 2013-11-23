@@ -22,4 +22,9 @@ module ApplicationHelper
   def github_button(nickname)
     %(<iframe src="http://ghbtns.com/github-btn.html?user=#{nickname}&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="300" height="20"></iframe>).html_safe
   end
+
+  def gittip_button(nickname)
+    %(<a href="https://www.gittip.com/#{nickname}/"><img alt="Support via Gittip" src="https://rawgithub.com/twolfson/gittip-badge/0.1.0/dist/gittip.png"/> </a>).html_safe
+  end
+
 end
