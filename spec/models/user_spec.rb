@@ -4,18 +4,6 @@ require 'ostruct'
 describe User do
   let(:user) { create :user }
 
-  it { should allow_mass_assignment_of(:uid) }
-  it { should allow_mass_assignment_of(:provider) }
-  it { should allow_mass_assignment_of(:nickname) }
-  it { should allow_mass_assignment_of(:email) }
-  it { should allow_mass_assignment_of(:gravatar_id) }
-  it { should allow_mass_assignment_of(:token) }
-  it { should allow_mass_assignment_of(:email_frequency) }
-  it { should allow_mass_assignment_of(:skills_attributes) }
-
-  it { should_not allow_mass_assignment_of(:confirmation_token) }
-  it { should_not allow_mass_assignment_of(:confirmed_at) }
-
   it { should have_many(:pull_requests) }
   it { should have_many(:skills) }
 
@@ -258,18 +246,16 @@ describe User do
       user.download_pull_requests
     end
 
-    subject { user }
+    subject { user.pull_requests }
 
-    context 'when the pull request does not exist' do
-      its(:pull_requests) { should have(1).pull_request }
+    context 'when the pull request does not aleady exist' do
+      its(:length) { should eq 1 }
     end
 
     context 'when the pull request already exists' do
-      before do
-        user.pull_requests.should_receive(:create).never
-      end
+      it { should_receive(:create).never }
 
-      its(:pull_requests) { should have(1).pull_request }
+      its(:length) { should eq 1 }
     end
   end
 
