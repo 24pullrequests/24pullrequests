@@ -2,6 +2,12 @@
   .span10
     %h2
       #{@user.nickname}
+
+    .row-flud
+      =gittip_button @user.nickname
+
+    %br
+
     .row-fluid.clearfix.social-buttons
       .span4
         = github_button @user.nickname

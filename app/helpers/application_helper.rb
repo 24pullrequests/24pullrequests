@@ -15,12 +15,16 @@ module ApplicationHelper
     link_to label, '#', :data => {:language => language}
   end
 
-  def gravatar_url(digest, size = '80')
-    digest ||= ''
+  def gravatar_url(digest='', size = '80')
     "https://secure.gravatar.com/avatar/#{digest}.png?s=#{size}&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
   end
 
   def github_button(nickname)
     %(<iframe src="http://ghbtns.com/github-btn.html?user=#{nickname}&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="300" height="20"></iframe>).html_safe
   end
+
+  def gittip_button(nickname)
+    %(<a href="https://www.gittip.com/#{nickname}/"><img alt="Support via Gittip" src="https://rawgithub.com/twolfson/gittip-badge/0.1.0/dist/gittip.png"/> </a>).html_safe
+  end
+
 end
