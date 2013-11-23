@@ -9,21 +9,24 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130913073803) do
+ActiveRecord::Schema.define(version: 20130913073803) do
 
-  create_table "gifts", :force => true do |t|
-    t.integer  "user_id",         :null => false
-    t.integer  "pull_request_id", :null => false
-    t.date     "date",            :null => false
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "gifts", force: true do |t|
+    t.integer  "user_id",         null: false
+    t.integer  "pull_request_id", null: false
+    t.date     "date",            null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "gifts", ["user_id", "pull_request_id"], :name => "index_gifts_on_user_id_and_pull_request_id", :unique => true
+  add_index "gifts", ["user_id", "pull_request_id"], name: "index_gifts_on_user_id_and_pull_request_id", unique: true, using: :btree
 
-  create_table "projects", :force => true do |t|
+  create_table "projects", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.string   "github_url"
@@ -32,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20130913073803) do
     t.datetime "updated_at"
   end
 
-  create_table "pull_requests", :force => true do |t|
+  create_table "pull_requests", force: true do |t|
     t.string   "title"
     t.string   "issue_url"
     t.text     "body"
@@ -43,28 +46,28 @@ ActiveRecord::Schema.define(:version => 20130913073803) do
     t.integer  "user_id"
   end
 
-  add_index "pull_requests", ["user_id"], :name => "index_pull_requests_on_user_id"
+  add_index "pull_requests", ["user_id"], name: "index_pull_requests_on_user_id", using: :btree
 
-  create_table "skills", :force => true do |t|
+  create_table "skills", force: true do |t|
     t.integer  "user_id"
     t.string   "language"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "skills", ["user_id"], :name => "index_skills_on_user_id"
+  add_index "skills", ["user_id"], name: "index_skills_on_user_id", using: :btree
 
-  create_table "users", :force => true do |t|
-    t.string   "uid",                                :null => false
-    t.string   "provider",                           :null => false
-    t.string   "nickname",                           :null => false
+  create_table "users", force: true do |t|
+    t.string   "uid",                             null: false
+    t.string   "provider",                        null: false
+    t.string   "nickname",                        null: false
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "gravatar_id"
     t.string   "token"
     t.string   "email_frequency"
-    t.integer  "pull_requests_count", :default => 0
+    t.integer  "pull_requests_count", default: 0
     t.datetime "last_sent_at"
     t.string   "twitter_token"
     t.string   "twitter_secret"
@@ -73,7 +76,7 @@ ActiveRecord::Schema.define(:version => 20130913073803) do
     t.datetime "confirmed_at"
   end
 
-  add_index "users", ["nickname"], :name => "index_users_on_nickname", :unique => true
-  add_index "users", ["uid", "provider"], :name => "index_users_on_uid_and_provider", :unique => true
+  add_index "users", ["nickname"], name: "index_users_on_nickname", unique: true, using: :btree
+  add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
 
 end
