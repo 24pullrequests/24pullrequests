@@ -1,7 +1,7 @@
 @import 'variables.css.scss';
 
 body{
-  background-color: #a63636;
+  background-color: $header-background;
   margin:0;
   padding:0;
 }
@@ -211,11 +211,11 @@ footer {
     a {
       font-weight: 800;
       font-size: 110%;
-      color:#a63636;
+      color: $header-background;
       text-decoration:none;
 
       &:hover {
-        border-bottom: 1px dashed #a63636;
+        border-bottom: 1px dashed $header-background;
       }
     }
 
@@ -269,7 +269,7 @@ footer {
     -webkit-transition: opacity 0.5s;
     -o-transition: opacity 0.5s;
     a{
-      color:#bc3b3b;
+      color:$link-color;
       text-shadow:none;
       text-decoration:none;
     }
@@ -277,7 +277,7 @@ footer {
       opacity:0.5;
     }
     &.highlighted{
-      background: #bc3b3b;
+      background: $link-color;
       a{
         color: #fff;
       }
@@ -345,7 +345,7 @@ footer {
       box-shadow:rgba(0, 0, 0, 0.398438) 0px 1px 1px;
       margin:0 12px 12px 0;
       &:hover{
-        border-color:#bc3b3b;
+        border-color:$link-color;
       }
     }
   }
@@ -402,13 +402,6 @@ h1, h2, h3, h4{
         margin-left:180px
       }
     }
-  }
-}
-
-.pagination {
-  text-align: center;
-  a {
-    color: #BC3B3B;
   }
 }
 
