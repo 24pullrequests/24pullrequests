@@ -4,7 +4,8 @@
       = User.count
       Developers already involved
 
-    %ul.clearfix
-      = render @users
+    %div.users
+      %ul.clearfix.userlist
+        = render @users
 
-= paginate @users
+      = link_to_next_page @users, 'More', remote: true, class: 'btn btn-success more'
