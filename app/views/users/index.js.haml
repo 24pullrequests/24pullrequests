@@ -1,0 +1,15 @@
+:plain
+  (function($users) {
+    var $new = $("#{escape_javascript(render(@users))}").find("a[rel=tooltip]").tooltip().end();
+
+    $users.find('.userlist')
+          .append($new)
+
+    $users.find(".more")
+          .replaceWith(
+            "#{escape_javascript(link_to_next_page @users,
+                                                   'More',
+                                                   remote: true,
+                                                   class: 'btn btn-success more')}"
+          );
+  })($(".users"));
