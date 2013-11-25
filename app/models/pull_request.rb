@@ -10,6 +10,7 @@ class PullRequest  < ActiveRecord::Base
 
   scope :year, -> (year) { where('EXTRACT(year FROM "created_at") = ?', year) }
   scope :by_language, -> (language) { where("lower(language) = ?", language.downcase) }
+  scope :latest, -> (limit) { order('created_at desc').limit(limit) }
 
   EARLIEST_PULL_DATE = Date.parse("01/12/#{CURRENT_YEAR}").midnight
   LATEST_PULL_DATE   = Date.parse("01/01/#{CURRENT_YEAR+1}").midnight
