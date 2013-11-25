@@ -9,7 +9,7 @@ module PullRequestHelpers
           'created_at' => DateTime.now.to_s,
           'state'      => 'open',
           'body'       => Faker::Lorem.paragraphs.join('\n'),
-          'merged'     => false,
+          'merged'     => false
         }
       },
       'repo' => {
