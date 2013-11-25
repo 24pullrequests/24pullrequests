@@ -17,6 +17,7 @@ describe PullRequest do
     its(:body)       { should eq json['payload']['pull_request']['body'] }
     its(:merged)     { should eq json['payload']['pull_request']['merged'] }
     its(:repo_name)  { should eq json['repo']['name'] }
+    its(:language)   { should eq json['repo']['language'] }
 
     context 'when the user has authed their twitter account' do
       let(:user) { create :user, :twitter_token => 'foo', :twitter_secret => 'bar' }
