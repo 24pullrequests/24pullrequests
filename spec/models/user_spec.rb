@@ -293,4 +293,14 @@ describe User do
       user.new_gift(:foo => 'bar').foo.should == 'bar'
     end
   end
+
+  context "#scopes" do
+    let!(:haskell_users) { 2.times.map { create(:skill, language: "Haskell").user } }
+
+    it "by_language" do
+      User.by_language("haskell").should eq(haskell_users)
+      User.by_language("ruby").should eq([])
+    end
+
+  end
 end
