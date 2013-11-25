@@ -64,7 +64,7 @@ describe 'Projects' do
       end
 
       it 'should filter projects in languages other than the selected' do
-        click_link 'Ruby'
+        first(:link, "Ruby").click
         within '#projects' do
           page.should have_css('.ruby')
           page.should_not have_css('.java')
@@ -80,7 +80,7 @@ describe 'Projects' do
       end
 
       it 'should reset an active filter when clicking "Everything"' do
-        click_link 'Ruby'
+        first(:link, "Ruby").click
         click_link 'Everything'
         within '#projects' do
           page.should have_css('.ruby')
