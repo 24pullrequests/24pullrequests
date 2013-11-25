@@ -45,5 +45,6 @@ if Rails.env.development? && User.count == 0
 
   Rails.configuration.collaborators.each do |collaborator|
     user = create :user, :nickname => collaborator.login, :gravatar_id => collaborator.gravatar_id
+    create :skill, user: user
   end
 end
