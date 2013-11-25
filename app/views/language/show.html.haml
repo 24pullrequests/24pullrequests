@@ -1,4 +1,4 @@
-%h2 #{@language} summary
+%h2 #{@language}
 
 #users.row-fluid.clearfix
   .span12
@@ -12,10 +12,11 @@
   .span12
     %h3
       =project_count_for_language
-      Suggested projects
+      Projects
 
-  #projects
-    = render @projects
+    #projects
+      = paginate @projects
+      = render @projects
 
 - if @pull_requests.any?
   .row-fluid.clearfix
