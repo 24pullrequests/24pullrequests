@@ -44,4 +44,17 @@ describe PullRequest do
       end
     end
   end
+
+  describe "#check_state" do
+    let(:pull_request) { create :pull_request }
+    before do
+      pull_request.stub(:fetch_data).and_return(Hashie::Mash.new mock_issue)
+      pull_request.check_state
+    end
+
+    subject { pull_request }
+
+    its(:comments_count) { should eq 5        }
+    its(:state)          { should eq "closed" }
+  end
 end
