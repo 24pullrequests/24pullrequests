@@ -9,12 +9,19 @@ module PullRequestHelpers
           'created_at' => DateTime.now.to_s,
           'state'      => 'open',
           'body'       => Faker::Lorem.paragraphs.join('\n'),
-          'merged'     => false
+          'merged'     => false,
         }
       },
       'repo' => {
         'name' => Faker::Lorem.words.first
       }
+    }
+  end
+
+  def mock_issue
+    {
+      'state'    => 'closed',
+      'comments' => '5'
     }
   end
 end
