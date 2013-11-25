@@ -12,6 +12,7 @@ class Project < ActiveRecord::Base
   validates_inclusion_of :main_language, :in => LANGUAGES, :message => 'must be a programming language'
 
   scope :not_owner, lambda {|user| where("github_url" != "github.com/#{user}/") }
+  scope :by_language, ->(language) { where("lower(main_language) =?", language.downcase) }
 
   def github_repository
     self.github_url.gsub(/^(((https|http|git)?:\/\/(www\.)?)|git@)github.com(:|\/)/i, '').gsub(/(\.git|\/)$/i, '')
