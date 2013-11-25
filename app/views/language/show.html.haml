@@ -1,0 +1,27 @@
+%h2 #{@language} summary
+
+#users.row-fluid.clearfix
+  .span12
+    %h3
+      = User.by_language(@language).count
+      Developers
+      %ul.clearfix
+        = render @users
+
+.row-fluid.clearfix
+  .span12
+    %h3
+      =project_count_for_language
+      Suggested projects
+
+  #projects
+    = render @projects
+
+- if @pull_requests.any?
+  .row-fluid.clearfix
+    .span12
+      %h3
+        Latest #{@pull_requests.count} Pull Requests (#{pull_request_count_for_language} total)
+
+    #pull_requests
+      = render @pull_requests
