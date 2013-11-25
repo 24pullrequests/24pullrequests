@@ -14,7 +14,7 @@ describe 'LanguageRequests' do
     end
 
     it { should have_content '3 Developers'}
-    it { should have_content '6 Suggested projects'}
+    it { should have_content '6 Projects'}
     it { should have_content 'Latest 5 Pull Requests (9 total)'}
   end
 
