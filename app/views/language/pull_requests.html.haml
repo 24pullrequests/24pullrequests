@@ -1,8 +1,0 @@
-#language
-  #pull_requests.row-fluid.clearfix
-    %h2
-      =pull_request_count_for_language
-      pull requests already made in #{@language}!
-
-    = render @pull_requests
-    = paginate @pull_requests
