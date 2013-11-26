@@ -11,6 +11,10 @@ class LanguageController < ApplicationController
     @projects = Project.by_language(@language).page(params[:page])
   end
 
+  def pull_requests
+    @pull_requests = PullRequest.by_language(@language).year(current_year).page(params[:page])
+  end
+
   def users
     @users = User.by_language(@language).page(params[:page])
 

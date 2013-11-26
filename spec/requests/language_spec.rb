@@ -29,6 +29,12 @@ describe 'LanguageRequests' do
 
         should have_content "3 Developers using Haskell are involved"
       end
+
+      it "#pull_requests" do
+        within("#pull_requests") { click_on "View All" }
+
+        should have_content "9 pull requests already made in Haskell!"
+      end
     end
   end
 
