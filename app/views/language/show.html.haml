@@ -8,15 +8,15 @@
       %ul.clearfix
         = render @users
 
-.row-fluid.clearfix
+#projects.row-fluid.clearfix
   .span12
     %h3
       =project_count_for_language
       Projects
+      = link_to "Suggest a #{@language} project", new_project_path(language: @language), :class => 'btn pull-right'
+      = link_to 'View All', language_projects_path(@language), :class => 'btn pull-right'
 
-    #projects
-      = paginate @projects
-      = render @projects
+    = render @projects
 
 - if @pull_requests.any?
   .row-fluid.clearfix
