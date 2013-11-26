@@ -3,7 +3,7 @@
 #users.row-fluid.clearfix
   .span12
     %h3
-      = User.by_language(@language).count
+      = user_count
       Developers
       = link_to 'View All', language_users_path(@language), :class => 'btn'
 
