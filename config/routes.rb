@@ -36,6 +36,7 @@ Tfpullrequests::Application.routes.draw do
   get 'contributing', :to => 'static#contributing'
 
   get '/language/:language', to: 'language#show', as: :language
+  get '/language/:language/projects', to: 'language#projects', defaults: { format: :json }
 
   root :to => 'static#homepage'
 
