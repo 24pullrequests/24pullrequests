@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20131125081458) do
     t.string   "repo_name"
     t.integer  "user_id"
     t.integer  "comments_count", default: 0
+    t.string   "language"
   end
 
   add_index "pull_requests", ["user_id"], name: "index_pull_requests_on_user_id", using: :btree
