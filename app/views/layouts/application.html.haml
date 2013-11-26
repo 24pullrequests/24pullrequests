@@ -1,15 +1,15 @@
 !!!
 %html{ :lang => 'en', :"xmlnsns:og" => 'http://ogp.me/ns#', :"xmlns:fb" => 'http://http://www.facebook.com/2008/fbml' }
   %head
-    
+
     / Facebook open graph api
     %meta{ :property => 'og:title', :content => '24 Pull Requests' }
     %meta{ :property => 'og:type', :content => 'website' }
     %meta{ :property => 'og:url', :content => 'http://24pullrequests.com/' }
-    %meta{ :property => 'og:image', :content => "#{root_url}#{image_path('24pr-logo.jpg')}" } 
-    %meta{ :property => 'og:description', :content => "24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas." } 
+    %meta{ :property => 'og:image', :content => "#{root_url}#{image_path('24pr-logo.jpg')}" }
+    %meta{ :property => 'og:description', :content => "24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas." }
 
-    
+
     %meta{ :charset => "utf-8" }
     %meta{ :'http-equiv' => 'X-UA-Compatible', :content => "IE=Edge,chrome=1" }
     %meta{ :name => "viewport", :content => "user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"  }
@@ -83,14 +83,14 @@
             %p Want to help out with open source projects in the meantime? Check out these other great initiatives:
 
             %h4= link_to 'CodeTriage', 'http://www.codetriage.com/'
-            
+
             %p Give back to open source, one issue at a time, with CodeTriage. You'll get one issue from your favorite repo per day to help you dig deeper, learn more, and stay involved with the code you rely on.
-            
+
             %h4= link_to 'ContribHub', 'http://contribhub.com/'
-            
+
             %p Do you know you have a neighbor needing some help with a really cool project? With ContribHub you will!
             %p ContribHub is a GitHub-based application that makes it easier to find projects to contribute to and grow a community around it.
-            
+
         .row-fluid
           .span12
             - if flash.any?
@@ -110,7 +110,7 @@
             Sponsored by&nbsp;
             #{link_to 'DNSimple', 'http://dnsimple.com'}
             &nbsp;&amp;&nbsp;
-            = link_to 'Heroku Postgres', 'http://postgres.heroku.com/'            
+            = link_to 'Heroku Postgres', 'http://postgres.heroku.com/'
         %ul.unstyled.pull-left
           %li
             = link_to 'About', about_path
