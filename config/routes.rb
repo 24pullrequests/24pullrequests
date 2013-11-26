@@ -39,6 +39,7 @@ Tfpullrequests::Application.routes.draw do
   scope '/language/:language' do
     get '/', to: 'language#show', as: :language
     get '/projects', to: 'language#projects',  as: :language_projects
+    get '/pull_requests', to: 'language#pull_requests',  as: :language_pull_requests
     get '/users', to: 'language#users',  as: :language_users
   end
 
