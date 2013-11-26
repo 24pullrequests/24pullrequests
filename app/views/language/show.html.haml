@@ -6,7 +6,7 @@
       = user_count
       Developers using
       = @language
-      = link_to 'View All', language_users_path(@language), :class => 'btn'
+      = link_to 'View All', language_users_path(@language.downcase), :class => 'btn'
 
       %ul.clearfix
         = render @users
@@ -15,7 +15,7 @@
   .span12
     %h3
       Latest #{@language} Pull Requests (#{pull_request_count_for_language} total)
-      = link_to 'View All', language_pull_requests_path(@language), :class => 'btn pull-right'
+      = link_to 'View All', language_pull_requests_path(@language.downcase), :class => 'btn pull-right'
 
     = render @pull_requests
 
@@ -25,7 +25,7 @@
       =project_count_for_language
       = @language
       Projects
-      = link_to "Suggest a #{@language} project", new_project_path(language: @language), :class => 'btn pull-right'
-      = link_to 'View All', language_projects_path(@language), :class => 'btn pull-right'
+      = link_to "Suggest a #{@language} project", new_project_path(language: @language.downcase), :class => 'btn pull-right'
+      = link_to 'View All', language_projects_path(@language.downcase), :class => 'btn pull-right'
 
   = render @projects
