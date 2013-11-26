@@ -1,0 +1,47 @@
+#language{ "ng-controller" => "LanguageCtrl", "ng-init" => "load(#{params[:page]})" }
+  %h2 #{@language}
+
+  #users.row-fluid.clearfix
+    .span12
+      %h3
+        = User.by_language(@language).count
+        Developers
+        %ul.clearfix
+          = render @users
+
+  .row-fluid.clearfix
+    .span12
+      %h3
+        {{ project_count }}
+        Projects
+
+      %nav.pagination.text-right
+        %span.page{ "ng-class" => "{ 'current': current_page == 1 }", title: "First" }
+          %a{ rel: 'previous', :href =>"", "ng-click" => 'load(1)' }="←"
+        %span.page{ "ng-class" => "{ 'current': current_page == 1 }" }
+          %a{ rel: 'previous', :href =>"", "ng-click" => 'previousPage()' }="Prev"
+        {{ current_page }} / {{ total_pages }}
+        %span.page{ "ng-class" => "{ 'current': current_page == total_pages }" }
+          %a{ rel: 'next', :href => "", "ng-click" => 'nextPage()'}="Next"
+        %span.page{ "ng-class" => "{ 'current': current_page == total_pages }" }
+          %a{ rel: 'next', :href => "", "ng-click" => 'load(total_pages)', title: "Last"}="→"
+      %span{ "ng-hide" => 'projects'}Loading...
+      #projects
+
+        .project{:class => parameterize_language("{{project.main_language}}"), :data => {:id => "{{ project.id }}" }, "ng-show" => "projects", "ng-repeat" => "project in projects" }
+          .title.clearfix
+            %h4 {{ project.name }}
+            = link_to "{{ project.github_repository}}", "{{ project.github_url }}", :target => '_blank'
+          %p
+            = truncate "{{ project.description }}", :length => 200
+          .language.label.label-info
+            = link_to " {{ project.main_language }}", language_path("{{project.main_language}}")
+
+  - if @pull_requests.any?
+    .row-fluid.clearfix
+      .span12
+        %h3
+          Latest #{@pull_requests.count} Pull Requests (#{pull_request_count_for_language} total)
+
+    #pull_requests
+      = render @pull_requests
