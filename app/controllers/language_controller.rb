@@ -13,6 +13,8 @@ class LanguageController < ApplicationController
 
   def pull_requests
     @pull_requests = PullRequest.by_language(@language).year(current_year).page(params[:page])
+
+    render 'pull_requests/index'
   end
 
   def users
