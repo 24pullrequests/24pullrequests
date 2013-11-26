@@ -11,6 +11,12 @@ class LanguageController < ApplicationController
     @projects = Project.by_language(@language).page(params[:page])
   end
 
+  def users
+    @users = User.by_language(@language).page(params[:page])
+
+    render 'users/index'
+  end
+
   private
 
   def set_language

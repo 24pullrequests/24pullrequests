@@ -1,8 +1,11 @@
 #users.row-fluid.clearfix
   .span12
     %h3
-      = User.count
-      Developers already involved
+      = user_count
+      - if @language
+        Developers using #{@language} are involved
+      - else
+        Developers already involved
 
     %div.users
       %ul.clearfix.userlist
