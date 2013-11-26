@@ -1,0 +1,29 @@
+%h2 #{@language}
+
+#users.row-fluid.clearfix
+  .span12
+    %h3
+      = user_count
+      Developers
+      = link_to 'View All', language_users_path(@language), :class => 'btn'
+
+      %ul.clearfix
+        = render @users
+
+#pull_requests.row-fluid.clearfix
+  .span12
+    %h3
+      Latest #{@pull_requests.count} Pull Requests (#{pull_request_count_for_language} total)
+      = link_to 'View All', language_pull_requests_path(@language), :class => 'btn pull-right'
+
+    = render @pull_requests
+
+#projects.row-fluid.clearfix
+  .span12
+    %h3
+      =project_count_for_language
+      Projects
+      = link_to "Suggest a #{@language} project", new_project_path(language: @language), :class => 'btn pull-right'
+      = link_to 'View All', language_projects_path(@language), :class => 'btn pull-right'
+
+  = render @projects

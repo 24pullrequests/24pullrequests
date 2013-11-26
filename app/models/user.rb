@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   has_many :skills,        :dependent => :destroy
   has_many :gifts,         :dependent => :destroy
 
+  scope :by_language, -> (language) { joins(:skills).where("lower(language) = ?", language.downcase) }
+
   paginates_per 99
 
   accepts_nested_attributes_for :skills, :reject_if => proc { |attributes| !Project::LANGUAGES.include?(attributes['language']) }
