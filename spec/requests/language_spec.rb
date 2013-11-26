@@ -23,10 +23,17 @@ describe 'LanguageRequests' do
 
         should have_content "6 Projects are using Haskell"
       end
+
+      it "#users" do
+        within("#users") { click_on "View All" }
+
+        should have_content "3 Developers using Haskell are involved"
+      end
     end
   end
 
   describe "viewing a non existing language" do
+
     it "should raise an error" do
       expect { visit language_path("Pugs") }.
         to raise_error(ActionController::RoutingError, "Pugs is not a valid language")

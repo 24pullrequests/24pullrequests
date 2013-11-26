@@ -5,6 +5,8 @@
     %h3
       = User.by_language(@language).count
       Developers
+      = link_to 'View All', language_users_path(@language), :class => 'btn'
+
       %ul.clearfix
         = render @users
 
