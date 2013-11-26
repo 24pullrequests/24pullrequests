@@ -15,4 +15,6 @@
 //= require twitter/bootstrap
 //= require coderwall
 //= require jquery.timeago
+//= require angular
+//= require angular-resource
 //= require_tree .

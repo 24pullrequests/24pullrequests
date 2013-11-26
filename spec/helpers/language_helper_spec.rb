@@ -5,14 +5,6 @@ describe LanguageHelper do
     @language = "Erlang"
   end
 
-  describe '#project_count_for_language' do
-    it 'returns the number of project using the given language' do
-      3.times { create :project, main_language: @language }
-
-      helper.project_count_for_language.should eql(3)
-    end
-  end
-
   describe '#pull_request_count_for_language' do
     it 'returns the number of pull requests using the given language' do
       5.times { create :pull_request, language: "Erlang" }
