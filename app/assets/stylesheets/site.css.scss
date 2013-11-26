@@ -390,6 +390,9 @@ h1, h2, h3, h4{
 }
 
 /* snow animation - START */
+body {
+  overflow-x: hidden;
+}
 canvas {
     position: absolute;
     top: 0;

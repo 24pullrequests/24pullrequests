@@ -30,7 +30,7 @@
 var flakes = [],
     canvas = document.getElementById("canvas"),
     ctx = canvas.getContext("2d"),
-    flakeCount = 400,
+    flakeCount = 40,
     mX = -100,
     mY = -100
 
