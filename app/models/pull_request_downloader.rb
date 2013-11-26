@@ -17,11 +17,11 @@ class PullRequestDownloader
   def download_pull_requests
     begin
       events = github_client.user_events(login)
-      events.select do |e| 
+      events.select do |e|
         event_date = DateTime.parse(e['created_at'])
-        e.type == 'PullRequestEvent' && 
+        e.type == 'PullRequestEvent' &&
         e.payload.action == 'opened' &&
-        event_date >= PullRequest::EARLIEST_PULL_DATE && 
+        event_date >= PullRequest::EARLIEST_PULL_DATE &&
         event_date <= PullRequest::LATEST_PULL_DATE
       end
     rescue
