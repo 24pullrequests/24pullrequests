@@ -34,6 +34,15 @@ class PullRequest  < ActiveRecord::Base
     end
   end
 
+  def check_state
+    issue = fetch_data
+    self.update_attributes(state: issue.state, comments_count: issue.comments)
+  end
+
+  def fetch_data
+    user.github_client.issue(repo_name, id)
+  end
+
   def post_tweet
     user.twitter.update(I18n.t 'pull_request.twitter_message', :issue_url => issue_url) if user && user.twitter_linked?
   end

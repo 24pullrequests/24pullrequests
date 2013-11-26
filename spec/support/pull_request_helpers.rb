@@ -18,6 +18,13 @@ module PullRequestHelpers
       }
     }
   end
+
+  def mock_issue
+    {
+      'state'    => 'closed',
+      'comments' => '5'
+    }
+  end
 end
 
 RSpec.configure do |config|
