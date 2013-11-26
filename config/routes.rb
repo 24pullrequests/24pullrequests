@@ -35,7 +35,11 @@ Tfpullrequests::Application.routes.draw do
   get 'api', :to => 'static#api'
   get 'contributing', :to => 'static#contributing'
 
-  get '/language/:language', to: 'language#show', as: :language
+
+  scope '/language/:language' do
+    get '/', to: 'language#show', as: :language
+    get '/projects', to: 'language#projects',  as: :language_projects
+  end
 
   root :to => 'static#homepage'
 

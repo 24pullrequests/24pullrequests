@@ -16,6 +16,14 @@ describe 'LanguageRequests' do
     it { should have_content '3 Developers'}
     it { should have_content '6 Projects'}
     it { should have_content 'Latest 5 Pull Requests (9 total)'}
+
+    describe "view all" do
+      it "#projects" do
+        within("#projects") { click_on "View All" }
+
+        should have_content "6 Projects are using Haskell"
+      end
+    end
   end
 
   describe "viewing a non existing language" do
