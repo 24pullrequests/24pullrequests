@@ -16,6 +16,7 @@ describe LanguageHelper do
   describe '#pull_request_count_for_language' do
     it 'returns the number of pull requests using the given language' do
       5.times { create :pull_request, language: "Erlang" }
+      3.times { create :pull_request, language: "Erlang", created_at: Date.new-1.year }
 
       helper.pull_request_count_for_language.should eql(5)
     end
