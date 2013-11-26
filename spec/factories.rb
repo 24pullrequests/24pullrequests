@@ -29,6 +29,7 @@ FactoryGirl.define do
     merged false
     created_at { DateTime.now.to_s }
     repo_name { Faker::Lorem.words.first }
+    language { Project::LANGUAGES.sample }
   end
 
   factory :project do

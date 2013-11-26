@@ -11,6 +11,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @project.main_language = language if language
   end
 
   def create
@@ -26,5 +27,9 @@ class ProjectsController < ApplicationController
 
   def project_params
     params.require(:project).permit(:description, :github_url, :name, :main_language)
+  end
+
+  def language
+    params[:language]
   end
 end

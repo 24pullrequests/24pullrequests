@@ -1,0 +1,10 @@
+#projects.row-fluid.clearfix
+  %h3
+    =project_count_for_language
+    Projects are using #{@language}
+    = link_to "Suggest a #{@language} project", new_project_path(language: @language), :class => 'btn pull-right'
+
+  .row-fluid.clearfix
+    .span12
+      = render @projects
+    = paginate @projects

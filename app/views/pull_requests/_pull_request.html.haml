@@ -9,5 +9,9 @@
           = link_to pull_request.repo_name, "https://github.com/#{pull_request.repo_name}", :target => :blank
           %small
             %abbr.timeago{:title => pull_request.created_at.iso8601}= pull_request.created_at
-      %p= truncate pull_request.body, :length => 300
+          - if pull_request.language.present?
+            .language.label.label-info.pull-right
+              = link_to pull_request.language, language_path(pull_request.language)
+      %p
+        =truncate pull_request.body, :length => 300
       %hr

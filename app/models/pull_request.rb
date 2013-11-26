@@ -8,7 +8,9 @@ class PullRequest  < ActiveRecord::Base
 
   has_many :gifts
 
-  scope :year, lambda {|year| where('EXTRACT(year FROM "created_at") = ?', year) }
+  scope :year, -> (year) { where('EXTRACT(year FROM "created_at") = ?', year) }
+  scope :by_language, -> (language) { where("lower(language) = ?", language.downcase) }
+  scope :latest, -> (limit) { order('created_at desc').limit(limit) }
 
   EARLIEST_PULL_DATE = Date.parse("01/12/#{CURRENT_YEAR}").midnight
   LATEST_PULL_DATE   = Date.parse("01/01/#{CURRENT_YEAR+1}").midnight
@@ -26,7 +28,8 @@ class PullRequest  < ActiveRecord::Base
         :state          => json['payload']['pull_request']['state'],
         :body           => json['payload']['pull_request']['body'],
         :merged         => json['payload']['pull_request']['merged'],
-        :repo_name      => json['repo']['name']
+        :repo_name      => json['repo']['name'],
+        :language       => json['repo']['language']
       }
     end
   end
