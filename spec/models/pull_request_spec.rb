@@ -58,4 +58,17 @@ describe PullRequest do
     its(:comments_count) { should eq 5        }
     its(:state)          { should eq "closed" }
   end
+
+  context "#scopes" do
+    let!(:pull_requests) { 4.times.map  { create :pull_request, language: "Haskell" } }
+
+    it "by_language" do
+      PullRequest.by_language("Haskell").should eq pull_requests
+    end
+
+    it "latest" do
+      PullRequest.latest(3).should eq(pull_requests.take(3))
+    end
+
+  end
 end
