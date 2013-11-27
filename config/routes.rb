@@ -7,7 +7,7 @@ Tfpullrequests::Application.routes.draw do
   resources :users
   get '/users/:id/:year', :to => 'users#show'
 
-  resources :projects, :only => [:index, :new, :create]
+  resources :projects, :only => [:index, :new, :create, :edit, :update]
   resources :pull_requests, :only => [:index]
   resource  :dashboard do
     member do
@@ -21,6 +21,7 @@ Tfpullrequests::Application.routes.draw do
 
   get   '/preferences',        :to => 'dashboards#preferences',        :as => 'preferences'
   patch '/preferences/update', :to => 'dashboards#update_preferences', :as => 'update_preferences'
+  get :my_suggestions, to: 'users#projects', as: :my_suggestions
 
   get '/login',  :to => 'sessions#new',     :as => 'login'
   get '/logout', :to => 'sessions#destroy', :as => 'logout'

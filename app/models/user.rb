@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many :pull_requests, :dependent => :destroy
   has_many :skills,        :dependent => :destroy
   has_many :gifts,         :dependent => :destroy
+  has_many :projects
 
   scope :by_language, -> (language) { joins(:skills).where("lower(language) = ?", language.downcase) }
 

@@ -1,0 +1,5 @@
+- if @projects.any?
+  = render @projects, editable: true
+- else
+  You haven't suggested any projects yet.
+  = link_to 'Suggest a project!', new_project_path

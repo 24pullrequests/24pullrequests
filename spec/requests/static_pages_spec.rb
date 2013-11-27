@@ -11,7 +11,7 @@ describe 'Static pages' do
     end
 
     it { should have_link('Log in with GitHub', :href  => login_path) }
-    it { should have_content('5 Developers already involved') }
+    it { should have_content('7 Developers already involved') }
     it { should have_content('2 Suggested Projects') }
     it { should have_link('View All', :href  => users_path) }
     it { should have_link('View All', :href  => projects_path) }

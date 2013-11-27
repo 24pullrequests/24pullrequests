@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131125081458) do
+ActiveRecord::Schema.define(version: 20131126232238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20131125081458) do
     t.string   "main_language"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "pull_requests", force: true do |t|
@@ -44,8 +45,8 @@ ActiveRecord::Schema.define(version: 20131125081458) do
     t.datetime "created_at"
     t.string   "repo_name"
     t.integer  "user_id"
-    t.integer  "comments_count", default: 0
     t.string   "language"
+    t.integer  "comments_count", default: 0
   end
 
   add_index "pull_requests", ["user_id"], name: "index_pull_requests_on_user_id", using: :btree
