@@ -26,6 +26,10 @@ describe 'Projects' do
       fill_in 'Summary', :with => Faker::Lorem.paragraphs.first
       fill_in 'Main language', :with => 'Ruby'
       click_on 'Submit Project'
+
+      click_on 'My Suggestions'
+
+      should have_content "andrew/24pullrequests"
     end
   end
 
@@ -43,9 +47,9 @@ describe 'Projects' do
 
     context 'as logged-in user' do
       before do
-        create :project, :name  => 'Ruby project', :main_language => 'Ruby'
-        create :project, :name  => 'Java project', :main_language => 'Java'
-        user.skills.create! :language => 'Ruby'
+        create :project, name: 'Ruby project', main_language: 'Ruby'
+        create :project, name: 'Java project', main_language: 'Java'
+        user.skills.create! language: 'Ruby'
         login user
         visit projects_path
       end
@@ -87,7 +91,35 @@ describe 'Projects' do
           page.should have_css('.java')
         end
       end
+    end
+  end
 
+  describe 'editing suggested projects' do
+
+    let!(:user_project) { create :project, name: 'Java project', main_language: 'Java', submitted_by: user }
+    let!(:other_project) { create :project, name: 'Ruby project', main_language: 'Ruby' }
+
+    before do
+      login user
+      visit my_suggestions_path
+    end
+
+    context 'a logged-in user' do
+      it "should be able to edit proejcts they have suggested" do
+        within('.java') { click_on "Edit" }
+
+        fill_in 'Main language', with: 'Python'
+        click_on "Submit Project"
+
+        should have_content "Project updated successfully!"
+        page.should have_css('.python')
+      end
+    end
+
+    it "should not be able to edit other user's suggestions" do
+      visit edit_project_path(other_project)
+
+      should have_content "You can only edit projects you have suggested!"
     end
   end
 end

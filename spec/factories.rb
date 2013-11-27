@@ -37,6 +37,7 @@ FactoryGirl.define do
     github_url { "https://github.com/#{Faker::Lorem.word}/#{Faker::Lorem.word}" }
     name { Faker::Lorem.words.first }
     main_language { Project::LANGUAGES.sample }
+    submitted_by { create(:user) }
   end
 
   factory :gift do
