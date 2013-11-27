@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'LanguageRequests' do
+describe 'LanguagesRequests' do
   subject { page }
 
   describe 'viewing information by language' do
