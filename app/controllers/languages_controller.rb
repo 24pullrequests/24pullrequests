@@ -1,4 +1,4 @@
-class LanguageController < ApplicationController
+class LanguagesController < ApplicationController
   before_action :set_language
 
   def show
@@ -32,6 +32,6 @@ class LanguageController < ApplicationController
   end
 
   def language
-    params[:language]
+    params[:id]
   end
 end

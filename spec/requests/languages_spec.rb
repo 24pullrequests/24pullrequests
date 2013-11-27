@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'LanguageRequests' do
+describe 'LanguagesRequests' do
   subject { page }
 
   describe 'viewing information by language' do
@@ -14,8 +14,8 @@ describe 'LanguageRequests' do
     end
 
     it { should have_content '3 Developers'}
-    it { should have_content '6 Projects'}
-    it { should have_content 'Latest 5 Pull Requests (9 total)'}
+    it { should have_content '6 Haskell Projects'}
+    it { should have_content 'Latest Haskell Pull Requests (9 total)'}
 
     describe "view all" do
       it "#projects" do
@@ -27,7 +27,7 @@ describe 'LanguageRequests' do
       it "#users" do
         within("#users") { click_on "View All" }
 
-        should have_content "3 Developers using Haskell are involved"
+        should have_content "3 Developers using Haskell"
       end
 
       it "#pull_requests" do

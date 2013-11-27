@@ -1,0 +1,34 @@
+%h2 #{@language}
+
+- if @users.any?
+  #users.row-fluid.clearfix
+    .span12
+      %h3
+        = user_count
+        Developers using
+        = @language
+        = link_to 'View All', users_language_path(@language.downcase), :class => 'btn'
+
+        %ul.clearfix
+          = render @users
+
+- if @pull_requests.any?
+  #pull_requests.row-fluid.clearfix
+    .span12
+      %h3
+        Latest #{@language} Pull Requests (#{pull_request_count_for_language} total)
+        = link_to 'View All', pull_requests_language_path(@language.downcase), :class => 'btn pull-right'
+
+      = render @pull_requests
+
+- if @projects.any?
+  #projects.row-fluid.clearfix
+    .span12
+      %h3
+        =project_count_for_language
+        = @language
+        Projects
+        = link_to "Suggest a #{@language} project", new_project_path(language: @language.downcase), :class => 'btn pull-right'
+        = link_to 'View All', projects_language_path(@language.downcase), :class => 'btn pull-right'
+
+    = render @projects

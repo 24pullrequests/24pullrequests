@@ -10,4 +10,4 @@
     %p
       = truncate project.description, :length => 200
     .language.label.label-info
-      = link_to project.main_language, language_path(project.main_language)
+      = link_to project.main_language, language_path(project.main_language.downcase)
