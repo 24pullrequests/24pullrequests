@@ -189,7 +189,12 @@ class User < ActiveRecord::Base
     last_gift.nil? ? PullRequest::EARLIEST_PULL_DATE : last_gift.date + 1.day
   end
 
+  def is_collaborator?
+    @collaborator ||= User.collaborators.include?(self)
+  end
+
   private
+
   def pull_request_downloader
     Rails.application.config.pull_request_downloader.call(nickname, token)
   end
@@ -215,5 +220,4 @@ class User < ActiveRecord::Base
   def gift_factory
     @gift_factory ||= Gift.public_method(:new)
   end
-
 end
