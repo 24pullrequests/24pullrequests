@@ -1,5 +1,7 @@
 class ProjectsController < ApplicationController
-  before_filter :ensure_logged_in, :except => [:index]
+  before_action :ensure_logged_in, except: [ :index ]
+  before_action :set_project, only: [ :edit, :update ]
+
   respond_to :html
   respond_to :json, :only => :index
 
@@ -15,12 +17,37 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(project_params)
+    @project = current_user.projects.build(project_params)
     if @project.save
       redirect_to projects_path
     else
       render :new
     end
+  end
+
+  def edit
+    redirect_to root_path, notice: "You can't edit this project!" unless @project.present?
+  end
+
+  def update
+    if @project.update_attributes(editable_project_params)
+      redirect_to projects_path(user: current_user), notice: "Project updated successfully!"
+    else
+      render :edit
+    end
+  end
+
+  def claim
+    project = Project.find_by_github_repo(github_url)
+
+    if project.present? and project.submitted_by.nil?
+      project.update_attribute(:user_id, current_user.id)
+      message = "You have successfully claimed <b>#{github_url}</b>".html_safe
+    else
+      message = "This repository doesn't exist or belongs to someone else"
+    end
+
+    redirect_to :back, notice: message
   end
 
   protected
@@ -29,7 +56,22 @@ class ProjectsController < ApplicationController
     params.require(:project).permit(:description, :github_url, :name, :main_language)
   end
 
+  def editable_project_params
+    params.require(:project).permit(:description, :name, :main_language)
+  end
+
   def language
     params[:language]
   end
+
+  def github_url
+    params[:project][:github_url]
+  end
+
+  def set_project
+    @project = current_user.projects.find_by_id(params[:id])
+
+    redirect_to  user_path(current_user), notice: "You can only edit projects you have suggested!" unless @project.present?
+  end
+
 end

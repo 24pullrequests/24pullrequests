@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many :pull_requests, :dependent => :destroy
   has_many :skills,        :dependent => :destroy
   has_many :gifts,         :dependent => :destroy
+  has_many :projects
 
   scope :by_language, -> (language) { joins(:skills).where("lower(language) = ?", language.downcase) }
 
@@ -188,7 +189,12 @@ class User < ActiveRecord::Base
     last_gift.nil? ? PullRequest::EARLIEST_PULL_DATE : last_gift.date + 1.day
   end
 
+  def is_collaborator?
+    @collaborator ||= User.collaborators.include?(self)
+  end
+
   private
+
   def pull_request_downloader
     Rails.application.config.pull_request_downloader.call(nickname, token)
   end
@@ -214,5 +220,4 @@ class User < ActiveRecord::Base
   def gift_factory
     @gift_factory ||= Gift.public_method(:new)
   end
-
 end

@@ -1,0 +1,12 @@
+%h3 Manage projects
+
+%h4 Filter by Language:
+%ul#languages.row
+  %li.highlighted
+    = link_to 'Everything', '#'
+  - Project::LANGUAGES.each do |language|
+    %li
+      = language_link language, language
+%hr
+#projects
+  = render partial: 'projects/project', collection: @projects, locals: { admin: true }
