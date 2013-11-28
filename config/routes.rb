@@ -7,7 +7,12 @@ Tfpullrequests::Application.routes.draw do
   resources :users
   get '/users/:id/:year', :to => 'users#show'
 
-  resources :projects, :only => [:index, :new, :create]
+  resources :projects, :only => [:index, :new, :create, :edit, :update] do
+    collection do
+      post :claim
+    end
+  end
+
   resources :pull_requests, :only => [:index]
   resource  :dashboard do
     member do
@@ -21,6 +26,7 @@ Tfpullrequests::Application.routes.draw do
 
   get   '/preferences',        :to => 'dashboards#preferences',        :as => 'preferences'
   patch '/preferences/update', :to => 'dashboards#update_preferences', :as => 'update_preferences'
+  get :my_suggestions, to: 'users#projects', as: :my_suggestions
 
   get '/login',  :to => 'sessions#new',     :as => 'login'
   get '/logout', :to => 'sessions#destroy', :as => 'logout'
@@ -48,4 +54,8 @@ Tfpullrequests::Application.routes.draw do
   get '/email' => redirect('/preferences') # old preferences URL
 
   get '/:id' => redirect('/users/%{id}') # User public vanity url, must be lowest priority
+
+  namespace :admin do
+    resources :projects, only: [ :index, :edit, :update ]
+  end
 end

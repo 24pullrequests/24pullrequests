@@ -1,7 +1,13 @@
 = cache project do
   .project{:class => parameterize_language(project.main_language), :data => {:id => project.id}}
     .title.clearfix
-      %h4= project.name
+      %h4
+        = project.name
+        - if local_assigns.has_key?(:editable) and editable.eql? true
+          = link_to 'Edit', edit_project_path(project), class: 'btn pull-right'
+        - if local_assigns.has_key?(:admin) and admin.eql?(true)
+          = link_to 'Edit', edit_admin_project_path(project), class: 'btn pull-right'
+
       = link_to project.github_repository, project.github_url, :target => '_blank'
     %p
       = truncate project.description, :length => 200
