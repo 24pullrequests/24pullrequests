@@ -24,3 +24,13 @@ en:
   sponsored_by: Sponsored by
   how_to_contribute: How to contribute?
   open_source_yey: Open Source FTW!
+  welcome_back: Welcome back, %{user}
+  your_pull_requests: Your Pull Requests
+  suggested_projects: Suggested Projects
+  suggest_a_project: Suggest a project
+  view_all: View All
+
+  dashboard:
+    christmas_activity: This is where you can see all the activity we've tracked for you in the run up to Christmas.
+    give_a_gift: Looks like you haven't gifted any code today. Would you like to gift
+    help_out: Can't think of a project you would like to help out? We've put together a list of popular projects
