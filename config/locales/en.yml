@@ -20,3 +20,7 @@ en:
     link_account:
       text: "Link Your Twitter Account"
       tooltip: "If you link your twitter account, we'll post a new tweet whenever you open a pull request!"
+
+  sponsored_by: Sponsored by
+  how_to_contribute: How to contribute?
+  open_source_yey: Open Source FTW!
