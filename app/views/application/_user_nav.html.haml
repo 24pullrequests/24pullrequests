@@ -13,6 +13,9 @@
         = link_to 'Gifted Code', gifts_path
       %li
         = link_to 'My Suggestions', my_suggestions_path
+      - if admin?
+        %li
+          = link_to 'Manage Projects', admin_projects_path
 
       %li.pull-right
         = link_to 'Logout', logout_path

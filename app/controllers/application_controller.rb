@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  helper_method :current_user, :logged_in?, :current_year
+  helper_method :current_user, :logged_in?, :current_year, :admin?
 
   private
   def ensure_logged_in
@@ -23,5 +23,9 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
     !!current_user
+  end
+
+  def admin?
+    current_user.is_collaborator?
   end
 end
