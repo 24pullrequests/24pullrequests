@@ -20,3 +20,5 @@ en:
     link_account:
       text: "Link Your Twitter Account"
       tooltip: "If you link your twitter account, we'll post a new tweet whenever you open a pull request!"
+  user:
+    grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
