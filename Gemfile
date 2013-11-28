@@ -65,6 +65,8 @@ group :test do
   gem 'webmock', :require => false
   gem 'poltergeist'
   gem 'timecop'
+
+  gem 'coveralls', require: false
 end
 
 group :production do
