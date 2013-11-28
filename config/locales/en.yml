@@ -45,5 +45,24 @@ en:
     christmas_activity: This is where you can see all the activity we've tracked for you in the run up to Christmas.
     give_a_gift: Looks like you haven't gifted any code today. Would you like to gift
     help_out: Can't think of a project you would like to help out? We've put together a list of popular projects
+    no_pull_requests: You've not sent any pull requests, what are you waiting for?!
 
+  preferences:
+      title: Set your Email Preferences
+      frequency_message:  At the frequency you choose, we'll send you helpful emails from now until the project is over, highlighting some suggested projects you might consider contributing to. As an added bonus, we'll take the liberty of personalizing our suggestions to your language proficiency based on the repos in your GitHub profile. Alternatively, you can choose your languages below.
+      delete_account: "Want to delete your account?"
+      information: You can always change your email preferences later.
+      twitter: Twitter Account
+      languages:  Which languages do you know?
+      remove: Remove Account
+      save_and_continue: Save and Continue
 
+      hint:
+        confirm_email: Please confirm your email address using the link we've sent you.
+
+  delete_account:
+    title: Delete your account
+    are_you_sure: We just wanted to check that you really do wish to delete your account, this will remove your profile and all pull requests from the site, although any suggested projects will remain.
+    notification_info: If you simply want to stop recieving email notifications you can change your  %{email_preferences_link}.
+    confirm: Confirm Deletion
+    cancel: I changed my mind, take me back!
