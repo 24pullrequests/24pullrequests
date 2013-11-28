@@ -81,21 +81,21 @@
         .logo.logo-dark
         %ul.unstyled.pull-right
           %li
-            Sponsored by&nbsp;
+            #{t("sponsored_by")}&nbsp;
             #{link_to 'DNSimple', 'http://dnsimple.com'}
             &nbsp;&amp;&nbsp;
             = link_to 'Heroku Postgres', 'http://postgres.heroku.com/'
         %ul.unstyled.pull-left
           %li
-            = link_to 'About', about_path
+            = link_to t("about"), about_path
           %li
-            = link_to 'How to contribute?', contributing_path
+            = link_to t("how_to_contribute"), contributing_path
           %li
             = link_to 'API', api_path
 
     .ftw
       = link_to image_tag('humanstxt-isolated-blank.gif'), '/humans.txt'
-      Open Source FTW!
+      = t("open_source_yey")
       %strong= Time.now.year
 
     = javascript_include_tag "application"
