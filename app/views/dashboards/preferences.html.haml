@@ -1,27 +1,27 @@
-%h2 Set your Email Preferences 
+%h2=t("preferences.title")
 
-%p At the frequency you choose, we'll send you helpful emails from now until the project is over, highlighting some suggested projects you might consider contributing to. As an added bonus, we'll take the liberty of personalizing our suggestions to your language proficiency based on the repos in your GitHub profile. Alternatively, you can choose your languages below.
+%p=t("preferences.frequency_message")
 
 - if current_user.email_frequency.present?
-  %small= link_to 'Want to delete your account?', delete_dashboard_path, :class => 'pull-right'
+  %small= link_to t("preferenes.delete_account"), delete_dashboard_path, :class => 'pull-right'
 
-%p 
-  %em You can always change your email preferences later.
+%p
+  %em=t("preferences.information")
 
 = simple_form_for current_user, :url => update_preferences_path, :html => {:class => 'form-horizontal'}  do |form|
   - if current_user.email.present? && !current_user.confirmed?
-    = form.input :email, hint: "Please confirm your email address using the link we've sent you."
+    = form.input :email, hint: t("preferences.hint.confirm_email")
   - else
     = form.input :email
   = form.input :email_frequency, :collection => [['Never', 'none'], ['Daily', 'daily'], ['Weekly', 'weekly']], :selected => (form.object.email_frequency || 'daily')
   - if current_user.twitter_linked?
     .control-group
-      %label.control-label Twitter Account
+      %label.control-label=t("preferences.twitter")
       .controls
         = link_to "@#{current_user.twitter_nickname}", "https://twitter.com/#{current_user.twitter_nickname}", target: '_blank'
-        = link_to '<i class="icon-twitter"></i> Remove Account'.html_safe, twitter_remove_path, method: :delete, class: 'btn btn-danger'
+        = link_to %{<i class="icon-twitter"></i> #{t("preferences.remove")}}.html_safe, twitter_remove_path, method: :delete, class: 'btn btn-danger'
 
-  %h3 Which languages do you know?
+  %h3=t("preferences.languages")
   #skills.clearfix
     = form.simple_fields_for :skills, Project::LANGUAGES.map{|l| Skill.new(:language => l)} do |skill_form|
       - language = skill_form.object.language
@@ -32,5 +32,4 @@
 
   .control-group
     .controls
-      = form.button :submit, 'Save and Continue'
-
+      = form.button :submit, t("preferences.save_and_continue")
