@@ -19,4 +19,8 @@ class Project < ActiveRecord::Base
   def github_repository
     self.github_url.gsub(/^(((https|http|git)?:\/\/(www\.)?)|git@)github.com(:|\/)/i, '').gsub(/(\.git|\/)$/i, '')
   end
+
+  def self.find_by_github_repo(repository)
+    Project.where("github_url like ?", "%#{repository}%").first
+  end
 end

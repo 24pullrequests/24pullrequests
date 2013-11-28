@@ -7,7 +7,12 @@ Tfpullrequests::Application.routes.draw do
   resources :users
   get '/users/:id/:year', :to => 'users#show'
 
-  resources :projects, :only => [:index, :new, :create, :edit, :update]
+  resources :projects, :only => [:index, :new, :create, :edit, :update] do
+    collection do
+      post :claim
+    end
+  end
+
   resources :pull_requests, :only => [:index]
   resource  :dashboard do
     member do

@@ -37,6 +37,19 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def claim
+    project = Project.find_by_github_repo(github_url)
+
+    if project.present? and project.submitted_by.nil?
+      project.update_attribute(:user_id, current_user.id)
+      message = "You have successfully claimed <b>#{github_url}</b>".html_safe
+    else
+      message = "This repository doesn't exist or belongs to someone else"
+    end
+
+    redirect_to :back, notice: message
+  end
+
   protected
 
   def project_params
@@ -49,6 +62,10 @@ class ProjectsController < ApplicationController
 
   def language
     params[:language]
+  end
+
+  def github_url
+    params[:project][:github_url]
   end
 
   def set_project
