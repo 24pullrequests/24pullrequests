@@ -44,6 +44,28 @@ describe 'Users' do
           should have_content project.description
         end
       end
+
+      context "claiming projects" do
+        it "without an owner" do
+          create :project, github_url: "http://github.com/andrew/24pullrequests", submitted_by: nil
+
+          visit my_suggestions_path
+          fill_in "project_github_url", with: "andrew/24pullrequests"
+          click_on "Claim"
+
+          should have_content "You have successfully claimed andrew/24pullrequests"
+        end
+
+        it "with an owner" do
+          create :project, github_url: "http://github.com/santa/raindeers"
+
+          visit my_suggestions_path
+          fill_in "project_github_url", with: "santa/raindeers"
+          click_on "Claim"
+
+          should have_content "This repository doesn't exist or belongs to someone else"
+        end
+      end
     end
   end
 end

@@ -39,4 +39,12 @@ describe Project do
       Project.by_language("ruby").should eq([ruby_project])
     end
   end
+
+  context "finders" do
+    it "#find_by_github_repo" do
+      project = create :project, github_url: "http://github.com/elfs/presents"
+
+      Project.find_by_github_repo("elfs/presents").should eq(project)
+    end
+  end
 end
