@@ -22,14 +22,14 @@ describe 'Projects' do
     it 'allows the user to suggest a project to contribute to' do
       click_link 'Suggest a project'
       fill_in 'Name', :with => Faker::Lorem.words.first
-      fill_in 'Github url', :with => 'http://github.com/andrew/24pullrequests'
+      fill_in 'Github url', :with => 'http://github.com/akira/24pullrequests'
       fill_in 'Summary', :with => Faker::Lorem.paragraphs.first
       fill_in 'Main language', :with => 'Ruby'
       click_on 'Submit Project'
 
       click_on 'My Suggestions'
 
-      should have_content "andrew/24pullrequests"
+      should have_content "akira/24pullrequests"
     end
   end
 
