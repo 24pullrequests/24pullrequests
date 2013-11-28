@@ -294,6 +294,22 @@ describe User do
     end
   end
 
+  describe '.is_collaborator?' do
+    let(:collaborator) { create :user, nickname: "akira" }
+    let(:non_collaborator) { create :user }
+
+    before do
+      User.should_receive(:collaborators).and_return([collaborator])
+    end
+    it 'identifies if a user is a collaborator' do
+      collaborator.is_collaborator?.should eq(true)
+    end
+
+    it 'identifies if a user is not a collaborator' do
+      non_collaborator.is_collaborator?.should eq(false)
+    end
+  end
+
   context "#scopes" do
     let!(:haskell_users) { 2.times.map { create(:skill, language: "Haskell").user } }
 
@@ -301,6 +317,6 @@ describe User do
       User.by_language("haskell").should eq(haskell_users)
       User.by_language("ruby").should eq([])
     end
-
   end
+
 end
