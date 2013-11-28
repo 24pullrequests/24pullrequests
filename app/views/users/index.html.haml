@@ -3,12 +3,12 @@
     %h3
       = user_count
       - if @language
-        Developers using #{@language}
+        = t("developers_using_language", language: @language)
       - else
-        Developers already involved
+        = t("developers_involved")
 
     %div.users
       %ul.clearfix.userlist
         = render @users
 
-      = link_to_next_page @users, 'More', remote: true, class: 'btn btn-success more'
+      = link_to_next_page @users, t("more"), remote: true, class: 'btn btn-success more'
