@@ -49,4 +49,8 @@ Tfpullrequests::Application.routes.draw do
   get '/email' => redirect('/preferences') # old preferences URL
 
   get '/:id' => redirect('/users/%{id}') # User public vanity url, must be lowest priority
+
+  namespace :admin do
+    resources :projects, only: [ :index, :edit, :update ]
+  end
 end
