@@ -14,16 +14,34 @@ describe 'Users' do
   end
 
   describe "authenticated user navigation" do
-    let!(:pull_requests) { 2.times.map { create :pull_request, user: user } }
-
     before do
       login(user)
     end
 
-    it "#profile" do
-      click_on 'Profile'
+    describe "#profile" do
 
-      should have_content "akira has made 2 total pull requests so far in #{Time.now.year}"
+      describe "when the user has not issued any pull requests" do
+        it "should display the grinchy message" do
+          click_on "Profile"
+
+          should have_content "akira is being a grinch for #{Time.now.year} with no gifted pull requests. Bah humbug!"
+        end
+      end
+
+      describe "when the user has gifted code or issued pull requests" do
+        let!(:pull_requests) { 2.times.map { create :pull_request, user: user } }
+        let!(:gift) { create(:gift, user: user, pull_request: pull_requests.first) }
+
+        it "has pull requests" do
+          click_on "Profile"
+
+          should have_content "akira has made 2 total pull requests so far in #{Time.now.year}"
+          should have_link gift.pull_request.title
+
+          click_on "Pull Requests"
+          should have_content pull_requests.last.title
+        end
+      end
     end
 
     context "#my_suggestions" do
