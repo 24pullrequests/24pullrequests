@@ -27,4 +27,15 @@ module ApplicationHelper
     %(<a href="https://www.gittip.com/#{nickname}/"><img alt="Support via Gittip" src="https://rawgithub.com/twolfson/gittip-badge/0.1.0/dist/gittip.png"/> </a>).html_safe
   end
 
+  def contributors_in year
+    PullRequest.year(year).load.map(&:user_id).uniq.length
+  end
+
+  def pull_requests_in year
+    PullRequest.year(year).count
+  end
+
+  def projects_in year
+    PullRequest.year(year).select(:repo_name).map(&:repo_name).uniq.count
+  end
 end
