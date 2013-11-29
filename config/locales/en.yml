@@ -38,6 +38,7 @@ en:
   claim: Claim
   edit: Edit
   everything: Everything
+  about_us: About
 
   user:
     pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
@@ -107,3 +108,19 @@ en:
     view_your_gifts: All your gifts will be shown on your %{calendar_link}.
     none: Nothing gifted yet.
     give: Gift something meaningful to a project you love
+
+  collaborators:
+    title: Core Contributors
+
+  about:
+    title: About 24 Pull Requests
+    description: 24 Pull Requests is a little project to promote open source collaboration during December.
+    idea: The idea is basically "Send a pull request every day in December leading up to Christmas", encouraging developers to give back to open source with little gifts of code throughout December.
+    more_info: The site also provides suggested projects to help with, guides for contributing and highlights good pull requests submitted each day.
+    on_github: "The site development is open source on GitHub:"
+    on_twitter: "We are also on Twitter:"
+    sponsors:
+      title: Sponsors
+      details: 24 Pull Requests was made possible thanks to the help and donations of some great sponsors.
+      thanks: "Many thanks to..."
+      get_in_touch: "If you'd like to get in touch about sponsorship or anything else, drop us an email:"

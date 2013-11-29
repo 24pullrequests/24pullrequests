@@ -1,24 +1,24 @@
-%h2 About 24 Pull Requests
+%h2=t("about.title")
 
-%p 24 Pull Requests is a little project to promote open source collaboration during December.
+%p=t("about.description")
 
-%p The idea is basically "Send a pull request every day in December leading up to Christmas", encouraging developers to give back to open source with little gifts of code throughout December.
+%p=t("about.idea")
 
-%p The site also provides suggested projects to help with, guides for contributing and highlights good pull requests submitted each day.
+%p=t("about.more_info")
 
 %p
-  The site development is open source on GitHub: 
+  =t("about.on_github")
   = link_to 'github.com/andrew/24pullrequests', 'https://github.com/andrew/24pullrequests'
 
 %p
-  We are also on Twitter:
+  =t("about.on_twitter")
   = link_to 'twitter.com/24pullrequests', 'https://twitter.com/24pullrequests'
 
 %section
-  %h3 Sponsors
-  24 Pull Requests was made possible thanks to the help and donations of some great sponsors.
+  %h3=t("about.sponsors.title")
+  =t("about.sponsors.details")
 
-  Many thanks to...
+  =t("about.sponsors.thanks")
 
   %section
     =link_to 'http://dnsimple.com', :class => 'ntd' do
@@ -31,7 +31,7 @@
       = image_tag 'sponsors/forward.png', :class => 'img-polaroid'
 
   %p
-    If you'd like to get in touch about sponsorship or anything else, drop us an email:
+    =t("about.sponsors.get_in_touch")
     = mail_to 'info@24pullrequests.com'
 
 = render 'collaborators', users: @collaborators
