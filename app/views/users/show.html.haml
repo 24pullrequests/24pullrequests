@@ -14,13 +14,13 @@
       - if @user.twitter_nickname.present?
         .span6
           %a{:href => "https://twitter.com/#{@user.twitter_nickname}", :class => 'twitter-follow-button'}
-            Follow
-            @#{@user.twitter_nickname}
+            =t("follow_user", twitter: @user.twitter_nickname)
           :javascript
             !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
     - if @user.skills.any?
-      %h4 Preferred Languages
+      %h4
+        =t("preferred_languages")
       = @user.languages.to_sentence
 
   .span2
@@ -32,11 +32,7 @@
     %h3 24 Pull Requests
     - if @user.gifts.any? or @user.pull_requests.any?
       %h4
-        =@user.nickname
-        has made
-        =@user.pull_requests.year(current_year).count
-        total pull requests so far in
-        = current_year
+        =t("user.pull_request_count", user: @user.nickname, count: @user.pull_requests.year(current_year).count, year: current_year)
       %ul#presents.nav.nav-tabs
         %li
           %a.active{"data-toggle" =>"tab", href: "#gifts"}Gifts
@@ -50,7 +46,6 @@
     - else
       %h4=I18n.t("user.grinchy_message", user: @user.nickname, year: current_year)
 
-%br
 .row-fluid
   %h3 Coderwall Badges
   #coderwall-content{:data => {:nickname => "#{@user.nickname}"}}

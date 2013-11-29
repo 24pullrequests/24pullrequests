@@ -1,9 +1,9 @@
-%h2 Suggest a Project
-%p One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We've selected our favorites, but we're always open to suggestions. Have some ideas? Share them below!
+%h2=t("projects.new.title")
+%p=t("projects.new.info")
 
 = render partial: 'form'
 
 %p
-  Have a suggestion for this project? We're all ears! If there's something you'd like fixed, feel free to submit an
+  =t("projects.new.suggestion")
   = succeed('.') do
     = link_to 'issue', 'https://github.com/andrew/24pullrequests/issues'

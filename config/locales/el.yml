@@ -1,0 +1,5 @@
+el:
+  follow_user: "Ακολούθησε τον χρήστη @%{twitter}"
+  sponsored_by: "Χορηγοί"
+  how_to_contribute: "Πώς να συνεισφέρετε"
+  welcome_back: "Καλωσήρθες %{user}"

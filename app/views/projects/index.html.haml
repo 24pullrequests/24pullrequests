@@ -1,19 +1,19 @@
 %h2
   = Project.count
-  Suggested Projects
-  = link_to 'Suggest a project', new_project_path, :class => 'btn pull-right'
+  = t("suggested_projects")
+  = link_to t("suggest_project"), new_project_path, :class => 'btn pull-right'
 
-%p Can't think of a project to contribute to? We've collected a list of brilliant open source projects who would love your pull requests.
+%p=t("projects.help_out")
 
-%p You can also suggest projects that should be added to the list, or add your own project if you would like some help with it.
+%p=t("projects.suggest")
 %hr
-%h4 Filter by Language:
+%h4=t("projects.filter_by_language")
 %ul#languages.row
   %li.highlighted
-    = link_to 'Everything', '#'
+    = link_to t("everything"), '#'
   - if current_user
     %li.highlighted
-      = language_link @current_user_languages, 'Suggested for you'
+      = language_link @current_user_languages, t("projects.for_you")
   - Project::LANGUAGES.each do |language|
     %li
       = language_link language, language
@@ -22,6 +22,4 @@
   = render @projects
 
 #noprojects
-  %p
-    There are no projects for that language yet, why not
-    = link_to 'suggest one?', new_project_path
+  %p=t("projects.suggest", suggest_link: link_to('suggest one?', new_project_path))
