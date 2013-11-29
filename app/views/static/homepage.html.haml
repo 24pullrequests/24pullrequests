@@ -22,7 +22,11 @@
           %strong Log in with GitHub
       %hr
     = render :partial => 'shared/social_buttons'
-
+    %hr
+    %h4 Questions & Answers
+    %hr
+    %p
+      = "Join the chat on IRC, #{link_to '#24pullrequests', 'http://webchat.freenode.net/?channels=#24pullrequests'}, at freenode.".html_safe
 
   .span6#info
     #coderwall
@@ -77,4 +81,3 @@
   #projects
     = render @projects
 %hr
-
