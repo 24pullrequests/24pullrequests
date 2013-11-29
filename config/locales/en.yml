@@ -21,7 +21,6 @@ en:
       text: "Link Your Twitter Account"
       tooltip: "If you link your twitter account, we'll post a new tweet whenever you open a pull request!"
   user:
-    grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
 
   information:
     title: "24 Pull Requests %{year} is upon us"
@@ -53,6 +52,7 @@ en:
   about_us: About
 
   user:
+    grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
     pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
 
   developers_using_language: Developers using %{language}

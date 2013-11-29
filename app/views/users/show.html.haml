@@ -44,8 +44,7 @@
         #pull_requests.tab-pane
           = render partial: 'users/pull_request', collection: @user.pull_requests
     - else
-      %h4=I18n.t("user.grinchy_message", user: @user.nickname, year: current_year)
-
+      %h4=t("user.grinchy_message", user: @user.nickname, year: current_year)
 .row-fluid
   %h3 Coderwall Badges
   #coderwall-content{:data => {:nickname => "#{@user.nickname}"}}
