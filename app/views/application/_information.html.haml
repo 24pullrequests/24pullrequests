@@ -1,7 +1,9 @@
 .alert.alert-info
   %h3=t("information.title", year: 2013)
-  %p
-    =t("information.last_year_stats", year: 2012, developers: PullRequest.year(2012).load.map(&:user_id).uniq.length, pull_requests: PullRequest.year(2012).count, projects: PullRequest.year(2012).select(:repo_name).map(&:repo_name).uniq.count).html_safe
+  %p=t("information.last_year_stats", year: 2012,
+                                      developers: contributors_in(2012),
+                                      pull_requests: pull_requests_in(2012),
+                                      projects: projects_in(2012)).html_safe
 
   %p=t("information.get_ready", year: 2013)
   %hr
