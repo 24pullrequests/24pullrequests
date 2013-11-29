@@ -41,7 +41,6 @@ describe 'Projects' do
 
       should have_content "Project updated successfully!"
 
-      puts page.text
       should have_content "PUGALICIOUS"
     end
   end
