@@ -89,6 +89,11 @@ en:
       hint:
         confirm_email: Please confirm your email address using the link we've sent you.
 
+  pull_requests:
+    count: "%{count} Pull Requests already made!"
+    language:
+      count: "%{count} pull requests already made in %{language}!"
+
   delete_account:
     title: Delete your account
     are_you_sure: We just wanted to check that you really do wish to delete your account, this will remove your profile and all pull requests from the site, although any suggested projects will remain.
