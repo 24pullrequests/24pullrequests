@@ -48,6 +48,16 @@ en:
     help_out: Can't think of a project you would like to help out? We've put together a list of popular projects
     no_pull_requests: You've not sent any pull requests, what are you waiting for?!
 
+  language:
+    projects:
+      count: "%{count} Projects are using %{language}"
+      suggest: "Suggest a %{language} project"
+    developers:
+      count: "%{count} Developers using %{language}"
+    pull_requests:
+      latest:
+        count: Latest %{language} Pull Requests (%{count} total)
+
   preferences:
       title: Set your Email Preferences
       frequency_message:  At the frequency you choose, we'll send you helpful emails from now until the project is over, highlighting some suggested projects you might consider contributing to. As an added bonus, we'll take the liberty of personalizing our suggestions to your language proficiency based on the repos in your GitHub profile. Alternatively, you can choose your languages below.
