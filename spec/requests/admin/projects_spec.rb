@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'Projects' do
   let(:user) { create :user }
-  let!(:projects) { [ "Ruby", "Erlang"].map { |lan| create :project, main_language: lan } }
+  let!(:projects) { [ "repo1", "repo2"].map { |repo| create :project, github_url: "http://github.com/christmas/#{repo}" } }
   subject { page }
 
   before do
@@ -21,16 +21,28 @@ describe 'Projects' do
     end
   end
 
-  describe 'managing projects' do
+  describe 'managing projects', js: true do
+
+    before do
+      fill_in "_repository", with: "repo1"
+      click_on "Search"
+    end
+
+    it "search for a project" do
+      should_not have_content "repo2"
+      should have_content "repo1"
+    end
 
     it "editing a project" do
-      visit edit_admin_project_path(projects.first)
+      click_on "Edit"
 
       fill_in 'Name', with: 'Pugalicious'
       click_on "Update Project"
 
       should have_content "Project updated successfully!"
-      should have_content "Pugalicious"
+
+      puts page.text
+      should have_content "PUGALICIOUS"
     end
   end
 end

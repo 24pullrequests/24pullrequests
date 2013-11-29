@@ -1,12 +1,11 @@
 %h3 Manage projects
 
-%h4 Filter by Language:
-%ul#languages.row
-  %li.highlighted
-    = link_to 'Everything', '#'
-  - Project::LANGUAGES.each do |language|
-    %li
-      = language_link language, language
+%h4 Search by github repository
+= simple_form_for "",  url: admin_projects_path, method: :get, remote: true, html: { class: 'form-search' } do |f|
+  =f.input :repository, placeholder: "e.g. andrew/24pullrequests", label: false, input_html: { class: "input-large search-query" , value: params[:repository] }
+
+  =f.submit "Search"
+
 %hr
 #projects
   = render partial: 'projects/project', collection: @projects, locals: { admin: true }
