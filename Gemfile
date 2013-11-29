@@ -56,14 +56,13 @@ group :development, :test do
 end
 
 group :test do
-  gem "capybara"
-  gem 'capybara-webkit'
+  gem 'capybara'
+  gem 'poltergeist'
   gem 'launchy'
 
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'webmock', :require => false
-  gem 'poltergeist'
   gem 'timecop'
 
   gem 'coveralls', require: false
