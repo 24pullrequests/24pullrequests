@@ -27,12 +27,8 @@ Spork.prefork do
 
   WebMock.disable_net_connect! :allow_localhost => true
 
-  # To run specs headless, use :webkit driver:
-  Capybara.javascript_driver = :webkit
-  if ENV['POLTERGEIST']
-    require 'capybara/poltergeist'
-    Capybara.javascript_driver = :poltergeist
-  end
+  require 'capybara/poltergeist'
+  Capybara.javascript_driver = :poltergeist
 
   # Requires supporting ruby files with custom matchers and macros, etc,
   # in spec/support/ and its subdirectories.
