@@ -21,6 +21,16 @@ en:
       text: "Link Your Twitter Account"
       tooltip: "If you link your twitter account, we'll post a new tweet whenever you open a pull request!"
 
+  information:
+    title: "24 Pull Requests %{year} is upon us"
+    last_year_stats: "In %{year}, over 24 days, <b>%{developers}</b> developers submitted <b>%{pull_requests}</b> pull requests to <b>%{projects}</b> different open source projects."
+    get_ready: Get ready for 24 Pull Requests %{year} when we do it all again!
+    help_open_source: "Want to help out with open source projects in the meantime? Check out these other great initiatives:"
+    codetriage: "Give back to open source, one issue at a time, with CodeTriage. You'll get one issue from your favorite repo per day to help you dig deeper, learn more, and stay involved with the code you rely on."
+    contribhub:
+      tagline: Do you know you have a neighbor needing some help with a really cool project? With ContribHub you will!
+      description: ContribHub is a GitHub-based application that makes it easier to find projects to contribute to and grow a community around it.
+
   merry_christmas: Merry Christmas
   follow_user: Follow @%{twitter}
   sponsored_by: Sponsored by
