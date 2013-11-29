@@ -13,6 +13,6 @@
                 = github_button user.nickname
               - if user.twitter_linked?
                 %a{:href => "https://twitter.com/#{user.twitter_nickname}", :class => 'twitter-follow-button'}
-                  =t("follow_user", user: user.twitter_nickname)
+                  =t("follow_user", twitter: user.twitter_nickname)
                 :javascript
                   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
