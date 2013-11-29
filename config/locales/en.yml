@@ -35,6 +35,9 @@ en:
   view_all: View All
   more: More
   change: Change
+  claim: Claim
+  edit: Edit
+  everything: Everything
 
   user:
     pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
@@ -49,6 +52,7 @@ en:
     no_pull_requests: You've not sent any pull requests, what are you waiting for?!
 
   language:
+    projects_count: "%{count} %{language} Projects"
     projects:
       count: "%{count} Projects are using %{language}"
       suggest: "Suggest a %{language} project"
@@ -58,13 +62,27 @@ en:
       latest:
         count: Latest %{language} Pull Requests (%{count} total)
 
+  projects:
+    claim: Are any of the projects you suggested not listed? Claim them!
+    help_out: Can't think of a project to contribute to? We've collected a list of brilliant open source projects who would love your pull requests.
+    suggest: You can also suggest projects that should be added to the list, or add your own project if you would like some help with it.
+    filter_by_language: "Filter by Language:"
+    for_you: Suggested for you
+    suggestion:
+      edit: Edit Suggestion
+    suggest: There are no projects for that language yet, why not %{suggest_link}
+    new:
+      title: Suggest a Project
+      info: One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We've selected our favorites, but we're always open to suggestions. Have some ideas? Share them below!
+      suggestion: Have a suggestion for this project? We're all ears! If there's something you'd like fixed, feel free to submit an
+
   preferences:
       title: Set your Email Preferences
       frequency_message:  At the frequency you choose, we'll send you helpful emails from now until the project is over, highlighting some suggested projects you might consider contributing to. As an added bonus, we'll take the liberty of personalizing our suggestions to your language proficiency based on the repos in your GitHub profile. Alternatively, you can choose your languages below.
       delete_account: "Want to delete your account?"
       information: You can always change your email preferences later.
       twitter: Twitter Account
-      languages:  Which languages do you know?
+      languages: Which languages do you know?
       remove: Remove Account
       save_and_continue: Save and Continue
 
