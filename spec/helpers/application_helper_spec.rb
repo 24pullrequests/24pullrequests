@@ -52,4 +52,30 @@ describe ApplicationHelper do
     end
   end
 
+  describe "stats" do
+    let(:user) { create(:user) }
+    let(:last_year) { DateTime.now.year-1 }
+
+    before do
+      3.times { create(:pull_request, user: user, created_at: DateTime.now-1.year) }
+    end
+
+    it "contributors_in(year)" do
+      2.times { create(:pull_request, created_at: DateTime.now-1.year) }
+
+      helper.contributors_in(last_year).should eq(3)
+    end
+
+    it "pull_requests_in(year)" do
+      3.times { create(:pull_request) }
+
+      helper.pull_requests_in(last_year).should eq(3)
+    end
+
+    it "projects_in(year)" do
+      3.times { create(:pull_request, repo_name: "24pullrequests", created_at: DateTime.now-1.year) }
+
+      helper.projects_in(last_year).should eq(4)
+    end
+  end
 end

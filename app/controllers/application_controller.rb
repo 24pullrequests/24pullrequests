@@ -3,6 +3,12 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user, :logged_in?, :current_year, :admin?
 
+  before_action :set_locale
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
+
   private
   def ensure_logged_in
     unless logged_in?

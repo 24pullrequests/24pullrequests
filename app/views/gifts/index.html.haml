@@ -1,8 +1,8 @@
-%h2 Gifted Code
+%h2=t("gifts.title")
 
-%p Here you can manage your pull requests and select &amp; curate your own set of "24 Pull Requests".
+%p=t("gifts.description").html_safe
 
-%p All your gifts will be shown on your #{ link_to 'public calendar', current_user.nickname }.
+%p=t("gifts.view_calendar", calendar_link: link_to('public calendar', current_user.nickname))
 
 %table.table.table-striped.table-condensed.table-hover#gifts
   .tbody
@@ -13,7 +13,7 @@
         %td
           - if gift
             = link_to gift.pull_request_title, gift.pull_request_issue_url
-            = link_to 'Change', edit_gift_path(gift), :class => 'btn btn-small pull-right'
+            = link_to t("change"), edit_gift_path(gift), :class => 'btn btn-small pull-right'
           - else
-            Nothing gifted yet.
-            = link_to 'Change', new_gift_path(:date => date), :class => 'btn btn-small pull-right'
+            = t("gifts.none")
+            = link_to t("change"), new_gift_path(:date => date), :class => 'btn btn-small pull-right'

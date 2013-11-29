@@ -1,8 +1,8 @@
 - if @projects.any?
   = render @projects, editable: true
 - else
-  You haven't suggested any projects yet.
-  = link_to 'Suggest a project!', new_project_path
+  = t("no_suggestions")
+  = link_to t("suggest_project"), new_project_path
 
 %hr
 =render partial: "projects/claim"

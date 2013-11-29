@@ -63,29 +63,7 @@
     %article
       .container-fluid
         .row-fluid
-          .alert.alert-info
-            %h3 24 Pull Requests 2013 is upon us
-            %p
-              In 2012, over 24 days,
-              %strong= PullRequest.year(2012).load.map(&:user_id).uniq.length
-              developers submitted
-              %strong= PullRequest.year(2012).count
-              pull requests to
-              %strong= PullRequest.year(2012).select(:repo_name).map(&:repo_name).uniq.count
-              different open source projects.
-
-            %p Get ready for 24 Pull Requests 2013 when we do it all again!
-            %hr
-            %p Want to help out with open source projects in the meantime? Check out these other great initiatives:
-
-            %h4= link_to 'CodeTriage', 'http://www.codetriage.com/'
-
-            %p Give back to open source, one issue at a time, with CodeTriage. You'll get one issue from your favorite repo per day to help you dig deeper, learn more, and stay involved with the code you rely on.
-
-            %h4= link_to 'ContribHub', 'http://contribhub.com/'
-
-            %p Do you know you have a neighbor needing some help with a really cool project? With ContribHub you will!
-            %p ContribHub is a GitHub-based application that makes it easier to find projects to contribute to and grow a community around it.
+          =render partial: "information"
 
         .row-fluid
           .span12
@@ -103,21 +81,21 @@
         .logo.logo-dark
         %ul.unstyled.pull-right
           %li
-            Sponsored by&nbsp;
+            #{t("sponsored_by")}&nbsp;
             #{link_to 'DNSimple', 'http://dnsimple.com'}
             &nbsp;&amp;&nbsp;
             = link_to 'Heroku Postgres', 'http://postgres.heroku.com/'
         %ul.unstyled.pull-left
           %li
-            = link_to 'About', about_path
+            = link_to t("about_us"), about_path
           %li
-            = link_to 'How to contribute?', contributing_path
+            = link_to t("how_to_contribute"), contributing_path
           %li
             = link_to 'API', api_path
 
     .ftw
       = link_to image_tag('humanstxt-isolated-blank.gif'), '/humans.txt'
-      Open Source FTW!
+      = t("open_source_yey")
       %strong= Time.now.year
 
     = javascript_include_tag "application"
