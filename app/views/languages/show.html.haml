@@ -23,7 +23,7 @@
   #projects.row-fluid.clearfix
     .span12
       %h3
-        = t("language.projects.count", count: project_count_for_language, language: @language)
+        = t("language.projects_count", count: project_count_for_language, language: @language)
         = link_to t("language.projects.suggest", language: @language), new_project_path(language: @language.downcase), :class => 'btn pull-right'
         = link_to t("view_all"), projects_language_path(@language.downcase), :class => 'btn pull-right'
 
