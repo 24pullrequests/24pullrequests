@@ -34,6 +34,7 @@ en:
   preferred_languages: Preferred Languages
   view_all: View All
   more: More
+  change: Change
 
   user:
     pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
@@ -66,3 +67,10 @@ en:
     notification_info: If you simply want to stop recieving email notifications you can change your  %{email_preferences_link}.
     confirm: Confirm Deletion
     cancel: I changed my mind, take me back!
+
+  gifts:
+    title: Gifted Code
+    description: Here you can manage your pull requests and select &amp; curate your own set of "24 Pull Requests".
+    view_your_gifts: All your gifts will be shown on your %{calendar_link}.
+    none: Nothing gifted yet.
+    give: Gift something meaningful to a project you love
