@@ -30,14 +30,27 @@
   .span12
 
     %h3 24 Pull Requests
-    %h4
-      =@user.nickname
-      has made
-      =@user.pull_requests.year(current_year).count
-      total pull requests so far in
-      = current_year
-    = render :partial => 'calendar', :object => @calendar
+    - if @user.gifts.any? or @user.pull_requests.any?
+      %h4
+        =@user.nickname
+        has made
+        =@user.pull_requests.year(current_year).count
+        total pull requests so far in
+        = current_year
+      %ul#presents.nav.nav-tabs
+        %li
+          %a.active{"data-toggle" =>"tab", href: "#gifts"}Gifts
+        %li
+          %a{"data-toggle" =>"tab", href: "#pull_requests"}Pull Requests
+      .tab-content
+        #gifts.tab-pane
+          = render :partial => 'calendar', :object => @calendar
+        #pull_requests.tab-pane
+          = render partial: 'users/pull_request', collection: @user.pull_requests
+    - else
+      %h4=I18n.t("user.grinchy_message", user: @user.nickname, year: current_year)
 
+%br
 .row-fluid
   %h3 Coderwall Badges
   #coderwall-content{:data => {:nickname => "#{@user.nickname}"}}
