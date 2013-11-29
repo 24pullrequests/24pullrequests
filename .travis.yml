@@ -6,6 +6,4 @@ env:
 script:
   - RAILS_ENV=test POLTERGEIST=true bundle exec rake --trace db:migrate spec konacha:run
 before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
   - psql -c 'create database tfpullrequests_test' -U postgres
