@@ -62,8 +62,9 @@
 
     %article
       .container-fluid
-        .row-fluid
-          =render partial: "information"
+        - unless logged_in?
+          .row-fluid
+            =render partial: "information"
 
         .row-fluid
           .span12
