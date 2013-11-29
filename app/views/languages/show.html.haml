@@ -4,10 +4,8 @@
   #users.row-fluid.clearfix
     .span12
       %h3
-        = user_count
-        Developers using
-        = @language
-        = link_to 'View All', users_language_path(@language.downcase), :class => 'btn'
+        =t("language.developers.count", count: user_count, language: @language)
+        = link_to t("view_all"), users_language_path(@language.downcase), :class => 'btn'
 
         %ul.clearfix
           = render @users
@@ -16,8 +14,8 @@
   #pull_requests.row-fluid.clearfix
     .span12
       %h3
-        Latest #{@language} Pull Requests (#{pull_request_count_for_language} total)
-        = link_to 'View All', pull_requests_language_path(@language.downcase), :class => 'btn pull-right'
+        =t("language.pull_requests.latest.count", count: pull_request_count_for_language, language: @language)
+        = link_to t("view_all"), pull_requests_language_path(@language.downcase), :class => 'btn pull-right'
 
       = render @pull_requests
 
@@ -25,10 +23,8 @@
   #projects.row-fluid.clearfix
     .span12
       %h3
-        =project_count_for_language
-        = @language
-        Projects
-        = link_to "Suggest a #{@language} project", new_project_path(language: @language.downcase), :class => 'btn pull-right'
-        = link_to 'View All', projects_language_path(@language.downcase), :class => 'btn pull-right'
+        = t("language.projects.count", count: project_count_for_language, language: @language)
+        = link_to t("language.projects.suggest", language: @language), new_project_path(language: @language.downcase), :class => 'btn pull-right'
+        = link_to t("view_all"), projects_language_path(@language.downcase), :class => 'btn pull-right'
 
     = render @projects
