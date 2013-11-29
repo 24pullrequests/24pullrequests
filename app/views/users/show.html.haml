@@ -30,7 +30,7 @@
   .span12
 
     %h3 24 Pull Requests
-    - if @user.gifts.any? or @user.pull_requests.any?
+    - if @user.gifts.year(current_year).any? or @user.pull_requests.year(current_year).any?
       %h4
         =t("user.pull_request_count", user: @user.nickname, count: @user.pull_requests.year(current_year).count, year: current_year)
       %ul#presents.nav.nav-tabs

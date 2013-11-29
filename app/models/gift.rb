@@ -17,6 +17,8 @@ class Gift < ActiveRecord::Base
 
   delegate :title, :issue_url, :to => :pull_request, :prefix => true
 
+  scope :year, -> (year) { where('EXTRACT(year FROM "created_at") = ?', year) }
+
   after_initialize do
     self.date ||= Gift.default_date
   end
