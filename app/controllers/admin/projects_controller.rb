@@ -2,8 +2,13 @@ class Admin::ProjectsController < ApplicationController
   before_action :ensure_admin
   before_action :set_project, only: [ :edit, :update ]
 
+  respond_to :html
+  respond_to :js, only: :index
+
   def index
-    @projects = Project.order(:name)
+    @projects = Project.order(:name).filter_by_repository(repository)
+
+    respond_with @projects
   end
 
   def edit
@@ -25,6 +30,10 @@ class Admin::ProjectsController < ApplicationController
 
   def set_project
     @project = Project.find(params[:id])
+  end
+
+  def repository
+    params[:repository]
   end
 
   def ensure_admin

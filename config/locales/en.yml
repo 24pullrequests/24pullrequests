@@ -20,7 +20,6 @@ en:
     link_account:
       text: "Link Your Twitter Account"
       tooltip: "If you link your twitter account, we'll post a new tweet whenever you open a pull request!"
-  user:
 
   information:
     title: "24 Pull Requests %{year} is upon us"

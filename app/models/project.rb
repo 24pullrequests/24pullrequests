@@ -21,6 +21,10 @@ class Project < ActiveRecord::Base
   end
 
   def self.find_by_github_repo(repository)
-    Project.where("github_url like ?", "%#{repository}%").first
+    filter_by_repository(repository).first
+  end
+
+  def self.filter_by_repository(repository)
+    Project.where("github_url like ?", "%#{repository}%")
   end
 end
