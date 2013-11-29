@@ -1,11 +1,10 @@
-%h1 Delete your account
+%h1=t("delete_account.title")
 
-%p We just wanted to check that you really do wish to delete your account, this will remove your profile and all pull requests from the site, although any suggested projects will remain.
+%p=t("delete_account.are_you_sure")
+
+%p=t("delete_account.notification_info", email_preferences_link: link_to('email preferences', preferences_path))
 
 %p
-  If you simply want to stop recieving email notifications you can change your #{link_to 'email preferences', preferences_path}.
-
-%p
-  = link_to 'Confirm Deletion', dashboard_path, :method => :delete, :class => 'btn'
+  = link_to t("delete_account.confirm"), dashboard_path, :method => :delete, :class => 'btn'
   or
-  = link_to 'I changed my mind, take me back!', dashboard_path
+  = link_to t("delete_account.cancel"), take me back!', dashboard_path

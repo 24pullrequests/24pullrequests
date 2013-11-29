@@ -1,9 +1,8 @@
 .row-fluid.clearfix
   %h2
-    = pull_request_count
     - if @language
-      pull requests already made in #{@language}!
+      =t("pull_requests.language.count", count: pull_request_count, language: @language)
     - else
-      Pull Requests already made!
+      =t("pull_requests.count", count: pull_request_count)
   = render @pull_requests
   = paginate @pull_requests

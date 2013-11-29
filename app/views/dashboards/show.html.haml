@@ -1,24 +1,24 @@
 %h2
-  Welcome back, #{user.nickname}
+  =t("welcome_back", user: user.nickname)
 
-%p This is where you can see all the activity we've tracked for you in the run up to Christmas.
+%p=t("dashboard.christmas_activity")
 
 %hr
 
 - if gift_form
-  Looks like you haven't gifted any code today. Would you like to gift
+  =t("dashboard.give_a_gift")
   = render :partial => 'gifts/mini_form', :locals => { :gift_form => gift_form }
   %hr
 
-= link_to "<i class='icon-twitter'></i> #{I18n.t 'twitter.link_account.text'}".html_safe, '/auth/twitter', :class => 'btn btn-info pull-right',
-  rel: 'tooltip', title: I18n.t('twitter.link_account.tooltip') unless current_user.twitter_linked?
-= link_to 'Synchronize Pull Requests', pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn pull-right', :rel => 'tooltip', :title => I18n.t('pull_request.download.tooltip')
+= link_to "<i class='icon-twitter'></i> #{t('twitter.link_account.text')}".html_safe, '/auth/twitter', :class => 'btn btn-info pull-right',
+  rel: 'tooltip', title: t('twitter.link_account.tooltip') unless current_user.twitter_linked?
+= link_to 'Synchronize Pull Requests', pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn pull-right', :rel => 'tooltip', :title => t('pull_request.download.tooltip')
 
 #spinner
   = image_tag "spinner.gif", :class => 'pull-right'
 
 %h3
-  Your Pull Requests
+  =t("your_pull_requests")
 
 %div#pull-requests.clearfix
   = render :partial => 'pull_requests_if_any', :locals => { :pull_requests => pull_requests }
@@ -27,11 +27,11 @@
 .row-fluid.clearfix
   .span12
     %h3
-      Suggested Projects
-      = link_to 'Suggest a project', new_project_path, :class => 'btn pull-right'
-      = link_to 'View All', projects_path, :class => 'btn pull-right'
+      = t("suggested_projects")
+      = link_to t("suggest_project"), new_project_path, :class => 'btn pull-right'
+      = link_to t("view_all"), projects_path, :class => 'btn pull-right'
     %p
-      Can't think of a project you would like to help out? We've put together a list of popular projects:
+      #{t("dashboard.help_out")}:
 
   #projects
     = render projects
