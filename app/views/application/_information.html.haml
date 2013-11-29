@@ -1,23 +1,17 @@
 .alert.alert-info
-  %h3 24 Pull Requests 2013 is upon us
+  %h3=t("information.title", year: 2013)
   %p
-    In 2012, over 24 days,
-    %strong= PullRequest.year(2012).load.map(&:user_id).uniq.length
-    developers submitted
-    %strong= PullRequest.year(2012).count
-    pull requests to
-    %strong= PullRequest.year(2012).select(:repo_name).map(&:repo_name).uniq.count
-    different open source projects.
+    =t("information.last_year_stats", year: 2012, developers: PullRequest.year(2012).load.map(&:user_id).uniq.length, pull_requests: PullRequest.year(2012).count, projects: PullRequest.year(2012).select(:repo_name).map(&:repo_name).uniq.count).html_safe
 
-  %p Get ready for 24 Pull Requests 2013 when we do it all again!
+  %p=t("information.get_ready", year: 2013)
   %hr
-  %p Want to help out with open source projects in the meantime? Check out these other great initiatives:
+  %p=t("information.help_open_source")
 
   %h4= link_to 'CodeTriage', 'http://www.codetriage.com/'
 
-  %p Give back to open source, one issue at a time, with CodeTriage. You'll get one issue from your favorite repo per day to help you dig deeper, learn more, and stay involved with the code you rely on.
+  %p=t("information.codetriage")
 
   %h4= link_to 'ContribHub', 'http://contribhub.com/'
 
-  %p Do you know you have a neighbor needing some help with a really cool project? With ContribHub you will!
-  %p ContribHub is a GitHub-based application that makes it easier to find projects to contribute to and grow a community around it.
+  %p=t("information.contribhub.tagline")
+  %p=t("information.contribhub.description")
