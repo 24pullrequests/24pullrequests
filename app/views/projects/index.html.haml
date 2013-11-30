@@ -22,4 +22,4 @@
   = render @projects
 
 #noprojects
-  %p=t("projects.suggest", suggest_link: link_to('suggest one?', new_project_path))
+  %p=t("projects.suggest", suggest_link: link_to('suggest one?', new_project_path)).html_safe
