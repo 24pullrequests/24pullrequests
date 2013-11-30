@@ -28,8 +28,8 @@ describe 'Projects' do
       click_on 'Submit Project'
 
       click_on 'My Suggestions'
-
-      should have_content "akira/24pullrequests"
+      sleep (1.5)
+      should have_content("akira/24pullrequests")
     end
   end
 

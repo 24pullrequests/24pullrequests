@@ -59,15 +59,18 @@ describe PullRequest do
     its(:state)          { should eq "closed" }
   end
 
-  context "#scopes" do
-    let!(:pull_requests) { 4.times.map  { create :pull_request, language: "Haskell" } }
+  context "#scopes", wip: true do
+    let!(:pull_requests) do
+      4.times.map  { |n| create(:pull_request, language: "Haskell",
+                                               created_at: DateTime.now+n.minutes) }
+    end
 
     it "by_language" do
       PullRequest.by_language("Haskell").should eq pull_requests
     end
 
     it "latest" do
-      PullRequest.latest(3).should eq(pull_requests.take(3))
+      PullRequest.latest(3).should eq(pull_requests.reverse.take(3))
     end
 
   end
