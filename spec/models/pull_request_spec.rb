@@ -59,7 +59,7 @@ describe PullRequest do
     its(:state)          { should eq "closed" }
   end
 
-  context "#scopes", wip: true do
+  context "#scopes" do
     let!(:pull_requests) do
       4.times.map  { |n| create(:pull_request, language: "Haskell",
                                                created_at: DateTime.now+n.minutes) }
