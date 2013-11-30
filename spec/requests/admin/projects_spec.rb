@@ -22,12 +22,9 @@ describe 'Projects' do
   end
 
   describe 'managing projects', js: true do
-    before do
+    it "search for a project" do
       fill_in "_repository", with: "repo1"
       click_on "Search"
-    end
-
-    it "search for a project" do
       sleep 1.5
 
       should have_content "repo1"
@@ -35,8 +32,9 @@ describe 'Projects' do
     end
 
     it "editing a project" do
-      click_on "Edit"
+      first(:link, "Edit").click
 
+      sleep 1
       fill_in 'Name', with: 'Pugalicious'
       click_on "Update Project"
 
