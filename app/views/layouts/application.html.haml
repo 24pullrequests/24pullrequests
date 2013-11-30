@@ -55,8 +55,19 @@
       .logo
         = link_to image_tag('logo.png'), root_path
 
+
       - if params[:action] == 'homepage'
         .tagline.hidden-phone
+
+      .locale
+        .dropdown
+          %button.btn.dropdown-toggle.sr-only{ type: "button", id: "locale", "data-toggle" => "dropdown" }
+            =t("locale.language")
+            %psna.caret
+          %ul.dropdown-menu.pull-right{ role:"menu", "aria-labelledby" => "dropdownMenu1"}
+            - available_locales.each do |locale|
+              %li{ role: "presentation"}
+                %a{role: "menuitem", href: "/locale/#{locale}"}=t("locale.#{locale}")
 
       = render :partial => 'user_nav'
 

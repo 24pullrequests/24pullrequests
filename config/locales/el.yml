@@ -58,6 +58,11 @@ el:
   about_us: Σχετικά
   search: Αναζήτηση
 
+  locale:
+    language: Γλώσσα
+    en: Αγγλικά
+    el: Ελληνικά
+
   user:
     grinchy_message: "η/ο %{user} ειναι ενας καλικαντζαρος. Δεν εχει δωρισει κανενα pull request για το %{year}!"
     pull_request_count: "%{user} έχει δωρίσει συνολικά %{count} pull requests μέχρι τώρα για το %{year}"
