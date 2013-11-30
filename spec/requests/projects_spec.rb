@@ -28,8 +28,8 @@ describe 'Projects' do
       click_on 'Submit Project'
 
       click_on 'My Suggestions'
-
-      should have_content "akira/24pullrequests"
+      sleep (1.5)
+      should have_content("akira/24pullrequests")
     end
   end
 
@@ -105,7 +105,7 @@ describe 'Projects' do
     end
 
     context 'a logged-in user' do
-      it "should be able to edit proejcts they have suggested" do
+      it "should be able to edit projects they have suggested" do
         within('.java') { click_on "Edit" }
 
         fill_in 'Main language', with: 'Python'
