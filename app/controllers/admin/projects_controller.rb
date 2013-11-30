@@ -25,7 +25,7 @@ class Admin::ProjectsController < ApplicationController
   protected
 
   def editable_project_params
-    params.require(:project).permit(:description, :name, :main_language)
+    params.require(:project).permit(:description, :name, :main_language, :github_url)
   end
 
   def set_project
