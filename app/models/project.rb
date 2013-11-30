@@ -1,9 +1,25 @@
 class Project < ActiveRecord::Base
 
-  LANGUAGES = ["ActionScript", "Assembly", "C", "C#", "C++", "Clojure", "CoffeeScript",
-               "ColdFusion", "CSS","Delphi", "Emacs Lisp", "Elixir", "Erlang", "Go", "Groovy", "Haskell", "HTML", "Java", "JavaScript",
-               "Lua", "Objective-C", "OCaml","Pascal", "Perl", "PHP", "PowerShell", "Python", "Ruby",
-               "Scala", "Scheme", "Shell", "VimL"]
+  LANGUAGES = ["ABAP", "ActionScript", "Ada", "Apex", "AppleScript", "Arc",
+               "Arduino", "ASP", "Assembly", "Augeas", "AutoHotkey", "Awk",
+               "Boo", "Bro", "C", "C#", "C++", "Ceylon", "CLIPS", "Clojure",
+               "COBOL", "CoffeeScript", "ColdFusion", "Common Lisp", "Coq",
+               "CSS", "D", "Dart", "DCPU-16 ASM", "DOT", "Dylan", "eC", "Ecl",
+               "Eiffel", "Elixir", "Elm", "Emacs Lisp", "Erlang", "F#",
+               "Factor", "Fancy", "Fantom", "Forth", "FORTRAN", "Go", "Gosu",
+               "Groovy", "Haskell", "Haxe", "Io", "Ioke", "J", "Java",
+               "JavaScript", "Julia", "Kotlin", "Lasso", "LiveScript", "Logos",
+               "Logtalk", "Lua", "M", "Markdown", "Matlab", "Max", "Mirah",
+               "Monkey", "MoonScript", "Nemerle", "Nimrod", "Nu",
+               "Objective-C", "Objective-J", "OCaml", "Omgrofl", "ooc", "Opa",
+               "OpenEdge ABL", "Parrot", "Pascal", "Perl", "PHP", "Pike",
+               "PogoScript", "PowerShell", "Processing", "Prolog", "Puppet",
+               "Pure Data", "Python", "R", "Racket", "Ragel in Ruby Host",
+               "Rebol", "Rouge", "Ruby", "Rust", "Scala", "Scheme", "Scilab",
+               "Self", "Shell", "Slash", "Smalltalk", "Squirrel",
+               "Standard ML", "SuperCollider", "Tcl", "Turing", "TXL",
+               "TypeScript", "Vala", "Verilog", "VHDL", "VimL", "Visual Basic",
+               "Volt", "wisp", "XC", "XML", "XProc", "XQuery", "XSLT", "Xtend"]
 
   belongs_to :submitted_by, class_name: "User", foreign_key: :user_id
 
