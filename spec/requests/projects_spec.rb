@@ -105,7 +105,7 @@ describe 'Projects' do
     end
 
     context 'a logged-in user' do
-      it "should be able to edit proejcts they have suggested" do
+      it "should be able to edit projects they have suggested" do
         within('.java') { click_on "Edit" }
 
         fill_in 'Main language', with: 'Python'
