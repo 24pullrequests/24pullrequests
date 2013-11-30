@@ -68,10 +68,11 @@ describe 'Projects' do
       end
 
       it 'should filter projects in languages other than the selected' do
-        first(:link, "Ruby").click
+        first(:link, "Java").click
+
         within '#projects' do
-          page.should have_css('.ruby')
-          page.should_not have_css('.java')
+          page.should_not have_css('.ruby')
+          page.should have_css('.java')
         end
       end
 
