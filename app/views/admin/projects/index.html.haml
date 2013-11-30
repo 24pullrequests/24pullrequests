@@ -8,4 +8,4 @@
 
 %hr
 #projects
-  = render partial: 'projects/project', collection: @projects, locals: { admin: true }
+  = render partial: 'projects/editable_project', collection:  @projects, as: :project, locals: { admin: true }

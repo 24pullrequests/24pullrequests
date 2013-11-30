@@ -1,5 +1,5 @@
 - if @projects.any?
-  = render @projects, editable: true
+  = render partial: 'projects/editable_project', collection:  @projects, as: :project, locals: { editable: true }
 - else
   = t("no_suggestions")
   = link_to t("suggest_project"), new_project_path
