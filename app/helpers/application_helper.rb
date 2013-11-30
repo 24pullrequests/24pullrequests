@@ -38,4 +38,14 @@ module ApplicationHelper
   def projects_in year
     PullRequest.year(year).select(:repo_name).map(&:repo_name).uniq.count
   end
+
+  def current_path locale=nil
+    path = request.env["REQUEST_PATH"]
+    path += "?locale=#{locale}" if locale.present?
+    path
+  end
+
+  def available_locales
+    [ 'en', 'el' ]
+  end
 end

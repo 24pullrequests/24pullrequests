@@ -90,9 +90,18 @@ header {
   padding: 10px $side-padding;
 }
 
-nav, .faulx-nav {
+nav, .faulx-nav, .locale {
   @extend .constrained;
   margin-top: 25px;
+}
+
+.locale {
+  text-align: right;
+  margin-top: 0;
+
+  li {
+    text-align: left;
+  }
 }
 
 .faulx-nav {
