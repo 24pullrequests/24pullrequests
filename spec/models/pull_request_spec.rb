@@ -66,7 +66,7 @@ describe PullRequest do
     end
 
     it "by_language" do
-      PullRequest.by_language("Haskell").should eq pull_requests
+      PullRequest.by_language("Haskell").order("created_at asc").should eq pull_requests
     end
 
     it "latest" do
