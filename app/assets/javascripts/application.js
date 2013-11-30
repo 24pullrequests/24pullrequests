@@ -99,6 +99,11 @@ function reset(flake) {
 }
 
 function init() {
+
+    // the snowflakes cause a scrolling display issue with iOS
+    if( /iPhone|iPad|iPod/i.test(navigator.userAgent) )
+      return;
+
     for (var i = 0; i < flakeCount; i++) {
         var x = Math.floor(Math.random() * canvas.width),
             y = Math.floor(Math.random() * canvas.height),
