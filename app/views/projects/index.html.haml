@@ -5,7 +5,7 @@
 
 %p=t("projects.help_out")
 
-%p=t("projects.suggest")
+%p=t("projects.suggest", suggest_link: link_to('suggest one?', new_project_path)).html_safe
 %hr
 %h4=t("projects.filter_by_language")
 %ul#languages.row
