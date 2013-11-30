@@ -1,4 +1,4 @@
 :plain
-  var projects = $("#{escape_javascript(render(partial: 'projects/project', collection: @projects, locals: { admin: true }))}")
+  var projects = $("#{escape_javascript(render(partial: 'projects/editable_project', collection: @projects, as: :project, locals: { admin: true }))}")
    $("#projects").empty();
    $("#projects").append(projects);
