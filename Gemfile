@@ -23,6 +23,7 @@ gem 'anjlab-bootstrap-rails', '~> 2.3.1', :require => 'bootstrap-rails'
 gem 'simple_form'
 gem 'rack-google-analytics'
 gem 'ffi', '1.9.0'
+gem 'csv_shaper'
 
 group :assets do
   gem 'sass-rails'
