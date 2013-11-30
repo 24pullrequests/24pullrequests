@@ -22,15 +22,16 @@ describe 'Projects' do
   end
 
   describe 'managing projects', js: true do
-
     before do
       fill_in "_repository", with: "repo1"
       click_on "Search"
     end
 
     it "search for a project" do
-      should_not have_content "repo2"
+      sleep 1.5
+
       should have_content "repo1"
+      should_not have_content "repo2"
     end
 
     it "editing a project" do
