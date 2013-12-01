@@ -1,4 +1,9 @@
 class SessionsController < ApplicationController
+
+  unless Rails.env.production?
+    skip_before_filter :verify_authenticity_token, :only => [:create]
+  end
+
   def new
     redirect_to "/auth/#{ Rails.application.config.default_provider }"
   end
@@ -10,7 +15,7 @@ class SessionsController < ApplicationController
 
     session[:user_id] = user.id
 
-    redirect_to dashboard_path and return unless pre_login_destination
+    redirect_to dashboard_url and return unless pre_login_destination
     redirect_to pre_login_destination
   end
 
