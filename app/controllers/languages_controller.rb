@@ -2,13 +2,13 @@ class LanguagesController < ApplicationController
   before_action :set_language
 
   def show
-    @projects = Project.by_language(@language).limit(20)
+    @projects = Project.active.by_language(@language).limit(20)
     @users = User.by_language(@language).limit(200).sample(45)
     @pull_requests = PullRequest.by_language(@language).year(current_year).latest(5)
   end
 
   def projects
-    @projects = Project.by_language(@language).page(params[:page])
+    @projects = Project.active.by_language(@language).page(params[:page])
   end
 
   def pull_requests
