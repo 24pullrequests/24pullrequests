@@ -6,8 +6,6 @@ gem 'rails', '4.0.1'
 gem 'jquery-rails'
 
 gem 'pg'
-gem 'unicorn'
-gem 'foreman'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'omniauth-twitter'
@@ -24,6 +22,11 @@ gem 'simple_form', '3.0.0'
 gem 'rack-google-analytics'
 gem 'ffi', '1.9.0'
 gem 'csv_shaper'
+
+group :production do
+  gem 'unicorn'
+  gem 'foreman'
+end
 
 group :assets do
   gem 'sass-rails'
