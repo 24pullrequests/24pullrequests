@@ -23,7 +23,7 @@ class PullRequest  < ActiveRecord::Base
     def initialize_from_github(json)
       {
         :title          => json['payload']['pull_request']['title'],
-        :issue_url      => json['payload']['pull_request']['issue_url'],
+        :issue_url      => json['payload']['pull_request']['_links']['html']['href'],
         :created_at     => json['payload']['pull_request']['created_at'],
         :state          => json['payload']['pull_request']['state'],
         :body           => json['payload']['pull_request']['body'],
