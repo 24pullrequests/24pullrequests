@@ -27,6 +27,7 @@ en:
     gifted_code: Gifted Code
     manage_projects: Manage Projects
     logout: Logout
+    homepage: Αρχική
 
   homepage:
     title: "24 Pull Requests"
@@ -80,7 +81,6 @@ en:
   edit: Edit
   everything: Everything
   about_us: About
-  homepage: homepage
   cancel: Cancel
   search: Search
 
@@ -88,6 +88,7 @@ en:
     language: Language
     en: English
     el: Greek
+    es: Spanish
 
   user:
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
