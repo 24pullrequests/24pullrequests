@@ -73,10 +73,10 @@ class GiftsController < ApplicationController
   end
 
   def pull_request_id
-    params[:gift][:pull_request_id]
+    params[:gift].permit(:pull_request_id)[:pull_request_id]
   end
 
   def post_params
-    params[:gift].slice(:date)
+    params[:gift].permit(:date).slice(:date)
   end
 end
