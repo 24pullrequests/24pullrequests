@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Projects' do
+describe 'Admin Projects' do
   let(:user) { create :user }
   let!(:projects) { [ "repo1", "repo2"].map { |repo| create :project, github_url: "http://github.com/christmas/#{repo}" } }
   subject { page }
@@ -27,7 +27,7 @@ describe 'Projects' do
       click_on "Search"
 
       sleep(Capybara.default_wait_time)
-      
+
       should have_content "repo1"
       should_not have_content "repo2"
     end
