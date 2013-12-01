@@ -57,8 +57,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara', '2.2.0'
-  gem 'poltergeist'
+  gem 'poltergeist', '~> 1.4.0'
   gem 'launchy', '2.4.2'
 
   gem 'database_cleaner'
