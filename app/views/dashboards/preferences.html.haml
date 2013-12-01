@@ -13,6 +13,8 @@
     = form.input :email, hint: t("preferences.hint.confirm_email")
   - else
     = form.input :email
+
+  = form.input :nickname
   = form.input :email_frequency, :collection => [['Never', 'none'], ['Daily', 'daily'], ['Weekly', 'weekly']], :selected => (form.object.email_frequency || 'daily')
   - if current_user.twitter_linked?
     .control-group
