@@ -36,6 +36,10 @@ class Project < ActiveRecord::Base
     self.github_url.gsub(/^(((https|http|git)?:\/\/(www\.)?)|git@)github.com(:|\/)/i, '').gsub(/(\.git|\/)$/i, '')
   end
 
+  def deactivate!
+    update_attribute(:inactive, true)
+  end
+
   def self.find_by_github_repo(repository)
     filter_by_repository(repository).first
   end
