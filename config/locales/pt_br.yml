@@ -1,4 +1,4 @@
-br:
+pt_br:
   activerecord:
     errors:
       models:
@@ -50,7 +50,7 @@ br:
   cancel: "Cancelar"
 
   user:
-    grinchy_message: "%{user} está parecendo um grinch em %{year}, não fez nenhum pull requests de presente. Bah humbug!"
+    grinchy_message: "%{user} você está parecendo um grinch em %{year}, não fez nenhum pull requests de presente. Bah humbug!"
     pull_request_count: "%{user} fez %{count} pull requests até agora, em %{year}"
     nav:
       all_projects: "Todos os projetos"
@@ -125,7 +125,7 @@ br:
 
   gifts:
     title: "Presentes"
-    description: "Aqui você pode gerenciar seus pull requests e selecionar e organizar seu próprio conjunto do 24 Pull Requests."
+    description: "Aqui você pode gerenciar seus pull requests, selecionar e organizar seu próprio conjunto do 24 Pull Requests."
     view_your_gifts: "Todos os seus presentes serão exibidos no seu %{calendar_link}."
     none: "Nenhum presenteado ainda."
     give: "Presenteie algo significativo para os projetos que você gosta."
@@ -136,12 +136,12 @@ br:
   about:
     title: "Sobre 24 Pull Requests"
     description: "24 Pull Requests é um pequeno projeto para promover contribuições em projetos open source durante o mês de dezembro."
-    idea: "A ideia é basicamente &quot;Envie um pull request todos os dias de dezembro até o natal&quot;, encorajando desenvolvedores a colaborar com a comunidade open source com pequenos códigos de presente durante dezembro."
+    idea: "A ideia é basicamente \"Envie um pull request todos os dias de dezembro até o natal\", encorajando desenvolvedores a colaborar com a comunidade open source com pequenos códigos de presente durante dezembro."
     more_info: "O site também fornece sugestões de projetos para ajudar, guias para contribuição e destaca ótimos pull requests enviados todos os dias."
     on_github: "O desenvolvimento deste site é open source no Github:"
     on_twitter: "Também estamos no Twitter:"
     sponsors:
       title: "Patrocinadores"
       details: "24 Pull Requests foi possível graças a ajuda e a doações de alguns ótimos patrocinadores."
-      thanks: "Muitos obrigados para..."
+      thanks: "Muitos agracecimentos para..."
       get_in_touch: "Se você gostaria de entrar em contato para saber mais sobre patrocínio ou qualquer outro assunto, envie-nos um email:"
