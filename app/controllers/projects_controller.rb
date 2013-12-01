@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   respond_to :json, :only => :index
 
   def index
-    @projects = Project.order(:name)
+    @projects = Project.active.order(:name)
     @current_user_languages = logged_in? ? current_user.languages : []
     respond_with @projects
   end

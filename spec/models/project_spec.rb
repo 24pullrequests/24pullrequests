@@ -29,14 +29,19 @@ describe Project do
   end
 
   context "#scopes" do
-    let!(:ruby_project) { FactoryGirl.create(:project, main_language: "Ruby") }
-
     before do
       ["Erlang", "JavaScript"].each { |lan| FactoryGirl.create(:project, main_language: lan)  }
+      2.times { FactoryGirl.create(:project, main_language: "Haskell", inactive: true) }
     end
 
     it "by_language" do
-      Project.by_language("ruby").should eq([ruby_project])
+      project = FactoryGirl.create(:project, main_language: "Ruby")
+
+      Project.by_language("ruby").should eq([project])
+    end
+
+    it "active" do
+      Project.active.count.should eq(2)
     end
   end
 
