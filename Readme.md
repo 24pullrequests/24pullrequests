@@ -40,7 +40,7 @@ Next, you'll need to make sure that you have postgres installed. This can be
 done easily using [Homebrew](http://mxcl.github.com/homebrew/) or by using http://postgresapp.com
 
 ```bash
-brew install postgres
+brew install postgres phantomjs
 ```
 
 Now, let's install the gems from the `Gemfile` ("Gems" are synonymous with libraries in other
