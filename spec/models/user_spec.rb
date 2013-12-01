@@ -248,7 +248,7 @@ describe User do
 
     subject { user.pull_requests }
 
-    context 'when the pull request does not aleady exist' do
+    context 'when the pull request does not already exist' do
       its(:length) { should eq 1 }
     end
 
