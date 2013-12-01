@@ -69,6 +69,7 @@
               %li{ role: "presentation"}
                 %a{role: "menuitem", href: "/locale/#{locale}"}=t("locale.#{locale}")
 
+    - if logged_in?
       = render :partial => 'user_nav'
 
     %article
