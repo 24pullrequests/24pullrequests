@@ -40,5 +40,15 @@ describe 'Dashboard' do
       click_on 'Save and Continue'
       user.languages.should eq ['Ruby']
     end
+
+    it 'allows the user update their nickname' do
+      user_id = user.id
+      fill_in 'user_nickname', with: 'example-nick'
+      click_on 'Save and Continue'
+
+      # have to grab the updated user information
+      user = User.find_by_id(user_id)
+      user.nickname.should eq 'example-nick'
+    end
   end
 end
