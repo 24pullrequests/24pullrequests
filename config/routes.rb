@@ -7,7 +7,7 @@ Tfpullrequests::Application.routes.draw do
   resources :users
   get '/users/:id/:year', :to => 'users#show'
 
-  resources :projects, :only => [:index, :new, :create, :edit, :update] do
+  resources :projects, :only => [:index, :new, :create, :edit, :update, :destroy] do
     collection do
       post :claim
     end
@@ -56,6 +56,6 @@ Tfpullrequests::Application.routes.draw do
   get '/:id' => redirect('/users/%{id}') # User public vanity url, must be lowest priority
 
   namespace :admin do
-    resources :projects, only: [ :index, :edit, :update ]
+    resources :projects, only: [ :index, :edit, :update, :destroy ]
   end
 end
