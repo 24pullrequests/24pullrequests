@@ -34,7 +34,6 @@ describe 'Projects' do
     it "editing a project" do
       first(:link, "Edit").click
 
-      sleep 1
       fill_in 'Name', with: 'Pugalicious'
       click_on "Update Project"
 

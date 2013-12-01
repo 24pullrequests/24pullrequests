@@ -7,7 +7,7 @@ class Project < ActiveRecord::Base
                "CSS", "D", "Dart", "DCPU-16 ASM", "DOT", "Dylan", "eC", "Ecl",
                "Eiffel", "Elixir", "Elm", "Emacs Lisp", "Erlang", "F#",
                "Factor", "Fancy", "Fantom", "Forth", "FORTRAN", "Go", "Gosu",
-               "Groovy", "Haskell", "Haxe", "Io", "Ioke", "J", "Java",
+               "Groovy", "Haskell", "Haxe", "HTML", "Io", "Ioke", "J", "Java",
                "JavaScript", "Julia", "Kotlin", "Lasso", "LiveScript", "Logos",
                "Logtalk", "Lua", "M", "Markdown", "Matlab", "Max", "Mirah",
                "Monkey", "MoonScript", "Nemerle", "Nimrod", "Nu",
