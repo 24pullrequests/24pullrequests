@@ -153,6 +153,13 @@ article {
   -moz-border-radius-topright: 5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+
+  /* Fix issue with social icons crashing */
+  @media (max-width: 767px) {
+    .span6 {
+      width: 100% !important;
+    }
+  }
 }
 
 footer {
