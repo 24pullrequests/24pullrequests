@@ -1,7 +1,7 @@
 require File.expand_path('../../../app/models/calendar', __FILE__)
 
 describe Calendar do
-  it "returns an enmerator for the giftable_dates" do
+  it "returns an enumerator for the giftable_dates" do
     giftable_dates = 1.upto(24).map { |day| Date.new(2013,12,day) }
 
     sorted_gifts = Calendar.new(giftable_dates, [])
