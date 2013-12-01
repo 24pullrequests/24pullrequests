@@ -2,23 +2,23 @@
   %nav
     %ul.nav.nav-pills
       %li
-        = link_to 'All Projects', projects_path
+        = link_to t("user.nav.all_projects"), projects_path
       %li
-        = link_to 'Dashboard', dashboard_path
+        = link_to t("user.nav.dashboard"), dashboard_path
       %li
-        = link_to 'Profile', user_path(current_user)
+        = link_to t("user.nav.profile"), user_path(current_user)
       %li
-        = link_to 'Preferences', preferences_path
+        = link_to t("user.nav.preferences"), preferences_path
       %li
-        = link_to 'Gifted Code', gifts_path
+        = link_to t("user.nav.gifted_code"), gifts_path
       %li
-        = link_to 'My Suggestions', my_suggestions_path
+        = link_to t("user.nav.my_suggestions"), my_suggestions_path
       - if admin?
         %li
-          = link_to 'Manage Projects', admin_projects_path
+          = link_to t("user.nav.manage_projects"), admin_projects_path
 
       %li.pull-right
-        = link_to 'Logout', logout_path
+        = link_to t("user.nav.logout"), logout_path
 
 - else # Just for padding
   .faulx-nav
