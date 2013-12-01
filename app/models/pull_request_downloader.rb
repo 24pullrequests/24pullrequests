@@ -18,7 +18,7 @@ class PullRequestDownloader
     begin
       events = github_client.user_events(login)
       events.select do |e|
-        event_date = DateTime.parse(e['created_at'])
+        event_date = e['created_at']
         e.type == 'PullRequestEvent' &&
         e.payload.action == 'opened' &&
         event_date >= PullRequest::EARLIEST_PULL_DATE &&
