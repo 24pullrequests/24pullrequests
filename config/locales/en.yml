@@ -46,6 +46,8 @@ en:
   edit: Edit
   everything: Everything
   about_us: About
+  homepage: homepage
+  cancel: annuler
 
   user:
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
@@ -66,6 +68,7 @@ en:
   dashboard:
     christmas_activity: This is where you can see all the activity we've tracked for you in the run up to Christmas.
     give_a_gift: Looks like you haven't gifted any code today. Would you like to gift
+    synchronize: Synchronize Pull Requests
     help_out: Can't think of a project you would like to help out? We've put together a list of popular projects
     no_pull_requests: You've not sent any pull requests, what are you waiting for?!
 
