@@ -44,7 +44,12 @@ class PullRequest  < ActiveRecord::Base
   end
 
   def post_tweet
-    user.twitter.update(I18n.t 'pull_request.twitter_message', :issue_url => issue_url) if user && user.twitter_linked?
+    begin
+      user.twitter.update(I18n.t 'pull_request.twitter_message', :issue_url => issue_url) if user && user.twitter_linked?
+    rescue => e
+      puts e.inspect
+      puts 'likely a Twitter api error occurred'
+    end
   end
 
   def gifted_state
