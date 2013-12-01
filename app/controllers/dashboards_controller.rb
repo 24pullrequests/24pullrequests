@@ -1,6 +1,6 @@
 class DashboardsController < ApplicationController
-  before_filter :ensure_logged_in, except: [:confirm_email]
-  before_filter :set_email_preferences, :except => [:preferences, :update_preferences, :confirm_email]
+  before_filter :ensure_logged_in, except: [:confirm_email, :locale]
+  before_filter :set_email_preferences, :except => [:preferences, :update_preferences, :confirm_email, :locale]
 
   def show
     pull_requests = current_user.pull_requests.year(current_year).order('created_at desc')
