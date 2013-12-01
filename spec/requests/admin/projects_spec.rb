@@ -25,7 +25,6 @@ describe 'Projects' do
     it "search for a project" do
       fill_in "_repository", with: "repo1"
       click_on "Search"
-      sleep 1.5
 
       should have_content "repo1"
       should_not have_content "repo2"
