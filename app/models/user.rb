@@ -26,6 +26,12 @@ class User < ActiveRecord::Base
     create!(extract_info(hash))
   end
 
+  def assign_from_auth_hash(hash)
+    # do not update the email address in case the user has updated their
+    # email prefs and used a new email
+    update_attributes(self.class.extract_info(hash).except(:email))
+  end
+
   def self.find_by_auth_hash(hash)
     conditions = extract_info(hash).slice(:provider, :uid)
     where(conditions).first
