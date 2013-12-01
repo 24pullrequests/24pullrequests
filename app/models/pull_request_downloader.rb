@@ -24,7 +24,8 @@ class PullRequestDownloader
         event_date >= PullRequest::EARLIEST_PULL_DATE &&
         event_date <= PullRequest::LATEST_PULL_DATE
       end
-    rescue
+    rescue => e
+      puts e.inspect
       puts 'likely a Github api error occurred'
       []
     end
