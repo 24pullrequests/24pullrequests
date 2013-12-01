@@ -57,14 +57,14 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara'
+  gem 'capybara', '2.2.0'
   gem 'poltergeist'
-  gem 'launchy'
+  gem 'launchy', '2.4.2'
 
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'webmock', :require => false
-  gem 'timecop'
+  gem 'timecop', '0.7.0'
 
   gem 'coveralls', require: false
 end
