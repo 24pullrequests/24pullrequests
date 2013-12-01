@@ -53,7 +53,7 @@
     %header
       .bar
       .logo
-        = link_to t("homepage"), root_path
+        = link_to image_tag('logo.png'), root_path
 
       - if params[:action] == 'homepage'
         .tagline.hidden-phone

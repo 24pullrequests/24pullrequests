@@ -39,19 +39,12 @@ section {
   $width: 180px;
   $height: 76px;
 
-  position: relative;
   width: $width;
   height: $height;
-  left: 50%;
-  margin-left: -$width/2;
-  background: asset-url("logo.png") no-repeat bottom;
-  text-indent: -9999px;
+  margin: 0 auto;
 
   a {
-    position: absolute;
-    width: $width;
-    height: $height;
-    color: transparent;
+    display: block;
   }
 
   &.logo-dark {
