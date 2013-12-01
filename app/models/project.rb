@@ -1,8 +1,8 @@
 class Project < ActiveRecord::Base
 
   LANGUAGES = ["ABAP", "ActionScript", "Ada", "Apex", "AppleScript", "Arc",
-               "Arduino", "ASP", "Assembly", "Augeas", "AutoHotkey", "Awk",
-               "Boo", "Bro", "C", "C#", "C++", "Ceylon", "CLIPS", "Clojure",
+               "Arduino", "ASP", "Assembly", "Augeas", "AutoHotkey", "Awk", "Bluespec",
+               "Boo", "Bro", "C", "C#", "C++", "Ceylon", "Chisel", "CLIPS", "Clojure",
                "COBOL", "CoffeeScript", "ColdFusion", "Common Lisp", "Coq",
                "CSS", "D", "Dart", "DCPU-16 ASM", "DOT", "Dylan", "eC", "Ecl",
                "Eiffel", "Elixir", "Elm", "Emacs Lisp", "Erlang", "F#",
