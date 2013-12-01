@@ -45,6 +45,7 @@ section {
   left: 50%;
   margin-left: -$width/2;
   background: asset-url("logo.png") no-repeat bottom;
+  text-indent: -9999px;
 
   a {
     position: absolute;
