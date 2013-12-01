@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :ensure_logged_in, except: [ :index ]
-  before_action :set_project, only: [ :edit, :update ]
+  before_action :set_project, only: [ :edit, :update, :destroy ]
 
   respond_to :html
   respond_to :json, :only => :index
@@ -27,6 +27,12 @@ class ProjectsController < ApplicationController
 
   def edit
     redirect_to root_path, notice: "You can't edit this project!" unless @project.present?
+  end
+
+  def destroy
+    @project.deactivate!
+
+    redirect_to :back, notice: "#{@project.name} has been deactivated."
   end
 
   def update

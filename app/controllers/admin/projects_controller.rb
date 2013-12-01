@@ -1,12 +1,12 @@
 class Admin::ProjectsController < ApplicationController
   before_action :ensure_admin
-  before_action :set_project, only: [ :edit, :update ]
+  before_action :set_project, only: [ :edit, :update, :destroy ]
 
   respond_to :html
   respond_to :js, only: :index
 
   def index
-    @projects = Project.order(:name).filter_by_repository(repository)
+    @projects = Project.order("inactive desc").order(:name).filter_by_repository(repository)
 
     respond_with @projects
   end
@@ -20,6 +20,12 @@ class Admin::ProjectsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @project.deactivate!
+
+    redirect_to :back, notice: "#{@project.name} has been deactivated."
   end
 
   protected
