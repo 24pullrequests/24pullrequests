@@ -91,7 +91,8 @@ en:
     for_you: Suggested for you
     suggestion:
       edit: Edit Suggestion
-    suggest: There are no projects for that language yet, why not %{suggest_link}
+    suggest: There are no projects for that language yet, why not %{suggest_link}?
+    suggest_link: suggesest one
     new:
       title: Suggest a Project
       info: One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We've selected our favorites, but we're always open to suggestions. Have some ideas? Share them below!
