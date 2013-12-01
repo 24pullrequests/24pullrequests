@@ -1,19 +1,17 @@
 .visible-phone
-  %h1 24 Pull Requests
-  %h3 Giving back little gifts of code for Christmas
+  %h1=t("homepage.title")
+  %h3=t("homepage.description")
   %hr
 
 .row-fluid.clearfix
   .span6
-    %h2 What's it all about?
+    %h2=t("homepage.about")
     %hr
-    %p 24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas.
-    %p This is the site to help promote the project, highlighting why, how and where to send your pull requests.
-    %p Log in with your GitHub account and we'll track and highlight all your pull requests and suggest projects to work on.
+    =t("homepage.about_text").html_safe
     %hr
-    %h4 'Tis the season
+    %h4=t("homepage.greeting")
     %hr
-    %p You've been benefiting from the use of open source projects all year, now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving pull requests!
+    %p=t("homepage.give_to_open_source")
 
     %hr
     - unless logged_in?
@@ -23,38 +21,37 @@
       %hr
     = render :partial => 'shared/social_buttons'
     %hr
-    %h4 Questions & Answers
+    %h4=t("homepage.q_n_a")
     %hr
-    %p
-      = "Join the chat on IRC, #{link_to '#24pullrequests', 'http://webchat.freenode.net/?channels=#24pullrequests'}, at freenode.".html_safe
+    %p=t("homepage.join_the_chat", link_to_chat: link_to('#24pullrequests', 'http://webchat.freenode.net/?channels=#24pullrequests')).html_safe
 
   .span6#info
     #coderwall
-      %h4 Earn Coderwall badges
+      %h4=t("homepage.badges.title")
       %hr
-      %p We've teamed up with coderwall and created some kickass badges to unlock for participating.
+      %p=t("homepage.badges.description")
       .center
-        = link_to image_tag('24-participant.png'), 'https://coderwall.com', :rel => 'tooltip', :title => 'Participant - Get involved, send at least one pull request before Christmas'
-        = link_to image_tag('24-continuous-sync.png'), 'https://coderwall.com', :rel => 'tooltip', :title => "Continous Sync - You're an open source machine, send 24 pull requests during December"
+        = link_to image_tag('24-participant.png'), 'https://coderwall.com', :rel => 'tooltip', :title => t("homepage.badges.involved_link")
+        = link_to image_tag('24-continuous-sync.png'), 'https://coderwall.com', :rel => 'tooltip', :title => t("homepage.badges.amazing")
 
-    %h4 Get involved
+    %h4=t("homepage.involved.title")
     %hr
-    %p There are loads of ways to get involved in an open source project, improving documentation, helping fix existing issues and bugs, improving code quality and test coverage or adding missing features.
+    %p=t("homepage.involved.description")
     %p
-      = "We've prepared a #{link_to 'special page', contributing_path}, where you can find some information about contributing.".html_safe
-      If you are new to open source, please take a look.
+      =t("homepage.involved.special_page", contributing_path: link_to('special page', contributing_path)).html_safe
+      =t("homepage.involved.take_a_look")
 
-    %h4 Build your profile
+    %h4=t("homepage.profile.title")
     %hr
-    %p Contributing to open source projects is also a great way to build your profile in the community and improve your CV.
-    %p It's really easy to get started, even small contributions can be really valuable to a project.
+    %p=t("homepage.profile.description")
+    %p=t("homepage.profile.getting_started")
 
 #users.row-fluid.clearfix
   .span12
     %h3
       = User.count
-      Developers already involved
-      = link_to 'View All', users_path, :class => 'btn'
+      = t("developers_involved")
+      = link_to t("view_all"), users_path, :class => 'btn'
 
     %ul.clearfix
       = render @users
@@ -62,8 +59,8 @@
   .row-fluid.clearfix
     .span12
       %h3
-        Latest Pull Requests (#{PullRequest.year(current_year).count} total)
-        = link_to 'View All', pull_requests_path, :class => 'btn pull-right'
+        =t("pull_requests.latest.count", count: @pull_requests.count)
+        = link_to t("view_all"), pull_requests_path, :class => 'btn pull-right'
 
     #pull_requests
       = render @pull_requests
@@ -72,11 +69,11 @@
   .span12
     %h3
       = Project.count
-      Suggested Projects
-      = link_to 'Suggest a project', new_project_path, :class => 'btn pull-right'
-      = link_to 'View All', projects_path, :class => 'btn pull-right'
+      =t("suggested_projects")
+      = link_to t("suggest_project"), new_project_path, :class => 'btn pull-right'
+      = link_to t("view_all"), projects_path, :class => 'btn pull-right'
     %p
-      Can't think of a project you would like to help out? We've put together a list of popular projects.
+      =t("dashboard.help_out")
 
   #projects
     = render @projects
