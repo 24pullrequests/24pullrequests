@@ -1,6 +1,6 @@
 class DashboardsController < ApplicationController
-  before_filter :ensure_logged_in, except: [:confirm_email]
-  before_filter :set_email_preferences, :except => [:preferences, :update_preferences, :confirm_email]
+  before_filter :ensure_logged_in, except: [:confirm_email, :locale]
+  before_filter :set_email_preferences, :except => [:preferences, :update_preferences, :confirm_email, :locale]
 
   def show
     pull_requests = current_user.pull_requests.year(current_year).order('created_at desc')
@@ -49,6 +49,11 @@ class DashboardsController < ApplicationController
     redirect_to root_path
   end
 
+  def locale
+    set_locale_to_cookie params[:locale]
+    redirect_to :back
+  end
+
   protected
   def today
     Time.zone.now.to_date
@@ -64,5 +69,10 @@ class DashboardsController < ApplicationController
 
   def user_params
     params.require(:user).permit(:uid, :provider, :nickname, :email, :gravatar_id, :token, :email_frequency, :twitter_token, skills_attributes: [:language])
+  end
+
+  def set_locale_to_cookie locale
+    cookies[:locale] = { value: locale,
+                         expires: Time.now + 36000 }
   end
 end

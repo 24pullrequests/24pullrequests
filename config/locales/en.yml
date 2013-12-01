@@ -18,6 +18,41 @@ en:
       text: "Link Your Twitter Account"
       tooltip: "If you link your twitter account, we'll post a new tweet whenever you open a pull request!"
 
+  navigation:
+    all_projects: All Projects
+    my_suggestions: My Suggestions
+    dashboard: Dashboard
+    profile: Profile
+    preferences: Preferences
+    gifted_code: Gifted Code
+    manage_projects: Manage Projects
+    logout: Logout
+    homepage: Αρχική
+
+  homepage:
+    title: "24 Pull Requests"
+    description: Giving back little gifts of code for Christmas
+    about: "What's it all about?"
+    about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your pull requests.</p><p>Log in with your GitHub account and we'll track and highlight all your pull requests and suggest projects to work on.</p>"
+    greeting: "'Tis the season"
+    give_to_open_source: You've been benefiting from the use of open source projects all year, now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving pull requests!
+    q_n_a: Questions & Answers
+    badges:
+      title: Earn Coderwall badges
+      description: We've teamed up with coderwall and created some kickass badges to unlock for participating.
+      involved_link: 'Participant - Get involved, send at least one pull request before Christmas'
+      amazing: "Continous Sync - You're an open source machine, send 24 pull requests during December"
+    involved:
+      title: Get involved
+      description: There are loads of ways to get involved in an open source project, improving documentation, helping fix existing issues and bugs, improving code quality and test coverage or adding missing features.
+      special_page: "We've prepared a %{contributing_path}, where you can find some information about contributing."
+      take_a_look: If you are new to open source, please take a look.
+    profile:
+      title: Build your profile
+      description: Contributing to open source projects is also a great way to build your profile in the community and improve your CV.
+      getting_started: It's really easy to get started, even small contributions can be really valuable to a project.
+    join_the_chat: Join the chat on IRC, #%{link_to_chat}, at freenode.
+
   information:
     title: "24 Pull Requests %{year} is upon us"
     last_year_stats: "In %{year}, over 24 days, <b>%{developers}</b> developers submitted <b>%{pull_requests}</b> pull requests to <b>%{projects}</b> different open source projects."
@@ -46,21 +81,18 @@ en:
   edit: Edit
   everything: Everything
   about_us: About
-  homepage: homepage
   cancel: Cancel
+  search: Search
+
+  locale:
+    language: Language
+    en: English
+    el: Greek
+    es: Spanish
 
   user:
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
     pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
-    nav:
-      all_projects: All Projects
-      dashboard: Dashboard
-      profile: Profile
-      preferences: Preferences
-      gifted_code: Gifted Code
-      my_suggestions: My Suggestions
-      manage_projects: Manage Projects
-      logout: Logout
 
   developers_using_language: Developers using %{language}
   developers_involved: Developers already involved
@@ -71,6 +103,7 @@ en:
     synchronize: Synchronize Pull Requests
     help_out: Can't think of a project you would like to help out? We've put together a list of popular projects
     no_pull_requests: You've not sent any pull requests, what are you waiting for?!
+    synchronize: Syncrhonize Pull Requests
 
   language:
     projects_count: "%{count} %{language} Projects"
@@ -91,17 +124,23 @@ en:
     for_you: Suggested for you
     suggestion:
       edit: Edit Suggestion
+      update: Update Project
     suggest: There are no projects for that language yet, why not %{suggest_link}
     new:
       title: Suggest a Project
       info: One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We've selected our favorites, but we're always open to suggestions. Have some ideas? Share them below!
       suggestion: Have a suggestion for this project? We're all ears! If there's something you'd like fixed, feel free to submit an
       issue: issue
+    edit:
+      title: Edit Suggestion
+    admin:
+      title: Manage Projects
+      search: Search by github repository
 
   preferences:
       title: Set your Email Preferences
       frequency_message:  At the frequency you choose, we'll send you helpful emails from now until the project is over, highlighting some suggested projects you might consider contributing to. As an added bonus, we'll take the liberty of personalizing our suggestions to your language proficiency based on the repos in your GitHub profile. Alternatively, you can choose your languages below.
-      delete_account: "Want to delete your account?"
+      delete: "Want to delete your account?"
       information: You can always change your email preferences later.
       twitter: Twitter Account
       languages: Which languages do you know?
@@ -115,6 +154,8 @@ en:
     count: "%{count} Pull Requests already made!"
     language:
       count: "%{count} pull requests already made in %{language}!"
+    latest:
+      count: Latest Pull Requests (%{count} total)
 
   delete_account:
     title: Delete your account

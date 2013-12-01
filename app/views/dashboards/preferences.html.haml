@@ -3,7 +3,7 @@
 %p=t("preferences.frequency_message")
 
 - if current_user.email_frequency.present?
-  %small= link_to t("preferenes.delete_account"), delete_dashboard_path, :class => 'pull-right'
+  %small= link_to t("preferences.delete"), delete_dashboard_path, :class => 'pull-right'
 
 %p
   %em=t("preferences.information")
