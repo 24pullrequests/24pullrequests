@@ -50,6 +50,15 @@ en:
   user:
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
     pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
+    nav:
+      all_projects: All Projects
+      dashboard: Dashboard
+      profile: Profile
+      preferences: Preferences
+      gifted_code: Gifted Code
+      my_suggestions: My Suggestions
+      manage_projects: Manage Projects
+      logout: Logout
 
   developers_using_language: Developers using %{language}
   developers_involved: Developers already involved
