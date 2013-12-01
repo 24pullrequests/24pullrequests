@@ -13,14 +13,14 @@ gem 'omniauth-github'
 gem 'omniauth-twitter'
 gem 'haml-rails'
 gem 'octokit'
-gem "bugsnag"
+gem 'bugsnag', '1.6.3'
 gem 'rabl'
 gem 'newrelic_rpm'
 gem 'simplecov'
 gem 'kaminari'
-gem 'twitter'
+gem 'twitter', '5.0.0'
 gem 'anjlab-bootstrap-rails', '~> 2.3.1', :require => 'bootstrap-rails'
-gem 'simple_form'
+gem 'simple_form', '3.0.0'
 gem 'rack-google-analytics'
 gem 'ffi', '1.9.0'
 gem 'csv_shaper'
@@ -57,14 +57,14 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara'
+  gem 'capybara', '2.2.0'
   gem 'poltergeist'
-  gem 'launchy'
+  gem 'launchy', '2.4.2'
 
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'webmock', :require => false
-  gem 'timecop'
+  gem 'timecop', '0.7.0'
 
   gem 'coveralls', require: false
 end
