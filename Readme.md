@@ -28,6 +28,21 @@ Report issues/feature requests on [GitHub Issues](http://github.com/andrew/24pul
 
 New to Ruby? No worries!
 
+#### Using Vagrant
+
+The Vagrant box is a virtual machine (VM) that comes with ruby 2.0, postgres and bundler already installed.
+
+Install [Virtualbox](https://www.virtualbox.org/) and [Vagrant](http://www.vagrantup.com/). Then start the Vagrant box:
+
+```bash
+cd /path/to/24pullrequests
+vagrant up
+vagrant ssh
+cd /vagrant
+```
+
+#### Local Install
+
 First things first, you'll need to install Ruby 2.0. I recommend using the excellent [rbenv](https://github.com/sstephenson/rbenv),
 and [ruby-build](https://github.com/sstephenson/ruby-build)
 
@@ -43,11 +58,18 @@ done easily using [Homebrew](http://mxcl.github.com/homebrew/) or by using http:
 brew install postgres
 ```
 
-Now, let's install the gems from the `Gemfile` ("Gems" are synonymous with libraries in other
+Then, install bundler so we can install our gems from the `Gemfile` ("Gems" are synonymous with libraries in other
 languages).
 
 ```bash
 gem install bundler && rbenv rehash
+```
+
+#### Common Steps
+
+At this point you should have ruby 2.0, postgres installed on your local OS or a running Vagrant box. Now, let's install the gems.
+
+```bash
 bundle install
 ```
 
