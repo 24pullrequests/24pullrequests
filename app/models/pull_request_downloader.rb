@@ -16,7 +16,7 @@ class PullRequestDownloader
 
   def download_pull_requests
     begin
-      events = github_client.user_events(login)
+      events = Octokit.user_events(login)
       events.select do |e|
         event_date = e['created_at']
         e.type == 'PullRequestEvent' &&
