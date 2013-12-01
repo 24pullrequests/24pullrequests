@@ -164,8 +164,8 @@ class User < ActiveRecord::Base
     nickname
   end
 
-  def download_pull_requests
-    pull_request_downloader.pull_requests.each do |pr|
+  def download_pull_requests(access_token = token)
+    Rails.application.config.pull_request_downloader.call(nickname, access_token).pull_requests.each do |pr|
       pull_requests.create_from_github(pr) unless pull_requests.find_by_issue_url(pr['payload']['pull_request']['issue_url'])
     end
   end
