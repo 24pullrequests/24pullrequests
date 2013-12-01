@@ -18,6 +18,41 @@ pt_br:
       text: "Integre sua conta do Twitter"
       tooltip: "Se você integrar sua conta do Twitter, nós iramos tweetar sempre que você fizer em pull request!"
 
+  navigation:
+    all_projects: "Todos os projetos"
+    my_suggestions: "Minhas sugestões"
+    dashboard: "Dashboard"
+    profile: "Perfil"
+    preferences: "Preferências"
+    gifted_code: "Presentes"
+    manage_projects: "Organizar projetos"
+    logout: "Logout"
+    homepage: "24 Pull Requests"
+
+  homepage:
+    title: "24 Pull Requests"
+    description: Giving back little gifts of code for Christmas
+    about: "What's it all about?"
+    about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your pull requests.</p><p>Log in with your GitHub account and we'll track and highlight all your pull requests and suggest projects to work on.</p>"
+    greeting: "'Tis the season"
+    give_to_open_source: You've been benefiting from the use of open source projects all year, now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving pull requests!
+    q_n_a: Questions & Answers
+    badges:
+      title: Earn Coderwall badges
+      description: We've teamed up with coderwall and created some kickass badges to unlock for participating.
+      involved_link: 'Participant - Get involved, send at least one pull request before Christmas'
+      amazing: "Continous Sync - You're an open source machine, send 24 pull requests during December"
+    involved:
+      title: Get involved
+      description: There are loads of ways to get involved in an open source project, improving documentation, helping fix existing issues and bugs, improving code quality and test coverage or adding missing features.
+      special_page: "We've prepared a %{contributing_path}, where you can find some information about contributing."
+      take_a_look: If you are new to open source, please take a look.
+    profile:
+      title: Build your profile
+      description: Contributing to open source projects is also a great way to build your profile in the community and improve your CV.
+      getting_started: It's really easy to get started, even small contributions can be really valuable to a project.
+    join_the_chat: Join the chat on IRC, #%{link_to_chat}, at freenode.
+
   information:
     title: "24 Pull Requests %{year} está entre nós"
     last_year_stats: "Em %{year}, durante 24 dias, <b>%{developers}</b> desenvolvedores fizeram <b>%{pull_requests}</b> pull requests para <b>%{projects}</b> diferentes projetos open source."
@@ -46,21 +81,19 @@ pt_br:
   edit: "Editar"
   everything: "Tudo"
   about_us: "Sobre"
-  homepage: "24 Pull Requests"
   cancel: "Cancelar"
+  search: "Buscar"
+
+  locale:
+    language: "Idiomas"
+    en: "English"
+    el: "Greek"
+    es: "Spanish"
+    pt_br: "Brazilian Portuguese"
 
   user:
     grinchy_message: "%{user} você está parecendo um grinch em %{year}, não fez nenhum pull requests de presente. Bah humbug!"
     pull_request_count: "%{user} fez %{count} pull requests até agora, em %{year}"
-    nav:
-      all_projects: "Todos os projetos"
-      dashboard: "Dashboard"
-      profile: "Perfil"
-      preferences: "Preferências"
-      gifted_code: "Presentes"
-      my_suggestions: "Minhas sugestões"
-      manage_projects: "Organizar projetos"
-      logout: "Logout"
 
   developers_using_language: "Desenvolvedores usando %{language}"
   developers_involved: "Desenvolvedores participantes"
@@ -71,6 +104,7 @@ pt_br:
     synchronize: "Sincronizar Pull Requests"
     help_out: "Não consegue pensar em um projeto para ajudar? Nós juntamos uma lista de projetos populares para você"
     no_pull_requests: "Você ainda não enviou nenhum pull request, o que você está esperando?!"
+    synchronize: "Sincronizar Pull Requests"
 
   language:
     projects_count: "%{count} %{language} projetos"
@@ -91,17 +125,23 @@ pt_br:
     for_you: "Sugeridos por você"
     suggestion:
       edit: "Editar sugestão"
+      update: "Atualizar projeto"
     suggest: "Não existem projetos nesta linguagem ainda, Porque não %{suggest_link}"
     new:
       title: "Sugerir um projeto"
       info: "Uma das maneiras de incentivar a participação da comunidade open source é deixar que os usuários saibam quais projetos valem a pena contribuir. Nós selecionamos os nossos favoritos, mas estamos sempre abertos a sugestões. Tem alguma ideia? Compartilhe conosco abaixo!"
       suggestion: "Tem uma sugestão para este projeto? Somos todo ouvidos! Se existe algo que você gostaria de ver acertado, fique a vontade para abrir um"
       issue: "issue"
+    edit:
+      title: "Editar sugestão"
+    admin:
+      title: "Organizar projetos"
+      search: "Buscar por repositório do Github"
 
   preferences:
       title: "Configure suas preferências de email"
       frequency_message: "Na frequência que você escolher, até que o projeto esteja finalizado, nós enviaremos para você emails sugerindo alguns projetos que você pode contribuir. Como bônus, nós tomaremos a liberdade de personalizar nossas sugestões com base nas linguaguens mais utilizadas por você na sua conta do Github. Como alternativa você pode escolher as linguagens abaixo"
-      delete_account: "Você que apagar sua conta?"
+      delete: "Você que apagar sua conta?"
       information: "Você pode trocar suas preferências de email a qualquer momento."
       twitter: "Twitter"
       languages: "Quais linguagens você conhece?"
@@ -115,6 +155,8 @@ pt_br:
     count: "%{count} Pull Requests feitos!"
     language:
       count: "%{count} pull requests feitos em %{language}!"
+    latest:
+      count: "Ultimos Pull Requests (%{count} no total)"
 
   delete_account:
     title: "Deletar sua conta"
