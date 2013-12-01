@@ -59,6 +59,12 @@ bundle exec rake db:create:all
 bundle exec rake db:migrate
 ```
 
+And we can also add some sample data with the **seed** task
+
+```bash
+bundle exec rake db:seed
+```
+
 Almost there! Now all we have to do is start up the Rails server and point
 our browser to <http://localhost:3000>
 
