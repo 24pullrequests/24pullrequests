@@ -344,11 +344,12 @@ hr{
 }
 
 h1, h2, h3, h4{
-  text-transform:uppercase;
+  text-transform: uppercase;
   font-family:"proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   .btn{
-	font-size: 15px;
-	font-weight: normal;
+    text-transform: none;
+    font-size: 15px;
+    font-weight: normal;
     margin-bottom:4px;
     margin-left:10px;
   }
