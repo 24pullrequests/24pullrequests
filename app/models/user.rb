@@ -171,12 +171,12 @@ class User < ActiveRecord::Base
   end
 
   def twitter
-    @twitter ||= Twitter::Client.new(
-      :consumer_key       => ENV['TWITTER_KEY'],
-      :consumer_secret    => ENV['TWITTER_SECRET'],
-      :oauth_token        => twitter_token,
-      :oauth_token_secret => twitter_secret
-    )
+    @twitter ||= client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = ENV['TWITTER_KEY']
+      config.consumer_secret     = ENV['TWITTER_SECRET']
+      config.access_token        = twitter_token
+      config.access_token_secret = twitter_secret
+    end
   end
 
   def unspent_pull_requests
