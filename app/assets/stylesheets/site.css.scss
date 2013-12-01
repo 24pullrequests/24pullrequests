@@ -1,10 +1,16 @@
 @import 'variables.css.scss';
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body{
   background-color: $header-background;
   margin:0;
   padding:0;
   overflow-x: hidden;
+  margin-bottom: 175px;
 }
 
 a{
@@ -155,7 +161,9 @@ article {
 }
 
 footer {
-  position:relative;
+  bottom: 0;
+  height: 175px;
+  position:absolute;
   width: 100%;
 
   .dark{
