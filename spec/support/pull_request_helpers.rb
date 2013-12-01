@@ -5,7 +5,11 @@ module PullRequestHelpers
       'payload' => {
         'pull_request' => {
           'title'      => Faker::Lorem.words.first,
-          'issue_url'  => Faker::Internet.url,
+          '_links' => {
+            'html' => {
+              'href' => Faker::Internet.url
+            }
+          },
           'created_at' => DateTime.now.to_s,
           'state'      => 'open',
           'body'       => Faker::Lorem.paragraphs.join('\n'),

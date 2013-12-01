@@ -11,7 +11,7 @@ describe PullRequest do
 
     subject { user.pull_requests.create_from_github(json) }
     its(:title)      { should eq json['payload']['pull_request']['title'] }
-    its(:issue_url)  { should eq json['payload']['pull_request']['issue_url'] }
+    its(:issue_url)  { should eq json['payload']['pull_request']['_links']['html']['href'] }
     its(:created_at) { should eq json['payload']['pull_request']['created_at'] }
     its(:state)      { should eq json['payload']['pull_request']['state'] }
     its(:body)       { should eq json['payload']['pull_request']['body'] }
@@ -23,8 +23,8 @@ describe PullRequest do
       let(:user) { create :user, :twitter_token => 'foo', :twitter_secret => 'bar' }
 
       it 'tweets the pull request' do
-        Twitter::Client.any_instance.should_receive(:update)
-          .with(I18n.t 'pull_request.twitter_message', :issue_url => json['payload']['pull_request']['issue_url'])
+        user.twitter.should_receive(:update)
+          .with(I18n.t 'pull_request.twitter_message', :issue_url => json['payload']['pull_request']['_links']['html']['href'])
         user.pull_requests.create_from_github(json)
       end
     end
