@@ -21,12 +21,7 @@ gem 'anjlab-bootstrap-rails', '~> 2.3.1', :require => 'bootstrap-rails'
 gem 'simple_form', '3.0.0'
 gem 'rack-google-analytics'
 gem 'ffi', '1.9.0'
-gem 'csv_shaper'
-
-group :production do
-  gem 'unicorn'
-  gem 'foreman'
-end
+gem 'csv_shaper'  
 
 group :assets do
   gem 'sass-rails'
@@ -72,6 +67,8 @@ group :test do
 end
 
 group :production do
+  gem 'unicorn'
+  gem 'foreman'
   gem 'memcachier'
   gem 'dalli'
   gem 'rails_12factor'
