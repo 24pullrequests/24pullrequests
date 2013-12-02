@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131202171451) do
+ActiveRecord::Schema.define(version: 20131202234014) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,19 @@ ActiveRecord::Schema.define(version: 20131202171451) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.boolean  "inactive"
+  end
+
+  create_table "pull_request_archives", force: true do |t|
+    t.string   "title"
+    t.string   "issue_url"
+    t.text     "body"
+    t.string   "state"
+    t.boolean  "merged"
+    t.datetime "created_at"
+    t.string   "repo_name"
+    t.integer  "user_id"
+    t.string   "language"
+    t.integer  "comments_count", default: 0
   end
 
   create_table "pull_requests", force: true do |t|
