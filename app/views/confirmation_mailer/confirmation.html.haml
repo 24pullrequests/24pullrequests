@@ -3,7 +3,8 @@
 %p
   You entered this email address as your contact address for 24pullrequests.com. Please confirm this by clicking the link below:
 
-  http://24pullrequests.com/confirm/#{@user.confirmation_token}
+  - confirm_link = "http://24pullrequests.com/confirm/#{@user.confirmation_token}"
+  %a= link_to confirm_link, confirm_link
 
 %p
   If you didn't add or change your email on 24pullrequests.com recently then please ignore this email.
