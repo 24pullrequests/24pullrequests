@@ -50,8 +50,8 @@ en:
     profile:
       title: Build your profile
       description: Contributing to open source projects is also a great way to build your profile in the community and improve your CV.
-    join_the_chat: Join the chat on IRC, #%{link_to_chat}, at freenode.
       getting_started: It's really easy to get started. Even small contributions can be really valuable to a project.
+    join_the_chat: "Join the chat on IRC, #%{link_to_chat}, at freenode."
 
   information:
     title: "24 Pull Requests %{year} is upon us"
