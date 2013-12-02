@@ -36,11 +36,7 @@ module Tfpullrequests
 
     config.i18n.default_locale = :en
     config.i18n.fallbacks = true
-<<<<<<< HEAD
     config.i18n.available_locales = [ :en, :el, :es, :pt_br, :fi, :fr ]
-=======
-    config.i18n.available_locales = [ :en, :el, :es, :fi, :pt_br ]
->>>>>>> 08857f88ffb7888be0ff7db0b71467e912fe2c7f
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
