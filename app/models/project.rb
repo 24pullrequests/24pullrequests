@@ -12,7 +12,7 @@ class Project < ActiveRecord::Base
                "Logtalk", "Lua", "M", "Markdown", "Matlab", "Max", "Mirah",
                "Monkey", "MoonScript", "Nemerle", "Nimrod", "Nu",
                "Objective-C", "Objective-J", "OCaml", "Omgrofl", "ooc", "Opa",
-               "OpenEdge ABL", "Parrot", "Pascal", "Perl", "PHP", "Pike",
+               "OpenEdge ABL", "Parrot", "Pascal", "Perl", "Perl 6", "PHP", "Pike",
                "PogoScript", "PowerShell", "Processing", "Prolog", "Puppet",
                "Pure Data", "Python", "R", "Racket", "Ragel in Ruby Host",
                "Rebol", "Rouge", "Ruby", "Rust", "Scala", "Scheme", "Scilab",
