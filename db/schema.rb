@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131201095112) do
+ActiveRecord::Schema.define(version: 20131202171451) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,21 @@ ActiveRecord::Schema.define(version: 20131201095112) do
   end
 
   add_index "gifts", ["user_id", "pull_request_id"], name: "index_gifts_on_user_id_and_pull_request_id", unique: true, using: :btree
+
+  create_table "organisations", force: true do |t|
+    t.string   "login"
+    t.string   "avatar_url"
+    t.integer  "github_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "organisations", ["login"], name: "index_organisations_on_login", unique: true, using: :btree
+
+  create_table "organisations_users", force: true do |t|
+    t.integer "user_id"
+    t.integer "organisation_id"
+  end
 
   create_table "projects", force: true do |t|
     t.string   "name"
