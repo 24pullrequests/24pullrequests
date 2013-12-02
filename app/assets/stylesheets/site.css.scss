@@ -5,12 +5,18 @@ html {
   min-height: 100%;
 }
 
-body{
-  background-color: $header-background;
+body {
+  background: $header-background;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   margin-bottom: 175px;
+}
+
+@media (min-width: 767px) {
+  body {
+    background: $header-background url(/assets/snow-bg.png) 50% 0 no-repeat;
+  }
 }
 
 a {
@@ -404,14 +410,6 @@ h1, h2, h3, h4 {
     }
   }
 }
-
-/* snow animation - START */
-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-/* snow animation - END */
 
 .alert-info {
   h4 {
