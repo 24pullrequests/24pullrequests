@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   has_many :skills,        :dependent => :destroy
   has_many :gifts,         :dependent => :destroy
   has_many :projects
+  has_and_belongs_to_many :organisations
 
   scope :by_language, -> (language) { joins(:skills).where("lower(language) = ?", language.downcase) }
 
@@ -13,7 +14,7 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :skills, :reject_if => proc { |attributes| !Project::LANGUAGES.include?(attributes['language']) }
 
   before_save :check_email_changed
-  after_create :download_pull_requests, :estimate_skills
+  after_create :download_pull_requests, :estimate_skills, :download_user_organisations
 
   validates_presence_of :email, :if => :send_regular_emails?
   validates_format_of :email, :with => /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, :allow_blank => true, :on => :update
@@ -167,6 +168,14 @@ class User < ActiveRecord::Base
 
   def to_param
     nickname
+  end
+
+  def download_user_organisations
+    pull_request_downloader.user_organisations.each do |o|
+      organisation = Organisation.create_from_github(o)
+      organisation.users << self
+      organisation.save
+    end
   end
 
   def download_pull_requests(access_token = token)

@@ -9,6 +9,10 @@ class PullRequestDownloader
     @pull_requests ||= download_pull_requests
   end
 
+  def user_organisations
+    @user_organisations ||= download_user_organisations
+  end
+
   private
   def github_client
     @github_client ||= Octokit::Client.new(:login => login, :access_token => oauth_token, :auto_paginate => true)
@@ -30,4 +34,14 @@ class PullRequestDownloader
       []
     end
   end
+
+  def download_user_organisations
+    begin
+      github_client.organizations(login)
+    rescue
+      puts 'likely a Github api error occurred'
+      []
+    end
+  end
+
 end

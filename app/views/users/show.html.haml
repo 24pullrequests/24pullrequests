@@ -22,6 +22,12 @@
       %h4
         =t("preferred_languages")
       = @user.languages.to_sentence
+    - if @user.organisations.any?
+      %h4
+        =t('organisations')
+      %ul#organisations
+        - for organisation in @user.organisations
+          = render :partial => 'users/organisation', :locals => {:organisation => organisation}
 
   .span2
     .avatar= image_tag(gravatar_url(@user.gravatar_id, 100), :width => 100, :alt => @user.nickname)
