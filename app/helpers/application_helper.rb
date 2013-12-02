@@ -48,10 +48,6 @@ module ApplicationHelper
   end
 
   def available_locales
-<<<<<<< HEAD
     [ 'en', 'es', 'el', 'pt_br', 'fi', 'fr' ]
-=======
-    [ 'en', 'es', 'el','fi', 'pt_br' ]
->>>>>>> 08857f88ffb7888be0ff7db0b71467e912fe2c7f
   end
 end
