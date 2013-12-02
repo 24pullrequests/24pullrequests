@@ -1,8 +1,10 @@
 module ApplicationHelper
   def parameterize_language(lang)
-    lang.gsub(/\+/, 'p')
-        .gsub(/\#/, 'sharp')
-        .parameterize
+    if lang
+      lang.gsub(/\+/, 'p')
+          .gsub(/\#/, 'sharp')
+          .parameterize
+    end
   end
 
   def language_link(language, label=nil)
