@@ -44,7 +44,6 @@
     / Size should be 32 x 32 pixels
     = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
   %body
-    %canvas#canvas
     = content_for :body_open unless content_for(:body_open).nil?
 
     %a.forkme{ :href => "https://github.com/andrew/24pullrequests", :target => '_blank'}
