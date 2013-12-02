@@ -24,12 +24,12 @@ fi:
     dashboard: Dashboard
     profile: Profiili 
     preferences: Preferences
-    gifted_code: Gifted Code
+    gifted_code: Lahjoitettu Koodi 
     manage_projects: Hallitse Projekteja 
     logout: Kirjaudu Ulos 
 
   homepage:
-    title: "24 Pull Requests"
+    title: "24 Pull Requestia"
     description: Giving back little gifts of code for Christmas
     about: "Mistä tästä kaikesta on kyse?"
     about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your pull requests.</p><p>Log in with your GitHub account and we'll track and highlight all your pull requests and suggest projects to work on.</p>"
@@ -88,7 +88,7 @@ fi:
     en: Englanti 
     el: Kreikka 
     es: Espanja 
-    pt_br: Brazilian Portuguese
+    pt_br: Brasilianportugali 
     fi: Suomi
 
   user:
@@ -121,7 +121,7 @@ fi:
     help_out: Can't think of a project to contribute to? We've collected a list of brilliant open source projects who would love your pull requests.
     suggest_new: You can also suggest projects that should be added to the list, or add your own project if you would like some help with it.
     filter_by_language: "Suodata kielen mukaan:"
-    for_you: Suggested for you
+    for_you: Sinulle ehdotettuja 
     suggestion:
       edit: Muokkaa ehdotuksia 
       update: Päivitä projektia 
@@ -155,12 +155,12 @@ fi:
     language:
       count: "%{count} pull requestia tehty %{language} kielellä!"
     latest:
-      count: Latest Pull Requests (%{count} total)
+      count: Uusimmat Pull Requestit (%{count} total)
 
   delete_account:
     title: Poista tilisi 
     are_you_sure: Haluamme vain varmistaa että todella haluat poistaa tilisi, tämä poistaa profiilisi ja kaikki pull requestit sivuilta, mutta ehdottamasi projektit jäävät.
-    notification_info: If you simply want to stop receiving email notifications you can change your  %{email_preferences_link}.
+    notification_info: Jos haluat lopettaa pelkästään sähköpostien vastaan ottamiset voit vaihtaa sinun  %{email_preferences_link}.
     confirm: Hyväksy poisto 
     cancel: Muutin mieleni, vie minut takaisin!
 
