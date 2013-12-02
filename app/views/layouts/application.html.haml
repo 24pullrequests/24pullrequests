@@ -66,7 +66,11 @@
           %ul.dropdown-menu.pull-right{ role:"menu", "aria-labelledby" => "dropdownMenu1"}
             - available_locales.each do |locale|
               %li{ role: "presentation"}
-                %a{role: "menuitem", href: "/locale/#{locale}"}=t("locale.#{locale}")
+                =link_to locale_path(locale), role: "menuitem" do
+                  =image_tag "flags/#{locale}.png", class: "flag"
+                  =t("locale.#{locale}")
+            %li{ role: "presentation"}
+              =link_to t("locale.translate"), "https://github.com/andrew/24pullrequests/wiki/Adding-a-locale"
 
     - if logged_in?
       = render :partial => 'user_nav'

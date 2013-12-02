@@ -73,6 +73,7 @@ en:
   suggest_project: Suggest a project
   no_suggestions: You haven't suggested any projects yet.
   preferred_languages: Preferred Languages
+  organisations: Member of...  
   view_all: View All
   more: More
   change: Change
@@ -84,6 +85,7 @@ en:
   search: Search
 
   locale:
+    translate: Translate into your language!
     language: Language
     en: English
     el: Greek
