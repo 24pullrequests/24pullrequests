@@ -31,7 +31,7 @@ if Rails.env.development?
   puts 'Inserting some test data'
 
   USERS.times do
-    user = create :user, :gravatar_id => GRAVATARS.sample
+    user = create :user, :provider => 'developer2', :gravatar_id => GRAVATARS.sample
     user.uid = user.nickname # For developer2 omniauth
     user.save!
     PULL_REQUESTS.to_a.sample.times do

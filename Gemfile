@@ -6,8 +6,6 @@ gem 'rails', '4.0.1'
 gem 'jquery-rails'
 
 gem 'pg'
-gem 'unicorn'
-gem 'foreman'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'omniauth-twitter'
@@ -57,8 +55,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara', '2.2.0'
-  gem 'poltergeist'
+  gem 'poltergeist', '~> 1.4.0'
   gem 'launchy', '2.4.2'
 
   gem 'database_cleaner'
@@ -70,6 +67,8 @@ group :test do
 end
 
 group :production do
+  gem 'unicorn'
+  gem 'foreman'
   gem 'memcachier'
   gem 'dalli'
   gem 'rails_12factor'

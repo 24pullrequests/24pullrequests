@@ -7,6 +7,7 @@ describe 'LanguagesRequests' do
 
     before do
       6.times { create :project, main_language: "Haskell" }
+      1.times { create :project, inactive: true, main_language: "Haskell" }
       3.times { create :skill, language: 'Haskell' }
       9.times { create :pull_request, language: "Haskell" }
 

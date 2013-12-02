@@ -11,7 +11,7 @@ class GiftsController < ApplicationController
     gift_form = GiftForm.new(:gift           => current_user.new_gift,
                              :pull_requests  => current_user.unspent_pull_requests,
                              :giftable_dates => Gift.giftable_dates,
-                             :date => params.permit(:date))
+                             :date => params['date'])
 
     render :new, :locals => { :gift_form => gift_form }
   end
@@ -73,10 +73,10 @@ class GiftsController < ApplicationController
   end
 
   def pull_request_id
-    params[:gift][:pull_request_id]
+    params[:gift].permit(:pull_request_id)[:pull_request_id]
   end
 
   def post_params
-    params[:gift].slice(:date)
+    params[:gift].permit(:date).slice(:date)
   end
 end

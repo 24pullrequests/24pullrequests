@@ -3,7 +3,7 @@ class PullRequest  < ActiveRecord::Base
 
   validates_uniqueness_of :issue_url, :scope => :user_id
 
-  after_create :post_tweet
+  #after_create :post_tweet
   after_create :autogift
 
   has_many :gifts
@@ -23,7 +23,7 @@ class PullRequest  < ActiveRecord::Base
     def initialize_from_github(json)
       {
         :title          => json['payload']['pull_request']['title'],
-        :issue_url      => json['payload']['pull_request']['issue_url'],
+        :issue_url      => json['payload']['pull_request']['_links']['html']['href'],
         :created_at     => json['payload']['pull_request']['created_at'],
         :state          => json['payload']['pull_request']['state'],
         :body           => json['payload']['pull_request']['body'],
@@ -44,7 +44,12 @@ class PullRequest  < ActiveRecord::Base
   end
 
   def post_tweet
-    user.twitter.update(I18n.t 'pull_request.twitter_message', :issue_url => issue_url) if user && user.twitter_linked?
+    begin
+      user.twitter.update(I18n.t 'pull_request.twitter_message', :issue_url => issue_url) if user && user.twitter_linked?
+    rescue => e
+      puts e.inspect
+      puts 'likely a Twitter api error occurred'
+    end
   end
 
   def gifted_state

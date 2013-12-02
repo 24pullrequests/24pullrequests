@@ -28,7 +28,6 @@ describe 'Projects' do
       click_on 'Submit Project'
 
       click_on 'My Suggestions'
-      sleep (1.5)
       should have_content("akira/24pullrequests")
     end
   end
@@ -114,6 +113,12 @@ describe 'Projects' do
 
         should have_content "Project updated successfully!"
         page.should have_css('.python')
+      end
+
+      it "can deactives a project" do
+        first(:link, "Deactive").click
+
+        should have_content "#{user_project.name} has been deactivated."
       end
     end
 

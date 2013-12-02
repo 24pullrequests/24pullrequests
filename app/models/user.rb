@@ -26,6 +26,12 @@ class User < ActiveRecord::Base
     create!(extract_info(hash))
   end
 
+  def assign_from_auth_hash(hash)
+    # do not update the email address in case the user has updated their
+    # email prefs and used a new email
+    update_attributes(self.class.extract_info(hash).except(:email))
+  end
+
   def self.find_by_auth_hash(hash)
     conditions = extract_info(hash).slice(:provider, :uid)
     where(conditions).first
@@ -66,7 +72,7 @@ class User < ActiveRecord::Base
   end
 
   def suggested_projects
-    Project.where(:main_language => languages).not_owner(nickname)
+    Project.active.where(main_language: languages).not_owner(nickname)
   end
 
   def estimate_skills
@@ -164,19 +170,19 @@ class User < ActiveRecord::Base
     nickname
   end
 
-  def download_pull_requests
-    pull_request_downloader.pull_requests.each do |pr|
-      pull_requests.create_from_github(pr) unless pull_requests.find_by_issue_url(pr['payload']['pull_request']['issue_url'])
+  def download_pull_requests(access_token = token)
+    Rails.application.config.pull_request_downloader.call(nickname, access_token).pull_requests.each do |pr|
+      pull_requests.create_from_github(pr) unless pull_requests.find_by_issue_url(pr['payload']['pull_request']['_links']['html']['href'])
     end
   end
 
   def twitter
-    @twitter ||= Twitter::Client.new(
-      :consumer_key       => ENV['TWITTER_KEY'],
-      :consumer_secret    => ENV['TWITTER_SECRET'],
-      :oauth_token        => twitter_token,
-      :oauth_token_secret => twitter_secret
-    )
+    @twitter ||= Twitter::REST::Client.new do |config|
+      config.consumer_key        = ENV['TWITTER_KEY']
+      config.consumer_secret     = ENV['TWITTER_SECRET']
+      config.access_token        = twitter_token
+      config.access_token_secret = twitter_secret
+    end
   end
 
   def unspent_pull_requests

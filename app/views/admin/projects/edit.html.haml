@@ -1,4 +1,4 @@
-%h3 Edit project
+%h3=t("projects.edit.title")
 
 = simple_form_for @project, url: admin_project_path(@project), :html => {:class => 'form-horizontal'} do |form|
   = form.input :name, :input_html => {:class => "span4"}, :label => 'Project Name'
@@ -7,6 +7,6 @@
   = form.input :main_language, :input_html => {:class => "span4", :data => {:provide => "typeahead", :source => Project::LANGUAGES}, :autocomplete => 'off', :placeholder => "Ruby, C++, Java, Python..."}
   .control-group
     .controls
-      = form.button :submit, 'Update Project'
+      = form.button :submit, t("projects.suggestion.update")
       or
       = link_to t("cancel"), admin_projects_path
