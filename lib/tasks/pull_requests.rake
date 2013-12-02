@@ -12,6 +12,6 @@ task :download_pull_requests => :environment do
   end
 
   User.all.each do |user|
-    user.download_pull_requests(load_user.token)
+    user.download_pull_requests(load_user.token) rescue nil
   end
 end
