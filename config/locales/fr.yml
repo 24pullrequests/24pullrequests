@@ -1,4 +1,4 @@
-en:
+fr:
   activerecord:
     errors:
       models:
@@ -17,6 +17,41 @@ en:
     link_account:
       text: "Lier votre compte Twitter"
       tooltip: "Si vous liez votre compte Twitter, nous posterons un tweet à chaque pull request que vous ouvrirez!"
+
+  navigation:
+    all_projects: Tous les projets
+    my_suggestions: Mes suggestions
+    dashboard: Dashboard
+    profile: Profile
+    preferences: Préferences
+    gifted_code: Gifted Code
+    manage_projects: Gérer les projets
+    logout: Déconnexion
+    homepage: accueil
+
+  homepage:
+    title: "24 Pull Requests"
+    description: Faire des petits cadeaux de code pour Noël
+    about: "Qu'est ce que c'est?"
+    about_text: "<p>24 Pull Requests est une initiative annuelle pour encourager les développeurs du monde entier à ouvrir une pull request chaque jour en Décembre jusqu'à Noël.</p> <p>Ce site aide à promouvoir le projet, mettre en avant pourquoi, comment et où ouvrir vos pull requests.</p><p>Connectez vous avec votre ccompte GitHub et nous suivrons et mettrons en avant vos pull requests et suggérerons des projets sur lequels travailler.</p>"
+    greeting: "C'est la saison"
+    give_to_open_source: Vous avez bénéficier de projets open source toute l'année, maintenant il est l'heure de remercier les contributeurs de ces projets, et mon petit doigt me dit qu'ils adorent recevoir des pull requests!
+    q_n_a: Questions & Réponses
+    badges:
+      title: Gagnez des badges Coderwall
+      description: Nous nous sommes associé avec coderwall et avons créé des badges que vous pouvez décrocher en participant.
+      involved_link: 'Participant - Participez, envoyez au moins une pull request avant Noël'
+      amazing: "Continous Sync - Vous êtes une machine à open source, envoyez 24 pull requests en Décembre"
+    involved:
+      title: Participez
+      description: Il y a de nombreuses manières de s'impliquer dans un projet open source, améliorer la documentation, aider à corriger des bugs, améliorer la qualité du code et des tests, ou ajouter de nouvelles fonctionnalités.
+      special_page: "Nous avons préparé un %{contributing_path}, où vous pouvez trouver des informations sur comment contribuer."
+      take_a_look: Si l'open source est nouveau pour vous, vous pouvez y jeter un oeil.
+    profile:
+      title: Créez votre profile
+      description: Contribuer à des projets open source est également un bon moyen de construire votre profile dans la communauté et d'améliorer votre CV.
+      getting_started: Il est très facile de commencer, même de petites contributions peuvent aider grandement un projet.
+    join_the_chat: Rejoignez le chat sur IRC, #%{link_to_chat}, sur freenode.
 
   information:
     title: "24 Pull Requests %{year} arrive"
@@ -46,8 +81,15 @@ en:
   edit: Modifier
   everything: Tout
   about_us: A propos
-  homepage: acccueil
   cancel: Annuler
+  search: Rechercher
+
+  locale:
+    language: Langage
+    en: Anglais
+    el: Grecque
+    es: Espagnol
+    fr: Français
 
   user:
     grinchy_message: "%{user} est un grinch en %{year} et n'a ouvert aucune pull requests. Escrot!"
@@ -76,7 +118,7 @@ en:
   projects:
     claim: Des projets que vous avez suggéré ne sont pas dans la liste? Réclamez les!
     help_out: Vous ne trouvez pas de projet auquel contribuer? Nous avons collecté une liste de projet open source qui adoreraient vos pull requests.
-    suggest_new: "Vous pouvez aussi suggérer des projets qui devraient être ajoutés à la liste, ou ajouter votre propre projet si vous ameriez avoir de l'aide".
+    suggest_new: "Vous pouvez aussi suggérer des projets qui devraient être ajoutés à la liste, ou ajouter votre propre projet si vous ameriez avoir de l'aide."
     filter_by_language: "Filtrer par Language:"
     for_you: Suggérés pour vous
     suggestion:
@@ -87,6 +129,11 @@ en:
       info: Une des manières d'encourager la participation dans la communauté open source est de faire savoir aux utilisateurs quels projets populaires pourraient bénéficier de contributions. Nous avons sélectionné nos favoris, mais nous somme toujours ouverts aux suggestions. Vous avez des idées? Partagez-les!
       suggestion: Vous avez une suggestion pour ce projet? Nous sommes à l'écoute! Si vous voyez quelque chose que vous aimeriez voir corrigé, n'hésitez pas à ouvrir une
       issue: issue
+    edit:
+      title: Modifier une suggestion
+    admin:
+      title: Gérer les projets
+      search: Rechercher un repo GitHub
 
   preferences:
       title: Préférences d'Email
@@ -105,6 +152,8 @@ en:
     count: "%{count} Pull Requests créées!"
     language:
       count: "%{count} pull requests créées en %{language}!"
+    latest:
+      count: Dernières Pull Requests (%{count} total)
 
   delete_account:
     title: Supprimer votre compte
