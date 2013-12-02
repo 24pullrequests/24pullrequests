@@ -48,6 +48,6 @@ module ApplicationHelper
   end
 
   def available_locales
-    [ 'en', 'es', 'el', 'pt_br' ]
+    [ 'en', 'es', 'el','fi', 'pt_br' ]
   end
 end
