@@ -104,7 +104,7 @@ en:
     synchronize: Synchronize Pull Requests
     help_out: Can't think of a project you would like to help out? We've put together a list of popular projects
     no_pull_requests: You've not sent any pull requests, what are you waiting for?!
-    synchronize: Syncrhonize Pull Requests
+    synchronize: Synchronize Pull Requests
 
   language:
     projects_count: "%{count} %{language} Projects"
