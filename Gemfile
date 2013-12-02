@@ -6,8 +6,6 @@ gem 'rails', '4.0.1'
 gem 'jquery-rails'
 
 gem 'pg'
-gem 'unicorn'
-gem 'foreman'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'omniauth-twitter'
@@ -69,6 +67,8 @@ group :test do
 end
 
 group :production do
+  gem 'unicorn'
+  gem 'foreman'
   gem 'memcachier'
   gem 'dalli'
   gem 'rails_12factor'
