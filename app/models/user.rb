@@ -128,7 +128,6 @@ class User < ActiveRecord::Base
 
   def send_notification_email
     return unless confirmed?
-
     if send_daily?
       ReminderMailer.daily(self).deliver
     elsif send_weekly?
@@ -171,7 +170,7 @@ class User < ActiveRecord::Base
   end
 
   def download_pull_requests(access_token = token)
-    Rails.application.config.pull_request_downloader.call(nickname, access_token).pull_requests.each do |pr|
+    pull_request_downloader.pull_requests.each do |pr|
       pull_requests.create_from_github(pr) unless pull_requests.find_by_issue_url(pr['payload']['pull_request']['_links']['html']['href'])
     end
   end
