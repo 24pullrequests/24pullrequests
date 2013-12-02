@@ -3,6 +3,7 @@ Tfpullrequests::Application.routes.draw do
   get '/422', :to => 'errors#unprocessable'
   get '/500', :to => 'errors#internal'
 
+  get "/locale/:locale", to: "dashboards#locale", as: :locale
   resources :gifts
   resources :users
   get '/users/:id/:year', :to => 'users#show'
