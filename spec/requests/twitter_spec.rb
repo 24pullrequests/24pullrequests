@@ -16,7 +16,7 @@ describe 'Twitter' do
       it 'allows the user to link their twitter account' do
         mock_twitter_auth
         click_on 'Link Your Twitter Account'
-        page.should have_content "Your twitter account has been linked! We'll post a tweet whenever you open a pull request."
+        find('.alert').should have_content("Your Twitter account has been linked! We'll post a tweet whenever you open a pull request.")
         user.reload
         user.should be_twitter_linked
       end
@@ -46,7 +46,7 @@ describe 'Twitter' do
           click_on 'Remove Account'
         end
 
-        it { should have_content 'Your twitter account has been removed.' }
+        it { should have_content 'Your Twitter account has been removed.' }
         it { should_not have_link('Remove Account') }
       end
     end
