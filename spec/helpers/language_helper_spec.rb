@@ -8,6 +8,7 @@ describe LanguageHelper do
   describe '#project_count_for_language' do
     it 'returns the number of project using the given language' do
       3.times { create :project, main_language: @language }
+      2.times { create :project, inactive: true, main_language: @language }
 
       helper.project_count_for_language.should eql(3)
     end

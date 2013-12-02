@@ -29,22 +29,37 @@ describe Project do
   end
 
   context "#scopes" do
-    let!(:ruby_project) { FactoryGirl.create(:project, main_language: "Ruby") }
-
     before do
       ["Erlang", "JavaScript"].each { |lan| FactoryGirl.create(:project, main_language: lan)  }
+      2.times { FactoryGirl.create(:project, main_language: "Haskell", inactive: true) }
     end
 
     it "by_language" do
-      Project.by_language("ruby").should eq([ruby_project])
+      project = FactoryGirl.create(:project, main_language: "Ruby")
+
+      Project.by_language("ruby").should eq([project])
+    end
+
+    it "active" do
+      Project.active.count.should eq(2)
     end
   end
 
-  context "finders" do
+  context "#finders" do
     it "#find_by_github_repo" do
       project = create :project, github_url: "http://github.com/elfs/presents"
 
       Project.find_by_github_repo("elfs/presents").should eq(project)
+    end
+  end
+
+  context "#deactive" do
+    let(:project) { FactoryGirl.create(:project) }
+
+    it "sets the project to inactive" do
+      project.deactivate!
+
+      project.reload.inactive.should be_true
     end
   end
 end

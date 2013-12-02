@@ -115,3 +115,27 @@
         ]
       }
     ]
+
+%p Load information for a specific user.
+
+%pre
+  :plain
+    $ curl http://24pullrequests.com/users/andrew.json
+
+    {
+      "id":1,
+      "nickname":"andrew",
+      "gravatar_id":"8ddbf811da78bb0daeeb3cacd7cf743f",
+      "github_profile":"https://github.com/andrew",
+      "twitter_profile":"https://twitter.com/teabass",
+      "pull_requests_count":11,
+      "link":"http://24pullrequests.com/users/andrew",
+      "pull_requests":[
+        {
+          "title":"Daily and weekly reminder email content",
+          "issue_url":"https://github.com/andrew/24pullrequests/issues/66",
+          "repo_name":"andrew/24pullrequests",
+          "body":"Fix all the things!"
+        }
+      ]
+    }

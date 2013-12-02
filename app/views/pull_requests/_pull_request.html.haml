@@ -1,5 +1,5 @@
 = cache pull_request do
-  .pull_request.row-fluid.clearfix
+  .pull_request.row-fluid.clearfix{:class => parameterize_language(pull_request.language)}
     .span12
       = link_to image_tag(gravatar_url(pull_request.user.gravatar_id), :width => 80, :height => 80, :alt => pull_request.user.nickname), pull_request.user.nickname, :rel => 'tooltip', :data => { :original_title => pull_request.user.nickname }, :class => 'image'
       %h4

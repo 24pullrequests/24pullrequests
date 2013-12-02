@@ -1,8 +1,8 @@
 class Project < ActiveRecord::Base
 
   LANGUAGES = ["ABAP", "ActionScript", "Ada", "Apex", "AppleScript", "Arc",
-               "Arduino", "ASP", "Assembly", "Augeas", "AutoHotkey", "Awk",
-               "Boo", "Bro", "C", "C#", "C++", "Ceylon", "CLIPS", "Clojure",
+               "Arduino", "ASP", "Assembly", "Augeas", "AutoHotkey", "Awk", "Bluespec",
+               "Boo", "Bro", "C", "C#", "C++", "Ceylon", "Chisel", "CLIPS", "Clojure",
                "COBOL", "CoffeeScript", "ColdFusion", "Common Lisp", "Coq",
                "CSS", "D", "Dart", "DCPU-16 ASM", "DOT", "Dylan", "eC", "Ecl",
                "Eiffel", "Elixir", "Elm", "Emacs Lisp", "Erlang", "F#",
@@ -31,9 +31,14 @@ class Project < ActiveRecord::Base
 
   scope :not_owner, lambda {|user| where("github_url" != "github.com/#{user}/") }
   scope :by_language, ->(language) { where("lower(main_language) =?", language.downcase) }
+  scope :active, -> { where(inactive: [ false, nil ]) }
 
   def github_repository
     self.github_url.gsub(/^(((https|http|git)?:\/\/(www\.)?)|git@)github.com(:|\/)/i, '').gsub(/(\.git|\/)$/i, '')
+  end
+
+  def deactivate!
+    update_attribute(:inactive, true)
   end
 
   def self.find_by_github_repo(repository)
