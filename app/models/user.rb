@@ -26,6 +26,12 @@ class User < ActiveRecord::Base
     create!(extract_info(hash))
   end
 
+  def assign_from_auth_hash(hash)
+    # do not update the email address in case the user has updated their
+    # email prefs and used a new email
+    update_attributes(self.class.extract_info(hash).except(:email))
+  end
+
   def self.find_by_auth_hash(hash)
     conditions = extract_info(hash).slice(:provider, :uid)
     where(conditions).first
@@ -166,7 +172,7 @@ class User < ActiveRecord::Base
 
   def download_pull_requests(access_token = token)
     Rails.application.config.pull_request_downloader.call(nickname, access_token).pull_requests.each do |pr|
-      pull_requests.create_from_github(pr) unless pull_requests.find_by_issue_url(pr['payload']['pull_request']['issue_url'])
+      pull_requests.create_from_github(pr) unless pull_requests.find_by_issue_url(pr['payload']['pull_request']['_links']['html']['href'])
     end
   end
 

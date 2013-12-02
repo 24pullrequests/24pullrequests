@@ -1,8 +1,10 @@
 module ApplicationHelper
   def parameterize_language(lang)
-    lang.gsub(/\+/, 'p')
-        .gsub(/\#/, 'sharp')
-        .parameterize
+    if lang
+      lang.gsub(/\+/, 'p')
+          .gsub(/\#/, 'sharp')
+          .parameterize
+    end
   end
 
   def language_link(language, label=nil)
@@ -37,5 +39,15 @@ module ApplicationHelper
 
   def projects_in year
     PullRequest.year(year).select(:repo_name).map(&:repo_name).uniq.count
+  end
+
+  def current_path locale=nil
+    path = request.env["REQUEST_PATH"]
+    path += "?locale=#{locale}" if locale.present?
+    path
+  end
+
+  def available_locales
+    [ 'en', 'es', 'el', 'pt_br' ]
   end
 end
