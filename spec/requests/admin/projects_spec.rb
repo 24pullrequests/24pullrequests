@@ -21,8 +21,8 @@ describe 'Admin Projects' do
     end
   end
 
-  describe 'managing projects', js: true do
-    it "search for a project" do
+  describe 'managing projects' do
+    it "search for a project", js: true do
       fill_in "_repository", with: "repo1"
       click_on "Search"
 
@@ -32,7 +32,7 @@ describe 'Admin Projects' do
       should_not have_content "repo2"
     end
 
-    it "editing a project" do
+    it "editing a project", js: true do
       first(:link, "Edit").click
 
       fill_in 'Name', with: 'Pugalicious'
