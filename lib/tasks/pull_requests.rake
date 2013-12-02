@@ -20,3 +20,11 @@ task :download_active_pulls => :environment do
     user.download_pull_requests(load_user.token) rescue nil
   end
 end
+
+desc 'Clean the pulls with empty link'
+task :clean_empty_link_pulls => :environment do
+  PullRequest.year(CURRENT_YEAR).where('issue_url' => nil).each do |pr|
+    pr.gifts.destroy_all
+    pr.destroy
+  end
+end
