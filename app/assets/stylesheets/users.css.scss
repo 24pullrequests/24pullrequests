@@ -23,3 +23,16 @@
   clear: both;
   float: none;
 }
+
+#organisations{
+  margin:0;
+  li{
+    float: left;
+    list-style: none;
+    padding: 5px;
+    width:100px;
+    height:100px;
+    overflow:none;
+    text-align: center;
+  }
+}
