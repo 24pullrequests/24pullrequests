@@ -51,7 +51,7 @@ pt_br:
       title: "Faça seu nome"
       description: "Contrinuir para projetos open source é também uma boa maneira de fazer seu nome dentro da comunidade e melhorar seu CV"
       getting_started: "É realmente muito fácil começar, até mesmo pequenas contribuições podem ter muito valor para um projeto"
-    join_the_chat: "Entre no chat no IRC, #%{link_to_chat}, pelo freenode."
+    join_the_chat: "Entre no chat no IRC, %{link_to_chat}, pelo freenode."
 
   information:
     title: "24 Pull Requests %{year} está entre nós"
