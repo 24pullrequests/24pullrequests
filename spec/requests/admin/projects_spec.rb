@@ -43,10 +43,10 @@ describe 'Admin Projects' do
       should have_content "PUGALICIOUS"
     end
 
-    it "deactives a project" do
-      first(:link, "Deactive").click
+    # it "deactives a project" do
+    #   first(:link, "Deactive").click
 
-      should have_content "#{projects.first.name} has been deactivated."
-    end
+    #   should have_content "#{projects.first.name} has been deactivated."
+    # end
   end
 end
