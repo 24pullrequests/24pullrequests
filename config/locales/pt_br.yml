@@ -31,27 +31,27 @@ pt_br:
 
   homepage:
     title: "24 Pull Requests"
-    description: Giving back little gifts of code for Christmas
-    about: "What's it all about?"
-    about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your pull requests.</p><p>Log in with your GitHub account and we'll track and highlight all your pull requests and suggest projects to work on.</p>"
-    greeting: "'Tis the season"
-    give_to_open_source: You've been benefiting from the use of open source projects all year, now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving pull requests!
-    q_n_a: Questions & Answers
+    description: "Devolvendo pequenos códigos de presente para o Natal"
+    about: "Sobre o que é isso tudo?"
+    about_text: "<p>24 Pull Requests é uma iniciativa anual para encorajar desenvolvedores de todo o planeta a enviar pull requests todos os dias do mês de dezembro até o natal.</p> <p> Este site ajuda a promover esse projeto, destacando porque, como e onde enviar seu pull requests.</p><p>Entre com sua conta do Github e nós vamos monitorar e destacar todos os seus pull requests e seus projetos sugeridos.</p>"
+    greeting: "Ta ai a razão"
+    give_to_open_source: "Você foi beneficiado pelo uso de projetos open source durante todo o ano, agora é a hora de agradecer aos mantenedores desses projetos, e um passarinho me contou que eles adorariam receber pull requests!"
+    q_n_a: "Perguntas & respostas"
     badges:
-      title: Earn Coderwall badges
-      description: We've teamed up with coderwall and created some kickass badges to unlock for participating.
-      involved_link: 'Participant - Get involved, send at least one pull request before Christmas'
-      amazing: "Continous Sync - You're an open source machine, send 24 pull requests during December"
+      title: "Ganhe medalhas da Coderwall"
+      description: "Nós nos jutamos com a coderwall e criamos algumas medalhas bem fodonas para os participates!"
+      involved_link: "Participante - Se envolva, envie pelo menos um pull request antes do natal"
+      amazing: "Continous Sync - Você é uma maquina de pull request, enviou 24 pull requests durante o mês de dezembro"
     involved:
-      title: Get involved
-      description: There are loads of ways to get involved in an open source project, improving documentation, helping fix existing issues and bugs, improving code quality and test coverage or adding missing features.
-      special_page: "We've prepared a %{contributing_path}, where you can find some information about contributing."
-      take_a_look: If you are new to open source, please take a look.
+      title: "Se envolva"
+      description: "Existem várias maneiras de se envolver em um projeto open source, melhorando a documentação, ajudando a acertar problemas e bugs, melhorando a qualidade do código e a cobertura dos testes ou mesmo adicionardo uma funcionalidade nova"
+      special_page: "Nós peparamos uma %{contributing_path}, onde você pode encontrar informações sobre como contribuir."
+      take_a_look: "Se você é novo em projetos open source, por favor, dê uma olhada."
     profile:
-      title: Build your profile
-      description: Contributing to open source projects is also a great way to build your profile in the community and improve your CV.
-      getting_started: It's really easy to get started, even small contributions can be really valuable to a project.
-    join_the_chat: Join the chat on IRC, #%{link_to_chat}, at freenode.
+      title: "Faça seu nome"
+      description: "Contrinuir para projetos open source é também uma boa maneira de fazer seu nome dentro da comunidade e melhorar seu CV"
+      getting_started: "É realmente muito fácil começar, até mesmo pequenas contribuições podem ter muito valor para um projeto"
+    join_the_chat: "Entre no chat no IRC, #%{link_to_chat}, pelo freenode."
 
   information:
     title: "24 Pull Requests %{year} está entre nós"
