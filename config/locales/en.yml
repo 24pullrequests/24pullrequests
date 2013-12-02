@@ -12,11 +12,11 @@ en:
     download:
       tooltip: "Usually we check for pull requests every hour, but you can check now if you really want."
   twitter:
-    account_linked: "Your twitter account has been linked! We'll post a tweet whenever you open a pull request."
-    account_removed: "Your twitter account has been removed."
+    account_linked: "Your Twitter account has been linked! We'll post a tweet whenever you open a pull request."
+    account_removed: "Your Twitter account has been removed."
     link_account:
       text: "Link Your Twitter Account"
-      tooltip: "If you link your twitter account, we'll post a new tweet whenever you open a pull request!"
+      tooltip: "If you link your Twitter account, we'll post a new tweet whenever you open a pull request!"
 
   navigation:
     all_projects: All Projects
@@ -34,22 +34,22 @@ en:
     about: "What's it all about?"
     about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your pull requests.</p><p>Log in with your GitHub account and we'll track and highlight all your pull requests and suggest projects to work on.</p>"
     greeting: "'Tis the season"
-    give_to_open_source: You've been benefiting from the use of open source projects all year, now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving pull requests!
+    give_to_open_source: You've been benefiting from the use of open source projects all year. Now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving pull requests!
     q_n_a: Questions & Answers
     badges:
       title: Earn Coderwall badges
       description: We've teamed up with coderwall and created some kickass badges to unlock for participating.
       involved_link: 'Participant - Get involved, send at least one pull request before Christmas'
-      amazing: "Continous Sync - You're an open source machine, send 24 pull requests during December"
+      amazing: "Continuous Sync - You're an open source machine, send 24 pull requests during December"
     involved:
       title: Get involved
-      description: There are loads of ways to get involved in an open source project, improving documentation, helping fix existing issues and bugs, improving code quality and test coverage or adding missing features.
+      description: "There are loads of ways to get involved in an open source project, improving documentation, helping fix existing issues and bugs, improving code quality and test coverage, or adding missing features."
       special_page: "We've prepared a %{contributing_path}, where you can find some information about contributing."
       take_a_look: If you are new to open source, please take a look.
     profile:
       title: Build your profile
       description: Contributing to open source projects is also a great way to build your profile in the community and improve your CV.
-      getting_started: It's really easy to get started, even small contributions can be really valuable to a project.
+      getting_started: It's really easy to get started. Even small contributions can be really valuable to a project.
     join_the_chat: Join the chat on IRC, %{link_to_chat}, at freenode.
 
   information:
@@ -101,9 +101,8 @@ en:
     christmas_activity: This is where you can see all the activity we've tracked for you in the run up to Christmas.
     give_a_gift: Looks like you haven't gifted any code today. Would you like to gift
     synchronize: Synchronize Pull Requests
-    help_out: Can't think of a project you would like to help out? We've put together a list of popular projects
+    help_out: "Can't think of a project you'd like to help contribute to? We've put together a list of popular projects:"
     no_pull_requests: You've not sent any pull requests, what are you waiting for?!
-    synchronize: Synchronize Pull Requests
 
   language:
     projects_count: "%{count} %{language} Projects"
@@ -135,7 +134,7 @@ en:
       title: Edit Suggestion
     admin:
       title: Manage Projects
-      search: Search by github repository
+      search: Search by GitHub repository
 
   preferences:
       title: Set your Email Preferences
@@ -159,8 +158,8 @@ en:
 
   delete_account:
     title: Delete your account
-    are_you_sure: We just wanted to check that you really do wish to delete your account, this will remove your profile and all pull requests from the site, although any suggested projects will remain.
-    notification_info: If you simply want to stop recieving email notifications you can change your  %{email_preferences_link}.
+    are_you_sure: We just wanted to make sure you really do wish to delete your account. This will remove your profile and all pull requests from the site, although any suggested projects will remain.
+    notification_info: If you simply want to stop receiving email notifications you can change your  %{email_preferences_link}.
     confirm: Confirm Deletion
     cancel: I changed my mind, take me back!
 
