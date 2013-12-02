@@ -12,7 +12,7 @@ class Project < ActiveRecord::Base
                "Logtalk", "Lua", "M", "Markdown", "Matlab", "Max", "Mirah",
                "Monkey", "MoonScript", "Nemerle", "Nimrod", "Nu",
                "Objective-C", "Objective-J", "OCaml", "Omgrofl", "ooc", "Opa",
-               "OpenEdge ABL", "Parrot", "Pascal", "Perl", "PHP", "Pike",
+               "OpenEdge ABL", "Parrot", "Pascal", "Perl", "Perl 6", "PHP", "Pike",
                "PogoScript", "PowerShell", "Processing", "Prolog", "Puppet",
                "Pure Data", "Python", "R", "Racket", "Ragel in Ruby Host",
                "Rebol", "Rouge", "Ruby", "Rust", "Scala", "Scheme", "Scilab",
@@ -32,6 +32,8 @@ class Project < ActiveRecord::Base
   scope :not_owner, lambda {|user| where("github_url" != "github.com/#{user}/") }
   scope :by_language, ->(language) { where("lower(main_language) =?", language.downcase) }
   scope :active, -> { where(inactive: [ false, nil ]) }
+
+  paginates_per 20
 
   def github_repository
     self.github_url.gsub(/^(((https|http|git)?:\/\/(www\.)?)|git@)github.com(:|\/)/i, '').gsub(/(\.git|\/)$/i, '')

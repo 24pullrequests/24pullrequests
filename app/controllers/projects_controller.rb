@@ -3,10 +3,10 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: [ :edit, :update, :destroy ]
 
   respond_to :html
-  respond_to :json, :only => :index
+  respond_to :json, :js, :only => :index
 
   def index
-    @projects = Project.active.order(:name)
+    @projects = Project.active.order(:name).page params[:page]
     @current_user_languages = logged_in? ? current_user.languages : []
     respond_with @projects
   end
