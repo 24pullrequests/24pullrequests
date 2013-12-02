@@ -15,7 +15,7 @@ body {
 
 @media (min-width: 767px) {
   body {
-    background: $header-background url(/assets/snow-bg.png) 50% 0 no-repeat;
+    background: $header-background asset-url('snow-bg.png') 50% 0 no-repeat;
   }
 }
 
