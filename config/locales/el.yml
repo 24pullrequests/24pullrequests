@@ -27,7 +27,6 @@ el:
     gifted_code: Δώρα
     manage_projects: Διαχείρηση
     logout: Αποσύνδεση
-    homepage: Αρχική
 
   homepage:
     title: "24 Pull Requests"
