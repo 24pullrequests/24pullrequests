@@ -127,8 +127,6 @@ class User < ActiveRecord::Base
   end
 
   def send_notification_email
-    return unless confirmed?
-
     if send_daily?
       ReminderMailer.daily(self).deliver
     elsif send_weekly?
