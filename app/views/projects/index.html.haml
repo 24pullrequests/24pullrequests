@@ -18,8 +18,12 @@
     %li
       = language_link language, language
 %hr
-#projects
-  = render @projects
+#projects.row-fluid
+  %div.span12
+    = render @projects
+%div.row-fluid
+  %div.span12
+    = link_to_next_page @projects, t("more"), remote: true, class: 'btn btn-success more'
 
 #noprojects
   %p=t("projects.suggest", suggest_link: link_to(t("projects.suggest_link_text"), new_project_path)).html_safe

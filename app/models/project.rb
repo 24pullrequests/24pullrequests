@@ -33,6 +33,8 @@ class Project < ActiveRecord::Base
   scope :by_language, ->(language) { where("lower(main_language) =?", language.downcase) }
   scope :active, -> { where(inactive: [ false, nil ]) }
 
+  paginates_per 20
+
   def github_repository
     self.github_url.gsub(/^(((https|http|git)?:\/\/(www\.)?)|git@)github.com(:|\/)/i, '').gsub(/(\.git|\/)$/i, '')
   end
