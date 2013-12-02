@@ -1,10 +1,22 @@
 @import 'variables.css.scss';
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
-  background-color: $header-background;
+  background: $header-background;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  margin-bottom: 175px;
+}
+
+@media (min-width: 767px) {
+  body {
+    background: $header-background asset-url('snow-bg.png') 50% 0 no-repeat;
+  }
 }
 
 a {
@@ -165,7 +177,9 @@ article {
 }
 
 footer {
-  position: relative;
+  bottom: 0;
+  height: 175px;
+  position: absolute;
   width: 100%;
 
   .dark {
@@ -397,14 +411,6 @@ h1, h2, h3, h4 {
   }
 }
 
-/* snow animation - START */
-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-/* snow animation - END */
-
 .alert-info {
   h4 {
     margin: 5px 0;
@@ -412,4 +418,8 @@ canvas {
   hr {
     border-color: #000;
   }
+}
+
+.flag {
+  height: 24px;
 }

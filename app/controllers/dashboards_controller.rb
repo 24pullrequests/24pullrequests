@@ -51,7 +51,7 @@ class DashboardsController < ApplicationController
 
   def locale
     set_locale_to_cookie params[:locale]
-    redirect_to :back
+    redirect_to(request.referer || root_path)
   end
 
   protected
