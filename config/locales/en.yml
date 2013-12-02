@@ -43,7 +43,7 @@ en:
       amazing: "Continuous Sync - You're an open source machine, send 24 pull requests during December"
     involved:
       title: Get involved
-      description: "There are loads of ways to get involved in an open source project, improving documentation, helping fix existing issues and bugs, improving code quality and test coverage, or adding missing features."
+      description: "There are loads of ways to get involved in an open source project: improving documentation, helping fix existing issues and bugs, improving code quality and test coverage, or adding missing features."
       special_page: "We've prepared a %{contributing_path}, where you can find some information about contributing."
       take_a_look: If you are new to open source, please take a look.
     profile:
