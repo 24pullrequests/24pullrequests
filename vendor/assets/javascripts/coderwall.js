@@ -85,7 +85,7 @@
       self = this;
       badgeSize = self.options.badge_size;
       compileList = function(badge, badgeObj) {
-        return '<li class="box-badge"><div class="badge-icon' + (badgeObj.count > 1 ? ' show-count' : '') + '" data-count="' + badgeObj.count + '"><img width="' + badgeSize + '" height="' + badgeSize + '" alt="' + badge + '" data-title="' + badgeObj.description + '" src="' + badgeObj.badge + '"></div><div class="badge-name">' + badge + '</div></li>';
+        return '<li class="box-badge"><div class="badge-icon' + (badgeObj.count > 1 ? ' show-count' : '') + '" data-count="' + badgeObj.count + '"><img width="' + badgeSize + '" height="' + badgeSize + '" alt="' + badge + '" title="' + badgeObj.description + '" src="' + badgeObj.badge + '"></div><div class="badge-name">' + badge + '</div></li>';
       };
       teamBadgesList = '<ul id="team_box">';
       for (badge in teamBadges) {
