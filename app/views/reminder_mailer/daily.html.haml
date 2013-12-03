@@ -27,10 +27,4 @@
         = link_to project.github_url, project.github_url
       %p= project.description
 
-%p Are you new to sending pull requests? Check out the guides here: http://24pullrequests.com/contributing
-
-%p You can also follow @24pullrequests on twitter: http://twitter.com/24pullrequests
-
-%p Unsubscribe or change frequency of these emails: http://24pullrequests.com/preferences
-
-%p See you tomorrow!
+= render partial: 'reminder_mailer/sign_off_msg'
