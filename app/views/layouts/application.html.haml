@@ -60,7 +60,8 @@
       .locale
         .dropdown
           %button.btn.dropdown-toggle.sr-only{ type: "button", id: "locale", "data-toggle" => "dropdown" }
-            =t("locale.language")
+            =image_tag "flags/#{I18n.locale}.png", class: "flag"
+            =t("locale.#{I18n.locale}")
             %psna.caret
           %ul.dropdown-menu.pull-right{ role:"menu", "aria-labelledby" => "dropdownMenu1"}
             - available_locales.each do |locale|
