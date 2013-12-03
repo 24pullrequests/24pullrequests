@@ -34,7 +34,7 @@ FactoryGirl.define do
 
   factory :project do
     description { Faker::Lorem.paragraphs.first[0..199] }
-    github_url { "https://github.com/#{Faker::Lorem.word}/#{Faker::Lorem.word}" }
+    github_url { "https://github.com/#{Faker::Lorem.word}-#{Time.now.to_i}/#{Faker::Lorem.word}-#{Time.now.to_i}" }
     name { Faker::Lorem.words.first }
     main_language { Project::LANGUAGES.sample }
     submitted_by { create(:user) }
