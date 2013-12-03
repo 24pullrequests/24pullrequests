@@ -104,6 +104,7 @@ header {
 
 nav, .faulx-nav, .locale {
   @extend .constrained;
+  position: inherit;
   margin-top: 25px;
 }
 
