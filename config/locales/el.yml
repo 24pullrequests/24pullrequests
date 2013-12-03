@@ -83,7 +83,6 @@ el:
   search: Αναζήτηση
 
   locale:
-    language: Γλώσσα
     en: Αγγλικά
     el: Ελληνικά
     es: Ισπανικά
