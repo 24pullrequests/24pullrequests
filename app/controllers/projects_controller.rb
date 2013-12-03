@@ -1,9 +1,10 @@
 class ProjectsController < ApplicationController
-  before_action :ensure_logged_in, except: [ :index ]
+  before_action :ensure_logged_in, except: [ :index, :filter ]
   before_action :set_project, only: [ :edit, :update, :destroy ]
 
   respond_to :html
-  respond_to :json, :js, :only => :index
+  respond_to :json, only: :index
+  respond_to :js, only: [:index, :filter]
 
   def index
     @projects = Project.active.order(:name).page params[:page]
@@ -57,6 +58,12 @@ class ProjectsController < ApplicationController
     redirect_to :back, notice: message
   end
 
+  def filter
+    @projects = Project.active.order(:name).page params[:page]
+    @projects = @projects.by_languages(languages) if languages
+    respond_with @projects
+  end
+
   protected
 
   def project_params
@@ -69,6 +76,10 @@ class ProjectsController < ApplicationController
 
   def language
     params[:language]
+  end
+
+  def languages
+    params[:languages].split(',')
   end
 
   def github_url

@@ -31,6 +31,7 @@ class Project < ActiveRecord::Base
 
   scope :not_owner, lambda {|user| where("github_url" != "github.com/#{user}/") }
   scope :by_language, ->(language) { where("lower(main_language) =?", language.downcase) }
+  scope :by_languages, ->(languages) { where("lower(main_language) IN (?)", languages.map(&:downcase)) }
   scope :active, -> { where(inactive: [ false, nil ]) }
 
   paginates_per 20
