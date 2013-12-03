@@ -83,15 +83,6 @@ fi:
   cancel: Peruuta
   search: Hae
 
-  locale:
-    translate: Translate into your language!
-    en: English
-    el: Ελληνικά
-    es: Español
-    pt_br: Português do Brasil
-    fi: Suomi
-    fr: Français
-
   user:
     grinchy_message: "%{user} on grinch %{year} vuonna lahjoittamatta yhtään vetopyyntöä. Bah humbug!"
     pull_request_count: "%{user} on tehnyt %{count} vetopyyntöä tähän mennessä vuonna %{year}"

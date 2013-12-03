@@ -84,15 +84,6 @@ fr:
   cancel: Annuler
   search: Rechercher
 
-  locale:
-    translate: Translate into your language!
-    en: English
-    el: Ελληνικά
-    es: Español
-    pt_br: Português do Brasil
-    fi: Suomi
-    fr: Français
-
   user:
     grinchy_message: "%{user} est un grinch en %{year} et n'a ouvert aucune pull requests. Escrot!"
     pull_request_count: "%{user} a ouvert au total %{count} pull requests jusque là en %{year}"
