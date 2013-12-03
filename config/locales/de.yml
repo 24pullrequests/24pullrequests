@@ -1,4 +1,4 @@
-en:
+de:
   activerecord:
     errors:
       models:
@@ -73,6 +73,7 @@ en:
   suggest_project: Ein Projekt vorschlagen
   no_suggestions: Du hast bisher keine vorgeschlagenen Projekte
   preferred_languages: Bevorzugte Sprachen
+  organisations: Mitglied von...
   view_all: Alle ansehen
   more: Mehr
   change: Ändern
@@ -82,15 +83,6 @@ en:
   about_us: Über uns
   cancel: Abbrechen
   search: Suchen
-
-  locale:
-    language: Sprache
-    en: English
-    el: Greek
-    es: Spanish
-    pt_br: Brazilian Portuguese
-    fr: French
-    de: German
 
   user:
     grinchy_message: "%{user} ist %{year} ein Grinch &mdash; keine Pull Requests. Bah humbug!"
@@ -127,6 +119,7 @@ en:
       edit: Vorschlag bearbeiten
       update: Projekt aktualisieren
     suggest: In dieser Sprache gibt es noch keine Projekte. %{suggest_link}
+    suggest_link_text: Schlage eines vor
     new:
       title: Schlag ein Projekt vor
       info: Lass uns wissen, welche beliebten Projekte Hilfe benötigen. Wir haben unsere Favoriten ausgewählt, sind aber immer für Vorschläge offen. Hast Du ein paar Ideen? Sag uns bescheid!
