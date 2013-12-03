@@ -50,4 +50,23 @@ module ApplicationHelper
   def available_locales
     [ 'en', 'es', 'el', 'pt_br', 'fi', 'fr' ]
   end
+
+  def contributing_url type='html'
+    url = 'http://24pullrequests.com/contributing'
+    return url if type == 'text'
+    link_to url, url
+  end
+
+  def twitter_url type='html'
+    url = 'http://twitter.com/24pullrequests'
+    return url if type == 'text'
+    link_to url, url
+  end
+
+  def preferences_url type='html'
+    url = 'http://24pullrequests.com/preferences'
+    return url if type == 'text'
+    link_to url, url
+  end
+
 end

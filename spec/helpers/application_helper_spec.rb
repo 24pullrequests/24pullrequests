@@ -52,6 +52,43 @@ describe ApplicationHelper do
     end
   end
 
+  describe '#contributing_url' do
+    it 'returns an anchor tag with a link to the contributing section of 24pullrequests when no type is specified' do
+      resulting_html = '<a href="http://24pullrequests.com/contributing">http://24pullrequests.com/contributing</a>'
+      helper.contributing_url.should eql(resulting_html)
+    end
+
+    it 'returns just the url to the contribution section of 24pullrequests when type equals text' do
+      url = 'http://24pullrequests.com/contributing'
+      helper.contributing_url('text').should eql(url)
+    end
+  end
+
+  describe '#twitter_url' do
+    it 'returns an anchor tag with a link to the 24pullrequests page on Twitter when no type is specified' do
+      resulting_html = '<a href="http://twitter.com/24pullrequests">http://twitter.com/24pullrequests</a>'
+      helper.twitter_url.should eql(resulting_html)
+    end
+
+    it 'returns just the url to the 24pullrequests page on Twitter when type equals text' do
+      url = 'http://twitter.com/24pullrequests'
+      helper.twitter_url('text').should eql(url)
+    end
+
+  end
+
+  describe '#preferences_url' do
+    it 'returns an anchor tag with a link to the preferences section of 24pullrequests when no type is specified' do
+      resulting_html = '<a href="http://24pullrequests.com/preferences">http://24pullrequests.com/preferences</a>'
+      helper.preferences_url.should eql(resulting_html)
+    end
+
+    it 'returns just the url to the preferences section of 24pullrequests when type equals text' do
+      url = 'http://24pullrequests.com/preferences'
+      helper.preferences_url('text').should eql(url)
+    end
+  end
+
   describe "stats" do
     let(:user) { create(:user) }
     let(:last_year) { DateTime.now.year-1 }
