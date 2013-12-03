@@ -17,8 +17,6 @@ $ ->
       else
         languages = (language for language in languages when language != clicked_language)
 
-    $('#noprojects').hide()
-
     unless languages.length > 0
       resetLanguage()
     else
@@ -29,12 +27,21 @@ $ ->
         .removeClass('disabled')
 
       $('#projects').quicksand $(projects).find(".#{languages.join(', .')}"), duration: 0, ->
-        if $('#projects .project:visible').length == 0
-          $('#noprojects').show()
+        resetMoreButton()
     return false
 
+  resetMoreButton = ->
+    if $('#projects .project:visible').length == 0
+      $('#noprojects').show()
+      $('#someprojects').hide()
+    else
+      $('#noprojects').hide()
+      $('#someprojects').show()
+    return false
+
+
   resetLanguage = ->
-      $('#languages li').removeClass('disabled')
-      $('#projects').html(projects.find('.project'))
-      projects = $('#projects').clone()
-      $('#projects').css('height', 'auto')
+    $('#languages li').removeClass('disabled')
+    $('#projects').html(projects.find('.project'))
+    projects = $('#projects').clone()
+    $('#projects').css('height', 'auto')
