@@ -64,7 +64,7 @@ ru:
 
   merry_christmas: Рождество
   follow_user: "Читать @%{twitter}"
-  sponsored_by: Спонсоры:
+  sponsored_by: "Спонсоры:"
   how_to_contribute: Как сделать свой вклад?
   open_source_yey: Open Source FTW!
   welcome_back: "Привет, %{user}"
