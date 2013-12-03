@@ -1,5 +1,6 @@
 $ ->
   projects = $('#projects').clone()
+  $('#noprojects').hide()
 
   languages = []
   $('#languages a').click (e) ->
@@ -39,9 +40,9 @@ $ ->
       $('#someprojects').show()
     return false
 
-
   resetLanguage = ->
     $('#languages li').removeClass('disabled')
     $('#projects').html(projects.find('.project'))
     projects = $('#projects').clone()
     $('#projects').css('height', 'auto')
+    resetMoreButton()
