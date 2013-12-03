@@ -7,6 +7,7 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.active.order(:name).page params[:page]
+    @has_more_projects = (params[:page].to_i * 20) < Project.active.count
     @current_user_languages = logged_in? ? current_user.languages : []
     respond_with @projects
   end
