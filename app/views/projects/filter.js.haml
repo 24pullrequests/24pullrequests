@@ -1,0 +1,23 @@
+- if @projects.any?
+  :plain
+    (function($projects) {
+      var $new = $("#{escape_javascript(render(@projects))}");
+
+      $projects.find('.span12')['#{params[:page].blank? ? "html" : "append"}']($new)
+
+      $('#someprojects').find('.span12')
+        .html(
+          "#{escape_javascript(link_to_next_page @projects,
+                                                 t('more'),
+                                                 remote: true,
+                                                 params: {languages: params[:languages]},
+                                                 class: 'btn btn-success more')}"
+        );
+    })($("#projects"));
+    $('#noprojects').hide()
+    $('#someprojects').show()
+- else
+  :plain
+    $('#projects').find('.span12').empty()
+    $('#noprojects').show()
+    $('#someprojects').hide()
