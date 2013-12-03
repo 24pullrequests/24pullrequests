@@ -85,12 +85,12 @@ fr:
   search: Rechercher
 
   locale:
-    translate: Traduisez dans votre langue!
-    en: Anglais
-    el: Grecque
-    es: Espagnol
-    pt_br: Portugais Bresilien
-    fi: Finlandais
+    translate: Translate into your language!
+    en: English
+    el: Ελληνικά
+    es: Español
+    pt_br: Português do Brasil
+    fi: Suomi
     fr: Français
 
   user:

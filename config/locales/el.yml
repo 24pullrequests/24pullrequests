@@ -83,9 +83,13 @@ el:
   search: Αναζήτηση
 
   locale:
-    en: Αγγλικά
+    translate: Translate into your language!
+    en: English
     el: Ελληνικά
-    es: Ισπανικά
+    es: Español
+    pt_br: Português do Brasil
+    fi: Suomi
+    fr: Français
 
   user:
     grinchy_message: "η/ο %{user} ειναι ενας καλικαντζαρος. Δεν εχει δωρισει κανενα pull request για το %{year}!"
