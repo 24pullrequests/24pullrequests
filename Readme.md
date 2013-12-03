@@ -37,11 +37,13 @@ rbenv global 2.0.0-p353
 ```
 
 Next, you'll need to make sure that you have postgres installed. This can be
-done easily using [Homebrew](http://mxcl.github.com/homebrew/) or by using http://postgresapp.com
+done easily using [Homebrew](http://mxcl.github.com/homebrew/) or by using [http://postgresapp.com](http://postgresapp.com). 
 
 ```bash
 brew install postgres phantomjs
 ```
+
+Please see these [further instructions for installing postgres via homebrew](http://www.mikeball.us/blog/setting-up-postgres-with-homebrew/). 
 
 Now, let's install the gems from the `Gemfile` ("Gems" are synonymous with libraries in other
 languages).
