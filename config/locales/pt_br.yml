@@ -83,15 +83,6 @@ pt_br:
   cancel: "Cancelar"
   search: "Buscar"
 
-  locale:
-    translate: "Translate into your language!"
-    en: "English"
-    el: "Ελληνικά"
-    es: "Español"
-    pt_br: "Português do Brasil"
-    fi: "Suomi"
-    fr: "Français"
-
   user:
     grinchy_message: "%{user} você está parecendo um grinch em %{year}, não fez nenhum pull requests de presente. Bah humbug!"
     pull_request_count: "%{user} fez %{count} pull requests até agora, em %{year}"
