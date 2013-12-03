@@ -27,7 +27,6 @@ fr:
     gifted_code: Gifted Code
     manage_projects: Gérer les projets
     logout: Déconnexion
-    homepage: accueil
 
   homepage:
     title: "24 Pull Requests"
@@ -74,6 +73,7 @@ fr:
   suggest_project: Suggérer un projet
   no_suggestions: Vous n'avez pas encore suggéré de projet.
   preferred_languages: Langages préférés
+  organisations: Membre de...
   view_all: Voir tout
   more: Plus
   change: Changer
@@ -83,13 +83,6 @@ fr:
   about_us: A propos
   cancel: Annuler
   search: Rechercher
-
-  locale:
-    language: Langue
-    en: Anglais
-    el: Grecque
-    es: Espagnol
-    fr: Français
 
   user:
     grinchy_message: "%{user} est un grinch en %{year} et n'a ouvert aucune pull requests. Escrot!"
@@ -101,6 +94,7 @@ fr:
   dashboard:
     christmas_activity: C'est là que vous pouvez voir toute l'activité que nous avons enregistré pour vous jusqu'à Noël.
     give_a_gift: Il semble que vous n'ayez fait cadeau d'aucun code aujourd'hui. Voulez vous faire un cadeau
+    synchronize: Synchroniser Les Pull Requests
     help_out: Vous ne trouvez pas de projet que vous souhaiteriez aider? Nous avons créé une liste de projets populaires
     no_pull_requests: "Vous n'avez pas ouvert de pull requests, Qu'attendez vous?!"
 
@@ -123,7 +117,9 @@ fr:
     for_you: Suggérés pour vous
     suggestion:
       edit: Modifier la suggestion
+      update: Mettre à jour le projet
     suggest: Il n'y a pas de projet pour ce langage pour le moment, pourquoi ne pas %{suggest_link}
+    suggest_link_text: en suggérer un
     new:
       title: Suggérer un projet
       info: Une des manières d'encourager la participation dans la communauté open source est de faire savoir aux utilisateurs quels projets populaires pourraient bénéficier de contributions. Nous avons sélectionné nos favoris, mais nous somme toujours ouverts aux suggestions. Vous avez des idées? Partagez-les!

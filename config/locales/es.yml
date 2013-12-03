@@ -47,12 +47,6 @@ es:
   everything: "Todo"
   about_us: "Sobre Nosotros"
 
-  locale:
-    language: Lengua
-    en: Inglés
-    el: Griego
-    es: "Español"
-
   user:
     grinchy_message: "%{user} es un gruñón para el año de %{year} porque no ha regalado ninguno 'pull requests'."
     pull_request_count: "%{user} hizo %{count} 'pull requests' en total para el año de %{year}"
