@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
 
     user.assign_from_auth_hash(auth_hash)
 
+    flash[:notice] = nil
     session[:user_id] = user.id
 
     redirect_to dashboard_url and return unless pre_login_destination
