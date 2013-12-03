@@ -7,6 +7,7 @@ $ ->
     clicked_language = $(this).data().language
 
     unless clicked_language?
+      fetchProjects()
       resetLanguage()
       return false
 
@@ -27,22 +28,21 @@ $ ->
         .parent('li')
         .removeClass('disabled')
 
-      $('#projects').quicksand $(projects).find(".#{languages.join(', .')}"), duration: 0, ->
-        resetMoreButton()
+      filterProjects(languages.join(','))
     return false
 
-  resetMoreButton = ->
-    if $('#projects .project:visible').length == 0
-      $('#noprojects').show()
-      $('#someprojects').hide()
-    else
-      $('#noprojects').hide()
-      $('#someprojects').show()
-    return false
+  fetchProjects = ->
+    $.ajax
+      url: '/projects'
+      dataType: 'script'
+
+  filterProjects = (languages) ->
+    $.ajax
+      url: '/projects/filter?languages='+languages
+      dataType: 'script'
 
   resetLanguage = ->
-    $('#languages li').removeClass('disabled')
-    $('#projects').html(projects.find('.project'))
-    projects = $('#projects').clone()
-    $('#projects').css('height', 'auto')
-    resetMoreButton()
+      $('#languages li').removeClass('disabled')
+      $('#projects').html(projects.find('.span12'))
+      projects = $('#projects').clone()
+      $('#projects').css('height', 'auto')

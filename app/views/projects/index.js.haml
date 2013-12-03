@@ -1,15 +1,17 @@
 :plain
   (function($projects) {
-    var $new = $("#{escape_javascript(render(@projects))}").find("a[rel=tooltip]").tooltip().end();
+    var $new = $("#{escape_javascript(render(@projects))}");
 
     $projects.find('.span12')
           .append($new)
 
-    $projects.parent().find(".more")
-          .replaceWith(
+    $('#someprojects').find('.span12')
+          .html(
             "#{escape_javascript(link_to_next_page @projects,
                                                    t('more'),
                                                    remote: true,
                                                    class: 'btn btn-success more')}"
           );
   })($("#projects"));
+  $('#noprojects').hide()
+  $('#someprojects').show()
