@@ -84,12 +84,13 @@ fi:
   search: Hae
 
   locale:
-    en: Englanti
-    el: Kreikka
-    es: Espanja
-    pt_br: Brasilianportugali
+    translate: Translate into your language!
+    en: English
+    el: Ελληνικά
+    es: Español
+    pt_br: Português do Brasil
     fi: Suomi
-    fr: Ranska
+    fr: Français
 
   user:
     grinchy_message: "%{user} on grinch %{year} vuonna lahjoittamatta yhtään vetopyyntöä. Bah humbug!"

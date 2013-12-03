@@ -87,11 +87,11 @@ en:
   locale:
     translate: Translate into your language!
     en: English
-    el: Greek
-    es: Spanish
-    pt_br: Brazilian Portuguese
-    fi: Finnish
-    fr: French
+    el: Ελληνικά
+    es: Español
+    pt_br: Português do Brasil
+    fi: Suomi
+    fr: Français
 
   user:
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"

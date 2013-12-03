@@ -84,10 +84,13 @@ pt_br:
   search: "Buscar"
 
   locale:
+    translate: "Translate into your language!"
     en: "English"
-    el: "Greek"
-    es: "Spanish"
-    pt_br: "Brazilian Portuguese"
+    el: "Ελληνικά"
+    es: "Español"
+    pt_br: "Português do Brasil"
+    fi: "Suomi"
+    fr: "Français"
 
   user:
     grinchy_message: "%{user} você está parecendo um grinch em %{year}, não fez nenhum pull requests de presente. Bah humbug!"

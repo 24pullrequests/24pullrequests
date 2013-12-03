@@ -48,10 +48,13 @@ es:
   about_us: "Sobre Nosotros"
 
   locale:
-    en: Inglés
-    el: Griego
-    es: "Español"
-    fr: Francés
+    translate: Translate into your language!
+    en: English
+    el: Ελληνικά
+    es: Español
+    pt_br: Português do Brasil
+    fi: Suomi
+    fr: Français
 
   user:
     grinchy_message: "%{user} es un gruñón para el año de %{year} porque no ha regalado ninguno 'pull requests'."
