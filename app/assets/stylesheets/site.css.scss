@@ -14,9 +14,55 @@ body {
 }
 
 @media (min-width: 767px) {
-  body {
-    background: $header-background asset-url('snow-bg.png') 50% 0 no-repeat;
+
+  .snow {
+    background: $header-background url(snow-bg.png) 50% 0 no-repeat;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -690px;
+    display: block;
+    width: 1380px;
+    height: 543px;
+
+    -webkit-animation: move 20s 1;
+     -khtml-animation: move 20s 1;
+       -moz-animation: move 20s 1;
+        -ms-animation: move 20s 1;
+         -o-animation: move 20s 1;
+            animation: move 20s 1;
   }
+
+  @-webkit-keyframes move {
+    0%   { opacity: 1; -webkit-transform: translateY(0);     }
+    100% { opacity: 0; -webkit-transform: translateY(200px); }
+  }
+
+  @-khtml-keyframes move {
+    0%   { opacity: 1; -khtml-transform: translateY(0);     }
+    100% { opacity: 0; -khtml-transform: translateY(200px); }
+  }
+
+  @-moz-keyframes move {
+    0%   { opacity: 1; -moz-transform: translateY(0);     }
+    100% { opacity: 0; -moz-transform: translateY(200px); }
+  }
+
+  @-ms-keyframes move {
+    0%   { opacity: 1; -ms-transform: translateY(0);     }
+    100% { opacity: 0; -ms-transform: translateY(200px); }
+  }
+
+  @-o-keyframes move {
+    0%   { opacity: 1; -o-transform: translateY(0);     }
+    100% { opacity: 0; -o-transform: translateY(200px); }
+  }
+
+  @keyframes move {
+    0%   { opacity: 1; transform: translateY(0);     }
+    100% { opacity: 0; transform: translateY(200px); }
+  }
+
 }
 
 a {
@@ -88,7 +134,7 @@ header {
     left: 50%;
     margin-left: -$width/2;
     padding-top: 40px;
-    background: transparent asset-url('tagline.png') no-repeat bottom;
+    background: transparent url(tagline.png) no-repeat bottom;
   }
 }
 
