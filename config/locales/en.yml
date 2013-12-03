@@ -84,15 +84,6 @@ en:
   cancel: Cancel
   search: Search
 
-  locale:
-    translate: Translate into your language!
-    en: English
-    el: Ελληνικά
-    es: Español
-    pt_br: Português do Brasil
-    fi: Suomi
-    fr: Français
-
   user:
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
     pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
@@ -189,3 +180,12 @@ en:
       details: 24 Pull Requests was made possible thanks to the help and donations of some great sponsors.
       thanks: "Many thanks to..."
       get_in_touch: "If you'd like to get in touch about sponsorship or anything else, drop us an email:"
+
+  locale:
+    translate: Translate into your language!
+    en: English
+    el: Ελληνικά
+    es: Español
+    pt_br: Português do Brasil
+    fi: Suomi
+    fr: Français
