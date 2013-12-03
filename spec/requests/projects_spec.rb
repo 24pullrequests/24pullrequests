@@ -70,7 +70,7 @@ describe 'Projects' do
         first(:link, "Java").click
 
         within '#projects' do
-          page.should_not have_css('.ruby')
+          page.should have_no_css('.ruby')
           page.should have_css('.java')
         end
       end

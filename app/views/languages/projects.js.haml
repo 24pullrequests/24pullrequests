@@ -1,0 +1,15 @@
+:plain
+  (function($projects) {
+    var $new = $("#{escape_javascript(render(@projects))}");
+
+    $projects.find('.span12')
+      .html($new)
+
+    $(".more")
+      .replaceWith(
+        "#{escape_javascript(link_to_next_page @projects,
+                                               t('more'),
+                                               remote: true,
+                                               class: 'btn btn-success more')}"
+      );
+  })($("#projects"));
