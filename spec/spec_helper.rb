@@ -56,7 +56,16 @@ Spork.prefork do
 
     # Database Cleaner
     config.before(:suite) do
-      DatabaseCleaner.clean_with(:truncation)
+      DatabaseCleaner.strategy = :transaction
+      DatabaseCleaner.clean_with :truncation
+    end
+
+    config.before(:all) do
+      DeferredGarbageCollection.start
+    end
+
+    config.after(:all) do
+      DeferredGarbageCollection.reconsider
     end
 
     config.before(:each) do
