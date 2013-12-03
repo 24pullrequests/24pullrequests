@@ -65,6 +65,9 @@ And we can also add some sample data with the **seed** task
 bundle exec rake db:seed
 ```
 
+If you are working on anything related to the email-generation code, you can use [mailcatcher](https://github.com/sj26/mailcatcher)
+Since we use bundler, please read the [following](https://github.com/sj26/mailcatcher#bundler) before using mailcatcher
+
 Almost there! Now all we have to do is start up the Rails server and point
 our browser to <http://localhost:3000>
 
@@ -81,7 +84,7 @@ Mocha/Konacha is used for unit testing any JavaScript. JavaScript specs
 should be placed in `spec/javascripts`. Run the JavaScript specs with
 `bundle exec rake konacha:serve`.
 
-If you are using the omniauth environment variables 
+If you are using the omniauth environment variables
 (GITHUB_KEY, GITHUB_SECRET, TWITTER_KEY, TWITTER_SECRET)
 for **another** project, you will need to either
  * unset them before running your tests or
