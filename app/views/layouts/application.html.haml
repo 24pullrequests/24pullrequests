@@ -78,10 +78,6 @@
 
     %article
       .container-fluid
-        - unless logged_in?
-          .row-fluid
-            =render partial: "information"
-
         .row-fluid
           .span12
             - if flash.any?
