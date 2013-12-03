@@ -73,7 +73,7 @@ en:
   suggest_project: Suggest a project
   no_suggestions: You haven't suggested any projects yet.
   preferred_languages: Preferred Languages
-  organisations: Member of...  
+  organisations: Member of...
   view_all: View All
   more: More
   change: Change
@@ -86,13 +86,12 @@ en:
 
   locale:
     translate: Translate into your language!
-    language: Language
     en: English
-    el: Greek
-    es: Spanish
-    pt_br: Brazilian Portuguese
-    fi: Finnish
-    fr: French
+    el: Ελληνικά
+    es: Español
+    pt_br: Português do Brasil
+    fi: Suomi
+    fr: Français
 
   user:
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
