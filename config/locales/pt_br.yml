@@ -84,7 +84,6 @@ pt_br:
   search: "Buscar"
 
   locale:
-    language: "Idiomas"
     en: "English"
     el: "Greek"
     es: "Spanish"

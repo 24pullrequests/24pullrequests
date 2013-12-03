@@ -48,7 +48,6 @@ es:
   about_us: "Sobre Nosotros"
 
   locale:
-    language: Lengua
     en: Inglés
     el: Griego
     es: "Español"

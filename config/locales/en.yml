@@ -86,7 +86,6 @@ en:
 
   locale:
     translate: Translate into your language!
-    language: Language
     en: English
     el: Greek
     es: Spanish
