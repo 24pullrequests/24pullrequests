@@ -30,7 +30,7 @@ class PullRequestDownloader
       end
     rescue => e
       puts e.inspect
-      puts 'likely a Github api error occurred'
+      puts 'Pull requests: likely a Github api error occurred'
       []
     end
   end
@@ -38,10 +38,12 @@ class PullRequestDownloader
   def download_user_organisations
     begin
       github_client.organizations(login).reject do |o|
+        puts "Updating organisation: #{o.login}"
         ignored_organisations.include?(o.login)
       end
-    rescue
-      puts 'likely a Github api error occurred'
+    rescue e
+      puts e.inspect
+      puts 'Organisation error: likely a Github api error occurred'
       []
     end
   end
