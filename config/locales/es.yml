@@ -10,7 +10,7 @@ es:
   pull_request:
     twitter_message: "Acabo de abrir un pull request para http://24pullrequests.com, échale un vistazo: %{issue_url}"
     download:
-      tooltip: "Por lo general, comprobamos los pull requests cada hora, pero si lo desea, puede verificarlo ahora."
+      tooltip: "Por lo general, comprobamos los pull requests cada hora, pero si lo desea, puede verificarlo ahora mismo."
   twitter:
     account_linked: "¡Su cuenta de Twitter ha sido vinculada! Publicaremos un tweet cada vez que envías un pull request."
     account_removed: "Su cuenta de Twitter ha sido removida."
@@ -110,7 +110,7 @@ es:
         count: "'Pull Requests' de %{language} más reciente (%{count} en total)"
 
   projects:
-    claim: "¿Hay proyectos que has sugerido y que están el la lista? Tómalos!"
+    claim: "¿Hay proyectos que has sugerido y no que están en la lista? Solicitalos!"
     help_out: "¿No puedes pensar en un proyecto para contribuir? Tenemos recopilado una lista de fantásticos proyectos de código abierto que les gustaría recibir ayuda."
     suggest_new: "También, puedes sugerir proyectos que deberíamos añadir a la lista, o añae tu proyecto si deseas recibir ayuda."
     filter_by_language: "Filtrar por lenguaje:"
@@ -118,7 +118,7 @@ es:
     suggestion:
       edit: "Editar la sugerencia"
       update: "Actualizar proyecto"
-    suggest: "No hay ninguno proyecto para esta lenguaje. ¿Puedes %{suggest_link}?"
+    suggest: "No hay ninguno proyecto para este lenguaje. ¿Puedes %{suggest_link}?"
     suggest_link_text: "sugerir uno"
     new:
       title: "Sugerir un proyecto"
