@@ -37,11 +37,30 @@ class PullRequestDownloader
 
   def download_user_organisations
     begin
-      github_client.organizations(login)
+      github_client.organizations(login).reject do |o|
+        ignored_organisations.include?(o.login)
+      end
     rescue
       puts 'likely a Github api error occurred'
       []
     end
+  end
+
+  def ignored_organisations
+    [
+      'coderwall-altruist',
+      'coderwall-charity',
+      'coderwall-kona',
+      'coderwall-cub',
+      'coderwall-earlyadopter',
+      'coderwall-forked',
+      'coderwall-komododragon',
+      'coderwall-mongoose',
+      'coderwall-mongoose3',
+      'coderwall-octopussy',
+      'coderwall-raven',
+      'coderwall-polygamous'
+    ]
   end
 
 end
