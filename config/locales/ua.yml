@@ -5,97 +5,88 @@ en:
         user:
           attributes:
             email:
-              required_for_confirmation: "%{attribute} is required for confirmation"
-              already_confirmed: "%{attribute} is already confirmed"
+              required_for_confirmation: "%{attribute} необхідній для підтвердження"
+              already_confirmed: "%{attribute} вже підтверджено"
   pull_request:
-    twitter_message: "I just opened a pull request for http://24pullrequests.com, check it out: %{issue_url}"
+    twitter_message: "Я щойно відкрив пулл реквест для http://24pullrequests.com, заціни: %{issue_url}"
     download:
-      tooltip: "Usually we check for pull requests every hour, but you can check now if you really want."
+      tooltip: "Зазвичай ми перевіряемо пулл реквести кожну годину, ви можете перевірити зараз, як ваше бажання."
   twitter:
-    account_linked: "Your Twitter account has been linked! We'll post a tweet whenever you open a pull request."
-    account_removed: "Your Twitter account has been removed."
+    account_linked: "Ми прив'язали ваш твіттер акаунт! Тепер ми будемо твітити кожен раз, як ви відкриєте пулл реквест."
+    account_removed: "Ми відв'язали ваш твіттер акаунт."
     link_account:
-      text: "Link Your Twitter Account"
-      tooltip: "If you link your Twitter account, we'll post a new tweet whenever you open a pull request!"
+      text: "Добавте ваш твіттер акаунт"
+      tooltip: "Якщо ваш твіттер акаунт буде прив'язано, ми зможемо постити в твіттер, кожен раз, як ви відкріваєте пулл реквест!"
 
   navigation:
-    all_projects: All Projects
-    my_suggestions: My Suggestions
-    dashboard: Dashboard
-    profile: Profile
-    preferences: Preferences
-    gifted_code: Gifted Code
-    manage_projects: Manage Projects
-    logout: Logout
+    all_projects: Всі проекти
+    my_suggestions: Моі пропозиції
+    dashboard: Панель керування
+    profile: Профіль
+    preferences: Преференції
+    gifted_code: Код, що вам подарували
+    manage_projects: Управління проектами
+    logout: Логаут
 
   homepage:
-    title: "24 Pull Requests"
-    description: Giving back little gifts of code for Christmas
-    about: "What's it all about?"
-    about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your pull requests.</p><p>Log in with your GitHub account and we'll track and highlight all your pull requests and suggest projects to work on.</p>"
-    greeting: "'Tis the season"
-    give_to_open_source: You've been benefiting from the use of open source projects all year. Now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving pull requests!
-    q_n_a: Questions & Answers
+    title: "24 Пулл-реквеста"
+    description: Даруйте свій код напередодні Різдва!
+    about: "Що це взагалі таке?"
+    about_text: "<p>24 Пулл-реквеста, це акція, що проходить кожен рік, напередодні Різдва. Метою акції є заохочення розробників, зі всьго світу, допомогати один одному, надсилаючі пулл реквести кожного дня, впродовж грудня.</p> <p>Ми зробили цей сайт, щоб допомогти проектам з відкритим кодом!</p><p>Заходьте зі свого Гітхаб акаунту і ми будему відслідковувати ваш прогрес, а також пропонувати проекти, до якіх вам буде цікаво долучитися.</p>"
+    greeting: "Цього сезону"
+    give_to_open_source: Впродовж року ви викоростовували проекти з відкритим кодом. Різдво, це час подяки! Віддячте своїм колегам-розробникам кращім подарунком, пулл-реквестом!
+    q_n_a: Питання та Відповіді
     badges:
-      title: Earn Coderwall badges
-      description: We've teamed up with coderwall and created some kickass badges to unlock for participating.
-      involved_link: 'Participant - Get involved, send at least one pull request before Christmas'
-      amazing: "Continuous Sync - You're an open source machine, send 24 pull requests during December"
+      title: Заробляйте бейджі на CoderWall
+      description: Спільно з командою CoderWall ми розробили декілька файних бейджів, що ви зможете отримати за участь в проекті.
+      involved_link: 'Participant - не зволікай! Підготуй, що найменьше, один пулл реквест, до Різдва.'
+      amazing: "Continuous Sync - open source геній, надійшли 24 пулл реквеста впродовж грудня."
     involved:
-      title: Get involved
-      description: "There are loads of ways to get involved in an open source project: improving documentation, helping fix existing issues and bugs, improving code quality and test coverage, or adding missing features."
-      special_page: "We've prepared a %{contributing_path}, where you can find some information about contributing."
-      take_a_look: If you are new to open source, please take a look.
+      title: Долучайся
+      description: "Наразі є багато способів допомогти open source проекту: покращіть документацію, пофіксіть актуальні баги, покращіть код та тести, або додайте нову фічу."
+      special_page: "Ми підготували %{contributing_path}, де ви знайдете необхідну інформацію."
+      take_a_look: Якщо ви новачок в open source, переглянте це
     profile:
-      title: Build your profile
-      description: Contributing to open source projects is also a great way to build your profile in the community and improve your CV.
-      getting_started: It's really easy to get started. Even small contributions can be really valuable to a project.
-    join_the_chat: Join the chat on IRC, %{link_to_chat}, at freenode.
+      title: Розширюй свій профіль
+      description: Контрібуції до open source проектів, це також класний спосіб прокачки вашого онлайн профілю і CV.
+      getting_started: Залучитіся, насправді, легко. Навіть маленька допомога, має високу ціну.
+    join_the_chat: Приєднуетсь к IRC, %{link_to_chat}, на freenode.
 
   information:
-    title: "24 Pull Requests %{year} is upon us"
-    last_year_stats: "In %{year}, over 24 days, <b>%{developers}</b> developers submitted <b>%{pull_requests}</b> pull requests to <b>%{projects}</b> different open source projects."
-    get_ready: Get ready for 24 Pull Requests %{year} when we do it all again!
-    help_open_source: "Want to help out with open source projects in the meantime? Check out these other great initiatives:"
-    codetriage: "Give back to open source, one issue at a time, with CodeTriage. You'll get one issue from your favorite repo per day to help you dig deeper, learn more, and stay involved with the code you rely on."
+    title: "24 Пулл Реквеста %{year} вже близько"
+    last_year_stats: "В %{year}, за 24 дні, <b>%{developers}</b> розробників надіслалі <b>%{pull_requests}</b> пулл рекстів до <b>%{projects}</b> різноманітних open source проектів."
+    get_ready: Готуймося до 24 Пулл Реквеста %{year}, покажем на що ми здатні!
+    help_open_source: "Готовий допомогти проекту? Ця інформація стенется в нагоді:"
+    codetriage: "Віддячте open source проектам разом з CodeTriage. Отримайте одне завдання на день, з ваших улюбленних репозиторіїв, та набувайте досвіду."
     contribhub:
-      tagline: Do you know you have a neighbor needing some help with a really cool project? With ContribHub you will!
-      description: ContribHub is a GitHub-based application that makes it easier to find projects to contribute to and grow a community around it.
+      tagline: Чи ви знаете, що ваш сусід чекає на допомогу з крутим проектом? ContribHub допоможе вам зблизитись!
+      description: ContribHub це застосунок на базі GitHub, що допомагае в пошуку проектів, та створенню спільноти ціх проектів.
 
-  merry_christmas: Merry Christmas
-  follow_user: Follow @%{twitter}
-  sponsored_by: Sponsored by
-  how_to_contribute: How to contribute?
+  merry_christmas: Щасливого Різдва!
+  follow_user: Читати @%{twitter}
+  sponsored_by: Спонсори
+  how_to_contribute: Як розпочати?
   open_source_yey: Open Source FTW!
-  welcome_back: Welcome back, %{user}
-  your_pull_requests: Your Pull Requests
-  suggested_projects: Suggested Projects
-  suggest_project: Suggest a project
-  no_suggestions: You haven't suggested any projects yet.
-  preferred_languages: Preferred Languages
-  organisations: Member of...
-  view_all: View All
-  more: More
-  change: Change
-  claim: Claim
-  edit: Edit
-  everything: Everything
-  about_us: About
-  cancel: Cancel
-  search: Search
-
-  locale:
-    translate: Translate into your language!
-    en: English
-    el: Ελληνικά
-    es: Español
-    pt_br: Português do Brasil
-    fi: Suomi
-    fr: Français
+  welcome_back: З поверненням, %{user}
+  your_pull_requests: Ваші Пулл Реквести
+  suggested_projects: Пропонуємо Проекти
+  suggest_project: Запропонувати Проект
+  no_suggestions: Ви не маєте жодних рекомендацій
+  preferred_languages: Улюбленні мови
+  organisations: Огранизациї
+  view_all: Подивится
+  more: Більше
+  change: Змінити
+  claim: Заявити
+  edit: Редагувати
+  everything: Все
+  about_us: Про нас
+  cancel: Відмініти
+  search: Пошук
 
   user:
-    grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
-    pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
+    grinchy_message: "%{user} не надіслав жодного пулл реквеста в %{year} році. Прикро!"
+    pull_request_count: "%{user} надіслав %{count} пулл реквестів в %{year} році."
 
   developers_using_language: Розробники, які використовують %{language}
   developers_involved: Розробники вже беруть участь
@@ -143,11 +134,11 @@ en:
   preferences:
       title: Налаштувати електронну пошти
       frequency_message:  За частотою, яку ви обрали, ми будемо висилати листи електронною поштою з запропонованими проектами від тепер та поки проект не закінчиться. В якості додаткового бонусу, ми візьмемо на себе сміливість персоналізації нашої пропозиції до вашої мови програмування на основі профілю у Ґітхаб. Крім того, ви можете вибрати свою мову нижче.
-      delete: "Бажаєте видалити ваш аккаунт?"
+      delete: "Бажаєте видалити ваш акаунт?"
       information: Ви завжди можете змінити налаштування електронної пошти пізніше.
-      twitter: Твіттер аккаунт
+      twitter: Твіттер акаунт
       languages: Якими мовами програмування ви володієте?
-      remove: Видалити аккаунт
+      remove: Видалити акаунт
       save_and_continue: Зберегти та продовжити
 
       hint:
@@ -161,8 +152,8 @@ en:
       count: Останні пулл реквести (%{count} всього)
 
   delete_account:
-    title: Видалити ваш аккаунт
-    are_you_sure: Ми просто хотіли переконатися, що ви дійсно хочете видалити свій аккаунт. Це дозволить видалити свій профіль і всі пулл реквести з сайту, хоча будь-які запропоновані проекти залишаться.
+    title: Видалити ваш акаунт
+    are_you_sure: Ми просто хотіли переконатися, що ви дійсно хочете видалити свій акаунт. Це дозволить видалити свій профіль і всі пулл реквести з сайту, хоча будь-які запропоновані проекти залишаться.
     notification_info: Якщо ви бажаєте припинити отримувати повідомлення ви можете змінити ваш %{email_preferences_link}.
     confirm: Підтвердити видалення
     cancel: Я змінив свою думку і хотів би повернутися!
