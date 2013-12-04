@@ -52,7 +52,7 @@ module ApplicationHelper
   end
 
   def available_locales
-    [ 'en', 'es', 'el', 'pt_br', 'fi', 'fr', 'de', 'ru' ]
+    [ 'en', 'es', 'el', 'pt_br', 'fi', 'fr', 'de', 'ru', 'uk' ]
   end
 
   def contributing_url type='html'
