@@ -170,10 +170,10 @@ class User < ActiveRecord::Base
     nickname
   end
 
-  def download_user_organisations
-    pull_request_downloader.user_organisations.each do |o|
+  def download_user_organisations(access_token = token)
+    pull_request_downloader(access_token).user_organisations.each do |o|
       organisation = Organisation.create_from_github(o)
-      organisation.users << self
+      organisation.users << self unless organisation.users.include?(self)
       organisation.save
     end
   end

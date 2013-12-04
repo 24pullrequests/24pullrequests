@@ -7,6 +7,13 @@ def load_user
   end
 end
 
+desc "Download user organisations"
+task :download_user_organisations => :environment do
+  User.all.each do |user|
+    user.download_user_organisations(load_user.token) rescue nil
+  end  
+end
+
 desc "Download new pull requests"
 task :download_pull_requests => :environment do
   User.all.each do |user|
