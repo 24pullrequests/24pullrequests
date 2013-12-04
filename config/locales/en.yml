@@ -93,6 +93,7 @@ en:
     fi: Suomi
     fr: Français
     de: Deutsch
+    ru: Русский
 
   user:
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
