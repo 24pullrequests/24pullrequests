@@ -84,18 +84,6 @@ en:
   cancel: Cancel
   search: Search
 
-  locale:
-    translate: Translate into your language!
-    en: English
-    el: Ελληνικά
-    es: Español
-    pt_br: Português do Brasil
-    fi: Suomi
-    fr: Français
-    de: Deutsch
-    ru: Русский
-    uk: Українська
-
   user:
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
     pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
@@ -201,5 +189,7 @@ en:
     pt_br: Português do Brasil
     fi: Suomi
     fr: Français
-    de: Deutch
+    de: Deutsch
     ru: Русский
+    uk: Українська
+
