@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def escape_language(lang)
+    url_encode(lang.downcase) if lang
+  end
+
   def parameterize_language(lang)
     if lang
       lang.gsub(/\+/, 'p')
@@ -9,12 +13,12 @@ module ApplicationHelper
 
   def language_link(language, label=nil)
     language = if language.respond_to? :map
-      language.map &method(:parameterize_language)
+      language.map &method(:escape_language)
     else
-      parameterize_language language
+      escape_language language
     end
     label = label || [language].flatten.join(', ')
-    link_to label, '#', :data => {:language => language}
+    link_to label, '#', data: {language: language}
   end
 
   def gravatar_url(digest='', size = '80')
