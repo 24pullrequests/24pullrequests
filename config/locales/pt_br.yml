@@ -114,7 +114,7 @@ pt_br:
     help_out: "Não consegue pensar em nenhum projeto para ajudar? Nós fizemos uma coletânea de brilhantes projetos open source que amariam um pull request seu."
     suggest_new: "Você também por sugerir projetos para serem adicionados à lista, ou mesmo adicionar seu próprio projeto, se você gostaria de ajuda com ele."
     filter_by_language: "Filtrar por linguagem:"
-    for_you: "Sugeridos por você"
+    for_you: "Sugeridos para você"
     suggestion:
       edit: "Editar sugestão"
       update: "Atualizar projeto"
