@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="en" xmlns:fb="http://ogp.me/ns/fb#" xml:lang="en" class="" xmlns="http://www.w3.org/1999/xhtml"><head>
+            <script type="text/javascript">
+                window._document_observe_listeners = [];
+                document.observe = function(event, func) {
+                    window._document_observe_listeners.push({event: event, func: func});
+                };
+
+                window._jquery_ready_handlers = [];
+                jQuery = function(handler) {
+                    window._jquery_ready_handlers.push(handler);
+                };
+
+                function on_script_loaded(func) {
+                    (window.LoadedJsSuccessfully && document.loaded) ? func() : document.observe('script:loaded', func);
+                }
+            </script>
+         <link href="https://dt8kf6553cww8.cloudfront.net/static/images/favicon-vflk5FiAC.ico" rel="shortcut icon" /><link href="https://dt8kf6553cww8.cloudfront.net/static/css/main-vflG0BuUh.css" type="text/css" rel="stylesheet" /><link href="https://dt8kf6553cww8.cloudfront.net/static/css/web_sprites-vflHyk5i3.css" type="text/css" rel="stylesheet" /><link href="https://dt8kf6553cww8.cloudfront.net/static/images/dropbox_webclip-vflO8tEZ4.png" rel="apple-touch-icon" /><link href="/w3c/p3p.xml" rel="P3Pv1" /><script type="text/javascript">window.ST=+new Date();</script><meta content="text/html; charset=UTF-8" http-equiv="content-type" /><meta content="Dropbox is a free service that lets you bring your photos, docs, and videos anywhere and share them easily. Never email yourself a file again!" name="description" /><meta content="online storage, free storage, file sharing, share files,
+    awesome, cloud storage, online backup, cross platform, sync, sharing, mac,
+    windows, os x, linux, backup, collaboration, file versioning, file revisions,
+    remote access, undelete" name="keywords" /><meta content="IE=EDGE" http-equiv="X-UA-Compatible" /><meta content="noindex" name="robots" /><meta content="Ukraine.png" property="og:title" /><meta content="Shared with Dropbox" property="og:description" /><meta content="https://photos-5.dropbox.com/t/0/AAATgiV6DUKSJcuVVnJ9W-FLoL_WL1nLZsfeELeAcAO1Mw/12/108831317/png/320x320/1/_/0/2/Ukraine.png/JAszBPy2G0TRh7ZtsXaM-UV9SBfZpruz2dzDnKOzjAg" property="og:image" /><meta content="https://www.dropbox.com/sh/vlpojkh1jhk5roo/OfGOAWNCmR/Ukraine.png" property="og:url" /><meta content="website" property="og:type" /><meta content="Dropbox" property="og:site_name" /><meta content="210019893730" property="fb:app_id" /><meta content="photo" name="twitter:card" /><meta content="@Dropbox" name="twitter:site" /><meta content="https://www.dropbox.com/sh/vlpojkh1jhk5roo/OfGOAWNCmR/Ukraine.png" name="twitter:url" /><meta content="Ukraine.png" name="twitter:title" /><meta content="Shared with Dropbox" name="twitter:description" /><meta content="https://photos-1.dropbox.com/t/0/AAATgiV6DUKSJcuVVnJ9W-FLoL_WL1nLZsfeELeAcAO1Mw/12/108831317/png/1024x768/2/_/0/2/Ukraine.png/JAszBPy2G0TRh7ZtsXaM-UV9SBfZpruz2dzDnKOzjAg" name="twitter:image" /><meta content="TnuSyOnBMNmtugbpL1ZvW2PbSF9LKvoTzrvOGS9h-b0" name="google-site-verification" /><meta content="EZKIczQcM1-DVUMz8heu1dIhNtxNbLqbaA9-HbOnCQ4" name="google-site-verification" /><meta content="tz8iotmk-pkhui406y41y5bfmfxdwmaa4a-yc0hm6r0fga7s6j0j27qmgqkmc7oovihzghbzhbdjk-uiyrz438nxsjdbj3fggwgl8oq2nf4ko8gi7j4z7t78kegbidl4" name="norton-safeweb-site-verification" /><meta content="https://dt8kf6553cww8.cloudfront.net/static/images/win8_web_tile-vfl8eyKFU.png" name="msapplication-TileImage" /><meta content="#ffffff" name="msapplication-TileColor" /><title>Dropbox - Ukraine.png</title><script type="text/javascript">var Constants = { BLOCK_CLUSTER: "dl-web.dropbox.com", PUBSERVER: "dl.dropboxusercontent.com", WEBSERVER: "www.dropbox.com", NOTSERVER: "notify1.dropbox.com:80", SUBSCRIBE_URL: "/subscribe", LIVE_TRANSCODE_SERVER: "showbox-tr.dropbox.com", DISABLE_VIDEO_ICONS: false, DISABLE_VIDEOS_IN_LIGHTBOX: false, block: "dl-web.dropbox.com", protocol: "https", uid: "", email: "", personal_email: "", work_email: "", sess_id: "140194544063038822555321081241000493617", root_ns: 0, personal_root_ns: 0, work_root_ns: 0, SVN_REV: "2464077312", TOKEN: "52AqSR1MTK4jvS8lau3g-W-5", IS_PROD: 1, WEB_TIMING_ENABLED: 1, CPROFILE_ENABLED: 0, CPROFILE_PARAMETER: "", GANDALF_PANEL: 0, GSLB_ENABLED: 0, IS_SPDY: 1, quicksend_enabled: 0, send_a_copy_enabled: 0, upload_debug: false, date_format: "M/d/yyyy", time_format: "h:mm a", datetime_format: "M/d/yyyy h:mm a", ADMIN: 0, referrer: "https://www.dropbox.com/sh/vlpojkh1jhk5roo/XbLTTeZVNO?lst", TWO_ITEM_LIST: "%(x)s and %(y)s", THREE_ITEM_LIST: "%(x)s, %(y)s and %(z)s", LOCALES: [["en", "English"], ["de", "Deutsch"], ["es", "Espa\u00f1ol (Latinoam\u00e9rica)"], ["es_ES", "Espa\u00f1ol (Espa\u00f1a)"], ["fr", "Fran\u00e7ais"], ["id", "Bahasa Indonesia"], ["it", "Italiano"], ["ja", "\u65e5\u672c\u8a9e"], ["ko", "\ud55c\uad6d\uc5b4"], ["ms", "Bahasa Malaysia"], ["pl", "Polski"], ["pt_BR", "Portugu\u00eas (Brasil)"], ["ru", "P\u0443\u0441\u0441\u043a\u0438\u0439"], ["tr", "T\u00fcrk\u00e7e"], ["zh_CN", "\u4e2d\u6587\uff08\u7b80\u4f53\uff09"], ["zh_TW", "\u4e2d\u6587\uff08\u7e41\u9ad4\uff09"]], USER_LOCALE: "en", EMAIL_VERIFIED: 0, PERSONAL_EMAIL_VERIFIED: 0, WORK_EMAIL_VERIFIED: 0, TIMEZONE_OFFSET: 0, REQUEST_ID: "b09481a4d8cff5dd5afc8c69adf46ca8", BATCH_THUMB_ENDPOINTS: ["//photos-1.dropbox.com/btjb", "//photos-2.dropbox.com/btjb", "//photos-3.dropbox.com/btjb", "//photos-4.dropbox.com/btjb", "//photos-5.dropbox.com/btjb", "//photos-6.dropbox.com/btjb"], MAX_TEXT_FILE_SIZE_B: "4194304", MAX_DOC_FILE_SIZE_B: "20971520", PDF_PREVIEW_MODE: "pdf-embedded", FACEBOOK_APP_ID: "210019893730", team_id: "", WIT_VERSION: 6, static_url_video_js_swf: "https://dt8kf6553cww8.cloudfront.net/static/swf/video-js-vflMfTkZb.swf", static_url_swfupload_swf: "https://dt8kf6553cww8.cloudfront.net/static/swf/swfupload-vfl8U9T2v.swf", static_url_moxie_swf: "https://dt8kf6553cww8.cloudfront.net/static/swf/Moxie-vflz978zN.swf", static_url_copy_clipboard_swf: "https://dt8kf6553cww8.cloudfront.net/static/swf/copy_clipboard-vflvMcZTC.swf", static_url_pdfjs_viewer: "/static/javascript/external/pdf-js/viewer.html", static_url_syntax_js: "https://dt8kf6553cww8.cloudfront.net/static/javascript/external/syntax-vflpNqebu.js", static_url_video_overlay: "https://dt8kf6553cww8.cloudfront.net/static/images/icons/video_overlay-vfld7VbHa.png", team_name: "", ROLE_PERSONAL: "personal", ROLE_WORK: "work", ROLE_PARAM: "role",    DO_NOT_ADD_A_TRAILING_COMMA: true };</script><script type="text/javascript">
+    window.LoadedJsSuccessfully = false;
+
+    if (window.addEventListener) {
+        window.addEventListener('load', function() {
+            window.setTimeout(function() {
+                if (!window.LoadedJsSuccessfully) {
+                    var url = encodeURIComponent(window.location.href);
+                    new Image().src = '/jse?e=failed+to+load+script&loc=' + url + '&f=' + url;
+                }
+            }, 5000);
+        }, false);
+    }
+</script><script type="text/javascript">window.VFL_PREFIX = "https://dt8kf6553cww8.cloudfront.net/static/";  window.REQUIRE_JS_PATHS = { "jquery": [ "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min", "https://dt8kf6553cww8.cloudfront.net/static/javascript/external/jquery-vflrOa9og", "https://www.dropboxstatic.com/static/javascript/external/jquery-vflrOa9og" ], "libs": [ "https://dt8kf6553cww8.cloudfront.net/static/javascript/compiled/libs-mini-vflzWtmmB", "https://www.dropboxstatic.com/static/javascript/compiled/libs-mini-vflzWtmmB" ], "dropbox": [ "https://dt8kf6553cww8.cloudfront.net/static/javascript/compiled/dropbox-mini-vflnH2a9Y", "https://www.dropboxstatic.com/static/javascript/compiled/dropbox-mini-vflnH2a9Y" ] };</script><script src="https://dt8kf6553cww8.cloudfront.net/static/javascript/compiled/require-vflhliBXB.js" type="text/javascript"></script><style type="text/css">.hny-gim { display: none; }</style><!--[if lt IE 9]><script src="/static/javascript/external/html5shiv.js"></script><![endif]-->  
+            <style type="text/css" media="screen">
+                html {
+                  overflow: auto;
+                }
+            </style>
+        <link href="https://dt8kf6553cww8.cloudfront.net/static/css/shmodel_print-vflWHY0im.css" type="text/css" rel="stylesheet" /><script>
+                if (self != top) {
+                    top.location.replace(self.location.href);
+                    setTimeout(function() {
+                        document.body.innerHTML = (
+                            "<img src='https://www.dropbox.com/static/images/logo.png' onClick='top.location.href=window.location.href' />");
+                    }, 1);
+                }
+            </script></head><body class="en file-preview-body shmodel-body preview-photo deferred-resources"><div style="display: none;" id="modal-behind"></div><div style="display: none;" id="modal"><div id="modal-box"><a href="#" id="modal-x" onclick="javascript: Modal.hide(null, false, true); Event.stop(event); return false;"></a><h2 id="modal-title"></h2><div id="modal-content"></div></div></div><div style="display: none;" id="modal-overlay"></div><div style="display:none" id="grave-yard"></div><div style="display:none" id="trash-can"></div><script type="text/template" id="tutorial_nav_bubble_tmpl"><div class="tutorial-bubble-content"><a class="tutorial-bubble-x-link"><img src="/static/images/x-small-active.png" class="tutorial-bubble-x-img" /></a><h1 class="tutorial-bubble-title"><%= title %></h1><p class="tutorial-bubble-body"><%= body %></p><a class="tutorial-bubble-button <%= button_class %>"><%= button_text %></a></div></script><div id="floaters"></div><div style="display: none;" class="external-drop-indicator top"></div><div style="display: none;" class="external-drop-indicator right"></div><div style="display: none;" class="external-drop-indicator bottom"></div><div style="display: none;" class="external-drop-indicator left"></div><div id="notify-wrapper"><span style="display: none;" id="notify"><span id="notify-msg">Sorry, there was a problem loading this page.</span></span></div><div id="outer-frame"> <div style="display: none;" id="db-modal-locale-selector-modal" class="db-modal-wrapper"><div class="db-modal-overlay"></div><div class="db-modal"><div class="db-modal-box"><h2 class="db-modal-title"><div class="db-modal-title-text"></div></h2><div class="db-modal-content"><table><tr><td><ul><li><a data-locale="id" class="locale-option">Bahasa Indonesia</a></li><li><a data-locale="ms" class="locale-option">Bahasa Malaysia</a></li><li><a data-locale="de" class="locale-option">Deutsch</a></li><li><a data-locale="en" class="locale-option">English</a></li><li><a data-locale="es_ES" class="locale-option">Español (España)</a></li><li><a data-locale="es" class="locale-option">Español (Latinoamérica)</a></li><li><a data-locale="fr" class="locale-option">Français</a></li><li><a data-locale="it" class="locale-option">Italiano</a></li></ul></td><td><ul><li><a data-locale="pl" class="locale-option">Polski</a></li><li><a data-locale="pt_BR" class="locale-option">Português (Brasil)</a></li><li><a data-locale="ru" class="locale-option">Pусский</a></li><li><a data-locale="zh_CN" class="locale-option">中文（简体）</a></li><li><a data-locale="zh_TW" class="locale-option">中文（繁體）</a></li><li><a data-locale="ja" class="locale-option">日本語</a></li><li><a data-locale="ko" class="locale-option">한국어</a></li></ul></td></tr></table></div><a href="#" class="db-modal-x"></a></div></div></div><div id="page-content"><div class="nav-header"><a href="//www.dropbox.com?src=shmodel" target="_top" class="logo"><img src="https://dt8kf6553cww8.cloudfront.net/static/images/header/header_logo_shmodel-vflsZ7QsE.png" alt="Dropbox" data-hi-res="https://dt8kf6553cww8.cloudfront.net/static/images/header/header_logo_shmodel@2x-vflvJX68X.png" /></a> <div class="filename shmodel-filename"><span id="emsnippet-80a242d16438a20d"></span></div> <div class="buttons"><a href="#" class="freshbutton-blue freshdropdown-button" onclick="SharingModel.toggle_dropdown(event, $(&quot;download-menu&quot;), $(&quot;download-menu-button&quot;))" id="download-menu-button">Download<img src="https://dt8kf6553cww8.cloudfront.net/static/images/icons/icon_spacer-vflN3BYt2.gif" class=" sprite sprite_web s_web_arrow_white" /></a><div style="display: none;" id="download-menu" class="chat-bubble freshdropdown-menu"><ul><li><a href="https://dl.dropboxusercontent.com/sh/vlpojkh1jhk5roo/OfGOAWNCmR/Ukraine.png?dl=1&amp;token_hash=AAGa35GTNGI2CHkmfGsxBVlrXRw84ij1J2dTrKGuUpvD2A" id="download_button_link" onclick="FreshDropdown.hide_all()"><img src="https://dt8kf6553cww8.cloudfront.net/static/images/icons/icon_spacer-vflN3BYt2.gif" class=" sprite sprite_web s_web_download_arrow" />Direct download</a></li><li><a class="a2md-button" onclick="SharingModel.show_c2d_modal(); return false;" id="add_to_my_dropbox_link"><img src="https://dt8kf6553cww8.cloudfront.net/static/images/icons/icon_spacer-vflN3BYt2.gif" class=" sprite sprite_web s_web_dropbox" /><span class="">Add to my Dropbox</span></a></li></ul></div><a id="print-button" class="freshbutton-lightblue">Print</a> <div id="account-header"><ul class="nav"><li id="top-login"><div id="top-login-wrapper"><a href="/login" id="login-hover-link"><img src="https://dt8kf6553cww8.cloudfront.net/static/images/icons/icon_spacer-vflN3BYt2.gif" class="s_web_door_in link-img sprite sprite_web" />Sign in<img src="https://dt8kf6553cww8.cloudfront.net/static/images/icons/icon_spacer-vflN3BYt2.gif" style="padding: 0; margin-left: 2px; margin-top: -1px;" class="s_web_login_arrow link-img sprite sprite_web" id="login-hover-dropdown-icon" /></a><div id="login-hover-cont" class="offscreen chat-bubble"><form action="https://www.dropbox.com/login?cont=https%3A//www.dropbox.com/sh/vlpojkh1jhk5roo/OfGOAWNCmR/Ukraine.png" novalidate="novalidate" method="post"><input type="hidden" name="t" value="52AqSR1MTK4jvS8lau3g-W-5" /><div class="sick-input small"><label for="login_email_elm">Email</label><input type="email" id="login_email_elm" name="login_email" tabindex="1" /></div><div class="sick-input small"><label for="login_password_elm">Password</label><input type="password" id="login_password_elm" name="login_password" tabindex="2" /></div><p style="margin-bottom: 0.5em; line-height: 28px;" class="top-login-remember-me"><input style="vertical-align: middle; margin-left: 0;" name="remember_me" class="no-border" type="checkbox" id="remember_me" tabindex="3" /><label style="vertical-align: middle; cursor: pointer; " for="remember_me">Remember me</label><input tabindex="4" type="submit" class="freshbutton-blue" value="Sign in" id="toplogin-submit" /><input type="hidden" name="cont" value="https://www.dropbox.com/sh/vlpojkh1jhk5roo/OfGOAWNCmR/Ukraine.png" /></p><p class="create-account"><a href="/register" id="login-create-an-account">Sign up for Dropbox</a></p></form><div class="chat-bubble-arrow-border"></div><div class="chat-bubble-arrow"></div></div></div></li></ul></div></div></div><div id="shmodel-content-area"><div id="default-content"><img src="https://dt8kf6553cww8.cloudfront.net/static/images/icons128/page_white_picture-vfloJ3Dyo.png" class="bigicon" /><div class="filename shmodel-filename"><span id="emsnippet-f827bd67af7c6723"></span></div><div class="meta">2 days ago&nbsp;&middot;&nbsp; 831 bytes</div><a href="https://dl.dropboxusercontent.com/sh/vlpojkh1jhk5roo/OfGOAWNCmR/Ukraine.png?dl=1&amp;token_hash=AAGa35GTNGI2CHkmfGsxBVlrXRw84ij1J2dTrKGuUpvD2A" id="default_content_download_button" class="freshbutton-blue">Download</a><a class="freshbutton-lightblue" onclick="SharingModel.show_c2d_modal(); return false;" id="default_content_a2md">Add to my Dropbox</a></div><div class="filename-below shmodel-filename"><span id="emsnippet-496d2d2578b55368"></span></div><div class="preview-box"><img onload="
+                var time = new Date().getTime();
+                on_script_loaded(function() {
+                    FilePreview.photo_loaded(time);
+                });
+            " src="https://photos-1.dropbox.com/t/0/AAC_f1BaNz1Imo2zcbyBM-rzcxkq-o8CWxQE9DN99Xd-ig/12/108831317/png/1024x768/3/1386176400/0/2/Ukraine.png/JAszBPy2G0TRh7ZtsXaM-UV9SBfZpruz2dzDnKOzjAg" class="content-shadow" onclick="
+                $(document.body).addClassName(&quot;photo-zoom&quot;);
+                $(document.body).removeClassName(&quot;preview-photo&quot;);
+                $j(event.target).trigger(&quot;photo-zoom&quot;);
+            " alt="" id="preview-img" /><img src="https://dt8kf6553cww8.cloudfront.net/static/images/icons/icon_spacer-vflN3BYt2.gif" class="content-shadow" onclick="$(document.body).removeClassName(&quot;photo-zoom&quot;); $(document.body).addClassName(&quot;preview-photo&quot;);" id="full-img" /><div id="context-menu-container"></div>
+<script type="text/template" id="context_menu_tmpl">
+  <% var extra_class_name = big ? 'big' : ''; %>
+    <ul id="context-menu" class="chat-bubble menu <%= extra_class_name %>">
+  <% for (var i = 0; i < actions.length; i++) { %>
+      <% if (actions[i].type === 'divider') { %>
+        <li class="divider"></li>
+      <% } else if (actions[i].type === 'subheader') { %>
+        <li class="subheader">
+            <span><%= actions[i].text %></span>
+        </li>
+      <% } else { %>
+        <li class="action primary">
+          <% if (actions[i].href) { %>
+            <a href="<%= actions[i].href %>"
+              <% if (actions[i].target) { %>
+                target="<%= actions[i].target %>"
+              <% } %>
+            >
+                <%= Sprite.html('web', actions[i].icon) %>
+                <span><%= actions[i].text %></span>
+            </a>
+          <% } else { %>
+            <label for="<%= actions[i].name %>_button">
+                <button id="<%= actions[i].name %>_button"
+                     type="submit"
+                     name="action"
+                     data-value="<%= actions[i].name %>"
+                     >
+                    <div class="icon-frame">
+                      <% if (actions[i].icon) { %>
+                        <%= Sprite.html('web', actions[i].icon) %>
+                      <% } else if (actions[i].icon_href) { %>
+                        <img src="<%= actions[i].icon_href %>" />
+                      <% } else { %>
+                        <img src="<%= Sprite.SPACER %>" class="context-menu-spacer" />
+                      <% } %>
+                    </div>
+                    <span><%= actions[i].text %></span>
+                  <% if (actions[i].is_dropdown && actions[i].subactions) { %>
+                    <%= Sprite.html('web', 'menu-right-arrow') %>
+                  <% } %>
+                </button>
+            </label>
+
+              <% if (actions[i].is_dropdown && actions[i].subactions) { %>
+            <ul class="secondary chat-bubble menu">
+              <% for (var j = 0; j < actions[i].subactions.length; j++) { %>
+                <% if (actions[i].subactions[j].type === 'divider') { %>
+                  <li class="divider"></li>
+                <% } else if (actions[i].subactions[j].type === 'subheader') { %>
+                  <li class="subheader">
+                  <span><%= actions[i].subactions[j].text %></span>
+                  </li>
+                <% } else { %>
+                  <li class="action">
+                    <% if (!actions[i].subactions[j].href) { %>
+                      <label>
+                          <button type="submit"
+                                  name="action"
+                                  data-value="<%= actions[i].subactions[j].name %>"
+                                  submenu-index="<%= j %>">
+                              <div class="icon-frame">
+                                <% if (actions[i].subactions[j].icon) { %>
+                                  <%= Sprite.html('web', actions[i].subactions[j].icon) %>
+                                <% } %>
+                              </div>
+                              <span><%= actions[i].subactions[j].text %></span>
+                              <% if (actions[i].subactions[j].detail_text) { %>
+                              <span class="detail-text"><%= actions[i].subactions[j].detail_text %></span>
+                              <% } %>
+                          </button>
+                      </label>
+                    <% } else { %>
+                      <a href="<%= actions[i].subactions[j].href %>">
+                          <%= Sprite.html('web', actions[i].subactions[j].icon) %>
+                          <span><%= actions[i].subactions[j].text %></span>
+                      </a>
+                    <% } %>
+                  </li>
+                <% } %>
+              <% } %>
+            </ul>
+              <% } %>
+
+          <% } %>
+        </li>
+      <% } %>
+  <% } %>
+    </ul>
+</script>
+</div><a href="/copyright_complaint?ssu=https%3A//www.dropbox.com/sh/vlpojkh1jhk5roo/OfGOAWNCmR/Ukraine.png" class="content-flag title_bubble" rel="nofollow" title="Flag for copyright">Flag for copyright</a></div><div style="display:none;" id="twitter-login"><form action="#" novalidate="novalidate" onsubmit="Twitter.login(); return false" method="post"><input type="hidden" name="t" value="52AqSR1MTK4jvS8lau3g-W-5" /><div class="center"><img src="/static/images/twitter_logo.jpg" alt="twitter" /><p style="margin-top:1.5em;" id="twitter-status">Before you can tweet this link, we need to connect to your Twitter account.</p><p style="margin: 1.5em 0 3.5em 0;"><a href="#" onclick="Twitter.do_auth(); return false;"><img src="/static/images/twitter_signin.png" alt="" /></a></p><div class="modal-buttons">I've finished signing in to Twitter<input type="button" onclick="Twitter.onLoginSuccessCallback();" value="Tweet my message" class="freshbutton-blue" /></div></div></form></div><div style="display:none;" id="facebook-auth"><div class="center"><img src="/static/images/facebook_logo.jpg" alt="facebook" /><p style="margin-top:1.5em;" id="facebook-status">Before you can post this link, we need to connect to your Facebook account.</p><p style="margin: 1.5em 0 3.5em 0;"><a href="#" onclick="FacebookOAuth.do_auth(); return false;"><img src="/static/images/facebook_signin.png" alt="" /></a></p><div class="modal-buttons">I've finished signing in to Facebook<input style="margin-left: 0.5em;margin-bottom: -1px;" type="button" onclick="Modal.vars.action();" value="Post my message" class="freshbutton-blue" /></div></div></div><div style="display:none;" id="twitter-posting"><div class="center"><img src="/static/images/twitter_logo.jpg" alt="Twitter" /><h3 style="margin-top: 3em;"><img src="/static/images/icons/ajax-loading-small.gif" alt="" class="h2-img" />Tweeting</h3></div></div><div style="display:none;" id="facebook-posting"><div class="center"><br /><br /><img src="/static/images/facebook_logo.jpg" alt="Facebook" /><br /><br /><h3><img src="/static/images/icons/ajax-loading-small.gif" alt="" class="h2-img" />Posting to Facebook</h3><br /></div></div><div style="display:none;" id="disable-token-modal"><p class="disable-token-desc"></p><div class="modal-buttons"><input value="Remove link" type="button" class="freshbutton-blue" onclick="SharingModel.do_remove(Modal.vars);" /><input value="Cancel" type="button" class="freshbutton" onclick="Modal.hide();" /></div></div><div style="display:none;" id="album-disable-token-modal"><p>Are you sure you want to unshare <span class="album_unshare_name"></span>? Once it's unshared, nobody else will be able to view it.</p><div class="modal-buttons"><input value="Unshare" type="button" class="freshbutton-blue" onclick="SharingModel.do_remove(Modal.vars);" /><input value="Cancel" type="button" class="freshbutton" onclick="Modal.hide();" /></div></div><div style="display: none;" id="c2d-modal"><ul id="c2d-modal-tabs" class="modal-tabs clearfix"><li><a href="#" id="create-account" class="selected">Create an account</a></li><li><a href="#" id="login-account">Sign in</a></li></ul><div id="create-account-content"><p><span class="c2d-create-account-desc"></span></p><br /><div><form novalidate="novalidate" method="post" id="c2d-register-form"><input type="hidden" name="t" value="52AqSR1MTK4jvS8lau3g-W-5" /><input type="hidden" name="signup_tag" value="copy_to_dropbox" /><div id="register-partial"><div style="display:none;" class="error-plain-text"><form:error name='fname' /></div><div id="fname-field" class="sick-input"><input autocomplete="off" tabindex="5" type="text" name="fname" id="fname" /><label id="fname-label" for="fname">First name</label></div><div style="display:none;" class="error-plain-text"><form:error name='lname' /></div><div id="lname-field" class="sick-input"><input autocomplete="off" tabindex="6" type="text" name="lname" id="lname" /><label id="lname-label" for="lname">Last name</label></div><div class="register-spacer"></div><div style="display:none;" class="error-plain-text"><form:error name='email' /></div><div id="email-field" class="sick-input clearfix"><input autocomplete="off" tabindex="7" type="email" name="email" id="email" /><label id="email-label" for="email">Email</label><div style="display: none;" id="email_check_warning"></div></div><div style="display:none;" class="error-plain-text"><form:error name='password' /></div><div id="password-field" class="sick-input"><input autocomplete="off" tabindex="8" type="password" name="password" id="password" /><label id="password-label" for="password">Password</label></div><div id="register-footer"><div id="tos-agree-field"><label for="tos_agree"><input type="checkbox" id="tos_agree" name="tos_agree" tabindex="9" /> I agree to <a href="/terms" target="_blank">Dropbox Terms</a></label><div style="display:none;" class="error-plain-text"><form:error name='tos_agree' /></div></div><input type="hidden" name="register-submit" value="1" /><input name="register-submit-dummy" value="Create account" class="freshbutton-blue" type="submit" id="register-submit" tabindex="10" /></div><br class="clear" /></div></form></div></div><div style="display:none;" id="login-account-content"><div id="c2d-login"><p><span class="c2d-login-desc"></span></p><br /><form novalidate="novalidate" method="post" id="c2d-login-form"><input type="hidden" name="t" value="52AqSR1MTK4jvS8lau3g-W-5" /><input type="hidden" name="cont" value="https://www.dropbox.com/sh/vlpojkh1jhk5roo/OfGOAWNCmR/Ukraine.png?show_c2d_modal=true" /><table id="login-table"><tr><td><div style="display:none;" class="error-plain-text"><form:error name='login_email' /></div><div class="sick-input"><label for="email">Email</label><input autocomplete="off" type="text" name="login_email" tabindex="13" /></div></td></tr><tr><td style="padding: 10px 0;"><div style="display:none;" class="error-plain-text"><form:error name='login_password' /></div><div class="sick-input"><label for="password">Password</label><input autocomplete="off" type="password" name="login_password" tabindex="14" /></div></td></tr><tr><td><input style="float:right" name="login_submit" value="Sign in" class="freshbutton-blue" type="submit" id="login_submit" tabindex="15" /></td></tr></table></form></div><div style="display: none;" id="c2d-twofactor-login"><p class="c2d-header">Enter security code</p><p id="sms-msg">We sent a security code to your phone ending in <span class="last-four-digits"></span>.</p><p id="offline-msg">Enter the security code generated by your mobile authenticator app.</p><br /><form novalidate="novalidate" method="post" id="c2d-twofactor-login-form"><input type="hidden" name="t" value="52AqSR1MTK4jvS8lau3g-W-5" /><div id="c2d-twofactor-error" class="error-message"></div><div class="sick-input"><label for="email">6-digit code</label><input autocomplete="off" type="text" id="c2d-twofactor-code" name="twofactor_code" tabindex="13" /></div><input name="twofactor_login_submit" value="Submit code" class="freshbutton-blue" type="submit" id="twofactor_login_submit" tabindex="15" /><p class="resend-code"><a id="c2d-resend-link">Didn't receive one?</a></p></form></div></div></div><div style="display: none;" id="sharing-progress"><div class="orange-hotbox"><img src="/static/images/icons/ajax-loader-trans.gif" alt="" />Sharing...</div></div><div style="display: none;" id="sharing-posted"><div class="green-hotbox"><table><tr><td>Message shared!</td><td style="width: 5px;"></td><td><a id="view-post" target="_blank"></a></td></tr></table></div></div><div style="display: none;" id="sharing-posted-both"><div class="green-hotbox"><table><tbody><tr><td>Link shared!</td><td style="width: 5px;"></td><td><a href="http://www.twitter.com/" id="view-post" target="_blank"><img src="https://dt8kf6553cww8.cloudfront.net/static/images/icons/icon_spacer-vflN3BYt2.gif" class=" sprite sprite_web s_web_twitter" />View tweet</a></td><td style="width: 5px;"></td><td><a href="http://www.facebook.com/profile.php?v=wall" id="view-post" target="_blank"><img src="https://dt8kf6553cww8.cloudfront.net/static/images/icons/icon_spacer-vflN3BYt2.gif" class=" sprite sprite_web s_web_facebook" />View post</a></td></tr></tbody></table></div></div><div style="display:none;" id="inline-facebook-auth"><div class="orange-hotbox">You need to <a id="connect-with-facebook" onclick="FacebookOAuth.do_auth(); return false;">connect with Facebook</a> first.</div></div><div style="display:none;" id="inline-twitter-auth"><div class="orange-hotbox">You need to <a id="connect-with-twitter" onclick="Twitter.do_auth(); return false;">connect with Twitter</a> first.</div></div>
+<script type="text/template" id="lightbox_more_actions_item_tmpl">
+<%
+  _id = (typeof _id !== 'undefined') ? _id : '';
+  _href = (typeof _href !== 'undefined') ? _href : '';
+  _target = (typeof _target !== 'undefined') ? _target : '';
+  more_classes = (typeof more_classes !== 'undefined') ? more_classes : '';
+  divider = ((typeof divider !== 'undefined') && (divider));
+%>
+
+<% if (divider) { %>
+  <li class="divider <%= more_classes %>" />
+<% } else { %>
+  <li id="<%= _id %>" class="<%= more_classes %>" >
+    <a href="<%= _href %>" target="<%= _target %>">
+      <%= Sprite.html('web', sprite_name) %>
+      <div>
+          <%= item_text %>
+      </div>
+    </a>
+  </li>
+<% } %>
+</script>
+<div style="display:none;" id="file-preview-modal"><div class="modal-preview-content"><div class="preview"><table class="preview-container-parent"><tr><td class="preview-container"><div class="preview-content"></div></td></tr></table></div> <div id="file-preview-menu" class="menu"><div class="file-title lightbox-not-important"><span class="album-name">&nbsp;</span><span class="filename">&nbsp;</span><span class="added-by">&nbsp;</span></div><div class="actions">&nbsp;</div><div class="paging lightbox-not-important"><div class="paging-block"><a href="#" class="prev"><img src="https://dt8kf6553cww8.cloudfront.net/static/images/icons/icon_spacer-vflN3BYt2.gif" class=" sprite sprite_web s_web_lightbox_prev" /></a><div class="lightbox-index-text-container"></div><a href="#" class="next"><img src="https://dt8kf6553cww8.cloudfront.net/static/images/icons/icon_spacer-vflN3BYt2.gif" class=" sprite sprite_web s_web_lightbox_next" /></a></div></div></div><div style="display:none;" id="lightbox-more-actions-menu" class="freshdropdown-menu big black chat-bubble-bottom"><ul id="lightbox-more-actions-list"></ul><div class="chat-bubble-arrow-border black"></div><div class="chat-bubble-arrow black"></div></div> <div style="display:none;" class="delete-file-prompt chat-bubble-bottom"><input type="button" id="lightbox-delete-photo" value="Delete" class="freshbutton-blue" /><br /><input type="button" id="lightbox-delete-cancel" value="Cancel" class="freshbutton" /><div class="chat-bubble-arrow-border black"></div><div class="chat-bubble-arrow black"></div></div></div><div class="header"><a href="#" class="close lightbox-not-important"><img src="https://dt8kf6553cww8.cloudfront.net/static/images/icons/icon_spacer-vflN3BYt2.gif" class=" sprite sprite_web s_web_lightbox_close" /></a></div></div></div><noscript><p class="center">The Dropbox website requires JavaScript.</p></noscript></div><div style="position: absolute; top: 0; left: 0; font-family: Courier" id="ieconsole"></div><div style="position:absolute; top:-10000px;width:0px; height:0px; left: 0;" id="FB_HiddenContainer"></div><div style="display:none;" id="notice-container" class="clearfix"></div><script src="https://dt8kf6553cww8.cloudfront.net/static/coffee/compiled/logger-vflXdXO8C.js" type="text/javascript"></script><script src="https://dt8kf6553cww8.cloudfront.net/static/javascript/password_strength-vflwq0t9x.js" type="text/javascript"></script><script>if (window.requirejs) { requirejs(["dropbox"], function(dropbox) {SharingModel.init(Util.from_json("\"Ukraine.png\""), Util.from_json("{\"secure_hash\": \"OfGOAWNCmR\", \"subpath\": \"/Ukraine.png\", \"tkey\": \"vlpojkh1jhk5roo\"}"));
+
+            $j('#print-button').click(function() {
+                requirejs(['print'], function(print) { print.print(); });
+            });
+        
+SharingModel.init_file()
+
+        Util.smartLoad(function() {
+           Util.focus(Util.from_json("\"\""));
+           Cookies.check_cookies_enabled();
+           WebTimingLogger.init();
+        });
+        
+$(Util.from_json("\"emsnippet-80a242d16438a20d\"")).innerHTML = Util.from_json("\"Ukraine.png\"").em_snippet(50, 0.750000).escapeHTML();
+$(Util.from_json("\"emsnippet-f827bd67af7c6723\"")).innerHTML = Util.from_json("\"Ukraine.png\"").em_snippet(20, 0.750000).escapeHTML();
+$(Util.from_json("\"emsnippet-496d2d2578b55368\"")).innerHTML = Util.from_json("\"Ukraine.png\"").em_snippet(20, 0.750000).escapeHTML();
+FilePreview.init_photo(Util.from_json("\"https://photos-5.dropbox.com/t/0/AAC_f1BaNz1Imo2zcbyBM-rzcxkq-o8CWxQE9DN99Xd-ig/12/108831317/png/2048x1536/3/1386176400/0/2/Ukraine.png/JAszBPy2G0TRh7ZtsXaM-UV9SBfZpruz2dzDnKOzjAg\""), Util.from_json("\"https://dl.dropboxusercontent.com/sh/vlpojkh1jhk5roo/OfGOAWNCmR/Ukraine.png?dl=1\u0026token_hash=AAGa35GTNGI2CHkmfGsxBVlrXRw84ij1J2dTrKGuUpvD2A\""))
+window.c2d_tabs = new TabController("c2d-modal-tabs", {url_prefix: false})
+
+            Util.smartLoad(function () {
+                PasswordStrength.watch("password");
+            });
+            new MailCheck('email', 'email_check_warning');
+            }); } else { var onload_js = function() { SharingModel.init(Util.from_json("\"Ukraine.png\""), Util.from_json("{\"secure_hash\": \"OfGOAWNCmR\", \"subpath\": \"/Ukraine.png\", \"tkey\": \"vlpojkh1jhk5roo\"}"));
+
+            $j('#print-button').click(function() {
+                requirejs(['print'], function(print) { print.print(); });
+            });
+        
+SharingModel.init_file()
+
+        Util.smartLoad(function() {
+           Util.focus(Util.from_json("\"\""));
+           Cookies.check_cookies_enabled();
+           WebTimingLogger.init();
+        });
+        
+$(Util.from_json("\"emsnippet-80a242d16438a20d\"")).innerHTML = Util.from_json("\"Ukraine.png\"").em_snippet(50, 0.750000).escapeHTML();
+$(Util.from_json("\"emsnippet-f827bd67af7c6723\"")).innerHTML = Util.from_json("\"Ukraine.png\"").em_snippet(20, 0.750000).escapeHTML();
+$(Util.from_json("\"emsnippet-496d2d2578b55368\"")).innerHTML = Util.from_json("\"Ukraine.png\"").em_snippet(20, 0.750000).escapeHTML();
+FilePreview.init_photo(Util.from_json("\"https://photos-5.dropbox.com/t/0/AAC_f1BaNz1Imo2zcbyBM-rzcxkq-o8CWxQE9DN99Xd-ig/12/108831317/png/2048x1536/3/1386176400/0/2/Ukraine.png/JAszBPy2G0TRh7ZtsXaM-UV9SBfZpruz2dzDnKOzjAg\""), Util.from_json("\"https://dl.dropboxusercontent.com/sh/vlpojkh1jhk5roo/OfGOAWNCmR/Ukraine.png?dl=1\u0026token_hash=AAGa35GTNGI2CHkmfGsxBVlrXRw84ij1J2dTrKGuUpvD2A\""))
+window.c2d_tabs = new TabController("c2d-modal-tabs", {url_prefix: false})
+
+            Util.smartLoad(function () {
+                PasswordStrength.watch("password");
+            });
+            new MailCheck('email', 'email_check_warning');
+             }; if (window.Prototype) { document.observe('script:loaded', onload_js); } else if (window.jQuery) { jQuery(onload_js); } }</script></body></html>
