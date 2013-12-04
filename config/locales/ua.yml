@@ -1,0 +1,191 @@
+en:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              required_for_confirmation: "%{attribute} is required for confirmation"
+              already_confirmed: "%{attribute} is already confirmed"
+  pull_request:
+    twitter_message: "I just opened a pull request for http://24pullrequests.com, check it out: %{issue_url}"
+    download:
+      tooltip: "Usually we check for pull requests every hour, but you can check now if you really want."
+  twitter:
+    account_linked: "Your Twitter account has been linked! We'll post a tweet whenever you open a pull request."
+    account_removed: "Your Twitter account has been removed."
+    link_account:
+      text: "Link Your Twitter Account"
+      tooltip: "If you link your Twitter account, we'll post a new tweet whenever you open a pull request!"
+
+  navigation:
+    all_projects: All Projects
+    my_suggestions: My Suggestions
+    dashboard: Dashboard
+    profile: Profile
+    preferences: Preferences
+    gifted_code: Gifted Code
+    manage_projects: Manage Projects
+    logout: Logout
+
+  homepage:
+    title: "24 Pull Requests"
+    description: Giving back little gifts of code for Christmas
+    about: "What's it all about?"
+    about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your pull requests.</p><p>Log in with your GitHub account and we'll track and highlight all your pull requests and suggest projects to work on.</p>"
+    greeting: "'Tis the season"
+    give_to_open_source: You've been benefiting from the use of open source projects all year. Now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving pull requests!
+    q_n_a: Questions & Answers
+    badges:
+      title: Earn Coderwall badges
+      description: We've teamed up with coderwall and created some kickass badges to unlock for participating.
+      involved_link: 'Participant - Get involved, send at least one pull request before Christmas'
+      amazing: "Continuous Sync - You're an open source machine, send 24 pull requests during December"
+    involved:
+      title: Get involved
+      description: "There are loads of ways to get involved in an open source project: improving documentation, helping fix existing issues and bugs, improving code quality and test coverage, or adding missing features."
+      special_page: "We've prepared a %{contributing_path}, where you can find some information about contributing."
+      take_a_look: If you are new to open source, please take a look.
+    profile:
+      title: Build your profile
+      description: Contributing to open source projects is also a great way to build your profile in the community and improve your CV.
+      getting_started: It's really easy to get started. Even small contributions can be really valuable to a project.
+    join_the_chat: Join the chat on IRC, %{link_to_chat}, at freenode.
+
+  information:
+    title: "24 Pull Requests %{year} is upon us"
+    last_year_stats: "In %{year}, over 24 days, <b>%{developers}</b> developers submitted <b>%{pull_requests}</b> pull requests to <b>%{projects}</b> different open source projects."
+    get_ready: Get ready for 24 Pull Requests %{year} when we do it all again!
+    help_open_source: "Want to help out with open source projects in the meantime? Check out these other great initiatives:"
+    codetriage: "Give back to open source, one issue at a time, with CodeTriage. You'll get one issue from your favorite repo per day to help you dig deeper, learn more, and stay involved with the code you rely on."
+    contribhub:
+      tagline: Do you know you have a neighbor needing some help with a really cool project? With ContribHub you will!
+      description: ContribHub is a GitHub-based application that makes it easier to find projects to contribute to and grow a community around it.
+
+  merry_christmas: Merry Christmas
+  follow_user: Follow @%{twitter}
+  sponsored_by: Sponsored by
+  how_to_contribute: How to contribute?
+  open_source_yey: Open Source FTW!
+  welcome_back: Welcome back, %{user}
+  your_pull_requests: Your Pull Requests
+  suggested_projects: Suggested Projects
+  suggest_project: Suggest a project
+  no_suggestions: You haven't suggested any projects yet.
+  preferred_languages: Preferred Languages
+  organisations: Member of...
+  view_all: View All
+  more: More
+  change: Change
+  claim: Claim
+  edit: Edit
+  everything: Everything
+  about_us: About
+  cancel: Cancel
+  search: Search
+
+  locale:
+    translate: Translate into your language!
+    en: English
+    el: Ελληνικά
+    es: Español
+    pt_br: Português do Brasil
+    fi: Suomi
+    fr: Français
+
+  user:
+    grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
+    pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
+
+  developers_using_language: Розробники, які використовують %{language}
+  developers_involved: Розробники вже беруть участь
+
+  dashboard:
+    christmas_activity: Тут ви можете побачити всю діяльність, яку ми зібрали для вас напередодні Різдва.
+    give_a_gift: Схоже ви ще не подарували нікому код сьогодні. Ви б хотіли зробити подарунок?
+    synchronize: Синхронізація пулл реквестів
+    help_out: "Не знаєте якому проекту допомогти? Ми зібрали список популярних проектів:"
+    no_pull_requests: Ви не послали жодного пулл реквесту, що ж ви чекаєте?!
+
+  language:
+    projects_count: "%{count} %{language} проектів"
+    projects:
+      count: "%{count} проектів використовує %{language}"
+      suggest: "Запропонувати %{language} проект"
+    developers:
+      count: "%{count} розробників використовує %{language}"
+    pull_requests:
+      latest:
+        count: Останні %{language} пулл реквести (всього %{count})
+
+  projects:
+    claim: Деяких запропонованих проектів немає у списку? Розкажіть про них!
+    help_out: Не знаєте якому проекту допомогти? Ми зібрали список блискучих проектів з відкритим кодом, які чекають на ваше сприяння та пулл реквести.
+    suggest_new: Ви також можете запропонувати проекти, які повинні бути додані в список, або, якщо вам потрібна допомога, додати свій власний проект.
+    filter_by_language: "Сортувати за мовою програмування"
+    for_you: Запропоновані вам
+    suggestion:
+      edit: Редаґувати пропозицію
+      update: Обновити проект
+    suggest: На жаль, для цієї мови програмування немає проектів, чому б не спробувати %{suggest_link}?
+    suggest_link_text: Запропонувати
+    new:
+      title: Запропонувати проект
+      info: Один із способів заохочувати до участі у сприянні проектам з відкритим вихідним кодом, це надавати можливість користувачам знати, що популярні проекти можуть бути вартими сприянню. Ми зібрали наші улюбленні проекти, але ми завжди відкриті для пропозицій. Є деякі ідеї? Розкажіть про них нижче!
+      suggestion: Є пропозиція для цього проекту? Ми дуже уважно прислухаэмось до вас! Якщо є щось, що вам не подобається, то не соромтеся представити вашу пропозицію до
+      issue: питання
+    edit:
+      title: Редаґувати пропозицію
+    admin:
+      title: Керувати проектами
+      search: Шукати у Ґітхаб репозиторії
+
+  preferences:
+      title: Налаштувати електронну пошти
+      frequency_message:  За частотою, яку ви обрали, ми будемо висилати листи електронною поштою з запропонованими проектами від тепер та поки проект не закінчиться. В якості додаткового бонусу, ми візьмемо на себе сміливість персоналізації нашої пропозиції до вашої мови програмування на основі профілю у Ґітхаб. Крім того, ви можете вибрати свою мову нижче.
+      delete: "Бажаєте видалити ваш аккаунт?"
+      information: Ви завжди можете змінити налаштування електронної пошти пізніше.
+      twitter: Твіттер аккаунт
+      languages: Якими мовами програмування ви володієте?
+      remove: Видалити аккаунт
+      save_and_continue: Зберегти та продовжити
+
+      hint:
+        confirm_email: Будь ласка зробіть підтвердження вашої електроної адреси за допомою посилання, яке ми вже вислали.
+
+  pull_requests:
+    count: "%{count} пулл реквестів вже зроблено!"
+    language:
+      count: "%{count} пулл реквестів вже зроблено у мові %{language}!"
+    latest:
+      count: Останні пулл реквести (%{count} всього)
+
+  delete_account:
+    title: Видалити ваш аккаунт
+    are_you_sure: Ми просто хотіли переконатися, що ви дійсно хочете видалити свій аккаунт. Це дозволить видалити свій профіль і всі пулл реквести з сайту, хоча будь-які запропоновані проекти залишаться.
+    notification_info: Якщо ви бажаєте припинити отримувати повідомлення ви можете змінити ваш %{email_preferences_link}.
+    confirm: Підтвердити видалення
+    cancel: Я змінив свою думку і хотів би повернутися!
+
+  gifts:
+    title: Подарунковий код
+    description: Тут ви можете керувати вашими пулл реквестами та курирувати власний набір "24 Пулл Реквестів".
+    view_your_gifts: Всі ваші подарунки будуть показані тут - %{calendar_link}.
+    none: Подарунків немає.
+    give: Подаруйте щось значуще проекту, який вам подобається
+
+  collaborators:
+    title: Основні автори
+
+  about:
+    title: Про "24 Пулл Реквести"
+    description: "24 Пулл Реквести" - це невеликий проект з метою сприяння співробітництву проектів з відкритим вихідним кодом протягом грудня.
+    idea: Основна ідея "Відправляти пулл реквест кожен день в грудні до Різдва", заохочуючи розробників відправляти подарункові пулл реквести до проектів з відкритим вихідним кодом протягом усього грудня.
+    more_info: На сайті також містяться запропоновані проекти, які потребують допомоги, орієнтири для внесків і підкреслює хороші пулл реквести, представлені щодня.
+    on_github: "Розробка цього сайту є відкритою на Ґітхабі:"
+    on_twitter: "Ми також є на Твіттері:"
+    sponsors:
+      title: Спонсори
+      details: "24 Пулл Реквести" були можливі завдяки допомозі і пожертв від деяких спонсорів.
+      thanks: "Велике спасибі..."
+      get_in_touch: "Якщо ви хочете стати одним з спонсорів або що-небудь ще, напишіть нам листа:"
