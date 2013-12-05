@@ -10,10 +10,10 @@ describe 'Gifts' do
 			let!(:gift) 		{ create(:gift, user: user, pull_request: pull_request)
 		end
 
-		it { should not have_selector('option') }
+		should_not have_xpath "//option[contains(text(), '#{pull_request.title}')]"
 
 		click_on "Gift it!"
 
-		it { should not have_selector('option') }
+		should_not have_xpath "//option[contains(text(), '#{pull_request.title}')]"
 	end
 end
