@@ -11,4 +11,8 @@ class Organisation < ActiveRecord::Base
       where(:login => response.login).first_or_create(params)
     end
   end
+
+  def pull_request_count
+    users.map{|u| u.pull_requests_count }.reduce(:+)
+  end
 end

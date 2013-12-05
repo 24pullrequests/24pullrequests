@@ -1,0 +1,11 @@
+#organisations.row-fluid.clearfix
+  .span12
+    %h3
+      = organisation_count
+      Organisations
+
+    %div.organisations
+      %ul.clearfix.organisationlist
+        = render @organisations
+
+      = link_to_next_page @organisations, t("more"), remote: true, class: 'btn btn-success more'
