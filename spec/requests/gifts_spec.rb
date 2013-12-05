@@ -6,8 +6,8 @@ describe 'Gifts' do
 
 	describe '#new' do
 		before do
-			let!(:pull_request) { create :pull_request, user: user }
-			let!(:gift) 		{ create(:gift, user: user, pull_request: pull_request) }
+			let(:pull_request) { create(:pull_request, user: user, title: 'Example Pull Request') }
+			let(:gift) 		{ create(:gift, user: user, pull_request: pull_request) }
 		end
 
 		should_not have_xpath "//option[contains(text(), '#{pull_request.title}')]"
