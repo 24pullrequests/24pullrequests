@@ -16,7 +16,7 @@ body {
 @media (min-width: 767px) {
 
   .snow {
-    background: $header-background url(snow-bg.png) 50% 0 no-repeat;
+    background: $header-background asset-url('snow-bg.png') 50% 0 no-repeat;
     position: absolute;
     top: 0;
     left: 50%;
@@ -134,7 +134,7 @@ header {
     left: 50%;
     margin-left: -$width/2;
     padding-top: 40px;
-    background: transparent url(tagline.png) no-repeat bottom;
+    background: transparent asset-url('tagline.png') no-repeat bottom;
   }
 }
 
