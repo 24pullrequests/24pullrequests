@@ -1,0 +1,17 @@
+.row-fluid
+  .span10
+    %h2 #{@organisation.login}
+    %h3 #{@organisation.users.count} contributors
+    %h3 #{@organisation.pull_request_count} pull requests
+
+  .span2
+    .avatar= image_tag(@organisation.avatar_url, :width => 100, :alt => @organisation.login)
+
+#users.row-fluid.clearfix
+  .span12
+
+    %h3 #{@organisation.users.count} Members
+
+    %div.users
+      %ul.clearfix.userlist
+        = render @organisation.users

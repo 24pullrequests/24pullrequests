@@ -6,6 +6,9 @@ Tfpullrequests::Application.routes.draw do
   get "/locale/:locale", to: "dashboards#locale", as: :locale
   resources :gifts
   resources :users
+  
+  resources :organisations
+
   get '/users/:id/:year', :to => 'users#show'
 
   resources :projects, :only => [:index, :new, :create, :edit, :update, :destroy] do
