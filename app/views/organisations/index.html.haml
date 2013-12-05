@@ -1,10 +1,8 @@
 #organisations.row-fluid.clearfix
   .span12
-    %h3
-      = organisation_count
-      Organisations
+    %h3=t("organisations.title", count: organisation_count)
 
-    %div.organisations
+    .organisations
       %ul.clearfix.organisationlist
         = render @organisations
 

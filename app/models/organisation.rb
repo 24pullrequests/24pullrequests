@@ -4,7 +4,7 @@ class Organisation < ActiveRecord::Base
   class << self
     def create_from_github(response)
       params = {
-        :github_id => response.id, 
+        :github_id => response.id,
         :avatar_url => response._rels[:avatar].href
       }
 
@@ -14,5 +14,9 @@ class Organisation < ActiveRecord::Base
 
   def pull_request_count
     users.map{|u| u.pull_requests_count }.reduce(:+)
+  end
+
+  def pull_requests
+    users.map { |u| u.pull_requests.year(2013) }.first.order(:created_at)
   end
 end
