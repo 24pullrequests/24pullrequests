@@ -22,6 +22,7 @@ gem 'simple_form', '3.0.0'
 gem 'rack-google-analytics'
 gem 'ffi', '1.9.0'
 gem 'csv_shaper'
+gem 'obfuscatejs'
 
 group :assets do
   gem 'sass-rails'
