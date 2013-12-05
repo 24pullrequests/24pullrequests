@@ -1,4 +1,4 @@
-en:
+it:
   activerecord:
     errors:
       models:
@@ -193,4 +193,3 @@ en:
     ru: Русский
     uk: Українська
     it: Italiano
-
