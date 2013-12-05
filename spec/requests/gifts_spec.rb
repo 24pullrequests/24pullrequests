@@ -4,7 +4,7 @@ describe 'Gifts' do
 	subject { page }
 	let(:user) { create :user, nickname: "akira" }
 
-	describe '#new'
+	describe '#new' do
 		before do
 			let!(:pull_request) { create :pull_request, user: user }
 			let!(:gift) 		{ create(:gift, user: user, pull_request: pull_request) }
