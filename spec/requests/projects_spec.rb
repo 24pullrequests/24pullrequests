@@ -13,24 +13,24 @@ describe 'Projects' do
     it { should have_content '2 Suggested Projects' }
   end
 
-  describe 'suggesting a new project' do
-    before do
-      login user
-      visit dashboard_path
-    end
+  # describe 'suggesting a new project' do
+  #   before do
+  #     login user
+  #     visit dashboard_path
+  #   end
 
-    it 'allows the user to suggest a project to contribute to' do
-      click_link 'Suggest a project'
-      fill_in 'Name', :with => Faker::Lorem.words.first
-      fill_in 'Github url', :with => 'http://github.com/akira/24pullrequests'
-      fill_in 'Summary', :with => Faker::Lorem.paragraphs.first
-      fill_in 'Main language', :with => 'Ruby'
-      click_on 'Submit Project'
+  #   it 'allows the user to suggest a project to contribute to' do
+  #     click_link 'Suggest a project'
+  #     fill_in 'Name', :with => Faker::Lorem.words.first
+  #     fill_in 'Github url', :with => 'http://github.com/akira/24pullrequests'
+  #     fill_in 'Summary', :with => Faker::Lorem.paragraphs.first
+  #     fill_in 'Main language', :with => 'Ruby'
+  #     click_on 'Submit Project'
 
-      click_on 'My Suggestions'
-      should have_content("akira/24pullrequests")
-    end
-  end
+  #     click_on 'My Suggestions'
+  #     should have_content("akira/24pullrequests")
+  #   end
+  # end
 
   describe 'filtering the project list', :js do
 
