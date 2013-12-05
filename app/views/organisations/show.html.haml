@@ -2,6 +2,12 @@
   .span10
     %h2 #{@organisation.login}
     = link_to "#{@organisation.login} on github", "https://github.com/#{@organisation.login}", class: 'btn'
+    %br
+    %h3=t("organisations.languages")
+    - @organisation.active_languages.each do |language|
+      %span{ class: language.downcase }
+        .language.label.label-info
+          = link_to language, language_path(language)
 
 
   .span2
