@@ -1,182 +1,181 @@
 th:
-	activerecord:
-		errors:
-			models:
-				user:
-					attributes:
-						email:
-							required_for_confirmation: "%{attribute} ต้องการๆยืนยัน"
-							already_confirmed: "%{attribute} ถูกยืนยันเรียบร้อยแล้ว"
-	pull_request:
-		twitter_message: "ได้ส่ง pull request สำหรับ http://24pullrequests.com %{issue_url}"
-		download:
-			tooltip: "เราจะตรวจสอบ pull request ทุกๆชั่วโมงแต่คุณสามารถตรวจสอบได้ตอนนี้"
-	twitter:
-		account_linked: "เชื่อมต่อกับบัญชีทวิตเตอร์ของคุณแล้ว เราจะโพสทุกครั้งที่มีการส่ง pull request"
-		account_removed: "ยกเลิกการเชื่อมต่อบัญชีทวิตเตอร์ของคุณแล้ว"
-		link_account:
-			text: "เชื่อมต่อกับบัญชีทวิตเตอร์"
-			tooltip: "ถ้าคุณเชื่อมต่อบัญชีทวิตเตอร์เราจะโพสทุกครั้งที่คุณส่ง pull request"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              required_for_confirmation: "%{attribute} ต้องการๆยืนยัน"
+              already_confirmed: "%{attribute} ถูกยืนยันเรียบร้อยแล้ว"
+  pull_request:
+    twitter_message: "ได้ส่ง pull request สำหรับ http://24pullrequests.com %{issue_url}"
+    download:
+      tooltip: "เราจะตรวจสอบ pull request ทุกๆชั่วโมงแต่คุณสามารถตรวจสอบได้ตอนนี้"
+  twitter:
+    account_linked: "เชื่อมต่อกับบัญชีทวิตเตอร์ของคุณแล้ว เราจะโพสทุกครั้งที่มีการส่ง pull request"
+    account_removed: "ยกเลิกการเชื่อมต่อบัญชีทวิตเตอร์ของคุณแล้ว"
+    link_account:
+      text: "เชื่อมต่อกับบัญชีทวิตเตอร์"
+      tooltip: "ถ้าคุณเชื่อมต่อบัญชีทวิตเตอร์เราจะโพสทุกครั้งที่คุณส่ง pull request"
 
-	navigation:
-		all_projects: โปรเจคทั้งหมด
-		my_suggestions: โครงการแนะนำของฉัน
-		dashboard: หน้ากระดาน
-		profile: ประวัติ
-		preferences: ตั้งค่า
-		gifted_code: โค้ดที่เคยให้
-		manage_projects: จัดการโครงการ
-		logout: ลงชื่อออก
+  navigation:
+    all_projects: โปรเจคทั้งหมด
+    my_suggestions: โครงการแนะนำของฉัน
+    dashboard: หน้ากระดาน
+    profile: ประวัติ
+    preferences: ตั้งค่า
+    gifted_code: โค้ดที่เคยให้
+    manage_projects: จัดการโครงการ
+    logout: ลงชื่อออก
 
-	homepage:
-		title: "24 Pull Requests"
-		description: ให้ของขวัญตอบแทนเป็นโค้ดสำหรับคริสต์มาสนี้
-		about: "What's it all about?"
-		about_text: "<p>24 Pull Requests เป็นโปรเจคที่สนับสนุนให้นักพัฒนาทั่วโลกให้ส่ง pull request เป็นประจำทุกวันในเดือนธันวาคมจนถึงคริสต์มาส</p> <p>นี่คือเว็บไซน์ที่ช่วยโปรโมทโครงการรวมถึงแนะนำวิธีมีส่วนร่วมในโครการต่างๆ</p><p>ลงชื่อเข้าใช้ด้วยบัญชี GitHub และเราจะติดตาม pill request ของคุณรวมถึงแนะนำโครงการสำหรับคุณ</p>"
-		greeting: "ฤดูกาลนี้"
-		give_to_open_source: คุณได้รับประโยชน์จากโครงการโอเพ่นซอร์สมาตลอดทั้งปี มันถึงเวลาแล้วที่คุณจะตอบแทนผู้ที่มีส่วนร่วมในโครงการนั้น และนกน้อยบอกว่าพวกเขาชอบ pull request!
-		q_n_a: ถาม-ตอบ
-		badges:
-			title: ได้รับเข็มกลัดจาก Coderwall
-			description: เราร่วมมือกับ Coderwall โดยคุณจะได้รับเข็มกลัดเมือ่เข้าร่วมกิจกรรม
-			involved_link: 'ผู้เข้าร่วม - คุณจะมีส่วนร่วมและส่ง pull request  สักครั้งก่อนคริสต์มาสนี้
-			amazing: "เชื่อมต่อ - คุณคือหุ่นยนต์โอเพ่นซอร์สที่สามารถส่ง 24  pull request  ในเดือนธันวาคมนี้"
-		involved:
-			title: มีส่วนร่วม
-			description: "คุณสามารถช่วยเหลือโครงการโอเพ่นซอร์ได้หลายวิธี อาทิเช่น การปรับปรุงข้อมูล แก้ไขบัค และเพิ่มลูกเล่นใหม่"
-			special_page: "เราได้เตรียม %{contributing_path}, เป็นที่ๆคุณสามารถหาข้อมูลเกี่ยวกับการมีส่วนร่วม"
-			take_a_look: ถ้าคุณไม่มีประสบการณ์ในโครงการโอเพ่นซอร์สกรุณาศึกษา
-		profile:
-			title: สร้างโปรไฟล์
-			description: การมีส่วนร่วมในโครงการโอเพ่นซอร์สเป็นทางเลือกที่ดีในการเป็นที่รู้จักในชุมชนและสร้างโปรไฟล์
-			getting_started: สามารถเริ่มต้นได้ง่ายๆเพียงแค่การมีส่วนร่วมเล็กๆก็สามารถสร้างคุณค่าที่ยิ่งใหญ่แก่โครงการได้
-		join_the_chat: พูดคุยได้ใน IRC, %{link_to_chat} ของ freenode.
+  homepage:
+    title: "24 Pull Requests"
+    description: ให้ของขวัญตอบแทนเป็นโค้ดสำหรับคริสต์มาสนี้
+    about: "What's it all about?"
+    about_text: "<p>24 Pull Requests เป็นโปรเจคที่สนับสนุนให้นักพัฒนาทั่วโลกให้ส่ง pull request เป็นประจำทุกวันในเดือนธันวาคมจนถึงคริสต์มาส</p> <p>นี่คือเว็บไซน์ที่ช่วยโปรโมทโครงการรวมถึงแนะนำวิธีมีส่วนร่วมในโครการต่างๆ</p><p>ลงชื่อเข้าใช้ด้วยบัญชี GitHub และเราจะติดตาม pill request ของคุณรวมถึงแนะนำโครงการสำหรับคุณ</p>"
+    greeting: "ฤดูกาลนี้"
+    give_to_open_source: คุณได้รับประโยชน์จากโครงการโอเพ่นซอร์สมาตลอดทั้งปี มันถึงเวลาแล้วที่คุณจะตอบแทนผู้ที่มีส่วนร่วมในโครงการนั้น และนกน้อยบอกว่าพวกเขาชอบ pull request!
+    q_n_a: ถาม-ตอบ
+    badges:
+      title: ได้รับเข็มกลัดจาก Coderwall
+      description: เราร่วมมือกับ Coderwall โดยคุณจะได้รับเข็มกลัดเมือ่เข้าร่วมกิจกรรม
+      involved_link: 'ผู้เข้าร่วม - คุณจะมีส่วนร่วมและส่ง pull request  สักครั้งก่อนคริสต์มาสนี้'
+      amazing: "เชื่อมต่อ - คุณคือหุ่นยนต์โอเพ่นซอร์สที่สามารถส่ง 24  pull request  ในเดือนธันวาคมนี้"
+    involved:
+      title: มีส่วนร่วม
+      description: "คุณสามารถช่วยเหลือโครงการโอเพ่นซอร์ได้หลายวิธี อาทิเช่น การปรับปรุงข้อมูล แก้ไขบัค และเพิ่มลูกเล่นใหม่"
+      special_page: "เราได้เตรียม %{contributing_path}, เป็นที่ๆคุณสามารถหาข้อมูลเกี่ยวกับการมีส่วนร่วม"
+      take_a_look: ถ้าคุณไม่มีประสบการณ์ในโครงการโอเพ่นซอร์สกรุณาศึกษา
+    profile:
+      title: สร้างโปรไฟล์
+      description: การมีส่วนร่วมในโครงการโอเพ่นซอร์สเป็นทางเลือกที่ดีในการเป็นที่รู้จักในชุมชนและสร้างโปรไฟล์
+      getting_started: สามารถเริ่มต้นได้ง่ายๆเพียงแค่การมีส่วนร่วมเล็กๆก็สามารถสร้างคุณค่าที่ยิ่งใหญ่แก่โครงการได้
+    join_the_chat: พูดคุยได้ใน IRC, %{link_to_chat} ของ freenode.
 
-	information:
-		title: "24 Pull Requests %{year} ขึ้นอยู่กับเรา"
-		last_year_stats: "ในปี %{year} กว่า 24 วัน <b>%{developers}</b> นักพัฒนาต่างส่ง <b>%{pull_requests}</b> pull request <b>%{projects}</b> ไปที่โครงการต่างๆ"
-		get_ready: เตรียมพร้อมสำหรับ 24 Pull Requests %{year} เมื่อมันเริ่มต้นอีกครั้ง
-		help_open_source: "ถ้าคุณต้องการมีส่วนร่วมในการช่วยเหลือโครงการโอเพ่นซอร์สตอนนี้ นี่คือโครงการที่น่าสนใจ"
-		codetriage: "ตอบแทนโครงการโอเพ่นซอร์สด้วย CodeTriage คุณจะได้รับการแจ้งปัญหาจากโครงการที่คุณชื่นชอบวันล่ะครั้ง มันจะช่วยให้คุณเรียนรู้ได้มากขึ้น"
-		contribhub:
-			tagline: คุณรู็จักคนที่มีโครงการที่น่าสนใจมั้ย? ถ้าไม่มีลอง ContribHub!
-			description: ContribHub เป็นโปรแกรมที่ใช้หาโครงการที่น่าสนใจบน github
+  information:
+    title: "24 Pull Requests %{year} ขึ้นอยู่กับเรา"
+    last_year_stats: "ในปี %{year} กว่า 24 วัน <b>%{developers}</b> นักพัฒนาต่างส่ง <b>%{pull_requests}</b> pull request <b>%{projects}</b> ไปที่โครงการต่างๆ"
+    get_ready: เตรียมพร้อมสำหรับ 24 Pull Requests %{year} เมื่อมันเริ่มต้นอีกครั้ง
+    help_open_source: "ถ้าคุณต้องการมีส่วนร่วมในการช่วยเหลือโครงการโอเพ่นซอร์สตอนนี้ นี่คือโครงการที่น่าสนใจ"
+    codetriage: "ตอบแทนโครงการโอเพ่นซอร์สด้วย CodeTriage คุณจะได้รับการแจ้งปัญหาจากโครงการที่คุณชื่นชอบวันล่ะครั้ง มันจะช่วยให้คุณเรียนรู้ได้มากขึ้น"
+    contribhub:
+      tagline: คุณรู็จักคนที่มีโครงการที่น่าสนใจมั้ย? ถ้าไม่มีลอง ContribHub!
+      description: ContribHub เป็นโปรแกรมที่ใช้หาโครงการที่น่าสนใจบน github
 
-	merry_christmas: สุขสันต์วันคริสต์มาส
-	follow_user: ติดตาม @%{twitter}
-	sponsored_by: สนับสนุนโดย
-	how_to_contribute: ต้องการมีส่วนร่วม?
-	open_source_yey: โอเพ่นซอร์ส จงเจริญ!
-	welcome_back: ยินดีต้อนรับ %{user}
-	your_pull_requests: pull request ของคุณ
-	suggested_projects: โครงการที่เคยแนะนำ
-	suggest_project: แนะนำโครงการ
-	no_suggestions: คุณยังไม่เคยแนะนำโครงการ
-	preferred_languages: ภาาาที่เลือก
-	organisations: สมาชิกของ...
-	view_all: ดูทั้งหมด
-	more: เพิ่มเติม
-	change: เปลี่ยนแลง
-	claim: อ้างสิทธิ์
-	edit: แก้ไข
-	everything: ทุกๆอย่าง
-	about_us: เกี่ยวกับ
-	cancel: ยกเลิก
-	search: ค้นหา
+  merry_christmas: สุขสันต์วันคริสต์มาส
+  follow_user: ติดตาม @%{twitter}
+  sponsored_by: สนับสนุนโดย
+  how_to_contribute: ต้องการมีส่วนร่วม?
+  open_source_yey: โอเพ่นซอร์ส จงเจริญ!
+  welcome_back: ยินดีต้อนรับ %{user}
+  your_pull_requests: pull request ของคุณ
+  suggested_projects: โครงการที่เคยแนะนำ
+  suggest_project: แนะนำโครงการ
+  no_suggestions: คุณยังไม่เคยแนะนำโครงการ
+  preferred_languages: ภาาาที่เลือก
+  organisations: สมาชิกของ...
+  view_all: ดูทั้งหมด
+  more: เพิ่มเติม
+  change: เปลี่ยนแลง
+  claim: อ้างสิทธิ์
+  edit: แก้ไข
+  everything: ทุกๆอย่าง
+  about_us: เกี่ยวกับ
+  cancel: ยกเลิก
+  search: ค้นหา
 
-	user:
-		grinchy_message: "%{user} เป็นคนขี้้เหนียวในปี %{year} โดยไม่ได้ส่ง pull request เลย!"
-		pull_request_count: "%{user} ได้ส่ง %{count} total pull request ในปีนี้ %{year}"
+  user:
+    grinchy_message: "%{user} เป็นคนขี้้เหนียวในปี %{year} โดยไม่ได้ส่ง pull request เลย!"
+    pull_request_count: "%{user} ได้ส่ง %{count} total pull request ในปีนี้ %{year}"
 
-	developers_using_language: นักพัฒนาใช้ภาษา %{language}
-	developers_involved: นักพัฒนาที่ได้มีส่วนร่วม
+  developers_using_language: นักพัฒนาใช้ภาษา %{language}
+  developers_involved: นักพัฒนาที่ได้มีส่วนร่วม
 
-	dashboard:
-		christmas_activity: นี่คือกิจกรรมทั้งหมดของคุณก่อนถึงวันคริสต์มาส		give_a_gift: คุณยังไม่ได้มอบโค้ดเป็นขอขวัญเลยวันนี้ ทำไมคุณไม่มอบของขวัญล่ะ
-		synchronize: เชื่อมต่อข้อมูล pull request
-		help_out: "นึกโครงการที่อยากช่วยไม่ออก? เราได้รวบรวมโครงการที่น่าสนใจมาให้:"
-		no_pull_requests: คุณยังไม่ได้ส่ง pull request อีกเหรอ? จะรอช้าอยู่ทำไม
+  dashboard:
+    christmas_activity: "นี่คือกิจกรรมทั้งหมดของคุณก่อนถึงวันคริสต์มาส		give_a_gift: คุณยังไม่ได้มอบโค้ดเป็นขอขวัญเลยวันนี้ ทำไมคุณไม่มอบของขวัญล่ะ"
+    synchronize: เชื่อมต่อข้อมูล pull request
+    help_out: "นึกโครงการที่อยากช่วยไม่ออก? เราได้รวบรวมโครงการที่น่าสนใจมาให้:"
+    no_pull_requests: คุณยังไม่ได้ส่ง pull request อีกเหรอ? จะรอช้าอยู่ทำไม
 
-	language:
-		projects_count: "%{count} %{language} โครงการ"
-		projects:
-			count: "โครงการ %{count} โครงการ ใช้ภาษา %{language}"
-			suggest: "เสนอโครงการในภาษา %{language}"
-		developers:
-			count: "นักพัฒนา %{count} คน ใช้ภาษา %{language}"
-		pull_requests:
-			latest:
-				count: ภาษา %{language} มี (%{count} ทั้งหมด) pull request
+  language:
+    projects_count: "%{count} %{language} โครงการ"
+    projects:
+      count: "โครงการ %{count} โครงการ ใช้ภาษา %{language}"
+      suggest: "เสนอโครงการในภาษา %{language}"
+    developers:
+      count: "นักพัฒนา %{count} คน ใช้ภาษา %{language}"
+    pull_requests:
+      latest:
+        count: ภาษา %{language} มี (%{count} ทั้งหมด) pull request
 
-	projects:
-		claim: โครงการที่คุณแนะนำไม่อยู่ในรายชื่อ?
-		help_out: ยังไม่รู้จะไปมีส่วนร่วมในโครงการไหน? นี่คือรายชื่อของโครงการที่ต้องการ pull request
-		suggest_new: คุณสามารถแนะนำโครงการเพื่อเพิ่มเข้าไปในรายชื่อหรือเพิ่มโครงการของคุณที่ต้องการความช่วยเหลือ
-		filter_by_language: "จัดเรียงโดยภาษา"
-		for_you: คำแนะนำสำหรับคุณ
-		suggestion:
-			edit: แก้ไขคำแนะนำ
-			update: อัพเดทโครงการ
-		suggest: ยังไม่มีโครงการในภาษานี้ทำไมไม่ %{suggest_link}?
-		suggest_link_text: แนะนำ
-		new:
-			title: แนะนำโครงการ
-			info: เราสนับสนุนโดยการแสดงรายชื่อโครงการที่ได้รับความนิยมและน่าสนใจ เราเลือกโครงการที่เราชอบแต่คุณสามารถแบ่งปันข้อคิดเห็นได้ด้านล่าง
-			suggestion: ต้องการแนะนำโครงการหรือมีปัญหา? 
-			issue: ปัญหา
-		edit:
-			title: แก้ไขคำแนะนำ
-		admin:
-			title: จัดการโครงการ
-			search: หา repository ใน github
+  projects:
+    claim: โครงการที่คุณแนะนำไม่อยู่ในรายชื่อ?
+    help_out: ยังไม่รู้จะไปมีส่วนร่วมในโครงการไหน? นี่คือรายชื่อของโครงการที่ต้องการ pull request
+    suggest_new: คุณสามารถแนะนำโครงการเพื่อเพิ่มเข้าไปในรายชื่อหรือเพิ่มโครงการของคุณที่ต้องการความช่วยเหลือ
+    filter_by_language: "จัดเรียงโดยภาษา"
+    for_you: คำแนะนำสำหรับคุณ
+    suggestion:
+      edit: แก้ไขคำแนะนำ
+      update: อัพเดทโครงการ
+    suggest: ยังไม่มีโครงการในภาษานี้ทำไมไม่ %{suggest_link}?
+    suggest_link_text: แนะนำ
+    new:
+      title: แนะนำโครงการ
+      info: เราสนับสนุนโดยการแสดงรายชื่อโครงการที่ได้รับความนิยมและน่าสนใจ เราเลือกโครงการที่เราชอบแต่คุณสามารถแบ่งปันข้อคิดเห็นได้ด้านล่าง
+      suggestion: ต้องการแนะนำโครงการหรือมีปัญหา?
+      issue: ปัญหา
+    edit:
+      title: แก้ไขคำแนะนำ
+    admin:
+      title: จัดการโครงการ
+      search: หา repository ใน github
 
-	preferences:
-			title: ตั้งค่าอีเมล
-			frequency_message:  เราต้องการส่งอีเมลแนะนำโครงการต่างๆไปให้คุณโดยคุณสามารถเลือกระยะเวลาในการส่งอีเมลหรือเพิ่มสิ่งที่คุณสนใจ เราจะแนะนำโครงการตามภาษาที่อยู่ในโปรไฟล์ github ของคุณหรือคุณสามารถเลือกจากภาษาด้านล่าง 
-			delete: "ต้องการลบบัญชี?"
-			information: คุณสามารถแก้ไขการตั้งค่าอีเมลได้ในภายหลัง
-			twitter: บัญชีทวิตเตอร์
-			languages: คุณรู้ภาษาไหนบ้าง?
-			remove: ลบบัญชี
-			save_and_continue: บันทึกและดำเนินการต่อ
+  preferences:
+      title: ตั้งค่าอีเมล
+      frequency_message:  เราต้องการส่งอีเมลแนะนำโครงการต่างๆไปให้คุณโดยคุณสามารถเลือกระยะเวลาในการส่งอีเมลหรือเพิ่มสิ่งที่คุณสนใจ เราจะแนะนำโครงการตามภาษาที่อยู่ในโปรไฟล์ github ของคุณหรือคุณสามารถเลือกจากภาษาด้านล่าง
+      delete: "ต้องการลบบัญชี?"
+      information: คุณสามารถแก้ไขการตั้งค่าอีเมลได้ในภายหลัง
+      twitter: บัญชีทวิตเตอร์
+      languages: คุณรู้ภาษาไหนบ้าง?
+      remove: ลบบัญชี
+      save_and_continue: บันทึกและดำเนินการต่อ
 
-			hint:
-				confirm_email: กรุณายืนยันอีเมลผ่านลิ้งค์ที่ถูกส่งไป.
+      hint:
+        confirm_email: กรุณายืนยันอีเมลผ่านลิ้งค์ที่ถูกส่งไป.
 
-	pull_requests:
-		count: "%{count} pull request ถูกส่งแล้ว"
-		language:
-			count: "%{count} pull request ที่ถูกสร้างใน %{language}!"
-		latest:
-			count: pull request ล่าสุด (%{count} total)
+  pull_requests:
+    count: "%{count} pull request ถูกส่งแล้ว"
+    language:
+      count: "%{count} pull request ที่ถูกสร้างใน %{language}!"
+    latest:
+      count: pull request ล่าสุด (%{count} total)
 
-	delete_account:
-		title: ลบบัญชี
-		are_you_sure: คุณแน่ใจหรือไม่ที่จะลบบัญชีและ pull request ต่างๆ แต่โครการที่ถูกแยะยำจะไม่ถูกลบ
-		notification_info: ถ้าคุณต้องการตั้งค่าอีเมลแจ้งเตือน  %{email_preferences_link}.
-		confirm: ยืนยันการลบ
-		cancel: ฉันเปลี่ยนใจแล้ว พาฉันกลับไป
+  delete_account:
+    title: ลบบัญชี
+    are_you_sure: คุณแน่ใจหรือไม่ที่จะลบบัญชีและ pull request ต่างๆ แต่โครการที่ถูกแยะยำจะไม่ถูกลบ
+    notification_info: ถ้าคุณต้องการตั้งค่าอีเมลแจ้งเตือน  %{email_preferences_link}.
+    confirm: ยืนยันการลบ
+    cancel: ฉันเปลี่ยนใจแล้ว พาฉันกลับไป
 
-	gifts:
-		title: ของขวัญที่มอบให้
-		description: คุณสามารถจัดการ pull request หรือเลือก &amp; "24 Pull Requests" ของคุณเอง
-		view_your_gifts: ของขวัญที่คุณเคยให้สามารถดูได้จาก{calendar_link}.
-		none: ยังไม่ได้ให้อะไร
-		give: ให้สิ่งที่มีความหมายกับโครงการที่คุณชื่นชอบ
+  gifts:
+    title: ของขวัญที่มอบให้
+    description: คุณสามารถจัดการ pull request หรือเลือก &amp; "24 Pull Requests" ของคุณเอง
+    view_your_gifts: ของขวัญที่คุณเคยให้สามารถดูได้จาก{calendar_link}.
+    none: ยังไม่ได้ให้อะไร
+    give: ให้สิ่งที่มีความหมายกับโครงการที่คุณชื่นชอบ
 
-	collaborators:
-		title: ผู้มีส่วนร่วมหลัก
+  collaborators:
+    title: ผู้มีส่วนร่วมหลัก
 
-	about:
-		title: เกี่ยวกับ 24 Pull Requests
-		description: 24 Pull Requests เป็นโครงการที่ช่วยเผยแพร่โครงการโอเพ่นซอร์สในช่วงเดือนธันวาคม
-		idea: โดยมีจุดมุ่งหมายที่จะส่ง pull request "เป็นประจำทุกๆวันในระหว่างเดือนธันวาคมไปจนถึงคริสต์มาส" เพื่อส่งเสริมให้นักพัฒนาตอบแทนโครงการโอเพ่นซอร์สด้วยการมีส่วนร่วมในเดือนธันวาคม
-		more_info: เว็บไซน์นี้ยังแนะนำโครงการต่างๆสำหรับการมีส่วนร่วมและแสดง pull request ทีน่าสนใจที่ถูกส่งมาทุกๆวัน
-		on_github: "เว็บไซน์นี้โอเพ่นซอร์สอยู่บน github"
-		on_twitter: "พบเราบนทวิตเตอร์:"
-		sponsors:
-			title: ผู้สนับสนุน
-			details: 24 Pull Requests สำเร็จได้ต้องขอบคุณผู้บริจาคและผู้สนับสนุนต่างๆ
-			thanks: "ขอขอบคุณ..."
-			get_in_touch: "ถ้าคุณต้องการเป็นผู้สนับสนุนหลักกรุณาส่งเมลมาที่"
-			
+  about:
+    title: เกี่ยวกับ 24 Pull Requests
+    description: 24 Pull Requests เป็นโครงการที่ช่วยเผยแพร่โครงการโอเพ่นซอร์สในช่วงเดือนธันวาคม
+    idea: โดยมีจุดมุ่งหมายที่จะส่ง pull request "เป็นประจำทุกๆวันในระหว่างเดือนธันวาคมไปจนถึงคริสต์มาส" เพื่อส่งเสริมให้นักพัฒนาตอบแทนโครงการโอเพ่นซอร์สด้วยการมีส่วนร่วมในเดือนธันวาคม
+    more_info: เว็บไซน์นี้ยังแนะนำโครงการต่างๆสำหรับการมีส่วนร่วมและแสดง pull request ทีน่าสนใจที่ถูกส่งมาทุกๆวัน
+    on_github: "เว็บไซน์นี้โอเพ่นซอร์สอยู่บน github"
+    on_twitter: "พบเราบนทวิตเตอร์:"
+    sponsors:
+      title: ผู้สนับสนุน
+      details: 24 Pull Requests สำเร็จได้ต้องขอบคุณผู้บริจาคและผู้สนับสนุนต่างๆ
+      thanks: "ขอขอบคุณ..."
+      get_in_touch: "ถ้าคุณต้องการเป็นผู้สนับสนุนหลักกรุณาส่งเมลมาที่"
