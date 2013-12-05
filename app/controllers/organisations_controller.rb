@@ -1,11 +1,10 @@
 class OrganisationsController < ApplicationController
-  # before_action :ensure_logged_in, only: [ :projects ]
 
   respond_to :html, :json
-  # respond_to :js, only: :index
+  respond_to :js, only: :index
 
   def index
-    @organisations = Organisation.order('random()').includes(:users).page params[:page]
+    @organisations = Organisation.includes(:users).page params[:page]
     respond_with @organisations
   end
 
