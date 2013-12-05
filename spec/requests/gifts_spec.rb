@@ -7,11 +7,11 @@ describe 'Gifts' do
 	describe 'multiple giftings of a pull request' do
 		before do
 			login(user)
+			visit new_gift_path
 		end
 
 		let(:pull_request) { create(:pull_request, user: user, title: 'Example Pull Request') }
 		let(:gift) { create(:gift, user: user, pull_request: pull_request) }
-		visit new_gift_path
 
 		it 'should not have any pull requests available' do
 			should_not have_xpath "//option[contains(text(), '#{pull_request.title}')]"
