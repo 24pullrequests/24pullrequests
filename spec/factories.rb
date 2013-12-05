@@ -44,4 +44,9 @@ FactoryGirl.define do
     user
     pull_request
   end
+
+  factory :organisation do
+    github_id { Faker::Lorem.word }
+    login { Faker::Lorem.word }
+  end
 end
