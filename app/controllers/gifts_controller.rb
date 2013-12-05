@@ -28,7 +28,7 @@ class GiftsController < ApplicationController
 
   def edit
     gift_form = GiftForm.new(:gift => gift,
-                             :pull_requests => current_user.unspent_pull_requests
+                             :pull_requests => current_user.unspent_pull_requests)
 
     render :new, :locals => { :gift_form => gift_form }
   end
