@@ -44,4 +44,10 @@ FactoryGirl.define do
     user
     pull_request
   end
+
+  factory :organisation do
+    avatar_url "https://1.gravatar.com/avatar/#{ORGGRAVATARS.sample}"
+    github_id { Faker::Lorem.word }
+    login { Faker::Lorem.word }
+  end
 end
