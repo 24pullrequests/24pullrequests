@@ -1,0 +1,21 @@
+.row-fluid
+  .span10
+    %h2 #{@organisation.login}
+    = link_to "#{@organisation.login} on github", "https://github.com/#{@organisation.login}", class: 'btn'
+
+  .span2
+    .avatar= image_tag(@organisation.avatar_url, :width => 100, :alt => @organisation.login)
+
+
+#users.row-fluid.clearfix
+  .span12
+
+    %h3=t("organisations.members", count: @organisation.users.count)
+
+    .users
+      %ul.clearfix.userlist
+        = render @organisation.users
+
+#pull_requests
+  %h3= t("organisations.pull_requests", count: @organisation.pull_request_count)
+  = render @organisation.pull_requests

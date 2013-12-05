@@ -323,7 +323,7 @@ footer {
 }
 
 
-#users {
+#users, #organisations {
   background: #eee;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
@@ -354,7 +354,7 @@ footer {
   }
 }
 
-#users ul li a img {
+#users ul li a img, #organisations ul li a img  {
   height: 80px;
   width: 80px;
 }

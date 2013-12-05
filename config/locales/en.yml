@@ -73,7 +73,6 @@ en:
   suggest_project: Suggest a project
   no_suggestions: You haven't suggested any projects yet.
   preferred_languages: Preferred Languages
-  organisations: Member of...
   view_all: View All
   more: More
   change: Change
@@ -87,6 +86,7 @@ en:
   user:
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
     pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
+    organisations: Member of...
 
   developers_using_language: Developers using %{language}
   developers_involved: Developers already involved
@@ -180,6 +180,12 @@ en:
       details: 24 Pull Requests was made possible thanks to the help and donations of some great sponsors.
       thanks: "Many thanks to..."
       get_in_touch: "If you'd like to get in touch about sponsorship or anything else, drop us an email:"
+
+  organisations:
+    title: "%{count} organizations involved"
+    pull_requests: "%{count} pull requests submitted by members"
+    members: "%{count} Members"
+    languages: Languages
 
   locale:
     translate: Translate into your language!
