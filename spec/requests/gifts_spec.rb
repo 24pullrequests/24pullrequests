@@ -2,15 +2,23 @@ require 'spec_helper'
 
 describe 'Gifts' do
 	subject { page }
-	let(:user)          { create :user, nickname: "akira" }
-	let(:pull_request)  { create(:pull_request, user: user, title: 'Example Pull Request') }
-	let(:gift)          { create(:gift, user: user, pull_request: pull_request) }
+	let(:user) { create :user, nickname: "akira" }
 
-	describe '#new' do
-		should_not have_xpath "//option[contains(text(), '#{pull_request.title}')]"
+	describe 'multiple giftings of a pull request' do
+		before do
+			login(user)
+		end
 
-		click_on "Gift it!"
+		let(:pull_request) { create(:pull_request, user: user, title: 'Example Pull Request') }
+		let(:gift) { create(:gift, user: user, pull_request: pull_request) }
+		visit new_gift_path
 
-		should_not have_xpath "//option[contains(text(), '#{pull_request.title}')]"
+		it 'should not have any pull requests available' do
+			should_not have_xpath "//option[contains(text(), '#{pull_request.title}')]"
+
+			click_on "Gift it!"
+
+			should_not have_xpath "//option[contains(text(), '#{pull_request.title}')]"
+		end
 	end
 end
