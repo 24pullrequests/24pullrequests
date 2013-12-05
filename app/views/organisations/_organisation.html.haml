@@ -1,2 +1,2 @@
 %li.organisation
-  = link_to image_tag(organisation.avatar_url, :width => 80, :height => 80, :alt =>organisation.login), organisation_path(organisation.login), rel: 'tooltip', data: { original_title: "#{organisation.login} - #{organisation.pull_request_count} pull requests." }
+  = link_to image_tag(organisation.avatar_url, width: 80, height: 80, alt: organisation.login), organisation_path(organisation.login), rel: 'tooltip', data: { original_title: organisation_tooltip(organisation) }
