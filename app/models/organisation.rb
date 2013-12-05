@@ -17,6 +17,10 @@ class Organisation < ActiveRecord::Base
   end
 
   def pull_requests
-    users.map { |u| u.pull_requests.year(2013) }.first.order(:created_at)
+    @pull_requests ||= users.map { |u| u.pull_requests.year(2013) }.flatten.sort_by(&:created_at).reverse
+  end
+
+  def active_languages
+    pull_requests.map(&:language).uniq!
   end
 end

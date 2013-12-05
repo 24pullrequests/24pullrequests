@@ -185,6 +185,7 @@ en:
     title: "%{count} organizations involved"
     pull_requests: "%{count} pull requests submitted by members"
     members: "%{count} Members"
+    languages: Languages
 
   locale:
     translate: Translate into your language!
