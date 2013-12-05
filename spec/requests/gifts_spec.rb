@@ -14,11 +14,11 @@ describe 'Gifts' do
 		let(:gift) { create(:gift, user: user, pull_request: pull_request) }
 
 		it 'should not have any pull requests available' do
-			should_not have_xpath "//option[contains(text(), '#{pull_request.title}')]"
+			should_not have_xpath "//option[contains(text(), 'Gifted')]"
 
 			click_on "Gift it!"
 
-			should_not have_xpath "//option[contains(text(), '#{pull_request.title}')]"
+			should_not have_xpath "//option[contains(text(), 'Gifted')]"
 		end
 	end
 end
