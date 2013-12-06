@@ -62,6 +62,8 @@ module Tfpullrequests
 
     config.exceptions_app = self.routes
 
+    I18n.config.enforce_available_locales = false
+
     # Memoize at boot up to prevent github's rate limiting. This should work
     # fine for now.
     config.collaborators = begin
