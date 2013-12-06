@@ -180,16 +180,3 @@ it:
       details: 24 Pull Requests è reso possibile grazie a generoso aiuto e alle donazioni dei nostri sponsors.
       thanks: "Grazie mille a..."
       get_in_touch: "Se vuoi metterti in contatto per una sponsorizzazione o qualciasi altro inviaci un Email:"
-
-  locale:
-    translate: Traduci nella tua lingua!
-    en: English
-    el: Ελληνικά
-    es: Español
-    pt_br: Português do Brasil
-    fi: Suomi
-    fr: Français
-    de: Deutsch
-    ru: Русский
-    uk: Українська
-    it: Italiano
