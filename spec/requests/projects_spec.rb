@@ -79,7 +79,7 @@ describe 'Projects' do
         click_link 'Suggested for you'
         within '#projects' do
           page.should have_css('.ruby')
-          page.should_not have_css('.java')
+          page.should have_no_css('.java')
         end
       end
 
