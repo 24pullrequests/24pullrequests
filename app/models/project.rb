@@ -52,7 +52,7 @@ class Project < ActiveRecord::Base
     update_attribute(:inactive, true)
   end
 
-  def issues github, months_ago=6
+  def issues(github, months_ago=6)
     date = (Time.now-months_ago.months).utc.iso8601
     github.issues(github_repository, status: 'open', since: date)
   end
