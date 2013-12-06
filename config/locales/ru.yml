@@ -84,17 +84,6 @@ ru:
   cancel: Отмена
   search: Поиск
 
-  locale:
-    translate: Translate into your language!
-    en: English
-    el: Ελληνικά
-    es: Español
-    pt_br: Português do Brasil
-    fi: Suomi
-    fr: Français
-    de: Deutsch
-    ru: Русский
-
   user:
     grinchy_message: "%{user} в %{year} году не пошлет ни одного пулл-реквеста?! Не верим!"
     pull_request_count: "%{user} в %{year} году послал пулл-реквестов: %{count}"
