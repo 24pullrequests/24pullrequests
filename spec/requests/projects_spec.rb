@@ -115,11 +115,11 @@ describe 'Projects' do
         page.should have_css('.python')
       end
 
-       it "can deactive a project" do
-         first(:link, "Deactive").click
+      it "can deactive a project" do
+        first(:link, "Deactive").click
 
-         should have_content "#{user_project.name} has been deactivated."
-       end
+        should have_content "#{user_project.name} has been deactivated."
+      end
     end
 
     it "should not be able to edit other user's suggestions" do
