@@ -112,7 +112,7 @@ describe ApplicationHelper do
     it "projects_in(year)" do
       3.times { create(:pull_request, repo_name: "24pullrequests", created_at: DateTime.now-1.year) }
 
-      helper.projects_in(last_year).should eq(4)
+      helper.projects_in(last_year).should eq(3)
     end
   end
 end
