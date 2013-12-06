@@ -36,6 +36,14 @@ class Project < ActiveRecord::Base
 
   paginates_per 20
 
+  def self.find_by_github_repo(repository)
+    filter_by_repository(repository).first
+  end
+
+  def self.filter_by_repository(repository)
+    Project.where("github_url like ?", "%#{repository}%")
+  end
+
   def github_repository
     self.github_url.gsub(/^(((https|http|git)?:\/\/(www\.)?)|git@)github.com(:|\/)/i, '').gsub(/(\.git|\/)$/i, '')
   end
@@ -44,11 +52,8 @@ class Project < ActiveRecord::Base
     update_attribute(:inactive, true)
   end
 
-  def self.find_by_github_repo(repository)
-    filter_by_repository(repository).first
-  end
-
-  def self.filter_by_repository(repository)
-    Project.where("github_url like ?", "%#{repository}%")
+  def issues(github, months_ago=6)
+    date = (Time.now-months_ago.months).utc.iso8601
+    github.issues(github_repository, status: 'open', since: date)
   end
 end

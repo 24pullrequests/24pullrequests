@@ -62,4 +62,18 @@ describe Project do
       project.reload.inactive.should be_true
     end
   end
+
+  context "#issues" do
+    let(:project) { FactoryGirl.create(:project) }
+
+    it "retrieves github issues that have been active in the last 6 months" do
+      date = (Time.now-6.months).utc.iso8601
+      github_client = mock(:github_client)
+
+      github_client.should_receive(:issues).with(project.github_repository, status: 'open', since: date)
+
+      project.issues(github_client)
+    end
+
+  end
 end
