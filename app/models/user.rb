@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
-  attr_writer :coderwall_user_name, :gift_factory
-  attr_reader :coderwall_user_name
+  attr_writer :gift_factory
 
   has_many :pull_requests, :dependent => :destroy
   has_many :skills,        :dependent => :destroy
@@ -45,6 +44,15 @@ class User < ActiveRecord::Base
     collaborators = collabs.map(&:login)
     result = where('nickname in (?)', collaborators)
     collaborators.compact.map { |c| result.find { |u| u.nickname == c } }
+  end
+
+  def coderwall_username
+    self.coderwall_user_name == nil ? nickname : self.coderwall_user_name
+  end
+
+  def change_coderwall_username!(username)
+    self.coderwall_user_name = username
+    self.save!
   end
 
   def authorize_twitter!(nickname, token, secret)

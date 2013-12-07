@@ -52,7 +52,8 @@
       %h4=t("user.grinchy_message", user: @user.nickname, year: current_year)
 .row-fluid
   %h3 Coderwall Badges
-  #coderwall-content{:data => {:nickname => "#{@user.nickname}"}}
-  = simple_form_for current_user, :url => "/auth/coderwall", :html => {:class => 'form-horizontal'}, :method => 'post'  do |form|
-    = form.input :coderwall_user_name
-    = form.button :submit, "Update"
+  #coderwall-content{:data => {:nickname => "#{@user.coderwall_username}"}}
+  
+  = simple_form_for current_user, :url => update_coderwall_path, :html => {:class => 'form-inline'}, :method => 'post'  do |form|
+    = form.input :coderwall_username, :label => false, :input_html => {:class => "pull-left"}
+    = form.button :submit, "Update Coderwall username", :input_html => {:class => "pull-left"}
