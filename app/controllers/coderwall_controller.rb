@@ -9,7 +9,6 @@ class CoderwallController < ApplicationController
         current_user.change_coderwall_username!(username)
       else
         flash[:alert] = I18n.t 'user.coderwall.error_github_not_conectet', :username => username
-        #show error message githubacount need to be conected with coderwall and need to be the same as on 24pullrequest
       end
     rescue Exception => e
       flash[:alert] = I18n.t 'user.coderwall.error_no_user'
