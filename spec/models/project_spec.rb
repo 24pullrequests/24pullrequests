@@ -70,7 +70,7 @@ describe Project do
       date = (Time.now-6.months).utc.iso8601
       github_client = double(:github_client)
 
-      github_client.should_receive(:issues).with(project.github_repository, status: 'open', since: date)
+      github_client.should_receive(:issues).with(project.github_repository, since: date)
 
       project.issues(github_client)
     end
