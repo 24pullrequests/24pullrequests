@@ -53,3 +53,6 @@
 .row-fluid
   %h3 Coderwall Badges
   #coderwall-content{:data => {:nickname => "#{@user.nickname}"}}
+  = simple_form_for current_user, :url => "/auth/coderwall", :html => {:class => 'form-horizontal'}, :method => 'post'  do |form|
+    = form.input :coderwall_user_name
+    = form.button :submit, "Update"

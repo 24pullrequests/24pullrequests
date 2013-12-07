@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  attr_writer :gift_factory
+  attr_writer :coderwall_user_name, :gift_factory
+  attr_reader :coderwall_user_name
 
   has_many :pull_requests, :dependent => :destroy
   has_many :skills,        :dependent => :destroy
