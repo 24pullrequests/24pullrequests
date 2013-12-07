@@ -20,6 +20,7 @@ class GiftsController < ApplicationController
     gift = current_user.new_gift(gift_params)
 
     if gift.save
+      gift.pull_request.post_tweet if tweet?
       gift_given
     else
       gift_failed(gift)
@@ -61,7 +62,7 @@ class GiftsController < ApplicationController
 
   def gift_given
     flash[:notice] = "Your code has been gifted."
-    redirect_to gifts_path()
+    redirect_to gifts_path
   end
 
   def gift_failed(gift)
@@ -73,10 +74,18 @@ class GiftsController < ApplicationController
   end
 
   def pull_request_id
-    params[:gift].permit(:pull_request_id)[:pull_request_id]
+    gift_permitted_params[:pull_request_id]
   end
 
   def post_params
-    params[:gift].permit(:date).slice(:date)
+    gift_permitted_params
+  end
+
+  def gift_permitted_params
+    params.require(:gift).permit(:pull_request_id, :date, :tweet)
+  end
+
+  def tweet?
+    gift_permitted_params[:tweet] === 'true'
   end
 end
