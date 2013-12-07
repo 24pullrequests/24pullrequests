@@ -4,7 +4,7 @@ development:
   database: tfpullrequests_development
   pool: 5
   host: localhost
-  password: pw12345
+  password:
 
 test:
   adapter: postgresql

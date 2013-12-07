@@ -87,6 +87,11 @@ en:
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
     pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
     organisations: Member of...
+    coderwall:
+      success: "Successfully updated your coderwall username!"
+      update_button: "Update your Coderwall username"
+      error_no_user: "No user found, with this name."
+      error_github_not_conectet: "The user %{username} has not the same github account connecte with coderwall as you connected to 24pullrequests."
 
   developers_using_language: Developers using %{language}
   developers_involved: Developers already involved

@@ -8,16 +8,15 @@ class CoderwallController < ApplicationController
       if current_user.nickname == coderwall_respons["accounts"]["github"]
         current_user.change_coderwall_username!(username)
       else
-        flash[:notice] = "The user #{username} has not the same github account connecte with coderwall."
+        flash[:alert] = I18n.t 'user.coderwall.error_github_not_conectet', :username => username
         #show error message githubacount need to be conected with coderwall and need to be the same as on 24pullrequest
       end
     rescue Exception => e
-      flash[:notice] = "No user found with this name."
+      flash[:alert] = I18n.t 'user.coderwall.error_no_user'
     end
     
-    flash[:notice] = "Successfully update your coderwall username!" if flash[:notice].nil?
+    flash[:notice] = I18n.t 'user.coderwall.success' if flash[:alert].nil?
       
-    puts "current_user coderwall username #{current_user.coderwall_username}"
     redirect_to :back
   end
 end
