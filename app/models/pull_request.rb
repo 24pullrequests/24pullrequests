@@ -3,7 +3,6 @@ class PullRequest  < ActiveRecord::Base
 
   validates_uniqueness_of :issue_url, :scope => :user_id
 
-  # after_create :post_tweet
   after_create :autogift
 
   has_many :gifts
