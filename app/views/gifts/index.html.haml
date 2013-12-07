@@ -13,6 +13,7 @@
         %td
           - if gift
             = link_to gift.pull_request_title, gift.pull_request_issue_url
+            = link_to t("clear"), gift_path(gift), :title => "Remove gift", :method => :delete, "data-confirm" => "Remove this gift?", :class => 'btn btn-small pull-right'
             = link_to t("change"), edit_gift_path(gift), :class => 'btn btn-small pull-right'
           - else
             = t("gifts.none")
