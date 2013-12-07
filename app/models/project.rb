@@ -58,4 +58,8 @@ class Project < ActiveRecord::Base
 
     github.issues(github_repository, options)
   end
+
+  def repo(github)
+    github.repo(github_repository)
+  end
 end
