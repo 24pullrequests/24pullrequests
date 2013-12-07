@@ -4,6 +4,9 @@
     = form.input :date, :collection => gift_form.giftable_dates
 
   = form.input :pull_request_id, :collection => gift_form.pull_requests_for_select
+  = form.input :tweet, as: :boolean, label: false, wrapper_html: { class: "checkbox" } do
+    = form.check_box :tweet, {}, "true", "false"
+    Tweet about your gift!
 
   .control-group
     .controls

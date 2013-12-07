@@ -8,7 +8,7 @@ el:
               required_for_confirmation: "%{attribute} χρειάζεται για επιβεβαίωσηn"
               already_confirmed: "%{attribute} έχει ήδη επιβεβαιωθεί"
   pull_request:
-    twitter_message: "I just opened a pull request for http://24pullrequests.com, check it out: %{issue_url}"
+    twitter_message: "I just gifted a pull request for http://24pullrequests.com, check it out: %{issue_url}"
     download:
       tooltip: "Συνήθως ελέγχουμε τα pull requests κάθε ώρα, αλλά μπορείς να ελέχξεις τώρα αν θέλεις."
   twitter:
