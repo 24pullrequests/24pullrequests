@@ -42,6 +42,8 @@ Tfpullrequests::Application.routes.draw do
   match '/auth/:provider/callback', :to => 'sessions#create', :via => [:get, :post]
   post '/auth/failure',             :to => 'sessions#failure'
 
+  post '/auth/coderwall',           :to => 'coderwall#authorize'
+
   get 'about', :to => 'static#about'
   get 'api', :to => 'static#api'
   get 'contributing', :to => 'static#contributing'
