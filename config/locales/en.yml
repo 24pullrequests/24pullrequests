@@ -188,6 +188,9 @@ en:
     members: "%{count} Members"
     languages: Languages
 
+  suggestions:
+    title: My Suggestions
+
   locale:  # Remove this part in your own language file - it's not necessary. Don't forget to include your language here, though!
     translate: Translate into your language!
     en: English
@@ -202,6 +205,3 @@ en:
     th: ไทย
     it: Italiano
     nb: Norsk bokmål
-
-  suggestions:
-    title: My Suggestions
