@@ -78,17 +78,19 @@ header {
     background-color: #942f2f;
   }
 
-  .tagline {
-    $width: 620px;
-    $height: 110px;
+  @media (min-width: 767px) {
+    .tagline {
+      $width: 620px;
+      $height: 110px;
 
-    position: relative;
-    width: $width;
-    height: $height;
-    left: 50%;
-    margin-left: -$width/2;
-    padding-top: 40px;
-    background: transparent asset-url('tagline.png') no-repeat bottom;
+      position: relative;
+      width: $width;
+      height: $height;
+      left: 50%;
+      margin-left: -$width/2;
+      padding-top: 40px;
+      background: transparent asset-url('tagline.png') no-repeat bottom;
+    }
   }
 }
 
