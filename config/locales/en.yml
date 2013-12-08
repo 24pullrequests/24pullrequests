@@ -94,7 +94,7 @@ en:
 
   dashboard:
     christmas_activity: This is where you can see all the activity we've tracked for you in the run up to Christmas.
-    give_a_gift: Looks like you haven't gifted any code today. Would you like to gift
+    give_a_gift: Looks like you haven't gifted any code today. Would you like to gift # This is followed by a select-menu where you can pick one of your non-gifted pull requests to gift
     synchronize: Synchronize Pull Requests
     help_out: "Can't think of a project you'd like to help contribute to? We've put together a list of popular projects:"
     no_pull_requests: You've not sent any pull requests, what are you waiting for?!
@@ -125,7 +125,7 @@ en:
       title: Suggest a Project
       info: One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We've selected our favorites, but we're always open to suggestions. Have some ideas? Share them below!
       suggestion: Have a suggestion for this project? We're all ears! If there's something you'd like fixed, feel free to submit an
-      issue: issue
+      issue: issue # This is the link text for the end of the sentence above (info)
     edit:
       title: Edit Suggestion
     admin:
@@ -188,7 +188,7 @@ en:
     members: "%{count} Members"
     languages: Languages
 
-  locale:
+  locale:  # Remove this part in your own language file - it's not necessary. Don't forget to include your language here, though!
     translate: Translate into your language!
     en: English
     el: Ελληνικά
