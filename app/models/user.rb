@@ -47,7 +47,7 @@ class User < ActiveRecord::Base
   end
 
   def coderwall_username
-    self.coderwall_user_name == nil ? nickname : self.coderwall_user_name
+    self.coderwall_user_name || nickname
   end
 
   def change_coderwall_username!(username)
