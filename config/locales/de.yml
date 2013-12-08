@@ -43,7 +43,7 @@ de:
       amazing: "Continuous Sync (Kontinuierliche Synchronisation) - Du bist eine Open Source-Maschine, versende 24 Pull Requests im Dezember"
     involved:
       title: Mach mit
-      description: "Es gibt viele Wege, sich an einem Open Source-Projekt zu beteiligen: Du kannst die Dokumentation verbessern, vorhandene Problemberichte bearbeiten, die Code-Qualität oder Testabdeckung verbessern oder neue Funktionen hinzufügen."
+      description: "Es gibt viele Wege, sich an einem Open Source-Projekt zu beteiligen: Du kannst die Dokumentation verbessern, vorhandene Problemberichte bearbeiten, die Code-Qualität oder Testabdeckung verbessern oder auch neue Funktionen hinzufügen."
       special_page: "Wir haben eine %{contributing_path} vorbereitet, auf der Du ein paar Informationen über Beiträge zu Open Source finden kannst."
       take_a_look: Schau nach, falls Du neu in Open Source bist.
     profile:
