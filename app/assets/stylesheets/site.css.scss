@@ -29,9 +29,9 @@ body {
     -webkit-animation: move 5s 1;
      -khtml-animation: move 5s 1;
        -moz-animation: move 5s 1;
-	-ms-animation: move 5s 1;
-	 -o-animation: move 5s 1;
-	    animation: move 5s 1;
+	      -ms-animation: move 5s 1;
+	       -o-animation: move 5s 1;
+	          animation: move 5s 1;
   }
 
   @-webkit-keyframes move {
@@ -40,28 +40,28 @@ body {
   }
 
   @-khtml-keyframes move {
-    0%   { opacity: 1; -khtml-transform: translateY(-400px); }
-    100% { opacity: 0; -khtml-transform: translateY(0); }
+    0%   { opacity: 0; -khtml-transform: translateY(-400px); }
+    100% { opacity: 1; -khtml-transform: translateY(0); }
   }
 
   @-moz-keyframes move {
-    0%   { opacity: 1; -moz-transform: translateY(-400px); }
-    100% { opacity: 0; -moz-transform: translateY(0); }
+    0%   { opacity: 0; -moz-transform: translateY(-400px); }
+    100% { opacity: 1; -moz-transform: translateY(0); }
   }
 
   @-ms-keyframes move {
-    0%   { opacity: 1; -ms-transform: translateY(-400px); }
-    100% { opacity: 0; -ms-transform: translateY(0); }
+    0%   { opacity: 0; -ms-transform: translateY(-400px); }
+    100% { opacity: 1; -ms-transform: translateY(0); }
   }
 
   @-o-keyframes move {
-    0%   { opacity: 1; -o-transform: translateY(-400px); }
-    100% { opacity: 0; -o-transform: translateY(0); }
+    0%   { opacity: 0; -o-transform: translateY(-400px); }
+    100% { opacity: 1; -o-transform: translateY(0); }
   }
 
   @keyframes move {
-    0%   { opacity: 1; transform: translateY(-400px); }
-    100% { opacity: 0; transform: translateY(0); }
+    0%   { opacity: 0; transform: translateY(-400px); }
+    100% { opacity: 1; transform: translateY(0); }
   }
 
 }
