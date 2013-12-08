@@ -1,1 +1,192 @@
 nb:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              required_for_confirmation: "%{attribute} er påkrevd for bekrefting"
+              already_confirmed: "%{attribute} er allerede bekreftet"
+  pull_request:
+    twitter_message: "Jeg gav nettopp en pull request for http://24pullrequests.com, sjekk det ut: %{issue_url}"
+    download:
+      tooltip: "Vi ser vanligvis etter pull requests hver time, med du kan sjekke nå om du ønsker."
+  twitter:
+    account_linked: "Twitter-kontoen din er linket opp! Vi legger ut en tweet når du åpner en pull request."
+    account_removed: "Twitter-kontoen din er fjernet."
+    link_account:
+      text: "Link opp din Twitter-konto"
+      tooltip: "Om du linker opp Twitter-kontoen din så legger vi et en tweet når du åpner en pull request!"
+
+  navigation:
+    all_projects: Alle prosjekter
+    my_suggestions: Mine forslag
+    dashboard: Dashboard
+    profile: Profil
+    preferences: Innstillinger
+    gifted_code: Gitt kode
+    manage_projects: Håndtér prosjekter
+    logout: Logg ut
+
+  homepage:
+    title: "24 Pull Requests"
+    description: Gi små kodegaver til jul
+    about: "Hva dreier det seg om?"
+    about_text: "<p>24 Pull Requests er et årlig initiativ for å oppmuntre utviklere verden rundt til å sende en pull request hver dag i desember, frem til juleaften.</p> <p>Dette nettstedet er for å hjelpe til med å promotere prosjektet, og sette fokus på hvorfor, hvordan og hvor du bør sende dine pull requests.</p><p>Logg inn med din GitHub-konto, så vil vi holde styr på og fremheve dine pull requests og foreslå prosjekter å jobbe med.</p>"
+    greeting: "Tiden er her"
+    give_to_open_source: Du har hatt nytte av open-source prosjekter i hele år. Nå er tiden inne for å si takk til de som vedlikeholder disse prosjektene, og en liten fugl forteller meg at de elsker å motta pull requests!
+    q_n_a: Spørsmål & svar
+    badges:
+      title: Tjen coderwall-badges
+      description: Vi har samarbeidet med coderwall om å lage noen fantastiske badges som du kan låse opp ved å delta.
+      involved_link: 'Participant - Vær involvert, send minst én pull request før jul'
+      amazing: "Continuous Sync - Du er en open-source maskin, send 24 pull requests i løpet av desember"
+    involved:
+      title: Involvér deg
+      description: "Det er masse måter du kan involvere deg i et open-source prosjekt på: forbedre dokumentasjon, hjelpe til med å fikse eksisterende problemer og bugs, forbedre kodekvalitet og testdekning, eller legge til manglende features."
+      special_page: "Vi har forberedt en %{contributing_path}, hvor du kan finne informasjon om å bidra."
+      take_a_look: Om du er ny i open-source, ta gjerne en titt.
+    profile:
+      title: Bygg din profil
+      description: Å bidra til open-source prosjekter er også en flott måte å bygge din profil og forbedre din CV på.
+      getting_started: Det er veldig enkelt å komme i gang. Små forbedringer kan også være veldig verdifulle for et prosjekt.
+    join_the_chat: Bli med i chatten på IRC, %{link_to_chat} (stort sett engelsk), på Freenode.
+
+  information:
+    title: "24 Pull Requests %{year} er nær"
+    last_year_stats: "In %{year}, over 24 dager, gav <b>%{developers}</b> utviklere <b>%{pull_requests}</b> pull requests til <b>%{projects}</b> forskjellige open-source prosjekter."
+    get_ready: Gjør deg klar til 24 Pull Requests %{year} når vi gjør det hele om igjen!
+    help_open_source: "Ønsker du å bidra til open-source prosjekter i mellomtiden? Sjekk ut disse andre flotte initiativene:"
+    codetriage: "Gi tilbake til open-source, ett issue om gangen, med CodeTriage. Du vil motta ett issue fra dine favoritt-repos per dag for å hjelpe deg med å grave dypere, lære mer, og holde deg involvert med koden du er avhengig av."
+    contribhub:
+      tagline: Visste du at du har en nabo som trenger hjelp med et skikkelig kult prosjelt? Med ContribHub vil du!
+      description: ContribHub er en GitHub-basert applikasjon som gjør det enklere å finne prosjekter å bidra til og gro et samfunn rundt.
+
+  merry_christmas: God jul
+  follow_user: Følg @%{twitter}
+  sponsored_by: Sponset av
+  how_to_contribute: Hvordan bidra?
+  open_source_yey: Open-source FTW!
+  welcome_back: Velkommen tilbake, %{user}
+  your_pull_requests: Dine pull requests
+  suggested_projects: Foreslåtte prosjekter
+  suggest_project: Foreslå et prosjekt
+  no_suggestions: Du har ikke foreslått noen prosjekter enda.
+  preferred_languages: Foretrukkede språk
+  view_all: Se alle
+  more: Mer
+  change: Endre
+  clear: Tøm
+  claim: Krév
+  edit: Redigér
+  everything: Alt
+  about_us: Om
+  cancel: Avbryt
+  search: Søk
+
+  user:
+    grinchy_message: "%{user} er en grinch i %{year} med ingen pull requests. Humbug!"
+    pull_request_count: "%{user} har laget %{count} pull requests totalt så langt i %{year}"
+    organisations: Medlem av...
+
+  developers_using_language: Utviklere som bruker %{language}
+  developers_involved: Utviklere allerede involvert
+
+  dashboard:
+    christmas_activity: Dette er hvor du kan se all aktiviteten vi har sett fra deg opp mot jul.
+    give_a_gift: Det ser ut som at du ikke har gitt kode i dag. Ønsker du å gi bort
+    synchronize: Synkronisér pull requests
+    help_out: "Kommer du ikke på et prosjekt du vil bidra til? Vi har satt sammen en liste av populære prosjekter:"
+    no_pull_requests: Du har ikke sendt noen pull requests enda. Hva venter du på?!
+
+  language:
+    projects_count: "%{count} %{language} prosjekter"
+    projects:
+      count: "%{count} prosjekter bruker %{language}"
+      suggest: "Foreslå et %{language}-prosjekt"
+    developers:
+      count: "%{count} utviklere bruker %{language}"
+    pull_requests:
+      latest:
+        count: Nyeste pull requests i %{language} (%{count} totalt)
+
+  projects:
+    claim: Er noen av prosjektene du foreslo ikke listet? Krev dem!
+    help_out: Kommer du ikke på et prosjekt å bidra til? Vi har samlet en liste av brilliante open-source prosjekter som hadde elsket en pull request fra deg.
+    suggest_new: Du kan også foreslå prosjekter som bør legges til i listen, eller legge til ditt eget prosjekt om du kunne tenke deg litt hjelp med det.
+    filter_by_language: "Filtrér etter språk:"
+    for_you: Foreslått for deg
+    suggestion:
+      edit: Redigér forslag
+      update: Oppdatér prosjekt
+    suggest: Det er ingen prosjekter i det språket enda. Hvorfor ikke %{suggest_link}?
+    suggest_link_text: foreslå et
+    new:
+      title: Foreslå et prosjekt
+      info: En av måtene vi oppmuntrer til deltagelse i open-source på er gjennom å fortelle om populære prosjekter som kan være verdt å bidra til. Vi har valgt ut våre favoritter, men vi er alltid åpen for forslag. Har du noen idéer? Del dem under!
+      suggestion: Har du et forslag for dette prosjektet? Vi lytter! Er det noe du gjerne vil ha fikset, lag gjerne et
+      issue: issue
+    edit:
+      title: Redigér forslag
+    admin:
+      title: Administrér prosjekter
+      search: Søk per GitHub repository
+
+  preferences:
+      title: Velg dine epost-preferanser
+      frequency_message:  Vi sender deg — i den hyppigheten du ønsker — hjelpsomme eposter fra nå til prosjektet er over med foreslåtte prosjekter som du kanskje vil vurdere å bidra til. Som en liten bonus vil vi gi våre forslag basert på dine språk etter på repoene på din GitHub-profil. Alternativt kan du også velge dine språk under.
+      delete: "Ønsker du å slette din konto?"
+      information: Du kan alltid endre dine epost-preferanser senere.
+      twitter: Twitter-konto
+      languages: Hvilke språk kan du?
+      remove: Fjern konto
+      save_and_continue: Lagre og fortsett
+
+      hint:
+        confirm_email: Vennligst bekreft epost-adressen din med linken vi har sendt deg.
+
+  pull_requests:
+    count: "%{count} pull requests laget allerede!"
+    language:
+      count: "%{count} pull requests allerede laget i %{language}!"
+    latest:
+      count: Siste pull requests (%{count} totalt)
+
+  delete_account:
+    title: Slett din konto
+    are_you_sure: Vi ville bare forsikre oss om at du faktisk ønsker å slette din konto. Dette vil fjerne din profil og alle pull requests fra siden, men foreslåtte prosjekter vil bli igjen.
+    notification_info: Om du kun ønsker å ikke få eposter kan du endre dine %{email_preferences_link}.
+    confirm: Bekreft sletting
+    cancel: Jeg har ombestemt meg, ta meg tilbake!
+
+  gifts:
+    title: Gitt kode
+    description: Her kan du administrere dine pull requests og velge ditt eget sett av "24 pull requests".
+    view_your_gifts: Alle dine gaver vil vises på din %{calendar_link}.
+    none: Ingenting gitt enda.
+    give: Gi noe meningsfylt til et prosjekt du elsker
+
+  collaborators:
+    title: Hoved-bidragsytere
+
+  about:
+    title: Om 24 Pull Requests
+    description: 24 Pull Requests er et lite prosjekt som ønsker å promotere open-source samarbeid i desember.
+    idea: Idéen er "Send en pull request hver dag i desember fram mot jul" for å oppmuntre utviklere til å gi tilbake til open-source med små kode-gaver gjennom desember.
+    more_info: Siden gir også forslag til prosjekter man kan hjelpe, retningslinjer for å bidra og fremhever gode pull requests som blir gitt hver dag.
+    on_github: "Utviklingen av siden er open-source på GitHub:"
+    on_twitter: "Vi er også på Twitter:"
+    sponsors:
+      title: Sponsorer
+      details: 24 Pull Requests er mulig takket være hjelpen og donasjonene fra noen flotte sponsorer.
+      thanks: "Mange takk til..."
+      get_in_touch: "Om du ønsker å ta kontakt med oss angående sponsing eller noe annet, legg igjen en epost:"
+
+  organisations:
+    title: "%{count} organisasjoner involvert"
+    pull_requests: "%{count} pull requests sendt inn av medlemmer"
+    members: "%{count} medlemmer"
+    languages: Språk
+
+  suggestions:
+    title: Mine forslag
