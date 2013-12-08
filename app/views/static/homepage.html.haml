@@ -3,8 +3,8 @@
   %h3=t("homepage.description")
   %hr
 
-.row-fluid.clearfix
-  .span6
+.row.clearfix
+  .col-md-6
     %h2=t("homepage.about")
     %hr
     =t("homepage.about_text").html_safe
@@ -16,7 +16,7 @@
     %hr
     - unless logged_in?
       %p
-        = link_to login_path, :class => 'btn' do
+        = link_to login_path, :class => 'btn btn-default' do
           %strong Log in with GitHub
       %hr
     = render :partial => 'shared/social_buttons'
@@ -25,7 +25,7 @@
     %hr
     %p=t("homepage.join_the_chat", link_to_chat: link_to('#24pullrequests', 'http://webchat.freenode.net/?channels=#24pullrequests')).html_safe
 
-  .span6#info
+  .col-md-6#info
     #coderwall
       %h4=t("homepage.badges.title")
       %hr
@@ -46,32 +46,32 @@
     %p=t("homepage.profile.description")
     %p=t("homepage.profile.getting_started")
 
-#users.row-fluid.clearfix
-  .span12
+#users.row.clearfix
+  .col-md-12
     %h3
       = User.count
       = t("developers_involved")
-      = link_to t("view_all"), users_path, :class => 'btn'
+      = link_to t("view_all"), users_path, :class => 'btn btn-default'
 
     %ul.clearfix
       = render @users
 - if @pull_requests.any?
-  .row-fluid.clearfix
-    .span12
+  .row.clearfix
+    .col-md-12
       %h3
         =t("pull_requests.latest.count", count: PullRequest.year(current_year).count)
-        = link_to t("view_all"), pull_requests_path, :class => 'btn pull-right'
+        = link_to t("view_all"), pull_requests_path, :class => 'btn btn-default pull-right'
 
     #pull_requests
       = render @pull_requests
   %hr
-.row-fluid.clearfix
-  .span12
+.row.clearfix
+  .col-md-12
     %h3
       = Project.count
       =t("suggested_projects")
-      = link_to t("suggest_project"), new_project_path, :class => 'btn pull-right'
-      = link_to t("view_all"), projects_path, :class => 'btn pull-right'
+      = link_to t("suggest_project"), new_project_path, :class => 'btn btn-default pull-right'
+      = link_to t("view_all"), projects_path, :class => 'btn btn-default pull-right'
     %p
       =t("dashboard.help_out")
 
