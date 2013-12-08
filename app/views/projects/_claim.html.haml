@@ -3,5 +3,5 @@
 %br
 
 =simple_form_for Project.new, url: claim_projects_path do |form|
-  = form.input :github_url, :input_html => {:class => "span3"}, :label => false, required: false, placeholder: "e.g. andrew/24pullrequets"
+  = form.input :github_url, :input_html => {:class => "span3"}, :label => false, required: false, placeholder: "e.g. andrew/24pullrequests"
   = form.button :submit, t("claim")
