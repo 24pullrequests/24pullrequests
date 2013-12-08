@@ -46,6 +46,15 @@ class User < ActiveRecord::Base
     collaborators.compact.map { |c| result.find { |u| u.nickname == c } }
   end
 
+  def coderwall_username
+    self.coderwall_user_name == nil ? nickname : self.coderwall_user_name
+  end
+
+  def change_coderwall_username!(username)
+    self.coderwall_user_name = username
+    self.save!
+  end
+
   def authorize_twitter!(nickname, token, secret)
     self.twitter_nickname = nickname
     self.twitter_token    = token
