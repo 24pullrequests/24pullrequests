@@ -50,7 +50,6 @@
       %img{ :src => 'https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png', :alt => 'Fork me on GitHub'}
 
     %header
-      .bar
       .logo
         = link_to image_tag('logo.png'), root_path
 
@@ -76,21 +75,20 @@
     - if logged_in?
       = render :partial => 'user_nav'
 
-    %article
-      .container-fluid
-        .row-fluid
-          .span12
-            - if flash.any?
-              .messages
-                - if flash[:alert]
-                  .alert= flash[:alert]
-                - if flash[:notice]
-                  .alert.alert-info= flash[:notice]
-            = yield
+    %article.container
+      .row
+        .col-md-12
+          - if flash.any?
+            .messages
+              - if flash[:alert]
+                .alert= flash[:alert]
+              - if flash[:notice]
+                .alert.alert-info= flash[:notice]
+          = yield
 
   %footer
     .dark
-      .dark-inner
+      .dark-inner.container
         .logo.logo-dark
         %ul.unstyled.pull-right
           %li

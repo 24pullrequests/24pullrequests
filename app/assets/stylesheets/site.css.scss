@@ -66,30 +66,20 @@ section {
 
 header {
   position: relative;
+  border-top: 13px solid #942f2f;
 
   .logo {
-    padding-top: 60px;
-  }
-
-  .bar {
-    position: absolute;
-    width: 100%;
-    height: 13px;
-    background-color: #942f2f;
+    margin-top: 60px;
+    margin-bottom: $default-trailer;
   }
 
   @media (min-width: 767px) {
     .tagline {
       $width: 620px;
-      $height: 110px;
-
+      height: 110px;
+      margin-bottom: $default-trailer;
       position: relative;
-      width: $width;
-      height: $height;
-      left: 50%;
-      margin-left: -$width/2;
-      padding-top: 40px;
-      background: transparent asset-url('tagline.png') no-repeat bottom;
+      background: transparent asset-url('tagline.png') no-repeat center bottom;
     }
   }
 }
@@ -98,10 +88,10 @@ header {
   $side-padding: 15px;
   $width: 940px-($side-padding*2);
 
-  position: relative;
-  max-width: $width;
-  margin: 0 auto 0;
-  padding: 10px $side-padding;
+  // position: relative;
+  // max-width: $width;
+  // margin: 0 auto 0;
+  // padding: 10px $side-padding;
 }
 
 nav, .faulx-nav, .locale {
@@ -292,12 +282,7 @@ footer {
 
 #projects {
   .project {
-    box-sizing: border-box;
-    margin: 15px 0 40px;
-    padding-right: 20px;
-    width: 45%;
     min-height: 160px;
-    float: left;
     @media (max-width: 767px) {
       width: 100%;
       min-height: 0;
@@ -330,12 +315,10 @@ footer {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   @media (min-width: 767px) {
-    margin: 20px -35px;
-    padding: 20px 35px;
+    padding: 20px 5px;
   }
   @media (max-width: 767px) {
-    margin: 20px -15px;
-    padding: 10px 15px;
+    padding: 10px 5px;
   }
   h3 {
     text-align: center;
