@@ -1,3 +1,16 @@
 // Place all the styles related to the dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#skills {
+  .form-group {
+    text-align: right;
+  }
+  label {
+    padding: 0
+  }
+  .controls {
+    float: right;
+    margin-left: $grid-gutter-width;
+  }
+}
