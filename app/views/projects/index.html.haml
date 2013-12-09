@@ -9,7 +9,7 @@
 %hr
 %h4=t("projects.filter_by_language")
 = simple_form_for :project, url: filter_projects_path, method: :get, remote: true  do |form|
-  = form.select :languages, Project::LANGUAGES, {}, multiple: true
+  = form.input :languages, collection: Project::LANGUAGES, as: :check_boxes
   = form.input :labels, collection: Label.all.map(&:name), as: :check_boxes
   = form.submit "Search"
 
