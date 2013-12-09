@@ -116,15 +116,15 @@ header {
   border-top: 13px solid #942f2f;
 
   .logo {
-    margin-top: 60px;
-    margin-bottom: $default-trailer;
+    margin-top: 47px;
+    margin-bottom: $grid-gutter-width;
   }
 
   @media (min-width: 767px) {
     .tagline {
       $width: 620px;
       height: 110px;
-      margin-bottom: $default-trailer;
+      margin-bottom: $grid-gutter-width;
       position: relative;
       background: transparent asset-url('tagline.png') no-repeat center bottom;
     }
@@ -142,15 +142,12 @@ header {
 }
 
 nav, .faulx-nav, .locale {
-  @extend .constrained;
   position: inherit;
-  margin-top: 25px;
 }
 
 .locale {
   text-align: right;
-  margin-top: 0;
-
+  margin-bottom: $grid-gutter-width;
   li {
     text-align: left;
   }
@@ -161,6 +158,8 @@ nav, .faulx-nav, .locale {
 }
 
 nav {
+  margin-bottom: $grid-gutter-width / 2;
+
   a {
     color: #efefef;
   }
@@ -432,4 +431,8 @@ h1, h2, h3, h4 {
 
 .flag {
   height: 24px;
+}
+
+.glyphicon {
+  margin-right: 0.5em
 }
