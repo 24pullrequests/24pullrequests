@@ -275,31 +275,29 @@ footer {
 #languages {
   margin: 0;
   li {
-    box-shadow: rgba(0, 0, 0, 0.398438) 0px 1px 3px;
-    float: left;
     display: inline-block;
-    height: 20px;
-    background: #fff;
-    padding: 3px 10px;
     list-style: none;
-    border-radius: 5px;
     margin-right: 10px;
     margin-bottom: 10px;
-    transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    -webkit-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
     a {
       color: $link-color;
+      display: block;
+      padding: 3px 10px;
+      border-radius: 5px;
+      transition: opacity 0.5s;
+      -moz-transition: opacity 0.5s;
+      -webkit-transition: opacity 0.5s;
+      -o-transition: opacity 0.5s;
       text-shadow: none;
       text-decoration: none;
+      box-shadow: rgba(0, 0, 0, 0.398438) 0px 1px 3px;
     }
     &.disabled {
       opacity: 0.5;
     }
     &.highlighted {
-      background: $link-color;
       a {
+        background: $link-color;
         color: #fff;
       }
     }
