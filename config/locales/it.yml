@@ -89,7 +89,7 @@ it:
     pull_request_count: "%{user} ha totalizzato %{count} pull request durante l'anno %{year}"
     organisations: Membro di...
     coderwall:
-      success: "Abbiamo aggiornato il tuo nome utente su Coderwall!"
+      success: "Abbiamo aggiornato il tuo nome utente Coderwall!"
       update_button: "Aggiorna"
       error_no_user: "Nome utente non trovato."
       error_github_not_conectet: "L'account Github legato a Coderwall dell'utente %{username} non è lo stesso con cui ti sei autenticato a 24pullrequests."
@@ -117,7 +117,7 @@ it:
 
   projects:
     claim: Nessuno dei progetti da te suggeriti è nell'elenco? Richiedili ora!
-    help_out: Non sai a quale progetto contribuire? Ecco un ottimo elenco di progetti open source che hanno bisogno di pull requests.
+    help_out: Non sai a quale progetto contribuire? Ecco un ottimo elenco di progetti open source che hanno bisogno di pull request.
     suggest_new: Puoi anche segnalare progetti che non sono in elenco o aggiungere un tuo progetto se hai bisogno di una mano.
     filter_by_language: "Filtra in base al linguaggio:"
     for_you: Suggeriti per te
@@ -138,7 +138,7 @@ it:
       search: Cerca nei Repo di Github
 
   preferences:
-      title: Imposta la tue preferenze Email
+      title: Imposta le notifiche
       frequency_message:  Fino a quando il progetto non sarà concluso, ti invieremo email costruttive alla frequenza che desideri, mettendo in evidenza i progetti ai quali farebbe comodo un contributo. Come bonus, ci prendiamo la libertà di personalizzare i nostri suggerimenti in base alle tue conoscenze linguistiche, dopo aver analizzato le tue repository su Github. In alternativa, puoi sempre scegliere i linguaggi qui sotto.
       delete: "Vuoi eliminare il tuo account?"
       information: Puoi sempre modificare le tue preferenze email più tardi.
@@ -146,7 +146,7 @@ it:
       languages: Che linguaggi conosci?
       remove: Rimuovi profilo
       save_and_continue: Salva e continua
-      coderwall: Collega il tuo account su Coderwall per mettere in mostra le badge che hai guadagnato sul tuo profilo.
+      coderwall: Collega il tuo account Coderwall per mettere in mostra le badge che hai guadagnato sul tuo profilo.
 
       hint:
         confirm_email: Conferma il tuo indirizzo email tramite il link che ti abbiamo inviato.
@@ -176,7 +176,7 @@ it:
     title: Collaboratori principali
 
   about:
-    title: 24 Pull Requests: chi siamo
+    title: "24 Pull Requests: chi siamo"
     description: 24 Pull Requests è un umile progetto nato per promuovere la collaborazione open source nel mese di dicembre.
     idea: L'idea di base è "Invia delle pull request ogni giorno a dicembre fino a Natale", così incoraggiando gli sviluppatori a donare qualcosa al mondo open source con piccoli codici in regalo.
     more_info: Il sito segnala progetti sui quali lavorare, guide per contribuire e mette in rilievo ogni giorno le pull request più interessanti.
