@@ -59,8 +59,7 @@ class ProjectsController < ApplicationController
   end
 
   def filter
-    @projects = Project.active.order(:name).page params[:page]
-    @projects = @projects.by_languages(languages) if languages
+    @projects = ProjectSearch.new(page: params[:page], labels: labels, languages: languages).find
     respond_with @projects
   end
 
@@ -79,7 +78,11 @@ class ProjectsController < ApplicationController
   end
 
   def languages
-    params[:languages].split(',')
+    params[:project][:languages]
+  end
+
+  def labels
+    params[:project][:labels]
   end
 
   def github_url
