@@ -91,6 +91,7 @@ en:
     organisations: Member of...
     coderwall:
       title: Coderwall Badges
+      achieved_by: "Badges achieved by"
 
   developers_using_language: Developers using %{language}
   developers_involved: Developers already involved

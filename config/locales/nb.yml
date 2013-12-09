@@ -91,6 +91,7 @@ nb:
     organisations: Medlem av...
     coderwall:
       title: Coderwall badges
+      achieved_by: "Badges oppnådd av"
 
   developers_using_language: Utviklere som bruker %{language}
   developers_involved: Utviklere allerede involvert
