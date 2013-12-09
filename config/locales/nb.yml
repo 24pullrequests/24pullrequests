@@ -132,6 +132,14 @@ nb:
       info: En av måtene vi oppmuntrer til deltagelse i open-source på er gjennom å fortelle om populære prosjekter som kan være verdt å bidra til. Vi har valgt ut våre favoritter, men vi er alltid åpen for forslag. Har du noen idéer? Del dem under!
       suggestion: Har du et forslag for dette prosjektet? Vi lytter! Er det noe du gjerne vil ha fikset, %{issue_link}.
       issue_link_text: lag gjerne et issue
+
+      form:
+        project_name: Prosjektnavn
+        github_url: GitHub-url
+        summary: Sammendrag
+        main_language: Hovedspråk
+        submit_project: Send inn prosjekt
+
     edit:
       title: Redigér forslag
     admin:
