@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   has_many :projects
   has_and_belongs_to_many :organisations
 
+  has_many :archived_pull_requests
+
   scope :by_language, -> (language) { joins(:skills).where("lower(language) = ?", language.downcase) }
 
   paginates_per 99
