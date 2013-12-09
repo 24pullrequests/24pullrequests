@@ -55,6 +55,11 @@ module ApplicationHelper
     [ 'en', 'es', 'el', 'pt_br', 'fi', 'fr', 'de', 'ru', 'uk', 'th', 'it', 'nb' ]
   end
 
+  def current_translations
+    @translations ||= I18n.backend.send(:translations)
+    @translations[I18n.locale].with_indifferent_access
+  end
+
   def contributing_url type='html'
     url = 'http://24pullrequests.com/contributing'
     return url if type == 'text'
