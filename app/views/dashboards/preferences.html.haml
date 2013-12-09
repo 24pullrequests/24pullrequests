@@ -1,5 +1,14 @@
 %h2=t("preferences.title")
 
+%p=t("preferences.coderwall")
+= simple_form_for current_user, :url => update_coderwall_path, :html => {:class => 'form-horizontal'}, :method => 'post'  do |form|
+  = form.input :coderwall_username, :label => 'Coderwall username', :input_html => {:class => "pull-left"}
+  .control-group
+    .controls
+      = form.button :submit, t('user.coderwall.update_button')
+
+%hr
+
 %p=t("preferences.frequency_message")
 
 - if current_user.email_frequency.present?
@@ -20,6 +29,8 @@
       .controls
         = link_to "@#{current_user.twitter_nickname}", "https://twitter.com/#{current_user.twitter_nickname}", target: '_blank'
         = link_to %{<i class="icon-twitter"></i> #{t("preferences.remove")}}.html_safe, twitter_remove_path, method: :delete, class: 'btn btn-danger'
+
+  %hr
 
   %h3=t("preferences.languages")
   #skills.clearfix

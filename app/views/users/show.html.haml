@@ -54,8 +54,3 @@
 .row-fluid
   %h3 Coderwall Badges
   #coderwall-content{:data => {:nickname => "#{@user.coderwall_username}"}}
-  
-  / = unless current_user.nil?
-  /   = simple_form_for current_user, :url => update_coderwall_path, :html => {:class => 'form-inline'}, :method => 'post'  do |form|
-  /     = form.input :coderwall_username, :label => false, :input_html => {:class => "pull-left"}
-  /     = form.button :submit, t('user.coderwall.update_button'), :input_html => {:class => "pull-left"}
