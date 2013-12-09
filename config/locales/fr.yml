@@ -123,8 +123,8 @@ fr:
     new:
       title: Suggérer un projet
       info: Une des manières d'encourager la participation dans la communauté open source est de faire savoir aux utilisateurs quels projets populaires pourraient bénéficier de contributions. Nous avons sélectionné nos favoris, mais nous somme toujours ouverts aux suggestions. Vous avez des idées? Partagez-les!
-      suggestion: Vous avez une suggestion pour ce projet? Nous sommes à l'écoute! Si vous voyez quelque chose que vous aimeriez voir corrigé, n'hésitez pas à ouvrir une
-      issue: issue
+      suggestion: Vous avez une suggestion pour ce projet? Nous sommes à l'écoute! Si vous voyez quelque chose que vous aimeriez voir corrigé, n'hésitez pas à ouvrir une %{issue_link}.
+      issue_link_text: issue
     edit:
       title: Modifier une suggestion
     admin:

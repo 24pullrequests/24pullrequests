@@ -123,8 +123,8 @@ it:
     new:
       title: Suggerisci un progetto
       info: Una delle tante maniere di aiutare e conivolgere la community open source è facendo sapere agli utenti a quali progetti conviene contribuire. Abbiamo selezionato i tuoi faori ma siamo sempre aperti ai suggerimenti. Hai qualche idea? Condividila con noi qui sotto!
-      suggestion: Hai dei suggerimenti per questo progetto? Siamo tutto orecchie! Se c'è qualcosa che vuoi sistemare, sentiti libero di inviare un
-      issue: issue
+      suggestion: Hai dei suggerimenti per questo progetto? Siamo tutto orecchie! Se c'è qualcosa che vuoi sistemare, sentiti libero di inviare un %{issue_link}.
+      issue_link_text: issue
     edit:
       title: Modifica suggerimenti
     admin:
