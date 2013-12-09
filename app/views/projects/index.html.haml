@@ -8,10 +8,10 @@
 %p=t("projects.suggest_new")
 %hr
 %h4=t("projects.filter_by_language")
-= simple_form_for :project, url: filter_projects_path, method: :get, remote: true  do |form|
-  = form.input :languages, collection: Project::LANGUAGES, as: :check_boxes, label_method: lambda { |owner| "" }
-  = form.input :labels, collection: Label.all.map(&:name), as: :check_boxes, label_method: lambda { |owner| "" }
-  = form.submit "Search"
+= simple_form_for :project, id: "#search", url: filter_projects_path, method: :get, remote: true  do |form|
+  = form.input :labels, collection: Label.all.map(&:name), as: :check_boxes, label_method: lambda { |owner| "" }, labels: false
+  = form.input :languages, collection: Project::LANGUAGES, as: :check_boxes, label_method: lambda { |owner| "" }, label: false
+  = form.submit "Search", hidden: true
 
 %hr
 - if @has_more_projects

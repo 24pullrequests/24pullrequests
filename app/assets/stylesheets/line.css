@@ -72,3 +72,19 @@
         background-size: 60px 13px;
     }
 }
+
+.icheckbox_line {
+  background-color: #d8d8d8;
+}
+
+.icheckbox_line.checked  {
+  background-color: #BC3B3B;
+}
+
+.icheckbox_line.checked.hover {
+  background-color: rgba(188,59,59, 0.7);
+}
+
+.project .checkbox {
+  padding-left: 10px;
+}
