@@ -132,6 +132,14 @@ en:
       info: One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We've selected our favorites, but we're always open to suggestions. Have some ideas? Share them below!
       suggestion: Have a suggestion for this project? We're all ears! If there's something you'd like fixed, feel free to %{issue_link}.
       issue_link_text: suggest an issue
+
+      form:
+        project_name: Project Name
+        github_url: GitHub URL
+        summary: Summary
+        main_language: Main language
+        submit_project: Submit Project
+
     edit:
       title: Edit Suggestion
     admin:
