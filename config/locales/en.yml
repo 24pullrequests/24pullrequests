@@ -176,6 +176,12 @@ en:
     none: Nothing gifted yet.
     give: Gift something meaningful to a project you love
 
+    form:
+      date: Date
+      pull_requests: Pull Requests
+      tweet: Tweet about your gift!
+      gift_it: "Gift it!"
+
   collaborators:
     title: Core Contributors
 

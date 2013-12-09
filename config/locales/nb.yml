@@ -176,6 +176,12 @@ nb:
     none: Ingenting gitt enda.
     give: Gi noe meningsfylt til et prosjekt du elsker
 
+    form:
+      date: Dato
+      pull_requests: Pull Requests
+      tweet: Tweet om gaven din!
+      gift_it: "Gi!"
+
   collaborators:
     title: Hoved-bidragsytere
 
