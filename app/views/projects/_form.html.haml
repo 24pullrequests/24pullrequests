@@ -3,6 +3,7 @@
   = form.input :github_url, :input_html => {:class => "span4"}, disabled: @project.persisted?
   = form.input :description, :input_html => {:rows => 5, :class => "span4"}, :label => 'Summary'
   = form.input :main_language, :input_html => {:class => "span4", :data => {:provide => "typeahead", :source => Project::LANGUAGES}, :autocomplete => 'off', :placeholder => "Ruby, C++, Java, Python..."}
+  = form.association :labels, collection: Label.all, as: :check_boxes
   .control-group
     .controls
       = form.button :submit, 'Submit Project'
