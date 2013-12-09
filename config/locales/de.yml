@@ -45,6 +45,7 @@ de:
       title: Mach mit
       description: "Es gibt viele Wege, sich an einem Open Source-Projekt zu beteiligen: Du kannst die Dokumentation verbessern, vorhandene Problemberichte bearbeiten, die Code-Qualität oder Testabdeckung verbessern oder neue Funktionen hinzufügen."
       special_page: "Wir haben eine %{contributing_path} vorbereitet, auf der Du ein paar Informationen über Beiträge zu Open Source finden kannst."
+      contributing_path:
       take_a_look: Schau nach, falls Du neu in Open Source bist.
     profile:
       title: Bau Dein Profil auf
@@ -78,15 +79,21 @@ de:
   more: Mehr
   change: Ändern
   claim: Anspruch erheben
+  exempli_gratia:
   edit: Bearbeiten
   everything: Alles
   about_us: Über uns
   cancel: Abbrechen
+  or:
   search: Suchen
 
   user:
     grinchy_message: "%{user} ist %{year} ein Grinch &mdash; keine Pull Requests. Bah humbug!"
     pull_request_count: "%{user} hat %{year} bisher %{count} Pull Requests gesendet"
+    organisations:
+    coderwall:
+      title:
+      achieved_by:
 
   developers_using_language: Entwickler, die %{language} verwenden
   developers_involved: Entwickler machen mit
@@ -97,6 +104,7 @@ de:
     synchronize: Pull Requests synchronisieren
     help_out: "Dir fällt kein Projekt ein, dem Du helfen könntest? Hier ist eine Liste beliebter Projekte:"
     no_pull_requests: Du hast noch keine Pull Requests gesendet, worauf wartest Du!?
+    gift_it:
 
   language:
     projects_count: "%{count} %{language}-Projekte"
@@ -125,6 +133,14 @@ de:
       info: Lass uns wissen, welche beliebten Projekte Hilfe benötigen. Wir haben unsere Favoriten ausgewählt, sind aber immer für Vorschläge offen. Hast Du ein paar Ideen? Sag uns bescheid!
       suggestion: Hast Du einen Vorschlag für dieses Projekt? Wir sind ganz Ohr! Falls Du etwas behoben haben möchtest, %{issue_link}.
       issue_link_text: sende uns einen Problembericht
+
+      form:
+        project_name:
+        github_url:
+        summary:
+        main_language:
+        submit_project:
+
     edit:
       title: Vorschlag bearbeiten
     admin:
@@ -141,6 +157,13 @@ de:
       remove: Konto löschen
       save_and_continue: Speichern und weiter
 
+      form:
+        email:
+        email_frequency:
+        never:
+        daily:
+        weekly:
+
       hint:
         confirm_email: Bitte bestätige Deine Emailadresse über den Link, den wir Dir zugeschickt haben.
 
@@ -155,6 +178,7 @@ de:
     title: Konto löschen
     are_you_sure: Wir möchten sicherstellen, dass Du wirklich Dein Konto löschen möchtest. Dadurch werden Dein Profil und all Deine Pull Requests von der Webseite entfernt. Vorgeschlagene Projekte bleiben allerdings bestehen.
     notification_info: Falls Du keine Benachrichtigungen mehr erhalten möchtest, ändere einfach Deine %{email_preferences_link}.
+    email_preferences_link:
     confirm: Löschen bestätigen
     cancel: Ich hab's mir anders überlegt!
 
@@ -162,8 +186,15 @@ de:
     title: Geschenkter Code
     description: Hier kannst Du Deine Pull Requests verwalten und Deine eigenen "24 Pull Requests" ausgewählen.
     view_your_gifts: All Deine Geschenke werden in Deinem %{calendar_link} angezeigt.
+    calendar_link:
     none: Noch nichts verschenkt.
     give: Verschenke etwas Bedeutsames an ein Projekt das Du liebst
+
+    form:
+      date:
+      pull_request:
+      tweet:
+      gift_it:
 
   collaborators:
     title: Core Contributors
@@ -180,3 +211,6 @@ de:
       details: 24 Pull Requests wurde durch die Hilfe und die Spenden einiger grossartiger Sponsoren ermöglicht.
       thanks: "Vielen Dank an..."
       get_in_touch: "Interesse, selbst ein Sponsor zu werden? Irgendetwas anderes auf dem Herzen? Schreib uns eine Email:"
+
+  suggestions:
+    title:
