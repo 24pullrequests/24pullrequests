@@ -156,6 +156,7 @@ nb:
     title: Slett din konto
     are_you_sure: Vi ville bare forsikre oss om at du faktisk ønsker å slette din konto. Dette vil fjerne din profil og alle pull requests fra siden, men foreslåtte prosjekter vil bli igjen.
     notification_info: Om du kun ønsker å ikke få eposter kan du endre dine %{email_preferences_link}.
+    email_preferences_link: epost-preferanser
     confirm: Bekreft sletting
     cancel: Jeg har ombestemt meg, ta meg tilbake!
 
