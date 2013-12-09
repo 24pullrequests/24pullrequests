@@ -191,29 +191,10 @@ nav {
   }
 }
 
-article {
-  @extend .constrained;
-
+#main {
+  @include border-top-radius(5px);
+  @include box-shadow(0 0 3px 0px #ccc);
   background-color: #fff;
-
-  -moz-box-shadow: 0 0 3px 0px #ccc;
-  -webkit-box-shadow: 0 0 3px 0px #ccc;
-  box-shadow: 0 0 3px 0px #ccc;
-
-  /* Thanks http://border-radius.com */
-  -webkit-border-top-left-radius: 5px;
-  -webkit-border-top-right-radius: 5px;
-  -moz-border-radius-topleft: 5px;
-  -moz-border-radius-topright: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-
-  /* Fix issue with social icons crashing */
-  @media (max-width: 767px) {
-    .span6 {
-      width: 100% !important;
-    }
-  }
 }
 
 footer {
@@ -359,12 +340,6 @@ footer {
   background: #eee;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  @media (min-width: 767px) {
-    padding: 20px 5px;
-  }
-  @media (max-width: 767px) {
-    padding: 10px 5px;
-  }
   h3 {
     text-align: center;
   }
@@ -372,13 +347,22 @@ footer {
     list-style: none;
     margin: 20px 0;
     padding: 0;
-    li {
-      float: left;
-      border: 2px solid #fff;
-      box-shadow: rgba(0, 0, 0, 0.398438) 0px 1px 1px;
-      margin: 0 12px 12px 0;
-      &:hover {
-        border-color: $link-color;
+  }
+  .user {
+    display: inline-block;
+    border: 2px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.398438) 0px 1px 1px;
+    margin: 0 8px 12px 7px;
+    &:hover {
+      border-color: $link-color;
+    }
+
+    @media (min-width: $screen-md-min){
+      margin: 0 8px 12px 8px;
+    }
+    @media (min-width: $screen-lg-min){
+      &:last-child {
+        display: none
       }
     }
   }

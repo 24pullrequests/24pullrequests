@@ -77,7 +77,7 @@
     - if logged_in?
       = render :partial => 'user_nav'
 
-    %article.container
+    %article#main.container{role: :main}
       .row
         .col-md-12
           - if flash.any?

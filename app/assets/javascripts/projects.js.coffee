@@ -43,6 +43,6 @@ $ ->
 
   resetLanguage = ->
       $('#languages li').removeClass('disabled')
-      $('#projects').html(projects.find('.span12'))
+      $('#projects').html(projects.find('.col-md-12'))
       projects = $('#projects').clone()
       $('#projects').css('height', 'auto')
