@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131208203303) do
+ActiveRecord::Schema.define(version: 20131209154457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "archived_pull_requests", force: true do |t|
+    t.string   "title"
+    t.string   "issue_url"
+    t.text     "body"
+    t.string   "state"
+    t.boolean  "merged"
+    t.datetime "created_at"
+    t.string   "repo_name"
+    t.integer  "user_id"
+    t.string   "language"
+    t.integer  "comments_count", default: 0
+  end
 
   create_table "gifts", force: true do |t|
     t.integer  "user_id",         null: false
