@@ -12,8 +12,8 @@
   - if current_user.email.present? && !current_user.confirmed?
     = form.input :email, hint: t("preferences.hint.confirm_email")
   - else
-    = form.input :email
-  = form.input :email_frequency, :collection => [['Never', 'none'], ['Daily', 'daily'], ['Weekly', 'weekly']], :selected => (form.object.email_frequency || 'daily')
+    = form.input :email, :label => t("preferences.form.email")
+  = form.input :email_frequency, :label => t("preferences.form.email_frequency"), :collection => [[t("preferences.form.never"), 'none'], [t("preferences.form.daily"), 'daily'], [t("preferences.form.weekly"), 'weekly']], :selected => (form.object.email_frequency || 'daily')
   - if current_user.twitter_linked?
     .control-group
       %label.control-label=t("preferences.twitter")

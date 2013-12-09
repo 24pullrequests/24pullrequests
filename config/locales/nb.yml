@@ -143,6 +143,13 @@ nb:
       remove: Fjern konto
       save_and_continue: Lagre og fortsett
 
+      form:
+        email: Epost
+        email_frequency: Epost-hyppighet
+        never: Aldri
+        daily: Daglig
+        weekly: Ukentlig
+
       hint:
         confirm_email: Vennligst bekreft epost-adressen din med linken vi har sendt deg.
 

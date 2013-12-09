@@ -143,6 +143,13 @@ en:
       remove: Remove Account
       save_and_continue: Save and Continue
 
+      form:
+        email: Email
+        email_frequency: Email Frequency
+        never: Never
+        daily: Daily
+        weekly: Weekly
+
       hint:
         confirm_email: Please confirm your email address using the link we've sent you.
 
