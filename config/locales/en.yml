@@ -156,6 +156,7 @@ en:
     title: Delete your account
     are_you_sure: We just wanted to make sure you really do wish to delete your account. This will remove your profile and all pull requests from the site, although any suggested projects will remain.
     notification_info: If you simply want to stop receiving email notifications you can change your  %{email_preferences_link}.
+    email_preferences_link: email preferences
     confirm: Confirm Deletion
     cancel: I changed my mind, take me back!
 
