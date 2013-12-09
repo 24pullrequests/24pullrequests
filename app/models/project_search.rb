@@ -39,6 +39,6 @@ class ProjectSearch
 
   def languages
     @languages.reject! { |l| l.empty? }
-    @languages.join(",").downcase
+    @languages.map(&:downcase)
   end
 end
