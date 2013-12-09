@@ -30,7 +30,7 @@ module ApplicationHelper
   end
 
   def gittip_button(nickname)
-    %(<a href="https://www.gittip.com/#{nickname}/"><img alt="Support via Gittip" src="https://rawgithub.com/twolfson/gittip-badge/0.1.0/dist/gittip.png"/> </a>).html_safe
+    %(<a href="https://www.gittip.com/#{nickname}/" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-heart"></span>Support via Gittip</a>).html_safe
   end
 
   def contributors_in year

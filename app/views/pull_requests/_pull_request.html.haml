@@ -1,17 +1,16 @@
 = cache pull_request do
   .pull_request{:class => parameterize_language(pull_request.language)}
-    .col-md-12
-      = link_to image_tag(gravatar_url(pull_request.user.gravatar_id), :width => 80, :height => 80, :alt => pull_request.user.nickname), user_path(pull_request.user.nickname), :rel => 'tooltip', :data => { :original_title => pull_request.user.nickname }, :class => 'image'
-      %h4
-        = link_to pull_request.title, pull_request.issue_url, :target => :blank
-        %span.meta
-          on
-          = link_to pull_request.repo_name, "https://github.com/#{pull_request.repo_name}", :target => :blank
-          %small
-            %abbr.timeago{:title => pull_request.created_at.iso8601}= pull_request.created_at
-          - if pull_request.language.present?
-            .language.label.label-info.pull-right
-              = link_to pull_request.language, language_path(pull_request.language)
-      %p
-        =truncate pull_request.body, :length => 300
-      %hr
+    = link_to image_tag(gravatar_url(pull_request.user.gravatar_id), :width => 80, :height => 80, :alt => pull_request.user.nickname), user_path(pull_request.user.nickname), :rel => 'tooltip', :data => { :original_title => pull_request.user.nickname }, :class => 'image'
+    %h4
+      = link_to pull_request.title, pull_request.issue_url, :target => :blank
+      %span.meta
+        on
+        = link_to pull_request.repo_name, "https://github.com/#{pull_request.repo_name}", :target => :blank
+        %small
+          %abbr.timeago{:title => pull_request.created_at.iso8601}= pull_request.created_at
+        - if pull_request.language.present?
+          .language.label.label-info.pull-right
+            = link_to pull_request.language, language_path(pull_request.language)
+    %p
+      =truncate pull_request.body, :length => 300
+    %hr
