@@ -74,14 +74,15 @@
 }
 
 .icheckbox_line {
-  background-color: #d8d8d8;
+  background-color: rgba(188,59,59, 0.4);
 }
 
 .icheckbox_line.checked  {
   background-color: #BC3B3B;
+  color: white;
 }
 
-.icheckbox_line.checked.hover {
+.icheckbox_line.hover {
   background-color: rgba(188,59,59, 0.7);
 }
 
