@@ -104,6 +104,7 @@ nb:
     synchronize: Synkronisér pull requests
     help_out: "Kommer du ikke på et prosjekt du vil bidra til? Vi har satt sammen en liste av populære prosjekter:"
     no_pull_requests: Du har ikke sendt noen pull requests enda. Hva venter du på?!
+    gift_it: Gi!
 
   language:
     projects_count: "%{count} %{language} prosjekter"
