@@ -45,6 +45,7 @@ nb:
       title: Involvér deg
       description: "Det er masse måter du kan involvere deg i et open-source prosjekt på: forbedre dokumentasjon, hjelpe til med å fikse eksisterende problemer og bugs, forbedre kodekvalitet og testdekning, eller legge til manglende features."
       special_page: "Vi har forberedt en %{contributing_path}, hvor du kan finne informasjon om å bidra."
+      contributing_path: spesiell side
       take_a_look: Om du er ny i open-source, ta gjerne en titt.
     profile:
       title: Bygg din profil

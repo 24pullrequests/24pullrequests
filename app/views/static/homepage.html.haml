@@ -38,7 +38,7 @@
     %hr
     %p=t("homepage.involved.description")
     %p
-      =t("homepage.involved.special_page", contributing_path: link_to('special page', contributing_path)).html_safe
+      =t("homepage.involved.special_page", contributing_path: link_to(t("contributing_path"), contributing_path)).html_safe
       =t("homepage.involved.take_a_look")
 
     %h4=t("homepage.profile.title")
