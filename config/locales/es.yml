@@ -124,8 +124,8 @@ es:
     new:
       title: "Sugerir un proyecto"
       info: "Una de las maneras en que fomentamos la participación en la comunidad de código abierto es informando a nuestros usuarios conozcan en qué proyectos populares pueden contribuir. Seleccionamos nuestros favoritos, pero siempre estamos abiertos a sugerencias. ¿Tiene algunas ideas? ¡Compártanos su idea!"
-      suggestion: "Sugerencias: ¿Tiene alguna para este proyecto? ¡Somos todo oídos! Si hay algo que te gustaría corregir, no dude en decirlo."
-      issue: issue
+      suggestion: "Sugerencias: ¿Tiene alguna para este proyecto? ¡Somos todo oídos! Si hay algo que te gustaría corregir, %{issue_link}."
+      issue_link_text: no dude en decirlo
     edit:
       title: "Editar sugerencia"
     admin:

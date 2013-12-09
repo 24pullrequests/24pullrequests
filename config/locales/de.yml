@@ -93,7 +93,7 @@ de:
 
   dashboard:
     christmas_activity: Hier kannst Du all Deine Aktivitäten sehen, die wir für Dich in der Adventszeit festgehalten haben.
-    give_a_gift: Scheinbar hast Du heute noch keinen Code verschenkt. Möchtest Du diesen Pull Request verschenken? 
+    give_a_gift: Scheinbar hast Du heute noch keinen Code verschenkt. Möchtest Du diesen Pull Request verschenken?
     synchronize: Pull Requests synchronisieren
     help_out: "Dir fällt kein Projekt ein, dem Du helfen könntest? Hier ist eine Liste beliebter Projekte:"
     no_pull_requests: Du hast noch keine Pull Requests gesendet, worauf wartest Du!?
@@ -123,8 +123,8 @@ de:
     new:
       title: Schlag ein Projekt vor
       info: Lass uns wissen, welche beliebten Projekte Hilfe benötigen. Wir haben unsere Favoriten ausgewählt, sind aber immer für Vorschläge offen. Hast Du ein paar Ideen? Sag uns bescheid!
-      suggestion: Hast Du einen Vorschlag für dieses Projekt? Wir sind ganz Ohr! Falls Du etwas behoben haben möchtest, sende uns einen
-      issue: Problembericht
+      suggestion: Hast Du einen Vorschlag für dieses Projekt? Wir sind ganz Ohr! Falls Du etwas behoben haben möchtest, %{issue_link}.
+      issue_link_text: sende uns einen Problembericht
     edit:
       title: Vorschlag bearbeiten
     admin:

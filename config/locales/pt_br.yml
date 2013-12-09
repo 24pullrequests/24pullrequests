@@ -123,8 +123,8 @@ pt_br:
     new:
       title: "Sugerir um projeto"
       info: "Uma das maneiras de incentivar a participação da comunidade open source é deixar que os usuários saibam quais projetos valem a pena contribuir. Nós selecionamos os nossos favoritos, mas estamos sempre abertos a sugestões. Tem alguma ideia? Compartilhe conosco abaixo!"
-      suggestion: "Tem uma sugestão para este projeto? Somos todo ouvidos! Se existe algo que você gostaria de ver acertado, fique a vontade para abrir um"
-      issue: "issue"
+      suggestion: "Tem uma sugestão para este projeto? Somos todo ouvidos! Se existe algo que você gostaria de ver acertado, fique a vontade para #{issue_link}."
+      issue_link_text: abrir um issue
     edit:
       title: "Editar sugestão"
     admin:
