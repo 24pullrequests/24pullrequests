@@ -62,8 +62,8 @@
         =t("pull_requests.latest.count", count: PullRequest.year(current_year).count)
         = link_to t("view_all"), pull_requests_path, :class => 'btn btn-default pull-right'
 
-    #pull_requests
-      = render @pull_requests
+      #pull_requests
+        = render @pull_requests
   %hr
 .row.clearfix
   .col-md-12

@@ -19,10 +19,9 @@ body {
     background: $header-background asset-url('snow-bg.png') 50% 0 no-repeat;
     position: absolute;
     top: -47px;
-    left: 50%;
-    margin-left: -690px;
+    left: 0;
+    right: 0;
     display: block;
-    width: 1380px;
     height: 543px;
     z-index: -1;
 
