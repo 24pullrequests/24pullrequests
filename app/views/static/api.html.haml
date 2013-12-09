@@ -17,29 +17,58 @@
 %pre
   :plain
     $ curl http://24pullrequests.com/users.json?callback=foo
-
+    
     foo([
-          {
-            "id":1,
-            "nickname":"andrew",
-            "gravatar_id":"8ddbf811da78bb0daeeb3cacd7cf743f",
-            "github_profile":"https://github.com/andrew",
-            "twitter_profile":"https://twitter.com/teabass",
-            "pull_requests_count":11,
-            "link":"http://24pullrequests.com/users/andrew",
-            "pull_requests":[
-              {
-                "title":"Daily and weekly reminder email content",
-                "issue_url":"https://github.com/andrew/24pullrequests/issues/66",
-                "repo_name":"andrew/24pullrequests",
-                "body":"Fix all the things!"
-              }
-            ]
-          }
-        ]
-      }
-    )
+           {
+              id:120,
+              nickname:"dr-zion-schaefer",
+              gravatar_id:"fde332d18b14c52bc41b50f4952f075a",
+              github_profile:"https://github.com/dr-zion-schaefer",
+              twitter_profile:null,
+              pull_requests_count:20,
+              link:"http://localhost:3000/users/dr-zion-schaefer",
+              organisations:[
+                 {
+                    login:"consequuntur",
+                    avatar_url:"https://1.gravatar.com/avatar/....",
+                    link:"http://localhost:3000/organisations/75"
+                 },
+                 {
+                    login:"tempore",
+                    avatar_url:"https://1.gravatar.com/avatar/....",
+                    link:"http://localhost:3000/organisations/76"
+                 }
+              ],
+              pull_requests:[
+                 {
+                    title:"voluptatem",
+                    issue_url:"http://runolfonvonrueden.net/rebecca",
+                    repo_name:"ipsam",
+                    body:"Fuga ut quo in et nulla quae. Ullam tempora vitae quis.",
+                    created_at:"2013-11-20T17:47:27.855Z"
+                 },
+                 {
+                    title:"omnis",
+                    issue_url:"http://kunde.org/lea_yundt",
+                    repo_name:"porro",
+                    body:"Qui nesciunt laudantium rerum voluptatem corporis ratione.",
+                    created_at:"2013-11-21T17:47:27.850Z"
+                 },
+                 {
+                    title:"expedita",
+                    issue_url:"http://hirthe.name/josefina",
+                    repo_name:"numquam",
+                    body:"Reprehenderit nostrum laudantium quis ducimus ut.",
+                    created_at:"2013-12-09T17:47:27.691Z"
+                 }
+              ],
+              archived_pull_requests:[
 
+              ]
+           }
+        ]
+      )
+    
 .alert.alert-info
   %strong What more options?
   Open an issue on
@@ -98,44 +127,88 @@
 
     [
        {
-          id:773,
-          nickname:"Trott",
-          gravatar_id:"d9bebc8f32aaad1275a931e2045196e0",
-          github_profile:"https://github.com/Trott",
+          id:120,
+          nickname:"dr-zion-schaefer",
+          gravatar_id:"fde332d18b14c52bc41b50f4952f075a",
+          github_profile:"https://github.com/dr-zion-schaefer",
           twitter_profile:null,
-          pull_requests_count:10,
-          link:"http://24pullrequests.com/users/Trott",
+          pull_requests_count:20,
+          link:"http://localhost:3000/users/dr-zion-schaefer",
           organisations:[
              {
-                login:"ucsf-ckm",
-                avatar_url:"https://0.gravatar.com/avatar/.....",
-                link:"http://24pullrequests.com/organisations/2983"
+                login:"consequuntur",
+                avatar_url:"https://1.gravatar.com/avatar/....",
+                link:"http://localhost:3000/organisations/75"
              },
              {
-                login:"ilios",
-                avatar_url:"https://1.gravatar.com/avatar/.....",
-                link:"http://24pullrequests.com/organisations/2373"
+                login:"tempore",
+                avatar_url:"https://1.gravatar.com/avatar/....",
+                link:"http://localhost:3000/organisations/76"
              }
           ],
           pull_requests:[
              {
-                title:"split different "            tables" into files",
-                issue_url:"https://github.com/Trott/music-routes-data/pull/12",
-                repo_name:"Trott/music-routes-data",
-                body:""
+                title:"voluptatem",
+                issue_url:"http://runolfonvonrueden.net/rebecca",
+                repo_name:"ipsam",
+                body:"Fuga ut quo in et nulla quae. Ullam tempora vitae quis.",
+                created_at:"2013-11-20T17:47:27.855Z"
              },
              {
-                title:"optimize images via ImageOptim",
-                issue_url:"https://github.com/andrew/24pullrequests/pull/360",
-                repo_name:"andrew/24pullrequests",
-                body:"Reduced the payload size for images. Didn't add any tests because that would require screen snapshots and comparisons and stuff, I imagine. Probably a whole new feature there."
+                title:"omnis",
+                issue_url:"http://kunde.org/lea_yundt",
+                repo_name:"porro",
+                body:"Qui nesciunt laudantium rerum voluptatem corporis ratione.",
+                created_at:"2013-11-21T17:47:27.850Z"
              },
              {
-                title:"add track data",
-                issue_url:"https://github.com/Trott/music-routes-data/pull/9",
-                repo_name:"Trott/music-routes-data",
-                body:""
+                title:"expedita",
+                issue_url:"http://hirthe.name/josefina",
+                repo_name:"numquam",
+                body:"Reprehenderit nostrum laudantium quis ducimus ut.",
+                created_at:"2013-12-09T17:47:27.691Z"
              }
+          ],
+          archived_pull_requests:[
+
+          ]
+       },
+       {
+          id:33,
+          nickname:"kaitlin-walter",
+          gravatar_id:"0f9f17758e76da17ff4ade389e566321",
+          github_profile:"https://github.com/kaitlin-walter",
+          twitter_profile:null,
+          pull_requests_count:20,
+          link:"http://localhost:3000/users/kaitlin-walter",
+          organisations:[
+
+          ],
+          pull_requests:[
+             {
+                title:"quia",
+                issue_url:"http://robel.info/pamela",
+                repo_name:"aliquid",
+                body:"Quae beatae dolores mollitia qui sapiente officiis non.",
+                created_at:"2013-12-05T13:15:05.000Z"
+             },
+             {
+                title:"modi",
+                issue_url:"http://torp.info/marta",
+                repo_name:"ut",
+                body:"Pariatur non placeat non magnam.",
+                created_at:"2013-12-05T13:15:05.000Z"
+             },
+             {
+                title:"aut",
+                issue_url:"http://homenick.org/lolita.rosenbaum",
+                repo_name:"id",
+                body:"Sed sit maiores minus molestiae quod fuga ea.",
+                created_at:"2013-12-05T13:15:05.000Z"
+             }
+          ],
+          archived_pull_requests:[
+
           ]
        }
     ]
@@ -147,52 +220,71 @@
     $ curl http://24pullrequests.com/users/andrew.json
 
     {
-       id:1,
+       id:183,
        nickname:"andrew",
        gravatar_id:"8ddbf811da78bb0daeeb3cacd7cf743f",
        github_profile:"https://github.com/andrew",
-       twitter_profile:"https://twitter.com/teabass",
-       pull_requests_count:3,
-       link:"http://24pullrequests.com/users/andrew",
+       twitter_profile:null,
+       pull_requests_count:15,
+       link:"http://localhost:3000/users/andrew",
        organisations:[
           {
-             login:"github",
-             avatar_url:"https://1.gravatar.com/avatar/....",
-             link:"http://24pullrequests.com/organisations/100"
+             login:"eius",
+             avatar_url:"https://1.gravatar.com/avatar/.....",
+             link:"http://localhost:3000/organisations/5"
           },
           {
-             login:"railsrumble",
-             avatar_url:"https://2.gravatar.com/avatar/.....",
-             link:"http://24pullrequests.com/organisations/16"
+             login:"corrupti",
+             avatar_url:"https://1.gravatar.com/avatar/.....",
+             link:"http://localhost:3000/organisations/66"
           },
           {
-             login:"railsgirls",
-             avatar_url:"https://0.gravatar.com/avatar/......",
-             link:"http://24pullrequests.com/organisations/2163"
-          },
+             login:"soluta",
+             avatar_url:"https://1.gravatar.com/avatar/.....",
+             link:"http://localhost:3000/organisations/86"
+          }
        ],
        pull_requests:[
           {
-             title:"Removed the old information box",
-             issue_url:"https://github.com/andrew/24pullrequests/pull/431",
-             repo_name:"andrew/24pullrequests",
-             body:"No need to show it now that it’s December"
+             title:"molestiae",
+             issue_url:"http://braunhilpert.org/hardy",
+             repo_name:"fugiat",
+             body:"Velit dicta ratione maxime rerum qui aut neque.",
+             created_at:"2013-11-25T17:47:32.249Z"
           },
           {
-             title:"Upgraded to rails 4.0.2",
-             issue_url:"https://github.com/andrew/24pullrequests/pull/447",
-             repo_name:"andrew/24pullrequests",
-             body:"Security fixes ftw"
+             title:"eveniet",
+             issue_url:"http://jacobshagenes.name/alba_hintz",
+             repo_name:"maiores",
+             body:"Assumenda quo veritatis non vero fugiat voluptatem rerum.",
+             created_at:"2013-11-26T17:47:32.244Z"
           },
           {
-             title:"Fix path to background image",
-             issue_url:"https://github.com/andrew/24pullrequests/pull/421",
-             repo_name:"andrew/24pullrequests",
-             body:"Uses the rails asset-url so the asset pipeline can handle it."
+             title:"et",
+             issue_url:"http://hane.info/dameon",
+             repo_name:"ipsam",
+             body:"Omnis temporibus quia nobis quia labore officiis.",
+             created_at:"2013-11-27T17:47:32.239Z"
+          },
+          {
+             title:"eos",
+             issue_url:"http://glover.info/zella_erdman",
+             repo_name:"tenetur",
+             body:"Quibusdam quia autem ipsam. Maiores dolor dolorem rerum sunt.",
+             created_at:"2013-11-28T17:47:32.234Z"
+          },
+          {
+             title:"voluptatum",
+             issue_url:"http://gutkowski.info/cecil",
+             repo_name:"eos",
+             body:"Atque qui minus officiis facere. Nam consequatur consequuntur.",
+             created_at:"2013-12-09T17:47:32.170Z"
           }
+       ],
+       archived_pull_requests:[
+
        ]
     }
-
 
 %h2 Organisations
 
