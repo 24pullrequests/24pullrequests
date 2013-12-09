@@ -45,6 +45,7 @@ es:
       title: "Involúcrese"
       description: "Hay un muchas formas de participar en un proyecto de código abierto: mejorando la documentación, ayudando a resolver los problemas y errores existentes, mejorar la calidad del código y la cobertura de pruebas, o añadiendo características faltantes."
       special_page: "Hemos preparado una %{contributing_path}, donde puede encontrar más información de cómo contribuir."
+      contributing_path:
       take_a_look: "Si eres nuevo en el mundo Open Source, por favor, échale un vistazo."
     profile:
       title: "Construya su perfil"
@@ -79,15 +80,21 @@ es:
   change: "Cambiar"
   clear: "Limpio"
   claim: "Reclamar"
+  exempli_gratia:
   edit: "Editar"
   everything: "Todo"
   about_us: "Sobre Nosotros"
   cancel: "Cancelar"
+  or:
   search: "Buscar"
 
   user:
     grinchy_message: "%{user} es un gruñón para el año de %{year} porque no ha regalado ningún pull request. ¡Bah, paparruchas!"
     pull_request_count: "%{user} ha realizado un total de %{count} pull requests para el año %{year}"
+    organisations:
+    coderwall:
+      title:
+      achieved_by:
 
   developers_using_language: "Desarrolladores usando %{language}"
   developers_involved: "Desarrolladores trabajando"
@@ -98,6 +105,7 @@ es:
     synchronize: "Sincronizar Pull Requests"
     help_out: "No puedes pensar en un proyecto que quieres ayudar? Tenemos una lista de proyectos populares"
     no_pull_requests: "No has enviado ninguno 'pull requests'. Qué esperas?!"
+    gift_it:
 
   language:
     projects_count: "%{count} %{language} Proyectos"
@@ -126,6 +134,14 @@ es:
       info: "Una de las maneras en que fomentamos la participación en la comunidad de código abierto es informando a nuestros usuarios conozcan en qué proyectos populares pueden contribuir. Seleccionamos nuestros favoritos, pero siempre estamos abiertos a sugerencias. ¿Tiene algunas ideas? ¡Compártanos su idea!"
       suggestion: "Sugerencias: ¿Tiene alguna para este proyecto? ¡Somos todo oídos! Si hay algo que te gustaría corregir, %{issue_link}."
       issue_link_text: no dude en decirlo
+
+      form:
+        project_name:
+        github_url:
+        summary:
+        main_language:
+        submit_project:
+
     edit:
       title: "Editar sugerencia"
     admin:
@@ -142,6 +158,13 @@ es:
       remove: "Eliminar tu cuenta"
       save_and_continue: "Guardar y continuar"
 
+      form:
+        email:
+        email_frequency:
+        never:
+        daily:
+        weekly:
+
       hint:
         confirm_email: "Por favor, confirmar tu cuenta de correo electrónico con el enlace que te mandamos."
 
@@ -156,6 +179,7 @@ es:
     title: "Eliminar mi cuenta"
     are_you_sure: "Queremos estar seguro que quieres eliminar tu cuenta. Este elimnar tu perfil y todos de los 'pull requests' del sitio, pero proyectos sugeridos permanecerán."
     notification_info: "Si solo quieres eliminar los notificaciones por correo electronico, puedes cambiar sus preferencias %{email_preferences_link}."
+    email_preferences_link:
     confirm: "Confirmar la eliminación"
     cancel: "Cambié mi mente, regresar!"
 
@@ -163,8 +187,15 @@ es:
     title: "Código obsequiado"
     description: "Aqui puedes manejar 'pull requests' y elegir tu propia colección de '24 Pull Requests'."
     view_your_gifts: "Todos sus regalos se mostrarán en su %{calendar_link}."
+    calendar_link:
     none: "No has regalado nada."
     give: "Da algo importante a un proyecto que te gusta"
+
+    form:
+      date:
+      pull_request:
+      tweet:
+      gift_it:
 
   collaborators:
     title: "Principales colaboradores"
@@ -181,3 +212,6 @@ es:
       details: "24 Pull Requests es posible gracias a la ayuda y donaciones de nuestros grandes patrocinadores."
       thanks: "Muchas gracias a..."
       get_in_touch: "Si deseas estar en contacto con nosotros, acerca de patrocinio u otro tema, envíenos un email a:"
+
+  suggestions:
+    title:

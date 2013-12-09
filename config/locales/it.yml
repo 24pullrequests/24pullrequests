@@ -45,6 +45,7 @@ it:
       title: Partecipa
       description: "Ci sono molti modi per partecipare ai progetti open source: migliorare la documentazione, sistemare problemi e bugs, migliorare la qualità del codice e dei test o aggiungendo novità."
       special_page: "Abbiamo preparato una %{contributing_path}, dove potrai trovare tutte le informazioni su come contribuire."
+      contributing_path:
       take_a_look: Se sei nuovo al mondo open source, guarda qui.
     profile:
       title: Costruisci il tuo profilo
@@ -78,15 +79,21 @@ it:
   more: Ancora
   change: Cambia
   claim: Rivendica
+  exempli_gratia:
   edit: Modifica
   everything: Tutto
   about_us: A riguardo
   cancel: Cancella
+  or:
   search: Cerca
 
   user:
     grinchy_message: "%{user} è diventato un Grinch per il  %{year} perchè non ha regalato nessuna pull request. Bah Impostore!"
     pull_request_count: "%{user} ha totalizzato %{count} pull requests durante l'anno %{year}"
+    organisations:
+    coderwall:
+      title:
+      achieved_by:
 
   developers_using_language: Sviluppatori che usano %{language}
   developers_involved: Sviluppatori già coinvolti
@@ -97,6 +104,13 @@ it:
     synchronize: Sincronizza le Pull Requests
     help_out: "Non riesci a pensare ad un progetto dove puoi contribuire? Abbiamo messo assieme una lista di progetti popolari:"
     no_pull_requests: Non hai inviato alcuna pull request, che stai aspettando?!
+
+    form:
+      project_name:
+      github_url:
+      summary:
+      main_language:
+      submit_project:
 
   language:
     projects_count: "%{count} Progetti %{language}"
@@ -141,6 +155,13 @@ it:
       remove: Rimuovi Profilo
       save_and_continue: Salva e Continua
 
+      form:
+        email:
+        email_frequency:
+        never:
+        daily:
+        weekly:
+
       hint:
         confirm_email: Perfavore conferma il tuo indirizzo Email utilizzando il link che ti abbiamo inviato.
 
@@ -155,6 +176,7 @@ it:
     title: Elimina il tuo account
     are_you_sure: Vogliamo solo assicurarci che tu sia sicuro di voler eliminare il tuo account. Rimuoveremo tutto quello che hai fatto su questo progilo, comunque i tuoi suggerimenti rimarranno.
     notification_info: Se vuoi semplicemente smettere di ricevere notifiche via Email puoi cambiare le tue preferenze  %{email_preferences_link}.
+    email_preferences_link:
     confirm: Conferma Eliminazione
     cancel: Ho cambiato idea, torna indietro!
 
@@ -162,8 +184,15 @@ it:
     title: Codici Regalati
     description: Puoi gestire le tue pull requests and selezionare e curare il proprio set di  "24 Pull Requests".
     view_your_gifts: Tutti i tuoi regali sono visibili sul tuo  %{calendar_link}.
+    calendar_link:
     none: Nessun regalo fatto.
     give: Regala qualcosa di importante ai progetti che ami
+
+    form:
+      date:
+      pull_request:
+      tweet:
+      gift_it:
 
   collaborators:
     title: Collaboratori principali
@@ -180,3 +209,6 @@ it:
       details: 24 Pull Requests è reso possibile grazie a generoso aiuto e alle donazioni dei nostri sponsors.
       thanks: "Grazie mille a..."
       get_in_touch: "Se vuoi metterti in contatto per una sponsorizzazione o qualciasi altro inviaci un Email:"
+
+  suggestions:
+    title:
