@@ -22,7 +22,7 @@ describe 'Projects' do
     it 'allows the user to suggest a project to contribute to' do
       click_link 'Suggest a project'
       fill_in 'Name', :with => Faker::Lorem.words.first
-      fill_in 'Github url', :with => 'http://github.com/akira/24pullrequests'
+      fill_in 'GitHub URL', :with => 'http://github.com/akira/24pullrequests'
       fill_in 'Summary', :with => Faker::Lorem.paragraphs.first[0..199]
       fill_in 'Main language', :with => 'Ruby'
       click_on 'Submit Project'
