@@ -1,13 +1,13 @@
 = simple_form_for gift_form.gift, :html => {:class => 'form-horizontal'}  do |form|
 
   - if gift_form.giftable_dates.any?
-    = form.input :date, :collection => gift_form.giftable_dates
+    = form.input :date, :label => t("gifts.form.date"), :collection => gift_form.giftable_dates
 
-  = form.input :pull_request_id, :collection => gift_form.pull_requests_for_select
+  = form.input :pull_request_id, :label => t("gifts.form.pull_requests"), :collection => gift_form.pull_requests_for_select
   = form.input :tweet, as: :boolean, label: false, wrapper_html: { class: "checkbox" } do
     = form.check_box :tweet, {}, "true", "false"
-    Tweet about your gift!
+    = t("gifts.form.tweet")
 
   .control-group
     .controls
-      = form.button :submit, 'Gift it!'
+      = form.button :submit, t("gifts.form.gift_it")
