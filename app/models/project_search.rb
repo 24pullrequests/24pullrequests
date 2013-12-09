@@ -34,7 +34,7 @@ class ProjectSearch
 
   def labels
     @labels.reject! { |l| l.empty? }
-    @labels.join(",")
+    @labels
   end
 
   def languages
