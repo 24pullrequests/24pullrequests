@@ -164,6 +164,7 @@ nb:
     title: Gitt kode
     description: Her kan du administrere dine pull requests og velge ditt eget sett av "24 pull requests".
     view_your_gifts: Alle dine gaver vil vises på din %{calendar_link}.
+    calendar_link: offentlige kalender
     none: Ingenting gitt enda.
     give: Gi noe meningsfylt til et prosjekt du elsker
 
