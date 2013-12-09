@@ -3,7 +3,4 @@
 
 = render partial: 'form'
 
-%p
-  =t("projects.new.suggestion")
-  = succeed('.') do
-    = link_to t("projects.new.issue"), 'https://github.com/andrew/24pullrequests/issues'
+%p= t("projects.new.suggestion", issue_link: link_to(t("projects.new.issue_link_text"), 'https://github.com/andrew/24pullrequests/issues')).html_safe
