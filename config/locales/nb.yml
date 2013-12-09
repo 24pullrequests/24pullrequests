@@ -60,7 +60,7 @@ nb:
     help_open_source: "Ønsker du å bidra til open-source prosjekter i mellomtiden? Sjekk ut disse andre flotte initiativene:"
     codetriage: "Gi tilbake til open-source, ett issue om gangen, med CodeTriage. Du vil motta ett issue fra dine favoritt-repos per dag for å hjelpe deg med å grave dypere, lære mer, og holde deg involvert med koden du er avhengig av."
     contribhub:
-      tagline: Visste du at du har en nabo som trenger hjelp med et skikkelig kult prosjelt? Med ContribHub vil du!
+      tagline: Visste du at du har en nabo som trenger hjelp med et skikkelig kult prosjekt? Med ContribHub vil du!
       description: ContribHub er en GitHub-basert applikasjon som gjør det enklere å finne prosjekter å bidra til og gro et samfunn rundt.
 
   merry_christmas: God jul
