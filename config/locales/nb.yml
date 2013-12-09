@@ -89,6 +89,8 @@ nb:
     grinchy_message: "%{user} er en grinch i %{year} med ingen pull requests. Humbug!"
     pull_request_count: "%{user} har laget %{count} pull requests totalt så langt i %{year}"
     organisations: Medlem av...
+    coderwall:
+      title: Coderwall badges
 
   developers_using_language: Utviklere som bruker %{language}
   developers_involved: Utviklere allerede involvert

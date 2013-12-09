@@ -51,5 +51,5 @@
     - else
       %h4=t("user.grinchy_message", user: @user.nickname, year: current_year)
 .row-fluid
-  %h3 Coderwall Badges
+  %h3= t("user.coderwall.title")
   #coderwall-content{:data => {:nickname => "#{@user.nickname}"}}
