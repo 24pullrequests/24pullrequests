@@ -164,6 +164,7 @@ en:
     title: Gifted Code
     description: Here you can manage your pull requests and select &amp; curate your own set of "24 Pull Requests".
     view_your_gifts: All your gifts will be shown on your %{calendar_link}.
+    calendar_link: public calendar
     none: Nothing gifted yet.
     give: Gift something meaningful to a project you love
 
