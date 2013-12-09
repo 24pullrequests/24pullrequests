@@ -9,4 +9,10 @@ $(document).ready(function(){
       insert: '<div class="icheck_line-icon"></div>' + label_text
     });
   });
+
+
+  $('.project .iCheck-helper').on("click", function() {
+    console.log("asdasd")
+    $('form.project').submit();
+  });
 });
