@@ -1,18 +1,18 @@
-%h1 JSON API
+%h1=t("api.title")
 
-%p Little know fact that there is a JSON api for 24 Pull Requests, details of each end point below:
+%p=t("api.description")
 
-%h3 Pagination
+%h3=t("api.pagination.title")
 
-%p Requests that return multiple items will be paginated to 99 items by default. You can specify further pages with the ?page parameter. 
+%p=t("api.pagination.details")
 
 %pre
   :plain
     $ curl http://24pullrequests.com/users.json?page=2
 
-%h3 JSON-P Callbacks
+%h3=t("api.callback.title")
 
-%p You can send a ?callback parameter to any GET call to have the results wrapped in a JSON function. This is typically used when browsers want to embed content in web pages by getting around cross domain issues. The response includes the same data output as the regular API.
+%p=t("api.callback.details")
 
 %pre
   :plain
@@ -75,9 +75,9 @@
   = link_to 'GitHub', 'https://github.com/andrew/24pullrequests'
   if you would like more features in the API, or even send us a pull request!
 
-%h2 Projects
+%h2=t("api.projects.title")
 
-%p All suggested projects on the site, ordered alphabetically.
+%p=t("api.projects.details")
 
 %pre
   :plain
@@ -91,9 +91,9 @@
       }
     ]
 
-%h2 Pull Requests
+%h2=t("api.pull_requests.title")
 
-%p Load all pull requests by users of the site during December, ordered by newest first, also includes the user who made the pull request.
+%p=t("api.pull_requests.details")
 
 %pre
   :plain
@@ -117,9 +117,9 @@
       }
     ]
 
-%h2 Users
+%h2=t("api.users.title")
 
-%p Load all users who have signed up to the site, ordered by how many pull requests they have sent so far in December, also includes their organization(s) and pull requests.
+%p=t("api.users.details")
 
 %pre
   :plain
@@ -213,7 +213,7 @@
        }
     ]
 
-%p Load information for a specific user.
+%p=t("api.users.specific")
 
 %pre
   :plain
@@ -286,9 +286,9 @@
        ]
     }
 
-%h2 Organisations
+%h2=t("api.organisations.title")
 
-%p Load all organizations that have signed up to the site, also includes the users that belong to each organisation.
+%p=t("api.organisations.details")
 
 %pre
   :plain
@@ -385,7 +385,7 @@
     ]
 
 
-%p Load information for a specific organisation 
+%p=t("api.organisations.specific")
 
 %pre
   :plain
