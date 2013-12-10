@@ -75,7 +75,8 @@
 
 .icheckbox_line {
   background-color: rgba(188,59,59, 0.4);
-  padding: 7px 10px 7px 10px;
+  padding: 7px 9px;
+  line-height: 15px;
 }
 
 .icheckbox_line.checked  {
@@ -88,5 +89,5 @@
 }
 
 .project .checkbox {
-  padding-left: 10px;
+  padding-left: 5px;
 }
