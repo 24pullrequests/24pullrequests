@@ -97,7 +97,7 @@ it:
       success: "Abbiamo aggiornato il tuo nome utente Coderwall!"
       update_button: "Aggiorna"
       error_no_user: "Nome utente non trovato."
-      error_github_not_conectet: "L'account Github legato a Coderwall dell'utente %{username} non è lo stesso con cui ti sei autenticato a 24pullrequests."
+      error_github_not_connected: "L'account Github legato a Coderwall dell'utente %{username} non è lo stesso con cui ti sei autenticato a 24pullrequests."
 
   developers_using_language: Sviluppatori che usano %{language}
   developers_involved: Sviluppatori già coinvolti
