@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   has_many :projects
   has_and_belongs_to_many :organisations
 
+  has_many :archived_pull_requests
+
   scope :by_language, -> (language) { joins(:skills).where("lower(language) = ?", language.downcase) }
 
   paginates_per 99
@@ -43,7 +45,16 @@ class User < ActiveRecord::Base
     return [] if collabs.nil?
     collaborators = collabs.map(&:login)
     result = where('nickname in (?)', collaborators)
-    collaborators.compact.map { |c| result.find { |u| u.nickname == c } }
+    collaborators.compact.map { |c| result.find { |u| u.nickname == c } }.compact
+  end
+
+  def coderwall_username
+    self.coderwall_user_name || nickname
+  end
+
+  def change_coderwall_username!(username)
+    self.coderwall_user_name = username
+    self.save!
   end
 
   def authorize_twitter!(nickname, token, secret)

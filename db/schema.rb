@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131202234014) do
+ActiveRecord::Schema.define(version: 20131209154457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "archived_pull_requests", force: true do |t|
+    t.string   "title"
+    t.string   "issue_url"
+    t.text     "body"
+    t.string   "state"
+    t.boolean  "merged"
+    t.datetime "created_at"
+    t.string   "repo_name"
+    t.integer  "user_id"
+    t.string   "language"
+    t.integer  "comments_count", default: 0
+  end
 
   create_table "gifts", force: true do |t|
     t.integer  "user_id",         null: false
@@ -25,6 +38,12 @@ ActiveRecord::Schema.define(version: 20131202234014) do
   end
 
   add_index "gifts", ["user_id", "pull_request_id"], name: "index_gifts_on_user_id_and_pull_request_id", unique: true, using: :btree
+
+  create_table "labels", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "organisations", force: true do |t|
     t.string   "login"
@@ -40,6 +59,16 @@ ActiveRecord::Schema.define(version: 20131202234014) do
     t.integer "user_id"
     t.integer "organisation_id"
   end
+
+  create_table "project_labels", force: true do |t|
+    t.integer  "project_id"
+    t.integer  "label_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "project_labels", ["label_id"], name: "index_project_labels_on_label_id", using: :btree
+  add_index "project_labels", ["project_id"], name: "index_project_labels_on_project_id", using: :btree
 
   create_table "projects", force: true do |t|
     t.string   "name"
@@ -106,6 +135,7 @@ ActiveRecord::Schema.define(version: 20131202234014) do
     t.string   "twitter_nickname"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
+    t.string   "coderwall_user_name"
   end
 
   add_index "users", ["nickname"], name: "index_users_on_nickname", unique: true, using: :btree
