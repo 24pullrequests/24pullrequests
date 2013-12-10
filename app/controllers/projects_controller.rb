@@ -67,11 +67,11 @@ class ProjectsController < ApplicationController
   protected
 
   def project_params
-    params.require(:project).permit(:description, :github_url, :name, :main_language)
+    params.require(:project).permit(:description, :github_url, :name, :main_language, label_ids: [])
   end
 
   def editable_project_params
-    params.require(:project).permit(:description, :name, :main_language)
+    params.require(:project).permit(:description, :name, :main_language, label_ids: [])
   end
 
   def language
