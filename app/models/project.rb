@@ -21,6 +21,9 @@ class Project < ActiveRecord::Base
                "TypeScript", "Vala", "Verilog", "VHDL", "VimL", "Visual Basic",
                "Volt", "wisp", "XC", "XML", "XProc", "XQuery", "XSLT", "Xtend"]
 
+  has_many :project_labels
+  has_many :labels, through: :project_labels
+
   belongs_to :submitted_by, class_name: "User", foreign_key: :user_id
 
   validates_presence_of :description, :github_url, :name, :main_language
@@ -33,6 +36,8 @@ class Project < ActiveRecord::Base
   scope :by_language, ->(language) { where("lower(main_language) =?", language.downcase) }
   scope :by_languages, ->(languages) { where("lower(main_language) IN (?)", languages.map(&:downcase)) }
   scope :active, -> { where(inactive: [ false, nil ]) }
+
+  accepts_nested_attributes_for :labels,  reject_if: proc { |attributes| attributes['id'].blank? }
 
   paginates_per 20
 

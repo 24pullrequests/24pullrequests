@@ -94,6 +94,10 @@ en:
     coderwall:
       title: Coderwall Badges
       achieved_by: "Badges achieved by"
+      success: "Successfully updated your coderwall username!"
+      update_button: "Update"
+      error_no_user: "No user found, with this name."
+      error_github_not_conectet: "The user %{username} has not the same github account connecte with coderwall as you connected to 24pullrequests."
 
   developers_using_language: Developers using %{language}
   developers_involved: Developers already involved
@@ -148,7 +152,7 @@ en:
       search: Search by GitHub repository
 
   preferences:
-      title: Set your Email Preferences
+      title: Set your personal preferences
       frequency_message:  At the frequency you choose, we'll send you helpful emails from now until the project is over, highlighting some suggested projects you might consider contributing to. As an added bonus, we'll take the liberty of personalizing our suggestions to your language proficiency based on the repos in your GitHub profile. Alternatively, you can choose your languages below.
       delete: "Want to delete your account?"
       information: You can always change your email preferences later.
@@ -156,6 +160,7 @@ en:
       languages: Which languages do you know?
       remove: Remove Account
       save_and_continue: Save and Continue
+      coderwall: Link your coderwall account to display the badges you have already earned on your profile page.
 
       form:
         email: Email
@@ -221,7 +226,31 @@ en:
   suggestions:
     title: My Suggestions
 
-  locale:  # Remove this part in your own language file - it's not necessary. Don't forget to include your language here, though!
+  api:
+    title: JSON API
+    description: You may not know this, but 24 Pull Requests has its own JSON API. Details of each endpoint are described below.
+    pagination:
+      title: Pagination
+      details: Requests that return multiple items will be paginated to 99 items by default. You can specify further pages with the ?page parameter.
+    callback:
+      title: JSON-P Callbacks
+      details: You can send a ?callback parameter to any GET call to have the results wrapped in a JSON function. This is typically used when browsers want to embed content in web pages by getting around cross domain issues. The response includes the same data output as the regular API.
+    projects:
+      title: Projects
+      details: All suggested projects on the site, ordered alphabetically.
+    pull_requests:
+      title: Pull Requests
+      details: Load all pull requests by users of the site during December, ordered by newest first, also includes the user who made the pull request.
+    users:
+      title: Users
+      details: Load all users who have signed up to the site, ordered by how many pull requests they have sent so far in December, also includes their organisation(s) and pull requests.
+      specific: Load information for a specific user.
+    organisations:
+      title: Organisations
+      details: Load all organisations that have signed up to the site, also includes the users that belong to each organisation.
+      specific: Load information for a specific organisation
+
+  locale: # Remove this part in your own language file - it's not necessary. Don't forget to include your language here, though!
     translate: Translate into your language!
     en: English
     el: Ελληνικά

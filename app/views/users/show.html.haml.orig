@@ -53,4 +53,4 @@
 
 .row-fluid
   %h3= t("user.coderwall.title")
-  #coderwall-content{:data => {:nickname => "#{@user.nickname}"}}
+  #coderwall-content{:data => {:nickname => "#{@user.coderwall_username}"}}
