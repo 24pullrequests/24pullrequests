@@ -356,9 +356,11 @@ footer {
     @media (min-width: $screen-md-min){
       margin: 0 8px 12px 8px;
     }
+  }
+  &.users-homepage {
     @media (min-width: $screen-lg-min){
-      &:last-child {
-        display: none
+      .user:last-child {
+        display: none;
       }
     }
   }
