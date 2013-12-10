@@ -24,6 +24,10 @@ gem 'ffi', '1.9.0'
 gem 'csv_shaper'
 
 
+gem 'sass-rails'
+gem 'coffee-rails'
+gem 'uglifier'
+
 group :development do
   gem 'thin'
   gem 'quiet_assets'
