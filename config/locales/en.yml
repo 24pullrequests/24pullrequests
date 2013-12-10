@@ -248,7 +248,7 @@ en:
     organisations:
       title: Organisations
       details: Load all organisations that have signed up to the site, also includes the users that belong to each organisation.
-      specific: Load information for a specific organisation
+      specific: Load information for a specific organisation.
 
   locale: # Remove this part in your own language file - it's not necessary. Don't forget to include your language here, though!
     translate: Translate into your language!
