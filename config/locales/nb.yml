@@ -220,3 +220,27 @@ nb:
 
   suggestions:
     title: Mine forslag
+
+  api:
+    title: JSON API
+    description: Det er ikke sikkert at du vet dette, men 24 Pull Requests har sin egen JSON API. Detaljer finner du nedenfor.
+    pagination:
+      title: Paginering
+      details: Forespørsler som returnerer flere enheter vil bli paginert til 99 enheter som standard. Du kan kan spesifisere flere sider med ?page parameteren.
+    callback:
+      title: JSON-P Tilbakekall
+      details: Du kan sende et ?callback parameter til alle GET-kall for å få resultatene wrappet i en JSON-funksjon. Dette er vanligvis brukt når nettlesere ønsker å embedde innhold i nettsider for å komme seg rundt kryssdomene-problemer. Responsen inkluderer det samme innholdet som den vanlige APIen.
+    projects:
+      title: Prosjekter
+      details: Alle foreslåtte prosjekter på siden, sortert alfabetisk.
+    pull_requests:
+      title: Pull Requests
+      details: Hent alle pull requests fra brukere of siden i desember, sortert med den nyeste først. Inkluderer også brukeren som gjorde pull requesten.
+    users:
+      title: Brukere
+      details: Hent alle brukere som har signet opp på siden, sortert etter hvor mange pull requests de har sendt så langt i desember. Inkluderer også deres organisasjon(er) og pull requests.
+      specific: Hent informasjon for en spesifikk bruker.
+    organisations:
+      title: Organisasjoner
+      details: Hent alle organisasjoner som har signet opp på siden. Inkluderer også brukerne som hører til hver organisasjon.
+      specific: Hent informasjon for en spesifikk organisasjon.
