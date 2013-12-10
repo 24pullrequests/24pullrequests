@@ -2,7 +2,7 @@
 
 %h4= t("projects.admin.search")
 = simple_form_for "",  url: admin_projects_path, method: :get, remote: true, html: { class: 'form-search' } do |f|
-  =f.input :repository, placeholder: "e.g. andrew/24pullrequests", label: false, input_html: { class: "input-large search-query" , value: params[:repository] }
+  =f.input :repository, placeholder: t("exempli_gratia") + "andrew/24pullrequests", label: false, input_html: { class: "input-large search-query" , value: params[:repository] }
 
   =f.submit t("search"), class: 'btn'
 

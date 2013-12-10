@@ -95,7 +95,8 @@
       compileCoderList = function(coder) {
         return '<a href="http://coderwall.com/' + coder + '" target="_blank">' + coder + '</a>';
       };
-      teamBadgesList += '<div class="team-coders"><strong>Badges achieved by:&nbsp;</strong>';
+      // teamBadgesList += '<div class="team-coders"><strong>' + I18n.user.coderwall.achieved_by + ':&nbsp;</strong>';
+      teamBadgesList += '<div class="team-coders"><strong> Badges achieved by:&nbsp;</strong>';
       for (_i = 0, _len = team.length; _i < _len; _i++) {
         coder = team[_i];
         teamBadgesList += compileCoderList(coder);

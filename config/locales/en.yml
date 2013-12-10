@@ -45,6 +45,7 @@ en:
       title: Get involved
       description: "There are loads of ways to get involved in an open source project: improving documentation, helping fix existing issues and bugs, improving code quality and test coverage, or adding missing features."
       special_page: "We've prepared a %{contributing_path}, where you can find some information about contributing."
+      contributing_path: special page
       take_a_look: If you are new to open source, please take a look.
     profile:
       title: Build your profile
@@ -78,10 +79,12 @@ en:
   change: Change
   clear: Clear
   claim: Claim
+  exempli_gratia: "e.g." # Short form of "for example"
   edit: Edit
   everything: Everything
   about_us: About
   cancel: Cancel
+  or: or
   search: Search
 
   user:
@@ -89,20 +92,23 @@ en:
     pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
     organisations: Member of...
     coderwall:
+      title: Coderwall Badges
+      achieved_by: "Badges achieved by"
       success: "Successfully updated your coderwall username!"
       update_button: "Update"
-      error_no_user: "No user found, with this name."
-      error_github_not_conectet: "The user %{username} has not the same github account connecte with coderwall as you connected to 24pullrequests."
+      error_no_user: "No user found with this name."
+      error_github_not_connected: "The user %{username} has not the same GitHub account connected with Coderwall as the one you connected to 24 Pull Requests with."
 
   developers_using_language: Developers using %{language}
   developers_involved: Developers already involved
 
   dashboard:
     christmas_activity: This is where you can see all the activity we've tracked for you in the run up to Christmas.
-    give_a_gift: Looks like you haven't gifted any code today. Would you like to gift
+    give_a_gift: Looks like you haven't gifted any code today. Would you like to gift # This is followed by a select-menu where you can pick one of your non-gifted pull requests to gift
     synchronize: Synchronize Pull Requests
     help_out: "Can't think of a project you'd like to help contribute to? We've put together a list of popular projects:"
     no_pull_requests: You've not sent any pull requests, what are you waiting for?!
+    gift_it: Gift it!
 
   language:
     projects_count: "%{count} %{language} Projects"
@@ -129,8 +135,16 @@ en:
     new:
       title: Suggest a Project
       info: One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We've selected our favorites, but we're always open to suggestions. Have some ideas? Share them below!
-      suggestion: Have a suggestion for this project? We're all ears! If there's something you'd like fixed, feel free to submit an
-      issue: issue
+      suggestion: Have a suggestion for this project? We're all ears! If there's something you'd like fixed, feel free to %{issue_link}.
+      issue_link_text: suggest an issue
+
+      form:
+        project_name: Project Name
+        github_url: GitHub URL
+        summary: Summary
+        main_language: Main language
+        submit_project: Submit Project
+
     edit:
       title: Edit Suggestion
     admin:
@@ -147,6 +161,14 @@ en:
       remove: Remove Account
       save_and_continue: Save and Continue
       coderwall: Link your coderwall account to display the badges you have already earned on your profile page.
+      coderwall_username: "Coderwall username"
+
+      form:
+        email: Email
+        email_frequency: Email Frequency
+        never: Never
+        daily: Daily
+        weekly: Weekly
 
       hint:
         confirm_email: Please confirm your email address using the link we've sent you.
@@ -162,6 +184,7 @@ en:
     title: Delete your account
     are_you_sure: We just wanted to make sure you really do wish to delete your account. This will remove your profile and all pull requests from the site, although any suggested projects will remain.
     notification_info: If you simply want to stop receiving email notifications you can change your  %{email_preferences_link}.
+    email_preferences_link: email preferences
     confirm: Confirm Deletion
     cancel: I changed my mind, take me back!
 
@@ -169,8 +192,15 @@ en:
     title: Gifted Code
     description: Here you can manage your pull requests and select &amp; curate your own set of "24 Pull Requests".
     view_your_gifts: All your gifts will be shown on your %{calendar_link}.
+    calendar_link: public calendar
     none: Nothing gifted yet.
     give: Gift something meaningful to a project you love
+
+    form:
+      date: Date
+      pull_requests: Pull Requests
+      tweet: Tweet about your gift!
+      gift_it: "Gift it!"
 
   collaborators:
     title: Core Contributors
@@ -194,12 +224,15 @@ en:
     members: "%{count} Members"
     languages: Languages
 
+  suggestions:
+    title: My Suggestions
+
   api:
     title: JSON API
     description: You may not know this, but 24 Pull Requests has its own JSON API. Details of each endpoint are described below.
     pagination:
       title: Pagination
-      details: Requests that return multiple items will be paginated to 99 items by default. You can specify further pages with the ?page parameter. 
+      details: Requests that return multiple items will be paginated to 99 items by default. You can specify further pages with the ?page parameter.
     callback:
       title: JSON-P Callbacks
       details: You can send a ?callback parameter to any GET call to have the results wrapped in a JSON function. This is typically used when browsers want to embed content in web pages by getting around cross domain issues. The response includes the same data output as the regular API.
@@ -216,9 +249,9 @@ en:
     organisations:
       title: Organisations
       details: Load all organisations that have signed up to the site, also includes the users that belong to each organisation.
-      specific: Load information for a specific organisation
+      specific: Load information for a specific organisation.
 
-  locale:
+  locale: # Remove this part in your own language file - it's not necessary. Don't forget to include your language here, though!
     translate: Translate into your language!
     en: English
     el: Ελληνικά
@@ -231,6 +264,4 @@ en:
     uk: Українська
     th: ไทย
     it: Italiano
-
-  suggestions:
-    title: My Suggestions
+    nb: Norsk bokmål
