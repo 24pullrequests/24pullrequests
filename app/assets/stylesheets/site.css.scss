@@ -14,9 +14,56 @@ body {
 }
 
 @media (min-width: 767px) {
-  body {
+
+  .snow {
     background: $header-background asset-url('snow-bg.png') 50% 0 no-repeat;
+    position: absolute;
+    top: -47px;
+    left: 50%;
+    margin-left: -690px;
+    display: block;
+    width: 1380px;
+    height: 543px;
+    z-index: -1;
+
+    -webkit-animation: move 5s 1;
+     -khtml-animation: move 5s 1;
+       -moz-animation: move 5s 1;
+	      -ms-animation: move 5s 1;
+	       -o-animation: move 5s 1;
+	          animation: move 5s 1;
   }
+
+  @-webkit-keyframes move {
+    0%   { opacity: 0; -webkit-transform: translateY(-400px); }
+    100% { opacity: 1; -webkit-transform: translateY(0); }
+  }
+
+  @-khtml-keyframes move {
+    0%   { opacity: 0; -khtml-transform: translateY(-400px); }
+    100% { opacity: 1; -khtml-transform: translateY(0); }
+  }
+
+  @-moz-keyframes move {
+    0%   { opacity: 0; -moz-transform: translateY(-400px); }
+    100% { opacity: 1; -moz-transform: translateY(0); }
+  }
+
+  @-ms-keyframes move {
+    0%   { opacity: 0; -ms-transform: translateY(-400px); }
+    100% { opacity: 1; -ms-transform: translateY(0); }
+  }
+
+  @-o-keyframes move {
+    0%   { opacity: 0; -o-transform: translateY(-400px); }
+    100% { opacity: 1; -o-transform: translateY(0); }
+  }
+
+  @keyframes move {
+    0%   { opacity: 0; transform: translateY(-400px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
 }
 
 a {
@@ -78,17 +125,19 @@ header {
     background-color: #942f2f;
   }
 
-  .tagline {
-    $width: 620px;
-    $height: 110px;
+  @media (min-width: 767px) {
+    .tagline {
+      $width: 620px;
+      $height: 110px;
 
-    position: relative;
-    width: $width;
-    height: $height;
-    left: 50%;
-    margin-left: -$width/2;
-    padding-top: 40px;
-    background: transparent asset-url('tagline.png') no-repeat bottom;
+      position: relative;
+      width: $width;
+      height: $height;
+      left: 50%;
+      margin-left: -$width/2;
+      padding-top: 40px;
+      background: transparent asset-url('tagline.png') no-repeat bottom;
+    }
   }
 }
 
