@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('input').each(function(){
+  $('#filters input').each(function(){
     var self = $(this);
     label_text = self.val();
     selected = self.attr('selected');
@@ -16,10 +16,10 @@ $(document).ready(function(){
   });
 
 
-  $('.project .iCheck-helper').on("click", function() {
+  $('#filters .iCheck-helper').on("click", function() {
     if ($(this).parent().text() == "All Languages") {
       $(".check_boxes").iCheck('indeterminate');
     }
-    $('form.project').submit();
+    $('form#filters').submit();
   });
 });
