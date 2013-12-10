@@ -1,7 +1,7 @@
 %h2
   = Project.count
   = t("suggested_projects")
-  = link_to t("suggest_project"), new_project_path, :class => 'btn pull-right'
+  = link_to t("suggest_project"), new_project_path, :class => 'btn btn-default pull-right'
 
 %p=t("projects.help_out")
 
@@ -19,11 +19,11 @@
       = language_link language, language
 %hr
 - if @has_more_projects
-  #projects.row-fluid
-    %div.span12
+  #projects.row
+    .col-md-12
       = render @projects
-  %div#someprojects.row-fluid
-    %div.span12
+  #someprojects.row
+    .col-md-12
       = link_to_next_page @projects, t("more"), remote: true, class: 'btn btn-success more'
 
 #noprojects

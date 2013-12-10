@@ -46,7 +46,7 @@ describe ApplicationHelper do
 
   describe "#gittip_button" do
     it "returns a gittip button for the nickname" do
-      resulting_html = "<a href=\"https://www.gittip.com/andrew/\"><img alt=\"Support via Gittip\" src=\"https://rawgithub.com/twolfson/gittip-badge/0.1.0/dist/gittip.png\"/> </a>"
+      resulting_html = "<a href=\"https://www.gittip.com/andrew/\" class=\"btn btn-success btn-lg\"><span class=\"glyphicon glyphicon-heart\"></span>Support via Gittip</a>"
 
       helper.gittip_button("andrew").should eql(resulting_html)
     end

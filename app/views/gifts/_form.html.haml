@@ -1,4 +1,4 @@
-= simple_form_for gift_form.gift, :html => {:class => 'form-horizontal'}  do |form|
+= simple_form_for gift_form.gift, wrapper: :bootstrap3_horizontal, defaults: {right_column_html: {class: "col-lg-3 col-md-3"}, label_html: {class: "col-lg-2 col-md-2"} }, :html => {:class => 'form-horizontal', :role => "form"}  do |form|
 
   - if gift_form.giftable_dates.any?
     = form.input :date, :label => t("gifts.form.date"), :collection => gift_form.giftable_dates
@@ -8,6 +8,6 @@
     = form.check_box :tweet, {}, "true", "false"
     = t("gifts.form.tweet")
 
-  .control-group
-    .controls
-      = form.button :submit, t("gifts.form.gift_it")
+  .form-group
+    .col-md-offset-2.col-sm-10
+      = form.button :submit, t("gifts.form.gift_it"), {class: "btn-success"}
