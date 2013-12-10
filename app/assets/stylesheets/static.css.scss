@@ -5,6 +5,12 @@
 .thumbnails {
   padding: 0
 }
+
+.thumbnail a > img {
+  width: 100%;
+  height: auto;
+}
+
 .collaborator {
   text-align: center;
   .caption {
