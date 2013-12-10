@@ -2,7 +2,6 @@ $(document).ready(function(){
   $('#filters input').each(function(){
     var self = $(this);
     label_text = self.val();
-    selected = self.attr('selected');
 
     self.iCheck({
       checkboxClass: 'icheckbox_line',
@@ -10,16 +9,25 @@ $(document).ready(function(){
       insert: label_text
     });
 
-    if (selected == "selected") {
+    if(self.attr('selected')== "selected") {
       self.iCheck('check');
     }
   });
 
+  $('[id^="clear_"]').each(function() {
+    $(this).next().children('.controls').first().prepend($(this));
+  });
 
   $('#filters .iCheck-helper').on("click", function() {
-    if ($(this).parent().text() == "All Languages") {
-      $(".check_boxes").iCheck('indeterminate');
-    }
+    $('form#filters').submit();
+    $(this).addClass('checked');
+    $(this).parents('.controls').children().first().removeClass('checked');
+  });
+
+  $('[id^="clear_"]').on("click", function() {
+    $(this).parents(".check_boxes").iCheck('indeterminate');
+    $(this).addClass('checked')
     $('form#filters').submit();
   });
+
 });

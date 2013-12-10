@@ -72,10 +72,4 @@ module ApplicationHelper
     return url if type == 'text'
     link_to url, url
   end
-
-  def project_languages_for_form
-    temp = Project::LANGUAGES.dup
-    temp.unshift("All Languages")
-  end
-
 end
