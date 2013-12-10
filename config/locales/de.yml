@@ -94,6 +94,10 @@ de:
     coderwall:
       title:
       achieved_by:
+      success:
+      update_button:
+      error_no_user:
+      error_github_not_connected:
 
   developers_using_language: Entwickler, die %{language} verwenden
   developers_involved: Entwickler machen mit
@@ -214,3 +218,27 @@ de:
 
   suggestions:
     title:
+
+  api:
+    title:
+    description:
+    pagination:
+      title:
+      details:
+    callback:
+      title:
+      details:
+    projects:
+      title:
+      details:
+    pull_requests:
+      title:
+      details:
+    users:
+      title:
+      details:
+      specific:
+    organisations:
+      title:
+      details:
+      specific:
