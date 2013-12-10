@@ -73,4 +73,9 @@ module ApplicationHelper
     link_to url, url
   end
 
+  def project_languages_for_form
+    temp = Project::LANGUAGES.dup
+    temp.unshift("All Languages")
+  end
+
 end

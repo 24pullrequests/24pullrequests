@@ -75,7 +75,7 @@
 
 .icheckbox_line {
   background-color: rgba(188,59,59, 0.4);
-  padding: 5px 10px 5px 30px;
+  padding: 7px 10px 7px 10px;
 }
 
 .icheckbox_line.checked  {
@@ -83,7 +83,7 @@
   color: white;
 }
 
-.icheckbox_line.hover {
+.icheckbox_line.hover, .icheckbox_line.hover.checked {
   background-color: rgba(188,59,59, 0.7);
 }
 

@@ -15,6 +15,8 @@ class ProjectSearch
     projects
   end
 
+  private
+
   def projects
     @projects ||= Project.active.order(:name).page(page)
   end
@@ -23,7 +25,6 @@ class ProjectSearch
     @page
   end
 
-  private
   def by_languages
     @projects = projects.by_languages(languages) if languages.present?
   end
