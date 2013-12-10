@@ -11,6 +11,7 @@ $(document).ready(function(){
 
     if(self.attr('selected')== "selected") {
       self.iCheck('check');
+      $("#clear_languages").removeClass('checked');
     }
   });
 
