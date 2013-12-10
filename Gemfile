@@ -23,11 +23,6 @@ gem 'rack-google-analytics'
 gem 'ffi', '1.9.0'
 gem 'csv_shaper'
 
-group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
-  gem 'uglifier'
-end
 
 group :development do
   gem 'thin'
