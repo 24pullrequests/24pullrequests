@@ -95,7 +95,7 @@ nb:
       title: Coderwall badges
       achieved_by: "Badges oppnådd av"
       success: "Oppdaterte ditt coderwall-brukernavn"
-      update_button: "Oppdater"
+      update_button: "Oppdatér"
       error_no_user: "Ingen bruker funnet med dette navnet."
       error_github_not_connected: "Brukeren %{username} har ikke den samme GitHub-konto koblet til Coderwall som du logget inn på 24pullrequests med."
 
@@ -152,7 +152,7 @@ nb:
       search: Søk per GitHub repository
 
   preferences:
-      title: Velg dine epost-preferanser
+      title: Velg dine preferanser
       frequency_message:  Vi sender deg — i den hyppigheten du ønsker — hjelpsomme eposter fra nå til prosjektet er over med foreslåtte prosjekter som du kanskje vil vurdere å bidra til. Som en liten bonus vil vi gi våre forslag basert på dine språk etter på repoene på din GitHub-profil. Alternativt kan du også velge dine språk under.
       delete: "Ønsker du å slette din konto?"
       information: Du kan alltid endre dine epost-preferanser senere.
