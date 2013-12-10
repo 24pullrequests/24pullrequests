@@ -35,7 +35,7 @@ class Project < ActiveRecord::Base
   scope :not_owner, lambda {|user| where("github_url" != "github.com/#{user}/") }
   scope :by_language, ->(language) { where("lower(main_language) =?", language.downcase) }
   scope :by_languages, ->(languages) { where("lower(main_language) IN (?)", languages) }
-  scope :by_labels, ->(labels) { joins(:labels).where("labels.name  IN (?)", labels) }
+  scope :by_labels, ->(labels) { joins(:labels).where("labels.name  IN (?)", labels).select("distinct(projects.id), projects.*") }
   scope :active, -> { where(inactive: [ false, nil ]) }
 
   accepts_nested_attributes_for :labels,  reject_if: proc { |attributes| attributes['id'].blank? }
