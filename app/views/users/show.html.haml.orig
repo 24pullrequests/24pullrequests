@@ -1,15 +1,18 @@
-.row
-  .col-sm-10
+.row-fluid
+  .span10
     %h2
       #{@user.nickname}
 
-    =gittip_button @user.nickname
+    .row-flud
+      =gittip_button @user.nickname
 
-    .row.clearfix.social-buttons
-      .col-md-4
+    %br
+
+    .row-fluid.clearfix.social-buttons
+      .span4
         = github_button @user.nickname
       - if @user.twitter_nickname.present?
-        .col-md-6
+        .span6
           %a{:href => "https://twitter.com/#{@user.twitter_nickname}", :class => 'twitter-follow-button'}
             =t("follow_user", twitter: @user.twitter_nickname)
           :javascript
@@ -25,11 +28,11 @@
       %ul#organisationlist
         = render @user.organisations
 
-  .col-sm-2
+  .span2
     .avatar= image_tag(gravatar_url(@user.gravatar_id, 100), :width => 100, :alt => @user.nickname)
 
-.row
-  .col-md-12
+.row-fluid
+  .span12
 
     %h3 24 Pull Requests
     - if @user.gifts.year(current_year).any? or @user.pull_requests.year(current_year).any?
@@ -48,7 +51,6 @@
     - else
       %h4=t("user.grinchy_message", user: @user.nickname, year: current_year)
 
-.row
-  .col-md-12
-    %h3= t("user.coderwall.title")
-    #coderwall-content{:data => {:nickname => "#{@user.coderwall_username}"}}
+.row-fluid
+  %h3= t("user.coderwall.title")
+  #coderwall-content{:data => {:nickname => "#{@user.coderwall_username}"}}

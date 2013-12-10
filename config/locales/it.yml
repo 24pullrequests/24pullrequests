@@ -45,6 +45,7 @@ it:
       title: Partecipa
       description: "Ci sono un sacco di modi per contribuire ai progetti open source: migliorare la documentazione, sistemare problemi e bugs, migliorare la qualità del codice e dei test o aggiungendo nuove funzionalità."
       special_page: "Abbiamo preparato una %{contributing_path}, dove potrai trovare tutte le informazioni su come contribuire."
+      contributing_path:
       take_a_look: Se sei nuovo nel mondo dell'open source, inizia da qui.
     profile:
       title: Costruisci il tuo profilo
@@ -78,10 +79,12 @@ it:
   more: Ancora
   change: Cambia
   claim: Rivendica
+  exempli_gratia:
   edit: Modifica
   everything: Tutto
   about_us: Chi siamo
   cancel: Cancella
+  or:
   search: Cerca
 
   user:
@@ -89,10 +92,12 @@ it:
     pull_request_count: "%{user} ha totalizzato %{count} pull request durante l'anno %{year}"
     organisations: Membro di...
     coderwall:
+      title:
+      achieved_by:
       success: "Abbiamo aggiornato il tuo nome utente Coderwall!"
       update_button: "Aggiorna"
       error_no_user: "Nome utente non trovato."
-      error_github_not_conectet: "L'account Github legato a Coderwall dell'utente %{username} non è lo stesso con cui ti sei autenticato a 24pullrequests."
+      error_github_not_connected: "L'account Github legato a Coderwall dell'utente %{username} non è lo stesso con cui ti sei autenticato a 24pullrequests."
 
   developers_using_language: Sviluppatori che usano %{language}
   developers_involved: Sviluppatori già coinvolti
@@ -103,6 +108,13 @@ it:
     synchronize: Sincronizza pull request
     help_out: "Non ti viene in mente un progetto a cui contribuire? Ecco i progetti più popolari al momento:"
     no_pull_requests: Non hai inviato nessuna pull request, cosa stai aspettando?!
+
+    form:
+      project_name:
+      github_url:
+      summary:
+      main_language:
+      submit_project:
 
   language:
     projects_count: "%{count} Progetti %{language}"
@@ -129,8 +141,8 @@ it:
     new:
       title: Segnala un progetto
       info: Uno dei tanti modi per incoraggiare la partecipazione nella comunità open source è far sapere agli utenti a quali progetti conviene contribuire. Abbiamo selezionato i nostri preferiti ma siamo sempre aperti a suggerimenti. Condividi le tue idee qui sotto!
-      suggestion: Hai dei suggerimenti per questo progetto? Siamo tutto orecchie! Se c'è qualcosa che vuoi sistemare, sentiti libero di inviare un
-      issue: issue
+      suggestion: Hai dei suggerimenti per questo progetto? Siamo tutto orecchie! Se c'è qualcosa che vuoi sistemare, sentiti libero di inviare un %{issue_link}
+      issue_link_text: issue
     edit:
       title: Modifica suggerimenti
     admin:
@@ -147,6 +159,14 @@ it:
       remove: Rimuovi profilo
       save_and_continue: Salva e continua
       coderwall: Collega il tuo account Coderwall per mettere in mostra le badge che hai guadagnato sul tuo profilo.
+      coderwall_username:
+
+      form:
+        email:
+        email_frequency:
+        never:
+        daily:
+        weekly:
 
       hint:
         confirm_email: Conferma il tuo indirizzo email tramite il link che ti abbiamo inviato.
@@ -162,6 +182,7 @@ it:
     title: Cancella account
     are_you_sure: Sei sicuro di voler cancellare il tuo account? Il tuo profilo e le tue pull request verranno rimossi dal sito (i progetti segnalati non verranno cancellati).
     notification_info: Se vuoi smettere di ricevere notifiche via email, cambiare le impostazioni è facile %{email_preferences_link}.
+    email_preferences_link:
     confirm: Conferma cancellazione
     cancel: Ho cambiato idea, rivoglio il mio account!
 
@@ -169,8 +190,15 @@ it:
     title: Codici regalati
     description: Da qui puoi gestire le tue pull request e curare il tuo set di  "24 Pull Requests".
     view_your_gifts: Tutti i tuoi regali sono visibili sul tuo  %{calendar_link}.
+    calendar_link:
     none: Nessun regalo fatto.
     give: Regala qualcosa di importante ai progetti che ami
+
+    form:
+      date:
+      pull_request:
+      tweet:
+      gift_it:
 
   collaborators:
     title: Collaboratori principali
@@ -187,3 +215,30 @@ it:
       details: 24 Pull Requests è reso possibile grazie al generoso aiuto e alle donazioni dei nostri sponsor.
       thanks: "Grazie mille a..."
       get_in_touch: "Se vuoi diventare nostro sponsor o per qualsiasi altro inviaci una email:"
+
+  suggestions:
+    title:
+
+  api:
+    title:
+    description:
+    pagination:
+      title:
+      details:
+    callback:
+      title:
+      details:
+    projects:
+      title:
+      details:
+    pull_requests:
+      title:
+      details:
+    users:
+      title:
+      details:
+      specific:
+    organisations:
+      title:
+      details:
+      specific:

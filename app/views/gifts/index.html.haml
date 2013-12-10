@@ -2,7 +2,7 @@
 
 %p=t("gifts.description").html_safe
 
-%p=t("gifts.view_your_gifts", calendar_link: link_to('public calendar', current_user.nickname)).html_safe
+%p=t("gifts.view_your_gifts", calendar_link: link_to(t("gifts.calendar_link"), current_user.nickname)).html_safe
 
 %table.table.table-striped.table-condensed.table-hover#gifts
   .tbody

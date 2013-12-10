@@ -45,6 +45,7 @@ fr:
       title: Participez
       description: Il y a de nombreuses manières de s'impliquer dans un projet open source, améliorer la documentation, aider à corriger des bugs, améliorer la qualité du code et des tests, ou ajouter de nouvelles fonctionnalités.
       special_page: "Nous avons préparé un %{contributing_path}, où vous pouvez trouver des informations sur comment contribuer."
+      contributing_path:
       take_a_look: Si l'open source est nouveau pour vous, vous pouvez y jeter un oeil.
     profile:
       title: Créez votre profil
@@ -78,15 +79,25 @@ fr:
   more: Plus
   change: Changer
   claim: Réclamer
+  exempli_gratia:
   edit: Modifier
   everything: Tout
   about_us: A propos
   cancel: Annuler
+  or:
   search: Rechercher
 
   user:
     grinchy_message: "%{user} est un radin en %{year} et n'a ouvert aucune pull requests. Escroc!"
     pull_request_count: "%{user} a ouvert au total %{count} pull requests jusque là en %{year}"
+    organisations:
+    coderwall:
+      title:
+      achieved_by:
+      success:
+      update_button:
+      error_no_user:
+      error_github_not_connected:
 
   developers_using_language: Developpeurs utilisant %{language}
   developers_involved: Developpeurs déjà impliqués
@@ -97,6 +108,7 @@ fr:
     synchronize: Synchroniser Les Pull Requests
     help_out: Vous ne trouvez pas de projet que vous souhaiteriez aider? Nous avons créé une liste de projets populaires
     no_pull_requests: "Vous n'avez pas ouvert de pull requests, Qu'attendez vous?!"
+    gift_it:
 
   language:
     projects_count: "%{count} Projets %{language}"
@@ -123,8 +135,16 @@ fr:
     new:
       title: Suggérer un projet
       info: Une des manières d'encourager la participation dans la communauté open source est de faire savoir aux utilisateurs quels projets populaires pourraient bénéficier de contributions. Nous avons sélectionné nos favoris, mais nous somme toujours ouverts aux suggestions. Vous avez des idées? Partagez-les!
-      suggestion: Vous avez une suggestion pour ce projet? Nous sommes à l'écoute! Si vous voyez quelque chose que vous aimeriez voir corrigé, n'hésitez pas à ouvrir une
-      issue: issue
+      suggestion: Vous avez une suggestion pour ce projet? Nous sommes à l'écoute! Si vous voyez quelque chose que vous aimeriez voir corrigé, n'hésitez pas à ouvrir une %{issue_link}.
+      issue_link_text: issue
+
+      form:
+        project_name:
+        github_url:
+        summary:
+        main_language:
+        submit_project:
+
     edit:
       title: Modifier une suggestion
     admin:
@@ -140,6 +160,15 @@ fr:
       languages: Quels langages connaissez-vous?
       remove: Supprimer votre compte
       save_and_continue: Enregistrer et Continuer
+      coderwall:
+      coderwall_username:
+
+      form:
+        email:
+        email_frequency:
+        never:
+        daily:
+        weekly:
 
       hint:
         confirm_email: Merci de confirmer votre adresse email en utilisant le lien envoyé.
@@ -155,6 +184,7 @@ fr:
     title: Supprimer votre compte
     are_you_sure: Nous voulions simplement vérifier que vous souhaitez réellement supprimer votre compte, cela supprimera votre profil et toutes les pull requests du site, mais les projets suggérés resteront.
     notification_info: Si vous souhaitez simplement arrêter de recevoir des notifications par email vous pouvez changer vos %{email_preferences_link}.
+    email_preferences_link:
     confirm: Confirmer la suppression
     cancel: J'ai changé d'avis, reprenez moi!
 
@@ -162,8 +192,15 @@ fr:
     title: Code offert
     description: Vous pouvez gérer ici vos pull requests et sélectionner vos dons de "24 Pull Requests".
     view_your_gifts: Tous vos cadeaux apparaîtront sur votre %{calendar_link}.
+    calendar_link:
     none: Aucun cadeau pour le moment.
     give: Faites un cadeau à un projet que vous aimez
+
+    form:
+      date:
+      pull_requests:
+      tweet:
+      gift_it:
 
   collaborators:
     title: Core Contributeurs
@@ -180,3 +217,30 @@ fr:
       details: 24 Pull Requests est rendu possible grâce à l'aide et aux donations de sponsors.
       thanks: "Merci à..."
       get_in_touch: "Si vous souhaitez nous contacter à propos d'un sponsoring ou quoi que ce soit d'autre, envoyez-nous un email:"
+
+  suggestions:
+    title:
+
+  api:
+    title:
+    description:
+    pagination:
+      title:
+      details:
+    callback:
+      title:
+      details:
+    projects:
+      title:
+      details:
+    pull_requests:
+      title:
+      details:
+    users:
+      title:
+      details:
+      specific:
+    organisations:
+      title:
+      details:
+      specific:

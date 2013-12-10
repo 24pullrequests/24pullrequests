@@ -45,6 +45,7 @@ ru:
       title: Примите участие
       description: "Есть множество способов помочь проектам с открытым исходным кодом: совершенствование документации, помощь в исправлении существующих проблем и ошибок, улучшению качества кода и покрытия тестами или добавление новых возможностей."
       special_page: "Мы подготовили %{contributing_path}, где вы можете найти некоторую информацию об участии в проектах."
+      contributing_path:
       take_a_look: "Если вы новичок в open source, то это продлится недолго."
     profile:
       title: Создайте свой профиль
@@ -78,15 +79,25 @@ ru:
   more: Еще
   change: Изменить
   claim: Заявка
+  exempli_gratia:
   edit: Редактировать
   everything: Всё
   about_us: Про нас
   cancel: Отмена
+  or:
   search: Поиск
 
   user:
     grinchy_message: "%{user} в %{year} году не пошлет ни одного пулл-реквеста?! Не верим!"
     pull_request_count: "%{user} в %{year} году послал пулл-реквестов: %{count}"
+    organisations:
+    coderwall:
+      title:
+      achieved_by:
+      success:
+      update_button:
+      error_no_user:
+      error_github_not_connected:
 
   developers_using_language: "Разработчики использующие %{language}"
   developers_involved: "— нас уже много"
@@ -97,6 +108,7 @@ ru:
     synchronize: Синхронизировать
     help_out: "Не может найти проект, которому вы бы хотели помочь? Посмотрите список популярных проектов:"
     no_pull_requests: "Вы не послали еще ни одного пулл-реквеста, чего вы ждете?!"
+    gift_it:
 
   language:
     projects_count: "%{count} %{language} проектов"
@@ -123,8 +135,16 @@ ru:
     new:
       title: Рекомендовать проект
       info: "Одним из способов для поощряения участия в проектах с открытым исходным кодом является возможность рассказать пользователям про популярные проекты, которые нужнаются в помощи. Мы выбираем свои любимые проекты, но вы можете предложить и свои. Уже есть претенденты? Расскажите нам!"
-      suggestion: "Помогите разработчикам выбрать задание."
-      issue: "Список задач для проекта"
+      suggestion: "Помогите разработчикам выбрать задание. %{issue_link}."
+      issue_link_text: Список задач для проекта
+
+      form:
+        project_name:
+        github_url:
+        summary:
+        main_language:
+        submit_project:
+
     edit:
       title: Редактировать рекомендацию
     admin:
@@ -140,6 +160,15 @@ ru:
       languages: Какие языки вы предпочитаете?
       remove: Удалить учетную запись
       save_and_continue: Сохранить и продолжить
+      coderwall:
+      coderwall_username:
+
+      form:
+        email:
+        email_frequency:
+        never:
+        daily:
+        weekly:
 
       hint:
         confirm_email: Мы послали вам письмо для подтверждения вашего адреса.
@@ -155,6 +184,7 @@ ru:
     title: Удалить учетную запись
     are_you_sure: "Мы хотим быть уверены, что вы дйствительно хотите удалить вашу учетную запись. Мы удалим не только профиль но и всю информацию о ваших пулл-реквестах. Но ваши рекомендации очень важны для нас и их мы удалять не будем."
     notification_info: "Может вы просто хотите изменить настройки почтовый рассылки? Нет ничего проще: %{email_preferences_link}."
+    email_preferences_link:
     confirm: "Да, удаляйте меня полностью"
     cancel: Я передумал!
 
@@ -162,8 +192,15 @@ ru:
     title: Подаренный код
     description: Здесь вы можете управлять вашими пулл-реквестами
     view_your_gifts: "Все ваши подарки вы можете посмотреть в %{calendar_link}."
+    calendar_link:
     none: Пока ничего не подарено.
     give: "Подарите проекту полезный код."
+
+    form:
+      date:
+      pull_request:
+      tweet:
+      gift_it:
 
   collaborators:
     title: Основные авторы
@@ -180,3 +217,30 @@ ru:
       details: "Создание '24 Пулл-реквеста' стало возможным благодаря помощи наших замечательных спонсоров."
       thanks: "Большое спасибо..."
       get_in_touch: "Если у вас есть предложение по спонсорству, просто напишите нам:"
+
+  suggestions:
+    title:
+
+  api:
+    title:
+    description:
+    pagination:
+      title:
+      details:
+    callback:
+      title:
+      details:
+    projects:
+      title:
+      details:
+    pull_requests:
+      title:
+      details:
+    users:
+      title:
+      details:
+      specific:
+    organisations:
+      title:
+      details:
+      specific:
