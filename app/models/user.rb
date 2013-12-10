@@ -45,7 +45,7 @@ class User < ActiveRecord::Base
     return [] if collabs.nil?
     collaborators = collabs.map(&:login)
     result = where('nickname in (?)', collaborators)
-    collaborators.compact.map { |c| result.find { |u| u.nickname == c } }
+    collaborators.compact.map { |c| result.find { |u| u.nickname == c } }.compact
   end
 
   def coderwall_username
