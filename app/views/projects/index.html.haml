@@ -8,7 +8,7 @@
 %p=t("projects.suggest_new")
 %hr
 %h4 Filter:
-= simple_form_for :project, id: "#search", url: filter_projects_path, method: :get, remote: true  do |form|
+= simple_form_for :project, url: filter_projects_path, method: :get, remote: true, html: { id: 'filters' }  do |form|
   %strong Labels
   = form.input :labels, collection: Label.all.map(&:name), as: :check_boxes, label_method: lambda { |owner| "" }, label: false
   %strong Languages
