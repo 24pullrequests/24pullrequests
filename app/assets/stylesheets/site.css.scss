@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  margin-bottom: 127px;
+  height: 100%
 }
 
 @media (min-width: 767px) {
@@ -104,10 +104,6 @@ section {
   a {
     display: block;
   }
-
-  &.logo-dark {
-    background: asset-url('logo-dark.png') no-repeat bottom;
-  }
 }
 
 header {
@@ -193,6 +189,9 @@ nav {
   @include border-top-radius(5px);
   @include box-shadow(0 0 3px 0px #ccc);
   background-color: #fff;
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+  padding-bottom: 177px;
 }
 
 footer {
@@ -203,45 +202,39 @@ footer {
 
   .dark {
     color: rgba(255,255,255,.2);
-    padding: 10px 0;
-    background: #434343;
+    padding: 2.75em 0;
+    background: #434343 asset-url('logo-dark.png') no-repeat center center;
+  }
+  ul {
+    position: relative;
+    margin: 0;
 
-    ul {
-      margin-top: -45px;
-      position: relative;
-
-      @media (max-width: 767px) {
-        float: none;
-        text-align: center;
-        margin: 15px 0;
-      }
-
-      li {
-        border-left: 1px solid #333;
-        display: inline-block;
-        padding-left: 10px;
-        padding-right: 7px;
-
-        &:first-child {
-          border-left: none;
-          padding-left: 0;
-        }
-      }
+    @media (max-width: 767px) {
+      float: none;
+      text-align: center;
+      margin: 15px 0;
     }
 
-    a {
-      font-weight: 800;
-      font-size: 110%;
-      color: $header-background;
-      text-decoration: none;
+    li {
+      border-left: 1px solid #333;
+      display: inline-block;
+      padding-left: 10px;
+      padding-right: 7px;
 
-      &:hover {
-        border-bottom: 1px dashed $header-background;
+      &:first-child {
+        border-left: none;
+        padding-left: 0;
       }
     }
+  }
+  a {
+    font-weight: 800;
+    font-size: 110%;
+    color: #ccc;
+    text-decoration: none;
 
-    .dark-inner {
-      @extend .constrained;
+    &:hover {
+      border-bottom: 1px dashed $header-background;
     }
   }
 
@@ -319,10 +312,10 @@ footer {
       border-bottom: 1px dashed #e3e3e3;
       h4 {
         display: inline;
+        text-transform: uppercase;
         border-right: 1px solid #e3e3e3;
         padding-right: 10px;
         margin-right: 10px;
-        text-transform: uppercase;
       }
       a {
         font-size: 12px;
@@ -336,6 +329,9 @@ footer {
   background: #eee;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
+  margin-left: - $grid-gutter-width;
+  margin-right: - $grid-gutter-width;
+
   h3 {
     text-align: center;
   }
@@ -344,7 +340,7 @@ footer {
     margin: 20px 0;
     padding: 0;
   }
-  .user {
+  .user, .organisation {
     display: inline-block;
     border: 2px solid #fff;
     box-shadow: rgba(0, 0, 0, 0.398438) 0px 1px 1px;
@@ -375,14 +371,11 @@ hr {
 }
 
 h1, h2, h3, h4 {
-  text-transform: uppercase;
-  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
   .btn {
-    text-transform: none;
-    font-size: 15px;
-    font-weight: normal;
-    margin-bottom: 4px;
     margin-left: 10px;
+    font-family: $font-family-base;
   }
 }
 
@@ -434,4 +427,13 @@ h1, h2, h3, h4 {
 
 .glyphicon {
   margin-right: 0.5em
+}
+
+#team_box,
+.organisationList {
+  padding: 0
+}
+
+.social-buttons {
+  margin: 1em 0;
 }
