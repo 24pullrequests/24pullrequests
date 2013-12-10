@@ -10,11 +10,14 @@
       %tr
         %td
           %strong= "#{ date.strftime('%B') } #{ date.mday.ordinalize }"
-        %td
-          - if gift
+        - if gift
+          %td
             = link_to gift.pull_request_title, gift.pull_request_issue_url
-            = link_to t("clear"), gift_path(gift), :title => "Remove gift", :method => :delete, "data-confirm" => "Remove this gift?", :class => 'btn btn-small pull-right'
-            = link_to t("change"), edit_gift_path(gift), :class => 'btn btn-small pull-right'
-          - else
+          %td
+            = link_to t("clear"), gift_path(gift), :title => "Remove gift", :method => :delete, "data-confirm" => "Remove this gift?", :class => 'btn btn-default btn-small pull-right'
+            = link_to t("change"), edit_gift_path(gift), :class => 'btn btn-default btn-small pull-right'
+        - else
+          %td
             = t("gifts.none")
-            = link_to t("change"), new_gift_path(:date => date), :class => 'btn btn-small pull-right'
+          %td
+            = link_to t("change"), new_gift_path(:date => date), :class => 'btn btn-default btn-small pull-right'

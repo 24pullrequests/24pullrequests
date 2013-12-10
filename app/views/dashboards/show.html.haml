@@ -24,12 +24,13 @@
   = render :partial => 'pull_requests_if_any', :locals => { :pull_requests => pull_requests }
 
 %hr
-.row-fluid.clearfix
-  .span12
+
+.row.clearfix
+  .col-md-12
     %h3
       = t("suggested_projects")
-      = link_to t("suggest_project"), new_project_path, :class => 'btn pull-right'
-      = link_to t("view_all"), projects_path, :class => 'btn pull-right'
+      = link_to t("suggest_project"), new_project_path, :class => 'btn btn-default pull-right'
+      = link_to t("view_all"), projects_path, :class => 'btn btn-default pull-right'
     %p
       #{t("dashboard.help_out")}:
 

@@ -1,14 +1,14 @@
-.row-fluid
-  .span10
+.row
+  .col-md-10
     %h2 #{@organisation.login}
-    = link_to "#{@organisation.login} on github", "https://github.com/#{@organisation.login}", class: 'btn'
+    = link_to "#{@organisation.login} on github", "https://github.com/#{@organisation.login}", class: 'btn btn-default'
 
-  .span2
+  .col-md-2
     .avatar= image_tag(@organisation.avatar_url, :width => 100, :alt => @organisation.login)
 
 
-#users.row-fluid.clearfix
-  .span12
+#users.row.clearfix
+  .col-md-12
 
     %h3=t("organisations.members", count: @organisation.users.count)
 
