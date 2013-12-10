@@ -46,3 +46,16 @@ $ ->
       $('#projects').html(projects.find('.col-md-12'))
       projects = $('#projects').clone()
       $('#projects').css('height', 'auto')
+
+
+  languageAutocomplete = ->
+    return if !$("[data-provide=typeahead]").length
+
+    project_languages = $("[data-provide=typeahead]").data "source"
+
+    $("[data-provide=typeahead]").typeahead
+      name: $(this).attr "name"
+      local: project_languages
+
+
+  languageAutocomplete()
