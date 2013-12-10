@@ -25,7 +25,7 @@
       %ul#organisationlist
         = render @user.organisations
 
-  .col-md-2
+  .col-sm-2
     .avatar= image_tag(gravatar_url(@user.gravatar_id, 100), :width => 100, :alt => @user.nickname)
 
 .row

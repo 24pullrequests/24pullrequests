@@ -10,15 +10,15 @@
     }(document, 'script', 'facebook-jssdk'));
 
 .row.clearfix.social-buttons
-  .col-md-3
+  .col-sm-3
     %a{:href => "https://twitter.com/share", :class => 'twitter-share-button', :'data-url' => 'http://24pullrequests.com/', :'data-hashtags' => '24pr', :'data-via' => '24pullrequests', :'data-text' => "24 Pull Requests - Giving back little gifts of code for Christmas"} Tweet
     :javascript
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-  .col-md-3
+  .col-sm-3
     .fb-like{:'data-href' => 'http://24pullrequests.com/', :'data-send' => "false", :'data-layout' => "button_count", :'data-width' => '450', :'data-show-faces' => 'false'}
-  .col-md-3
+  .col-sm-3
     %iframe.hn{:frameborder => "no", :scrolling => "no", :height => "50px", :width => "350px", :src => 'http://hnlike.com/upvote.php?link=http%3A%2F%2F24pullrequests.com/?&title=24pullrequests%21'}
-  .col-md-3
+  .col-sm-3
     .g-plusone{:'data-size' => 'medium'}
     :javascript
       window.___gcfg = {lang: 'en-GB'};
@@ -29,9 +29,9 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
       })();
 .row.clearfix.social-buttons
-  .col-md-3
+  .col-sm-3
     %iframe(src="http://ghbtns.com/github-btn.html?user=andrew&repo=24pullrequests&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20")
-  .col-md-3
+  .col-sm-3
     %iframe(src="http://ghbtns.com/github-btn.html?user=andrew&repo=24pullrequests&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20")
-  .col-md-6
+  .col-sm-6
     %a{:href => "https://twitter.com/24pullrequests", :class => 'twitter-follow-button', :'data-show-screen-name' => "false"} Follow @24PullRequests

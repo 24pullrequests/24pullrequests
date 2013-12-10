@@ -4,7 +4,7 @@
 = simple_form_for current_user, :url => update_coderwall_path, wrapper: :bootstrap3_horizontal, defaults: {right_column_html: {class: "col-lg-3 col-md-3"}, label_html: {class: "col-lg-3 col-md-3"} }, :html => {:class => 'form-horizontal', :role => "form"}, :method => 'post'  do |form|
   = form.input :coderwall_username, :label => 'Coderwall username', :input_html => {:class => "pull-left"}
   .form-group
-    .col-sm-offset-3.col-sm-10
+    .col-md-offset-3.col-sm-10
       = form.button :submit, t('user.coderwall.update_button')
 
 %hr
@@ -42,5 +42,5 @@
           = skill_form.check_box :language, {:id => language, :checked => current_user.skills.map(&:language).include?(language)}, language
 
   .form-group
-    .col-sm-offset-3.col-sm-10
+    .col-md-offset-3.col-sm-10
       = form.button :submit, t("preferences.save_and_continue")
