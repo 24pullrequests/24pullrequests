@@ -11,6 +11,7 @@ if Rails.env.development?
   require 'factory_girl_rails'
   require 'faker'
   include FactoryGirl::Syntax::Methods
+  LABELS = [ "documentation", "design", "tests", "feature", "refactoring" ]
 
   GRAVATARS = [
     '67b26730dbb054da2aefd328708c5b0d',
@@ -50,8 +51,13 @@ if Rails.env.development?
     end
   end
 
+  labels = LABELS.map do |name|
+    Label.create name: name
+  end
+
   PROJECTS.times do
     project = create :project
+    project.labels << labels.sample(2)
   end
 
   Rails.configuration.collaborators.each do |collaborator|
