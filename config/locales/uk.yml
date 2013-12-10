@@ -160,6 +160,8 @@ uk:
       languages: Якими мовами програмування ви володієте?
       remove: Видалити акаунт
       save_and_continue: Зберегти та продовжити
+      coderwall:
+      coderwall_username:
 
       form:
         email:

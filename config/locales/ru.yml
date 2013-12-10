@@ -160,6 +160,8 @@ ru:
       languages: Какие языки вы предпочитаете?
       remove: Удалить учетную запись
       save_and_continue: Сохранить и продолжить
+      coderwall:
+      coderwall_username:
 
       form:
         email:

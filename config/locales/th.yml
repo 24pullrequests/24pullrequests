@@ -160,6 +160,8 @@ th:
       languages: คุณรู้ภาษาไหนบ้าง?
       remove: ลบบัญชี
       save_and_continue: บันทึก
+      coderwall:
+      coderwall_username:
 
       form:
         email:

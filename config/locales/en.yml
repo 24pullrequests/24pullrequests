@@ -161,6 +161,7 @@ en:
       remove: Remove Account
       save_and_continue: Save and Continue
       coderwall: Link your coderwall account to display the badges you have already earned on your profile page.
+      coderwall_username: "Coderwall username"
 
       form:
         email: Email

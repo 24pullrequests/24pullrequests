@@ -161,6 +161,8 @@ es:
       languages: "¿Qué lenguajes de programación conoces?"
       remove: "Eliminar tu cuenta"
       save_and_continue: "Guardar y continuar"
+      coderwall:
+      coderwall_username:
 
       form:
         email:

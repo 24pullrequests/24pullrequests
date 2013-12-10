@@ -160,6 +160,8 @@ fr:
       languages: Quels langages connaissez-vous?
       remove: Supprimer votre compte
       save_and_continue: Enregistrer et Continuer
+      coderwall:
+      coderwall_username:
 
       form:
         email:

@@ -158,6 +158,8 @@ fi:
       languages: Mitä kieliä tiedät?
       remove: Poista tili
       save_and_continue: Tallenna ja Jatka
+      coderwall:
+      coderwall_username:
 
       form:
         email:
