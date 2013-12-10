@@ -183,6 +183,10 @@ nav {
     color: #efefef;
     background-color: $nav-pill-active;
   }
+
+}
+.nav-tabs {
+  margin-bottom: $grid-gutter-width / 2;
 }
 
 #main {
@@ -243,7 +247,7 @@ footer {
     width: 100%;
     font-size: 12px;
     text-align: center;
-    background-color: #eee;
+    background-color: #fff;
   }
 }
 
@@ -430,10 +434,11 @@ h1, h2, h3, h4 {
 }
 
 #team_box,
-.organisationList {
+#organisationList {
   padding: 0
 }
 
 .social-buttons {
-  margin: 1em 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
