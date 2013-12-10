@@ -8,3 +8,15 @@ jQuery ->
   $("#presents a").click (e) ->
     e.preventDefault()
     $(this).tab "show"
+
+
+  languageAutocomplete = ->
+    return false if !$("[data-provide=typeahead]").length
+
+    projectLanguages = $("[data-provide=typeahead]").data "source"
+
+    $("[data-provide=typeahead]").typeahead
+      name: $(this).attr "name"
+      local: projectLanguages
+
+  languageAutocomplete()
