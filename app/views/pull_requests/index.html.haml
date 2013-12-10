@@ -1,8 +1,7 @@
-.row-fluid.clearfix
-  %h2
-    - if @language
-      =t("pull_requests.language.count", count: pull_request_count, language: @language)
-    - else
-      =t("pull_requests.count", count: pull_request_count)
-  = render @pull_requests
-  = paginate @pull_requests
+%h2
+  - if @language
+    =t("pull_requests.language.count", count: pull_request_count, language: @language)
+  - else
+    =t("pull_requests.count", count: pull_request_count)
+= render @pull_requests
+= paginate @pull_requests

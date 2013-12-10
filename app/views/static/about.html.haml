@@ -20,11 +20,12 @@
 
   =t("about.sponsors.thanks")
 
-  %section
-    =link_to 'http://dnsimple.com', :class => 'ntd' do
-      = image_tag 'sponsors/dnsimple.png', :class => 'img-polaroid'
-    = link_to 'http://postgres.heroku.com/', :class => 'ntd' do
-      = image_tag 'sponsors/heroku-pg.png', :class => 'img-polaroid'
+  %section.clearfix
+    =link_to 'http://dnsimple.com', :class => 'col-md-3' do
+      = image_tag 'sponsors/dnsimple.png', :class => 'thumbnail'
+    = link_to 'http://postgres.heroku.com/', :class => 'col-md-3' do
+      = image_tag 'sponsors/heroku-pg.png', :class => 'thumbnail'
+
   %p
     =t("about.sponsors.get_in_touch")
     = mail_to 'info@24pullrequests.com'

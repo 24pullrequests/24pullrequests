@@ -1,5 +1,5 @@
 = cache project do
-  .project{:class => parameterize_language(project.main_language), :data => {:id => project.id}}
+  .project.col-md-6{:class => parameterize_language(project.main_language), :data => {:id => project.id}}
     .title.clearfix
       %h4
         = project.name

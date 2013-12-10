@@ -1,30 +1,30 @@
 %h2 #{@language}
 
 - if @users.any?
-  #users.row-fluid.clearfix
-    .span12
+  #users.row.clearfix
+    .col-md-12
       %h3
         =t("language.developers.count", count: user_count, language: @language)
-        = link_to t("view_all"), users_language_path(@language.downcase), :class => 'btn'
+        = link_to t("view_all"), users_language_path(@language.downcase), :class => 'btn btn-default'
 
         %ul.clearfix
           = render @users
 
 - if @pull_requests.any?
-  #pull_requests.row-fluid.clearfix
-    .span12
+  #pull_requests.row.clearfix
+    .col-md-12
       %h3
         =t("language.pull_requests.latest.count", count: pull_request_count_for_language, language: @language)
-        = link_to t("view_all"), pull_requests_language_path(@language.downcase), :class => 'btn pull-right'
+        = link_to t("view_all"), pull_requests_language_path(@language.downcase), :class => 'btn btn-default pull-right'
 
       = render @pull_requests
 
 - if @projects.any?
-  #projects.row-fluid.clearfix
-    .span12
+  #projects.row.clearfix
+    .col-md-12
       %h3
         = t("language.projects_count", count: project_count_for_language, language: @language)
-        = link_to t("language.projects.suggest", language: @language), new_project_path(language: @language.downcase), :class => 'btn pull-right'
-        = link_to t("view_all"), projects_language_path(@language.downcase), :class => 'btn pull-right'
+        = link_to t("language.projects.suggest", language: @language), new_project_path(language: @language.downcase), :class => 'btn btn-default pull-right'
+        = link_to t("view_all"), projects_language_path(@language.downcase), :class => 'btn btn-default pull-right'
 
     = render @projects

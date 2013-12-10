@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require typeahead.min
 //= require coderwall
 //= require jquery.timeago
 //= require_tree .

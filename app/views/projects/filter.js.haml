@@ -3,9 +3,9 @@
     (function($projects) {
       var $new = $("#{escape_javascript(render(@projects))}");
 
-      $projects.find('.span12')['#{params[:page].blank? ? "html" : "append"}']($new)
+      $projects.find('.col-md-12')['#{params[:page].blank? ? "html" : "append"}']($new)
 
-      $('#someprojects').find('.span12')
+      $('#someprojects').find('.col-md-12')
         .html(
           "#{escape_javascript(link_to_next_page @projects,
                                                  t('more'),
@@ -18,6 +18,6 @@
     $('#someprojects').show()
 - else
   :plain
-    $('#projects').find('.span12').empty()
+    $('#projects').find('.col-md-12').empty()
     $('#noprojects').show()
     $('#someprojects').hide()
