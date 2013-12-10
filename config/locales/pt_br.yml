@@ -160,6 +160,8 @@ pt_br:
       languages: "Quais linguagens você conhece?"
       remove: "Remover conta"
       save_and_continue: "Salvar e continuar"
+      coderwall:
+      coderwall_username:
 
       form:
         email:

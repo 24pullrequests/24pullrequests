@@ -159,6 +159,7 @@ it:
       remove: Rimuovi profilo
       save_and_continue: Salva e continua
       coderwall: Collega il tuo account Coderwall per mettere in mostra le badge che hai guadagnato sul tuo profilo.
+      coderwall_username:
 
       form:
         email:

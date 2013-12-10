@@ -157,6 +157,8 @@ el:
       languages: Ποιες γλωσσεις ξερεις;
       remove: Remove Account
       save_and_continue: Αποθήκευση επιλογων
+      coderwall:
+      coderwall_username:
 
       form:
         email:
