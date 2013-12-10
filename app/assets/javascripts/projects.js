@@ -16,13 +16,13 @@ $(document).ready(function(){
   });
 
   $('[id^="clear_"]').each(function() {
-    $(this).next().children('.controls').first().prepend($(this));
+    $(this).next().prepend($(this));
   });
 
   $('#filters .iCheck-helper').on("click", function() {
     $('form#filters').submit();
     $(this).addClass('checked');
-    $(this).parents('.controls').children().first().removeClass('checked');
+    $(this).parents('.form-group').children().first().removeClass('checked');
   });
 
   $('[id^="clear_"]').on("click", function() {
