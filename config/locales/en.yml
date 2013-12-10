@@ -96,8 +96,8 @@ en:
       achieved_by: "Badges achieved by"
       success: "Successfully updated your coderwall username!"
       update_button: "Update"
-      error_no_user: "No user found, with this name."
-      error_github_not_conectet: "The user %{username} has not the same github account connecte with coderwall as you connected to 24pullrequests."
+      error_no_user: "No user found with this name."
+      error_github_not_connected: "The user %{username} has not the same GitHub account connected with Coderwall as the one you connected to 24 Pull Requests with."
 
   developers_using_language: Developers using %{language}
   developers_involved: Developers already involved
