@@ -97,7 +97,7 @@ nb:
       success: "Oppdaterte ditt coderwall-brukernavn"
       update_button: "Oppdater"
       error_no_user: "Ingen bruker funnet med dette navnet."
-      error_github_not_connected: "Brukeren %{username} er ikke den samme GitHub-konto koblet til Coderwall som du logget inn på 24pullrequests med."
+      error_github_not_connected: "Brukeren %{username} har ikke den samme GitHub-konto koblet til Coderwall som du logget inn på 24pullrequests med."
 
   developers_using_language: Utviklere som bruker %{language}
   developers_involved: Utviklere allerede involvert
