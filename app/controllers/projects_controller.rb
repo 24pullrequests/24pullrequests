@@ -7,9 +7,9 @@ class ProjectsController < ApplicationController
   respond_to :js, only: [:index, :filter]
 
   def index
-    @projects = Project.active.order(:name).page params[:page]
-    @has_more_projects = (params[:page].to_i * 20) < Project.active.count
     @current_user_languages = logged_in? ? current_user.languages : []
+    @projects = ProjectSearch.new(page: params[:page], languages: @current_user_languages).find
+    @has_more_projects = (params[:page].to_i * 20) < Project.active.count
     respond_with @projects
   end
 
@@ -59,8 +59,7 @@ class ProjectsController < ApplicationController
   end
 
   def filter
-    @projects = Project.active.order(:name).page params[:page]
-    @projects = @projects.by_languages(languages) if languages
+    @projects = ProjectSearch.new(page: params[:page], labels: labels, languages: languages).find
     respond_with @projects
   end
 
@@ -79,7 +78,11 @@ class ProjectsController < ApplicationController
   end
 
   def languages
-    params[:languages].split(',')
+    params[:project][:languages] rescue []
+  end
+
+  def labels
+    params[:project][:labels] rescue []
   end
 
   def github_url

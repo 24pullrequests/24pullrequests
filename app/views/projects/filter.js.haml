@@ -10,7 +10,7 @@
           "#{escape_javascript(link_to_next_page @projects,
                                                  t('more'),
                                                  remote: true,
-                                                 params: {languages: params[:languages]},
+                                                 params: {languages: params[:languages], labels: params[:labels]},
                                                  class: 'btn btn-success more')}"
         );
     })($("#projects"));
