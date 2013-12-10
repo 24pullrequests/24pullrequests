@@ -1,6 +1,16 @@
 // Place all the styles related to the static controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.thumbnails {
+  padding: 0
+}
+
+.thumbnail a > img {
+  width: 100%;
+  height: auto;
+}
+
 .collaborator {
   text-align: center;
   .caption {
