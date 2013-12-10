@@ -93,6 +93,10 @@ el:
     coderwall:
       title:
       achieved_by:
+      success:
+      update_button:
+      error_no_user:
+      error_github_not_connected:
 
   developers_using_language: Προγραμματιστες χρησιμοποιουν %{language}
   developers_involved: Προγραμματιστες συμμετεχουν ηδη
@@ -211,3 +215,27 @@ el:
 
   suggestions:
     title: Οι εισηγησεις μου
+
+  api:
+    title:
+    description:
+    pagination:
+      title:
+      details:
+    callback:
+      title:
+      details:
+    projects:
+      title:
+      details:
+    pull_requests:
+      title:
+      details:
+    users:
+      title:
+      details:
+      specific:
+    organisations:
+      title:
+      details:
+      specific:
