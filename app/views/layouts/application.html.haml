@@ -113,6 +113,6 @@
       = t("open_source_yey")
       %strong= Time.now.year
 
-    :javascript
-      window.I18n = #{current_translations.to_json.html_safe}
+    / :javascript
+    /   window.I18n = #{current_translations.to_json.html_safe}
     = javascript_include_tag "application"
