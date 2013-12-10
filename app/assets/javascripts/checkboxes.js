@@ -1,18 +1,25 @@
 $(document).ready(function(){
   $('input').each(function(){
-    var self = $(this),
+    var self = $(this);
     label_text = self.val();
+    selected = self.attr('selected');
 
     self.iCheck({
       checkboxClass: 'icheckbox_line',
       radioClass: 'iradio_line',
-      insert: '<div class="icheck_line-icon"></div>' + label_text
+      insert: label_text
     });
+
+    if (selected == "selected") {
+      self.iCheck('check');
+    }
   });
 
 
   $('.project .iCheck-helper').on("click", function() {
-    console.log("asdasd")
+    if ($(this).parent().text() == "All Languages") {
+      $(".check_boxes").iCheck('indeterminate');
+    }
     $('form.project').submit();
   });
 });
