@@ -34,16 +34,6 @@ describe 'Projects' do
 
   describe 'filtering the project list', :js do
 
-    context 'as anonymous user' do
-      before { visit projects_path }
-
-      it 'should not show the filter for user languages' do
-        within '#languages' do
-          page.should_not have_content 'Suggested for me'
-        end
-      end
-    end
-
     context 'as logged-in user' do
       before do
         create :project, name: 'Ruby project', main_language: 'Ruby'
@@ -53,39 +43,23 @@ describe 'Projects' do
         visit projects_path
       end
 
-      it 'should show a filter for user languages' do
-        within '#languages' do
-          page.should have_content 'Suggested for you'
-        end
-      end
-
-      it 'should show both projects by default' do
+      it 'should show projects with the users languages by default' do
         within '#projects' do
-          page.should have_selector('h4', text: /Java project/i)
           page.should have_selector('h4', text: /Ruby project/i)
         end
       end
 
-      it 'should filter projects in languages other than the selected' do
-        first(:link, "Java").click
+      it 'should display projects for any selected languages' do
+        all('.icheckbox_line', text: "Java").first.click
 
         within '#projects' do
-          page.should have_no_css('.ruby')
+          page.should have_css('.ruby')
           page.should have_css('.java')
         end
       end
 
-      it 'should show only the Ruby project when clicking "Suggested for you"' do
-        click_link 'Suggested for you'
-        within '#projects' do
-          page.should have_css('.ruby')
-          page.should have_no_css('.java')
-        end
-      end
-
-      it 'should reset an active filter when clicking "Everything"' do
-        first(:link, "Ruby").click
-        click_link 'Everything'
+      it 'should reset active filter when clicking "All Languages"' do
+        all('.icheckbox_line', text: "All Languages").first.click
         within '#projects' do
           page.should have_css('.ruby')
           page.should have_css('.java')

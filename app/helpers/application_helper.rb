@@ -77,5 +77,4 @@ module ApplicationHelper
     return url if type == 'text'
     link_to url, url
   end
-
 end
