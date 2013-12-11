@@ -74,7 +74,6 @@ es:
   suggest_project: "Sugerir un proyecto"
   no_suggestions: "No se ha sugerido ningún proyecto."
   preferred_languages: "Lenguajes de programación favoritos"
-  organisations: Miembro de ...
   view_all: "Ver todo"
   more: "Más"
   change: "Cambiar"
@@ -91,7 +90,7 @@ es:
   user:
     grinchy_message: "%{user} es un gruñón para el año de %{year} porque no ha regalado ningún pull request. ¡Bah, paparruchas!"
     pull_request_count: "%{user} ha realizado un total de %{count} pull requests para el año %{year}"
-    organisations:
+    organisations: Miembro de ...
     coderwall:
       title:
       achieved_by:
@@ -221,6 +220,11 @@ es:
 
   suggestions:
     title:
+
+  organisations:
+    members:
+      one:
+      other:
 
   api:
     title:

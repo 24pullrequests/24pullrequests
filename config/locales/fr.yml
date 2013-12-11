@@ -74,7 +74,6 @@ fr:
   suggest_project: Suggérer un projet
   no_suggestions: Vous n'avez pas encore suggéré de projet.
   preferred_languages: Langages préférés
-  organisations: Membre de...
   view_all: Voir tout
   more: Plus
   change: Changer
@@ -90,7 +89,7 @@ fr:
   user:
     grinchy_message: "%{user} est un radin en %{year} et n'a ouvert aucune pull requests. Escroc!"
     pull_request_count: "%{user} a ouvert au total %{count} pull requests jusque là en %{year}"
-    organisations:
+    organisations: Membre de...
     coderwall:
       title:
       achieved_by:
@@ -217,6 +216,11 @@ fr:
       details: 24 Pull Requests est rendu possible grâce à l'aide et aux donations de sponsors.
       thanks: "Merci à..."
       get_in_touch: "Si vous souhaitez nous contacter à propos d'un sponsoring ou quoi que ce soit d'autre, envoyez-nous un email:"
+
+  organisations:
+    members:
+      one:
+      other:
 
   suggestions:
     title:

@@ -74,7 +74,6 @@ it:
   suggest_project: Consiglia un progetto
   no_suggestions: Non hai consigliato nessun progetto.
   preferred_languages: Lingue preferite
-  organisations: Membro di...
   view_all: Mostra tutto
   more: Ancora
   change: Cambia
@@ -215,6 +214,11 @@ it:
       details: 24 Pull Requests è reso possibile grazie al generoso aiuto e alle donazioni dei nostri sponsor.
       thanks: "Grazie mille a..."
       get_in_touch: "Se vuoi diventare nostro sponsor o per qualsiasi altro inviaci una email:"
+
+  organisations:
+    members:
+      one:
+      other:
 
   suggestions:
     title:
