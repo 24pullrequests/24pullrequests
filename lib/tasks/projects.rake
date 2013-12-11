@@ -21,7 +21,7 @@ task :check_for_inactive_projects => :environment do
 end
 
 
-task :map_labels_for_github_issues => :environment do
+task :map_labels_from_github_issues => :environment do
   ACTIVE_LABELS = Label.all.map(&:name)
 
   Project.active.all.each do |project|
