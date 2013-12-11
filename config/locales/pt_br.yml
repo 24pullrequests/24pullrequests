@@ -218,6 +218,11 @@ pt_br:
       thanks: "Muitos agracecimentos para..."
       get_in_touch: "Se você gostaria de entrar em contato para saber mais sobre patrocínio ou qualquer outro assunto, envie-nos um email:"
 
+  organisations:
+    members:
+      one:
+      other:
+
   suggestions:
     title:
 
