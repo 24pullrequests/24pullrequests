@@ -28,7 +28,8 @@
       %label.control-label=t("preferences.twitter")
       .controls
         = link_to "@#{current_user.twitter_nickname}", "https://twitter.com/#{current_user.twitter_nickname}", target: '_blank'
-        = link_to %{<i class="icon-twitter"></i> #{t("preferences.remove")}}.html_safe, twitter_remove_path, method: :delete, class: 'btn btn-danger'
+        = link_to t("preferences.remove"), twitter_remove_path, method: :delete, class: 'btn btn-danger'
+
 
   %hr
 
