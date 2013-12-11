@@ -45,7 +45,7 @@ it:
       title: Partecipa
       description: "Ci sono un sacco di modi per contribuire ai progetti open source: migliorare la documentazione, sistemare problemi e bugs, migliorare la qualità del codice e dei test o aggiungendo nuove funzionalità."
       special_page: "Abbiamo preparato una %{contributing_path}, dove potrai trovare tutte le informazioni su come contribuire."
-      contributing_path:
+      contributing_path: pagina speciale
       take_a_look: Se sei nuovo nel mondo dell'open source, inizia da qui.
     profile:
       title: Costruisci il tuo profilo
@@ -74,17 +74,17 @@ it:
   suggest_project: Consiglia un progetto
   no_suggestions: Non hai consigliato nessun progetto.
   preferred_languages: Lingue preferite
-  organisations: Membro di...
   view_all: Mostra tutto
   more: Ancora
   change: Cambia
+  clear: Pulisci
   claim: Rivendica
-  exempli_gratia:
+  exempli_gratia: "p.e."
   edit: Modifica
   everything: Tutto
   about_us: Chi siamo
   cancel: Cancella
-  or:
+  or: oppure
   search: Cerca
 
   user:
@@ -92,8 +92,8 @@ it:
     pull_request_count: "%{user} ha totalizzato %{count} pull request durante l'anno %{year}"
     organisations: Membro di...
     coderwall:
-      title:
-      achieved_by:
+      title: Badge Coderwall
+      achieved_by: "Badge ottenuti da"
       success: "Abbiamo aggiornato il tuo nome utente Coderwall!"
       update_button: "Aggiorna"
       error_no_user: "Nome utente non trovato."
@@ -108,13 +108,7 @@ it:
     synchronize: Sincronizza pull request
     help_out: "Non ti viene in mente un progetto a cui contribuire? Ecco i progetti più popolari al momento:"
     no_pull_requests: Non hai inviato nessuna pull request, cosa stai aspettando?!
-
-    form:
-      project_name:
-      github_url:
-      summary:
-      main_language:
-      submit_project:
+    gift_it: Regalalo!
 
   language:
     projects_count: "%{count} Progetti %{language}"
@@ -142,7 +136,15 @@ it:
       title: Segnala un progetto
       info: Uno dei tanti modi per incoraggiare la partecipazione nella comunità open source è far sapere agli utenti a quali progetti conviene contribuire. Abbiamo selezionato i nostri preferiti ma siamo sempre aperti a suggerimenti. Condividi le tue idee qui sotto!
       suggestion: Hai dei suggerimenti per questo progetto? Siamo tutto orecchie! Se c'è qualcosa che vuoi sistemare, sentiti libero di inviare un %{issue_link}
-      issue_link_text: issue
+      issue_link_text: suggerisci una issue
+
+      form:
+        project_name: Nome Progetto
+        github_url: URL GitHub
+        summary: Riassunto
+        main_language: Linguaggio principale
+        submit_project: Invia progetto
+
     edit:
       title: Modifica suggerimenti
     admin:
@@ -159,14 +161,14 @@ it:
       remove: Rimuovi profilo
       save_and_continue: Salva e continua
       coderwall: Collega il tuo account Coderwall per mettere in mostra le badge che hai guadagnato sul tuo profilo.
-      coderwall_username:
+      coderwall_username: "Nome utente Coderwall" 
 
       form:
-        email:
-        email_frequency:
-        never:
-        daily:
-        weekly:
+        email: Email
+        email_frequency: Frequenza di invio email
+        never: Mai
+        daily: Giornalmente
+        weekly: Settimanalmente
 
       hint:
         confirm_email: Conferma il tuo indirizzo email tramite il link che ti abbiamo inviato.
@@ -182,7 +184,7 @@ it:
     title: Cancella account
     are_you_sure: Sei sicuro di voler cancellare il tuo account? Il tuo profilo e le tue pull request verranno rimossi dal sito (i progetti segnalati non verranno cancellati).
     notification_info: Se vuoi smettere di ricevere notifiche via email, cambiare le impostazioni è facile %{email_preferences_link}.
-    email_preferences_link:
+    email_preferences_link: preferenze email
     confirm: Conferma cancellazione
     cancel: Ho cambiato idea, rivoglio il mio account!
 
@@ -190,15 +192,15 @@ it:
     title: Codici regalati
     description: Da qui puoi gestire le tue pull request e curare il tuo set di  "24 Pull Requests".
     view_your_gifts: Tutti i tuoi regali sono visibili sul tuo  %{calendar_link}.
-    calendar_link:
+    calendar_link: calendario pubblico
     none: Nessun regalo fatto.
     give: Regala qualcosa di importante ai progetti che ami
 
     form:
-      date:
-      pull_request:
-      tweet:
-      gift_it:
+      date: Data
+      pull_requests: Pull Request
+      tweet: Twitta a proposito del tuo regalo!
+      gift_it: "Regalalo!"
 
   collaborators:
     title: Collaboratori principali
@@ -216,29 +218,35 @@ it:
       thanks: "Grazie mille a..."
       get_in_touch: "Se vuoi diventare nostro sponsor o per qualsiasi altro inviaci una email:"
 
+  organisations:
+    title: "%{count} organizationi coinvolte"
+    pull_requests: "%{count} pull request inviate dai membri"
+    members: "%{count} Membri"
+    languages: Linguaggi
+
   suggestions:
-    title:
+    title: I miei suggerimenti
 
   api:
-    title:
-    description:
+    title: API JSON
+    description: Potresti non esserne a conoscenza, ma 24 Pull Requests ha le proprie API JSON. I dettagli per ogni endpoint sono descritti sotto.
     pagination:
-      title:
-      details:
+      title: Paginazione
+      details: Le richieste che restituiscono risultati multipli saranno paginate in 99 risultati per impostazione predefinita. Puoi richiedere altre pagine specifiche utilizzando il parametro ?page.
     callback:
-      title:
-      details:
+      title: Callback JSON-P
+      details: Puoi inviare un paramentro ?callback a qualsiasi chiamata GET per ottenere i risultati inclusi in una funzione JSON. Questo è utilizzato in genere quando i browser vogliono includere dei contenuti nelle pagine web evitando problematiche legate a cross domain. La risposta presenta gli stessi dati della API regolare.
     projects:
-      title:
-      details:
+      title: Progetti
+      details: Tutti i progetti suggeriti presenti nel sito, ordinati alfabeticamente.
     pull_requests:
-      title:
-      details:
+      title: Pull Request
+      details: Carica tutte le pull request degli utenti del sito inviate in dicembre, elencando per prime quelle più nuove, includendo anche l'utente che ha inviato la pull request
     users:
-      title:
-      details:
-      specific:
+      title: Utenti
+      details: Carica tutti gli utenti che si sono iscritti al sito, ordinati per la quantità di pull request che hanno inviato in dicembre, includendo le loro organizzazioni e le pull request
+      specific: Carica le informazioni per un utente specifico.
     organisations:
-      title:
-      details:
-      specific:
+      title: Organizzazioni
+      details: Carica tutte le organizzazioni che si sono iscritte al sito, comprendendo anche gli utenti che appartengono a ciascuna organizzazione.
+      specific: Carica le informazioni per una organizzazione specifica.
