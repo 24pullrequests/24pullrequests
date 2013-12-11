@@ -2,10 +2,10 @@
   (function($projects) {
     var $new = $("#{escape_javascript(render(@projects))}");
 
-    $projects.find('.span12')
+    $projects.find('.col-md-12')
           .append($new)
 
-    $('#someprojects').find('.span12')
+    $('#someprojects').find('.col-md-12')
           .html(
             "#{escape_javascript(link_to_next_page @projects,
                                                    t('more'),
@@ -13,5 +13,5 @@
                                                    class: 'btn btn-success more')}"
           );
   })($("#projects"));
-  $('#noprojects').hide()
-  $('#someprojects').show()
+  $('#noprojects').hide();
+  $('#someprojects').show();
