@@ -221,7 +221,9 @@ nb:
   organisations:
     title: "%{count} organisasjoner involvert"
     pull_requests: "%{count} pull requests sendt inn av medlemmer"
-    members: "%{count} medlemmer"
+    members:
+      one: "1 medlem"
+      other: "%{count} medlemmer"
     languages: Språk
 
   suggestions:
