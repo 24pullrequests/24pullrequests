@@ -74,7 +74,6 @@ ru:
   suggest_project: Рекомендовать проект
   no_suggestions: "Пока рекомендаций нет, и это печально."
   preferred_languages: Предпочитаемые языки
-  organisations: Огранизации
   view_all: Посмотреть все
   more: Еще
   change: Изменить
@@ -90,7 +89,7 @@ ru:
   user:
     grinchy_message: "%{user} в %{year} году не пошлет ни одного пулл-реквеста?! Не верим!"
     pull_request_count: "%{user} в %{year} году послал пулл-реквестов: %{count}"
-    organisations:
+    organisations: Огранизации
     coderwall:
       title:
       achieved_by:
@@ -217,6 +216,11 @@ ru:
       details: "Создание '24 Пулл-реквеста' стало возможным благодаря помощи наших замечательных спонсоров."
       thanks: "Большое спасибо..."
       get_in_touch: "Если у вас есть предложение по спонсорству, просто напишите нам:"
+
+  organisations:
+    members:
+      one:
+      other:
 
   suggestions:
     title:

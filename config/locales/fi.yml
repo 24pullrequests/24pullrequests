@@ -216,6 +216,11 @@ fi:
       thanks: "Suurkiitokset..."
       get_in_touch: "Jos haluat olla yhteydessä sponsoroinnista tai mistä tahansa, lähetä meille sähköpostia:"
 
+  organisations:
+    members:
+      one:
+      other:
+
   suggestions:
     title:
 

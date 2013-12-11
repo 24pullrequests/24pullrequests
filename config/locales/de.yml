@@ -74,7 +74,6 @@ de:
   suggest_project: Ein Projekt vorschlagen
   no_suggestions: Du hast bisher keine vorgeschlagenen Projekte
   preferred_languages: Bevorzugte Sprachen
-  organisations: Mitglied von...
   view_all: Alle ansehen
   more: Mehr
   change: Ändern
@@ -90,7 +89,7 @@ de:
   user:
     grinchy_message: "%{user} ist %{year} ein Grinch &mdash; keine Pull Requests. Bah humbug!"
     pull_request_count: "%{user} hat %{year} bisher %{count} Pull Requests gesendet"
-    organisations:
+    organisations: Mitglied von...
     coderwall:
       title:
       achieved_by:
@@ -217,6 +216,12 @@ de:
       details: 24 Pull Requests wurde durch die Hilfe und die Spenden einiger grossartiger Sponsoren ermöglicht.
       thanks: "Vielen Dank an..."
       get_in_touch: "Interesse, selbst ein Sponsor zu werden? Irgendetwas anderes auf dem Herzen? Schreib uns eine Email:"
+
+  organisations:
+    members:
+      one:
+      other:
+
 
   suggestions:
     title:
