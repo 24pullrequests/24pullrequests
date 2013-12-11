@@ -31,7 +31,7 @@ class ProjectSearch
   end
 
   def by_labels
-    @projects = projects.by_labels(labels) if labels.present?
+    @projects = projects.by_labels(labels).select('projects.*, RANDOM()') if labels.present?
   end
 
   def labels
