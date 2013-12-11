@@ -221,7 +221,9 @@ it:
   organisations:
     title: "%{count} organizationi coinvolte"
     pull_requests: "%{count} pull request inviate dai membri"
-    members: "%{count} Membri"
+    members:
+      one: "1 Membro"
+      other: "%{count} Membri"
     languages: Linguaggi
 
   suggestions:

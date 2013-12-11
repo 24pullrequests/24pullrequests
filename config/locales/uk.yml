@@ -218,6 +218,11 @@ uk:
       thanks: "Велике спасибі..."
       get_in_touch: "Якщо ви хочете стати одним з спонсорів або що-небудь ще, напишіть нам листа:"
 
+  organisations:
+    members:
+      one:
+      other:
+
   suggestions:
     title:
 
