@@ -31,6 +31,11 @@ GEM
       sass (>= 3.2)
     arel (4.0.1)
     atomic (1.1.14)
+    better_errors (1.0.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     brakeman (2.3.0)
       erubis (~> 2.6)
       fastercsv (~> 1.5)
@@ -83,6 +88,7 @@ GEM
     daemons (1.1.9)
     dalli (2.6.4)
     database_cleaner (1.2.0)
+    debug_inspector (0.0.2)
     descendants_tracker (0.0.3)
     diff-lcs (1.2.5)
     docile (1.1.1)
@@ -353,6 +359,8 @@ PLATFORMS
 
 DEPENDENCIES
   anjlab-bootstrap-rails (~> 3.0.3.0)
+  better_errors
+  binding_of_caller
   brakeman
   bugsnag (= 1.6.3)
   chai-jquery-rails
