@@ -1,0 +1,274 @@
+en:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              required_for_confirmation: "%{attribute} உருதிப்படுத்துவதற்கு தேவை"
+              already_confirmed: "%{attribute} ஏற்கனவே உருதி செய்யப்பட்டுள்ளது."
+  pull_request:
+    twitter_message: "நான் ஒரு 'pull request' http://24pullrequests.com-கு பரிசளித்துள்ளேன். இங்கு சென்று பாருங்கள்: %{issue_url}"
+
+    download:
+      tooltip: "பொதுவாக நாங்கள் 'pull request'-களை ஒவ்வொரு மணிதோரும் பார்க்கிறோம். நீங்கள் விரும்பினால் இப்போதே பார்க்கலாம்"
+
+  twitter:
+    account_linked: "உங்கள் ட்விட்டர் அக்கௌன்ட் இணைக்கப்பட்டுவிட்டது! நீங்கள் ஒவ்வொரு 'pull request' கொடுக்கும்போது ட்வீட் செய்வோம்.
+    account_removed: "உங்கள் ட்விட்டர் அக்கௌன்ட் நீக்கப்பட்டது."
+    link_account:
+      text: "ட்விட்டர் அக்கௌன்டை இனைத்திடுங்க"
+      tooltip: "உங்கள் ட்விட்டர் அக்கௌன்டை இணைத்தால், நீங்கள் ஒவ்வொரு 'pull request' கொடுக்கும்போது ட்வீட் செய்வோம்"
+
+  navigation:
+    all_projects: அனைத்து பிராஜக்ட்கள்
+    my_suggestions: என் பரிந்துரைகள்
+    dashboard: டேஷ்போர்ட்
+    profile: சுயவிவரம்
+    preferences: என் விருப்பங்கள்
+    gifted_code: பரிசலித்த நிரல்கள்
+    manage_projects: பிராஜக்ட்களை நிர்வகி
+    logout: விடுபதிகை
+
+  homepage:
+    title: "24 Pull Requests"
+    description: கிறிஸ்துமஸ்சிற்காக சிறு நிரல்களை பரிசலித்தல்!
+		 #Giving back little gifts of code for Christmas
+    about: "அதை பற்றி என்ன?"
+    about_text: "<p>24 Pull Requests உலகமெங்ம் உள்ள நிரலர்களை ஒவ்வொரு வருடமும் டிசம்பர் மாதத்தில் கிறிஸ்துமஸ் நாள் வரை ஒவ்வொரு நாளும் pull request-கள் கொகுடுக்க ஊக்குவிக்கும் ஒரு முயற்சி.</p> <p>இந்த இணையதளம் இந்த முயற்சியை பிரபலப்படுத்தவும், pull requests கொடுப்பதின் காரணத்தை, எப்படி மற்றும் எவ்வாறு கொடுப்பது என்பதை சுட்டிக்காட்ட பயன்படுகிறது.</p><p>உங்கள் GitHub அக்கௌன்டைக்கொண்டு புகுபதிகை செய்தீர்களானல், நாங்கள் உங்கள் pull requests-களை கண்கானித்து இங்கு காண்பிப்போம். மற்றும் நீங்கள் பங்களிக்க பிராஜக்ட்களை பரிந்துரைப்போம்.</p>"
+	#"<p>24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your pull requests.</p><p>Log in with your GitHub account and we'll track and highlight all your pull requests and suggest projects to work on.</p>"
+    greeting: "இது பரிசளிக்கும் பருவம்"
+    give_to_open_source: நீங்கள் ஓபன்சோர்ஸ் பிராஜக்ட்கள் மூலமாக வருடமுளுவதும் பயனடைகிறீர்கள். இப்பொளுது அந்த பிராஜக்ட்களின் காப்பாளர்களுக்கு நன்றி சொல்லும் காலம். அவர்கள் உங்களிடமிரருந்து pull requests பெருவதை மிகவும் வுரும்புவதாக கேள்விபடுகின்றோம்!
+			#You've been benefiting from the use of open source projects all year. Now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving pull requests!
+    q_n_a: கேள்வி பதில்கள்
+    badges:
+      title: Earn Coderwall badges
+      description: We've teamed up with coderwall and created some kickass badges to unlock for participating.
+      involved_link: 'Participant - Get involved, send at least one pull request before Christmas'
+      amazing: "Continuous Sync - You're an open source machine, send 24 pull requests during December"
+    involved:
+      title: Get involved
+      description: "There are loads of ways to get involved in an open source project: improving documentation, helping fix existing issues and bugs, improving code quality and test coverage, or adding missing features."
+      special_page: "We've prepared a %{contributing_path}, where you can find some information about contributing."
+      contributing_path: special page
+      take_a_look: If you are new to open source, please take a look.
+    profile:
+      title: Build your profile
+      description: Contributing to open source projects is also a great way to build your profile in the community and improve your CV.
+      getting_started: It's really easy to get started. Even small contributions can be really valuable to a project.
+    join_the_chat: Join the chat on IRC, %{link_to_chat}, at freenode.
+
+  information:
+    title: "24 Pull Requests %{year} is upon us"
+    last_year_stats: "In %{year}, over 24 days, <b>%{developers}</b> developers submitted <b>%{pull_requests}</b> pull requests to <b>%{projects}</b> different open source projects."
+    get_ready: Get ready for 24 Pull Requests %{year} when we do it all again!
+    help_open_source: "Want to help out with open source projects in the meantime? Check out these other great initiatives:"
+    codetriage: "Give back to open source, one issue at a time, with CodeTriage. You'll get one issue from your favorite repo per day to help you dig deeper, learn more, and stay involved with the code you rely on."
+    contribhub:
+      tagline: Do you know you have a neighbor needing some help with a really cool project? With ContribHub you will!
+      description: ContribHub is a GitHub-based application that makes it easier to find projects to contribute to and grow a community around it.
+
+  merry_christmas: Merry Christmas
+  follow_user: Follow @%{twitter}
+  sponsored_by: Sponsored by
+  how_to_contribute: How to contribute?
+  open_source_yey: Open Source FTW!
+  welcome_back: Welcome back, %{user}
+  your_pull_requests: Your Pull Requests
+  suggested_projects: Suggested Projects
+  suggest_project: Suggest a project
+  no_suggestions: You haven't suggested any projects yet.
+  preferred_languages: Preferred Languages
+  view_all: View All
+  more: More
+  change: Change
+  clear: Clear
+  claim: Claim
+  exempli_gratia: "e.g." # Short form of "for example"
+  edit: Edit
+  everything: Everything
+  about_us: About
+  cancel: Cancel
+  or: or
+  search: Search
+
+  user:
+    grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
+    pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
+    organisations: Member of...
+    coderwall:
+      title: Coderwall Badges
+      achieved_by: "Badges achieved by"
+      success: "Successfully updated your coderwall username!"
+      update_button: "Update"
+      error_no_user: "No user found with this name."
+      error_github_not_connected: "The user %{username} has not the same GitHub account connected with Coderwall as the one you connected to 24 Pull Requests with."
+
+  developers_using_language: Developers using %{language}
+  developers_involved: Developers already involved
+
+  dashboard:
+    christmas_activity: This is where you can see all the activity we've tracked for you in the run up to Christmas.
+    give_a_gift: Looks like you haven't gifted any code today. Would you like to gift # This is followed by a select-menu where you can pick one of your non-gifted pull requests to gift
+    synchronize: Synchronize Pull Requests
+    help_out: "Can't think of a project you'd like to help contribute to? We've put together a list of popular projects:"
+    no_pull_requests: You've not sent any pull requests, what are you waiting for?!
+    gift_it: Gift it!
+
+  language:
+    projects_count: "%{count} %{language} Projects"
+    projects:
+      count: "%{count} Projects are using %{language}"
+      suggest: "Suggest a %{language} project"
+    developers:
+      count: "%{count} Developers using %{language}"
+    pull_requests:
+      latest:
+        count: Latest %{language} Pull Requests (%{count} total)
+
+  projects:
+    claim: Are any of the projects you suggested not listed? Claim them!
+    help_out: Can't think of a project to contribute to? We've collected a list of brilliant open source projects who would love your pull requests.
+    suggest_new: You can also suggest projects that should be added to the list, or add your own project if you would like some help with it.
+    filter_by_language: "Filter by Language:"
+    for_you: Suggested for you
+    suggestion:
+      edit: Edit Suggestion
+      update: Update Project
+    suggest: There are no projects for that language yet, why not %{suggest_link}?
+    suggest_link_text: suggest one
+    new:
+      title: Suggest a Project
+      info: One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We've selected our favorites, but we're always open to suggestions. Have some ideas? Share them below!
+      suggestion: Have a suggestion for this project? We're all ears! If there's something you'd like fixed, feel free to %{issue_link}.
+      issue_link_text: suggest an issue
+
+      form:
+        project_name: Project Name
+        github_url: GitHub URL
+        summary: Summary
+        main_language: Main language
+        submit_project: Submit Project
+
+    edit:
+      title: Edit Suggestion
+    admin:
+      title: Manage Projects
+      search: Search by GitHub repository
+
+  preferences:
+      title: Set your personal preferences
+      frequency_message:  At the frequency you choose, we'll send you helpful emails from now until the project is over, highlighting some suggested projects you might consider contributing to. As an added bonus, we'll take the liberty of personalizing our suggestions to your language proficiency based on the repos in your GitHub profile. Alternatively, you can choose your languages below.
+      delete: "Want to delete your account?"
+      information: You can always change your email preferences later.
+      twitter: Twitter Account
+      languages: Which languages do you know?
+      remove: Remove Account
+      save_and_continue: Save and Continue
+      coderwall: Link your coderwall account to display the badges you have already earned on your profile page.
+      coderwall_username: "Coderwall username"
+
+      form:
+        email: Email
+        email_frequency: Email Frequency
+        never: Never
+        daily: Daily
+        weekly: Weekly
+
+      hint:
+        confirm_email: Please confirm your email address using the link we've sent you.
+
+  pull_requests:
+    count: "%{count} Pull Requests already made!"
+    language:
+      count: "%{count} pull requests already made in %{language}!"
+    latest:
+      count: Latest Pull Requests (%{count} total)
+
+  delete_account:
+    title: Delete your account
+    are_you_sure: We just wanted to make sure you really do wish to delete your account. This will remove your profile and all pull requests from the site, although any suggested projects will remain.
+    notification_info: If you simply want to stop receiving email notifications you can change your  %{email_preferences_link}.
+    email_preferences_link: email preferences
+    confirm: Confirm Deletion
+    cancel: I changed my mind, take me back!
+
+  gifts:
+    title: Gifted Code
+    description: Here you can manage your pull requests and select &amp; curate your own set of "24 Pull Requests".
+    view_your_gifts: All your gifts will be shown on your %{calendar_link}.
+    calendar_link: public calendar
+    none: Nothing gifted yet.
+    give: Gift something meaningful to a project you love
+
+    form:
+      date: Date
+      pull_requests: Pull Requests
+      tweet: Tweet about your gift!
+      gift_it: "Gift it!"
+
+  collaborators:
+    title: Core Contributors
+
+  about:
+    title: About 24 Pull Requests
+    description: 24 Pull Requests is a little project to promote open source collaboration during December.
+    idea: The idea is basically "Send a pull request every day in December leading up to Christmas", encouraging developers to give back to open source with little gifts of code throughout December.
+    more_info: The site also provides suggested projects to help with, guides for contributing and highlights good pull requests submitted each day.
+    on_github: "The site development is open source on GitHub:"
+    on_twitter: "We are also on Twitter:"
+    sponsors:
+      title: Sponsors
+      details: 24 Pull Requests was made possible thanks to the help and donations of some great sponsors.
+      thanks: "Many thanks to..."
+      get_in_touch: "If you'd like to get in touch about sponsorship or anything else, drop us an email:"
+
+  organisations:
+    title: "%{count} organizations involved"
+    pull_requests: "%{count} pull requests submitted by members"
+    members:
+      one: "1 Member"
+      other: "%{count} Members"
+    languages: Languages
+
+  suggestions:
+    title: My Suggestions
+
+  api:
+    title: JSON API
+    description: You may not know this, but 24 Pull Requests has its own JSON API. Details of each endpoint are described below.
+    pagination:
+      title: Pagination
+      details: Requests that return multiple items will be paginated to 99 items by default. You can specify further pages with the ?page parameter.
+    callback:
+      title: JSON-P Callbacks
+      details: You can send a ?callback parameter to any GET call to have the results wrapped in a JSON function. This is typically used when browsers want to embed content in web pages by getting around cross domain issues. The response includes the same data output as the regular API.
+    projects:
+      title: Projects
+      details: All suggested projects on the site, ordered alphabetically.
+    pull_requests:
+      title: Pull Requests
+      details: Load all pull requests by users of the site during December, ordered by newest first, also includes the user who made the pull request.
+    users:
+      title: Users
+      details: Load all users who have signed up to the site, ordered by how many pull requests they have sent so far in December, also includes their organisation(s) and pull requests.
+      specific: Load information for a specific user.
+    organisations:
+      title: Organisations
+      details: Load all organisations that have signed up to the site, also includes the users that belong to each organisation.
+      specific: Load information for a specific organisation.
+
+  locale: # Remove this part in your own language file - it's not necessary. Don't forget to include your language here, though!
+    translate: Translate into your language!
+    en: English
+    el: Ελληνικά
+    es: Español
+    pt_br: Português do Brasil
+    fi: Suomi
+    fr: Français
+    de: Deutsch
+    ru: Русский
+    uk: Українська
+    th: ไทย
+    it: Italiano
+    nb: Norsk bokmål
