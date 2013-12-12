@@ -31,7 +31,7 @@ GEM
       sass (>= 3.2)
     arel (4.0.1)
     atomic (1.1.14)
-    brakeman (2.2.0)
+    brakeman (2.3.0)
       erubis (~> 2.6)
       fastercsv (~> 1.5)
       haml (>= 3.0, < 5.0)
