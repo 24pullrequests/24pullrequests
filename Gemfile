@@ -3,8 +3,6 @@ ruby "2.0.0"
 
 gem 'rails', '4.0.2'
 
-gem 'jquery-rails'
-
 gem 'pg'
 gem 'omniauth'
 gem 'omniauth-github'
@@ -17,16 +15,20 @@ gem 'newrelic_rpm'
 gem 'simplecov'
 gem 'kaminari'
 gem 'twitter', '5.0.0'
-gem 'anjlab-bootstrap-rails', '~> 3.0.3.0', :require => 'bootstrap-rails'
 gem 'simple_form', '3.0.0'
 gem 'rack-google-analytics'
 gem 'ffi', '1.9.0'
 gem 'csv_shaper'
 
-
-gem 'sass-rails'
-gem 'coffee-rails'
-gem 'uglifier'
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'anjlab-bootstrap-rails', '~> 3.0.3.0', :require => 'bootstrap-rails'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'jquery-rails'
+  gem 'uglifier'
+end
 
 group :development do
   gem 'thin'
