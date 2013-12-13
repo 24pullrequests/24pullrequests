@@ -73,7 +73,7 @@ zh_Hant:
   suggested_projects: 推薦項目
   suggest_project: 推荐一個項目
   no_suggestions: 你還咩有推薦過呢
-  preferred_languages​​: 首選語言
+  preferred_languages: 首選語言
   view_all: 查看全部
   more: 更多
   change: 編輯
@@ -85,24 +85,19 @@ zh_Hant:
   about_us: 關於
   cancel: 取消
   or: 或
-  sea​​rch: 搜索
+  search: 搜索
 
   user:
-    grinchy_message: "%{user} is being a grinch for %{year} with no gifted 合併請求(pull request)s。 Bah humbug!"
-    ％ { }用戶正在一個聖誕怪傑的％{ }年內沒有天才拉的請求呸騙人的鬼話！
-    pull_request_count: "%{user} has made %{count} total 合併請求(pull request)s so far in %{year}"
-    ％ { }用戶已在％ ％{一年} {數}拉動總需求，到目前為止”
-    organisations: Member of。 。 。
-    成員。 。 。
+    grinchy_message: "在%{year}年，%{user}是一個聖誕怪傑。他發起了〇個合併請求(pull request)。 鴨蛋！"
+    pull_request_count: "在%{year}年， %{user} 一共發起了%{count} 次合併請求(pull request)"
+    organisations: 一名成員
     coderwall:
       title: Coderwall徽章
-      achieved_by: "Badges achieved by"
-      徽章實現由
-      success: "Successfully updated your coderwall username!"
-      “成功更新coderwall的用戶名！ ”
+      achieved_by: "贏取的徽章"
+      success: "成功更新了Coderwall的用戶名！"
       update_button: "更新"
-      error_no_user: "No user found with this name。"
-      error_github_not_connected: "The user %{username} has not the same GitHub account connected with Coderwall as the one you connected to 24 pull requests with。"
+      error_no_user: "沒有找到與這個用戶名關聯的帳號。"
+      error_github_not_connected: "賬戶%{username} 在Coderwall 和24 pull requests 綁定的GitHub帳號不同"
 
   developers_using_language: Developers using %{language}
   developers_involved: Developers already involved
@@ -113,7 +108,7 @@ zh_Hant:
     # This is followed by a select-menu where you can pick one of your non-gifted 合併請求(pull request)s to gift
     synchronize: 同步合併請求(pull request)
     help_out: "想不出你想要參與的項目嗎？我們幫您整理好了一些熱門的項目："
-    no_pull_requests: 您還沒有發送任何合併請求(pull request)， 你還等什麼呢？ ！
+    no_pull_requests: 您還沒有發送任何合併請求(pull request)， 你還等什麼呢？！
     gift_it: 贈與！
 
   language:
@@ -155,7 +150,7 @@ zh_Hant:
       title: 編輯建議
     admin:
       title: 管理項目
-      sea​​rch: 搜索GitHub的代碼庫
+      search: 搜索GitHub的代碼庫
 
   preferences:
       title: 設置您的個人喜好
@@ -163,7 +158,7 @@ zh_Hant:
       delete: "想要刪除您的帳號？"
       information: 你可以在之後修改您接收郵件的偏好設置
       twitter: 推特帳號
-      languages​​: 您知道哪些編程語言？
+      languages: 您知道哪些編程語言？
       remove: 刪除帳號
       save_and_continue: 保存並繼續
       coderwall: 與您的coderwall帳號綁定，在您的coderwall帳號上顯示徽章
@@ -230,7 +225,7 @@ zh_Hant:
     members:
       one: "一名成員"
       other: "%{count} 名成員"
-    languages​​: 編程語言
+    languages: 編程語言
 
   suggestions:
     title: 我的建議

@@ -88,21 +88,16 @@ zh_Hans:
   search: 搜索
 
   user:
-    grinchy_message: "%{user} is being a grinch for %{year} with no gifted 合并请求(pull request)s。 Bah humbug!"
-    ％ { }用户正在一个圣诞怪杰的％{ }年内没有天才拉的请求呸骗人的鬼话！ 
-    pull_request_count: "%{user} has made %{count} total 合并请求(pull request)s so far in %{year}"
-    ％ { }用户已在％ ％{一年} {数}拉动总需求，到目前为止”
-    organisations: Member of。。。
-    成员。。。
+    grinchy_message: "在%{year}年，%{user}是一个圣诞怪杰。他发起了〇个合并请求(pull request)。 鸭蛋！"
+    pull_request_count: "在%{year}年， %{user} 一共发起了 %{count} 次合并请求(pull request)"
+    organisations: 一名成员
     coderwall:
       title:  Coderwall徽章
-      achieved_by: "Badges achieved by"
-      徽章实现由
-      success: "Successfully updated your coderwall username!"
-      “成功更新coderwall的用户名！ ”
+      achieved_by: "赢取的徽章"
+      success: "成功更新了Coderwall的用户名！"
       update_button: "更新"
-      error_no_user: "No user found with this name。"
-      error_github_not_connected: "The user %{username} has not the same GitHub account connected with Coderwall as the one you connected to 24 pull requests with。"
+      error_no_user: "没有找到与这个用户名关联的帐号。"
+      error_github_not_connected: "账户 %{username} 在 Coderwall 和 24 pull requests 绑定的GitHub帐号不同"
 
   developers_using_language: Developers using %{language}
   developers_involved: Developers already involved
