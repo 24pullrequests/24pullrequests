@@ -1,309 +1,315 @@
 /* IDEA */
 
   Andrew Nesbitt
-  GitHub: https://github.com/andrew
+  GitHub Profile: https://github.com/andrew
 
 /* CONTRIBUTORS */
-  
-  Chris Lowder
-  GitHub Profile: https://github.com/clowder
-  
-  Baris Balic
-  GitHub Profile: https://github.com/barisbalic
-  
-  Eric Holmes
-  GitHub Profile: https://github.com/ejholmes
-  
-  Devin Halladay
-  GitHub Profile: https://github.com/devinhalladay
-  
-  Jean Pierre
-  GitHub Profile: https://github.com/gomayonqui
-  
-  Nick Shebanov 
-  GitHub Profile: https://github.com/killthekitten
-  
-  Ilya
-  GitHub Profile: https://github.com/iGusev
-  
-  David Radcliffe
-  GitHub Profile: https://github.com/dwradcliffe
-  
-  Nick Cox
-  GitHub Profile: https://github.com/thenickcox
-  
-  André Luis Leal Cardoso Junior
-  GitHub Profile: https://github.com/andrehjr
-  
-  Amrit Ayalur
-  GitHub Profile: https://github.com/aayalur
-  
-  Soon Van
-  GitHub Profile: https://github.com/randomecho
-  
-  Gabriel Cebrian
-  GitHub Profile: https://github.com/gabceb
-  
-  james cook
-  GitHub Profile: https://github.com/jamescook
-  
-  Iuri de Silvio
-  GitHub Profile: https://github.com/iurisilvio
-  
-  Jan Hančič
-  GitHub Profile: https://github.com/janhancic
-  
-  Gregory
-  GitHub Profile: https://github.com/gregorym
-  
-  Karolina Szczur
-  GitHub Profile: https://github.com/karolinaszczur
-  
-  Andy Waite
-  GitHub Profile: https://github.com/andyw8
-  
-  Matt Gillooly
-  GitHub Profile: https://github.com/mattgillooly
-  
-  Yasuharu Ozaki
-  GitHub Profile: https://github.com/YasuOza
-  
-  Carol Nichols
-  GitHub Profile: https://github.com/carols10cents
-  
-  Josh Hepworth
-  GitHub Profile: https://github.com/joshhepworth
-  
-  Pascal Borreli
-  GitHub Profile: https://github.com/pborreli
-  
-  xta
-  GitHub Profile: https://github.com/xta
-  
-  Olof Johansson
-  GitHub Profile: https://github.com/olof
-  
-  Gary Rennie
-  GitHub Profile: https://github.com/Gazler
-  
-  Pavel
-  GitHub Profile: https://github.com/xPaw
-  
-  Manoj
-  GitHub Profile: https://github.com/manojlds
-  
-  killerog
-  GitHub Profile: https://github.com/killerog
-  
-  David Celis
-  GitHub Profile: https://github.com/davidcelis
-  
-  Donald Cook
-  GitHub Profile: https://github.com/donaldpcook
-  
-  Chad Scira
-  GitHub Profile: https://github.com/icodeforlove
-  
-  Chris Knadler
-  GitHub Profile: https://github.com/cknadler
-  
-  Jeffrey Chupp
-  GitHub Profile: https://github.com/semanticart
-  
-  Phil Cohen
-  GitHub Profile: https://github.com/phlipper
-  
-  Roberto Miranda
-  GitHub Profile: https://github.com/robertomiranda
-  
-  polarblau
-  GitHub Profile: https://github.com/polarblau
-  
-  Adam Tuttle
-  GitHub Profile: https://github.com/atuttle
-  
-  Kristján Pétursson
-  GitHub Profile: https://github.com/kristjan
-  
-  Eumir Gaspar
-  GitHub Profile: https://github.com/corroded
-  
-  Simon Owen Design
-  GitHub Profile: https://github.com/simonowendesign
-  
-  Gabe Kopley
-  GitHub Profile: https://github.com/gkop
-  
-  rowlando
-  GitHub Profile: https://github.com/rowlando
-  
-  Olaf Alders
-  GitHub Profile: https://github.com/oalders
-  
-  Dan Madere
-  GitHub Profile: https://github.com/dgmdan
-  
-  Maxime Thirouin
-  GitHub Profile: https://github.com/MoOx
-  
-  Peter Sergeant
-  GitHub Profile: https://github.com/sheriff
-  
-  sbashyal
-  GitHub Profile: https://github.com/sbashyal
-  
-  Toby Allen
-  GitHub Profile: https://github.com/tobya
 
   Despo Pentara
   GitHub Profile: https://github.com/despo
 
+  Eric Holmes
+  GitHub Profile: https://github.com/ejholmes
+
   Al Snow
   GitHub Profile: https://github.com/jasnow
 
-  Kim Røen
+  Baris Balic
+  GitHub Profile: https://github.com/barisbalic
+
+  kimroen
   GitHub Profile: https://github.com/kimroen
-
-  Joah Gerstenberg 
-  GitHub Profile: https://github.com/joahg
-
-  Romain Berger
-  GitHub Profile: https://github.com/romainberger
-
-  Luan Muniz
-  GitHub Profile: https://github.com/luanmuniz
 
   Arthur Nogueira Neves
   GitHub Profile: https://github.com/arthurnn
 
+  Luan Muniz
+  GitHub Profile: https://github.com/luanmuniz
+
+  Simon Owen Design
+  GitHub Profile: https://github.com/simonowendesign
+
+  Romain Berger
+  GitHub Profile: https://github.com/romainberger
+
+  Joah Gerstenberg
+  GitHub Profile: https://github.com/JoahG
+
   David Annez
   GitHub Profile: https://github.com/annez
 
-  Alexander Beletsky
-  GitHub Profile: https://github.com/alexanderbeletsky
+  Devin Halladay
+  GitHub Profile: https://github.com/devinhalladay
 
-  Peter Mellett
-  GitHub Profile: https://github.com/wadtech
+  Chris Lowder
+  GitHub Profile: https://github.com/clowder
 
   Markus
   GitHub Profile: https://github.com/Jylhis
 
+  Peter Mellett
+  GitHub Profile: https://github.com/wadtech
+
+  Soon Van
+  GitHub Profile: https://github.com/randomecho
+
+  Alexander Beletsky
+  GitHub Profile: https://github.com/alexanderbeletsky
+
+  Nikolay Shebanov  
+  GitHub Profile: https://github.com/killthekitten
+
+  sumpo
+  GitHub Profile: https://github.com/sumpo
+
+  Jean Pierre
+  GitHub Profile: https://github.com/gomayonqui
+
   Felix
   GitHub Profile: https://github.com/fliiiix
 
-  Sumpo
-  GitHub Profile: https://github.com/sumpo
-
-  Karolina Szczur
-  GitHub Profile: https://github.com/thefoxis
-
-  Steve Robinson
-  GitHub Profile: https://github.com/steverob
+  David Radcliffe
+  GitHub Profile: https://github.com/dwradcliffe
 
   Mikhail Nikalyukin
   GitHub Profile: https://github.com/dpsk
 
+  Nick Cox
+  GitHub Profile: https://github.com/thenickcox
+
   Steve Lacey
   GitHub Profile: https://github.com/stevelacey
+
+  Hassan Shahid
+  GitHub Profile: https://github.com/set5think
+
+  Ilya
+  GitHub Profile: https://github.com/iGusev
 
   David Underwood
   GitHub Profile: https://github.com/davefp
 
-  Larry Xiao
-  GitHub Profile: https://github.com/larryxiao
+  Steve Robinson
+  GitHub Profile: https://github.com/steverob
+
+  Amrit Ayalur
+  GitHub Profile: https://github.com/aayalur
+
+  sqctest02
+  GitHub Profile: https://github.com/sqctest02
+
+  Jan Hancic
+  GitHub Profile: https://github.com/janhancic
+
+  Pascal Borreli
+  GitHub Profile: https://github.com/pborreli
 
   Vitaly Domnikov
   GitHub Profile: https://github.com/dotCypress
 
+  andrehjr
+  GitHub Profile: https://github.com/andrehjr
+
+  larryxiao
+  GitHub Profile: https://github.com/larryxiao
+
+  Iuri de Silvio
+  GitHub Profile: https://github.com/iurisilvio
+
+  Fernando Mendez
+  GitHub Profile: https://github.com/fmendez
+
+  Gabriel Cebrian
+  GitHub Profile: https://github.com/gabceb
+
+  Gary Rennie
+  GitHub Profile: https://github.com/Gazler
+
+  Gregory
+  GitHub Profile: https://github.com/gregorym
+
+  Herman J. Radtke III
+  GitHub Profile: https://github.com/hjr3
+
+  KevinSjoberg
+  GitHub Profile: https://github.com/KevinSjoberg
+
   Leif Singer
   GitHub Profile: https://github.com/lsinger
 
-  Marek Šuppa
+  Ralph Rooding
+  GitHub Profile: https://github.com/rrooding
+
+  Karolina Szczur
+  GitHub Profile: https://github.com/thefoxis
+
+  Ericat
+  GitHub Profile: https://github.com/Ericat
+
+  mrshu
   GitHub Profile: https://github.com/mrshu
 
   Peter Souter
   GitHub Profile: https://github.com/petems
 
-  Fernando Mendez
-  GitHub Profile: https://github.com/fmendez
+  Andy Waite
+  GitHub Profile: https://github.com/andyw8
 
-  Kevin Sjöberg
-  GitHub Profile: https://github.com/KevinSjoberg
+  Carol Nichols
+  GitHub Profile: https://github.com/carols10cents
 
-  Herman J. Radtke III
-  GitHub Profile: https://github.com/hjr3
+  polarblau
+  GitHub Profile: https://github.com/polarblau
 
-  Ralph Rooding
-  GitHub Profile: https://github.com/rrooding
+  Josh Hepworth
+  GitHub Profile: https://github.com/joshhepworth
 
-  Jacob Smith
-  GitHub Profile: https://github.com/jacobsmith
-
-  Rich Trott
-  GitHub Profile: https://github.com/Trott
-
-  Tobias Leich
-  GitHub Profile: https://github.com/FROGGS
-
-  Eumir Gaspar
-  GitHub Profile: https://github.com/corroded
-
-  Hassan Shahid
-  GitHub Profile: https://github.com/set5think
-
-  Julio Napurí
+  julionc
   GitHub Profile: https://github.com/julionc
-
-  Ericat
-  GitHub Profile: https://github.com/Ericat
-
-  Thomas Cort
-  GitHub Profile: https://github.com/tcort
-
-  Veeti Paananen
-  GitHub Profile: https://github.com/veeti
-
-  Claudio Ludovico
-  GitHub Profile: https://github.com/ludo237
-
-  Tim Perry
-  GitHub Profile: https://github.com/pimterry
-
-  Greg Molnar
-  GitHub Profile: https://github.com/gregmolnar
-
-  Oscar Rendón
-  GitHub Profile: https://github.com/orendon
-
-  Dmitri Voronianski
-  GitHub Profile: https://github.com/voronianski
-
-  Christian Gärtner
-  GitHub Profile: https://github.com/ChristianGaertner
-
-  Jared Forsyth
-  GitHub Profile: https://github.com/jaredly
-
-  Jeremy Hageman
-  GitHub Profile: https://github.com/jjhageman
-
-  Kelvin Raffael Stinghen
-  GitHub Profile: https://github.com/kelvinst
-
-  Vanessa Hurst
-  GitHub Profile: https://github.com/DBNess
-
-  Alex
-  GitHub Profile: https://github.com/alexortiz201
-
-  0xAX
-  GitHub Profile: https://github.com/0xAX
 
   Manuel Dalla Lana
   GitHub Profile: https://github.com/endelwar
 
+  Matt Gillooly
+  GitHub Profile: https://github.com/mattgillooly
+
+  Olof Johansson
+  GitHub Profile: https://github.com/olof
+
+  
+  GitHub Profile: https://github.com/xta
+
+  Rich Trott
+  GitHub Profile: https://github.com/Trott
+
+  Thomas Cort
+  GitHub Profile: https://github.com/tcort
+
+  Tobias Leich
+  GitHub Profile: https://github.com/FROGGS
+
+  Yasuharu Ozaki
+  GitHub Profile: https://github.com/yasuoza
+
+  Jacob Smith
+  GitHub Profile: https://github.com/jacobsmith
+
+  Adam Tuttle
+  GitHub Profile: https://github.com/atuttle
+
+  Alex
+  GitHub Profile: https://github.com/alexortiz201
+
   Ben Striegel
   GitHub Profile: https://github.com/bstrie
 
-  Sıtkı Bağdat
+  Carlos Alexandro Becker
+  GitHub Profile: https://github.com/caarlos0
+
+  Chad Scira
+  GitHub Profile: https://github.com/icodeforlove
+
+  Chris Knadler
+  GitHub Profile: https://github.com/cknadler
+
+  ChristianGaertner
+  GitHub Profile: https://github.com/ChristianGaertner
+
+  Dan Luu
+  GitHub Profile: https://github.com/danluu
+
+  Dan Madere
+  GitHub Profile: https://github.com/dgmdan
+
+  David Celis
+  GitHub Profile: https://github.com/davidcelis
+
+  Dmitri Voronianski
+  GitHub Profile: https://github.com/voronianski
+
+  Donald Cook
+  GitHub Profile: https://github.com/donaldpcook
+
+  Eumir Gaspar
+  GitHub Profile: https://github.com/corroded
+
+  Gabe Kopley
+  GitHub Profile: https://github.com/gkop
+
+  Greg Molnar
+  GitHub Profile: https://github.com/gregmolnar
+
+  Jared Forsyth
+  GitHub Profile: https://github.com/jaredly
+
+  Jeffrey Chupp
+  GitHub Profile: https://github.com/semanticart
+
+  Jeremy Hageman
+  GitHub Profile: https://github.com/jjhageman
+
+  Josh Buhler
+  GitHub Profile: https://github.com/joshbuhler
+
+  Kelvin Raffael Stinghen
+  GitHub Profile: https://github.com/kelvinst
+
+  kristjan
+  GitHub Profile: https://github.com/kristjan
+
+  Claudio Ludovico
+  GitHub Profile: https://github.com/ludo237
+
+  Manoj
+  GitHub Profile: https://github.com/manojlds
+
+  Maxime Thirouin
+  GitHub Profile: https://github.com/MoOx
+
+  Olaf Alders
+  GitHub Profile: https://github.com/oalders
+
+  orendon
+  GitHub Profile: https://github.com/orendon
+
+  Pavel
+  GitHub Profile: https://github.com/xPaw
+
+  Peter Sergeant
+  GitHub Profile: https://github.com/sheriff
+
+  Phil Cohen
+  GitHub Profile: https://github.com/phlipper
+
+  0xAX
+  GitHub Profile: https://github.com/0xAX
+
+  sbagdat
   GitHub Profile: https://github.com/sbagdat
+
+  Tim Perry
+  GitHub Profile: https://github.com/pimterry
+
+  Toby Allen
+  GitHub Profile: https://github.com/tobya
+
+  Vanessa Hurst
+  GitHub Profile: https://github.com/DBNess
+
+  Veeti Paananen
+  GitHub Profile: https://github.com/veeti
+
+  Jorge Kalmbach
+  GitHub Profile: https://github.com/kalmbach
+
+  killerog
+  GitHub Profile: https://github.com/killerog
+
+  Roberto Miranda
+  GitHub Profile: https://github.com/robertomiranda
+
+  rowlando
+  GitHub Profile: https://github.com/rowlando
+
+  sbashyal
+  GitHub Profile: https://github.com/sbashyal
