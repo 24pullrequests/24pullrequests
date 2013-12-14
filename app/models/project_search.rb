@@ -6,6 +6,7 @@ class ProjectSearch
     @page = params[:page]
     @languages = params[:languages] || []
     @labels = params[:labels] || []
+    set_seed
     self
   end
 
@@ -18,7 +19,7 @@ class ProjectSearch
   private
 
   def projects
-    @projects ||= Project.active.order(:name).page(page)
+    @projects ||= Project.active.order('random()').page(page)
   end
 
   def page
@@ -30,7 +31,7 @@ class ProjectSearch
   end
 
   def by_labels
-    @projects = projects.by_labels(labels) if labels.present?
+    @projects = projects.by_labels(labels).select('projects.*, RANDOM()') if labels.present?
   end
 
   def labels
@@ -41,5 +42,9 @@ class ProjectSearch
   def languages
     @languages.reject! { |l| l.empty? }
     @languages.map(&:downcase)
+  end
+
+  def set_seed
+    Project.connection.execute "select setseed(0.5)"
   end
 end

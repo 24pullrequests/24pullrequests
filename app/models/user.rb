@@ -129,15 +129,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  def check_email_changed
-    return unless self.email_changed?
-
-    self.generate_confirmation_token
-    self.confirmed_at = nil
-
-    ConfirmationMailer.confirmation(self).deliver
-  end
-
   def send_notification_email
     return unless confirmed?
     if send_daily?
@@ -223,6 +214,15 @@ class User < ActiveRecord::Base
   end
 
   private
+
+  def check_email_changed
+    return unless self.email_changed? && self.email.present?
+
+    self.generate_confirmation_token
+    self.confirmed_at = nil
+
+    ConfirmationMailer.confirmation(self).deliver
+  end
 
   def pull_request_downloader(access_token = token)
     Rails.application.config.pull_request_downloader.call(nickname, access_token)

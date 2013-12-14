@@ -1,2 +1,2 @@
 %li.user
-  = link_to image_tag(gravatar_url(user.gravatar_id), :width => 80, :height => 80, :alt =>user.nickname), user_path(user.nickname), rel: 'tooltip', data: { original_title: "#{user.nickname} - #{user.pull_requests_count} pull requests." }
+  = link_to image_tag(gravatar_url(user.gravatar_id), :width => 80, :height => 80, :alt =>user.nickname), user_path(user.nickname), rel: 'tooltip', data: { original_title: "#{user.nickname} - #{pluralize(user.pull_requests_count, 'pull request')}." }
