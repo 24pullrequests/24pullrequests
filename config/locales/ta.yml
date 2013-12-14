@@ -1,4 +1,4 @@
-en:
+ta:
   activerecord:
     errors:
       models:
@@ -14,7 +14,7 @@ en:
       tooltip: "பொதுவாக நாங்கள் 'pull request'-களை ஒவ்வொரு மணிதோரும் பார்க்கிறோம். நீங்கள் விரும்பினால் இப்போதே பார்க்கலாம்"
 
   twitter:
-    account_linked: "உங்கள் ட்விட்டர் அக்கௌன்ட் இணைக்கப்பட்டுவிட்டது! நீங்கள் ஒவ்வொரு 'pull request' கொடுக்கும்போது ட்வீட் செய்வோம்.
+    account_linked: "உங்கள் ட்விட்டர் அக்கௌன்ட் இணைக்கப்பட்டுவிட்டது! நீங்கள் ஒவ்வொரு 'pull request' கொடுக்கும்போது ட்வீட் செய்வோம்."
     account_removed: "உங்கள் ட்விட்டர் அக்கௌன்ட் நீக்கப்பட்டது."
     link_account:
       text: "ட்விட்டர் அக்கௌன்டை இனைத்திடுங்க"
@@ -32,23 +32,21 @@ en:
 
   homepage:
     title: "24 Pull Requests"
-    description: கிறிஸ்துமஸ்சிற்காக சிறு நிரல்களை பரிசலித்தல்!
-		 #Giving back little gifts of code for Christmas
+    description: "கிறிஸ்துமஸையொட்டி சிறு நிரல்களை பரிசளித்தல்!"
     about: "அதை பற்றி என்ன?"
-    about_text: "<p>24 Pull Requests உலகமெங்ம் உள்ள நிரலர்களை ஒவ்வொரு வருடமும் டிசம்பர் மாதத்தில் கிறிஸ்துமஸ் நாள் வரை ஒவ்வொரு நாளும் pull request-கள் கொகுடுக்க ஊக்குவிக்கும் ஒரு முயற்சி.</p> <p>இந்த இணையதளம் இந்த முயற்சியை பிரபலப்படுத்தவும், pull requests கொடுப்பதின் காரணத்தை, எப்படி மற்றும் எவ்வாறு கொடுப்பது என்பதை சுட்டிக்காட்ட பயன்படுகிறது.</p><p>உங்கள் GitHub அக்கௌன்டைக்கொண்டு புகுபதிகை செய்தீர்களானல், நாங்கள் உங்கள் pull requests-களை கண்கானித்து இங்கு காண்பிப்போம். மற்றும் நீங்கள் பங்களிக்க பிராஜக்ட்களை பரிந்துரைப்போம்.</p>"
-	#"<p>24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your pull requests.</p><p>Log in with your GitHub account and we'll track and highlight all your pull requests and suggest projects to work on.</p>"
+    about_text: "<p>24 Pull Requests உலகமெங்கும் உள்ள நிரலர்களை ஒவ்வொரு வருடமும் டிசம்பர் மாதத்தில் கிறிஸ்துமஸ் நாள் வரை ஒவ்வொரு நாளும் pull request-கள் கொடுக்க ஊக்குவிக்கும் ஒரு முயற்சி.</p> <p>இந்த இணையதளம் இந்த முயற்சியை பிரபலப்படுத்தவும், pull requests கொடுப்பதின் காரணத்தை, எப்படி மற்றும் எவ்வாறு கொடுப்பது என்பதை சுட்டிக்காட்ட பயன்படுகிறது.</p><p>உங்கள் GitHub அக்கௌன்டைக்கொண்டு புகுபதிகை செய்தீர்களானல், நாங்கள் உங்கள் pull requests-களை கண்கானித்து இங்கு காண்பிப்போம். மற்றும் நீங்கள் பங்களிக்க பிராஜக்ட்களை பரிந்துரைப்போம்.</p>"
     greeting: "இது பரிசளிக்கும் பருவம்"
     give_to_open_source: நீங்கள் ஓபன்சோர்ஸ் பிராஜக்ட்கள் மூலமாக வருடமுளுவதும் பயனடைகிறீர்கள். இப்பொளுது அந்த பிராஜக்ட்களின் காப்பாளர்களுக்கு நன்றி சொல்லும் காலம். அவர்கள் உங்களிடமிரருந்து pull requests பெருவதை மிகவும் வுரும்புவதாக கேள்விபடுகின்றோம்!
-			#You've been benefiting from the use of open source projects all year. Now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving pull requests!
     q_n_a: கேள்வி பதில்கள்
     badges:
-      title: Earn Coderwall badges
-      description: We've teamed up with coderwall and created some kickass badges to unlock for participating.
-      involved_link: 'Participant - Get involved, send at least one pull request before Christmas'
-      amazing: "Continuous Sync - You're an open source machine, send 24 pull requests during December"
+      title: Coderwall சின்னங்களை பெருங்கள்
+      description: நீங்கள் இதில் பங்கு பெற்றால் வெல்வதற்கு சில அற்புதமான சின்னங்களை நாங்கள் Coderwall-உடன் சேர்ந்து உருவாக்கியிருக்கின்றோம்.
+      involved_link: 'பங்கேற்றவர் - பங்குபெற்று கிறிஸ்துமஸ் வருமுன் குறைந்தபட்ச்சம் ஒரு pull request அனுப்புங்கள்'
+      amazing: "தொடர் ஒத்திசை - நீங்கள் ஒரு ஒபன்சொர்ஸ் எந்திரம், டிசம்பரில் 24 pull requests அனுப்புங்கள்"
+
     involved:
-      title: Get involved
-      description: "There are loads of ways to get involved in an open source project: improving documentation, helping fix existing issues and bugs, improving code quality and test coverage, or adding missing features."
+      title: ஈடுபடுங்கள்
+      description: "ஒபன்சொர்ஸ் பிராஜக்ட்களின் ஈடுபடுவதற்கு பல வழிகள் உள்ளன: ஆவணங்களை மேம்படுத்துதல், பிரச்சினைகளையும் பழூகளையும் சரி செய்ய உதவுதல், நிரல்களின் தரத்தையும் சோதனை நிரலர்களின் சதவீதத்தையும் மேம்படுத்துதல், அல்லது இல்லத அம்சங்களை சேர்த்தல்."
       special_page: "We've prepared a %{contributing_path}, where you can find some information about contributing."
       contributing_path: special page
       take_a_look: If you are new to open source, please take a look.
@@ -84,7 +82,7 @@ en:
   change: Change
   clear: Clear
   claim: Claim
-  exempli_gratia: "e.g." # Short form of "for example"
+  exempli_gratia: "e.g." 
   edit: Edit
   everything: Everything
   about_us: About
@@ -109,7 +107,7 @@ en:
 
   dashboard:
     christmas_activity: This is where you can see all the activity we've tracked for you in the run up to Christmas.
-    give_a_gift: Looks like you haven't gifted any code today. Would you like to gift # This is followed by a select-menu where you can pick one of your non-gifted pull requests to gift
+    give_a_gift: Looks like you haven't gifted any code today. Would you like to gift can pick one of your non-gifted pull requests to gift
     synchronize: Synchronize Pull Requests
     help_out: "Can't think of a project you'd like to help contribute to? We've put together a list of popular projects:"
     no_pull_requests: You've not sent any pull requests, what are you waiting for?!
@@ -258,7 +256,7 @@ en:
       details: Load all organisations that have signed up to the site, also includes the users that belong to each organisation.
       specific: Load information for a specific organisation.
 
-  locale: # Remove this part in your own language file - it's not necessary. Don't forget to include your language here, though!
+  locale: 
     translate: Translate into your language!
     en: English
     el: Ελληνικά
