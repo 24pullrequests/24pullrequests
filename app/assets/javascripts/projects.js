@@ -19,6 +19,8 @@ $(document).ready(function(){
     $(this).next().prepend($(this));
   });
 
+  $('#noprojects').hide();
+
   $('#filters .iCheck-helper').on("click", function() {
     $('form#filters').submit();
     $(this).addClass('checked');
