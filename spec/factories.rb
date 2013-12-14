@@ -48,6 +48,5 @@ FactoryGirl.define do
   factory :organisation do
     github_id { Faker::Lorem.word }
     login { Faker::Lorem.word }
-    users { [ create(:user)  ]}
   end
 end
