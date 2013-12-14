@@ -23,8 +23,4 @@ class Organisation < ActiveRecord::Base
   def active_languages
     pull_requests.map(&:language).uniq!
   end
-
-  def to_param
-    self.login
-  end
 end
