@@ -1,7 +1,7 @@
 class StaticController < ApplicationController
   def homepage
     @projects = Project.active.limit(200).sample(14)
-    @users = User.order('pull_requests_count desc').limit(200).sample(45)
+    @users = User.users_with_pull_request_counts(current_year).limit(200).sample(45)
     @pull_requests = PullRequest.year(current_year).order('created_at desc').limit(5)
     @quote = Quote.random
   end
