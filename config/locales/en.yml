@@ -219,7 +219,7 @@ en:
       get_in_touch: "If you'd like to get in touch about sponsorship or anything else, drop us an email:"
 
   organisations:
-    title: "%{count} organizations involved"
+    title: "%{count} organisations involved"
     pull_requests: "%{count} pull requests submitted by members"
     members:
       one: "1 Member"

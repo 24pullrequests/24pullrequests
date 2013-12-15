@@ -12,7 +12,7 @@ task :download_user_organisations => :environment do
   User.all.each do |user|
     puts "Importing organisations for #{user.nickname}"
     user.download_user_organisations(load_user.token) rescue nil
-  end  
+  end
 end
 
 desc "Download new pull requests"

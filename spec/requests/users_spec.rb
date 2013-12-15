@@ -42,6 +42,16 @@ describe 'Users' do
           should have_content pull_requests.last.title
         end
       end
+
+      describe "when the user belong to an organisation" do
+        let!(:user) { create(:user, organisations: [ create(:organisation) ]) }
+
+        it 'has organisations' do
+          visit user_path(user)
+
+          should have_content("Member of...")
+        end
+      end
     end
 
     context "#my_suggestions" do
