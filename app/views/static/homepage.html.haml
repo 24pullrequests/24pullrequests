@@ -64,7 +64,7 @@
 
       #pull_requests
         = render @pull_requests
-        
+
 .row.clearfix
   .col-md-12
     %h3
@@ -77,4 +77,12 @@
 
   #projects
     = render @projects
+#users.users-homepage.row.clearfix
+  .col-md-12
+    %h3
+      =t("organisations.title", count: Organisation.count)
+      = link_to t("view_all"), organisations_path, :class => 'btn btn-default'
+
+    %ul.clearfix
+      = render @orgs
 %hr
