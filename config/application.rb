@@ -65,7 +65,7 @@ module Tfpullrequests
 
     I18n.config.enforce_available_locales = false
 
-    # Memoize at boot up to prevent github's rate limiting. This should work
+    # Memoize at boot up to prevent GitHub's rate limiting. This should work
     # fine for now.
     config.collaborators = begin
       Octokit.collaborators('andrew/24pullrequests')

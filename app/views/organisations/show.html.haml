@@ -1,7 +1,7 @@
 .row
   .col-md-10
     %h2 #{@organisation.login}
-    = link_to "#{@organisation.login} on github", "https://github.com/#{@organisation.login}", class: 'btn btn-default'
+    = link_to "#{@organisation.login} on GitHub", "https://github.com/#{@organisation.login}", class: 'btn btn-default'
 
   .col-md-2
     .avatar= image_tag(@organisation.avatar_url, :width => 100, :alt => @organisation.login)
