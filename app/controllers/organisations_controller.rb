@@ -4,7 +4,7 @@ class OrganisationsController < ApplicationController
   respond_to :js, only: :index
 
   def index
-    @organisations = Organisation.includes(:users).page params[:page]
+    @organisations = Organisation.order_by_pull_requests.page(params[:page])
     respond_with @organisations
   end
 
