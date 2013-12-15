@@ -33,11 +33,11 @@ ActiveRecord::Schema.define(version: 20131215015229) do
     t.integer  "user_id",         null: false
     t.integer  "pull_request_id", null: false
     t.date     "date",            null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
-  add_index "gifts", ["user_id", "pull_request_id"], name: "index_gifts_on_user_id_and_pull_request_id", unique: true, using: :btree
+  add_index "gifts", ["user_id", "pull_request_id"], name: "index_gifts_on_user_id_and_pull_request_id", using: :btree
 
   create_table "labels", force: true do |t|
     t.string   "name"
@@ -76,8 +76,8 @@ ActiveRecord::Schema.define(version: 20131215015229) do
     t.text     "description"
     t.string   "github_url"
     t.string   "main_language"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "user_id"
     t.boolean  "inactive"
   end
@@ -113,8 +113,8 @@ ActiveRecord::Schema.define(version: 20131215015229) do
   create_table "skills", force: true do |t|
     t.integer  "user_id"
     t.string   "language"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "skills", ["user_id"], name: "index_skills_on_user_id", using: :btree
@@ -124,8 +124,8 @@ ActiveRecord::Schema.define(version: 20131215015229) do
     t.string   "provider",                        null: false
     t.string   "nickname",                        null: false
     t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "gravatar_id"
     t.string   "token"
     t.string   "email_frequency"
@@ -139,7 +139,7 @@ ActiveRecord::Schema.define(version: 20131215015229) do
     t.string   "coderwall_user_name"
   end
 
-  add_index "users", ["nickname"], name: "index_users_on_nickname", unique: true, using: :btree
-  add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
+  add_index "users", ["nickname"], name: "index_users_on_nickname", using: :btree
+  add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", using: :btree
 
 end
