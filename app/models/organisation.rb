@@ -4,6 +4,8 @@ class Organisation < ActiveRecord::Base
 
   scope :order_by_pull_requests, -> { order("organisations.pull_request_count desc") }
 
+  paginates_per 99
+
   class << self
     def create_from_github(response)
       params = {
