@@ -146,7 +146,7 @@ el:
       title: Διαρρυθμιση εισηγησης
     admin:
       title: Διαχειρηση Projects
-      search: Αναζητήστε με github repository
+      search: Αναζητήστε με GitHub repository
 
   preferences:
       title: Προτιμησεις ηλεκτρονικου ταχυδρομιου
@@ -214,7 +214,7 @@ el:
       details: Το 24 Pull Requests έγινε δυνατό με τη βοήθεια και την προσφορά από τους φανταστικούς χορηγούς μας.
       thanks: "Ευχαριστούμε τους..."
       get_in_touch: "Αν θέλετε να επικοινωνήσετε μαζί μας για χορηγία ή για οτιδήποτε άλλο, στείλτε μας ένα email:"
-  
+
   organisations:
     members:
       one:
