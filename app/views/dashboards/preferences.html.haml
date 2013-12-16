@@ -37,11 +37,11 @@
   #skills.clearfix
     = form.simple_fields_for :skills, Project::LANGUAGES.map{|l| Skill.new(:language => l)} do |skill_form|
       - language = skill_form.object.language
-      .form-group.col-sm-3
-        %label.control-label{:for => language}= language
-        .controls
-          = skill_form.check_box :language, {:id => language, :checked => current_user.skills.map(&:language).include?(language)}, language
-
+      .col-sm-3
+        .col-sm-10
+          .controls
+            = skill_form.check_box :language, {:id => language, :checked => current_user.skills.map(&:language).include?(language)}, language
+          %label.control-label{:for => language}= language
   .form-group
     .col-md-offset-3.col-sm-10
       = form.button :submit, t("preferences.save_and_continue")
