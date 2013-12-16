@@ -194,21 +194,21 @@ en:
     cancel: I changed my mind, take me back!
 
   gifts:
-    title: Gifted Code
-    description: Here you can manage your pull requests and select &amp; curate your own set of "24 Pull Requests".
-    view_your_gifts: All your gifts will be shown on your %{calendar_link}.
-    calendar_link: public calendar
-    none: Nothing gifted yet.
-    give: Gift something meaningful to a project you love
+    title: பரிசு அளிக்கப்பட்ட கோட்
+    description: இங்கே நீங்கள் உங்கள் pull requests-களை  நிர்வகிக்க  மற்றும் உங்கள் சொந்த  "24 Pull Requests"-களை தேர்வு செய்ய முடியும்  .
+    view_your_gifts: எல்லா பரிசுகளையும்  உங்கள்  %{calendar_link}-ல் காண்பிக்கப்படும்.
+    calendar_link: பொது காலண்டர்
+    none: இன்னும் எதுவும் பரிசாக அளிக்கப்படவில்லை.
+    give: நீங்கள் விரும்பும் ஒரு project-க்கு அர்த்தமுள்ள பரிசு ஏதாவது
 
     form:
-      date: Date
+      date: தேதி
       pull_requests: Pull Requests
-      tweet: Tweet about your gift!
-      gift_it: "Gift it!"
+      tweet: உங்கள் பரிசு பற்றி ட்வீட்  செய்!
+      gift_it: "பரிசு கொடு!"
 
   collaborators:
-    title: Core Contributors
+    title: கோர் பங்களிப்பாளர்கள்
 
   about:
     title: 24 Pull Requests பற்றி
