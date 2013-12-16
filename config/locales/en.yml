@@ -40,7 +40,7 @@ en:
       title: Earn Coderwall badges
       description: We've teamed up with coderwall and created some kickass badges to unlock for participating.
       involved_link: 'Participant - Get involved, send at least one pull request before Christmas'
-      amazing: "Continuous Sync - You're an open source machine, send 24 pull requests before Christmas"
+      amazing: "Continuous Sync - You're an open source machine, send 24 pull requests during December, before Christmas"
     involved:
       title: Get involved
       description: "There are loads of ways to get involved in an open source project: improving documentation, helping fix existing issues and bugs, improving code quality and test coverage, or adding missing features."
