@@ -211,32 +211,32 @@ en:
     title: Core Contributors
 
   about:
-    title: About 24 Pull Requests
-    description: 24 Pull Requests is a little project to promote open source collaboration during December.
-    idea: The idea is basically "Send a pull request every day in December leading up to Christmas", encouraging developers to give back to open source with little gifts of code throughout December.
-    more_info: The site also provides suggested projects to help with, guides for contributing and highlights good pull requests submitted each day.
-    on_github: "The site development is open source on GitHub:"
-    on_twitter: "We are also on Twitter:"
+    title: 24 Pull Requests பற்றி
+    description: 24 Pull Requests ஒரு சிறிய திட்டம்.  இது டிசம்பர் காலத்தில்  open source collaboration-ஐ  ஊக்குவிக்கிறது.
+    idea: அடிப்படையில் இந்த யோசனை,  டிசம்பரிலிருந்து  கிறிஸ்துமஸ் வரை  ஒவ்வொரு நாளும் ஒரு  pull request-ஐ  அனுப்ப developers-ஐ  டிசம்பர் முழுவதும் பரிசு கொடுத்து ஊக்குவிக்கிறது.
+    more_info: மேலும், இந்த  தளம் உதவி ஆலோசனை திட்டங்கள் வழங்குகிறது பங்களிப்பு வழிகாட்டிகள் மற்றும் ஒவ்வொரு நாளும் சமர்ப்பிக்கப்பட்ட நல்ல pull requests-களை உயர்த்தி காட்டுகிறது.
+    on_github: "இந்த  தளம் வளர்ச்சி GitHub-ல் open source-ஆக  இருக்கிறது:"
+    on_twitter: "மேலும், நாம் ட்விட்டர்-ல்  இருக்கிறோம்:"
     sponsors:
-      title: Sponsors
-      details: 24 Pull Requests was made possible thanks to the help and donations of some great sponsors.
-      thanks: "Many thanks to..."
-      get_in_touch: "If you'd like to get in touch about sponsorship or anything else, drop us an email:"
+      title: விளம்பரதாரர்கள்
+      details: 24 Pull Requests சில பெரிய விளம்பரதாரர்கள் நன்கொடைகள் மற்றும் உதவியுடன்  உருவக்கப்பட்டது
+      thanks:  "பல நன்றிகள்..."
+      get_in_touch: "நீங்கள்  விளம்பரம் அல்லது வேறு எதையும் பற்றி தொடர்பு கொள்ள விரும்பினால், எங்களுக்கு ஒரு மின்னஞ்சல் அனுப்பவும்:"
 
   organisations:
-    title: "%{count} organizations involved"
-    pull_requests: "%{count} pull requests submitted by members"
+    title: "%{count} தொடர்புடைய நிறுவனங்கள்"
+    pull_requests: "%{count} pull requests உறுப்பினர்கள் சமர்ப்பித்தனர்"
     members:
-      one: "1 Member"
-      other: "%{count} Members"
-    languages: Languages
+      one: "1 உறுப்பினர்"
+      other: "%{count} உறுப்பினர்கள்"
+    languages: மொழிகள்
 
   suggestions:
-    title: My Suggestions
+    title: என் பரிந்துரைகள்
 
   api:
     title: JSON API
-    description: You may not know this, but 24 Pull Requests has its own JSON API. Details of each endpoint are described below.
+    description:  You may not know this, but 24 Pull Requests has its own JSON API. Details of each endpoint are described below.
     pagination:
       title: Pagination
       details: Requests that return multiple items will be paginated to 99 items by default. You can specify further pages with the ?page parameter.
