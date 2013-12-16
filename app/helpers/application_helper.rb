@@ -52,7 +52,7 @@ module ApplicationHelper
   end
 
   def available_locales
-    [ 'en', 'es', 'el', 'pt_br', 'fi', 'fr', 'de', 'ru', 'uk', 'th', 'it', 'nb', 'zh_Hans', 'zh_Hant' ]
+    [ 'en', 'es', 'el', 'pt_br', 'fi', 'fr', 'de', 'ru', 'uk', 'th', 'it', 'nb', 'tr', 'zh_Hans', 'zh_Hant' ]
   end
 
   def current_translations
