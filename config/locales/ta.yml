@@ -177,11 +177,11 @@ ta:
         confirm_email: Please confirm your email address using the link we've sent you.
 
   pull_requests:
-    count: "%{count} Pull Requests already made!"
+    count: " ஏற்கனவே, %{count} Pull Requests உருவக்கப்பட்டது!"
     language:
-      count: "%{count} pull requests already made in %{language}!"
+      count: "ஏற்கனவே, %{count} pull requests %{language}-ல்  உருவக்கப்பட்டது!"
     latest:
-      count: Latest Pull Requests (%{count} total)
+      count: சமீபத்திய  Pull Requests (%{count} total)
 
   delete_account:
     title: Delete your account
