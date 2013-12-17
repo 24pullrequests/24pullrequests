@@ -39,8 +39,8 @@ ta:
     give_to_open_source: நீங்கள் ஓபன்சோர்ஸ் பிராஜக்ட்கள் மூலமாக வருடமுளுவதும் பயனடைகிறீர்கள். இப்பொளுது அந்த பிராஜக்ட்களின் காப்பாளர்களுக்கு நன்றி சொல்லும் காலம். அவர்கள் உங்களிடமிரருந்து pull requests பெருவதை மிகவும் வுரும்புவதாக கேள்விபடுகின்றோம்!
     q_n_a: கேள்வி பதில்கள்
     badges:
-      title: Coderwall சின்னங்களை பெருங்கள்
-      description: நீங்கள் இதில் பங்கு பெற்றால் வெல்வதற்கு சில அற்புதமான சின்னங்களை நாங்கள் Coderwall-உடன் சேர்ந்து உருவாக்கியிருக்கின்றோம்.
+      title: Coderwall பதக்கங்கள் பெருங்கள்
+      description: நீங்கள் இதில் பங்கு பெற்றால் வெல்வதற்கு சில அற்புதமான பதக்கங்கள் நாங்கள் Coderwall-உடன் சேர்ந்து உருவாக்கியிருக்கின்றோம்.
       involved_link: 'பங்கேற்றவர் - பங்குபெற்று கிறிஸ்துமஸ் வருமுன் குறைந்தபட்ச்சம் ஒரு pull request அனுப்புங்கள்'
       amazing: "தொடர் ஒத்திசை - நீங்கள் ஒரு ஒபன்சொர்ஸ் எந்திரம், டிசம்பரில் 24 pull requests அனுப்புங்கள்"
 
@@ -91,38 +91,38 @@ ta:
   search: தேடு
 
   user:
-    grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
-    pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
+    grinchy_message: "%{year}-ல் ஒரு pull request கூட பரிசளிக்காமல் மிக சுயநலவாதியாக %{user} இருக்கிறார்!" 
+    pull_request_count: "%{year}-ல் %{user} இதுவரைக்கும் %{count} pull request-கள் செய்திருக்கிறார்"
     organisations: Member of...
     coderwall:
-      title: Coderwall Badges
-      achieved_by: "Badges achieved by"
-      success: "Successfully updated your coderwall username!"
-      update_button: "Update"
-      error_no_user: "No user found with this name."
-      error_github_not_connected: "The user %{username} has not the same GitHub account connected with Coderwall as the one you connected to 24 Pull Requests with."
+      title: Coderwall பதக்கங்கள்
+      achieved_by: "பதக்கங்கள் வென்றவர்"
+      success: "உங்கள் Coderwall பெயர் வெற்றிகரமாக இற்றைப்படுத்தப்பட்டது!"
+      update_button: "இற்றைப்படுத்து"
+      error_no_user: "இந்த பெயரைக்கொண்ட நபர் எவரும் இங்கு இல்லை"
+      error_github_not_connected: "24 Pull Requests-இல் நீங்கள் இணைத்த GitHub அக்கௌண்ட், %{username} என்ற பெயரைக்கொண்ட Coderwall அக்கௌண்ட்டில் இணைக்கப்படவில்லை"
 
-  developers_using_language: Developers using %{language}
-  developers_involved: Developers already involved
+  developers_using_language: %{language} பயன்படுத்தும் நிரலர்கள்
+  developers_involved: ஈடுபாடான நிரலர்கள்
 
   dashboard:
-    christmas_activity: This is where you can see all the activity we've tracked for you in the run up to Christmas.
-    give_a_gift: Looks like you haven't gifted any code today. Would you like to gift can pick one of your non-gifted pull requests to gift
-    synchronize: Synchronize Pull Requests
-    help_out: "Can't think of a project you'd like to help contribute to? We've put together a list of popular projects:"
-    no_pull_requests: You've not sent any pull requests, what are you waiting for?!
-    gift_it: Gift it!
+    christmas_activity: இங்குதான் இந்த கிறிஸ்துமஸ்வரை நாங்கள் கண்கானித்த உங்கள் நடவடிக்கைகளைக் காணலாம்.
+    give_a_gift: இன்று நீங்கள் ஒன்றும் பரிசளிக்கவில்லை. நீங்கள் பரிசளிக்க விரும்பினால், இதுவரையில் பரிசளிக்கப்படாத உங்களின் ஒரு pull request-ஐ தேர்ந்தெடுத்து பரிசளிக்கலாம்.
+    synchronize: Pull Request-களை ஒத்தியக்கம் செய்
+    help_out: "பங்களிப்பதற்கு பிரஜக்ட் எதுவும் கிடைக்களையா? நாங்கள் உங்களுக்காக சில பிரபலமான பிரஜக்ட்களை பட்டியலிட்டிருக்கின்றோம்:"
+    no_pull_requests: ஒரு pull request கூட நீங்கள் இன்னும் அனுப்பவில்லை. எதற்காக காத்திருக்கிறீர்கள்?
+    gift_it: பரிசளி!
 
   language:
-    projects_count: "%{count} %{language} Projects"
+    projects_count: "%{count} %{language} பிரஜக்ட்கள்"
     projects:
-      count: "%{count} Projects are using %{language}"
-      suggest: "Suggest a %{language} project"
+      count: "%{count} பிரஜக்ட்கள் %{language}-ஐ பயன்படுத்துகின்றன"
+      suggest: "%{language} பிரஜக்ட் ஒன்றை பரிந்துரையுங்கள்"
     developers:
-      count: "%{count} Developers using %{language}"
+      count: "%{count} நிரலர்கள் %{language}-ஐ பயன்படுத்துகின்றார்கள்"
     pull_requests:
       latest:
-        count: Latest %{language} Pull Requests (%{count} total)
+        count: சமீபத்திய %{language} Pull Request-கள் (மொத்தம் %{count})
 
   projects:
     claim: Are any of the projects you suggested not listed? Claim them!
