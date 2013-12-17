@@ -184,12 +184,12 @@ ta:
       count: சமீபத்திய  Pull Requests (%{count} total)
 
   delete_account:
-    title: Delete your account
-    are_you_sure: We just wanted to make sure you really do wish to delete your account. This will remove your profile and all pull requests from the site, although any suggested projects will remain.
-    notification_info: If you simply want to stop receiving email notifications you can change your  %{email_preferences_link}.
-    email_preferences_link: email preferences
-    confirm: Confirm Deletion
-    cancel: I changed my mind, take me back!
+    title: உங்கள் கணக்கை நீக்கவிரும்பினால்
+    are_you_sure: உண்மையில் நீங்கள் உங்கள் கணக்கை நீக்க விரும்புகிறீர்கள். இந்த தளத்தில் இருந்து உங்கள் சுயவிவரம் மற்றும் அனைத்து மிகுதி கோரிக்கைகளை நீக்கும், என்றாலும் ஆலோசனை திட்டங்கள் இருக்கும்.
+    notification_info: நீங்கள் மின்னஞ்சல் அறிவிப்புகளை பெறுவதை நிறுத்த வேண்டும் என்றால் நீங்கள் உங்கள் %{email_preferences_link} மாற்ற முடியும்.
+    email_preferences_link: மின்னஞ்சல் முன்னுரிமை
+    confirm: நீக்கலை உறுதிப்படுத்து
+    cancel: என் மனதை நான் மாற்றிக்கொண்டேன். என்னை மீண்டும் எடுத்துகொள்!
 
   gifts:
     title: பரிசு அளிக்கப்பட்ட கோட்
