@@ -2,9 +2,9 @@ development:
   adapter: postgresql
   encoding: unicode
   database: tfpullrequests_development
-  pool: 5
+  pool: 5 
   host: localhost
-  password:
+  password: 
 
 test:
   adapter: postgresql
@@ -12,4 +12,4 @@ test:
   database: tfpullrequests_test
   pool: 5
   host: localhost
-  password:
+  password: 
