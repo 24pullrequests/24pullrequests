@@ -155,26 +155,26 @@ ta:
       search: Search by GitHub repository
 
   preferences:
-      title: Set your personal preferences
-      frequency_message:  At the frequency you choose, we'll send you helpful emails from now until the project is over, highlighting some suggested projects you might consider contributing to. As an added bonus, we'll take the liberty of personalizing our suggestions to your language proficiency based on the repos in your GitHub profile. Alternatively, you can choose your languages below.
-      delete: "Want to delete your account?"
-      information: You can always change your email preferences later.
-      twitter: Twitter Account
-      languages: Which languages do you know?
-      remove: Remove Account
-      save_and_continue: Save and Continue
-      coderwall: Link your coderwall account to display the badges you have already earned on your profile page.
-      coderwall_username: "Coderwall username"
+      title: உங்கள் தனிப்பட்ட விருப்பங்களை அமைக்கவும்
+      frequency_message:  நீங்கள் தேர்வு  செய்த அதிர்வெண், project முடியும் வரை நாங்கள் இப்பொழுதில் இருந்து உங்களுக்கு பயனுள்ள மின்னஞ்சல்களை  அனுப்புவொம்,  உங்கள் பங்களிப்பை கருத்தில்  கொண்டு சில ஆலோசனை project-களை காண்பிப்பார. ஒரு சேர்க்கப்பட்ட போனஸ், நாங்கள் உங்கள் github சுயவிவரத்தில் repo அடிப்படையில் உங்கள் மொழி திறமைக்கு எங்கள் பரிந்துரைகள் தனிப்பயனாக்க சுதந்திரம் எடுக்க வேண்டும். மாற்றாக, நீங்கள் கீழே உங்கள் மொழிகள் தேர்வு செய்யலாம்.
+      delete: "உங்கள் கணக்கை நீக்க வேண்டுமா?"
+      information: நீங்கள் எப்போது வேண்டுமானாலும் உங்கள் மின்னஞ்சல் விருப்பங்களை மாற்ற முடியும்.
+      twitter: ட்விட்டர் கணக்கு
+      languages: எந்த மொழிகள் உங்களுக்கு தெரியும்?
+      remove: கணக்கை நீக்குக
+      save_and_continue: சேமிக்கவும் மற்றும் தொடரவும்
+      coderwall: நீங்கள் ஏற்கனவே உங்கள் சுயவிவர பக்கத்தில் பெற்ற பதக்கங்கள் காண்பிக்க உங்கள் coderwall கணக்கை இணை.
+      coderwall_username: "Coderwall பயனாளர் பெயர்"
 
       form:
-        email: Email
-        email_frequency: Email Frequency
-        never: Never
-        daily: Daily
-        weekly: Weekly
+        email: மின்னஞ்சல்
+        email_frequency: மின்னஞ்சல் அதிர்வெண்
+        never:  எப்பொழுதும் இல்லை
+        daily: தினசரி
+        weekly: வாரந்தோறும்
 
       hint:
-        confirm_email: Please confirm your email address using the link we've sent you.
+        confirm_email: தயவு செய்து, நாங்கள் உங்களுக்கு அனுப்பிய இணைப்பை பயன்படுத்தி, உங்கள் மின்னஞ்சல் முகவரியை உறுதிப்படுத்தவும்.
 
   pull_requests:
     count: " ஏற்கனவே, %{count} Pull Requests உருவக்கப்பட்டது!"
