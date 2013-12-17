@@ -59,7 +59,8 @@ class ProjectsController < ApplicationController
   end
 
   def filter
-    @projects = ProjectSearch.new(page: params[:page], labels: labels, languages: languages).find
+    @languages,@labels = languages, labels
+    @projects = ProjectSearch.new(page: params[:page], labels: @labels, languages: @languages).find
     respond_with @projects
   end
 
