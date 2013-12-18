@@ -1,4 +1,5 @@
 class GiftForm
+  include PullRequestHelper
   attr_reader :gift
 
   def initialize(args={})
@@ -10,7 +11,7 @@ class GiftForm
 
   def pull_requests_for_select
     @pull_requests.sort{ |pr1, pr2| pr2.gifted_state <=> pr1.gifted_state }.map{ |pr|
-      ["#{pr.gifted_state.to_s.humanize}: #{pr.repo_name} - #{pr.title}", pr.to_param]
+      [gift_dropdown_text(pr), pr.to_param]
     }
   end
 
