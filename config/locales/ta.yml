@@ -125,34 +125,34 @@ ta:
         count: Latest %{language} Pull Requests (%{count} total)
 
   projects:
-    claim: Are any of the projects you suggested not listed? Claim them!
-    help_out: Can't think of a project to contribute to? We've collected a list of brilliant open source projects who would love your pull requests.
-    suggest_new: You can also suggest projects that should be added to the list, or add your own project if you would like some help with it.
-    filter_by_language: "Filter by Language:"
-    for_you: Suggested for you
+    claim: நீங்கள் கருத்து தெரிவித்த திட்டம் பெயர் விடுபட்டிருந்தால் அவர்களை கேளுங்கள்?
+    help_out: தங்களால் எந்த திட்டத்தில் பங்களிப்பது என்று முடிவு செய்ய இயலவில்லயா? நாங்கள் உஙக்ளுக்கு பொருத்தமான திட்டங்களை சேகரித்த்து வைத்துள்ளோம்.
+    suggest_new: பட்டியலில் சேர்ப்பதற்கான திட்டங்களை நீங்களும் கூறலாம் அல்லது தங்களது சொந்த திட்டங்களை பகிர்ந்து உங்களுக்கு தேவயான உதவிகளை பெற்றுக்கொள்ளலாம்.
+    filter_by_language: "மொழி மூலம் வடிகட்டி:"
+    for_you: உங்களுக்கான பரிந்துரை
     suggestion:
-      edit: Edit Suggestion
-      update: Update Project
-    suggest: There are no projects for that language yet, why not %{suggest_link}?
-    suggest_link_text: suggest one
+      edit: தொகுத்து அமைக்க கருத்து
+      update: திட்டம் மேம்படுத்தல்
+    suggest: அந்த மொழி திட்டங்கள் எதுவும் இல்‌லை. why not %{suggest_link}?
+    suggest_link_text: ஒன்றை பரிந்துரை செய்யவும்
     new:
-      title: Suggest a Project
+      title: திட்டம் பற்றி கருத்து தெரிவிக்கவும்
       info: One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We've selected our favorites, but we're always open to suggestions. Have some ideas? Share them below!
-      suggestion: Have a suggestion for this project? We're all ears! If there's something you'd like fixed, feel free to %{issue_link}.
-      issue_link_text: suggest an issue
+      suggestion: இந்த திட்டத்திற்கு தாங்கள் ஏதேனும் கருத்து கூற விரும்புகிறீர்களா? If there's something you'd like fixed, feel free to %{issue_link}.
+      issue_link_text: பிரச்சினை பற்றி கருத்து தெரிவிக்கவும்
 
       form:
-        project_name: Project Name
+        project_name: திட்டத்தின் பெயர்
         github_url: GitHub URL
-        summary: Summary
-        main_language: Main language
-        submit_project: Submit Project
+        summary: சுருக்கம்
+        main_language: முக்கிய மொழி
+        submit_project: திட்டத்தை சாம்ர்பிக்கவும்
 
     edit:
-      title: Edit Suggestion
+      title: தொகுத்து அமைக்க கருத்து
     admin:
-      title: Manage Projects
-      search: Search by GitHub repository
+      title: திட்டத்தை நிர்வகிக்கவும்
+      search: GitHub களஞ்சியத்‌தில் தேடவும்
 
   preferences:
       title: உங்கள் தனிப்பட்ட விருப்பங்களை அமைக்கவும்
@@ -184,12 +184,12 @@ ta:
       count: சமீபத்திய  Pull Requests (%{count} total)
 
   delete_account:
-    title: Delete your account
-    are_you_sure: We just wanted to make sure you really do wish to delete your account. This will remove your profile and all pull requests from the site, although any suggested projects will remain.
-    notification_info: If you simply want to stop receiving email notifications you can change your  %{email_preferences_link}.
-    email_preferences_link: email preferences
-    confirm: Confirm Deletion
-    cancel: I changed my mind, take me back!
+    title: உங்கள் கணக்கை நீக்கவிரும்பினால்
+    are_you_sure: உண்மையில் நீங்கள் உங்கள் கணக்கை நீக்க விரும்புகிறீர்கள். இந்த தளத்தில் இருந்து உங்கள் சுயவிவரம் மற்றும் அனைத்து மிகுதி கோரிக்கைகளை நீக்கும், என்றாலும் ஆலோசனை திட்டங்கள் இருக்கும்.
+    notification_info: நீங்கள் மின்னஞ்சல் அறிவிப்புகளை பெறுவதை நிறுத்த வேண்டும் என்றால் நீங்கள் உங்கள் %{email_preferences_link} மாற்ற முடியும்.
+    email_preferences_link: மின்னஞ்சல் முன்னுரிமை
+    confirm: நீக்கலை உறுதிப்படுத்து
+    cancel: என் மனதை நான் மாற்றிக்கொண்டேன். என்னை மீண்டும் எடுத்துகொள்!
 
   gifts:
     title: பரிசு அளிக்கப்பட்ட கோட்
