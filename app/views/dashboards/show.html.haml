@@ -17,8 +17,9 @@
 #spinner
   = image_tag "spinner.gif", :class => 'pull-right'
 
-%h3
-  =t("your_pull_requests")
+- unless pull_requests.empty?
+  %h3
+    =t("your_pull_requests")
 
 %div#pull-requests.clearfix
   = render :partial => 'pull_requests_if_any', :locals => { :pull_requests => pull_requests }
