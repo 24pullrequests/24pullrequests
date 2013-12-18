@@ -1,0 +1,255 @@
+zh_Hans:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              required_for_confirmation: "%{attribute}为必填项"
+              already_confirmed: "%{attribute}已经完成验证"
+  pull_request:
+    twitter_message: "我刚发起了一个合并请求(pull request)，来瞧瞧吧！ %{issue_url}"
+    download:
+      tooltip: "我们会每个小时检查一次大家的合并请求(pull request)，你也可以选择现在让我们检查并更新。"
+  twitter:
+    account_linked: "你的推特帐号已经成功绑定！我们会在你发起合并请求(pull request)时自动发一条信息。"
+    account_removed: "你的推特帐号已经成功断开绑定。"
+    link_account:
+      text: "与你的推特帐号绑定"
+      tooltip: "如果你绑定你的推特帐号，我们会在你发起合并请求(pull request)时自动发一条信息！"
+
+  navigation:
+    all_projects: 所有的项目
+    my_suggestions: 我建议的项目
+    dashboard: 仪表盘
+    profile: 个人信息
+    preferences: 偏好设置
+    gifted_code: 赠出的优码
+    manage_projects: 管理项目
+    logout: 注销
+
+  homepage:
+    title: "24 pull requests"
+    description: 用代码作圣诞礼物
+    about: "它是什么一回事呢？"
+    about_text: "<p>24 pull requests 是每年这个时候的一个倡议， 鼓励开发人员在世界各地的十二月每天发出合并请求(pull request)</p> <p>这个网站是为了宣传这个项目，它的意义，以及如何发出合并请求(pull request)s。</p><p>用你的GitHub帐号登录，我们就可以记录你的合并请求(pull request)。还可以推荐你感兴趣的项目。</p>"
+    greeting: "节日季来啦！"
+    give_to_open_source: 你在一整年当中一直受益于开源项目。现在是时候对那些项目的维护者说感谢，有一只小小鸟告诉我，他们喜欢接受你的合并请求(pull request)！
+    q_n_a: 问与答
+    badges:
+      title: 赢取Coderwall徽章
+      description: 我们已经联手与coderwall和创造了一些酷毙了的徽章，让大家来参与解锁。
+      involved_link: '参与者 - 积极参与活动，在圣诞节前发送至少一个合并请求(pull request)'
+      amazing: "连续同步 - 你真是一个开源机器，十二月份送出24份合并请求(pull request)"
+    involved:
+      title: 齐来参与
+      description: "有很多参与开源项目的途径：提高文档质量，帮助修复存在的议题(issues)和错误(bugs)，提高代码质量和测试覆盖率，或添加缺失的功能"
+      special_page: "我们准备了％ { contributing_path } ，在这里您可以找到有关的一些信息。"
+      contributing_path: 贡献指南
+      take_a_look: 如果你是刚接触开源，请看～
+    profile:
+      title: 构建您的个人资料
+      description: 参与开源项目，也是一个建立起您在社区的经历，提高您的简历的好方法。
+      getting_started: 这真的很容易上手。即使是很小的贡献对项目也有很大的价值。
+    join_the_chat: 参与IRC上的聊天 %{link_to_chat}， 在freenode 。
+
+  information:
+    title: "24 pull requests %{year} is upon us"
+    last_year_stats: "在 %{year}年， 的24天里， <b>%{developers}</b> 名开发者提交了 <b>%{pull_requests}</b> 次合并请求(pull request) 提供给 <b>%{projects}</b> 个不同的开源项目。"
+    get_ready: 准备好，24 pull requests %{year}！ 让我们再次做到这一切！
+    help_open_source: "还想要同时帮助其他开源项目吗？去看看这几个开源项目倡议吧："
+    codetriage: "感恩回馈开源，一次一个议题(issue)，CodeTriage与你同行。你会每天从你喜欢的项目那分配到一个议题（issue），并引导你越学越多，参与撰写大家日常所依赖的代码里。"
+    contribhub:
+      tagline: 你知道有一个非常酷的项目需要你的一些帮助（就像你的邻居那样）?ContribHub来告诉你！
+      description: ContribHub是一个GitHub上的应用，使用它可以更容易找到项目并贡献一臂之力，并围绕这个项目形成良好的社区。
+
+  merry_christmas: 圣诞快乐
+  follow_user: 跟随 @%{twitter}
+  sponsored_by: 主办单位
+  how_to_contribute: 如何贡献？
+  open_source_yey: 开源万岁！
+  welcome_back: 欢迎回来， %{user}
+  your_pull_requests: 你的合并请求(pull request)s
+  suggested_projects: 推荐项目
+  suggest_project: 推荐一个项目
+  no_suggestions: 你还咩有推荐过呢
+  preferred_languages: 首选语言
+  view_all: 查看全部
+  more: 更多
+  change: 编辑
+  clear: 清除
+  claim: 领取
+  exempli_gratia: "比如：" # Short form of "for example"
+  edit: 编辑
+  everything: 所有一切 
+  about_us: 关于
+  cancel: 取消
+  or: 或
+  search: 搜索
+
+  user:
+    grinchy_message: "在%{year}年，%{user}是一个圣诞怪杰。他发起了〇个合并请求(pull request)。 鸭蛋！"
+    pull_request_count: "在%{year}年， %{user} 一共发起了 %{count} 次合并请求(pull request)"
+    organisations: 一名成员
+    coderwall:
+      title:  Coderwall徽章
+      achieved_by: "赢取的徽章"
+      success: "成功更新了Coderwall的用户名！"
+      update_button: "更新"
+      error_no_user: "没有找到与这个用户名关联的帐号。"
+      error_github_not_connected: "账户 %{username} 在 Coderwall 和 24 pull requests 绑定的GitHub帐号不同"
+
+  developers_using_language: Developers using %{language}
+  developers_involved: Developers already involved
+
+  dashboard:
+    christmas_activity: 在这里，您可以看到所有圣诞节你的活动。
+    give_a_gift: 看起来你今天还没有赠送任何代码。你想现在去赠出一份代码吗？
+    # This is followed by a select-menu where you can pick one of your non-gifted 合并请求(pull request)s to gift
+    synchronize: 同步合并请求(pull request)
+    help_out: "想不出你想要参与的项目吗？我们帮您整理好了一些热门的项目："
+    no_pull_requests: 您还没有发送任何合并请求(pull request)， 你还等什么呢？！
+    gift_it: 赠与！
+
+  language:
+    projects_count: "%{count} %{language} 项目"
+    projects:
+      count: "%{count} 个项目使用 %{language}"
+      suggest: "建议一个 %{language} 的项目"
+    developers:
+      count: "%{count} 名开发者使用 %{language}"
+    pull_requests:
+      latest:
+        count: 最新的 %{language} 合并请求(pull request)有 (%{count} 次)
+
+  projects:
+    claim: 有哪些你建立的项目没有列出来？快来认领他们吧！
+    help_out: 不出你想要参与的项目吗？我们帮您整理好了一些热门的项目等待你的加入！
+    suggest_new: 你可以建议你支持的项目，也可以把你自己需要帮助的项目列上去。
+    filter_by_language: "按语言分类:"
+    for_you: 给您准备的推荐
+    suggestion:
+      edit: 编辑
+      update: 更新项目
+    suggest: 还没有这个语言的项目呢，推荐一个 %{suggest_link}?
+    suggest_link_text: 推荐一个
+    new:
+      title: 推荐一个项目
+      info: 一个鼓励大家参与开源社区的方法是让大家知道哪些热门项目值得大家一起参与。按照这个标准我们选择一些项目。如果您有想法，和我们一起分享吧！ 
+      suggestion: 对项目有建议? 我们洗耳恭听! 如果你有想要建议的地方，请提出 %{issue_link}。
+      issue_link_text: 建议一个议题(issue)
+
+      form:
+        project_name: 项目名称
+        github_url: GitHub 链接
+        summary: 简单总结
+        main_language: 主要使用的编程语言
+        submit_project: 提交
+
+    edit:
+      title: 编辑建议
+    admin:
+      title: 管理项目
+      search: 搜索GitHub的代码库
+
+  preferences:
+      title: 设置您的个人喜好
+      frequency_message:  在项目结束前，我们会根据您所选择的频率，给您发送邮件，推荐一些您可能感兴趣的项目。如果您允许，我们已经根据您在GitHub的代码库得出您喜好的语言（您可以在下面修改）。
+      delete: "想要删除您的帐号？"
+      information: 你可以在之后修改您接收邮件的偏好设置
+      twitter: 推特帐号
+      languages: 您知道哪些编程语言？
+      remove: 删除帐号
+      save_and_continue: 保存并继续
+      coderwall: 与您的coderwall帐号绑定，在您的coderwall帐号上显示徽章
+      coderwall_username: "Coderwall用户名"
+
+      form:
+        email: 邮件
+        email_frequency: 发送频率
+        never: 从不
+        daily: 每天
+        weekly: 每周
+
+      hint:
+        confirm_email: 请用我们发给您邮箱的链接确认邮箱。
+
+  pull_requests:
+    count: "%{count} 次合并请求(pull request) 被发起!"
+    language:
+      count: "%{count} 次合并请求(pull request) 使用 %{language}!"
+    latest:
+      count: 最新的 合并请求(pull request) (总共 %{count} 次)
+
+  delete_account:
+    title: 删除您的帐号
+    are_you_sure: 请确认删除帐号。删除您的帐号会删除您的用户信息，和所有在本站发去的合并请求(pull request)，不过您建议的项目会得到保存。
+    notification_info: 如果您不想接收到邮件提醒，您可以改变设置： %{email_preferences_link}。
+    email_preferences_link: 邮件偏好
+    confirm: 确认删除
+    cancel: 我改变主意了
+
+  gifts:
+    title: 赠出的代码
+    description: 在这里管理您的合并请求(pull request)并且选择&amp;描述你的"24 pull requests"。
+    view_your_gifts: 你所有赠出的代码都会显示在您的%{calendar_link}。
+    calendar_link: 公共日历
+    none: 没有赠出什么东西…
+    give: 献给你爱的项目一点东西…代码
+
+    form:
+      date: 日期
+      pull_requests: 合并请求(pull request)
+      tweet: 发推说说你的合并请求(pull request)
+      gift_it: "赠与！"
+
+  collaborators:
+    title: 主要贡献者
+
+  about:
+    title: 关于 24 pull requests
+    description: 24 pull requests 是一个在12月份促进开源合作的小小项目。
+    idea: 想法很简单， "在12月到圣诞节之前的每一天发出合并请求(pull request)"， 鼓励开发者在这段时间回馈开源社区。
+    more_info: 这个小站也提供一些值得参与的项目，一些指南，并且展示每天哪些出色的合并请求(pull request)。
+    on_github: "这个小站的开发也是开源的寄存在GitHub上："
+    on_twitter: "我们也在推特上："
+    sponsors:
+      title: 支持和帮助
+      details: 24 pull requests 接受了他们的支持和帮助。
+      thanks: "特别感谢。。。"
+      get_in_touch: "咨询赞助事宜，请邮件联系："
+
+  organisations:
+    title: "%{count} 个组织参与"
+    pull_requests: "%{count} 次合并请求(pull request)由成员发起"
+    members:
+      one: "一名成员"
+      other: "%{count} 名成员"
+    languages: 编程语言
+
+  suggestions:
+    title: 我的建议
+
+  api:
+    title: JSON API
+    description: 你可能不知到，24 pull requests有JSON API，描述如下。
+    pagination:
+      title: Pagination
+      details: 返回多个条目的请求默认以99条分页，您可以在 ?page 参数修改。
+    callback:
+      title: JSON-P Callbacks
+      details: 您可以发送一个带有 ?callback 参数的发给任何 GET 请求，得到包装在函数里的结果。这主要用来解决跨域名的问题。（返回与平时相同）
+    projects:
+      title: Projects
+      details: 所有站点上的项目信息，按字母表排序。
+    pull_requests:
+      title: Pull Requests
+      details: 在12月份当之所有的合并请求(pull request)，按照时间排序（包含用户）
+    users:
+      title: Users
+      details: 所有注册用户，按照他们今年合并请求(pull request)数量排序， 同时包含他们的组织信息和合并请求(pull request)信息。
+      specific: 一个指定用户的信息。
+    organisations:
+      title: Organisations
+      details: 所有注册组织，包括组织的成员。
+      specific: 一个指定组织的信息。
