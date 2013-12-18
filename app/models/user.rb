@@ -209,6 +209,10 @@ class User < ActiveRecord::Base
     @collaborator ||= User.collaborators.include?(self)
   end
 
+  def self.users_with_pull_request_counts pull_request_year
+    joins(:pull_requests).where('EXTRACT(year FROM pull_requests.created_at) = ?', pull_request_year).select("users.*, COUNT(pull_requests.id) as pull_requests_count").group("users.id")
+  end
+
   private
 
   def check_email_changed

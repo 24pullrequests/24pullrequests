@@ -37,8 +37,7 @@ module Tfpullrequests
 
     config.i18n.default_locale = :en
     config.i18n.fallbacks = true
-    config.i18n.available_locales = [ :en, :el, :es, :pt_br, :fi, :fr, :de, :ru, :uk, :th, :it, :nb, :ta, :zh_Hans, :zh_Hant ]
-
+    config.i18n.available_locales = [ :en, :el, :es, :pt_br, :fi, :fr, :de, :ru, :uk, :th, :it, :nb, :ta, :tr, :zh_Hans, :zh_Hant ]
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
@@ -66,7 +65,7 @@ module Tfpullrequests
 
     I18n.config.enforce_available_locales = false
 
-    # Memoize at boot up to prevent github's rate limiting. This should work
+    # Memoize at boot up to prevent GitHub's rate limiting. This should work
     # fine for now.
     config.collaborators = begin
       Octokit.collaborators('andrew/24pullrequests')
