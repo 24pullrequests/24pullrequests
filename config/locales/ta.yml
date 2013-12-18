@@ -102,7 +102,7 @@ ta:
       error_no_user: "இந்த பெயரைக்கொண்ட நபர் எவரும் இங்கு இல்லை"
       error_github_not_connected: "24 Pull Requests-இல் நீங்கள் இணைத்த GitHub கணக்கு, %{username} என்ற பெயரைக்கொண்ட Coderwall கணக்கில் இணைக்கப்படவில்லை"
 
-  developers_using_language: %{language} பயன்படுத்தும் நிரலர்கள்
+  developers_using_language: "%{language} பயன்படுத்தும் நிரலர்கள்"
   developers_involved: ஈடுபாடான நிரலர்கள்
 
   dashboard:
