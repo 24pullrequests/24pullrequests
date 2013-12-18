@@ -3,8 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #skills {
-  .form-group {
+  .col-sm-3 {
     text-align: right;
+    margin-bottom: 15px;
+
+    .control-label {
+      float: right;
+    }
   }
   label {
     padding: 0

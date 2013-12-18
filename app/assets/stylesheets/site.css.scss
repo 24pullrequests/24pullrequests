@@ -359,7 +359,7 @@ footer {
   }
   &.users-homepage {
     @media (min-width: $screen-lg-min){
-      .user:last-child {
+      .user:last-child, .organisation:last-child {
         display: none;
       }
     }

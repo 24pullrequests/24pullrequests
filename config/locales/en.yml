@@ -40,7 +40,7 @@ en:
       title: Earn Coderwall badges
       description: We've teamed up with coderwall and created some kickass badges to unlock for participating.
       involved_link: 'Participant - Get involved, send at least one pull request before Christmas'
-      amazing: "Continuous Sync - You're an open source machine, send 24 pull requests during December"
+      amazing: "Continuous Sync - You're an open source machine, send 24 pull requests during December, before Christmas"
     involved:
       title: Get involved
       description: "There are loads of ways to get involved in an open source project: improving documentation, helping fix existing issues and bugs, improving code quality and test coverage, or adding missing features."
@@ -104,7 +104,7 @@ en:
 
   dashboard:
     christmas_activity: This is where you can see all the activity we've tracked for you in the run up to Christmas.
-    give_a_gift: Looks like you haven't gifted any code today. Would you like to gift # This is followed by a select-menu where you can pick one of your non-gifted pull requests to gift
+    give_a_gift: Looks like you haven't gifted any code today. Would you like to gift your new pull requests? # This is followed by a select-menu where you can pick one of your non-gifted pull requests to gift
     synchronize: Synchronize Pull Requests
     help_out: "Can't think of a project you'd like to help contribute to? We've put together a list of popular projects:"
     no_pull_requests: You've not sent any pull requests, what are you waiting for?!
@@ -219,7 +219,7 @@ en:
       get_in_touch: "If you'd like to get in touch about sponsorship or anything else, drop us an email:"
 
   organisations:
-    title: "%{count} organizations involved"
+    title: "%{count} organisations involved"
     pull_requests: "%{count} pull requests submitted by members"
     members:
       one: "1 Member"
