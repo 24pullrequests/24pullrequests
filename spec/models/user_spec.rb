@@ -11,10 +11,42 @@ describe User do
 
   describe 'callbacks' do
     describe 'before_save' do
-      it 'checks if the email address changed' do
-        new_user = build :user
-        new_user.should_receive(:check_email_changed)
-        new_user.save
+      describe '.check_email_changed' do
+        subject { build :user }
+
+        it 'is called if email changed' do
+          subject.should_receive(:check_email_changed)
+          subject.save
+        end
+
+        context 'email is present' do
+          it 'generates a confirmation token' do
+            subject.should_receive(:generate_confirmation_token)
+            subject.save
+          end
+
+          it 'sends a confirmation email' do
+            ConfirmationMailer.should_receive(:confirmation).and_return double("ConfirmationMailer", deliver: true)
+            subject.save
+          end
+        end
+
+        context 'email is blank' do
+          before do
+            subject.save
+            subject.email = nil
+          end
+
+          it 'doesnt generate a confirmation token' do
+            subject.should_not_receive(:generate_confirmation_token)
+            subject.save
+          end
+
+          it 'doesnt send a confirmation email' do
+            ConfirmationMailer.should_not_receive(:confirmation)
+            subject.save
+          end
+        end
       end
     end
   end
