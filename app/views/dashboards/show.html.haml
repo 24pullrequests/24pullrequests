@@ -12,10 +12,7 @@
 
 = link_to t('twitter.link_account.text'), '/auth/twitter', :class => 'btn btn-info pull-right',
   rel: 'tooltip', title: t('twitter.link_account.tooltip') unless current_user.twitter_linked?
-= link_to t("dashboard.synchronize"), pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn pull-right', :rel => 'tooltip', :title => t('pull_request.download.tooltip')
-
-#spinner
-  = image_tag "spinner.gif", :class => 'pull-right'
+= link_to "#{image_tag('spinner.gif', :id => 'spinner')} #{t('dashboard.synchronize')}".html_safe, pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn pull-right', :rel => 'tooltip', :title => t('pull_request.download.tooltip')
 
 - unless pull_requests.empty?
   %h3
