@@ -11,16 +11,16 @@ gem 'omniauth-github'
 gem 'omniauth-twitter'
 gem 'haml-rails'
 gem 'octokit'
-gem 'bugsnag', '1.6.3'
+gem 'bugsnag', '1.6.5'
 gem 'rabl'
 gem 'newrelic_rpm'
 gem 'simplecov'
 gem 'kaminari'
-gem 'twitter', '5.0.0'
+gem 'twitter', '5.2.0'
 gem 'anjlab-bootstrap-rails', '~> 3.0.3.0', :require => 'bootstrap-rails'
-gem 'simple_form', '3.0.0'
+gem 'simple_form', '3.0.1'
 gem 'rack-google-analytics'
-gem 'ffi', '1.9.0'
+gem 'ffi', '1.9.3'
 gem 'csv_shaper'
 
 
@@ -56,7 +56,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'poltergeist', '~> 1.4.0'
+  gem 'poltergeist', '~> 1.5.0'
   gem 'launchy', '2.4.2'
 
   gem 'database_cleaner'
