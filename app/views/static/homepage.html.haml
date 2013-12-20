@@ -17,7 +17,7 @@
     - unless logged_in?
       %p
         = link_to login_path, :class => 'btn btn-default' do
-          % image_tag("github_icon.png")
+          = image_tag("github_icon.png")
           %strong Log in with GitHub
       %hr
     = render :partial => 'shared/social_buttons'
