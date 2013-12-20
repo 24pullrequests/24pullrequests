@@ -6,6 +6,14 @@ FactoryGirl.define do
     "email#{n}@factory.com"
   end
 
+  sequence :user_name do |n|
+    "#{Faker::Internet.user_name}#{n}"
+  end
+
+  sequence :integer_id do |n|
+    n
+  end
+
   factory :user do
     uid { SecureRandom.hex }
     provider 'github'
@@ -46,7 +54,7 @@ FactoryGirl.define do
   end
 
   factory :organisation do
-    github_id { Faker::Lorem.word }
-    login { Faker::Lorem.word }
+    github_id { generate(:integer_id) }
+    login { generate(:user_name) }
   end
 end
