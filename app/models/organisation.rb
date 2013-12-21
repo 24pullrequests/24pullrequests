@@ -15,6 +15,10 @@ class Organisation < ActiveRecord::Base
 
       where(:login => response.login).first_or_create(params)
     end
+
+    def with_user_counts
+      joins(:users).select("organisations.*, COUNT(users.id) as users_count").group("organisations.id")
+    end
   end
 
   def active_languages
