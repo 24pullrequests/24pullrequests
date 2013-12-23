@@ -47,7 +47,7 @@ class PullRequest  < ActiveRecord::Base
       user.twitter.update(I18n.t 'pull_request.twitter_message', :issue_url => issue_url) if user && user.twitter_linked?
     rescue => e
       puts e.inspect
-      puts 'likely a Twitter api error occurred'
+      puts 'likely a Twitter API error occurred'
     end
   end
 
