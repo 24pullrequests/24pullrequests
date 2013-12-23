@@ -30,7 +30,7 @@ class PullRequestDownloader
       end
     rescue => e
       puts e.inspect
-      puts 'Pull requests: likely a Github api error occurred'
+      puts 'Pull requests: likely a GitHub API error occurred'
       []
     end
   end
@@ -43,7 +43,7 @@ class PullRequestDownloader
       end
     rescue e
       puts e.inspect
-      puts 'Organisation error: likely a Github api error occurred'
+      puts 'Organisation error: likely a GitHub API error occurred'
       []
     end
   end
