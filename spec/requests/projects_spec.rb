@@ -65,6 +65,16 @@ describe 'Projects' do
           page.should have_css('.java')
         end
       end
+
+      it 'should retain selected filters when requesting more pages' do
+        30.times do |i|
+          create :project, name: "Ruby project #{i}", main_language: 'Ruby'
+        end
+        visit projects_path
+
+        click_on 'More'
+        all('#projects project').each{|project| project .should have_css('ruby') }
+      end
     end
   end
 
