@@ -1,0 +1,27 @@
+.alert.alert-info
+  %h2 24 Pull Requests is finished for this year
+  %p
+    In 2013, over 24 days,
+    %b= contributors_in(2013)
+    developers submitted
+    %b= pull_requests_in(2013)
+    pull requests to
+    %b= projects_in(2013)
+    different open source projects.
+
+  %p Merry Christmas and see you all next year when we do it all again!
+  %hr
+  %p=t("information.help_open_source")
+
+  %h4= link_to 'CodeTriage', 'http://www.codetriage.com/'
+
+  %p=t("information.codetriage")
+
+  %h4= link_to 'CodeMontage', 'http://codemontage.com/'
+
+  %p Give forward by contributing to open source, social good projects that benefit organizations making a difference in the world.
+
+  %h4= link_to 'ContribHub', 'http://contribhub.com/'
+
+  %p=t("information.contribhub.tagline")
+  %p=t("information.contribhub.description")
