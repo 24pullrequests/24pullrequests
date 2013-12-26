@@ -31,6 +31,10 @@ class PullRequest  < ActiveRecord::Base
         :language       => json['repo']['language']
       }
     end
+
+    def in_date_range?
+      EARLIEST_PULL_DATE < Time.now && Time.now < LATEST_PULL_DATE
+    end
   end
 
   def check_state
