@@ -12,7 +12,7 @@ class PullRequest  < ActiveRecord::Base
   scope :latest, -> (limit) { order('created_at desc').limit(limit) }
 
   EARLIEST_PULL_DATE = Date.parse("01/12/#{CURRENT_YEAR}").midnight
-  LATEST_PULL_DATE   = Date.parse("01/01/#{CURRENT_YEAR+1}").midnight
+  LATEST_PULL_DATE   = Date.parse("25/12/#{CURRENT_YEAR}").midnight
 
   class << self
     def create_from_github(json)
