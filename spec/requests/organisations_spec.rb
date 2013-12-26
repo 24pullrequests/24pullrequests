@@ -12,7 +12,7 @@ describe 'Organisations' do
 
   it "viewing an organization" do
     organisation = create(:organisation)
-    sleep 0.05
+    sleep 1
     visit organisation_path(organisation)
 
     should have_content "0 pull requests submitted by members"
