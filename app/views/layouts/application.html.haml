@@ -81,6 +81,7 @@
 
     %article#main.container{role: :main}
       .row
+        = render :partial => 'finished'
         .col-md-12
           - if flash.any?
             .messages
