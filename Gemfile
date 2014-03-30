@@ -24,7 +24,7 @@ gem 'ffi', '1.9.0'
 gem 'csv_shaper'
 
 
-gem 'sass-rails'
+gem 'sass-rails', '~> 4.0.0'
 gem 'coffee-rails'
 gem 'uglifier'
 
