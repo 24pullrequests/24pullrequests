@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_year
-    @year ||= (params[:year].try(:to_i) || Time.now.year)
+    @year ||= (params[:year].try(:to_i) || CURRENT_YEAR)
   end
 
   def current_user

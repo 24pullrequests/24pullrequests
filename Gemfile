@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby "2.0.0"
+ruby "2.1.1"
 
-gem 'rails', '4.0.2'
+gem 'rails', '4.0.5'
 
 gem 'jquery-rails'
 
@@ -18,13 +18,13 @@ gem 'simplecov'
 gem 'kaminari'
 gem 'twitter', '5.0.0'
 gem 'anjlab-bootstrap-rails', '~> 3.0.3.0', :require => 'bootstrap-rails'
-gem 'simple_form', '3.0.0'
+gem 'simple_form'
 gem 'rack-google-analytics'
 gem 'ffi', '1.9.0'
 gem 'csv_shaper'
 
 
-gem 'sass-rails'
+gem 'sass-rails', '~> 4.0.0'
 gem 'coffee-rails'
 gem 'uglifier'
 
