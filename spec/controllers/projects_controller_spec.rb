@@ -46,11 +46,11 @@ describe ProjectsController do
     end
       
     it 'should do only return filter projects' do
-      get :filter, {:format => :js, :project => {:languages => ["Ruby"]}}
+      xhr :get, :filter, {:format => :js, :project => {:languages => ["Ruby"]}}
       expect(assigns(:projects).size).to eq 5
       expect(assigns(:projects).map{|p| p.main_language}.uniq).to eq ["Ruby"]
       
-      get :filter, {:format => :js, :project => {:languages => ["JavaScript", "Lua"]}}
+      xhr :get, :filter, {:format => :js, :project => {:languages => ["JavaScript", "Lua"]}}
       expect(assigns(:projects).size).to eq 7
       expect(assigns(:projects).map{|p| p.main_language}.uniq).to include "JavaScript", "Lua"
     end
