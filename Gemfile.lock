@@ -91,7 +91,7 @@ GEM
     csv_shaper (1.0.0)
       activesupport (>= 3.0.0)
     daemons (1.1.9)
-    dalli (2.7.0)
+    dalli (2.7.2)
     database_cleaner (1.2.0)
     debug_inspector (0.0.2)
     descendants_tracker (0.0.3)
