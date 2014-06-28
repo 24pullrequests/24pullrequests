@@ -209,34 +209,6 @@ describe User do
     end
   end
 
-  describe '.send_notification_mail' do
-    subject { user }
-
-    before do
-      subject.update_attribute(:email_frequency, 'daily')
-    end
-
-    context 'email unconfirmed' do
-      it 'doesnt send the notification email' do
-        ReminderMailer.should_not_receive(:daily)
-
-        subject.send_notification_email
-      end
-    end
-
-    context 'email confirmed' do
-      it 'sends the notification email' do
-        stub_mailer = double(ReminderMailer)
-        stub_mailer.stub(:deliver)
-
-        ReminderMailer.should_receive(:daily).and_return(stub_mailer)
-
-        subject.confirm!
-        subject.send_notification_email
-      end
-    end
-  end
-
   describe '.estimate_skills' do
     ENV['GITHUB_KEY'] = 'foobar'
     let(:github_client) { double('github client') }
