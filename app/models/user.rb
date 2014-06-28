@@ -168,10 +168,11 @@ class User < ActiveRecord::Base
   end
 
   def new_gift(attrs={})
-    gift = gift_factory.call(attrs)
-    gift.date ||= closest_free_gift_date
-    gift.user = self
-    gift
+    GiftFactory.create!(self, gift_factory, attrs)
+  end
+
+  def gift_factory
+    @gift_factory ||= Gift.public_method(:new)
   end
 
   def gift_for(date)
@@ -214,11 +215,6 @@ class User < ActiveRecord::Base
     pull_requests.reject{|pr| gifted_pull_requests.include?(pr) }
   end
 
-  def closest_free_gift_date
-    last_gift = self.gifts.last
-    last_gift.nil? ? PullRequest::EARLIEST_PULL_DATE : last_gift.date + 1.day
-  end
-
   def is_collaborator?
     @collaborator ||= User.collaborators.include?(self)
   end
@@ -258,9 +254,5 @@ class User < ActiveRecord::Base
       :email => email,
       :gravatar_id => gravatar_id
     }
-  end
-
-  def gift_factory
-    @gift_factory ||= Gift.public_method(:new)
   end
 end
