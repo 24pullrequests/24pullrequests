@@ -160,17 +160,11 @@ class User < ActiveRecord::Base
   end
 
   def download_user_organisations(access_token = token)
-    pull_request_downloader(access_token).user_organisations.each do |o|
-      organisation = Organisation.create_from_github(o)
-      organisation.users << self unless organisation.users.include?(self)
-      organisation.save
-    end
+    Downloader.new(self, access_token).get_organisations
   end
 
   def download_pull_requests(access_token = token)
-    pull_request_downloader(access_token).pull_requests.each do |pr|
-      pull_requests.create_from_github(pr) unless pull_requests.find_by_issue_url(pr['payload']['pull_request']['_links']['html']['href'])
-    end
+    Downloader.new(self, access_token).get_pull_requests
   end
 
   def twitter
@@ -208,10 +202,6 @@ class User < ActiveRecord::Base
     self.confirmed_at = nil
 
     ConfirmationMailer.confirmation(self).deliver
-  end
-
-  def pull_request_downloader(access_token = token)
-    Rails.application.config.pull_request_downloader.call(nickname, access_token)
   end
 
   def self.extract_info(hash)
