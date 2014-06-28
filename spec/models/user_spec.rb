@@ -240,27 +240,17 @@ describe User do
     end
   end
 
-  describe '.download_pull_requests' do
-    let(:downloader)    { double('downloader') }
+  describe '.download_pull_requests', wip: true do
+    let(:downloader)    { double('downloader', get_organisations: nil) }
     let(:pull_request)  { mock_pull_request }
 
-    before do
-      downloader.should_receive(:pull_requests).and_return([pull_request])
-      user.stub(:pull_request_downloader).and_return(downloader)
+    before(:each) do
+      Downloader.should_receive(:new).and_return(downloader)
+      downloader.should_receive(:get_pull_requests)
+
       user.download_pull_requests
     end
 
-    subject { user.pull_requests }
-
-    context 'when the pull request does not already exist' do
-      its(:length) { should eq 1 }
-    end
-
-    context 'when the pull request already exists' do
-      it { should_receive(:create).never }
-
-      its(:length) { should eq 1 }
-    end
   end
 
   describe '.pull_requests_count' do
