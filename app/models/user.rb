@@ -89,8 +89,7 @@ class User < ActiveRecord::Base
 
   def estimate_skills
     if ENV['GITHUB_KEY'].present?
-      languages = github_client.repos.map(&:language).uniq.compact
-      (Project::LANGUAGES & languages).each do |language|
+      (Project::LANGUAGES & repo_languages).each do |language|
         skills.create(:language => language)
       end
     end
@@ -224,6 +223,10 @@ class User < ActiveRecord::Base
   end
 
   private
+
+  def repo_languages
+    @repo_languages ||= github_client.repos.map(&:language).uniq.compact
+  end
 
   def check_email_changed
     return unless self.email_changed? && self.email.present?
