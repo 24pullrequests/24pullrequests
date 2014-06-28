@@ -1,6 +1,6 @@
 # 24 Pull Requests
 
-[![Build Status](https://travis-ci.org/24pullrequests/24pullrequests.svg?branch=master)](https://travis-ci.org/24pullrequests/24pullrequests)[![Dependency Status](https://gemnasium.com/andrew/24pullrequests.svg)](https://gemnasium.com/andrew/24pullrequests) [![Code Climate](http://img.shields.io/codeclimate/github/andrew/24pullrequests.svg)](https://codeclimate.com/github/andrew/24pullrequests) [![Coverage Status](http://img.shields.io/coveralls/andrew/24pullrequests.svg)](https://coveralls.io/r/andrew/24pullrequests)
+[![Build Status](https://travis-ci.org/24pullrequests/24pullrequests.svg?branch=master)](https://travis-ci.org/24pullrequests/24pullrequests)[![Dependency Status](https://gemnasium.com/andrew/24pullrequests.svg)](https://gemnasium.com/24pullrequests/24pullrequests) [![Code Climate](https://codeclimate.com/github/24pullrequests/24pullrequests.png)](https://codeclimate.com/github/24pullrequests/24pullrequests) [![Coverage Status](http://img.shields.io/coveralls/andrew/24pullrequests.svg)](https://coveralls.io/r/andrew/24pullrequests)
 
 “Giving back little gifts of code”
 
