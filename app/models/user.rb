@@ -97,16 +97,16 @@ class User < ActiveRecord::Base
   end
 
   def award_coderwall_badges
-    conn = Faraday.new(:url => 'https://coderwall.com')
-    api_key = ENV['CODERWALL_API_KEY']
-    return unless api_key.present?
+    coderwall = Coderwall.new
+
+    return unless coderwall.configured?
+
     if self.pull_requests.year(CURRENT_YEAR).any?
-      payload = {github:self.coderwall_username, badge:"TwentyFourPullRequestsParticipant#{CURRENT_YEAR}", date:"12/25/#{CURRENT_YEAR}", api_key:api_key}
-      resp = conn.post '/award', payload.to_json, 'Content-Type' => 'application/json', :accept => 'application/json'
+      coderwall.award_badge(self.coderwall_username, Coderwall::PARTICIPANT)
     end
+
     if self.pull_requests.year(CURRENT_YEAR).length > 23
-      payload = {github:self.coderwall_username, badge:"TwentyFourPullRequestsContinuous#{CURRENT_YEAR}", date:"12/25/#{CURRENT_YEAR}", api_key:api_key}
-      resp = conn.post '/award', payload.to_json, 'Content-Type' => 'application/json', :accept => 'application/json'
+      coderwall.award_badge(self.coderwall_username, Coderwall::CONTINUOUS)
     end
   end
 
