@@ -142,30 +142,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  def send_notification_email
-    return unless confirmed?
-    if send_daily?
-      ReminderMailer.daily(self).deliver
-    elsif send_weekly?
-      ReminderMailer.weekly(self).deliver
-    else
-      return
-    end
-    update_attribute(:last_sent_at, Time.now.utc)
-  end
-
-  def send_daily?
-    if email_frequency == 'daily'
-      last_sent_at.nil? || last_sent_at < 23.hours.ago
-    end
-  end
-
-  def send_weekly?
-    if email_frequency == 'weekly'
-      last_sent_at.nil? || last_sent_at < (6.days + 23.hours).ago
-    end
-  end
-
   def new_gift(attrs={})
     GiftFactory.create!(self, gift_factory, attrs)
   end
@@ -179,7 +155,7 @@ class User < ActiveRecord::Base
   end
 
   def send_regular_emails?
-    ['daily', 'weekly'].include? email_frequency
+    ['daily', 'weekly'].include?(email_frequency)
   end
 
   def to_param
