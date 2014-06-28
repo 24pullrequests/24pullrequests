@@ -123,16 +123,13 @@ class User < ActiveRecord::Base
 
   def confirm!
     if email.present? && !confirmed?
-      self.confirmation_token = nil
-      self.confirmed_at = Time.now.utc
-      save
+      return update_attributes(confirmation_token: nil, confirmed_at: Time.now.utc)
     elsif confirmed?
       errors.add(:email, :already_confirmed)
-      false
     else
       errors.add(:email, :required_for_confirmation)
-      false
     end
+    false
   end
 
   def generate_confirmation_token
