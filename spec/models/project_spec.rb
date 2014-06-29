@@ -68,11 +68,11 @@ describe Project do
 
     it "retrieves github issues that have been active in the last 6 months" do
       date = (Time.now-6.months).utc.iso8601
-      github_client = double(:github_client)
+      client = double(:github_client)
+      GithubClient.should_receive(:new).with("username", "token").and_return(client)
+      client.should_receive(:issues)
 
-      github_client.should_receive(:issues).with(project.github_repository, since: date)
-
-      project.issues(github_client)
+      project.issues("username", "token")
     end
 
   end
