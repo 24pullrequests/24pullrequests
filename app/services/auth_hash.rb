@@ -48,5 +48,4 @@ class AuthHash
   def token
     user_hash.fetch('credentials', {}).fetch('token')
   end
-
 end
