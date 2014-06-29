@@ -26,17 +26,17 @@ class User < ActiveRecord::Base
   end
 
   def self.create_from_auth_hash(hash)
-    create!(extract_info(hash))
+    create!(AuthHash.new(hash).user_info)
   end
 
   def assign_from_auth_hash(hash)
     # do not update the email address in case the user has updated their
     # email prefs and used a new email
-    update_attributes(self.class.extract_info(hash).except(:email))
+    update_attributes(AuthHash.new(hash).user_info.except(:email))
   end
 
   def self.find_by_auth_hash(hash)
-    conditions = extract_info(hash).slice(:provider, :uid)
+    conditions = AuthHash.new(hash).user_info.slice(:provider, :uid)
     where(conditions).first
   end
 
@@ -203,21 +203,4 @@ class User < ActiveRecord::Base
     ConfirmationMailer.confirmation(self).deliver
   end
 
-  def self.extract_info(hash)
-    provider    = hash.fetch('provider')
-    uid         = hash.fetch('uid')
-    nickname    = hash.fetch('info',{}).fetch('nickname')
-    email       = hash.fetch('info',{}).fetch('email', nil)
-    gravatar_id = hash.fetch('extra',{}).fetch('raw_info',{}).fetch('gravatar_id', nil)
-    token       = hash.fetch('credentials', {}).fetch('token')
-
-    {
-      :provider => provider,
-      :token => token,
-      :uid => uid,
-      :nickname => nickname,
-      :email => email,
-      :gravatar_id => gravatar_id
-    }
-  end
 end
