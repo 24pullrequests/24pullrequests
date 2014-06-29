@@ -113,7 +113,7 @@ class User < ActiveRecord::Base
   end
 
   def github_client
-    @github_client ||= Octokit::Client.new(:login => nickname, :access_token => token, :auto_paginate => true)
+    @github_client ||= GithubClient.new(nickname, token)
   end
 
   def confirmed?
@@ -191,7 +191,7 @@ class User < ActiveRecord::Base
   private
 
   def repo_languages
-    @repo_languages ||= github_client.repos.map(&:language).uniq.compact
+    @repo_languages ||= github_client.user_repository_languages
   end
 
   def check_email_changed

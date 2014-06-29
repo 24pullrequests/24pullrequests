@@ -211,13 +211,11 @@ describe User do
 
   describe '.estimate_skills' do
     ENV['GITHUB_KEY'] = 'foobar'
-    let(:github_client) { double('github client') }
-    let(:repos) { Project::LANGUAGES.sample(3).map { |l| Hashie::Mash.new(:language => l) } }
+    let(:repo_languages) { Project::LANGUAGES.sample(3) }
 
     before do
       User.any_instance.unstub(:estimate_skills)
-      User.any_instance.stub(:github_client).and_return(github_client)
-      github_client.should_receive(:repos).and_return(repos)
+      User.any_instance.stub(:repo_languages).and_return(repo_languages)
     end
 
     subject { user }

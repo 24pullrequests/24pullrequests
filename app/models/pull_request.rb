@@ -38,12 +38,8 @@ class PullRequest  < ActiveRecord::Base
   end
 
   def check_state
-    issue = fetch_data
+    issue = GithubClient.new(user.nickname, user.token).issue(repo_name, id)
     self.update_attributes(state: issue.state, comments_count: issue.comments)
-  end
-
-  def fetch_data
-    user.github_client.issue(repo_name, id)
   end
 
   def post_tweet
