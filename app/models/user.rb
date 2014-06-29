@@ -53,8 +53,7 @@ class User < ActiveRecord::Base
   end
 
   def change_coderwall_username!(username)
-    self.coderwall_user_name = username
-    self.save!
+    update_attributes!(coderwall_user_name: username)
   end
 
   def authorize_twitter!(nickname, token, secret)
