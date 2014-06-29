@@ -52,11 +52,11 @@ class PullRequest  < ActiveRecord::Base
   end
 
   def gifted_state
-    gifts.size > 0 ? :gifted : :not_gifted
+    gifts.any? ? :gifted : :not_gifted
   end
 
   def autogift
-    if body && body.scan(/24 ?pull ?request/i).size > 0
+    if body && body.scan(/24 ?pull ?request/i).any?
       user.new_gift(pull_request: self).save
     end
   end
