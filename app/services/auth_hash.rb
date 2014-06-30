@@ -25,7 +25,6 @@ class AuthHash
   end
 
   def provider
-    puts user_hash.inspect
     user_hash.fetch('provider')
   end
 
