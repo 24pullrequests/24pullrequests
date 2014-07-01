@@ -26,17 +26,17 @@ class User < ActiveRecord::Base
   end
 
   def self.create_from_auth_hash(hash)
-    create!(extract_info(hash))
+    create!(AuthHash.new(hash).user_info)
   end
 
   def assign_from_auth_hash(hash)
     # do not update the email address in case the user has updated their
     # email prefs and used a new email
-    update_attributes(self.class.extract_info(hash).except(:email))
+    update_attributes(AuthHash.new(hash).user_info.except(:email))
   end
 
   def self.find_by_auth_hash(hash)
-    conditions = extract_info(hash).slice(:provider, :uid)
+    conditions = AuthHash.new(hash).user_info.slice(:provider, :uid)
     where(conditions).first
   end
 
@@ -53,8 +53,7 @@ class User < ActiveRecord::Base
   end
 
   def change_coderwall_username!(username)
-    self.coderwall_user_name = username
-    self.save!
+    update_attributes!(coderwall_user_name: username)
   end
 
   def authorize_twitter!(nickname, token, secret)
@@ -89,24 +88,23 @@ class User < ActiveRecord::Base
 
   def estimate_skills
     if ENV['GITHUB_KEY'].present?
-      languages = github_client.repos.map(&:language).uniq.compact
-      (Project::LANGUAGES & languages).each do |language|
+      (Project::LANGUAGES & repo_languages).each do |language|
         skills.create(:language => language)
       end
     end
   end
 
   def award_coderwall_badges
-    conn = Faraday.new(:url => 'https://coderwall.com')
-    api_key = ENV['CODERWALL_API_KEY']
-    return unless api_key.present?
+    coderwall = Coderwall.new
+
+    return unless coderwall.configured?
+
     if self.pull_requests.year(CURRENT_YEAR).any?
-      payload = {github:self.coderwall_username, badge:"TwentyFourPullRequestsParticipant#{CURRENT_YEAR}", date:"12/25/#{CURRENT_YEAR}", api_key:api_key}
-      resp = conn.post '/award', payload.to_json, 'Content-Type' => 'application/json', :accept => 'application/json'
+      coderwall.award_badge(self.coderwall_username, Coderwall::PARTICIPANT)
     end
+
     if self.pull_requests.year(CURRENT_YEAR).length > 23
-      payload = {github:self.coderwall_username, badge:"TwentyFourPullRequestsContinuous#{CURRENT_YEAR}", date:"12/25/#{CURRENT_YEAR}", api_key:api_key}
-      resp = conn.post '/award', payload.to_json, 'Content-Type' => 'application/json', :accept => 'application/json'
+      coderwall.award_badge(self.coderwall_username, Coderwall::CONTINUOUS)
     end
   end
 
@@ -115,7 +113,7 @@ class User < ActiveRecord::Base
   end
 
   def github_client
-    @github_client ||= Octokit::Client.new(:login => nickname, :access_token => token, :auto_paginate => true)
+    @github_client ||= GithubClient.new(nickname, token)
   end
 
   def confirmed?
@@ -124,16 +122,13 @@ class User < ActiveRecord::Base
 
   def confirm!
     if email.present? && !confirmed?
-      self.confirmation_token = nil
-      self.confirmed_at = Time.now.utc
-      save
+      return update_attributes(confirmation_token: nil, confirmed_at: Time.now.utc)
     elsif confirmed?
       errors.add(:email, :already_confirmed)
-      false
     else
       errors.add(:email, :required_for_confirmation)
-      false
     end
+    false
   end
 
   def generate_confirmation_token
@@ -143,35 +138,12 @@ class User < ActiveRecord::Base
     end
   end
 
-  def send_notification_email
-    return unless confirmed?
-    if send_daily?
-      ReminderMailer.daily(self).deliver
-    elsif send_weekly?
-      ReminderMailer.weekly(self).deliver
-    else
-      return
-    end
-    update_attribute(:last_sent_at, Time.now.utc)
-  end
-
-  def send_daily?
-    if email_frequency == 'daily'
-      last_sent_at.nil? || last_sent_at < 23.hours.ago
-    end
-  end
-
-  def send_weekly?
-    if email_frequency == 'weekly'
-      last_sent_at.nil? || last_sent_at < (6.days + 23.hours).ago
-    end
-  end
-
   def new_gift(attrs={})
-    gift = gift_factory.call(attrs)
-    gift.date ||= closest_free_gift_date
-    gift.user = self
-    gift
+    GiftFactory.create!(self, gift_factory, attrs)
+  end
+
+  def gift_factory
+    @gift_factory ||= Gift.public_method(:new)
   end
 
   def gift_for(date)
@@ -179,7 +151,7 @@ class User < ActiveRecord::Base
   end
 
   def send_regular_emails?
-    ['daily', 'weekly'].include? email_frequency
+    ['daily', 'weekly'].include?(email_frequency)
   end
 
   def to_param
@@ -187,17 +159,11 @@ class User < ActiveRecord::Base
   end
 
   def download_user_organisations(access_token = token)
-    pull_request_downloader(access_token).user_organisations.each do |o|
-      organisation = Organisation.create_from_github(o)
-      organisation.users << self unless organisation.users.include?(self)
-      organisation.save
-    end
+    Downloader.new(self, access_token).get_organisations
   end
 
   def download_pull_requests(access_token = token)
-    pull_request_downloader(access_token).pull_requests.each do |pr|
-      pull_requests.create_from_github(pr) unless pull_requests.find_by_issue_url(pr['payload']['pull_request']['_links']['html']['href'])
-    end
+    Downloader.new(self, access_token).get_pull_requests
   end
 
   def twitter
@@ -214,11 +180,6 @@ class User < ActiveRecord::Base
     pull_requests.reject{|pr| gifted_pull_requests.include?(pr) }
   end
 
-  def closest_free_gift_date
-    last_gift = self.gifts.last
-    last_gift.nil? ? PullRequest::EARLIEST_PULL_DATE : last_gift.date + 1.day
-  end
-
   def is_collaborator?
     @collaborator ||= User.collaborators.include?(self)
   end
@@ -229,6 +190,10 @@ class User < ActiveRecord::Base
 
   private
 
+  def repo_languages
+    @repo_languages ||= github_client.user_repository_languages
+  end
+
   def check_email_changed
     return unless self.email_changed? && self.email.present?
 
@@ -238,29 +203,4 @@ class User < ActiveRecord::Base
     ConfirmationMailer.confirmation(self).deliver
   end
 
-  def pull_request_downloader(access_token = token)
-    Rails.application.config.pull_request_downloader.call(nickname, access_token)
-  end
-
-  def self.extract_info(hash)
-    provider    = hash.fetch('provider')
-    uid         = hash.fetch('uid')
-    nickname    = hash.fetch('info',{}).fetch('nickname')
-    email       = hash.fetch('info',{}).fetch('email', nil)
-    gravatar_id = hash.fetch('extra',{}).fetch('raw_info',{}).fetch('gravatar_id', nil)
-    token       = hash.fetch('credentials', {}).fetch('token')
-
-    {
-      :provider => provider,
-      :token => token,
-      :uid => uid,
-      :nickname => nickname,
-      :email => email,
-      :gravatar_id => gravatar_id
-    }
-  end
-
-  def gift_factory
-    @gift_factory ||= Gift.public_method(:new)
-  end
 end

@@ -14,14 +14,14 @@ class PullRequestDownloader
   end
 
   private
+
   def github_client
-    @github_client ||= Octokit::Client.new(:login => login, :access_token => oauth_token, :auto_paginate => true)
+    @github_client ||= GithubClient.new(login, oauth_token)
   end
 
   def download_pull_requests
     begin
-      events = github_client.user_events(login)
-      events.select do |e|
+      github_client.user_events.select do |e|
         event_date = e['created_at']
         e.type == 'PullRequestEvent' &&
         e.payload.action == 'opened' &&
@@ -37,7 +37,7 @@ class PullRequestDownloader
 
   def download_user_organisations
     begin
-      github_client.organizations(login).reject do |o|
+      github_client.user_organizations.reject do |o|
         puts "Updating organisation: #{o.login}"
         ignored_organisations.include?(o.login)
       end

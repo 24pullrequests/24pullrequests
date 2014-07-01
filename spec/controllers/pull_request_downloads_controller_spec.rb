@@ -12,7 +12,9 @@ describe PullRequestDownloadsController do
     end
 
     it "returns http success" do
-      user.should_receive(:download_pull_requests)
+      downloader = double(:downloader)
+      Downloader.should_receive(:new).with(user).and_return(downloader)
+      downloader.should_receive(:get_pull_requests)
 
       post 'create'
       response.should be_success
