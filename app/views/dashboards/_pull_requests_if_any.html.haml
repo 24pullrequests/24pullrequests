@@ -1,4 +1,4 @@
-- if current_user.pull_requests.year(current_year).length > 0
+- if current_user.pull_requests.year(current_year).any?
   = render :partial => 'pull_requests/pull_request', :collection => pull_requests
 - else
   %p=t("dashboard.no_pull_requests")

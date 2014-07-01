@@ -3,13 +3,14 @@ task :check_for_inactive_projects => :environment do
   count = 0
   Project.active.all.each do |project|
     begin
-      updated_at = project.repo(load_user.github_client).updated_at
+      user = load_user
+      updated_at = project.repo(user.nickname, user.token).updated_at
       updated_recently = updated_at > Date.today-6.months
     rescue
       updated_recently = false
     end
 
-    has_active_issues = project.issues(load_user.github_client).any? rescue(false)  unless updated_recently
+    has_active_issues = project.issues(user.nickname, user.token).any? rescue(false) unless updated_recently
 
     unless updated_recently or has_active_issues
       project.deactivate!
@@ -25,7 +26,8 @@ task :map_labels_from_github_issues => :environment do
   ACTIVE_LABELS = Label.all.map(&:name)
 
   Project.active.all.each do |project|
-    labels = project.issues(load_user.github_client, 6, open: true).map do |issue|
+      user = load_user
+    labels = project.issues(user.nickname, user.token, 6, open: true).map do |issue|
       issue.labels.map { |label| label.name }
     end.flatten rescue []
 

@@ -51,9 +51,11 @@ describe PullRequest do
   end
 
   describe "#check_state" do
-    let(:pull_request) { create :pull_request }
+    let(:pull_request) { create(:pull_request, user: user) }
     before do
-      pull_request.stub(:fetch_data).and_return(Hashie::Mash.new mock_issue)
+      client = double(:github_client, issue: Hashie::Mash.new(mock_issue))
+      GithubClient.should_receive(:new).with(user.nickname, user.token).and_return(client)
+
       pull_request.check_state
     end
 

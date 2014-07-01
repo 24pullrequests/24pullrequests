@@ -1,7 +1,10 @@
 desc "Send daily emails"
 task :send_emails => :environment do
   next unless PullRequest.in_date_range?
-  User.all.each {|u| u.send_notification_email rescue nil } if Time.now.utc >= Date.parse("#{CURRENT_YEAR}-12-01") && Time.now.utc < Date.parse("#{CURRENT_YEAR}-12-25")
+
+  User.all.each  do |user|
+    Notification.new(user).send_email rescue nil
+  end
 end
 
 desc "export emails for mailchimp"

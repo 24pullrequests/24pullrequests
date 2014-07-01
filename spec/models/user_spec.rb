@@ -209,43 +209,13 @@ describe User do
     end
   end
 
-  describe '.send_notification_mail' do
-    subject { user }
-
-    before do
-      subject.update_attribute(:email_frequency, 'daily')
-    end
-
-    context 'email unconfirmed' do
-      it 'doesnt send the notification email' do
-        ReminderMailer.should_not_receive(:daily)
-
-        subject.send_notification_email
-      end
-    end
-
-    context 'email confirmed' do
-      it 'sends the notification email' do
-        stub_mailer = double(ReminderMailer)
-        stub_mailer.stub(:deliver)
-
-        ReminderMailer.should_receive(:daily).and_return(stub_mailer)
-
-        subject.confirm!
-        subject.send_notification_email
-      end
-    end
-  end
-
   describe '.estimate_skills' do
     ENV['GITHUB_KEY'] = 'foobar'
-    let(:github_client) { double('github client') }
-    let(:repos) { Project::LANGUAGES.sample(3).map { |l| Hashie::Mash.new(:language => l) } }
+    let(:repo_languages) { Project::LANGUAGES.sample(3) }
 
     before do
       User.any_instance.unstub(:estimate_skills)
-      User.any_instance.stub(:github_client).and_return(github_client)
-      github_client.should_receive(:repos).and_return(repos)
+      User.any_instance.stub(:repo_languages).and_return(repo_languages)
     end
 
     subject { user }
@@ -268,27 +238,17 @@ describe User do
     end
   end
 
-  describe '.download_pull_requests' do
-    let(:downloader)    { double('downloader') }
+  describe '.download_pull_requests', wip: true do
+    let(:downloader)    { double('downloader', get_organisations: nil) }
     let(:pull_request)  { mock_pull_request }
 
-    before do
-      downloader.should_receive(:pull_requests).and_return([pull_request])
-      user.stub(:pull_request_downloader).and_return(downloader)
+    before(:each) do
+      Downloader.should_receive(:new).and_return(downloader)
+      downloader.should_receive(:get_pull_requests)
+
       user.download_pull_requests
     end
 
-    subject { user.pull_requests }
-
-    context 'when the pull request does not already exist' do
-      its(:length) { should eq 1 }
-    end
-
-    context 'when the pull request already exists' do
-      it { should_receive(:create).never }
-
-      its(:length) { should eq 1 }
-    end
   end
 
   describe '.pull_requests_count' do
