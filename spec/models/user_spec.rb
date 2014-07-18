@@ -102,7 +102,7 @@ describe User do
       end
 
       it 'returns false' do
-        expect(subject.confirm!).to be_false
+        expect(subject.confirm!).to be false
       end
 
       it 'adds an error to the user email field' do
@@ -114,7 +114,7 @@ describe User do
 
     context 'email unconfirmed' do
       it 'returns true' do
-        expect(subject.confirm!).to be_true
+        expect(subject.confirm!).to be true
       end
 
       it 'sets the confirmed_at field' do
@@ -136,7 +136,7 @@ describe User do
       end
 
       it 'returns false' do
-        expect(subject.confirm!).to be_false
+        expect(subject.confirm!).to be false
       end
 
       it 'adds an error to the user email field' do

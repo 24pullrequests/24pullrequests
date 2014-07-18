@@ -16,7 +16,7 @@ gem 'rabl'
 gem 'newrelic_rpm'
 gem 'simplecov'
 gem 'kaminari'
-gem 'twitter', '5.0.0'
+gem 'twitter'
 gem 'anjlab-bootstrap-rails', '~> 3.0.3.0', :require => 'bootstrap-rails'
 gem 'simple_form'
 gem 'rack-google-analytics'
@@ -37,6 +37,9 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'rspec-its'
+  gem 'rspec-collection_matchers'
+  gem 'rspec-activemodel-mocks'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'brakeman'
@@ -56,7 +59,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'poltergeist', '~> 1.4.0'
+  gem 'poltergeist'
   gem 'launchy', '2.4.2'
 
   gem 'database_cleaner'
