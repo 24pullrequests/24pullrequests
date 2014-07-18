@@ -19,7 +19,7 @@ Spork.prefork do
 
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/rails'
-  require 'rspec/autorun'
+  # require 'rspec/autorun'
   require 'shoulda-matchers'
   require 'webmock'
 
@@ -36,7 +36,7 @@ Spork.prefork do
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
   RSpec.configure do |config|
-    config.treat_symbols_as_metadata_keys_with_true_values = true
+    config.infer_spec_type_from_file_location!
 
     # ## Mock Framework
     #

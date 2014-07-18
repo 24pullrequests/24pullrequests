@@ -30,12 +30,12 @@ describe GiftForm do
     subject { gift_form.show_date_select? }
 
     context 'when the giftable dates is not empty' do
-      it { should be_true }
+      it { should be true }
     end
 
     context 'when the giftable dates is empty' do
       let(:giftable_dates) { [] }
-      it { should be_false }
+      it { should be false }
     end
   end
 end
