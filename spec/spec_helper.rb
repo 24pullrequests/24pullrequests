@@ -7,6 +7,9 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
 ]
 SimpleCov.start
 
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 
 require 'spork'
 
