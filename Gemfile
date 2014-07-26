@@ -28,6 +28,8 @@ gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
 
+gem "codeclimate-test-reporter", group: :test, require: nil
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
