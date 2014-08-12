@@ -10,4 +10,11 @@ $ ->
 
       success: (data) ->
         $('#pull-requests').html(data)
+        dropdown = $('#gift_pull_request_id')
+        dropdown.empty()
+        $('.pull_request[data-gifted="not_gifted"]').each((index, element) ->
+          $element = $(element);
+          option = $('<option/>').attr('value', $element.data('id')).text($element.data('dropdown-text'))
+          dropdown.prepend(option)
+        )
         $("#spinner, #search_button").toggle()

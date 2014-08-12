@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe 'Dashboard' do
+  include PullRequestHelper
+
   let(:user) { create :user }
   subject { page }
 
@@ -52,6 +54,48 @@ describe 'Dashboard' do
 
       it { should_not have_button "Gift it!" }
     end
+  end
+
+  context 'when the user has sent pull requests' do
+    before do
+      user.email_frequency = 'daily'
+      user.save!
+      5.times { create(:pull_request, user: user) }
+      visit dashboard_path
+    end
+
+    it 'should invite the user to gift new pull requests' do
+      page.should have_content "Would you like to gift your new pull requests?"
+      page.all('#gift_pull_request_id option').count.should eql 5
+    end
+
+    it 'should list the user\'s pull requests' do
+      page.all('#pull-requests .pull_request').count.should eql 5
+    end
+
+    context 'when synchronising an additional pull request' do
+      let!(:new_pr) { create(:pull_request, user: user) }
+      before do
+        click_on 'fetch-pull-requests'
+        sleep 2 #TODO This shouldn't be necessary! page.find('#spinner', visible: false) does not wait, however
+      end
+
+      it 'should list the additional pull request and make it available to gift', js: true do
+        # There should be 6 items in both the pull requests div and the gift dropdown
+        page.all('#pull-requests .pull_request').count.should eql 6
+        page.all('#gift_pull_request_id option').count.should eql 6
+
+        # The new PR should be the first item in the pull requests div
+        page.all('#pull-requests .pull_request h4 a')[0].text.should eql new_pr.title
+
+        # The new PR should be the last item in the gift dropdown
+        new_pr_dropdown_text = gift_dropdown_text(new_pr)
+        new_pr_option = page.all('#gift_pull_request_id option')[-1]
+        new_pr_option.text.should eql new_pr_dropdown_text
+        new_pr_option['value'].should eql new_pr.to_param.to_s
+      end
+    end
+
   end
 
   describe 'email preferences' do
