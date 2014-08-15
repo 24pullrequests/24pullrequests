@@ -6,7 +6,7 @@ describe 'Admin Projects' do
   subject { page }
 
   before do
-    user.stub(:is_collaborator? => true)
+    user.stub(:is_admin? => true)
     login(user)
 
     visit admin_projects_path

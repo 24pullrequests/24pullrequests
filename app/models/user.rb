@@ -46,6 +46,12 @@ class User < ActiveRecord::Base
     contribs.compact.map { |c| result.find { |u| u.nickname == c } }.compact
   end
 
+  def self.admins
+    org_members = Rails.configuration.organization_members.map(&:login)
+    result = where('nickname in (?)', org_members)
+    org_members.compact.map { |c| result.find { |u| u.nickname == c } }.compact
+  end
+
   def coderwall_username
     self.coderwall_user_name || nickname
   end
@@ -178,8 +184,8 @@ class User < ActiveRecord::Base
     pull_requests.reject{|pr| gifted_pull_requests.include?(pr) }
   end
 
-  def is_collaborator?
-    @collaborator ||= User.collaborators.include?(self)
+  def is_admin?
+    @admin ||= User.admins.include?(self)
   end
 
   def self.users_with_pull_request_counts pull_request_year
