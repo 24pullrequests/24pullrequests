@@ -201,8 +201,8 @@ de:
       tweet:
       gift_it:
 
-  collaborators:
-    title: Core Contributors
+  contributors:
+    title: Contributors
 
   about:
     title: Über 24 Pull Requests

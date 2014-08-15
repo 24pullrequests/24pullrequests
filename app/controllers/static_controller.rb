@@ -7,6 +7,6 @@ class StaticController < ApplicationController
   end
 
   def about
-    @collaborators = User.collaborators
+    @contributors = User.contributors
   end
 end

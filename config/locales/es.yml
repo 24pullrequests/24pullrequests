@@ -202,8 +202,8 @@ es:
       tweet:
       gift_it:
 
-  collaborators:
-    title: "Principales colaboradores"
+  contributors:
+    title: "Contribuidores"
 
   about:
     title: "Sobre 24 Pull Requests"

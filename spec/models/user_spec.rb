@@ -61,15 +61,15 @@ describe User do
     end
   end
 
-  describe '#collaborators' do
+  describe '#admins' do
     let!(:user) { create :user, :nickname => 'foobar' }
 
     before do
       3.times { create :user }
-      Rails.configuration.stub(:collaborators).and_return([ Hashie::Mash.new(:login => 'foobar') ])
+      Rails.configuration.stub(:organization_members).and_return([ Hashie::Mash.new(:login => 'foobar') ])
     end
 
-    subject { described_class.collaborators }
+    subject { described_class.admins }
     it { should eq [user] }
   end
 
@@ -286,19 +286,19 @@ describe User do
     end
   end
 
-  describe '.is_collaborator?' do
-    let(:collaborator) { create :user, nickname: "akira" }
-    let(:non_collaborator) { create :user }
+  describe '.is_admin?' do
+    let(:admin) { create :user, nickname: "akira" }
+    let(:non_admin) { create :user }
 
     before do
-      User.should_receive(:collaborators).and_return([collaborator])
+      User.should_receive(:admins).and_return([admin])
     end
-    it 'identifies if a user is a collaborator' do
-      collaborator.is_collaborator?.should eq(true)
+    it 'identifies if a user is a admin' do
+      admin.is_admin?.should eq(true)
     end
 
-    it 'identifies if a user is not a collaborator' do
-      non_collaborator.is_collaborator?.should eq(false)
+    it 'identifies if a user is not a admin' do
+      non_admin.is_admin?.should eq(false)
     end
   end
 
