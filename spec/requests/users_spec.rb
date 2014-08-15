@@ -75,13 +75,13 @@ describe 'Users' do
 
       context "claiming projects" do
         it "without an owner" do
-          create :project, github_url: "http://github.com/andrew/24pullrequests", submitted_by: nil
+          create :project, github_url: "http://github.com/24pullrequests/24pullrequests", submitted_by: nil
 
           visit my_suggestions_path
-          fill_in "project_github_url", with: "andrew/24pullrequests"
+          fill_in "project_github_url", with: "24pullrequests/24pullrequests"
           click_on "Claim"
 
-          should have_content "You have successfully claimed andrew/24pullrequests"
+          should have_content "You have successfully claimed 24pullrequests/24pullrequests"
         end
 
         it "with an owner" do
