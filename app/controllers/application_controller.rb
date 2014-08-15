@@ -32,6 +32,6 @@ class ApplicationController < ActionController::Base
   end
 
   def admin?
-    current_user.is_collaborator?
+    current_user.is_admin?
   end
 end

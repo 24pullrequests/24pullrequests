@@ -71,7 +71,14 @@ module Tfpullrequests
       Octokit.contributors('24pullrequests/24pullrequests')
     rescue => e
       puts e.inspect
-      nil
+      []
+    end
+
+    config.organization_members = begin
+      Octokit.organization_members('24pullrequests')
+    rescue => e
+      puts e.inspect
+      []
     end
   end
 end
