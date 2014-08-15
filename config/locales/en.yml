@@ -202,8 +202,8 @@ en:
       tweet: Tweet about your gift!
       gift_it: "Gift it!"
 
-  collaborators:
-    title: Core Contributors
+  contributors:
+    title: Contributors
 
   about:
     title: About 24 Pull Requests

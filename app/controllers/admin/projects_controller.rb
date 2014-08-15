@@ -44,6 +44,6 @@ class Admin::ProjectsController < ApplicationController
 
   def ensure_admin
     ensure_logged_in
-    current_user.is_collaborator?
+    current_user.is_admin?
   end
 end
