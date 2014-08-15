@@ -202,8 +202,8 @@ pt_br:
       tweet:
       gift_it:
 
-  collaborators:
-    title: "Contribuidores do Core"
+  contributors:
+    title: "Contribuidores"
 
   about:
     title: "Sobre 24 Pull Requests"
