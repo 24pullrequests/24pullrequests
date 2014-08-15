@@ -17,7 +17,7 @@
 %pre
   :plain
     $ curl http://24pullrequests.com/users.json?callback=foo
-    
+
     foo([
            {
               id:120,
@@ -68,11 +68,11 @@
            }
         ]
       )
-    
+
 .alert.alert-info
   %strong What more options?
   Open an issue on
-  = link_to 'GitHub', 'https://github.com/andrew/24pullrequests'
+  = link_to 'GitHub', 'https://github.com/24pullrequests/24pullrequests'
   if you would like more features in the API, or even send us a pull request!
 
 %h2=t("api.projects.title")
@@ -86,7 +86,7 @@
     [
       {
         "description":"This very site!",
-        "github_url":"https://github.com/andrew/24pullrequests",
+        "github_url":"https://github.com/24pullrequests/24pullrequests",
         "main_language":"Ruby"
       }
     ]
@@ -389,7 +389,7 @@
 
 %pre
   :plain
-    $ curl http://24pullrequests.com/organisations/uswitch.json 
+    $ curl http://24pullrequests.com/organisations/uswitch.json
 
     {
      login:"uswitch",
@@ -520,4 +520,3 @@
         }
      ]
   }
-
