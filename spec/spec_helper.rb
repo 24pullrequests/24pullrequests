@@ -63,6 +63,10 @@ Spork.prefork do
       DatabaseCleaner.clean_with :truncation
     end
 
+    config.after(:suite) do
+      WebMock.disable_net_connect!(:allow => 'codeclimate.com')
+    end
+
     config.before(:all) do
       DeferredGarbageCollection.start
     end
