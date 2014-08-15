@@ -67,8 +67,8 @@ module Tfpullrequests
 
     # Memoize at boot up to prevent GitHub's rate limiting. This should work
     # fine for now.
-    config.collaborators = begin
-      Octokit.collaborators('24pullrequests/24pullrequests')
+    config.contributors = begin
+      Octokit.contributors('24pullrequests/24pullrequests')
     rescue => e
       puts e.inspect
       nil

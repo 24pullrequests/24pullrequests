@@ -40,12 +40,10 @@ class User < ActiveRecord::Base
     where(conditions).first
   end
 
-  def self.collaborators
-    collabs = Rails.configuration.collaborators
-    return [] if collabs.nil?
-    collaborators = collabs.map(&:login)
-    result = where('nickname in (?)', collaborators)
-    collaborators.compact.map { |c| result.find { |u| u.nickname == c } }.compact
+  def self.contributors
+    contribs = Rails.configuration.contributors.map(&:login)
+    result = where('nickname in (?)', contribs)
+    contribs.compact.map { |c| result.find { |u| u.nickname == c } }.compact
   end
 
   def coderwall_username
