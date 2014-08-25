@@ -42,14 +42,19 @@ class User < ActiveRecord::Base
 
   def self.contributors
     contribs = Rails.configuration.contributors.map(&:login)
-    result = where('nickname in (?)', contribs)
-    contribs.compact.map { |c| result.find { |u| u.nickname == c } }.compact
+
+    where_nickname_in(contribs)
   end
 
   def self.admins
     org_members = Rails.configuration.organization_members.map(&:login)
-    result = where('nickname in (?)', org_members)
-    org_members.compact.map { |c| result.find { |u| u.nickname == c } }.compact
+
+    where_nickname_in(org_members)
+  end
+
+  def self.where_nickname_in(nicknames)
+    result = where('nickname in (?)', nicknames)
+    nicknames.compact.map { |c| result.find { |u| u.nickname == c } }.compact
   end
 
   def coderwall_username
