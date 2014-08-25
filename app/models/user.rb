@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  include Concerns::Coderwall
+
   attr_writer :gift_factory
 
   has_many :pull_requests, :dependent => :destroy
@@ -57,14 +59,6 @@ class User < ActiveRecord::Base
     nicknames.compact.map { |c| result.find { |u| u.nickname == c } }.compact
   end
 
-  def coderwall_username
-    self.coderwall_user_name || nickname
-  end
-
-  def change_coderwall_username!(username)
-    update_attributes!(coderwall_user_name: username)
-  end
-
   def authorize_twitter!(nickname, token, secret)
     self.twitter_nickname = nickname
     self.twitter_token    = token
@@ -100,20 +94,6 @@ class User < ActiveRecord::Base
       (Project::LANGUAGES & repo_languages).each do |language|
         skills.create(:language => language)
       end
-    end
-  end
-
-  def award_coderwall_badges
-    coderwall = Coderwall.new
-
-    return unless coderwall.configured?
-
-    if self.pull_requests.year(CURRENT_YEAR).any?
-      coderwall.award_badge(self.coderwall_username, Coderwall::PARTICIPANT)
-    end
-
-    if self.pull_requests.year(CURRENT_YEAR).length > 23
-      coderwall.award_badge(self.coderwall_username, Coderwall::CONTINUOUS)
     end
   end
 
