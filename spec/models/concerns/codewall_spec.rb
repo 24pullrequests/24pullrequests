@@ -3,12 +3,6 @@ require 'spec_helper'
 describe Concerns::Coderwall do
   let(:user) { create(:user) }
 
-  before do
-    class User
-      include Concerns::Coderwall
-    end
-  end
-
   describe "#coderwall_username" do
     it "returns the coderwall_user_name when it is set" do
       expect(user).to receive(:coderwall_user_name)
