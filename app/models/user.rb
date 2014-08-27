@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   include Concerns::Coderwall
+  include Concerns::Twitter
 
   attr_writer :gift_factory
 
@@ -57,28 +58,6 @@ class User < ActiveRecord::Base
   def self.where_nickname_in(nicknames)
     result = where('nickname in (?)', nicknames)
     nicknames.compact.map { |c| result.find { |u| u.nickname == c } }.compact
-  end
-
-  def authorize_twitter!(nickname, token, secret)
-    self.twitter_nickname = nickname
-    self.twitter_token    = token
-    self.twitter_secret   = secret
-    self.save!
-  end
-
-  def remove_twitter!
-    self.twitter_nickname = nil
-    self.twitter_token    = nil
-    self.twitter_secret   = nil
-    self.save!
-  end
-
-  def twitter_linked?
-    twitter_token.present? && twitter_secret.present?
-  end
-
-  def twitter_profile
-    "https://twitter.com/#{twitter_nickname}" if twitter_nickname.present?
   end
 
   def github_profile
@@ -155,15 +134,6 @@ class User < ActiveRecord::Base
     Downloader.new(self, access_token).get_pull_requests
   end
 
-  def twitter
-    @twitter ||= Twitter::REST::Client.new do |config|
-      config.consumer_key        = ENV['TWITTER_KEY']
-      config.consumer_secret     = ENV['TWITTER_SECRET']
-      config.access_token        = twitter_token
-      config.access_token_secret = twitter_secret
-    end
-  end
-
   def unspent_pull_requests
     gifted_pull_requests = gifts.map {|g| g.pull_request }
     pull_requests.reject{|pr| gifted_pull_requests.include?(pr) }
@@ -191,5 +161,4 @@ class User < ActiveRecord::Base
 
     ConfirmationMailer.confirmation(self).deliver
   end
-
 end
