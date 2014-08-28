@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Static pages' do
+describe 'Static pages', :type => :request do
   subject { page }
 
   describe 'home page' do
@@ -10,12 +10,12 @@ describe 'Static pages' do
       visit root_path
     end
 
-    it { should have_link('Log in with GitHub', :href  => login_path) }
-    it { should have_content('7 Developers already involved') }
-    it { should have_content('2 Suggested Projects') }
-    it { should have_link('View All', :href  => users_path) }
-    it { should have_link('View All', :href  => projects_path) }
-    it { should have_link('View All', :href  => pull_requests_path) }
-    it { should have_link('Suggest a project', :href  => new_project_path) }
+    it { is_expected.to have_link('Log in with GitHub', :href  => login_path) }
+    it { is_expected.to have_content('7 Developers already involved') }
+    it { is_expected.to have_content('2 Suggested Projects') }
+    it { is_expected.to have_link('View All', :href  => users_path) }
+    it { is_expected.to have_link('View All', :href  => projects_path) }
+    it { is_expected.to have_link('View All', :href  => pull_requests_path) }
+    it { is_expected.to have_link('Suggest a project', :href  => new_project_path) }
   end
 end

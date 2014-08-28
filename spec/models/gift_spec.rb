@@ -1,18 +1,18 @@
 require 'spec_helper'
 
-describe Gift do
+describe Gift, :type => :model do
   let(:gift) { create :gift }
   let(:pull_request) { gift.pull_request }
   let(:user) { gift.user }
 
-  it { should validate_presence_of(:user) }
-  it { should validate_presence_of(:pull_request) }
-  it { should validate_presence_of(:date) }
-  it { should ensure_inclusion_of(:date).in_array(Gift.giftable_dates) }
+  it { is_expected.to validate_presence_of(:user) }
+  it { is_expected.to validate_presence_of(:pull_request) }
+  it { is_expected.to validate_presence_of(:date) }
+  it { is_expected.to ensure_inclusion_of(:date).in_array(Gift.giftable_dates) }
 
   describe '#find' do
     subject { described_class.find(user, Time.zone.now.to_date)}
-    it { should eq gift }
+    it { is_expected.to eq gift }
   end
 
   it 'raises a validation error when a gift has already been given for the current day' do
@@ -24,12 +24,12 @@ describe Gift do
   describe '.date' do
     subject { gift.date }
     it 'should default to Gift.default_date' do
-      should eq Gift.default_date
+      is_expected.to eq Gift.default_date
     end
   end
 
   describe '.to_param' do
     subject { gift.to_param }
-    it { should eq gift.date.to_s }
+    it { is_expected.to eq gift.date.to_s }
   end
 end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe UsersController do
+describe UsersController, :type => :controller do
   let(:user) { create :user }
 
   describe 'GET index' do
@@ -13,7 +13,7 @@ describe UsersController do
         get :index
       end
 
-      it { assigns(:users).with(User.order('pull_requests_count desc').page(0) ).should be_truthy }
+      it { expect(assigns(:users).with(User.order('pull_requests_count desc').page(0) )).to be_truthy }
     end
 
     context 'as json' do
@@ -21,7 +21,7 @@ describe UsersController do
         get :index, :format  => :json
       end
 
-      it { response.header['Content-Type'].should include 'application/json' }
+      it { expect(response.header['Content-Type']).to include 'application/json' }
     end
   end
 
@@ -32,7 +32,7 @@ describe UsersController do
           get :show, :id  => user.nickname
         end
 
-        it { should respond_with(200) }
+        it { is_expected.to respond_with(200) }
       end
 
       context 'when the case does not match' do
@@ -40,7 +40,7 @@ describe UsersController do
           get :show, :id  => user.nickname.upcase
         end
 
-        it { should respond_with(200) }
+        it { is_expected.to respond_with(200) }
       end
     end
 
@@ -49,7 +49,7 @@ describe UsersController do
         get :show, :id  => user.nickname, :format  => :json
       end
 
-      it { response.header['Content-Type'].should include 'application/json' }
+      it { expect(response.header['Content-Type']).to include 'application/json' }
     end
   end
 end

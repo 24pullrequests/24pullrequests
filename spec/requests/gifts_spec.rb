@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Gifts' do
+describe 'Gifts', :type => :request do
   subject { page }
   let(:user) { create :user, nickname: "akira" }
 
@@ -17,13 +17,13 @@ describe 'Gifts' do
     end
 
     it "only displays ungifted pull requests" do
-      should_not have_xpath "//option[contains(text(), 'Gifted')]"
-      should have_xpath "//option[contains(text(), 'Not gifted: #{pull_request.repo_name}')]"
+      is_expected.not_to have_xpath "//option[contains(text(), 'Gifted')]"
+      is_expected.to have_xpath "//option[contains(text(), 'Not gifted: #{pull_request.repo_name}')]"
     end
 
     context "tweeting" do
       it "posts a tweet when the user selects 'tweet'" do
-        PullRequest.any_instance.should_receive(:post_tweet)
+        expect_any_instance_of(PullRequest).to receive(:post_tweet)
 
         select_from "gift_date", 0
         select_from "gift_pull_request_id", 1
@@ -32,7 +32,7 @@ describe 'Gifts' do
       end
 
       it "does not post a tweet when 'tweet' is not selected" do
-        PullRequest.any_instance.should_not_receive(:post_tweet)
+        expect_any_instance_of(PullRequest).not_to receive(:post_tweet)
 
         select_from "gift_date", 0
         select_from "gift_pull_request_id", 1
