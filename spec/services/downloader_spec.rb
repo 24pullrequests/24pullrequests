@@ -5,7 +5,7 @@ describe Downloader do
   describe "#get_organisations" do
     before do
       user_downloader = double(:user_downloader, user_organisations: [double_organisation])
-      downloader.stub(:user_downloader).and_return(user_downloader)
+      allow(downloader).to receive(:user_downloader).and_return(user_downloader)
     end
 
     it "creates a copy of all the user's organisations" do
@@ -27,7 +27,7 @@ describe Downloader do
 
     before do
       user_downloader = double(:user_downloader, pull_requests: [pull_request])
-      downloader.stub(:user_downloader).and_return(user_downloader)
+      allow(downloader).to receive(:user_downloader).and_return(user_downloader)
     end
 
     it "creates a copy of all the user's pull requests" do

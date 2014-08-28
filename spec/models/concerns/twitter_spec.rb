@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Concerns::Twitter do
+describe Concerns::Twitter, :type => :model do
   let(:user) { create(:user) }
 
   describe "#authorize_twitter!" do

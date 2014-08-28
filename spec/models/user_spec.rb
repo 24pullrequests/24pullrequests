@@ -1,13 +1,13 @@
 require 'spec_helper'
 require 'ostruct'
 
-describe User do
+describe User, :type => :model do
   let(:user) { create :user }
 
-  it { should have_many(:pull_requests) }
-  it { should have_many(:skills) }
+  it { is_expected.to have_many(:pull_requests) }
+  it { is_expected.to have_many(:skills) }
 
-  it { should accept_nested_attributes_for(:skills) }
+  it { is_expected.to accept_nested_attributes_for(:skills) }
 
   describe 'callbacks' do
     describe 'before_save' do
@@ -15,18 +15,18 @@ describe User do
         subject { build :user }
 
         it 'is called if email changed' do
-          subject.should_receive(:check_email_changed)
+          expect(subject).to receive(:check_email_changed)
           subject.save
         end
 
         context 'email is present' do
           it 'generates a confirmation token' do
-            subject.should_receive(:generate_confirmation_token)
+            expect(subject).to receive(:generate_confirmation_token)
             subject.save
           end
 
           it 'sends a confirmation email' do
-            ConfirmationMailer.should_receive(:confirmation).and_return double("ConfirmationMailer", deliver: true)
+            expect(ConfirmationMailer).to receive(:confirmation).and_return double("ConfirmationMailer", deliver: true)
             subject.save
           end
         end
@@ -38,12 +38,12 @@ describe User do
           end
 
           it 'doesnt generate a confirmation token' do
-            subject.should_not_receive(:generate_confirmation_token)
+            expect(subject).not_to receive(:generate_confirmation_token)
             subject.save
           end
 
           it 'doesnt send a confirmation email' do
-            ConfirmationMailer.should_not_receive(:confirmation)
+            expect(ConfirmationMailer).not_to receive(:confirmation)
             subject.save
           end
         end
@@ -57,7 +57,7 @@ describe User do
         subject.email_frequency = frequency
       end
 
-      it { should validate_presence_of(:email) }
+      it { is_expected.to validate_presence_of(:email) }
     end
   end
 
@@ -66,11 +66,11 @@ describe User do
 
     before do
       3.times { create :user }
-      Rails.configuration.stub(:organization_members).and_return([ Hashie::Mash.new(:login => 'foobar') ])
+      allow(Rails.configuration).to receive(:organization_members).and_return([ Hashie::Mash.new(:login => 'foobar') ])
     end
 
     subject { described_class.admins }
-    it { should eq [user] }
+    it { is_expected.to eq [user] }
   end
 
   describe '.confirmed?' do
@@ -180,7 +180,7 @@ describe User do
       end
 
       it 'doesnt send an email' do
-        ConfirmationMailer.should_not_receive(:confirmation)
+        expect(ConfirmationMailer).not_to receive(:confirmation)
 
         subject.save
       end
@@ -201,8 +201,8 @@ describe User do
 
       it 'sends a confirmation email' do
         stub_mailer = double(ConfirmationMailer)
-        stub_mailer.stub(:deliver)
-        ConfirmationMailer.should_receive(:confirmation).and_return(stub_mailer)
+        allow(stub_mailer).to receive(:deliver)
+        expect(ConfirmationMailer).to receive(:confirmation).and_return(stub_mailer)
 
         subject.update_attribute(:email, 'different@email.addr')
       end
@@ -214,8 +214,8 @@ describe User do
     let(:repo_languages) { Project::LANGUAGES.sample(3) }
 
     before do
-      User.any_instance.unstub(:estimate_skills)
-      User.any_instance.stub(:repo_languages).and_return(repo_languages)
+      allow_any_instance_of(User).to receive(:estimate_skills).and_call_original
+      allow_any_instance_of(User).to receive(:repo_languages).and_return(repo_languages)
     end
 
     subject { user }
@@ -226,7 +226,7 @@ describe User do
     subject { user.languages }
 
     context 'when the user has no skillz' do
-      it { should eq Project::LANGUAGES }
+      it { is_expected.to eq Project::LANGUAGES }
     end
 
     context 'when the user has skillz' do
@@ -234,7 +234,7 @@ describe User do
         create :skill, :language => 'JavaScript', :user => user
       end
 
-      it { should eq ['JavaScript'] }
+      it { is_expected.to eq ['JavaScript'] }
     end
   end
 
@@ -243,8 +243,8 @@ describe User do
     let(:pull_request)  { mock_pull_request }
 
     before(:each) do
-      Downloader.should_receive(:new).and_return(downloader)
-      downloader.should_receive(:get_pull_requests)
+      expect(Downloader).to receive(:new).and_return(downloader)
+      expect(downloader).to receive(:get_pull_requests)
 
       user.download_pull_requests
     end
@@ -255,7 +255,7 @@ describe User do
     subject { user.pull_requests_count }
 
     context 'by default' do
-      it { should eq 0}
+      it { is_expected.to eq 0}
     end
 
     context 'when a pull request is added' do
@@ -264,25 +264,25 @@ describe User do
         user.reload
       end
 
-      it { should eq 1 }
+      it { is_expected.to eq 1 }
     end
   end
 
   describe '.to_param' do
     subject { user.to_param }
-    it { should eq user.nickname }
+    it { is_expected.to eq user.nickname }
   end
 
   describe "gifting" do
     it "creates new gifts that belong to itself" do
-      user.new_gift.user.should == user
+      expect(user.new_gift.user).to eq(user)
     end
 
     it "forwards attributes to newly created gifts" do
       gift_factory = ->(attrs) { OpenStruct.new(attrs) }
       user.gift_factory = gift_factory
 
-      user.new_gift(:foo => 'bar').foo.should == 'bar'
+      expect(user.new_gift(:foo => 'bar').foo).to eq('bar')
     end
   end
 
@@ -291,14 +291,14 @@ describe User do
     let(:non_admin) { create :user }
 
     before do
-      User.should_receive(:admins).and_return([admin])
+      expect(User).to receive(:admins).and_return([admin])
     end
     it 'identifies if a user is a admin' do
-      admin.is_admin?.should eq(true)
+      expect(admin.is_admin?).to eq(true)
     end
 
     it 'identifies if a user is not a admin' do
-      non_admin.is_admin?.should eq(false)
+      expect(non_admin.is_admin?).to eq(false)
     end
   end
 
@@ -306,8 +306,8 @@ describe User do
     let!(:haskell_users) { 2.times.map { create(:skill, language: "Haskell").user } }
 
     it "by_language" do
-      User.by_language("haskell").should eq(haskell_users)
-      User.by_language("ruby").should eq([])
+      expect(User.by_language("haskell")).to eq(haskell_users)
+      expect(User.by_language("ruby")).to eq([])
     end
   end
 
