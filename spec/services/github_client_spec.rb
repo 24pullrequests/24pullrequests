@@ -6,7 +6,7 @@ describe GithubClient do
   let(:client) { double(:client) }
 
   before do
-    github_client.should_receive(:client).and_return(client)
+    expect(github_client).to receive(:client).and_return(client)
   end
 
   describe "#user_repository_languages" do
@@ -20,7 +20,7 @@ describe GithubClient do
 
   describe "#user_events" do
     it "maps the user's repository languages" do
-      client.should_receive(:user_events).with("nickname")
+      expect(client).to receive(:user_events).with("nickname")
 
       github_client.user_events
     end
@@ -28,7 +28,7 @@ describe GithubClient do
 
   describe "#user_organizations" do
     it "maps the user's repository languages" do
-      client.should_receive(:organizations).with("nickname")
+      expect(client).to receive(:organizations).with("nickname")
 
       github_client.user_organizations
     end
@@ -37,7 +37,7 @@ describe GithubClient do
   describe "#high_rate_limit" do
     it "checks the available rate_limit" do
       rate_limit = double(:rate_limit, remaining: 300)
-      client.should_receive(:rate_limit).and_return(rate_limit)
+      expect(client).to receive(:rate_limit).and_return(rate_limit)
 
       expect(github_client.high_rate_limit?).to be false
     end
@@ -46,7 +46,7 @@ describe GithubClient do
   describe "#issues" do
     it "returns a repository's issues" do
       repository = "some-repository"
-      client.should_receive(:issues).with(repository, {})
+      expect(client).to receive(:issues).with(repository, {})
 
       github_client.issues(repository, {})
     end

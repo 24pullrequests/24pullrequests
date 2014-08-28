@@ -1,11 +1,11 @@
 require File.expand_path('../../../app/models/calendar', __FILE__)
 
-describe Calendar do
+describe Calendar, :type => :model do
   it "returns an enumerator for the giftable_dates" do
     giftable_dates = 1.upto(24).map { |day| Date.new(2013,12,day) }
 
     sorted_gifts = Calendar.new(giftable_dates, [])
-    sorted_gifts.count.should == 24
+    expect(sorted_gifts.count).to eq(24)
   end
 
   it "yields the right gift for the right day" do
@@ -19,17 +19,17 @@ describe Calendar do
     sorted_gifts = Calendar.new(giftable_dates, gifts)
     sorted_gifts = sorted_gifts.map { |day, gift| gift }
 
-    sorted_gifts[0].should  == the_first
-    sorted_gifts[1].should be_nil
-    sorted_gifts[2].should be_nil
-    sorted_gifts[3].should  == the_fourth
-    sorted_gifts[23].should == the_end
+    expect(sorted_gifts[0]).to  eq(the_first)
+    expect(sorted_gifts[1]).to be_nil
+    expect(sorted_gifts[2]).to be_nil
+    expect(sorted_gifts[3]).to  eq(the_fourth)
+    expect(sorted_gifts[23]).to eq(the_end)
   end
 
   it "knows the week day padding for the first date in the sequence" do
     giftable_dates = [Date.new(2013,12,1)]
 
     calendar = Calendar.new(giftable_dates, [])
-    calendar.start_padding.should == -1
+    expect(calendar.start_padding).to eq(-1)
   end
 end

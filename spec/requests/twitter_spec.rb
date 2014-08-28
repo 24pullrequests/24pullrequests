@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Twitter' do
+describe 'Twitter', :type => :request do
   let(:user) { create :user, :email_frequency => 'never' }
   subject { page }
 

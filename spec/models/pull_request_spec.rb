@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe PullRequest do
+describe PullRequest, :type => :model do
   let(:user) { create :user }
 
-  it { should belong_to(:user) }
-  it { should validate_uniqueness_of(:issue_url).scoped_to(:user_id) }
+  it { is_expected.to belong_to(:user) }
+  it { is_expected.to validate_uniqueness_of(:issue_url).scoped_to(:user_id) }
 
   describe '#create_from_github' do
     let(:json) { mock_pull_request }
@@ -38,14 +38,14 @@ describe PullRequest do
     context 'when PR body contains "24 pull requests"' do
       it 'creates a gift' do
         pull_request = FactoryGirl.create :pull_request, body: 'happy 24 pull requests!'
-        pull_request.gifts.should_not be_empty
+        expect(pull_request.gifts).not_to be_empty
       end
     end
 
     context 'when PR body does not contain "24 pull requests"' do
       it 'does not create a gift' do
         pull_request = FactoryGirl.create :pull_request, body: "...and a merry christmas!"
-        pull_request.gifts.should be_empty
+        expect(pull_request.gifts).to be_empty
       end
     end
   end
@@ -54,7 +54,7 @@ describe PullRequest do
     let(:pull_request) { create(:pull_request, user: user) }
     before do
       client = double(:github_client, issue: Hashie::Mash.new(mock_issue))
-      GithubClient.should_receive(:new).with(user.nickname, user.token).and_return(client)
+      expect(GithubClient).to receive(:new).with(user.nickname, user.token).and_return(client)
 
       pull_request.check_state
     end
@@ -72,11 +72,11 @@ describe PullRequest do
     end
 
     it "by_language" do
-      PullRequest.by_language("Haskell").order("created_at asc").should eq pull_requests
+      expect(PullRequest.by_language("Haskell").order("created_at asc")).to eq pull_requests
     end
 
     it "latest" do
-      PullRequest.latest(3).should eq(pull_requests.reverse.take(3))
+      expect(PullRequest.latest(3)).to eq(pull_requests.reverse.take(3))
     end
 
   end

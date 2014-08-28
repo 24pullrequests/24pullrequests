@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ProjectsController do
+describe ProjectsController, :type => :controller do
   let(:project) { create :project }
 
   describe 'GET index' do
@@ -10,7 +10,7 @@ describe ProjectsController do
         get :index, :format  => :json
       end
 
-      it { response.header['Content-Type'].should include 'application/json' }
+      it { expect(response.header['Content-Type']).to include 'application/json' }
     end
   end
 

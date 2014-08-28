@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Skill do
+describe Skill, :type => :model do
   let(:skill) { create :skill }
 
-  it { should belong_to(:user) }
-  it { should validate_presence_of(:language) }
+  it { is_expected.to belong_to(:user) }
+  it { is_expected.to validate_presence_of(:language) }
 end
