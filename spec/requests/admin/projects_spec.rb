@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe 'Admin Projects' do
+describe 'Admin Projects', :type => :request do
   let(:user) { create :user }
   let!(:projects) { ["apples", "mandarins"].map { |repo| create :project, name: repo, github_url: "http://github.com/christmas/#{repo}" } }
   subject { page }
 
   before do
-    user.stub(:is_admin? => true)
+    allow(user).to receive_messages(:is_admin? => true)
     login(user)
 
     visit admin_projects_path
@@ -16,7 +16,7 @@ describe 'Admin Projects' do
 
     it "should list all projects" do
       projects.each do |project|
-        should have_content project.name
+        is_expected.to have_content project.name
       end
     end
   end
@@ -28,8 +28,8 @@ describe 'Admin Projects' do
 
       sleep(Capybara.default_wait_time)
 
-      should have_content "apples"
-      should_not have_content "mandarins"
+      is_expected.to have_content "apples"
+      is_expected.not_to have_content "mandarins"
     end
 
     it "editing a project", js: true do
@@ -38,15 +38,15 @@ describe 'Admin Projects' do
       fill_in 'Name', with: 'Pugalicious'
       click_on "Update Project"
 
-      should have_content "Project updated successfully!"
+      is_expected.to have_content "Project updated successfully!"
 
-      should have_content "PUGALICIOUS"
+      is_expected.to have_content "PUGALICIOUS"
     end
 
     it "deactives a project" do
       first(:link, "Deactive").click
 
-      should have_content "#{projects.first.name} has been deactivated."
+      is_expected.to have_content "#{projects.first.name} has been deactivated."
     end
   end
 end

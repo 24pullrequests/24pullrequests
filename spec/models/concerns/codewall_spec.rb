@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Concerns::Coderwall do
+describe Concerns::Coderwall, :type => :model do
   let(:user) { create(:user) }
 
   describe "#coderwall_username" do

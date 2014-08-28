@@ -1,18 +1,18 @@
 require 'spec_helper'
 
-describe Label do
+describe Label, :type => :model do
   subject { Label.new }
 
   context "validations" do
     it "must have a name" do
-      should have(1).error_on(:name)
+      is_expected.to have(1).error_on(:name)
     end
 
     it "the name must be unique" do
       Label.create name: "documentation"
       label = Label.create name: "documentation"
 
-      label.should have(1).error_on(:name)
+      expect(label).to have(1).error_on(:name)
     end
   end
 end

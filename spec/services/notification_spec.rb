@@ -7,7 +7,7 @@ describe Notification do
   describe "#send_email" do
 
     it "does not email an unconfirmed user" do
-      ReminderMailer.should_not_receive(:daily)
+      expect(ReminderMailer).not_to receive(:daily)
 
       notification.send_email
       expect(user.last_sent_at).to eq(nil)
@@ -22,7 +22,7 @@ describe Notification do
 
       context "#daily" do
         it "sends an email" do
-          ReminderMailer.should_receive(:daily).with(user).and_return(mailer)
+          expect(ReminderMailer).to receive(:daily).with(user).and_return(mailer)
 
           notification.send_email
         end
@@ -30,8 +30,8 @@ describe Notification do
         it "once per day" do
           other_notification = Notification.new(user)
 
-          2.times { notification.should_receive(:daily?).and_return(true) }
-          other_notification.should_receive(:daily?).and_return(false)
+          2.times { expect(notification).to receive(:daily?).and_return(true) }
+          expect(other_notification).to receive(:daily?).and_return(false)
 
           notification.send_email
           other_notification.send_email
@@ -44,7 +44,7 @@ describe Notification do
         end
 
         it "sends an email" do
-          ReminderMailer.should_receive(:weekly).with(user).and_return(mailer)
+          expect(ReminderMailer).to receive(:weekly).with(user).and_return(mailer)
 
           notification.send_email
         end
@@ -52,8 +52,8 @@ describe Notification do
         it "once per week" do
           other_notification = Notification.new(user)
 
-          notification.should_receive(:weekly?).and_return(true)
-          other_notification.should_receive(:weekly?).and_return(false)
+          expect(notification).to receive(:weekly?).and_return(true)
+          expect(other_notification).to receive(:weekly?).and_return(false)
 
           notification.send_email
           other_notification.send_email
