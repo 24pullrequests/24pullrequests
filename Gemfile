@@ -20,7 +20,7 @@ gem 'twitter'
 gem 'anjlab-bootstrap-rails', '~> 3.0.3.0', :require => 'bootstrap-rails'
 gem 'simple_form'
 gem 'rack-google-analytics'
-gem 'ffi'
+gem 'ffi', '1.9.3'
 gem 'csv_shaper'
 
 

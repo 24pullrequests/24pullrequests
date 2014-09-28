@@ -8,7 +8,7 @@ describe Gift, :type => :model do
   it { is_expected.to validate_presence_of(:user) }
   it { is_expected.to validate_presence_of(:pull_request) }
   it { is_expected.to validate_presence_of(:date) }
-  it { is_expected.to ensure_inclusion_of(:date).in_array(Gift.giftable_dates) }
+  it { is_expected.to validate_inclusion_of(:date).in_array(Gift.giftable_dates) }
 
   describe '#find' do
     subject { described_class.find(user, Time.zone.now.to_date)}
