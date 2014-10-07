@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe ProjectLabel, :type => :model do
   subject { ProjectLabel.new }

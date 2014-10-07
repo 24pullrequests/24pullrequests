@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe GiftsController, :type => :controller do
   let(:user) { create(:user) }

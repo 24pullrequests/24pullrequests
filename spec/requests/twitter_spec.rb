@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe 'Twitter', :type => :request do
   let(:user) { create :user, :email_frequency => 'never' }

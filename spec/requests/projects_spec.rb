@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe 'Projects', :type => :request do
   let(:user) { create :user, :email_frequency => 'daily' }
