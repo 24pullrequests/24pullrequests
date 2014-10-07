@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe ConfirmationMailer, :type => :mailer do
   describe 'confirmation' do

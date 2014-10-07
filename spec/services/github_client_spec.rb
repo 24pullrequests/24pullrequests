@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe GithubClient do
   subject(:github_client) { GithubClient.new("nickname", "token") }

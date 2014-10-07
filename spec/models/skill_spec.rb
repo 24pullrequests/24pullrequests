@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe Skill, :type => :model do
   let(:skill) { create :skill }

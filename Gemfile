@@ -28,7 +28,7 @@ gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
 
-gem "codeclimate-test-reporter", group: :test, require: nil
+
 
 group :development do
   gem 'better_errors'
@@ -37,14 +37,25 @@ group :development do
   gem 'quiet_assets'
 end
 
-group :development, :test do
-  gem 'rspec-rails'
+group :development, :test, :cucumber do
+  gem "rspec-rails"
+  gem 'coveralls', require: false
+  gem "codeclimate-test-reporter", require: nil
+
   gem 'rspec-its'
   gem 'rspec-collection_matchers'
   gem 'rspec-activemodel-mocks'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'brakeman'
+  gem 'poltergeist'
+  gem 'launchy'
+
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'webmock', :require => false
+  gem 'timecop'
+
 
   # Auto testing
   gem 'guard-rspec'
@@ -58,18 +69,6 @@ group :development, :test do
   gem 'sinon-chai-rails'
   gem 'sinon-rails'
   gem 'ejs'
-end
-
-group :test do
-  gem 'poltergeist'
-  gem 'launchy'
-
-  gem 'database_cleaner'
-  gem 'shoulda-matchers'
-  gem 'webmock', :require => false
-  gem 'timecop'
-
-  gem 'coveralls', require: false
 end
 
 group :production do

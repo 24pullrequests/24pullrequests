@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe Gift, :type => :model do
   let(:gift) { create :gift }

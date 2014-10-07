@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe 'LanguagesRequests', :type => :request do
   subject { page }

@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe PullRequestsController, :type => :controller do
   describe 'GET index' do
