@@ -44,11 +44,11 @@ describe ApplicationHelper, :type => :helper do
     end
   end
 
-  describe "#gittip_button" do
-    it "returns a gittip button for the nickname" do
-      resulting_html = "<a href=\"https://www.gittip.com/andrew/\" class=\"btn btn-success btn-lg\"><span class=\"glyphicon glyphicon-heart\"></span>Support via Gittip</a>"
+  describe "#gratipay_button" do
+    it "returns a gratipay button for the nickname" do
+      resulting_html = "<a href=\"https://www.gratipay.com/on/github/andrew/\" class=\"btn btn-success btn-lg\"><span class=\"glyphicon glyphicon-heart\"></span>Support via Gratipay</a>"
 
-      expect(helper.gittip_button("andrew")).to eql(resulting_html)
+      expect(helper.gratipay_button("andrew")).to eql(resulting_html)
     end
   end
 
