@@ -91,14 +91,14 @@ describe ApplicationHelper, :type => :helper do
 
   describe "stats" do
     let(:user) { create(:user) }
-    let(:last_year) { DateTime.now.year-1 }
+    let(:last_year) { DateTime.now.year - 1 }
 
     before do
-      3.times { create(:pull_request, user: user, created_at: DateTime.now-1.year) }
+      3.times { create(:pull_request, user: user, created_at: DateTime.now - 1.year) }
     end
 
     it "contributors_in(year)" do
-      2.times { create(:pull_request, created_at: DateTime.now-1.year) }
+      2.times { create(:pull_request, created_at: DateTime.now - 1.year) }
 
       expect(helper.contributors_in(last_year)).to eq(3)
     end
@@ -110,7 +110,7 @@ describe ApplicationHelper, :type => :helper do
     end
 
     it "projects_in(year)" do
-      3.times { create(:pull_request, repo_name: "24pullrequests", created_at: DateTime.now-1.year) }
+      3.times { create(:pull_request, repo_name: "24pullrequests", created_at: DateTime.now - 1.year) }
 
       expect(helper.projects_in(last_year)).to eq(4)
     end
