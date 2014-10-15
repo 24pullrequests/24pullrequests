@@ -10,7 +10,7 @@ class CoderwallController < ApplicationController
       else
         flash[:alert] = I18n.t 'user.coderwall.error_github_not_connected', :username => username
       end
-    rescue Exception => e
+    rescue => e
       flash[:alert] = I18n.t 'user.coderwall.error_no_user'
     end
 
