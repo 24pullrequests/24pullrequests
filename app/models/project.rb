@@ -59,7 +59,7 @@ class Project < ActiveRecord::Base
   end
 
   def issues(nickname, token, months_ago=6, options={})
-    date = (Time.now-months_ago.months).utc.iso8601
+    date = (Time.now - months_ago.months).utc.iso8601
     options.merge! since: date
 
     GithubClient.new(nickname, token).issues(github_repository, options)
