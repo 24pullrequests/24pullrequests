@@ -55,6 +55,7 @@ class DashboardsController < ApplicationController
   end
 
   protected
+
   def today
     Time.zone.now.to_date
   end
