@@ -33,15 +33,15 @@ class AuthHash
   end
 
   def nickname
-    user_hash.fetch('info',{}).fetch('nickname')
+    user_hash.fetch('info', {}).fetch('nickname')
   end
 
   def email
-    user_hash.fetch('info',{}).fetch('email', nil)
+    user_hash.fetch('info', {}).fetch('email', nil)
   end
 
   def gravatar_id
-    user_hash.fetch('extra',{}).fetch('raw_info',{}).fetch('gravatar_id', nil)
+    user_hash.fetch('extra', {}).fetch('raw_info', {}).fetch('gravatar_id', nil)
   end
 
   def token

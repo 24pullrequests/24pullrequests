@@ -3,4 +3,3 @@ Rails.application.config.pull_request_downloader = if Rails.env.production? || !
                                                    else
                                                      ->(login, oauth_token) { Struct.new(:pull_requests, :user_organisations).new([], []) }
                                                    end
-
