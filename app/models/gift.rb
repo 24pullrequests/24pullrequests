@@ -30,7 +30,7 @@ class Gift < ActiveRecord::Base
   end
 
   def self.giftable_dates(year = 2013)
-    1.upto(24).map { |day| Date.new(year,12,day) }
+    1.upto(24).map { |day| Date.new(year, 12, day) }
   end
 
   def self.default_date

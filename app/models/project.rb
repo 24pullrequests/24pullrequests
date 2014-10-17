@@ -28,7 +28,7 @@ class Project < ActiveRecord::Base
 
   validates_presence_of :description, :github_url, :name, :main_language
   validates_format_of :github_url, :with => /\Ahttps?:\/\/(www\.)?github.com\/[\w-]*\/[\w\.-]*(\/)?\Z/i, :message => 'Enter a valid GitHub URL.'
-  validates_uniqueness_of :github_url, :case_sensitive => false ,:message => "Project has already been suggested."
+  validates_uniqueness_of :github_url, :case_sensitive => false, :message => "Project has already been suggested."
   validates_length_of :description, :within => 20..200
   validates_inclusion_of :main_language, :in => LANGUAGES, :message => 'must be a programming language'
 
@@ -59,7 +59,7 @@ class Project < ActiveRecord::Base
   end
 
   def issues(nickname, token, months_ago=6, options={})
-    date = (Time.now-months_ago.months).utc.iso8601
+    date = (Time.now - months_ago.months).utc.iso8601
     options.merge! since: date
 
     GithubClient.new(nickname, token).issues(github_repository, options)

@@ -68,7 +68,7 @@ describe PullRequest, :type => :model do
   context "#scopes" do
     let!(:pull_requests) do
       4.times.map  { |n| create(:pull_request, language: "Haskell",
-                                               created_at: DateTime.now+n.minutes) }
+                                               created_at: DateTime.now + n.minutes) }
     end
 
     it "by_language" do
