@@ -36,7 +36,7 @@ describe Downloader do
     end
 
     it "when the pull request already exists it doesn't recreate it" do
-      user_downloader = double(:user_downloader, pull_requests: [pull_request, pull_request])
+      double(:user_downloader, pull_requests: [pull_request, pull_request])
       downloader.get_pull_requests
 
       expect(user.pull_requests.length).to eq(1)
