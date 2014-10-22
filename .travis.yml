@@ -11,3 +11,6 @@ cache:
   bundler: true
   directories:
     - tmp/cache/assets/test/sprockets
+addons:
+  code_climate:
+    repo_token: 2a5e192f091c667d87fbebdf75386384f0676f13cf3011b9cd4a006de7d1edfa

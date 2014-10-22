@@ -201,8 +201,8 @@ fr:
       tweet:
       gift_it: "Offrez lui un cadeau !"
 
-  collaborators:
-    title: Core Contributeurs
+  contributors:
+    title: Contributeurs
 
   about:
     title: À propos de 24 Pull Requests

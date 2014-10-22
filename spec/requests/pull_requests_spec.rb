@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'PullRequests' do
+describe 'PullRequests', :type => :request do
   subject { page }
 
   describe 'viewing the list of users' do
@@ -9,6 +9,6 @@ describe 'PullRequests' do
       visit pull_requests_path
     end
 
-    it { should have_content '5 Pull Requests already made!'}
+    it { is_expected.to have_content '5 Pull Requests already made!'}
   end
 end

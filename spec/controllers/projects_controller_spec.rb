@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe ProjectsController do
+describe ProjectsController, :type => :controller do
   let(:project) { create :project }
 
   describe 'GET index' do
@@ -10,7 +10,7 @@ describe ProjectsController do
         get :index, :format  => :json
       end
 
-      it { response.header['Content-Type'].should include 'application/json' }
+      it { expect(response.header['Content-Type']).to include 'application/json' }
     end
   end
 
@@ -34,38 +34,38 @@ describe ProjectsController do
       expect {create :project, parameters}.to raise_error
     end
   end
-  
+
   describe 'GET filter' do
-    before do 
-      5.times do 
+    before do
+      5.times do
         create :project, main_language: "Ruby"
         create :project, main_language: "JavaScript"
         create :project, main_language: "Python"
       end
       2.times {|i| create :project, main_language: "Lua"}
     end
-      
+
     it 'should do only return filter projects' do
-      get :filter, {:format => :js, :project => {:languages => ["Ruby"]}}
+      xhr :get, :filter, {:format => :js, :project => {:languages => ["Ruby"]}}
       expect(assigns(:projects).size).to eq 5
       expect(assigns(:projects).map{|p| p.main_language}.uniq).to eq ["Ruby"]
-      
-      get :filter, {:format => :js, :project => {:languages => ["JavaScript", "Lua"]}}
+
+      xhr :get, :filter, {:format => :js, :project => {:languages => ["JavaScript", "Lua"]}}
       expect(assigns(:projects).size).to eq 7
       expect(assigns(:projects).map{|p| p.main_language}.uniq).to include "JavaScript", "Lua"
     end
   end
-  
+
   describe "POST claim" do
     let(:unclaimed_project){create :project, :submitted_by => nil}
     let(:user) { create(:user) }
     let(:claimed_project){create :project}
-    
+
     before do
       @request.env['HTTP_REFERER'] = 'http://test.com/sessions/new'
       session[:user_id] = user.id
     end
-    
+
     describe "successful claim" do
       it "should successfully claim ownership of an unclaimed project" do
         post :claim, { :project => {:github_url => unclaimed_project.github_url}}
@@ -73,15 +73,15 @@ describe ProjectsController do
         expect(flash[:notice]).to eq "You have successfully claimed <b>#{unclaimed_project.github_url}</b>"
       end
     end
-    
-    describe "failed claim" do 
+
+    describe "failed claim" do
       it "should fail when claiming an already claimed project" do
         post :claim, { :project => {:github_url => claimed_project.github_url}}
         expect(flash[:notice]).not_to be_nil
-        expect(flash[:notice]).to eq "This repository doesn't exist or belongs to someone else"  
+        expect(flash[:notice]).to eq "This repository doesn't exist or belongs to someone else"
       end
     end
-    
+
   end
-  
+
 end

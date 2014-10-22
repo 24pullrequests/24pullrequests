@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'LanguagesRequests' do
+describe 'LanguagesRequests', :type => :request do
   subject { page }
 
   describe 'viewing information by language' do
@@ -14,27 +14,27 @@ describe 'LanguagesRequests' do
       visit language_path("haskell")
     end
 
-    it { should have_content '3 Developers'}
-    it { should have_content '6 Haskell Projects'}
-    it { should have_content 'Latest Haskell Pull Requests (9 total)'}
+    it { is_expected.to have_content '3 Developers'}
+    it { is_expected.to have_content '6 Haskell Projects'}
+    it { is_expected.to have_content 'Latest Haskell Pull Requests (9 total)'}
 
     describe "view all" do
       it "#projects" do
         within("#projects") { click_on "View All" }
 
-        should have_content "6 Projects are using Haskell"
+        is_expected.to have_content "6 Projects are using Haskell"
       end
 
       it "#users" do
         within("#users") { click_on "View All" }
 
-        should have_content "3 Developers using Haskell"
+        is_expected.to have_content "3 Developers using Haskell"
       end
 
       it "#pull_requests" do
         within("#pull_requests") { click_on "View All" }
 
-        should have_content "9 pull requests already made in Haskell!"
+        is_expected.to have_content "9 pull requests already made in Haskell!"
       end
     end
   end

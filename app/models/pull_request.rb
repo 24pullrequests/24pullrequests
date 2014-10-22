@@ -38,12 +38,8 @@ class PullRequest  < ActiveRecord::Base
   end
 
   def check_state
-    issue = fetch_data
+    issue = GithubClient.new(user.nickname, user.token).issue(repo_name, id)
     self.update_attributes(state: issue.state, comments_count: issue.comments)
-  end
-
-  def fetch_data
-    user.github_client.issue(repo_name, id)
   end
 
   def post_tweet
@@ -56,11 +52,11 @@ class PullRequest  < ActiveRecord::Base
   end
 
   def gifted_state
-    gifts.size > 0 ? :gifted : :not_gifted
+    gifts.any? ? :gifted : :not_gifted
   end
 
   def autogift
-    if body && body.scan(/24 ?pull ?request/i).size > 0
+    if body && body.scan(/24 ?pull ?request/i).any?
       user.new_gift(pull_request: self).save
     end
   end

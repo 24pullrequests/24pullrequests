@@ -1,12 +1,12 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe SessionsController do
+describe SessionsController, :type => :controller do
   describe 'GET new' do
     before do
       get :new
     end
 
-    it { should redirect_to('/auth/github') }
+    it { is_expected.to redirect_to('/auth/github') }
   end
 
   describe 'GET destroy' do
@@ -15,8 +15,8 @@ describe SessionsController do
       get :destroy
     end
 
-    it { should set_session(:user_id).to(nil) }
-    it { should redirect_to(root_path) }
+    it { is_expected.to set_session(:user_id).to(nil) }
+    it { is_expected.to redirect_to(root_path) }
   end
 
   describe 'GET failure' do
@@ -24,7 +24,7 @@ describe SessionsController do
       get :failure, :message => 'foobar'
     end
 
-    it { should set_the_flash[:notice].to('foobar') }
-    it { should redirect_to(root_path)}
+    it { is_expected.to set_the_flash[:notice].to('foobar') }
+    it { is_expected.to redirect_to(root_path)}
   end
 end

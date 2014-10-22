@@ -1,13 +1,13 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'Organisations' do
+describe 'Organisations', :type => :request do
   subject { page }
 
   it "viewing a list of organisations" do
     3.times { create :organisation }
     visit organisations_path
 
-    should have_content '3 organisations involved'
+    is_expected.to have_content '3 organisations involved'
   end
 
   it "viewing an organization" do
@@ -15,6 +15,6 @@ describe 'Organisations' do
     sleep 1
     visit organisation_path(organisation)
 
-    should have_content "0 pull requests submitted by members"
+    is_expected.to have_content "0 pull requests submitted by members"
   end
 end

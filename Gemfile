@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.1.1"
 
-gem 'rails', '4.0.5'
+gem 'rails', '4.1.6'
 
 gem 'jquery-rails'
 
@@ -11,22 +11,24 @@ gem 'omniauth-github'
 gem 'omniauth-twitter'
 gem 'haml-rails'
 gem 'octokit'
-gem 'bugsnag', '1.6.3'
+gem 'bugsnag'
 gem 'rabl'
 gem 'newrelic_rpm'
 gem 'simplecov'
 gem 'kaminari'
-gem 'twitter', '5.0.0'
+gem 'twitter'
 gem 'anjlab-bootstrap-rails', '~> 3.0.3.0', :require => 'bootstrap-rails'
 gem 'simple_form'
 gem 'rack-google-analytics'
-gem 'ffi', '1.9.0'
+gem 'ffi', '1.9.3'
 gem 'csv_shaper'
 
 
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
+
+
 
 group :development do
   gem 'better_errors'
@@ -35,11 +37,25 @@ group :development do
   gem 'quiet_assets'
 end
 
-group :development, :test do
-  gem 'rspec-rails'
+group :development, :test, :cucumber do
+  gem "rspec-rails"
+  gem 'coveralls', require: false
+  gem "codeclimate-test-reporter", require: nil
+
+  gem 'rspec-its'
+  gem 'rspec-collection_matchers'
+  gem 'rspec-activemodel-mocks'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'brakeman'
+  gem 'poltergeist'
+  gem 'launchy'
+
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'webmock', :require => false
+  gem 'timecop'
+
 
   # Auto testing
   gem 'guard-rspec'
@@ -53,18 +69,6 @@ group :development, :test do
   gem 'sinon-chai-rails'
   gem 'sinon-rails'
   gem 'ejs'
-end
-
-group :test do
-  gem 'poltergeist', '~> 1.4.0'
-  gem 'launchy', '2.4.2'
-
-  gem 'database_cleaner'
-  gem 'shoulda-matchers'
-  gem 'webmock', :require => false
-  gem 'timecop', '0.7.0'
-
-  gem 'coveralls', require: false
 end
 
 group :production do

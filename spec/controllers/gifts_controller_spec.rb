@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe GiftsController do
+describe GiftsController, :type => :controller do
   let(:user) { create(:user) }
   let(:gift) { create(:gift, :user => user) }
 
@@ -13,7 +13,7 @@ describe GiftsController do
     it "removes the gift" do
       delete :destroy, :id => gift.date
 
-      Gift.find_by(id: gift.id).should be_nil
+      expect(Gift.find_by(id: gift.id)).to be_nil
     end
   end
 
