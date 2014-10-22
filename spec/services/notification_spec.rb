@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 describe Notification do
 
   subject(:user) { FactoryGirl.create(:user, email_frequency: 'daily') }
