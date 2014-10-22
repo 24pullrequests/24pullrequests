@@ -15,13 +15,6 @@ describe Downloader do
     end
   end
 
-  def double_organisation
-    double(:organisation,
-           id: 2,
-           _rels: { avatar: double(:avatar, href: 'href') },
-           login: "kobol")
-  end
-
   describe "#get_pull_requests" do
     let(:pull_request) { mock_pull_request }
 
