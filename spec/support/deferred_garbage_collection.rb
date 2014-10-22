@@ -17,4 +17,3 @@ class DeferredGarbageCollection
     end
   end
 end
-

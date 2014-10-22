@@ -1,10 +1,8 @@
 def load_user
-  u = User.order('created_at desc').limit(50).sample(1).first
-  if u.github_client.rate_limit.remaining < 4000
-    load_user
-  else
-    u
-  end
+  user = User.order('created_at desc').limit(50).sample(1).first
+  return user if user.github_client.high_rate_limit?
+
+  load_user
 end
 
 desc "Download user organisations"

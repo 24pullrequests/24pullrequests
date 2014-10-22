@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'Logging in' do
+describe 'Logging in', :type => :request do
   let(:user) { create :user }
   subject { page }
 
@@ -10,6 +10,6 @@ describe 'Logging in' do
       visit preferences_path
     end
 
-    specify { current_path.should eq preferences_path }
+    specify { expect(current_path).to eq preferences_path }
   end
 end

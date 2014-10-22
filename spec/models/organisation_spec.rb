@@ -1,7 +1,7 @@
-require 'spec_helper'
+require 'rails_helper'
 require 'rake'
 
-describe Organisation do
+describe Organisation, :type => :model do
 
   it "pull_request_count" do
     setup_pull_request_data
@@ -11,16 +11,16 @@ describe Organisation do
 
     ordered_organisations = Organisation.order_by_pull_requests
 
-    ordered_organisations.first.pull_request_count.should eq(6)
-    ordered_organisations.last.pull_request_count.should eq(2)
+    expect(ordered_organisations.first.pull_request_count).to eq(6)
+    expect(ordered_organisations.last.pull_request_count).to eq(2)
   end
 
   it "with_user_counts" do
     setup_organizations_with_users
 
     organisations_with_user_counts = Organisation.with_user_counts
-    organisations_with_user_counts.first.users_count.should eq(3)
-    organisations_with_user_counts.last.users_count.should eq(1)
+    expect(organisations_with_user_counts.first.users_count).to eq(3)
+    expect(organisations_with_user_counts.last.users_count).to eq(1)
   end
 
   def setup_pull_request_data

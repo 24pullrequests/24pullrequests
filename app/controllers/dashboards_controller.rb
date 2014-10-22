@@ -55,12 +55,13 @@ class DashboardsController < ApplicationController
   end
 
   protected
+
   def today
     Time.zone.now.to_date
   end
 
   def is_giftable_range?
-    today > Date.new(CURRENT_YEAR,12,1) and today < Date.new(CURRENT_YEAR,12,24)
+    today > Date.new(CURRENT_YEAR, 12, 1) and today < Date.new(CURRENT_YEAR, 12, 24)
   end
 
   def set_email_preferences

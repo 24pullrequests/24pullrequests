@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe 'Projects' do
+describe 'Projects', :type => :request do
   let(:user) { create :user, :email_frequency => 'daily' }
   subject { page }
 
@@ -10,7 +10,7 @@ describe 'Projects' do
       visit projects_path
     end
 
-    it { should have_content '2 Suggested Projects' }
+    it { is_expected.to have_content '2 Suggested Projects' }
   end
 
   describe 'suggesting a new project' do
@@ -28,7 +28,7 @@ describe 'Projects' do
       click_on 'Submit Project'
 
       click_on 'My Suggestions'
-      should have_content("akira/24pullrequests")
+      is_expected.to have_content("akira/24pullrequests")
     end
   end
 
@@ -45,7 +45,7 @@ describe 'Projects' do
 
       it 'should show projects with the users languages by default' do
         within '#projects' do
-          page.should have_selector('h4', text: /Ruby project/i)
+          expect(page).to have_selector('h4', text: /Ruby project/i)
         end
       end
 
@@ -53,16 +53,16 @@ describe 'Projects' do
         all('.icheckbox_line', text: "Java").first.click
 
         within '#projects' do
-          page.should have_css('.ruby')
-          page.should have_css('.java')
+          expect(page).to have_css('.ruby')
+          expect(page).to have_css('.java')
         end
       end
 
       it 'should reset active filter when clicking "All Languages"' do
         all('.icheckbox_line', text: "All Languages").first.click
         within '#projects' do
-          page.should have_css('.ruby')
-          page.should have_css('.java')
+          expect(page).to have_css('.ruby')
+          expect(page).to have_css('.java')
         end
       end
 
@@ -73,7 +73,7 @@ describe 'Projects' do
         visit projects_path
 
         click_on 'More'
-        all('#projects project').each{|project| project .should have_css('ruby') }
+        all('#projects project').each{|project| expect(project) .to have_css('ruby') }
       end
     end
   end
@@ -102,14 +102,14 @@ describe 'Projects' do
       it "can deactive a project" do
         first(:link, "Deactive").click
 
-        should have_content "#{user_project.name} has been deactivated."
+        is_expected.to have_content "#{user_project.name} has been deactivated."
       end
     end
 
     it "should not be able to edit other user's suggestions" do
       visit edit_project_path(other_project)
 
-      should have_content "You can only edit projects you have suggested!"
+      is_expected.to have_content "You can only edit projects you have suggested!"
     end
   end
 end

@@ -1,6 +1,11 @@
 # 24 Pull Requests
 
-[![Build Status](https://travis-ci.org/andrew/24pullrequests.svg?branch=master)](https://travis-ci.org/andrew/24pullrequests) [![Dependency Status](https://gemnasium.com/andrew/24pullrequests.png)](https://gemnasium.com/andrew/24pullrequests) [![Code Climate](https://codeclimate.com/github/andrew/24pullrequests.png)](https://codeclimate.com/github/andrew/24pullrequests) [![Coverage Status](https://coveralls.io/repos/andrew/24pullrequests/badge.png)](https://coveralls.io/r/andrew/24pullrequests)
+[![Build Status](https://travis-ci.org/24pullrequests/24pullrequests.svg?branch=master)](https://travis-ci.org/24pullrequests/24pullrequests)
+[![Dependency Status](https://gemnasium.com/24pullrequests/24pullrequests.svg)](https://gemnasium.com/24pullrequests/24pullrequests)
+[![Code Climate](https://codeclimate.com/github/24pullrequests/24pullrequests/badges/gpa.svg)](https://codeclimate.com/github/24pullrequests/24pullrequests)
+[![Test Coverage](https://codeclimate.com/github/24pullrequests/24pullrequests/badges/coverage.svg)](https://codeclimate.com/github/24pullrequests/24pullrequests)
+[![Gitter chat](http://img.shields.io/badge/gitter-24pullrequests-brightgreen.svg)](https://gitter.im/24pullrequests/24pullrequests)
+[![PullReview stats](https://www.pullreview.com/github/24pullrequests/24pullrequests/badges/master.svg?)](https://www.pullreview.com/github/24pullrequests/24pullrequests/reviews/master)
 
 “Giving back little gifts of code”
 
@@ -21,8 +26,8 @@ This is the site to help promote the project, highlighting why, how and where to
 
 ## Development
 
-Source hosted at [GitHub](http://github.com/andrew/24pullrequests).
-Report issues/feature requests on [GitHub Issues](http://github.com/andrew/24pullrequests/issues). Follow us on Twitter [@24pullrequests](https://twitter.com/24pullrequests).
+Source hosted at [GitHub](http://github.com/24pullrequests/24pullrequests).
+Report issues/feature requests on [GitHub Issues](http://github.com/24pullrequests/24pullrequests/issues). Follow us on Twitter [@24pullrequests](https://twitter.com/24pullrequests).
 
 ### Getting Started
 
@@ -103,5 +108,5 @@ as it will use it to learn more about the developers and for pull requests.
 
 ## Copyright
 
-Copyright (c) 2013 Andrew Nesbitt. See [LICENSE](https://github.com/andrew/24pullrequests/blob/master/LICENSE) for details.
+Copyright (c) 2013 Andrew Nesbitt. See [LICENSE](https://github.com/24pullrequests/24pullrequests/blob/master/LICENSE) for details.
 

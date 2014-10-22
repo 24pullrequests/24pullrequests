@@ -199,8 +199,8 @@ el:
       tweet:
       gift_it:
 
-  collaborators:
-    title: Core Contributors
+  contributors:
+    title: Contributors
 
   about:
     title: Σχετικα με το 24 Pull Requests
