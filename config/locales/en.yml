@@ -253,6 +253,10 @@ en:
       details: Load all organisations that have signed up to the site, also includes the users that belong to each organisation.
       specific: Load information for a specific organisation.
 
+  events:
+    title: Events
+    description: This year we are encouraging organisers around the world to hold 24pullrequests hack events. Get involved this christmas.
+
   locale: # Remove this part in your own language file - it's not necessary. Don't forget to include your language here, though!
     translate: Translate into your language!
     en: English
