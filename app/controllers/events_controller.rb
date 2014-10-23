@@ -11,6 +11,7 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
+    @event.user_id = current_user.id
     if @event.save
       redirect_to @event
     else
@@ -43,5 +44,6 @@ class EventsController < ApplicationController
 
   def set_event
     @event = Event.find_by_id(params[:id])
+    redirect_to events_path, notice: "You can only edit events you have created!" unless @event.user_id == current_user.id
   end
 end
