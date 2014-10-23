@@ -1,1 +1,7 @@
-<h1>events#show</h1>
+<h1><%= @event.organiser %> - <%= @event.formatted_date %></h1>
+
+<p><%= @event.location %></p>
+
+<p><%= @event.description %></p>
+
+<%= link_to "View more details", @event.url, class: "btn btn-primary" %>
