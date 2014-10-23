@@ -6,4 +6,8 @@ class Event < ActiveRecord::Base
     self.start_time.strftime('%A %d %B %Y')
   end
 
+  def current_user_is_owner(current_user)
+    self.user == current_user
+  end
+
 end
