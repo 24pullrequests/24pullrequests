@@ -1,6 +1,10 @@
 <h1><%= t("events.title") %></h1>
 <h3><%= t("events.description") %></h3>
 
+<% if @events.empty? %>
+  <h4><i>There are no upcoming events, why not <%= link_to "host an event", new_event_path %></i></h4>
+<% end %>
+
 <% @events.each do |event| %>
   <div class="event">
     <h2><%= link_to event.organiser, event %>
