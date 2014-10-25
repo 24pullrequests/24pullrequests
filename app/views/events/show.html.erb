@@ -1,5 +1,11 @@
 <h1><%= @event.organiser %> - <%= @event.formatted_date %></h1>
 
+<div class="map" data-latitude="<%= @event.latitude %>" data-longitude="<%= @event.longitude %>"></div>
+
+<div class="js-pins">
+  <span class="pin" data-latitude="<%= @event.latitude %>" data-longitude="<%= @event.longitude %>">
+</div>
+
 <p><%= @event.location %></p>
 
 <p><%= @event.description %></p>
