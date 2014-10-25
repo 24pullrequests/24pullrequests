@@ -39,7 +39,7 @@ class EventsController < ApplicationController
   protected
 
   def event_params
-    params.require(:event).permit(:organiser, :location, :url, :start_time, :description)
+    params.require(:event).permit(:organiser, :location, :url, :start_time, :description, :latitude, :longitude)
   end
 
   def set_event
