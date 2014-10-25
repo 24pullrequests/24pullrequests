@@ -28,7 +28,7 @@ Spork.prefork do
 
   OmniAuth.config.test_mode = true
 
-  WebMock.disable_net_connect! :allow_localhost => true
+  WebMock.disable_net_connect! allow_localhost: true
 
   require 'capybara/poltergeist'
   Capybara.javascript_driver = :poltergeist
@@ -64,7 +64,7 @@ Spork.prefork do
     end
 
     config.after(:suite) do
-      WebMock.disable_net_connect!(:allow => 'codeclimate.com')
+      WebMock.disable_net_connect!(allow: 'codeclimate.com')
     end
 
     config.before(:all) do
@@ -79,7 +79,7 @@ Spork.prefork do
       DatabaseCleaner.strategy = :transaction
     end
 
-    config.before(:each, :js => true) do
+    config.before(:each, js: true) do
       DatabaseCleaner.strategy = :truncation
     end
 
