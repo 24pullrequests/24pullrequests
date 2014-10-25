@@ -4,10 +4,10 @@ Tfpullrequests::Application.routes.draw do
   get '/500', :to => 'errors#internal'
 
   get "/locale/:locale", to: "dashboards#locale", as: :locale
-  resources :gifts
-  resources :users
+  resources :gifts, except: [:show]
+  resources :users, only: [:show, :index]
 
-  resources :organisations
+  resources :organisations, only: [:show, :index]
 
   get '/users/:id/:year', :to => 'users#show'
 
@@ -19,7 +19,7 @@ Tfpullrequests::Application.routes.draw do
   end
 
   resources :pull_requests, :only => [:index]
-  resource  :dashboard do
+  resource  :dashboard, only: [:show, :destroy] do
     member do
       get :delete
       delete :destroy
@@ -48,7 +48,7 @@ Tfpullrequests::Application.routes.draw do
   get 'api', :to => 'static#api'
   get 'contributing', :to => 'static#contributing'
 
-  resources :languages do
+  resources :languages, only: [:show] do
     member do
       get :projects
       get :pull_requests

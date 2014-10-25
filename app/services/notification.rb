@@ -1,6 +1,9 @@
 class Notification
   LESS_THAN_A_DAY = 23.hours
-  LESS_THAN_A_WEEK  = 6.days + LESS_THAN_A_DAY
+  LESS_THAN_A_WEEK = 6.days + LESS_THAN_A_DAY
+
+  LAST_SEEN = { daily: LESS_THAN_A_DAY,
+                weekly: LESS_THAN_A_WEEK }
 
   def initialize(user)
     @user = user
@@ -24,14 +27,18 @@ class Notification
   end
 
   def daily?
-    return false unless user.email_frequency == 'daily'
-
-    user.last_sent_at.nil? || user.last_sent_at < LESS_THAN_A_DAY.ago
+    is_frequency?(:daily)
   end
 
   def weekly?
-    return false unless  user.email_frequency == 'weekly'
+    is_frequency?(:weekly)
+  end
 
-    user.last_sent_at.nil? || user.last_sent_at < LESS_THAN_A_WEEK.ago
+  private
+
+  def is_frequency?(frequency)
+    return false unless user.email_frequency.to_sym == frequency
+
+    user.last_sent_at.nil? || user.last_sent_at < LAST_SEEN[frequency]
   end
 end
