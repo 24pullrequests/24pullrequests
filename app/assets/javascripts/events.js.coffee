@@ -1,13 +1,13 @@
 class Map
 
   zoomTo: (latitude, longitude, zoom = 12) ->
-    @view.setCenter(ol.proj.transform([latitude, longitude], "EPSG:4326", "EPSG:3857"))
+    @view.setCenter(ol.proj.transform([longitude, latitude], "EPSG:4326", "EPSG:3857"))
     @view.setZoom(zoom)
 
   setLocationToGeolocation: ->
     if navigator.geolocation
       navigator.geolocation.getCurrentPosition (position) =>
-        @zoomTo(position.coords.longitude, position.coords.latitude)
+        @zoomTo(position.coords.latitude, position.coords.longitude)
 
   constructor: (@mapElement) ->
     @view = new ol.View(
@@ -27,7 +27,11 @@ class Map
     longitude = $(@mapElement).data('longitude')
 
     if latitude? and longitude?
-      @zoomTo(latitude, longitude)
+      latitude = parseFloat(latitude, 10)
+      longitude = parseFloat(longitude, 10)
+
+      console.log latitude, longitude
+      @zoomTo(latitude, longitude, 14)
     else
       @setLocationToGeolocation()
 
