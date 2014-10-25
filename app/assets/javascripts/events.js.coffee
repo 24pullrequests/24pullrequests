@@ -29,8 +29,6 @@ class Map
     if latitude? and longitude?
       latitude = parseFloat(latitude, 10)
       longitude = parseFloat(longitude, 10)
-
-      console.log latitude, longitude
       @zoomTo(latitude, longitude, 14)
     else
       @setLocationToGeolocation()
