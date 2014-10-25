@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.1.3"
+ruby '2.1.3'
 
 gem 'rails', '4.1.6'
 
@@ -17,18 +17,15 @@ gem 'newrelic_rpm'
 gem 'simplecov'
 gem 'kaminari'
 gem 'twitter'
-gem 'anjlab-bootstrap-rails', '~> 3.0.3.0', :require => 'bootstrap-rails'
+gem 'anjlab-bootstrap-rails', '~> 3.0.3.0', require: 'bootstrap-rails'
 gem 'simple_form'
 gem 'rack-google-analytics'
 gem 'ffi', '1.9.3'
 gem 'csv_shaper'
 
-
 gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
-
-
 
 group :development do
   gem 'better_errors'
@@ -38,9 +35,9 @@ group :development do
 end
 
 group :development, :test, :cucumber do
-  gem "rspec-rails"
+  gem 'rspec-rails'
   gem 'coveralls', require: false
-  gem "codeclimate-test-reporter", require: nil
+  gem 'codeclimate-test-reporter', require: nil
 
   gem 'rspec-its'
   gem 'rspec-collection_matchers'
@@ -53,9 +50,8 @@ group :development, :test, :cucumber do
 
   gem 'database_cleaner'
   gem 'shoulda-matchers'
-  gem 'webmock', :require => false
+  gem 'webmock', require: false
   gem 'timecop'
-
 
   # Auto testing
   gem 'guard-rspec'
