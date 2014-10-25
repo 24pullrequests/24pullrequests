@@ -1,5 +1,15 @@
 class Map
-  constructor: ->
+
+  zoomTo: (latitude, longitude, zoom = 12) ->
+    @view.setCenter(ol.proj.transform([latitude, longitude], "EPSG:4326", "EPSG:3857"))
+    @view.setZoom(zoom)
+
+  setLocationToGeolocation: ->
+    if navigator.geolocation
+      navigator.geolocation.getCurrentPosition (position) =>
+        @zoomTo(position.coords.longitude, position.coords.latitude)
+
+  constructor: (@mapElement) ->
     @view = new ol.View(
       center: ol.proj.transform([0,18], "EPSG:4326", "EPSG:3857")
       zoom: 2
@@ -9,27 +19,33 @@ class Map
       layers: [
         new ol.layer.Tile(source: new ol.source.OSM())
       ]
-      target: document.getElementById("map")
+      target: @mapElement
       view: @view
     )
 
-$ ->
-  map = new Map
-
-  $('.js-pins .pin').each ->
-    latitude = $(@).data('latitude')
-    longitude = $(@).data('longitude')
+    latitude = $(@mapElement).data('latitude')
+    longitude = $(@mapElement).data('longitude')
 
     if latitude? and longitude?
-      latitude = parseFloat(latitude, 10)
-      longitude = parseFloat(longitude, 10)
-      overlay = new ol.Overlay(
-        position: ol.proj.transform([longitude,latitude], 'EPSG:4326', 'EPSG:3857')
-        element: @
-      )
-      map.map.addOverlay(overlay)
+      @zoomTo(latitude, longitude)
+    else
+      @setLocationToGeolocation()
 
-  if navigator.geolocation
-    navigator.geolocation.getCurrentPosition (position) ->
-      map.view.setCenter(ol.proj.transform([position.coords.longitude, position.coords.latitude], "EPSG:4326", "EPSG:3857"))
-      map.view.setZoom(13)
+$ ->
+
+  $('.map').each ->
+
+    map = new Map(@)
+
+    $('.js-pins .pin').each ->
+      latitude = $(@).data('latitude')
+      longitude = $(@).data('longitude')
+
+      if latitude? and longitude?
+        latitude = parseFloat(latitude, 10)
+        longitude = parseFloat(longitude, 10)
+        overlay = new ol.Overlay(
+          position: ol.proj.transform([longitude,latitude], 'EPSG:4326', 'EPSG:3857')
+          element: @
+        )
+        map.map.addOverlay(overlay)
