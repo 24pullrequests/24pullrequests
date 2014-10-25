@@ -5,7 +5,7 @@
 
 <div class="js-pins">
   <% @events.each do |event| %>
-    <%= link_to "", event, target: "_blank", class: "pin", data: { latitude: event.latitude, longitude: event.longitude } %>
+    <%= link_to "", event, class: "pin", data: { latitude: event.latitude, longitude: event.longitude } %>
   <% end %>
 </div>
 
