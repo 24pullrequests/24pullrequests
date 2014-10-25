@@ -16,5 +16,6 @@
 //= require typeahead.min
 //= require coderwall
 //= require jquery.timeago
+//= require datetimepicker
 //= require_tree .
 //
