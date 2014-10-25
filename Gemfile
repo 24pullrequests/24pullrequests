@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 ruby "2.1.1"
+source 'https://rails-assets.org'
 
 gem 'rails', '4.1.6'
 
@@ -28,7 +29,7 @@ gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
 
-
+gem 'rails-assets-datetimepicker'
 
 group :development do
   gem 'better_errors'
