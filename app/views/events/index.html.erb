@@ -1,6 +1,14 @@
 <h1><%= t("events.title") %></h1>
 <h3><%= t("events.description") %></h3>
 
+<div id="map" class="map"></div>
+
+<div class="js-pins">
+  <% @events.each do |event| %>
+    <%= link_to "", event, target: "_blank", class: "pin", data: { latitude: event.latitude, longitude: event.longitude } %>
+  <% end %>
+</div>
+
 <% if @events.empty? %>
   <h4><i>There are no upcoming events, why not <%= link_to "host an event", new_event_path %></i></h4>
 <% end %>
