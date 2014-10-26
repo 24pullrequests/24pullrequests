@@ -26,12 +26,12 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy!
 
-    redirect_to :back, notice: "Event has been removed"
+    redirect_to :back, notice: t("events.notice.new_success")
   end
 
   def update
     if @event.update_attributes(event_params)
-      redirect_to @event, notice: "Event updated successfully!"
+      redirect_to @event, notice: t("events.notice.edit_success")
     else
       render :edit
     end
@@ -48,7 +48,7 @@ class EventsController < ApplicationController
   end
 
   def set_event
-    @event = Event.find_by_id(params[:id])
-    redirect_to events_path, notice: "You can only edit events you have created!" unless @event.user_id == current_user.id
+    @event = current_user.events.find(params[:id])
+    redirect_to events_path, notice: t("events.notice.not_authorized") if @event.nil?
   end
 end
