@@ -55,6 +55,12 @@ en:
       title: Build your profile
       description: Contributing to open source projects is also a great way to build your profile in the community and improve your CV.
       getting_started: It's really easy to get started. Even small contributions can be really valuable to a project.
+    event:
+      title: Events
+      description: This year we are encouraging organisers around the world to hold 24pullrequests hack events. Get involved this Christmas.
+      view_events: View events
+      host_an_event: Host an event
+
     join_the_chat: Join the chat on IRC, %{link_to_chat}, at freenode.
 
   information:
@@ -259,7 +265,11 @@ en:
 
   events:
     title: Events
-    description: This year we are encouraging organisers around the world to hold 24pullrequests hack events. Get involved this christmas.
+    description: This year we are encouraging organisers around the world to hold 24pullrequests hack events. Get involved this Christmas.
+    show:
+      view_event_details: View event details
+    edit:
+      title
     new:
       title: Host a 24pullrequests event
       form:
