@@ -9,13 +9,18 @@ class Map
 
     @map.addOverlay(@pin)
 
+    @setForm(latitude, longitude)
+
     @map.on "click", (evt) =>
       console.log evt
       coordinate = evt.coordinate
       @pin.setPosition(evt.coordinate)
       latlng = ol.proj.transform(coordinate, 'EPSG:3857', 'EPSG:4326');
-      $('#event_longitude').val latlng[0]
-      $('#event_latitude').val latlng[1]
+      @setForm(latlng[0], latlng[1])
+
+  setForm: (latitude, longitude) ->
+    $('#event_longitude').val latitude
+    $('#event_latitude').val longitude
 
   zoomTo: (latitude, longitude, zoom = 12) ->
     @view.setCenter(ol.proj.transform([longitude, latitude], "EPSG:4326", "EPSG:3857"))
