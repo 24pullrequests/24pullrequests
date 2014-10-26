@@ -1,25 +1,27 @@
 %h1= t("events.title")
 %h3= t("events.description")
 
-.row
-  .col-sm-12.col-md-6
-    .map
-    .js-pins
+- if @events.empty?
+  %h4
+    %i
+      = t("events.index.no_upcoming_events")
+      = link_to t("events.index.host_an_event"), new_event_path
+- else
+  .row
+    .col-sm-12.col-md-6
+      .map
+      .js-pins
+        - @events.each do |event|
+          = link_to "", event, class: "pin", data: { latitude: event.latitude, longitude: event.longitude }
+      %br
+    .col-sm-12.col-md-6
       - @events.each do |event|
-        = link_to "", event, class: "pin", data: { latitude: event.latitude, longitude: event.longitude }
-    %br
-    - if @events.empty?
-      %h4
-        %i
-          There are no upcoming events, why not #{link_to "host an event", new_event_path}
-  .col-sm-12.col-md-6
-    - @events.each do |event|
-      .event
-        %h2
-          = link_to event.organiser, event
-          - if event.current_user_is_owner(current_user)
-            %small= link_to "edit", edit_event_path(event)
-        %h3
-          %small
-            = event.location
-            \/ #{event.formatted_date}
+        .event
+          %h2
+            = link_to event.organiser, event
+            - if event.current_user_is_owner(current_user)
+              %small= link_to "edit", edit_event_path(event)
+          %h3
+            %small
+              = event.location
+              \/ #{event.formatted_date}
