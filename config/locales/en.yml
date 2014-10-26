@@ -2,6 +2,10 @@ en:
   activerecord:
     errors:
       models:
+        event:
+          attributes:
+            start_time:
+              not_in_range: "Events can only be created between 1st and 24th December"
         user:
           attributes:
             email:
