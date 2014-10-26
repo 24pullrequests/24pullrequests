@@ -5,8 +5,8 @@ class CreateEvents < ActiveRecord::Migration
       t.string :location
       t.string :url
       t.datetime :start_time
-      t.decimal :latitude, {:precision=>10, :scale=>6}
-      t.decimal :longitude, {:precision=>10, :scale=>6}
+      t.decimal :latitude, { precision: 10, scale: 6 }
+      t.decimal :longitude, { precision: 10, scale: 6 }
 
       t.timestamps
     end

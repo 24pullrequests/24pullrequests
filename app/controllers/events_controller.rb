@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :set_event, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @events = Event.where(['start_time >= ?', Date.today]).order('start_time')
+    @events = Event.where(["start_time >= ?", Date.today]).order("start_time")
   end
 
   def new
