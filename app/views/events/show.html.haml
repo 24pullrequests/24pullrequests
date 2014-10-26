@@ -11,4 +11,4 @@
         %small= @event.formatted_date
     %p
     %p= @event.description
-    = link_to "View more details", @event.url, class: "btn btn-primary"
+    = link_to t("events.show.view_event_details"), @event.url, class: "btn btn-primary"
