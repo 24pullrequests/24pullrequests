@@ -12,7 +12,7 @@ describe 'Organisations', :type => :request do
 
   it "viewing an organization" do
     organisation = create(:organisation)
-    sleep 1
+    sleep 6
     visit organisation_path(organisation)
 
     is_expected.to have_content "0 pull requests submitted by members"
