@@ -5,7 +5,7 @@ class Event < ActiveRecord::Base
   validate :validate_start_time
 
   def formatted_date
-    start_time.strftime('%A %d %B %Y at %I:%M%p')
+    start_time.strftime("%A %d %B %Y at %I:%M%p")
   end
 
   def current_user_is_owner(current_user)
