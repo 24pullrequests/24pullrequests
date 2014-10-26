@@ -1,0 +1,40 @@
+= form_for @event, html: { class: "simple_form form-horizontal" } do |f|
+  - if @event.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@event.errors.count, "error")
+        prohibited this event from being saved:
+      %ul
+        - @event.errors.full_messages.each do |msg|
+          %li= msg
+  .form-group
+    = f.label :organiser, class: "col-sm-2 control-label"
+    .col-sm-10.col-md-4
+      = f.text_field :organiser, class: "form-control", placeholder: "e.g. GitHub"
+  .form-group
+    = f.label :description, class: "col-sm-2 control-label"
+    .col-sm-10.col-md-4
+      = f.text_area :description, class: "form-control", placeholder: "Give a little desciption of the group and event"
+  .form-group
+    = f.label :location, class: "col-sm-2 control-label"
+    .col-sm-10.col-md-4
+      = f.text_field :location, class: "form-control", placeholder: "e.g. San Francisco, CA, United States"
+  .form-group
+    = f.label :url, class: "col-sm-2 control-label"
+    .col-sm-10.col-md-4
+      = f.text_field :url, class: "form-control", placeholder: "Your event page / registration"
+  .form-group
+    = f.label :start_time, "When", class: "col-sm-2 control-label"
+    .col-sm-10.col-md-4
+      = f.text_field :start_time, class: "form-control js-datetimepicker"
+  .form-group
+    %label.col-sm-2.control-label Location
+    .col-sm-10.col-md-4
+      .map.map--small{"data-map-picker" => "true"}
+      .js-pins
+        %span.pin
+      = f.hidden_field :latitude, class: "form-control", step: "any"
+      = f.hidden_field :longitude, class: "form-control", step: "any"
+  .form-group
+    .col-sm-offset-2.col-sm-10.col-md-4
+      = f.submit "Create event", class: "btn btn-default"
