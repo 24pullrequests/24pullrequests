@@ -266,6 +266,8 @@ en:
   events:
     title: Events
     description: This year we are encouraging organisers around the world to hold 24pullrequests hack events. Get involved this Christmas.
+    notice:
+      not_logged_in: "You have to be logged in to create or edit events"
     show:
       view_event_details: View event details
     edit:
