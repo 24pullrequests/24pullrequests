@@ -260,6 +260,24 @@ en:
   events:
     title: Events
     description: This year we are encouraging organisers around the world to hold 24pullrequests hack events. Get involved this christmas.
+    new:
+      title: Host a 24pullrequests event
+      form:
+        organiser: Organiser
+        description: Description
+        description_placeholder: Give a little desciption of the group and event
+        location: Location
+        location_placeholder: e.g. San Francisco, CA, United States
+        url: URL
+        url_placeholder: "Your event page / registration"
+        map: "Location marker"
+        start_time: "When"
+
+    edit:
+      title: Edit Suggestion
+    admin:
+      title: Manage Projects
+      search: Search by GitHub repository
 
   locale: # Remove this part in your own language file - it's not necessary. Don't forget to include your language here, though!
     translate: Translate into your language!
