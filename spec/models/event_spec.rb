@@ -1,6 +1,6 @@
-require 'rails_helper'
+require "rails_helper"
 
-describe Event, :type => :model do
+describe Event, type: :model do
   it { is_expected.to validate_presence_of(:name) }
   it { is_expected.to validate_presence_of(:location) }
   it { is_expected.to validate_presence_of(:url) }
