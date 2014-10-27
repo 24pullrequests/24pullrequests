@@ -1,6 +1,6 @@
 class Event < ActiveRecord::Base
   belongs_to :user
-  validates_presence_of :organiser, :location, :url, :start_time, :latitude, :longitude, :description
+  validates_presence_of :name, :location, :url, :start_time, :latitude, :longitude, :description
   validates :url, format: URI::regexp(%w(http https))
   validate :validate_start_time
 

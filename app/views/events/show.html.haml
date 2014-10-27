@@ -5,10 +5,11 @@
       %span.pin{"data-latitude" => @event.latitude, "data-longitude" => @event.longitude}
   .col-sm-12.col-md-6
     %h1
-      = @event.organiser
+      = @event.name
+      %br
       %small= @event.location
       %br
-        %small= @event.formatted_date
+      %small= @event.formatted_date
     %hr
     %p= @event.description
     = link_to t("events.show.view_event_details"), @event.url, class: "btn btn-primary"

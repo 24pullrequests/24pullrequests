@@ -282,11 +282,12 @@ en:
     new:
       title: Host a 24pullrequests event
       form:
-        organiser: Organiser
+        name: Event name
+        name_placeholder: Bristol Ruby Group Pull-request-a-thon
         description: Description
         description_placeholder: Give a little desciption of the group and event
         location: Location
-        location_placeholder: e.g. San Francisco, CA, United States
+        location_placeholder: e.g. Bristol, UK
         url: URL
         url_placeholder: "Your event page / registration"
         map: "Location marker"
