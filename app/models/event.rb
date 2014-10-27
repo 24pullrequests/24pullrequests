@@ -8,8 +8,9 @@ class Event < ActiveRecord::Base
     start_time.strftime("%A %d %B %Y at %I:%M%p")
   end
 
-  def current_user_is_owner(current_user)
-    user == current_user
+  def can_edit?(user)
+    return false unless user.present?
+    user_id == user.id or user.is_admin?
   end
 
   def validate_start_time

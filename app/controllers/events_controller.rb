@@ -25,8 +25,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy!
-
-    redirect_to :back, notice: t("events.notice.new_success")
+    redirect_to events_path, notice: t("events.notice.destroy_success")
   end
 
   def update
@@ -48,7 +47,7 @@ class EventsController < ApplicationController
   end
 
   def set_event
-    @event = current_user.events.find(params[:id])
+    @event = Event.find(params[:id])
     redirect_to events_path, notice: t("events.notice.not_authorized") if @event.nil?
   end
 end

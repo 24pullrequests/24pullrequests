@@ -9,6 +9,11 @@
       %small= @event.location
       %br
         %small= @event.formatted_date
-    %p
+    %hr
     %p= @event.description
     = link_to t("events.show.view_event_details"), @event.url, class: "btn btn-primary"
+
+    - if @event.can_edit?(current_user)
+      %hr
+      = link_to t("event.show.edit_event"), edit_event_path(@event), class: "btn btn-default"
+      = link_to t("events.show.destroy_event"), @event, data: { confirm: "event.show.confirm_destroy" }, method: :delete, class: "btn btn-danger"
