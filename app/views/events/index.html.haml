@@ -19,8 +19,6 @@
         .event
           %h2
             = link_to event.organiser, event
-            - if event.current_user_is_owner(current_user)
-              %small= link_to "edit", edit_event_path(event)
           %h3
             %small
               = event.location
