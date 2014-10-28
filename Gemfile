@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.3'
+ruby "2.1.3"
 
 gem 'rails', '4.1.6'
 
@@ -18,6 +18,7 @@ gem 'simplecov'
 gem 'kaminari'
 gem 'twitter'
 gem 'anjlab-bootstrap-rails', '~> 3.0.3.0', require: 'bootstrap-rails'
+gem 'jquery-datetimepicker-rails', '~> 2.3.7.0'
 gem 'simple_form'
 gem 'rack-google-analytics'
 gem 'ffi', '1.9.3'

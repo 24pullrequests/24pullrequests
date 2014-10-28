@@ -1,0 +1,31 @@
+.event {
+  margin-bottom: 20px;
+  h2, h3 {
+    margin: 0;
+  }
+}
+
+.map {
+  height: 500px;
+}
+
+.js-pins {
+  display: none;
+}
+
+.pin {
+  display: block;
+  position: relative;
+  width: 1px; height: 1px;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -31px;
+    top: -80px;
+    width: 63px;
+    height: 80px;
+    background: image-url('24pr-pin-80.png');
+  }
+}

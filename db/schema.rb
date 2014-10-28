@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131215015229) do
+ActiveRecord::Schema.define(version: 20141027215446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,21 @@ ActiveRecord::Schema.define(version: 20131215015229) do
     t.string   "language"
     t.integer  "comments_count", default: 0
   end
+
+  create_table "events", force: true do |t|
+    t.string   "name"
+    t.string   "location"
+    t.string   "url"
+    t.datetime "start_time"
+    t.decimal  "latitude",    precision: 10, scale: 6
+    t.decimal  "longitude",   precision: 10, scale: 6
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "description"
+    t.integer  "user_id"
+  end
+
+  add_index "events", ["start_time"], name: "index_events_on_start_time", using: :btree
 
   create_table "gifts", force: true do |t|
     t.integer  "user_id",         null: false

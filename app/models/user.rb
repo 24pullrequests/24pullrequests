@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :skills,        :dependent => :destroy
   has_many :gifts,         :dependent => :destroy
   has_many :projects
+  has_many :events
   has_and_belongs_to_many :organisations
 
   has_many :archived_pull_requests

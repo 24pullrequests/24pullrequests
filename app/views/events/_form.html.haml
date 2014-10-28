@@ -1,0 +1,18 @@
+= simple_form_for @event, wrapper: :bootstrap3_horizontal, defaults: {right_column_html: {class: "col-lg-3 col-md-3"}, label_html: {class: "col-lg-2 col-md-2"} }, :html => {:class => 'form-horizontal', :role => "form"} do |form|
+  = form.input :name, label: t("events.new.form.name"), placeholder: t("events.new.form.name_placeholder")
+  = form.input :description, label: t("events.new.form.description"), placeholder: t("events.new.form.description_placeholder")
+  = form.input :location, label: t("events.new.form.location"), placeholder: t("events.new.form.location_placeholder")
+  = form.input :url, label: t("events.new.form.url"), placeholder: t("events.new.form.url_placeholder")
+  = form.input :start_time, label: t("events.new.form.start_time"), as: :string, input_html: { class: "js-datetimepicker" }
+
+  .form-group
+    %label.col-sm-2.control-label= t("events.new.form.map")
+    .col-sm-10.col-md-6
+      .map.map--small{"data-map-picker" => "true"}
+      .js-pins
+        %span.pin
+      = form.hidden_field :latitude, class: "form-control", step: "any"
+      = form.hidden_field :longitude, class: "form-control", step: "any"
+  .form-group
+    .col-sm-offset-2.col-sm-10.col-md-4
+      = form.submit "Create event", class: "btn btn-default"

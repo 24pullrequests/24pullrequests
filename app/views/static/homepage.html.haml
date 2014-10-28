@@ -47,6 +47,15 @@
     %p=t("homepage.profile.description")
     %p=t("homepage.profile.getting_started")
 
+    %h4=t("homepage.event.title")
+    %hr
+    %p=t("homepage.event.description")
+    = link_to t("homepage.event.view_events"), events_path, class: "btn btn-primary"
+    = link_to t("homepage.event.host_an_event"), new_event_path, class: "btn btn-default"
+    %br
+    %br
+
+
 #users.users-homepage.row.clearfix
   .col-md-12
     %h3
