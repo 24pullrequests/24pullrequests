@@ -55,4 +55,43 @@ describe Event, type: :model do
       expect(event.formatted_date).to eq "Monday 01 December 2014 at 03:30PM"
     end
   end
+
+  context "can_edit?" do
+    context "for an admin" do
+      let(:user) { mock_model(User, is_admin?: true) }
+      let(:event) { FactoryGirl.build(:event) }
+
+      it "should return true" do
+        expect(event.can_edit?(user)).to be true
+      end
+    end
+
+    context "when the user is not logged in" do
+      let(:event) { FactoryGirl.build(:event) }
+
+      it "should return false" do
+        expect(event.can_edit?(nil)).to be false
+      end
+    end
+
+    context "when the user is the event owner logged in" do
+      let(:user) { mock_model(User, id: 1, is_admin?: false) }
+      let(:event) { FactoryGirl.build(:event) }
+
+      it "should return true" do
+        event.user_id = user.id
+        expect(event.can_edit?(user)).to be true
+      end
+    end
+
+    context "when the user is not the event owner" do
+      let(:user) { mock_model(User, id: 1, is_admin?: false) }
+      let(:event) { FactoryGirl.build(:event) }
+
+      it "should return false" do
+        event.user_id = 2
+        expect(event.can_edit?(user)).to be false
+      end
+    end
+  end
 end
