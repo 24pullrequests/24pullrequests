@@ -62,7 +62,7 @@ FactoryGirl.define do
     name { "BristolJS" }
     location { "BristolUK" }
     url { "http://google.com" }
-    start_time { Time.parse("1st December") }
+    start_time { Time.parse("1st December 2014") }
     latitude { 51.4 }
     longitude { -2.6 }
     description { Faker::Lorem.paragraphs.first[0..199] }
