@@ -24,7 +24,7 @@ describe Event, type: :model do
       Timecop.freeze(Time.parse("15th December 2014")) do
         event.start_time = Time.parse("14th December 2014")
         expect(event.valid?).not_to be true
-        expect(event.errors[:start_time].include?("Events can only be created in the past")).to be true
+        expect(event.errors[:start_time].include?("Events can not be created in the past")).to be true
       end
     end
 
