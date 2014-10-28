@@ -2,6 +2,11 @@ en:
   activerecord:
     errors:
       models:
+        event:
+          attributes:
+            start_time:
+              not_in_range: "Events can only be created between 1st and 24th December"
+              in_past: "Events can not be created in the past"
         user:
           attributes:
             email:
@@ -51,6 +56,12 @@ en:
       title: Build your profile
       description: Contributing to open source projects is also a great way to build your profile in the community and improve your CV.
       getting_started: It's really easy to get started. Even small contributions can be really valuable to a project.
+    event:
+      title: Events
+      description: This year we are encouraging organisers around the world to hold 24pullrequests hack events. Get involved this Christmas.
+      view_events: View events
+      host_an_event: Host an event
+
     join_the_chat: Join the chat on IRC, %{link_to_chat}, at freenode.
 
   information:
@@ -252,6 +263,42 @@ en:
       title: Organisations
       details: Load all organisations that have signed up to the site, also includes the users that belong to each organisation.
       specific: Load information for a specific organisation.
+
+  events:
+    title: Events
+    description: This year we are encouraging organisers around the world to hold 24pullrequests hack events. Get involved this Christmas.
+    notice:
+      not_logged_in: "You have to be logged in to create or edit events"
+      not_authorized: "You can only edit events that you have created"
+      edit_success: "Event updated successfully!"
+      new_success: "Event created successfully!"
+      destroy_success: "Event removed successfully!"
+    show:
+      view_event_details: View event details
+      destroy_event: Remove event
+      edit_event: Edit event
+      confirm_destroy: "Are you sure you want to remove this event?"
+    edit:
+      title
+    new:
+      title: Host a 24pullrequests event
+      form:
+        name: Event name
+        name_placeholder: Bristol Ruby Group Pull-request-a-thon
+        description: Description
+        description_placeholder: Give a little desciption of the group and event
+        location: Location
+        location_placeholder: e.g. Bristol, UK
+        url: URL
+        url_placeholder: "Your event page / registration"
+        map: "Location marker"
+        start_time: "When"
+
+    edit:
+      title: Edit Suggestion
+    admin:
+      title: Manage Projects
+      search: Search by GitHub repository
 
   locale: # Remove this part in your own language file - it's not necessary. Don't forget to include your language here, though!
     translate: Translate into your language!

@@ -11,6 +11,8 @@ Tfpullrequests::Application.routes.draw do
 
   get '/users/:id/:year', :to => 'users#show'
 
+  resources :events
+
   resources :projects, :only => [:index, :new, :create, :edit, :update, :destroy] do
     collection do
       get :filter
