@@ -6,6 +6,7 @@ en:
           attributes:
             start_time:
               not_in_range: "Events can only be created between 1st and 24th December"
+              in_past: "Events can not be created in the past"
         user:
           attributes:
             email:
