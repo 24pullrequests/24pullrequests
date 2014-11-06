@@ -2,7 +2,7 @@
   (function($organisations) {
     var $new = $("#{escape_javascript(render(@organisations))}").find("a[rel=tooltip]").tooltip().end();
 
-    $organisations.find('.organisationlist')
+    $organisations.find('.org-list')
           .append($new)
 
     $organisations.find(".more")

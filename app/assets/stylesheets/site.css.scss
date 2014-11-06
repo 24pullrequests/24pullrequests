@@ -193,6 +193,7 @@ nav {
   @include border-top-radius(5px);
   @include box-shadow(0 0 3px 0px #ccc);
   background-color: #fff;
+  padding: 30px;
   padding-bottom: 177px;
 }
 
@@ -327,13 +328,12 @@ footer {
   }
 }
 
-
-#users, #organisations {
+.fullwidth-panel {
+  margin-left: - $grid-gutter-width;
+  margin-right: - $grid-gutter-width;
   background: #eee;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  margin-left: - $grid-gutter-width;
-  margin-right: - $grid-gutter-width;
 
   h3 {
     text-align: center;
@@ -445,7 +445,7 @@ h3 {
 }
 
 #team_box,
-#organisationList {
+.org-list {
   padding: 0
 }
 
