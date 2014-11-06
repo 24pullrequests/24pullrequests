@@ -353,11 +353,11 @@ footer {
       border-color: $link-color;
     }
   }
-}
 
-#users ul li a img, #organisations ul li a img  {
-  height: 80px;
-  width: 80px;
+  .avatar-img {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 hr {
