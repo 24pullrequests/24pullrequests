@@ -30,7 +30,7 @@ module ApplicationHelper
   end
 
   def gratipay_button(nickname)
-    %(<a href="https://www.gratipay.com/on/github/#{nickname}/" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-heart"></span>Support via Gratipay</a>).html_safe
+    %(<a href="https://www.gratipay.com/on/github/#{nickname}/" class="btn btn-success btn-mini btn-block"><span class="glyphicon glyphicon-heart"></span>Support via Gratipay</a>).html_safe
   end
 
   def contributors_in year
