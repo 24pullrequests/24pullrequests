@@ -56,14 +56,14 @@
     %br
 
 
-#users.users-homepage.row.clearfix
+.fullwidth-panel.row.clearfix
   .col-md-12
     %h3
       = User.count
       = t("developers_involved")
       = link_to t("view_all"), users_path, :class => 'btn btn-default'
 
-    %ul.clearfix
+    %ul.avatar-list.avatar-list-lg.clearfix
       = render @users
 - if @pull_requests.any?
   .row.clearfix
@@ -87,12 +87,12 @@
 
   #projects
     = render @projects
-#users.users-homepage.row.clearfix
+.fullwidth-panel.row.clearfix
   .col-md-12
     %h3
       =t("organisations.title", count: Organisation.count)
       = link_to t("view_all"), organisations_path, :class => 'btn btn-default'
 
-    %ul.clearfix
+    %ul.avatar-list.avatar-list-lg.clearfix
       = render @orgs
 %hr

@@ -25,16 +25,47 @@
   float: none;
 }
 
-#organisationlist{
-  margin:0;
+.avatar-list {
+  list-style: none;
+  margin: 0;
   padding: 0;
-  li{
-    display: inline-block;
-    list-style: none;
-    padding: 5px;
-    width:100px;
-    height:100px;
-    overflow:none;
-    text-align: center;
+  font-size: 0;
+
+  .avatar-img {
+    width: 40px;
+    height: 40px;
   }
 }
+
+.avatar-list-lg {
+  margin: 0 0 20px;
+
+  .avatar-cell {
+    border: 2px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.398438) 0px 1px 1px;
+    margin: 0 15px 30px;
+
+    &:hover {
+      border-color: $link-color;
+    }
+  }
+
+  .avatar-img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.avatar-cell {
+  display: inline-block;
+  text-align: center;
+  list-style: none;
+  overflow: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  
+  .avatar-link {
+    display: block;
+  }
+}
+
