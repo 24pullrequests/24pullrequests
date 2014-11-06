@@ -1,4 +1,4 @@
-#users.row.clearfix
+.row.clearfix.fullwidth-panel
   .col-md-12
     %h3
       = user_count
@@ -7,8 +7,8 @@
       - else
         = t("developers_involved")
 
-    %div.users
-      %ul.clearfix.userlist
+    .js-user-pagination
+      %ul.clearfix.avatar-list.avatar-list-lg.js-user-list
         = render @users
 
       = link_to_next_page @users, t("more"), remote: true, class: 'btn btn-success more'

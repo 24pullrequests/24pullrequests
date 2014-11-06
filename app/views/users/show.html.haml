@@ -1,20 +1,15 @@
 .row
-  .col-sm-10
+  .col-sm-3
+    = image_tag(gravatar_url(@user.gravatar_id, 200), :width => "100%", :alt => @user.nickname)
     %h2
       #{@user.nickname}
-
-    = gratipay_button @user.nickname
-
-    .row.clearfix.social-buttons
-      .col-md-4
-        = github_button @user.nickname
-      - if @user.twitter_nickname.present?
-        .col-md-6
-          %a{:href => "https://twitter.com/#{@user.twitter_nickname}", :class => 'twitter-follow-button'}
-            =t("follow_user", twitter: @user.twitter_nickname)
-          :javascript
-            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-
+    %p= gratipay_button @user.nickname
+    %p= github_button @user.nickname
+    - if @user.twitter_nickname.present?
+      %a{:href => "https://twitter.com/#{@user.twitter_nickname}", :class => 'twitter-follow-button'}
+        =t("follow_user", twitter: @user.twitter_nickname)
+      :javascript
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
     - if @user.skills.any?
       %h4
         =t("preferred_languages")
@@ -22,16 +17,14 @@
     - if @user.organisations.any?
       %h4
         =t('user.organisations')
-      %ul#organisationlist
+      %ul.avatar-list
         = render @user.organisations
 
-  .col-sm-2
-    .avatar= image_tag(gravatar_url(@user.gravatar_id, 100), :width => 100, :alt => @user.nickname)
+  .col-sm-9
+    - if @user == current_user
+      = link_to t("navigation.preferences"), preferences_path, class: "pull-right btn btn-default"
 
-.row
-  .col-md-12
-
-    %h3 24 Pull Requests
+    .page-title 24 Pull Requests
     - if @user.gifts.year(current_year).any? or @user.pull_requests.year(current_year).any?
       %h4
         =t("user.pull_request_count", user: @user.nickname, count: @user.pull_requests.year(current_year).count, year: current_year)
@@ -46,9 +39,7 @@
         #pull_requests.tab-pane
           = render partial: 'users/pull_request', collection: @user.pull_requests
     - else
-      %h4=t("user.grinchy_message", user: @user.nickname, year: current_year)
+      .alert.alert-warning=t("user.grinchy_message", user: content_tag(:strong, "@" + @user.nickname), year: current_year).html_safe
 
-.row
-  .col-md-12
     %h3= t("user.coderwall.title")
     #coderwall-content{:data => {:nickname => "#{@user.coderwall_username}"}}

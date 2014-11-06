@@ -13,7 +13,7 @@
     %h3=t("organisations.members", count: @organisation.users.count)
 
     .users
-      %ul.clearfix.userlist
+      %ul.avatar-list.clearfix
         = render @organisation.users
 
 #pull_requests
