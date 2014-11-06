@@ -2,7 +2,7 @@
   (function($organisations) {
     var $new = $("#{escape_javascript(render(@organisations))}").find("a[rel=tooltip]").tooltip().end();
 
-    $organisations.find('.org-list')
+    $organisations.find('.js-org-list')
           .append($new)
 
     $organisations.find(".more")
@@ -12,4 +12,4 @@
                                                    remote: true,
                                                    class: 'btn btn-success more')}"
           );
-  })($(".organisations"));
+  })($(".js-org-pagination"));
