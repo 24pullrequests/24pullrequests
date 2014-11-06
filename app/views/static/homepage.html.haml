@@ -93,6 +93,6 @@
       =t("organisations.title", count: Organisation.count)
       = link_to t("view_all"), organisations_path, :class => 'btn btn-default'
 
-    %ul.clearfix
+    %ul.avatar-list.clearfix
       = render @orgs
 %hr
