@@ -25,13 +25,13 @@
   float: none;
 }
 
-.org-list {
+.avatar-list {
   margin: 0;
   padding: 0;
   font-size: 0;
 }
 
-.org {
+.avatar-cell {
   display: inline-block;
   text-align: center;
   list-style: none;
@@ -39,7 +39,7 @@
   margin-right: 10px;
   margin-bottom: 10px;
   
-  .org-logo {
+  .avatar-link {
     display: block;
   }
 }
