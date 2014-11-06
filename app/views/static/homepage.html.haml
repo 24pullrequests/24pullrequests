@@ -63,7 +63,7 @@
       = t("developers_involved")
       = link_to t("view_all"), users_path, :class => 'btn btn-default'
 
-    %ul.clearfix
+    %ul.avatar-list.clearfix
       = render @users
 - if @pull_requests.any?
   .row.clearfix

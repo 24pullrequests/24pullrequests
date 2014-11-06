@@ -1,2 +1,2 @@
-%li.org
-  = link_to image_tag(organisation.avatar_url, alt: organisation.login), organisation_path(organisation.login), rel: 'tooltip', class: "org-logo", data: { placement: "bottom", original_title: organisation_tooltip(organisation) }
+%li.avatar-cell
+  = link_to image_tag(organisation.avatar_url, alt: organisation.login, class: "avatar-img"), organisation_path(organisation.login), rel: 'tooltip', class: "avatar-link", data: { placement: "bottom", original_title: organisation_tooltip(organisation) }
