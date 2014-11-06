@@ -334,31 +334,12 @@ footer {
   background: #eee;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
+  text-align: center;
 
-  h3 {
-    text-align: center;
+  &:first-child {
+    margin-top: -30px;
+    padding-bottom: 30px;
   }
-
-  .avatar-list {
-    margin: 0 0 20px;
-    text-align: center;
-  }
-
-  .avatar-cell {
-    border: 2px solid #fff;
-    box-shadow: rgba(0, 0, 0, 0.398438) 0px 1px 1px;
-    margin: 0 15px 30px;
-
-    &:hover {
-      border-color: $link-color;
-    }
-
-    .avatar-img {
-      width: 80px;
-      height: 80px;
-    }
-  }
-
 }
 
 hr {

@@ -1,9 +1,9 @@
-.row.clearfix
+.row.clearfix.fullwidth-panel
   .col-md-12
     %h3=t("organisations.title", count: organisation_count)
 
     .js-org-pagination
-      %ul.clearfix.avatar-list.js-org-list
+      %ul.clearfix.avatar-list.avatar-list-lg.js-org-list
         = render @organisations
 
       = link_to_next_page @organisations, t("more"), remote: true, class: 'btn btn-success more'
