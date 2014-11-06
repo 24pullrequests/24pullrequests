@@ -7,7 +7,7 @@
         =t("language.developers.count", count: user_count, language: @language)
         = link_to t("view_all"), users_language_path(@language.downcase), :class => 'btn btn-default'
 
-        %ul.clearfix
+        %ul.avatar-list.clearfix
           = render @users
 
 - if @pull_requests.any?

@@ -63,7 +63,7 @@
       = t("developers_involved")
       = link_to t("view_all"), users_path, :class => 'btn btn-default'
 
-    %ul.avatar-list.clearfix
+    %ul.avatar-list.avatar-list-lg.clearfix
       = render @users
 - if @pull_requests.any?
   .row.clearfix
@@ -93,6 +93,6 @@
       =t("organisations.title", count: Organisation.count)
       = link_to t("view_all"), organisations_path, :class => 'btn btn-default'
 
-    %ul.avatar-list.clearfix
+    %ul.avatar-list.avatar-list-lg.clearfix
       = render @orgs
 %hr
