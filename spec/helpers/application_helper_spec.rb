@@ -46,7 +46,7 @@ describe ApplicationHelper, :type => :helper do
 
   describe "#gratipay_button" do
     it "returns a gratipay button for the nickname" do
-      resulting_html = "<a href=\"https://www.gratipay.com/on/github/andrew/\" class=\"btn btn-success btn-lg\"><span class=\"glyphicon glyphicon-heart\"></span>Support via Gratipay</a>"
+      resulting_html = "<a href=\"https://www.gratipay.com/on/github/andrew/\" class=\"btn btn-success btn-mini btn-block\"><span class=\"glyphicon glyphicon-heart\"></span>Support via Gratipay</a>"
 
       expect(helper.gratipay_button("andrew")).to eql(resulting_html)
     end
