@@ -12,6 +12,7 @@ body {
   padding: 0;
   height: 100%;
   font-size: 14px;
+  line-height: 1.6em;
 }
 
 h1, h2, h3, h4, .page-title {
@@ -25,7 +26,8 @@ h1, h2, h3, h4, .page-title {
 }
 
 .block {
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 60px;
   background-color: #fff;
   padding: 30px;
 
@@ -38,8 +40,15 @@ h1, h2, h3, h4, .page-title {
   text-align: center;
   padding: 0 30px;
 
+  .octicon {
+    color: $header-background;
+    font-size: 60px;
+    opacity: 0.1;
+  }
+
   h4 {
-    margin: 0 0 15px;
+    text-transform: uppercase;
+    margin: 10px 0 15px;
   }
 }
 
@@ -47,17 +56,21 @@ h1, h2, h3, h4, .page-title {
   text-align: center;
   border-top: 1px dashed #e3e3e3;
   height: 0;
-  margin: 50px 0 50px;
+  margin: 50px 0 70px;
 }
 
 .cta {
-  font-size: 15px;
+  font-size: 16px;
   transform: translateY(-50%);
   border: 10px solid #fff;
   position: relative;
-  padding: 15px 20px;
+  padding: 20px 25px;
   color: #fff;
   background: #cc3034;
+
+  .octicon {
+    margin-right: 10px;
+  }
 
   &:hover {
     color: #fff;
