@@ -95,7 +95,7 @@ class User < ActiveRecord::Base
 
   def confirm!
     if email.present? && !confirmed?
-      return update_attributes(confirmation_token: nil, confirmed_at: Time.now.utc)
+      return update_attributes(confirmation_token: nil, confirmed_at: Time.zone.now.utc)
     elsif confirmed?
       errors.add(:email, :already_confirmed)
     else
