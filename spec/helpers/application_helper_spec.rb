@@ -34,16 +34,6 @@ describe ApplicationHelper, :type => :helper do
     end
   end
 
-  describe '#gravatar_url' do
-    it "returns a gravatar url with no digest, if none is set" do
-      expect(helper.gravatar_url).to eql("https://secure.gravatar.com/avatar/.png?s=80&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png")
-    end
-
-    it "returns a gravatar url with the specified size, when size is defined" do
-      expect(helper.gravatar_url('andrew', 100)).to eql("https://secure.gravatar.com/avatar/andrew.png?s=100&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png")
-    end
-  end
-
   describe "#gratipay_button" do
     it "returns a gratipay button for the nickname" do
       resulting_html = "<a href=\"https://www.gratipay.com/on/github/andrew/\" class=\"btn btn-success btn-mini btn-block\"><span class=\"glyphicon glyphicon-heart\"></span>Support via Gratipay</a>"

@@ -6,6 +6,6 @@
         - row.each do |user|
           %li.collaborator.col-md-2
             .thumbnail
-              = link_to image_tag(gravatar_url(user.gravatar_id, 200), :width => 200, :height => 200, :alt => user.nickname).html_safe, user
+              = link_to image_tag(user.avatar_url(200), :width => 200, :height => 200, :alt => user.nickname).html_safe, user
               .caption
                 %strong= link_to "@#{user.nickname}", user

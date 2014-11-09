@@ -65,6 +65,10 @@ class User < ActiveRecord::Base
     "https://github.com/#{nickname}" if nickname.present?
   end
 
+  def avatar_url(size=80)
+    "https://avatars.githubusercontent.com/u/#{uid}?size=#{size}"
+  end
+
   def suggested_projects
     Project.active.where(main_language: languages).not_owner(nickname)
   end

@@ -1,11 +1,11 @@
 .alert.alert-info
-  %h3=t("information.title", year: 2013)
-  %p=t("information.last_year_stats", year: 2013,
-                                      developers: contributors_in(2013),
-                                      pull_requests: pull_requests_in(2013),
-                                      projects: projects_in(2013)).html_safe
+  %h3=t("information.title", year: CURRENT_YEAR)
+  %p=t("information.last_year_stats", year: CURRENT_YEAR,
+                                      developers: contributors_in(CURRENT_YEAR),
+                                      pull_requests: pull_requests_in(CURRENT_YEAR),
+                                      projects: projects_in(CURRENT_YEAR)).html_safe
 
-  %p=t("information.get_ready", year: 2013)
+  %p=t("information.get_ready", year: CURRENT_YEAR)
   %hr
   %p=t("information.help_open_source")
 

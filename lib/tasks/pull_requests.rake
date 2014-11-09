@@ -25,7 +25,7 @@ end
 desc 'Download pull requests from active users'
 task :download_active_pulls => :environment do
   next unless PullRequest.in_date_range?
-  PullRequest.year(2013).select(:user_id).distinct.all.map(&:user).each do |user|
+  PullRequest.year(CURRENT_YEAR).select(:user_id).distinct.all.map(&:user).each do |user|
     user.download_pull_requests(load_user.token) rescue nil
   end
 end
