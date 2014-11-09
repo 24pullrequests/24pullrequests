@@ -30,6 +30,6 @@ describe Calendar, :type => :model do
     giftable_dates = [Date.new(2014, 12, 1)]
 
     calendar = Calendar.new(giftable_dates, [])
-    expect(calendar.start_padding).to eq(-1)
+    expect(calendar.start_padding).to eq(0)
   end
 end
