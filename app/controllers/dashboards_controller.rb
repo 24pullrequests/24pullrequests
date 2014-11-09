@@ -74,6 +74,6 @@ class DashboardsController < ApplicationController
 
   def set_locale_to_cookie locale
     cookies[:locale] = { value: locale,
-                         expires: Time.now + 36000 }
+                         expires: Time.zone.now + 36000 }
   end
 end
