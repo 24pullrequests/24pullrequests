@@ -1,6 +1,6 @@
 # Ignore bundler config & vendor
 /.bundle
-/vendor
+/vendor/assets/*/*
 
 # Ignore the default SQLite database.
 /db/*.sqlite3

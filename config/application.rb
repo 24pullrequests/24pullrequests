@@ -60,6 +60,7 @@ module Tfpullrequests
     config.assets.version = '1.0'
 
     config.assets.initialize_on_precompile = false
+    config.assets.precompile += %w(*.svg *.eot *.woff *.ttf)
 
     config.exceptions_app = self.routes
 
