@@ -29,7 +29,7 @@ class Gift < ActiveRecord::Base
     where(:user_id => user_id, :date => date).first
   end
 
-  def self.giftable_dates(year = 2013)
+  def self.giftable_dates(year = CURRENT_YEAR)
     1.upto(24).map { |day| Date.new(year, 12, day) }
   end
 
