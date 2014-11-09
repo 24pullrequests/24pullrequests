@@ -1,15 +1,18 @@
 .container.block.intro
   .row
     .col-md-4.intro-block
+      %span.octicon.octicon-gift
       %h4=t("homepage.greeting")
       %p=t("homepage.give_to_open_source")
     .col-md-4.intro-block
+      %span.octicon.octicon-git-pull-request
       %h4=t("homepage.involved.title")
       %p=t("homepage.involved.description")
       %p
         =t("homepage.involved.special_page", contributing_path: link_to(t("homepage.involved.contributing_path"), contributing_path)).html_safe
         =t("homepage.involved.take_a_look")
     .col-md-4.intro-block
+      %span.octicon.octicon-checklist
       %h4=t("homepage.profile.title")
       %p=t("homepage.profile.description")
       %p=t("homepage.profile.getting_started")
@@ -18,7 +21,7 @@
       .col-md-12
         .cta-block
           = link_to login_path, :class => 'btn cta' do
-            = image_tag("github_icon.png")
+            %span.octicon.octicon-mark-github
             %strong Log in with GitHub
         = render :partial => 'shared/social_buttons'
 
