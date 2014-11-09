@@ -7,10 +7,61 @@ html {
 
 body {
   background: $header-background;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  height: 100%
+  height: 100%;
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, .page-title {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  .btn {
+    margin-left: 10px;
+    font-family: $font-family-base;
+  }
+}
+
+.block {
+  margin-bottom: 30px;
+  background-color: #fff;
+  padding: 30px;
+
+  &.intro {
+    padding: 60px 30px;
+  }
+}
+
+.intro-block {
+  text-align: center;
+  padding: 0 30px;
+
+  h4 {
+    margin: 0 0 15px;
+  }
+}
+
+.cta-block {
+  text-align: center;
+  border-top: 1px dashed #e3e3e3;
+  height: 0;
+  margin: 50px 0 50px;
+}
+
+.cta {
+  font-size: 15px;
+  transform: translateY(-50%);
+  border: 10px solid #fff;
+  position: relative;
+  padding: 15px 20px;
+  color: #fff;
+  background: #cc3034;
+
+  &:hover {
+    color: #fff;
+  }
 }
 
 @media (min-width: 767px) {
@@ -189,18 +240,8 @@ nav {
   margin-bottom: $grid-gutter-width / 2;
 }
 
-#main {
-  @include border-top-radius(5px);
-  @include box-shadow(0 0 3px 0px #ccc);
-  background-color: #fff;
-  padding: 30px;
-  padding-bottom: 177px;
-}
-
 footer {
-  bottom: 0;
   height: 127px;
-  position: absolute;
   width: 100%;
 
   .dark {
@@ -347,18 +388,6 @@ hr {
   border-bottom: 1px dashed #e3e3e3;
 }
 
-h1, h2, h3, h4, .page-title {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  .btn {
-    margin-left: 10px;
-    font-family: $font-family-base;
-  }
-}
-
-h3 {
-  margin-bottom: 1.5em;
-}
 
 .avatar {
   margin-top: 15px;
