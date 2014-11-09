@@ -13,7 +13,7 @@ class Notification
     return unless user.confirmed? and notifications_enabled?
 
     daily? ? ReminderMailer.daily(user).deliver : ReminderMailer.weekly(user).deliver
-    user.update_attribute(:last_sent_at, Time.now.utc)
+    user.update_attribute(:last_sent_at, Time.zone.now.utc)
   end
 
   private
