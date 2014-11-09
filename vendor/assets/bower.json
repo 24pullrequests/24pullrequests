@@ -1,0 +1,6 @@
+{
+  "name": "24pullrequests",
+  "dependencies": {
+    "octicons": "*"
+  }
+}
