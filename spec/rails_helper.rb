@@ -107,7 +107,7 @@ Spork.each_run do
   RSpec.configure do |config|
     config.before do
       allow_any_instance_of(User).to receive(:estimate_skills).and_return(nil)
-      Timecop.travel(Date.parse('12/12/2013'))
+      Timecop.travel(Date.parse('12/12/2014'))
     end
 
     config.after do
