@@ -111,11 +111,4 @@
           %li
             = link_to 'API', api_path
 
-    .ftw
-      = link_to image_tag('humanstxt-isolated-blank.gif'), '/humans.txt'
-      = t("open_source_yey")
-      %strong= CURRENT_YEAR
-
-    / :javascript
-    /   window.I18n = #{current_translations.to_json.html_safe}
-    = javascript_include_tag "application"
+  = javascript_include_tag "application"
