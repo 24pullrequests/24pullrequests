@@ -1,98 +1,90 @@
-.visible-phone
-  %h1=t("homepage.title")
-  %h3=t("homepage.description")
-  %hr
-
-.row.clearfix
-  .col-md-6
-    %h2=t("homepage.about")
-    %hr
-    =t("homepage.about_text").html_safe
-    %hr
-    %h4=t("homepage.greeting")
-    %hr
-    %p=t("homepage.give_to_open_source")
-
-    %hr
-    - unless logged_in?
+.container.block.intro
+  .row
+    .col-md-4.intro-block
+      %h4=t("homepage.greeting")
+      %p=t("homepage.give_to_open_source")
+    .col-md-4.intro-block
+      %h4=t("homepage.involved.title")
+      %p=t("homepage.involved.description")
       %p
-        = link_to login_path, :class => 'btn btn-default' do
-          = image_tag("github_icon.png")
-          %strong Log in with GitHub
+        =t("homepage.involved.special_page", contributing_path: link_to(t("homepage.involved.contributing_path"), contributing_path)).html_safe
+        =t("homepage.involved.take_a_look")
+    .col-md-4.intro-block
+      %h4=t("homepage.profile.title")
+      %p=t("homepage.profile.description")
+      %p=t("homepage.profile.getting_started")
+  - unless logged_in?
+    .row
+      .col-md-12
+        .cta-block
+          = link_to login_path, :class => 'btn cta' do
+            = image_tag("github_icon.png")
+            %strong Log in with GitHub
+        = render :partial => 'shared/social_buttons'
+
+.block.container
+  .row
+    .col-md-12
       %hr
-    = render :partial => 'shared/social_buttons'
-    %hr
-    %h4=t("homepage.q_n_a")
-    %hr
-    %p=t("homepage.join_the_chat", link_to_chat: link_to('#24pullrequests', 'http://webchat.freenode.net/?channels=#24pullrequests')).html_safe
-
-  .col-md-6#info
-    #coderwall
-      %h4=t("homepage.badges.title")
+      %h4=t("homepage.q_n_a")
       %hr
-      %p=t("homepage.badges.description")
-      .center
-        = link_to image_tag('24-participant.png'), 'https://coderwall.com', :rel => 'tooltip', :title => t("homepage.badges.involved_link")
-        = link_to image_tag('24-continuous-sync.png'), 'https://coderwall.com', :rel => 'tooltip', :title => t("homepage.badges.amazing")
+      %p=t("homepage.join_the_chat", link_to_chat: link_to('#24pullrequests', 'http://webchat.freenode.net/?channels=#24pullrequests')).html_safe
 
-    %h4=t("homepage.involved.title")
-    %hr
-    %p=t("homepage.involved.description")
-    %p
-      =t("homepage.involved.special_page", contributing_path: link_to(t("homepage.involved.contributing_path"), contributing_path)).html_safe
-      =t("homepage.involved.take_a_look")
+    .col-md-6#info
+      #coderwall
+        %h4=t("homepage.badges.title")
+        %hr
+        %p=t("homepage.badges.description")
+        .center
+          = link_to image_tag('24-participant.png'), 'https://coderwall.com', :rel => 'tooltip', :title => t("homepage.badges.involved_link")
+          = link_to image_tag('24-continuous-sync.png'), 'https://coderwall.com', :rel => 'tooltip', :title => t("homepage.badges.amazing")
 
-    %h4=t("homepage.profile.title")
-    %hr
-    %p=t("homepage.profile.description")
-    %p=t("homepage.profile.getting_started")
-
-    %h4=t("homepage.event.title")
-    %hr
-    %p=t("homepage.event.description")
-    = link_to t("homepage.event.view_events"), events_path, class: "btn btn-primary"
-    = link_to t("homepage.event.host_an_event"), new_event_path, class: "btn btn-default"
-    %br
-    %br
+      %h4=t("homepage.event.title")
+      %hr
+      %p=t("homepage.event.description")
+      = link_to t("homepage.event.view_events"), events_path, class: "btn btn-primary"
+      = link_to t("homepage.event.host_an_event"), new_event_path, class: "btn btn-default"
+      %br
+      %br
 
 
-.fullwidth-panel.row.clearfix
-  .col-md-12
-    %h3
-      = User.count
-      = t("developers_involved")
-      = link_to t("view_all"), users_path, :class => 'btn btn-default'
+  .fullwidth-panel.row.clearfix
+    .col-md-12
+      %h3
+        = User.count
+        = t("developers_involved")
+        = link_to t("view_all"), users_path, :class => 'btn btn-default'
 
-    %ul.avatar-list.avatar-list-lg.clearfix
-      = render @users
-- if @pull_requests.any?
+      %ul.avatar-list.avatar-list-lg.clearfix
+        = render @users
+  - if @pull_requests.any?
+    .row.clearfix
+      .col-md-12
+        %h3
+          =t("pull_requests.latest.count", count: PullRequest.year(current_year).count)
+          = link_to t("view_all"), pull_requests_path, :class => 'btn btn-default pull-right'
+
+        #pull_requests
+          = render @pull_requests
+
   .row.clearfix
     .col-md-12
       %h3
-        =t("pull_requests.latest.count", count: PullRequest.year(current_year).count)
-        = link_to t("view_all"), pull_requests_path, :class => 'btn btn-default pull-right'
+        = Project.count
+        =t("suggested_projects")
+        = link_to t("suggest_project"), new_project_path, :class => 'btn btn-default pull-right'
+        = link_to t("view_all"), projects_path, :class => 'btn btn-default pull-right'
+      %p
+        =t("dashboard.help_out")
 
-      #pull_requests
-        = render @pull_requests
+    #projects
+      = render @projects
+  .fullwidth-panel.row.clearfix
+    .col-md-12
+      %h3
+        =t("organisations.title", count: Organisation.count)
+        = link_to t("view_all"), organisations_path, :class => 'btn btn-default'
 
-.row.clearfix
-  .col-md-12
-    %h3
-      = Project.count
-      =t("suggested_projects")
-      = link_to t("suggest_project"), new_project_path, :class => 'btn btn-default pull-right'
-      = link_to t("view_all"), projects_path, :class => 'btn btn-default pull-right'
-    %p
-      =t("dashboard.help_out")
-
-  #projects
-    = render @projects
-.fullwidth-panel.row.clearfix
-  .col-md-12
-    %h3
-      =t("organisations.title", count: Organisation.count)
-      = link_to t("view_all"), organisations_path, :class => 'btn btn-default'
-
-    %ul.avatar-list.avatar-list-lg.clearfix
-      = render @orgs
-%hr
+      %ul.avatar-list.avatar-list-lg.clearfix
+        = render @orgs
+  %hr

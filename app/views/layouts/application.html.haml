@@ -22,7 +22,7 @@
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
       <![endif]-->
 
-    %link{href: 'http://fonts.googleapis.com/css?family=Montserrat:700', rel: 'stylesheet', type: 'text/css'}
+    %link{href: 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400', rel: 'stylesheet', type: 'text/css'}
 
     = stylesheet_link_tag "//openlayers.org/en/v3.0.0/css/ol.css", :media => "all"
     = javascript_include_tag "//openlayers.org/en/v3.0.0/build/ol.js"
@@ -64,7 +64,7 @@
         - if params[:action] == 'homepage'
           .tagline.hidden-phone
 
-        .locale
+        .locale.hidden
           .dropdown
             %button.btn.btn-default.dropdown-toggle{ type: "button", id: "locale", "data-toggle" => "dropdown" }
               =image_tag "flags/#{I18n.locale}.png", class: "flag"
@@ -93,7 +93,7 @@
                 .alert= flash[:alert]
               - if flash[:notice]
                 .alert.alert-info= flash[:notice]
-          = yield
+    = yield
 
   %footer
     .dark
