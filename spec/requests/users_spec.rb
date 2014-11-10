@@ -24,7 +24,8 @@ describe 'Users', :type => :request do
         it "should display the grinchy message" do
           click_on "Profile"
 
-          is_expected.to have_content "akira is being a grinch for #{Time.zone.now.year} with no gifted pull requests. Bah humbug!"
+          is_expected.to have_content "akira is being a grinch for " +
+          "#{Time.zone.now.year} with no gifted pull requests. Bah humbug!"
         end
       end
 
@@ -35,7 +36,8 @@ describe 'Users', :type => :request do
         it "has pull requests" do
           click_on "Profile"
 
-          is_expected.to have_content "akira has made 2 total pull requests so far in #{Time.zone.now.year}"
+          is_expected.to have_content "akira has made 2 total pull requests " +
+          "so far in #{Time.zone.now.year}"
           is_expected.to have_link gift.pull_request.title
 
           click_on "Pull Requests"
