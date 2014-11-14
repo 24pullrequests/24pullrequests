@@ -29,8 +29,8 @@ class PullRequestDownloader
         event_date <= PullRequest::LATEST_PULL_DATE
       end
     rescue => e
-      puts e.inspect
-      puts 'Pull requests: likely a GitHub API error occurred'
+      Rails.logger.error "Pull requests: likely a GitHub API error occurred:\n"\
+                         "#{e.inspect}"
       []
     end
   end
@@ -38,12 +38,13 @@ class PullRequestDownloader
   def download_user_organisations
     begin
       github_client.user_organizations.reject do |o|
-        puts "Updating organisation: #{o.login}"
+        Rails.logger.info "Updating organisation: #{o.login}"
         ignored_organisations.include?(o.login)
       end
     rescue e
       puts e.inspect
-      puts 'Organisation error: likely a GitHub API error occurred'
+      Rails.logger.error "Organisation error: likely a GitHub API error occurred:\n"\
+                         "#{e.inspect}"
       []
     end
   end

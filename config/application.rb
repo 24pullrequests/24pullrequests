@@ -72,7 +72,7 @@ module Tfpullrequests
         Octokit.contributors('24pullrequests/24pullrequests')
       }
     rescue => e
-      puts e.inspect
+      Rails.logger.error "Error when memoizing contributors at boot up:\n #{e.inspect}"
       []
     end
 
@@ -81,7 +81,7 @@ module Tfpullrequests
         Octokit.organization_members('24pullrequests')
       }
     rescue => e
-      puts e.inspect
+      Rails.logger.error "Error when memoizing organization members at boot up:\n #{e.inspect}"
       []
     end
   end
