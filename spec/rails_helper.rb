@@ -10,6 +10,8 @@ SimpleCov.start
 require "codeclimate-test-reporter"
 CodeClimate::TestReporter.start
 
+require 'pullreview/coverage_reporter'
+PullReview::CoverageReporter.start
 
 require 'spork'
 

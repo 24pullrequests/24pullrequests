@@ -39,6 +39,7 @@ group :development, :test, :cucumber do
   gem 'rspec-rails'
   gem 'coveralls', require: false
   gem 'codeclimate-test-reporter', require: nil
+  gem 'pullreview-coverage', require: false
 
   gem 'rspec-its'
   gem 'rspec-collection_matchers'
