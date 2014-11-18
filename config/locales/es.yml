@@ -63,7 +63,6 @@ es:
       tagline: "¿Sabes que tienes un vecino que necesita un poco de ayuda con un proyecto realmente bueno? ¡Con ContribHub lo sabrás!"
       description: "ContribHub es una aplicación basada en GitHub que hace que sea más fácil encontrar proyectos para contribuir y hacer crecer la comunidad que lo rodea."
 
-  merry_christmas: "Feliz Navidad"
   follow_user: "Sigue @%{twitter}"
   sponsored_by: "Patrocinado por"
   how_to_contribute: "Como contribuir"

@@ -63,7 +63,6 @@ fi:
       tagline: Onko sinulla naapuri joka tarvitsee apua todella siistin projektin kanssa? ContriHubilla tiedät!
       description: ContribHub on GitHub-pohjainen sovellus joka tekee projektien löytämisestä helpompaa.
 
-  merry_christmas: Hyvää Joulua
   follow_user: Seuraa @%{twitter}
   sponsored_by: Sponsorit
   how_to_contribute: Miten auttaa?
