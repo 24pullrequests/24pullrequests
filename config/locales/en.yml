@@ -73,8 +73,9 @@ en:
     contribhub:
       tagline: Do you know you have a neighbor needing some help with a really cool project? With ContribHub you will!
       description: ContribHub is a GitHub-based application that makes it easier to find projects to contribute to and grow a community around it.
+    happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
 
-  merry_christmas: Merry Christmas
+  happy_holidays: Happy Holidays
   follow_user: Follow @%{twitter}
   sponsored_by: Sponsored by
   how_to_contribute: How to contribute?
