@@ -63,7 +63,6 @@ fr:
       tagline: Savez-vous que vous avez un voisin ayant besoin d'aide sur un projet open source vraiment cool ? Avec ContribHub vous le saurez !
       description: ContribHub est une application basée sur GitHub qui rend facile les contributions et la création de communauté autour de projets.
 
-  merry_christmas: Joyeux Noël
   follow_user: Suivez @%{twitter}
   sponsored_by: Sponsorisé par
   how_to_contribute: Comment contribuer ?
