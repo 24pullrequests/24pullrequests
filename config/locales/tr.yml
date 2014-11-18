@@ -63,7 +63,6 @@ tr:
       tagline: Süper bir projede yardıma ihtiyacı olan bir komşunuz olduğunu biliyor musunuz? ContribHub ile ona yardım edin!
       description: ContribHub GitHub-based tabanlı bir uygulama olup etrafınızdaki açık kaynak kodları bulmanıza ve onlara yardım etmenize yarar.
 
-  merry_christmas: Mutlu Noeller
   follow_user: '@%{twitter} hesabını takip edin.'
   sponsored_by: Sponsorluk
   how_to_contribute: Nasıl katılım olabilir?

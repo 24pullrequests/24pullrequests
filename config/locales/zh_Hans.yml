@@ -63,7 +63,6 @@ zh_Hans:
       tagline: 你知道有一个非常酷的项目需要你的一些帮助（就像你的邻居那样）?ContribHub来告诉你！
       description: ContribHub是一个GitHub上的应用，使用它可以更容易找到项目并贡献一臂之力，并围绕这个项目形成良好的社区。
 
-  merry_christmas: 圣诞快乐
   follow_user: 跟随 @%{twitter}
   sponsored_by: 主办单位
   how_to_contribute: 如何贡献？
