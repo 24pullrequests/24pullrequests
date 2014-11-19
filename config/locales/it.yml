@@ -63,6 +63,7 @@ it:
       tagline: Conosci qualcuno che ha bisogno di una mano in un progetto? Con ContribHub è possibile!
       description: ContribHub è una applicazione basata su GitHub che aiuta a scoprire progetti sui quali si può costruire una comunità.
 
+  happy_holidays: Buone Feste
   follow_user: Segui @%{twitter}
   sponsored_by: Sponsorizzato da
   how_to_contribute: Come contribuire?
