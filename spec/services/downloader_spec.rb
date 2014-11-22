@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 describe Downloader do
   let(:user) { FactoryGirl.create(:user) }
   let(:downloader) { Downloader.new(user) }
