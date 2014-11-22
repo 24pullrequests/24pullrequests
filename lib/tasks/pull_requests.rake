@@ -5,15 +5,6 @@ def load_user
   load_user
 end
 
-desc "Download user organisations"
-task :download_user_organisations => :environment do
-  next unless PullRequest.in_date_range?
-  User.all.each do |user|
-    puts "Importing organisations for #{user.nickname}"
-    user.download_user_organisations(load_user.token) rescue nil
-  end
-end
-
 desc "Download new pull requests"
 task :download_pull_requests => :environment do
   next unless PullRequest.in_date_range?
