@@ -66,6 +66,6 @@ class Project < ActiveRecord::Base
   end
 
   def repo(nickname, token)
-    GithubClient.new(nickname, token).repo(github_repository)
+    GithubClient.new(nickname, token).repository(github_repository)
   end
 end
