@@ -51,7 +51,7 @@ de:
       title: Bau Dein Profil auf
       description: Sich an Open Source-Projekten zu beteiligen ist auch ein grossartiger Weg, sein Profil in der Community aufzubauen und seinen Lebenslauf zu verbessern.
       getting_started: Anzufangen ist wirklich sehr einfach. Selbst die kleinsten Beiträge können für ein Projekt sehr wertvoll sein.
-    join_the_chat: Komm in den Chat im IRC, %{link_to_chat}, auf freenode.
+    join_the_chat: Komm in den Chat im Gitter, %{link_to_chat}.
 
   information:
     title: "24 Pull Requests %{year} ist da"
