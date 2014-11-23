@@ -71,11 +71,12 @@ h1, h2, h3, h4, .page-title {
     margin-bottom: 15px;
 
     .octicon {
-      background: $header-background;
+      background: #353535;
       color: #fff;
       display: block;
       height: 60px;
       width: 60px;
+      border-radius: 50px;
       font-size: 20px;
       margin: -60px auto 30px;
       line-height: 60px;
@@ -87,7 +88,7 @@ h1, h2, h3, h4, .page-title {
   display: inline;
 
   img {
-    width: 80px;
+    width: 60px;
   }
 }
 
