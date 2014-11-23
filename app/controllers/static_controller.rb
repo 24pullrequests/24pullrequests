@@ -5,7 +5,7 @@ class StaticController < ApplicationController
     @orgs = Organisation.with_user_counts.order_by_pull_requests.limit(200).sample(40)
     @pull_requests = PullRequest.year(current_year).order('created_at desc').limit(5)
 
-    render :layout => "homepage"
+    render layout: "homepage"
   end
 
   def about
