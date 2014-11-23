@@ -51,7 +51,7 @@ it:
       title: Costruisci il tuo profilo
       description: Contribuire a progetti open source è un ottimo modo per migliorare il CV e costruirsi un'immagine nella comunità.
       getting_started: Iniziare è davvero facile e anche il più piccolo contributo è prezioso.
-    join_the_chat: Raggiungici sulla chat IRC, %{link_to_chat}, in freenode.
+    join_the_chat: Raggiungici sulla chat Gitter, %{link_to_chat}.
 
   information:
     title: "24 Pull Requests %{year} è alle porte"
