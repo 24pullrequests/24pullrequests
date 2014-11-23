@@ -54,7 +54,7 @@ h1, h2, h3, h4, .page-title {
 
 .tips {
   background: #fff;
-  margin: -60px auto 30px;
+  margin: -60px auto 60px;
   padding: 1px 16px;
 
   .row {
@@ -100,12 +100,15 @@ h1, h2, h3, h4, .page-title {
 
 .cta {
   font-size: 16px;
-  transform: translateY(-50%);
   border: 10px solid #fff;
   position: relative;
   padding: 20px 25px;
   color: #fff;
   background: #cc3034;
+
+          transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
 
   .octicon {
     margin-right: 10px;
