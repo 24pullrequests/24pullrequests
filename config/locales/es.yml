@@ -51,7 +51,7 @@ es:
       title: "Construya su perfil"
       description: "Contribuir a proyectos de código abierto es también una gran forma de construir su perfil en la comunidad y mejorar su CV."
       getting_started: "Es muy fácil de empezar. Incluso las pequeñas contribuciones pueden ser muy valiosas para un proyecto."
-    join_the_chat: "Únete al chat en IRC, %{link_to_chat} en freenode."
+    join_the_chat: "Únete al chat en Gitter, %{link_to_chat}."
 
   information:
     title: "¡24 Pull Requests %{year} ya está aquí!"

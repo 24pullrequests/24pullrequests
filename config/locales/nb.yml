@@ -51,7 +51,7 @@ nb:
       title: Bygg din profil
       description: Å bidra til open-source prosjekter er også en flott måte å bygge din profil og forbedre din CV på.
       getting_started: Det er veldig enkelt å komme i gang. Små forbedringer kan også være veldig verdifulle for et prosjekt.
-    join_the_chat: Bli med i chatten på IRC, %{link_to_chat} (stort sett engelsk), på Freenode.
+    join_the_chat: Bli med i chatten på Gitter, %{link_to_chat} (stort sett engelsk).
 
   information:
     title: "24 Pull Requests %{year} er nær"
