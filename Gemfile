@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby "2.1.3"
+ruby '2.1.5'
 
-gem 'rails', '4.1.7'
+gem 'rails', '4.1.8'
 
 gem 'jquery-rails'
 
@@ -39,6 +39,7 @@ group :development, :test, :cucumber do
   gem 'rspec-rails'
   gem 'coveralls', require: false
   gem 'codeclimate-test-reporter', require: nil
+  gem 'pullreview-coverage', require: false
 
   gem 'rspec-its'
   gem 'rspec-collection_matchers'

@@ -62,8 +62,9 @@ nb:
     contribhub:
       tagline: Visste du at du har en nabo som trenger hjelp med et skikkelig kult prosjekt? Med ContribHub vil du!
       description: ContribHub er en GitHub-basert applikasjon som gjør det enklere å finne prosjekter å bidra til og gro et samfunn rundt.
+    happy_holidays_see_you: God høytid, og vi sees igjen neste år når vi gjør det hele om igjen!
 
-  merry_christmas: God jul
+  happy_holidays: God høytid
   follow_user: Følg @%{twitter}
   sponsored_by: Sponset av
   how_to_contribute: Hvordan bidra?

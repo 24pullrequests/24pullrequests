@@ -63,7 +63,6 @@ th:
       tagline: คุณรู็จักคนที่มีโครงการที่น่าสนใจมั้ย? ถ้าไม่มีลอง ContribHub!
       description: ContribHub เป็นโปรแกรมที่ใช้หาโครงการที่น่าสนใจบน GitHub
 
-  merry_christmas: สุขสันต์วันคริสต์มาส
   follow_user: ติดตาม @%{twitter}
   sponsored_by: สนับสนุนโดย
   how_to_contribute: ต้องการมีส่วนร่วม?

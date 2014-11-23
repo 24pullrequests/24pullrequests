@@ -21,7 +21,7 @@ class Event < ActiveRecord::Base
   end
 
   def validate_start_time_is_not_in_the_past
-    unless start_time >= Time.now.beginning_of_day
+    unless start_time >= Time.zone.now.beginning_of_day
       errors.add(:start_time, :in_past)
     end
   end

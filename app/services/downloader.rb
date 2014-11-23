@@ -5,10 +5,18 @@ class Downloader
   end
 
   def get_organisations
-    user_downloader.user_organisations.each do |org|
+    previous_orgs = user.organisations
+    current_orgs = user_downloader.user_organisations
+
+    current_orgs.map! do |org|
       organisation = Organisation.create_from_github(org)
+
       organisation.users << user unless organisation.users.include?(user)
       organisation.save
+      organisation
+    end
+    (previous_orgs - current_orgs).each do |org|
+      user.organisations.delete(org)
     end
   end
 

@@ -161,6 +161,12 @@ describe User, :type => :model do
     end
   end
 
+  describe '.avatar_url' do
+    subject { user }
+
+    its(:avatar_url) { is_expected.to eq "https://avatars.githubusercontent.com/u/#{user.uid}?size=80" }
+  end
+
   describe '.check_email_changed' do
     subject { user }
 

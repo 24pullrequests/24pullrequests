@@ -37,18 +37,18 @@ First things first, you'll need to install Ruby 2.0. I recommend using the excel
 and [ruby-build](https://github.com/sstephenson/ruby-build)
 
 ```bash
-rbenv install 2.1.3
-rbenv global 2.1.3
+rbenv install 2.1.5
+rbenv global 2.1.5
 ```
 
 Next, you'll need to make sure that you have postgres installed. This can be
-done easily using [Homebrew](http://mxcl.github.com/homebrew/) or by using [http://postgresapp.com](http://postgresapp.com). 
+done easily using [Homebrew](http://mxcl.github.com/homebrew/) or by using [http://postgresapp.com](http://postgresapp.com).
 
 ```bash
 brew install postgres phantomjs
 ```
 
-Please see these [further instructions for installing postgres via homebrew](http://www.mikeball.us/blog/setting-up-postgres-with-homebrew/). 
+Please see these [further instructions for installing postgres via homebrew](http://www.mikeball.us/blog/setting-up-postgres-with-homebrew/).
 
 Now, let's install the gems from the `Gemfile` ("Gems" are synonymous with libraries in other
 languages).
@@ -106,7 +106,10 @@ as it will use it to learn more about the developers and for pull requests.
  * Add tests for it. This is important so I don't break it in a future version unintentionally.
  * Send a pull request. Bonus points for topic branches.
 
+### Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+
 ## Copyright
 
-Copyright (c) 2013 Andrew Nesbitt. See [LICENSE](https://github.com/24pullrequests/24pullrequests/blob/master/LICENSE) for details.
-
+Copyright (c) 2014 Andrew Nesbitt. See [LICENSE](https://github.com/24pullrequests/24pullrequests/blob/master/LICENSE) for details.
