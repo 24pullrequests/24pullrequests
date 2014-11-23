@@ -28,16 +28,17 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.6)
-    anjlab-bootstrap-rails (3.0.3.0)
-      railties (>= 3.0)
-      sass (>= 3.2)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (4.0.1)
+      execjs
     better_errors (2.0.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.1.0)
+      sass (~> 3.2)
     brakeman (2.6.3)
       erubis (~> 2.6)
       fastercsv (~> 1.5)
@@ -386,9 +387,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  anjlab-bootstrap-rails (~> 3.0.3.0)
+  autoprefixer-rails
   better_errors
   binding_of_caller
+  bootstrap-sass (~> 3.3.1)
   brakeman
   bugsnag
   chai-jquery-rails
