@@ -246,12 +246,9 @@ nav, .faulx-nav, .locale {
   position: inherit;
 }
 
-.locale {
-  text-align: right;
-  margin-bottom: $grid-gutter-width;
-  li {
-    text-align: left;
-  }
+.locale li {
+  display: block;
+  text-align: left;
 }
 
 .faulx-nav {
@@ -309,7 +306,8 @@ footer {
     padding: 2.75em 0;
     background: #434343 asset-url('logo-dark.png') no-repeat center center;
   }
-  ul {
+  .unstyled {
+    padding-left: 0;
     position: relative;
     margin: 0;
 
@@ -319,7 +317,7 @@ footer {
       margin: 15px 0;
     }
 
-    li {
+    > li {
       border-left: 1px solid #333;
       display: inline-block;
       padding-left: 10px;
@@ -329,17 +327,18 @@ footer {
         border-left: none;
         padding-left: 0;
       }
-    }
-  }
-  a {
-    font-weight: 800;
-    font-size: 110%;
-    color: #ccc;
-    text-decoration: none;
 
-    &:hover {
-      border-bottom: 1px dashed $header-background;
-      text-decoration: none;
+      > a {
+        font-weight: 800;
+        font-size: 110%;
+        color: #ccc;
+        text-decoration: none;
+
+        &:hover {
+          border-bottom: 1px dashed $header-background;
+          text-decoration: none;
+        }
+      }
     }
   }
 
