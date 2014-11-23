@@ -46,12 +46,12 @@ describe 'Users', :type => :request do
       end
 
       describe "when the user belong to an organisation" do
-        org = create(:organisation)
-        let!(:user) { create(:user, organisations: [ org ]) }
+        let!(:user) { create(:user, organisations: [ create(:organisation) ]) }
 
         it 'has organisations' do
           visit user_path(user)
-          is_expected.to have_content(org.login)
+
+          is_expected.to have_content("Member of...")
         end
       end
     end
