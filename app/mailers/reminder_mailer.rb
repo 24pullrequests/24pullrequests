@@ -18,6 +18,12 @@ class ReminderMailer < ActionMailer::Base
     mail_suggested_projects(user, FREQUENCY[:weekly])
   end
 
+  def november(user)
+    @user = user
+    mail :to => user.email,
+         :subject => "24 Pull Requests is starting again soon"
+  end
+
   private
 
   def mail_suggested_projects(user, frequency)
