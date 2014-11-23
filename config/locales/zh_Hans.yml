@@ -51,7 +51,7 @@ zh_Hans:
       title: 构建您的个人资料
       description: 参与开源项目，也是一个建立起您在社区的经历，提高您的简历的好方法。
       getting_started: 这真的很容易上手。即使是很小的贡献对项目也有很大的价值。
-    join_the_chat: 参与IRC上的聊天 %{link_to_chat}， 在freenode 。
+    join_the_chat: 参与Gitter上的聊天 %{link_to_chat} 。
 
   information:
     title: "24 pull requests %{year} is upon us"

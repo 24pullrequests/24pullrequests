@@ -51,7 +51,7 @@ zh_Hant:
       title: 構建您的個人資料
       description: 參與開源項目，也是一個建立起您在社區的經歷，提高您的簡歷的好方法。
       getting_started: 這真的很容易上手。即使是很小的貢獻對項目也有很大的價值。
-    join_the_chat: 參與IRC上的聊天%{link_to_chat}， 在freenode 。
+    join_the_chat: 參與Gitter上的聊天%{link_to_chat} 。
 
   information:
     title: "24 pull requests %{year} is upon us"
