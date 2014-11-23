@@ -51,7 +51,7 @@ uk:
       title: Розширюй свій профіль
       description: Контрібуції до open source проектів, це також класний спосіб прокачки вашого онлайн профілю і CV.
       getting_started: Залучитіся, насправді, легко. Навіть маленька допомога, має високу ціну.
-    join_the_chat: Приєднуетсь к IRC, %{link_to_chat}, на freenode.
+    join_the_chat: Приєднуетсь к Gitter, %{link_to_chat}.
 
   information:
     title: "24 Пулл Реквеста %{year} вже близько"

@@ -62,7 +62,7 @@ en:
       view_events: View events
       host_an_event: Host an event
 
-    join_the_chat: Join the chat on IRC, %{link_to_chat}, at freenode.
+    join_the_chat: Join the chat on Gitter, %{link_to_chat}.
 
   information:
     title: "24 Pull Requests %{year} is upon us"
