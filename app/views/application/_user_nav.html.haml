@@ -1,12 +1,18 @@
 - if logged_in?
   %nav
     %ul.nav.nav-pills
+      %li.logout
+        = link_to logout_path, :title => t("navigation.logout") do
+          %span.octicon.octicon-sign-out
+
       %li
-        = link_to t("navigation.all_projects"), projects_path
+        = link_to dashboard_path do
+          %span.octicon.octicon-dashboard
+          = t("navigation.dashboard")
       %li
-        = link_to t("navigation.dashboard"), dashboard_path
-      %li
-        = link_to t("navigation.profile"), user_path(current_user)
+        = link_to user_path(current_user) do
+          %span.octicon.octicon-person
+          = t("navigation.profile")
       %li
         = link_to t("navigation.gifted_code"), gifts_path
       %li
@@ -14,9 +20,3 @@
       - if admin?
         %li
           = link_to t("navigation.manage_projects"), admin_projects_path
-
-      %li.pull-right
-        = link_to t("navigation.logout"), logout_path
-
-- else # Just for padding
-  .faulx-nav

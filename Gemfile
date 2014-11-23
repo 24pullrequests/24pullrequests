@@ -27,6 +27,7 @@ gem 'csv_shaper'
 gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
+gem 'octicons-rails'
 
 group :development do
   gem 'better_errors'
