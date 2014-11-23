@@ -46,7 +46,12 @@ describe 'Users', :type => :request do
       end
 
       describe "when the user belong to an organisation" do
-        let!(:user) { create(:user, organisations: [ create(:organisation) ]) }
+        let!(:organisation) { create(:organisation)  }
+        let!(:user) { create(:user) }
+
+        before do
+          organisation.users << user
+        end
 
         it 'has organisations' do
           visit user_path(user)
