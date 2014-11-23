@@ -52,6 +52,45 @@ h1, h2, h3, h4, .page-title {
   }
 }
 
+.tips {
+  background: #fff;
+  margin: -60px auto 30px;
+  padding: 1px 16px;
+
+  .row {
+    background-color: #f5f5f5;
+  }
+}
+
+.tip-block {
+  height: 100%;
+  padding: 30px;
+  text-align: center;
+
+  .subtitle {
+    margin-bottom: 15px;
+
+    .octicon {
+      background: $header-background;
+      color: #fff;
+      display: block;
+      height: 60px;
+      width: 60px;
+      font-size: 20px;
+      margin: -60px auto 30px;
+      line-height: 60px;
+    }
+  }
+}
+
+.coderwall-badge-link {
+  display: inline;
+
+  img {
+    width: 80px;
+  }
+}
+
 .cta-block {
   text-align: center;
   border-top: 1px dashed #e3e3e3;
