@@ -196,6 +196,8 @@ GEM
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (~> 1.2)
+    octicons-rails (2.1.1)
+      railties (>= 3.2, < 5.0)
     octokit (3.5.2)
       sawyer (~> 0.5.3)
     omniauth (1.2.2)
@@ -413,6 +415,7 @@ DEPENDENCIES
   launchy
   memcachier
   newrelic_rpm
+  octicons-rails
   octokit
   omniauth
   omniauth-github
