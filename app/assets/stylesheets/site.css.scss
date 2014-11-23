@@ -175,15 +175,14 @@ header {
   border-top: 13px solid #942f2f;
 
   .logo {
-    margin-top: 47px;
-    margin-bottom: $grid-gutter-width;
+    margin: 45px auto;
   }
 
   @media (min-width: 767px) {
     .tagline {
       $width: 620px;
       height: 110px;
-      margin-bottom: $grid-gutter-width;
+      margin-bottom: 60px;
       position: relative;
       background: transparent asset-url('tagline.png') no-repeat center bottom;
     }
@@ -217,8 +216,6 @@ nav, .faulx-nav, .locale {
 }
 
 nav {
-  margin-bottom: $grid-gutter-width / 2;
-
   a {
     color: #DFC1C1;
   }
@@ -228,15 +225,12 @@ nav {
   }
 
   .nav-pills a {
+    margin-right: $grid-gutter-width / 2;
     background-color: $nav-pill-background;
+    font-weight: bold;
+    text-transform: uppercase;
 
     &:hover {
-      $shadow: inset 0 3px 2px rgba(0,0,0,0.05);
-
-      -webkit-box-shadow: $shadow;
-         -moz-box-shadow: $shadow;
-              box-shadow: $shadow;
-
       color: #efefef;
       background-color: $nav-pill-accent;
     }
