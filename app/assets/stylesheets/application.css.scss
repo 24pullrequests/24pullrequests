@@ -1,12 +1,9 @@
-/*
-*= require octicons
-*/
-
-@import "twitter/bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "jquery.datetimepicker";
 @import "typeahead";
 @import "variables";
-
+@import "octicons";
 @import "calendar";
 @import "dashboard";
 @import "gifts";
