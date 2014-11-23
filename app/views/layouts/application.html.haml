@@ -64,22 +64,6 @@
         - if params[:action] == 'homepage'
           .tagline.hidden-phone
 
-        .locale.hidden
-          .dropdown
-            %button.btn.btn-default.dropdown-toggle{ type: "button", id: "locale", "data-toggle" => "dropdown" }
-              =image_tag "flags/#{I18n.locale}.png", class: "flag"
-              =t("locale.#{I18n.locale}")
-              %span.caret
-            %ul.dropdown-menu.pull-right{ role:"menu", "aria-labelledby" => "dropdownMenu1"}
-              - available_locales.each do |locale|
-                %li{ role: "presentation"}
-                  =link_to locale_path(locale), role: "menuitem" do
-                    =image_tag "flags/#{locale}.png", class: "flag"
-                    =t("locale.#{locale}")
-              %li.divider
-              %li{ role: "presentation"}
-                =link_to t("locale.translate"), "https://github.com/24pullrequests/24pullrequests/wiki/Adding-a-locale"
-
         - if logged_in?
           = render :partial => 'user_nav'
 
@@ -110,5 +94,20 @@
             = link_to t("how_to_contribute"), contributing_path
           %li
             = link_to 'API', api_path
+          %li
+            .locale.dropup
+              %button.btn.btn-inverse.dropdown-toggle{ type: "button", id: "locale", "data-toggle" => "dropdown" }
+                =image_tag "flags/#{I18n.locale}.png", class: "flag"
+                =t("locale.#{I18n.locale}")
+                %span.caret
+              %ul.dropdown-menu.pull-right{ role:"menu", "aria-labelledby" => "dropdownMenu1"}
+                - available_locales.each do |locale|
+                  %li{ role: "presentation"}
+                    =link_to locale_path(locale), role: "menuitem" do
+                      =image_tag "flags/#{locale}.png", class: "flag"
+                      =t("locale.#{locale}")
+                %li.divider
+                %li{ role: "presentation"}
+                  =link_to t("locale.translate"), "https://github.com/24pullrequests/24pullrequests/wiki/Adding-a-locale"
 
   = javascript_include_tag "application"
