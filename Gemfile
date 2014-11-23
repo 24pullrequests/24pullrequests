@@ -11,19 +11,13 @@ gem 'omniauth-github'
 gem 'omniauth-twitter'
 gem 'haml-rails'
 gem 'octokit'
-gem 'bugsnag'
 gem 'rabl'
-gem 'newrelic_rpm'
-gem 'simplecov'
 gem 'kaminari'
 gem 'twitter'
 gem 'anjlab-bootstrap-rails', '~> 3.0.3.0', require: 'bootstrap-rails'
 gem 'jquery-datetimepicker-rails', '~> 2.3.7.0'
 gem 'simple_form'
-gem 'rack-google-analytics'
 gem 'ffi', '1.9.3'
-gem 'csv_shaper'
-
 gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
@@ -55,6 +49,7 @@ group :development, :test, :cucumber do
   gem 'shoulda-matchers'
   gem 'webmock', require: false
   gem 'timecop'
+  gem 'simplecov'
 
   # Auto testing
   gem 'guard-rspec'
@@ -76,4 +71,7 @@ group :production do
   gem 'memcachier'
   gem 'dalli'
   gem 'rails_12factor'
+  gem 'newrelic_rpm'
+  gem 'bugsnag'
+  gem 'rack-google-analytics'
 end
