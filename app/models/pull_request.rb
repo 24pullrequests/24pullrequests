@@ -33,7 +33,7 @@ class PullRequest  < ActiveRecord::Base
     end
 
     def in_date_range?
-      EARLIEST_PULL_DATE < Time.now && Time.now < LATEST_PULL_DATE
+      EARLIEST_PULL_DATE < Time.zone.now && Time.zone.now < LATEST_PULL_DATE
     end
   end
 
@@ -46,8 +46,8 @@ class PullRequest  < ActiveRecord::Base
     begin
       user.twitter.update(I18n.t 'pull_request.twitter_message', :issue_url => issue_url) if user && user.twitter_linked?
     rescue => e
-      puts e.inspect
-      puts 'likely a Twitter API error occurred'
+      Rails.logger.error "likely a Twitter API error occurred:\n"\
+                         "#{e.inspect}"
     end
   end
 

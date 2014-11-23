@@ -21,10 +21,6 @@ module ApplicationHelper
     link_to label, '#', data: {language: language}
   end
 
-  def gravatar_url(digest='', size = '80')
-    "https://secure.gravatar.com/avatar/#{digest}.png?s=#{size}&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
-  end
-
   def github_button(nickname)
     %(<iframe src="http://ghbtns.com/github-btn.html?user=#{nickname}&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="300" height="20"></iframe>).html_safe
   end
@@ -79,8 +75,10 @@ module ApplicationHelper
   end
 
   def favicon
-    if (Time.parse("1st December")..Time.parse("25th December")).cover?(Time.now)
-      return { filename: "/assets/favicon/#{Time.now.strftime("%d")}.png", type: "image/png" }
+    if (Time.parse("1st December")..Time.parse("25th December")
+    ).cover?(Time.zone.now)
+      return { filename: "/assets/favicon/#{Time.zone.now.strftime("%d")}.png",
+      type: "image/png" }
     else
       return { filename: "favicon.ico", type: "image/vnd.microsoft.icon" }
     end

@@ -1,6 +1,6 @@
 .row
   .col-sm-3
-    = image_tag(gravatar_url(@user.gravatar_id, 200), :width => "100%", :alt => @user.nickname)
+    = image_tag(@user.avatar_url(200), :width => "100%", :alt => @user.nickname)
     %h2
       #{@user.nickname}
     %p= gratipay_button @user.nickname

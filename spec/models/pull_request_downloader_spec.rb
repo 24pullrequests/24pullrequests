@@ -8,7 +8,7 @@ describe PullRequestDownloader, :type => :model do
       double('event').tap do |event|
         allow(event).to receive(:type).and_return('PullRequestEvent')
         allow(event).to receive_message_chain(:payload, :action).and_return('opened')
-        allow(event).to receive(:[]).with('created_at').and_return('24/12/2013')
+        allow(event).to receive(:[]).with('created_at').and_return('24/12/2014')
       end
     end
 

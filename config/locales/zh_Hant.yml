@@ -63,7 +63,6 @@ zh_Hant:
       tagline: 你知道有一個非常酷的項目需要你的一些幫助（就像你的鄰居那樣）?ContribHub來告訴你！
       description: ContribHub是一個GitHub上的應用，使用它可以更容易找到項目並貢獻一臂之力，並圍繞這個項目形成良好的社區。
 
-  merry_christmas: 聖誕快樂
   follow_user: 跟隨 @%{twitter}
   sponsored_by: 主辦單位
   how_to_contribute: 如何貢獻？
