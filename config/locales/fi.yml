@@ -51,7 +51,7 @@ fi:
       title: Luo profiilisi
       description: Avoimen lähdekoodin projektien auttaminen on mahtava keino rakentaa profiiliasi yhteisössä ja parantaa CV:täsi.
       getting_started: Se on todella helppoa päästä alkuun. Jopa pienet avustukset voivat olla todella arvokkaita projektille.
-    join_the_chat: "Liity keskusteluun GItter: %{link_to_chat}."
+    join_the_chat: "Liity keskusteluun Gitter: %{link_to_chat}."
 
   information:
     title: "24 Pull Requests %{year} on jo ovella"
