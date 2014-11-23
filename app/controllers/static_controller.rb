@@ -4,6 +4,8 @@ class StaticController < ApplicationController
     @users = User.order('pull_requests_count desc').includes(:pull_requests).limit(200).sample(40)
     @orgs = Organisation.with_user_counts.order_by_pull_requests.limit(200).sample(40)
     @pull_requests = PullRequest.year(current_year).order('created_at desc').limit(5)
+
+    render :layout => "homepage"
   end
 
   def about
