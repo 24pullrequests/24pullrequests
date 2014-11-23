@@ -216,19 +216,22 @@ nav, .faulx-nav, .locale {
 }
 
 nav {
-  a {
-    color: #DFC1C1;
-  }
+  margin: 0 -15px;
 
-  .nav {
-    margin-bottom: 0;
+  li {
+    margin-right: $grid-gutter-width / 2;
   }
 
   .nav-pills a {
-    margin-right: $grid-gutter-width / 2;
     background-color: $nav-pill-background;
     font-weight: bold;
     text-transform: uppercase;
+    padding: 5px 10px;
+    color: #DFC1C1;
+
+    &.logout {
+      margin-right: 0;
+    }
 
     &:hover {
       color: #efefef;
@@ -242,6 +245,14 @@ nav {
     background-color: $nav-pill-active;
   }
 
+  .octicon {
+    width: 15px;
+  }
+
+  .logout {
+    margin-right: 0;
+    float: right;
+  }
 }
 .nav-tabs {
   margin-bottom: $grid-gutter-width / 2;
