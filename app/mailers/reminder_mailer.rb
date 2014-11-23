@@ -21,7 +21,7 @@ class ReminderMailer < ActionMailer::Base
   def november(user)
     @user = user
     mail :to => user.email,
-      :subject => "24 Pull Requests is starting again soon"
+         :subject => "24 Pull Requests is starting again soon"
   end
 
   private
