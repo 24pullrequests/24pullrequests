@@ -5,7 +5,7 @@ class Downloader
   end
 
   def get_organisations
-    previous_orgs = user.organisations
+    previous_orgs = user.organisations.all
     current_orgs = user_downloader.user_organisations
 
     current_orgs.map! do |org|
