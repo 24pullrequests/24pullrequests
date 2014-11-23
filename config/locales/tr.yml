@@ -51,7 +51,7 @@ tr:
       title: Profilinizi Oluşturun
       description: Açık kaynak projelere katılmak, topluluk içinde profilinizin oluşması ve CVnizi geliştirmeniz için iyi bir yoldur.
       getting_started: Küçük katılımlar bir projeyi değerli yapabilir. Projelere katılım başlatmak gerçekten kolaydır.
-    join_the_chat: Freenode üzerinden IRC de konuşmalara dahil olun %{link_to_chat}
+    join_the_chat: Gitter de konuşmalara dahil olun %{link_to_chat}
 
   information:
     title: "24 Pull Requests %{year} yılında üzerimizde"
