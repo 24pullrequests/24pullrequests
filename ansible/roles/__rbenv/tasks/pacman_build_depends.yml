@@ -1,0 +1,2 @@
+---
+- pacman: name=base-devel state=present update_cache=yes

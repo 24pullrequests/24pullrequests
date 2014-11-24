@@ -1,0 +1,37 @@
+---
+
+- name: Add PostgreSQL Repository
+  sudo: yes
+  apt_repository: repo='deb http://apt.postgresql.org/pub/repos/apt/ {{ ansible_distribution_release }}-pgdg main' state=present
+
+- name: Add Keys for PostgreSQL Repository
+  sudo: yes
+  apt_key: url=https://www.postgresql.org/media/keys/ACCC4CF8.asc state=present
+
+- name: Update apt
+  sudo: yes
+  apt: update_cache=yes
+
+- name: Install PostgreSQL Packages
+  sudo: yes
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - postgresql-9.3
+    - postgresql-client-9.3
+    - python-pygresql
+    - python-psycopg2
+
+- name: Create databases
+  sudo: yes
+  sudo_user: postgres
+  postgresql_db: name={{ database.db }} state=present
+
+- name: Create users
+  sudo: yes
+  sudo_user: postgres
+  postgresql_user: name={{ database.user }} password={{ database.pass }} db={{ database.db }} priv=ALL
+
+- name: Change default pg_hba.conf to allow local connections without pass
+  sudo: yes
+  template: src=pg_hba.conf.tpl dest=/etc/postgresql/9.3/main/pg_hba.conf
+  notify: restart postgresql

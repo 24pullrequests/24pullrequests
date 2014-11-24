@@ -1,0 +1,8 @@
+---
+# This playbook deploys the wemux role for testing
+
+- hosts: test-kitchen
+  user: root
+
+  roles:
+    - rbenv
