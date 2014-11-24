@@ -1,0 +1,5 @@
+---
+# handlers file for rbenv
+- name: rehash rbenv
+  shell: RBENV_ROOT={{ rbenv_root }} rbenv rehash
+

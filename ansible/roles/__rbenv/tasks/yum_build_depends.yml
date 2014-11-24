@@ -1,0 +1,14 @@
+---
+- name: install build depends
+  yum: name={{ item }} state=present
+  with_items:
+    - gcc
+    - openssl-devel
+    - libyaml-devel
+    - readline-devel
+    - zlib-devel
+    - git
+  sudo: true
+  tags:
+    - rbenv
+

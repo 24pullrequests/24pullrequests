@@ -1,0 +1,23 @@
+---
+- hosts: all
+  sudo: true
+  vars:
+    timezone: UTC
+    sys_packages:
+      - vim
+      - curl
+      - python-software-properties
+      - build-essential
+      - zlib1g-dev
+      - libssl-dev
+      - libreadline-dev
+      - libcurl4-openssl-dev
+      - libpq-dev
+  vars_files:
+    - vars/pgsql.yml
+    - vars/common.yml
+  roles:
+    - init
+    - ruby
+    - pgsql
+    - app

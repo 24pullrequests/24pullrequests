@@ -1,0 +1,27 @@
+---
+galaxy_info:
+  author: "Andrew Kumanyaev"
+  description: rbenv
+  company: Undev
+  license: MIT
+  min_ansible_version: 1.7.1
+  version: 0.2
+
+  platforms:
+    - name: EL
+      versions:
+       # - 5
+       - 6
+       # - 7
+    - name: Ubuntu
+      versions:
+        # - lucid    # 10.04 ## package is named git-core 10.04... also geerlingguy.git doesn't support 10.04 either
+        - precise  # 12.04
+        - saucy    # 13.10
+        - trusty   # 14.04
+        # - utopic   # 14.10
+  categories:
+    - development
+    - system
+
+dependencies: []

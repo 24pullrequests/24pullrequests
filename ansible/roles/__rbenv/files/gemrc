@@ -1,0 +1,4 @@
+---
+:sources:
+- https://rubygems.org
+gem: --no-ri --no-rdoc

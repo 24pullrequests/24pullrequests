@@ -1,0 +1,1 @@
+GEM_PATH=$GEM_PATH:$HOME/.gems
