@@ -1,5 +1,5 @@
-%h1= t("events.title")
-%h3= t("events.description")
+%h2= t("events.title")
+%p= t("events.details")
 
 - if @events.empty?
   %h4
@@ -7,6 +7,7 @@
       = t("events.index.no_upcoming_events")
       = link_to t("events.index.host_an_event"), new_event_path
 - else
+
   .row
     .col-sm-12.col-md-6
       .map
@@ -23,6 +24,5 @@
             %small
               = event.location
               \/ #{event.formatted_date}
-  .row
-    .col-sm-12.col-md-6
-      = link_to t("events.index.host_an_event"), new_event_path, class: 'btn btn-default'
+        .event
+          = link_to t("events.index.host_an_event"), new_event_path, class: 'btn btn-default'
