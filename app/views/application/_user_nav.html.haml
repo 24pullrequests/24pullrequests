@@ -17,6 +17,8 @@
         = link_to t("navigation.gifted_code"), gifts_path
       %li
         = link_to t("navigation.my_suggestions"), my_suggestions_path
+      %li
+        = link_to t("navigation.events"), events_path
       - if admin?
         %li
           = link_to t("navigation.manage_projects"), admin_projects_path
