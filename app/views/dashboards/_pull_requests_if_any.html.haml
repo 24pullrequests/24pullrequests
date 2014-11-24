@@ -1,4 +1,6 @@
 - if current_user.pull_requests.year(current_year).any?
   = render :partial => 'pull_requests/pull_request', :collection => pull_requests
+- elsif DateTime.new(current_year, 12, 1) > DateTime.now 
+  %p='24 Pull Requests runs from 1st-24th December, come back then!'
 - else
   %p=t("dashboard.no_pull_requests")
