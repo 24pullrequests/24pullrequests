@@ -26,6 +26,7 @@ el:
     preferences: Διαρρυθμίσεις
     gifted_code: Δωρακια κωδικα
     manage_projects: Διαχείρηση
+    events: Εκδηλωσεις
     logout: Αποσύνδεση
 
   homepage:
@@ -248,3 +249,35 @@ el:
       title:
       details:
       specific:
+
+  events:
+    title: Εκδηλώσεις
+    description: Ενθαρρύνουμε όλους τους οργανωτές event σε όλο τον κόσμο να φιλοξενήσουν εκδηλώσεις 24pullrequests. Λάβετε μέρος και εσείς αυτά τα Χριστούγεννα!
+    notice:
+      not_logged_in: "Για να δημιουργήσετε ή να τροποποιήσετε εκδηλώσεις πρέπει να είστε συνδεδεμένος."
+      not_authorized: "Μπορείς να τροποποιήσεις μόνο εκδηλώσεις που δημιούργησες"
+      edit_success: "Η εκδήλωση έχει ενημερωθει"
+      new_success: "Η εκδήλωση έχει δημιουργηθεί"
+      destroy_success: "Η εκδήλωση έχει διαγραφεί"
+    show:
+      view_event_details: View event details
+      destroy_event: Διαγραφή
+      edit_event: Ενημέρωση
+      confirm_destroy: "Είστε σίγουρος ότι θέλετε να διαγράψετε την εκδήλωση;"
+    edit:
+      title
+    new:
+      title: Δημιουργία εκδήλωσης 24pullrequests
+      form:
+        name: Όνομα
+        name_placeholder: Bristol Ruby Group Pull-request-a-thon
+        description: Περιγραφή
+        description_placeholder: Δώστε μια μικρή περιγραφή της ομάδας και εκδήλωσης
+        location: Τοποθεσία
+        location_placeholder: e.g. Bristol, UK
+        url_placeholder: "Σελίδα εκδήλωσης / εγγραφές"
+        map: "Δείκτης τοποθεσίας"
+        start_time: "Ημερομηνία"
+    index:
+      no_upcoming_events: "Δεν υπάρχουν επερχόμενες εκδηλώσεις"
+      host_an_event: "Καταχώρηση εκδήλωσης"
