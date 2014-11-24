@@ -23,3 +23,6 @@
             %small
               = event.location
               \/ #{event.formatted_date}
+  .row
+    .col-sm-12.col-md-6
+      = link_to t("events.index.host_an_event"), new_event_path, class: 'btn btn-default'
