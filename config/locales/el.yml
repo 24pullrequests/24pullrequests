@@ -20,11 +20,11 @@ el:
 
   navigation:
     all_projects: Όλα τα projects
-    my_suggestions: Οι εισηγήσεις μου
-    dashboard: Ταμπλό
-    profile: Προφίλ
+    my_suggestions: Οι εισηγησεις μου
+    dashboard: Ταμπλο
+    profile: Προφιλ
     preferences: Διαρρυθμίσεις
-    gifted_code: Δώρα
+    gifted_code: Δωρακια κωδικα
     manage_projects: Διαχείρηση
     logout: Αποσύνδεση
 
