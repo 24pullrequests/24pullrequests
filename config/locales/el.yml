@@ -62,6 +62,9 @@ el:
     contribhub:
       tagline: Ξέρεις κάποιο γείτονα που να χρειάζεται βοήθεια με ένα project? Με την ContribHub θα γνωρίσεις!
       description: Η ContribHub είναι μία GitHub-based εφαρμογλη που διευκολύνει την εύρεση projects που μπορείς να συνεισφέρεις και την επέκταση της κοινότητας γύρω τους.
+    happy_holidays_see_you: Καλές Γιορτές και θα τα ξαναπούμε του χρόνου!
+
+  happy_holidays: Καλές Γιορτές
 
   follow_user: "Ακολούθησε τον χρήστη @%{twitter}"
   sponsored_by: "Χορηγοί"
