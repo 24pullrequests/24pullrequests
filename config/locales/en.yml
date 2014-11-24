@@ -267,7 +267,7 @@ en:
 
   events:
     title: Events
-    description: This year we are encouraging organisers around the world to hold 24pullrequests hack events. Get involved this Christmas.
+    details: You don't have to hack alone this Christmas! Host a 24pullrequests hack event at your company, technology meetup, or in your local community. Or you can join a hack event and code together.
     notice:
       not_logged_in: "You have to be logged in to create or edit events"
       not_authorized: "You can only edit events that you have created"
