@@ -31,7 +31,9 @@ Report issues/feature requests on [GitHub Issues](http://github.com/24pullreques
 
 ### Getting Started
 
-New to Ruby? No worries!
+New to Ruby? No worries! You can follow these instructions to install a local server, or you can use the included Vagrant setup.
+
+#### Installing a Local Server
 
 First things first, you'll need to install Ruby 2.0. I recommend using the excellent [rbenv](https://github.com/sstephenson/rbenv),
 and [ruby-build](https://github.com/sstephenson/ruby-build)
@@ -81,6 +83,29 @@ our browser to <http://localhost:3000>
 ```bash
 bundle exec rails s
 ```
+#### Using Vagrant
+
+The included Vagrant setup uses Ansible as provisioner. First, you'll need to install the dependencies:
+
+ * [Vagrant](https://www.vagrantup.com/downloads.html)
+ * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+ * [Ansible](http://docs.ansible.com/intro_installation.html)
+ 
+_Windows Users: Ansible does not support Windows as controller machine, but there's a little hack in the Vagrantfile that will allow you to run the provision using a local
+SSH connection Guest-Guest. Just install Vagrant and VirtualBox, and you should be able to get it running._
+
+Once you have everything installed, go to the project directory via console and run:
+
+    $ vagrant up
+
+The first time you run `vagrant up`, the process will take several minutes, since it will download a box and run all necessary tasks to get the server ready. When the process
+is finished, log in to run the rails dev server:
+
+    $ vagrant ssh
+    $ cd /vagrant
+    $ rails s
+
+Then you should be able to access the application through your regular browser at http://192.168.12.34:3000 .
 
 ### Tests
 
