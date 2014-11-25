@@ -35,3 +35,5 @@
   sudo: yes
   template: src=pg_hba.conf.tpl dest=/etc/postgresql/9.3/main/pg_hba.conf
   notify: restart postgresql
+
+- meta: flush_handlers

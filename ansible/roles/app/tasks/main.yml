@@ -20,9 +20,13 @@
   sudo: false
   shell: bundler install chdir=/vagrant
 
-- name: Rake Tasks
+- name: Rake db:create
   sudo: false
   shell: bundle exec rake db:create:all chdir=/vagrant
+
+- name: Rake db:migrate
+  sudo: false
+  shell: bundle exec rake db:migrate chdir=/vagrant
 
 - name: Feed DB
   sudo: false
