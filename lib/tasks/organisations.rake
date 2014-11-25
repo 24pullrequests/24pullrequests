@@ -1,6 +1,6 @@
-desc "Update organisations pull_request_count"
 
 namespace :organisations do
+  desc "Update organisations pull_request_count"
   task :update_pull_request_count => :environment do
     next unless PullRequest.in_date_range?
     Organisation.all.each do |organisation|
