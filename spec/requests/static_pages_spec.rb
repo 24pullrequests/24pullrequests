@@ -19,7 +19,7 @@ describe 'Static pages', :type => :request do
     it { is_expected.to have_link('Suggest a project', :href  => new_project_path) }
   end
 
-  describe 'humans.txt' do
+  describe "humans.txt" do
     before do
       visit humans_path
     end
