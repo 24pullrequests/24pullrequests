@@ -1,3 +1,0 @@
----
-- name: restart foreman
-  service: name=foreman enabled=true state=restarted
