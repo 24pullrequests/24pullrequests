@@ -41,7 +41,7 @@ class PullRequestDownloader
         Rails.logger.info "Updating organisation: #{o.login}"
         ignored_organisations.include?(o.login)
       end
-    rescue e
+    rescue => e
       puts e.inspect
       Rails.logger.error "Organisation error: likely a GitHub API error occurred:\n"\
                          "#{e.inspect}"
