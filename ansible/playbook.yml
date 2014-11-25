@@ -15,7 +15,6 @@
       - libpq-dev
   vars_files:
     - vars/pgsql.yml
-    - vars/common.yml
   roles:
     - init
     - ruby
