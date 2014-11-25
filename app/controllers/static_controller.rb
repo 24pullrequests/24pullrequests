@@ -11,4 +11,8 @@ class StaticController < ApplicationController
   def about
     @contributors = User.contributors
   end
+
+  def humans
+    render template: "static/humans.txt", layout: false, content_type: "text/plain"
+  end
 end

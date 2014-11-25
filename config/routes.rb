@@ -47,6 +47,7 @@ Tfpullrequests::Application.routes.draw do
   post '/auth/coderwall',           :to => 'coderwall#authorize', :as => 'update_coderwall'
 
   get 'about', :to => 'static#about'
+  get 'humans', :to => 'static#humans'
   get 'api', :to => 'static#api'
   get 'contributing', :to => 'static#contributing'
 
