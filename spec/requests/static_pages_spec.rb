@@ -18,4 +18,12 @@ describe 'Static pages', :type => :request do
     it { is_expected.to have_link('View All', :href  => pull_requests_path) }
     it { is_expected.to have_link('Suggest a project', :href  => new_project_path) }
   end
+
+  describe 'humans.txt' do
+    before do
+      visit humans_path
+    end
+
+    it { is_expected.to have_content("CONTRIBUTORS") }
+  end
 end
