@@ -7,10 +7,10 @@ namespace :humans do
       header = <<-eos
 /* IDEA */
 
-Andrew Nesbitt
-GitHub Profile: https://github.com/andrew
-Location: Bath, UK
-Website: http://nesbitt.io
+  Andrew Nesbitt
+  GitHub Profile: https://github.com/andrew
+  Location: Bath, UK
+  Website: http://nesbitt.io
 
 /* CONTRIBUTORS */
 
@@ -21,15 +21,13 @@ Website: http://nesbitt.io
 
       Rails.application.config.contributors.map(&:login).each do |login|
         next if login.eql?('andrew')
+        gh_user = Octokit.user(login)
 
-        Timeout::timeout(5) {
-          gh_user = Octokit.user(login)
-        }
-
-        humans_txt.puts gh_user.name.nil? ? login : gh_user.name
-        humans_txt.puts "GitHub Profile: #{gh_user.html_url}"
-        humans_txt.puts "Location: #{gh_user.location}" if gh_user.location
-        humans_txt.puts "Website: #{gh_user.blog}\n\n" if gh_user.blog
+        humans_txt.puts gh_user.name.nil? ? "  #{login}" : "  #{gh_user.name}"
+        humans_txt.puts "  GitHub Profile: #{gh_user.html_url}"
+        humans_txt.puts "  Location: #{gh_user.location}" unless gh_user.location.blank?
+        humans_txt.puts "  Website: #{gh_user.blog}" unless gh_user.blog.blank?
+        humans_txt.puts "\n"
       end
 
       humans_txt.close
