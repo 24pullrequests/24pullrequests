@@ -96,7 +96,7 @@
             = link_to 'API', api_path
           %li
             .locale.dropup
-              %button.btn.btn-inverse.dropdown-toggle{ type: "button", id: "locale", "data-toggle" => "dropdown" }
+              %button.btn.btn-default.dropdown-toggle{ type: "button", id: "locale", "data-toggle" => "dropdown" }
                 =image_tag "flags/#{I18n.locale}.png", class: "flag"
                 =t("locale.#{I18n.locale}")
                 %span.caret
