@@ -90,7 +90,7 @@
   Location: Kiev, Ukraine
   Website: http://beletsky.net
 
-  Nikolay Shebanov  
+  Nikolay Shebanov
   GitHub Profile: https://github.com/killthekitten
   Location: Moscow, Russia
   Website: http://killthekitten.ru
@@ -222,7 +222,7 @@
 
   Karolina Szczur
   GitHub Profile: https://github.com/thefoxis
-  Location: 
+  Location:
   Website: http://thefox.is/
 
   Ericat
