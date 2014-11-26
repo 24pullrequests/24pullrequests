@@ -18,7 +18,7 @@
 
 - name: Install Gems
   sudo: false
-  shell: bundler install chdir=/vagrant
+  shell: bundler install --path vendor/bundle -j1 chdir=/vagrant
 
 - name: Rake db:create
   sudo: false
