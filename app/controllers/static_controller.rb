@@ -19,10 +19,10 @@ class StaticController < ApplicationController
 
   private
 
-    def load_contributors
-      Rails.application.config.contributors.map(&:login).map do |login|
-        next if login.eql?('andrew')
-        Octokit.user(login)
-      end.compact
-    end
+  def load_contributors
+    Rails.application.config.contributors.map(&:login).map do |login|
+      next if login.eql?("andrew")
+      Octokit.user(login)
+    end.compact
+  end
 end
