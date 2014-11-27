@@ -13,7 +13,7 @@ class StaticController < ApplicationController
   end
 
   def humans
-    @contributors = Rails.env.production? ? load_contributors : []
+    @contributors = load_contributors
     render "static/humans.txt.erb", content_type: "text/plain"
   end
 
