@@ -13,6 +13,16 @@ class StaticController < ApplicationController
   end
 
   def humans
-    render template: "static/humans.txt", content_type: "text/plain"
+    @contributors = Rails.env.production? ? load_contributors : []
+    render "static/humans.txt.erb", content_type: "text/plain"
   end
+
+  private
+
+    def load_contributors
+      Rails.application.config.contributors.map(&:login).map do |login|
+        next if login.eql?('andrew')
+        Octokit.user(login)
+      end.compact
+    end
 end
