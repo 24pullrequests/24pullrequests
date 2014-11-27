@@ -1,0 +1,33 @@
+---
+# application tasks to be customized and to run after the main provision
+
+- name: Add ppa Repository - Node
+  apt_repository: repo=ppa:chris-lea/node.js
+
+- name: Update apt
+  apt: update_cache=yes
+
+- name: Install NodeJS and PhantomJS
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - nodejs
+    - phantomjs
+
+- name: Install Bundler
+  shell: gem install bundler creates=/usr/local/bin/bundler
+
+- name: Install Gems
+  sudo: false
+  shell: bundler install --path vendor/bundle -j1 chdir=/vagrant
+
+- name: Rake db:create
+  sudo: false
+  shell: bundle exec rake db:create:all chdir=/vagrant
+
+- name: Rake db:migrate
+  sudo: false
+  shell: bundle exec rake db:migrate chdir=/vagrant
+
+- name: Feed DB
+  sudo: false
+  shell: bundle exec rake db:seed chdir=/vagrant
