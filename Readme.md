@@ -23,6 +23,7 @@ This is the site to help promote the project, highlighting why, how and where to
 * Andrew Nesbitt
 * Chris Lowder
 * Baris Balic
+* Victoria Holland
 
 ## Development
 
@@ -44,7 +45,7 @@ rbenv global 2.1.5
 ```
 
 Next, you'll need to make sure that you have postgres installed. This can be
-done easily using [Homebrew](http://mxcl.github.com/homebrew/) or by using [http://postgresapp.com](http://postgresapp.com).
+done easily using [Homebrew](http://mxcl.github.com/homebrew/) or sudo apt-get or by using [http://postgresapp.com](http://postgresapp.com).
 
 ```bash
 brew install postgres phantomjs
