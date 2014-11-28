@@ -51,13 +51,13 @@ done easily on OSX using [Homebrew](http://mxcl.github.com/homebrew/) or by usin
 brew install postgres phantomjs
 ```
 
-On Debian-based Linux distributions you can use apt-get to install postgres if it's not already installed.
+On Debian-based Linux distributions you can use apt-get to install postgres:
 
 ```bash
 sudo apt-get install postgresql postgresql-contrib
 ```
 
-On Windows, you can use the [Chocolatey package manager](http://www.chocolatey.org) to install postgres.
+On Windows, you can use the [Chocolatey package manager](http://www.chocolatey.org) to install postgres:
 
 ```bash
 choco install postgresql
