@@ -45,13 +45,23 @@ rbenv global 2.1.5
 ```
 
 Next, you'll need to make sure that you have postgres installed. This can be
-done easily using [Homebrew](http://mxcl.github.com/homebrew/) or sudo apt-get or by using [http://postgresapp.com](http://postgresapp.com).
+done easily on OSX using [Homebrew](http://mxcl.github.com/homebrew/) or by using [http://postgresapp.com](http://postgresapp.com). Please see these [further instructions for installing postgres via homebrew](http://www.mikeball.us/blog/setting-up-postgres-with-homebrew/).
 
 ```bash
 brew install postgres phantomjs
 ```
 
-Please see these [further instructions for installing postgres via homebrew](http://www.mikeball.us/blog/setting-up-postgres-with-homebrew/).
+On Debian-based Linux distributions you can use apt-get to install postgres if it's not already installed.
+
+```bash
+sudo apt-get install postgresql postgresql-contrib
+```
+
+On Windows, you can use the [Chocolatey package manager](http://www.chocolatey.org) to install postgres.
+
+```bash
+choco install postgresql
+```
 
 Now, let's install the gems from the `Gemfile` ("Gems" are synonymous with libraries in other
 languages).
