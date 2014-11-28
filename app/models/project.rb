@@ -27,7 +27,7 @@ class Project < ActiveRecord::Base
   belongs_to :submitted_by, class_name: "User", foreign_key: :user_id
 
   validates_presence_of :description, :github_url, :name, :main_language
-  validates_format_of :github_url, :with => /\Ahttp(s)?:\/\/(www\.)?github\.com\/([\w-]{1,})(\/[\w\.-]*)?/i, :message => 'Enter a valid GitHub URL.'
+  validates_format_of :github_url, :with => /\Ahttps?:\/\/(www\.)?github.com\/[\w-]*\/[\w\.-]*(\/)?\Z/i, :message => 'Enter a valid GitHub URL.'
   validates_uniqueness_of :github_url, :case_sensitive => false, :message => "Project has already been suggested."
   validates_length_of :description, :within => 20..200
   validates_inclusion_of :main_language, :in => LANGUAGES, :message => 'must be a programming language'
