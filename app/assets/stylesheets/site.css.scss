@@ -398,13 +398,11 @@ footer {
   }
 }
 
-.project {
-  padding: 15px;
-  @media (max-width: 767px) {
-    width: 100%;
-    min-height: 0;
-    margin-bottom: 20px;
-  }
+.project,
+.pull_request {
+  margin: 20px 0 0;
+  padding: 20px 0 0;
+  border-top: 1px dotted #d0d0d0;
 
   .project-link {
     display: block;
@@ -414,12 +412,22 @@ footer {
     }
   }
 
+  .project-label {
+    margin-right: 10px;
+    margin-top: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &, .octicon {
+      color: #666;
+      font-size: 10px;
+    }
+  }
+
   p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     word-wrap: break-word;
-    width: 100%;
+    margin: 0;
     color: #333;
   }
 
@@ -518,6 +526,21 @@ hr {
 @media (max-width: 990px) {
   .left, .right {
     padding: 0;
+  }
+}
+
+.title-block {
+  text-align: center;
+
+  .octicon {
+    font-size: 40px;
+    color: #d0d0d0;
+    margin-bottom: 20px;
+  }
+
+  p {
+    width: 80%;
+    margin: 0 auto 15px;
   }
 }
 
