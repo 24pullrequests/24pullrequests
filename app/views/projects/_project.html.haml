@@ -1,4 +1,4 @@
-.col-md-6.project{:class => parameterize_language(project.main_language), :data => {:id => project.id}}
+.project{:class => parameterize_language(project.main_language), :data => {:id => project.id}}
 
   = link_to project.github_url, :target => "_blank", :title => project.github_repository, :class => "project-link" do
     %span.project-title= project.name
