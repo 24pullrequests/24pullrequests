@@ -11,6 +11,7 @@
 
 coverage
 .idea
+.vagrant
 
 # Ignore ds_store
 .DS_Store

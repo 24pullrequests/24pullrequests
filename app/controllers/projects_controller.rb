@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
 
   def index
     @current_user_languages = logged_in? ? current_user.languages : []
-    @projects = ProjectSearch.new(page: params[:page], languages: @current_user_languages).find
+    @projects = ProjectSearch.new(page: params[:page], languages: @current_user_languages).find.includes(:labels)
     @has_more_projects = (params[:page].to_i * 20) < Project.active.count
     respond_with @projects
   end
@@ -60,7 +60,7 @@ class ProjectsController < ApplicationController
 
   def filter
     @languages, @labels = languages, labels
-    @projects = ProjectSearch.new(page: params[:page], labels: @labels, languages: @languages).find
+    @projects = ProjectSearch.new(page: params[:page], labels: @labels, languages: @languages).find.includes(:labels)
     respond_with @projects
   end
 

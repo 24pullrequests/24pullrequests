@@ -14,6 +14,10 @@ FactoryGirl.define do
     n
   end
 
+  sequence :github_url do |n|
+    "https://github.com/#{Faker::Lorem.word}-#{n}/#{Faker::Lorem.word}-#{n}"
+  end
+
   factory :user do
     uid { SecureRandom.hex }
     provider 'github'
@@ -42,7 +46,7 @@ FactoryGirl.define do
 
   factory :project do
     description { Faker::Lorem.paragraphs.first[0..199] }
-    github_url { "https://github.com/#{Faker::Lorem.word}-#{Time.zone.now.to_i}/#{Faker::Lorem.word}-#{Time.zone.now.to_i}" }
+    github_url
     name { Faker::Lorem.words.first }
     main_language { Project::LANGUAGES.sample }
     submitted_by { create(:user) }
