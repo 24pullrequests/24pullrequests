@@ -37,43 +37,6 @@
   }
 }
 
-@media (max-width: 990px) {
-  .left, .right {
-    padding: 0;
-  }
-}
-
-.avatar-constellation {
-  text-align: center;
-
-  .block {
-    margin-top: 0;
-  }
-
-
-  &.left {
-    padding-left: 0;
-  }
-
-  &.right {
-    padding-right: 0;
-  }
-
-  p {
-    padding: 0 20px;
-  }
-
-  .btn-viewall {
-    display: block;
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-}
-
 .avatar-list-lg {
   background: #f0f0f0;
   margin: 20px 0 0;

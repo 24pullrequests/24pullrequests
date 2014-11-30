@@ -51,8 +51,8 @@
       %p=t("homepage.join_the_chat", link_to_chat: link_to('24pullrequests/24pullrequests', 'https://gitter.im/24pullrequests/24pullrequests')).html_safe
 
 .container
-  .row
-    .col-md-6.avatar-constellation.left
+  .row.avatar-block
+    .col-md-6.two-up-split.left
       .block
         %h3.block-title
           = User.count
@@ -62,7 +62,7 @@
 
         %ul.avatar-list.avatar-list-lg.clearfix
           = render @users
-    .col-md-6.avatar-constellation.right
+    .col-md-6.two-up-split.right
       .block
         %h3.block-title
           =t("organisations.title", count: Organisation.count)
@@ -70,28 +70,24 @@
         = link_to t("view_all"), organisations_path, :class => 'btn btn-default btn-sm'
         %ul.avatar-list.avatar-list-lg.clearfix
           = render @orgs
-.container.block
-  .row
-    .col-md-12
-      - if @pull_requests.any?
-        %h3.block-title
-          =t("pull_requests.latest.count", count: PullRequest.year(current_year).count)
-          = link_to t("view_all"), pull_requests_path, :class => 'btn btn-default pull-right'
-
-        #pull_requests
-          = render @pull_requests
-
 .container
   .row
-    .col-md-12.section-title
-      %h3
-        = Project.count
-        = t("suggested_projects")
-      %p
-        =t("dashboard.help_out")
-  .row.projects
-    = render @projects
-  .row
-    .col-md-12.section-title
-      = link_to t("suggest_project"), new_project_path, :class => 'btn btn-default'
-      = link_to t("view_all"), projects_path, :class => 'btn btn-default'
+    .col-md-6.two-up-split.left
+      .block
+        - if @pull_requests.any?
+          %h3.block-title
+            =t("pull_requests.latest.count", count: PullRequest.year(current_year).count)
+            = link_to t("view_all"), pull_requests_path, :class => 'btn btn-default pull-right'
+
+          #pull_requests
+            = render @pull_requests
+    .col-md-6.two-up-split.right
+      .block
+        %h3.block-title
+          = Project.count
+          = t("suggested_projects")
+        = link_to t("suggest_project"), new_project_path, :class => 'btn btn-default'
+        = link_to t("view_all"), projects_path, :class => 'btn btn-default'
+        %p
+          =t("dashboard.help_out")
+        = render @projects

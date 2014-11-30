@@ -398,16 +398,8 @@ footer {
   }
 }
 
-.projects {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
 .project {
   padding: 15px;
-  background-color: #fff;
-  border: 1px solid $header-background;
-
   @media (max-width: 767px) {
     width: 100%;
     min-height: 0;
@@ -517,4 +509,28 @@ hr {
 
 .block-title {
   margin-top: 0;
+}
+
+.avatar-block {
+  text-align: center;
+}
+
+@media (max-width: 990px) {
+  .left, .right {
+    padding: 0;
+  }
+}
+
+.two-up-split {
+  .block {
+    margin-top: 0;
+  }
+
+  &.left {
+    padding-left: 0;
+  }
+
+  &.right {
+    padding-right: 0;
+  }
 }
