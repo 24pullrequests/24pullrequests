@@ -1,6 +1,6 @@
 # http://stackoverflow.com/questions/14972253/simpleform-default-input-class
 # https://github.com/plataformatec/simple_form/issues/316
- 
+
 inputs = %w[
   CollectionSelectInput
   DateTimeInput
