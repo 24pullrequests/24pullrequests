@@ -113,12 +113,15 @@ en:
 
   developers_using_language: Developers using %{language}
   developers_involved: Developers already involved
+  developers_involved_desc: Join everyone here and make open source better.
+  organisations_involved_desc: Invite more people from your organisation to participate.
 
   dashboard:
     christmas_activity: This is where you can see all the activity we've tracked for you in the run up to Christmas.
     give_a_gift: Looks like you haven't gifted any code today. Would you like to gift your new pull requests? # This is followed by a select-menu where you can pick one of your non-gifted pull requests to gift
     synchronize: Synchronize Pull Requests
-    help_out: "Can't think of a project you'd like to help contribute to? We've put together a list of popular projects:"
+    help_out: "Can't think of a project you'd like to help contribute to? We've put together a list of popular projects here."
+    pull_requests: "Wonder what people up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!"
     no_pull_requests: You've not sent any pull requests, what are you waiting for?!
     not_december: 24 Pull Requests runs from 1st-24th December, come back then!
     gift_it: Gift it!

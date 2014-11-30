@@ -1,2 +1,7 @@
 %li.avatar-cell
-  = link_to image_tag(user.avatar_url, alt: user.nickname, class: "avatar-img"), user_path(user.nickname), rel: 'tooltip', class: "avatar-link", data: { original_title: "#{user.nickname} - #{pluralize(user.pull_requests_count, 'pull request')}." }
+  = link_to user_path(user.nickname), class: "avatar-link" do
+    = image_tag(user.avatar_url, alt: user.nickname, class: "avatar-img")
+    .username @#{user.nickname}
+    %span.pr-badge
+      %span.octicon.octicon-git-pull-request
+      = user.pull_requests_count
