@@ -400,9 +400,15 @@ footer {
 
 .project,
 .pull_request {
-  margin: 20px 0 0;
-  padding: 20px 0 0;
-  border-top: 1px dotted #d0d0d0;
+  margin: 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #d0d0d0;
+
+  &:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 
   .project-link {
     display: block;
@@ -534,6 +540,9 @@ hr {
 }
 
 .title-block {
+  background-color: #f5f5f5;
+  margin: -30px -30px 0;
+  padding: 30px 60px;
   text-align: center;
 
   .octicon {
@@ -543,7 +552,6 @@ hr {
   }
 
   p {
-    width: 80%;
     margin: 0 auto 15px;
   }
 }
