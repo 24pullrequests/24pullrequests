@@ -40,7 +40,7 @@ describe 'Admin Projects', :type => :request do
 
       is_expected.to have_content "Project updated successfully!"
 
-      is_expected.to have_content "PUGALICIOUS"
+      is_expected.to have_content "Pugalicious"
     end
 
     it "deactives a project" do

@@ -45,7 +45,7 @@ describe 'Projects', :type => :request do
 
       it 'should show projects with the users languages by default' do
         within '#projects' do
-          expect(page).to have_selector('h4', text: /Ruby project/i)
+          expect(page).to have_selector('.project-title', text: /Ruby project/i)
         end
       end
 
