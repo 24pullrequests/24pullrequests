@@ -57,7 +57,7 @@
         %h3.block-title
           = User.count
           = t("developers_involved")
-        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+        %p=t("developers_involved_desc")
         = link_to t("view_all"), users_path, :class => 'btn btn-default btn-sm'
 
         %ul.avatar-list.avatar-list-lg.clearfix
@@ -66,7 +66,7 @@
       .block
         %h3.block-title
           =t("organisations.title", count: Organisation.count)
-        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
+        %p=t("organisations_involved_desc")
         = link_to t("view_all"), organisations_path, :class => 'btn btn-default btn-sm'
         %ul.avatar-list.avatar-list-lg.clearfix
           = render @orgs
@@ -78,7 +78,7 @@
           %span.octicon.octicon-git-pull-request
           %h3.block-title
             =t("pull_requests.latest.count", count: PullRequest.year(current_year).count)
-          %p=t("dashboard.help_out")
+          %p=t("dashboard.pull_requests")
           = link_to t("view_all"), pull_requests_path, :class => 'btn btn-default btn-sm'
         - if @pull_requests.any?
           #pull_requests
