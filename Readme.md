@@ -28,7 +28,7 @@ This is the site to help promote the project, highlighting why, how and where to
 ## Development
 
 Source hosted at [GitHub](http://github.com/24pullrequests/24pullrequests).
-Report issues/feature requests on [GitHub Issues](http://github.com/24pullrequests/24pullrequests/issues). Follow us on Twitter [@24pullrequests](https://twitter.com/24pullrequests).
+Report issues/feature requests on [GitHub Issues](http://github.com/24pullrequests/24pullrequests/issues). Follow us on Twitter [@24pullrequests](https://twitter.com/24pullrequests). We also hangout on [Gitter](https://gitter.im/24pullrequests/24pullrequests).
 
 ### Getting Started
 
