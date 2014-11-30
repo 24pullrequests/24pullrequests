@@ -50,44 +50,51 @@
         =t("homepage.q_n_a")
       %p=t("homepage.join_the_chat", link_to_chat: link_to('24pullrequests/24pullrequests', 'https://gitter.im/24pullrequests/24pullrequests')).html_safe
 
-.block.container
-  .fullwidth-panel.row.clearfix
-    .col-md-12
-      %h3
-        = User.count
-        = t("developers_involved")
-        = link_to t("view_all"), users_path, :class => 'btn btn-default'
+.container
+  .row.avatar-block
+    .col-md-6.two-up-split.left
+      .block
+        %h3.block-title
+          = User.count
+          = t("developers_involved")
+        %p=t("developers_involved_desc")
+        = link_to t("view_all"), users_path, :class => 'btn btn-default btn-sm'
 
-      %ul.avatar-list.avatar-list-lg.clearfix
-        = render @users
-  - if @pull_requests.any?
-    .row.clearfix
-      .col-md-12
-        %h3
-          =t("pull_requests.latest.count", count: PullRequest.year(current_year).count)
-          = link_to t("view_all"), pull_requests_path, :class => 'btn btn-default pull-right'
-
-        #pull_requests
-          = render @pull_requests
-
-  .row.clearfix
-    .col-md-12
-      %h3
-        = Project.count
-        =t("suggested_projects")
-        = link_to t("suggest_project"), new_project_path, :class => 'btn btn-default pull-right'
-        = link_to t("view_all"), projects_path, :class => 'btn btn-default pull-right'
-      %p
-        =t("dashboard.help_out")
-
-    #projects
-      = render @projects
-  .fullwidth-panel.row.clearfix
-    .col-md-12
-      %h3
-        =t("organisations.title", count: Organisation.count)
-        = link_to t("view_all"), organisations_path, :class => 'btn btn-default'
-
-      %ul.avatar-list.avatar-list-lg.clearfix
-        = render @orgs
-  %hr
+        %ul.avatar-list.avatar-list-lg.clearfix
+          = render @users
+    .col-md-6.two-up-split.right
+      .block
+        %h3.block-title
+          =t("organisations.title", count: Organisation.count)
+        %p=t("organisations_involved_desc")
+        = link_to t("view_all"), organisations_path, :class => 'btn btn-default btn-sm'
+        %ul.avatar-list.avatar-list-lg.clearfix
+          = render @orgs
+.container
+  .row
+    .col-md-6.two-up-split.left
+      .block
+        .title-block
+          %span.octicon.octicon-git-pull-request
+          %h3.block-title
+            =t("pull_requests.latest.count", count: PullRequest.year(current_year).count)
+          %p=t("dashboard.pull_requests")
+          = link_to t("view_all"), pull_requests_path, :class => 'btn btn-default btn-sm'
+        - if @pull_requests.any?
+          #pull_requests
+            = render @pull_requests
+        - else
+          %br
+          .well
+            No pull requests at the moment!
+    .col-md-6.two-up-split.right
+      .block
+        .title-block
+          %span.octicon.octicon-repo
+          %h3.block-title
+            = Project.count
+            = t("suggested_projects")
+          %p=t("dashboard.help_out")
+          = link_to t("suggest_project"), new_project_path, :class => 'btn btn-default btn-sm'
+          = link_to t("view_all"), projects_path, :class => 'btn btn-default btn-sm'
+        = render @projects
