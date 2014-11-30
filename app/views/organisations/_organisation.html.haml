@@ -1,2 +1,6 @@
 %li.avatar-cell
-  = link_to image_tag(organisation.avatar_url, alt: organisation.login, class: "avatar-img"), organisation_path(organisation.login), rel: 'tooltip', class: "avatar-link", data: { placement: "bottom", original_title: organisation_tooltip(organisation) }
+  = link_to organisation_path(organisation.login), class: "avatar-link" do
+    = image_tag(organisation.avatar_url, alt: organisation.login, class: "avatar-img")
+    %span.pr-badge
+      %span.octicon.octicon-git-pull-request
+      = organisation.pull_request_count

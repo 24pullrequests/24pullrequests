@@ -1,11 +1,9 @@
-.project.col-md-6{:class => parameterize_language(project.main_language), :data => {:id => project.id}}
-  .title.clearfix
-    %h4
-      = project.name
+.col-md-6.project{:class => parameterize_language(project.main_language), :data => {:id => project.id}}
 
-    = link_to project.github_repository, project.github_url, :target => '_blank'
-  %p
-    = truncate project.description, :length => 200
+  = link_to project.github_url, :target => "_blank", :title => project.github_repository, :class => "project-link" do
+    %span.project-title= project.name
+    %p= project.description
+
   .language.label.label-info
     = link_to project.main_language, language_path(project.main_language.downcase)
   - project.labels.each do |label|
