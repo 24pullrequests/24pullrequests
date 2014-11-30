@@ -1,0 +1,12 @@
+---
+- name: Add ppa Repository
+  apt_repository: repo=ppa:brightbox/ruby-ng-experimental
+
+- name: Update apt
+  apt: update_cache=yes
+
+- name: Install Ruby 2.1
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - ruby2.1
+    - ruby2.1-dev
