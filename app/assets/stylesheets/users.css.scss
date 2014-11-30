@@ -37,24 +37,78 @@
   }
 }
 
+@media (max-width: 990px) {
+  .left, .right {
+    padding: 0;
+  }
+}
+
+.avatar-constellation {
+  text-align: center;
+
+  .block {
+    margin-top: 0;
+  }
+
+
+  &.left {
+    padding-left: 0;
+  }
+
+  &.right {
+    padding-right: 0;
+  }
+
+  p {
+    padding: 0 20px;
+  }
+
+  .btn-viewall {
+    display: block;
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
 .avatar-list-lg {
-  margin: 0 0 20px;
+  background: #f0f0f0;
+  margin: 20px 0 0;
+  font-size: 0;
 
   .avatar-cell {
-    border: 2px solid #fff;
-    box-shadow: rgba(0, 0, 0, 0.398438) 0px 1px 1px;
-    margin: 0 15px 30px;
-
-    &:hover {
-      border-color: $link-color;
-    }
+    width: 12.5%;
+    margin: 0;
   }
 
   .avatar-img {
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    height: auto;
   }
 }
+
+.avatar-cell {
+  position: relative;
+
+  $badge-width: 22px;
+  .pr-badge {
+    position: absolute;
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+    bottom: 0;
+    right: 0;
+    padding: 4px;
+    background: #222;
+    line-height: 1;
+
+    .octicon { font-size: 9px; }
+  }
+}
+
 
 .avatar-cell {
   display: inline-block;
@@ -63,7 +117,7 @@
   overflow: none;
   margin-right: 10px;
   margin-bottom: 10px;
-  
+
   .avatar-link {
     display: block;
   }

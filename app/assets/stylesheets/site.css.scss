@@ -26,7 +26,6 @@ h1, h2, h3, h4, .page-title {
 }
 
 .block {
-  margin-top: 30px;
   margin-bottom: 60px;
   background-color: #fff;
   padding: 30px;
@@ -85,7 +84,7 @@ h1, h2, h3, h4, .page-title {
 }
 
 .coderwall-badge-link {
-  display: inline;
+  display: inline-block;
 
   img {
     width: 60px;
@@ -256,7 +255,7 @@ nav, .faulx-nav, .locale {
 }
 
 nav {
-  margin: 0 -15px;
+  margin: 0 -15px 30px;
 
   li {
     margin-right: $grid-gutter-width / 2;
@@ -399,46 +398,44 @@ footer {
   }
 }
 
-#projects {
-  .project {
-    min-height: 160px;
-    @media (max-width: 767px) {
-      width: 100%;
-      min-height: 0;
-      margin-bottom: 20px;
-    }
-    p {
-      word-wrap: break-word;
-    }
-    .title {
-      padding: 5px 0;
-      margin-bottom: 5px;
-      border-bottom: 1px dashed #e3e3e3;
-      h4 {
-        display: inline;
-        text-transform: uppercase;
-        border-right: 1px solid #e3e3e3;
-        padding-right: 10px;
-        margin-right: 10px;
-      }
-      a {
-        font-size: 12px;
-      }
-    }
-  }
+.projects {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-.fullwidth-panel {
-  margin-left: - $grid-gutter-width;
-  margin-right: - $grid-gutter-width;
-  background: #eee;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
+.project {
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid $header-background;
 
-  &:first-child {
-    margin-top: -30px;
-    padding-bottom: 30px;
+  @media (max-width: 767px) {
+    width: 100%;
+    min-height: 0;
+    margin-bottom: 20px;
+  }
+
+  .project-link {
+    display: block;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    width: 100%;
+    color: #333;
+  }
+
+  .project-title {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
   }
 }
 
@@ -511,4 +508,13 @@ hr {
 
 .page-title {
   font-size: 30px;
+}
+
+.section-title {
+  text-align: center;
+  color: #fff;
+}
+
+.block-title {
+  margin-top: 0;
 }
