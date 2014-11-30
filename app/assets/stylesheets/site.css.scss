@@ -521,6 +521,10 @@ hr {
 
 .avatar-block {
   text-align: center;
+
+  .username {
+    display: none;
+  }
 }
 
 @media (max-width: 990px) {
