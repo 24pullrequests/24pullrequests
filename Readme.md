@@ -7,7 +7,7 @@
 [![Gitter chat](http://img.shields.io/badge/gitter-24pullrequests-brightgreen.svg)](https://gitter.im/24pullrequests/24pullrequests)
 [![PullReview stats](https://www.pullreview.com/github/24pullrequests/24pullrequests/badges/master.svg?)](https://www.pullreview.com/github/24pullrequests/24pullrequests/reviews/master)
 
-“Giving back little gifts of code”
+> **Giving back little gifts of code**
 
 24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas.
 
@@ -44,20 +44,20 @@ rbenv install 2.1.5
 rbenv global 2.1.5
 ```
 
-Next, you'll need to make sure that you have postgres installed. This can be
-done easily on OSX using [Homebrew](http://mxcl.github.com/homebrew/) or by using [http://postgresapp.com](http://postgresapp.com). Please see these [further instructions for installing postgres via homebrew](http://www.mikeball.us/blog/setting-up-postgres-with-homebrew/).
+Next, you'll need to make sure that you have PostgreSQL installed. This can be
+done easily on OSX using [Homebrew](http://mxcl.github.com/homebrew/) or by using [http://postgresapp.com](http://postgresapp.com). Please see these [further instructions for installing Postgres via homebrew](http://www.mikeball.us/blog/setting-up-postgres-with-homebrew/).
 
 ```bash
 brew install postgres phantomjs
 ```
 
-On Debian-based Linux distributions you can use apt-get to install postgres:
+On Debian-based Linux distributions you can use apt-get to install Postgres:
 
 ```bash
 sudo apt-get install postgresql postgresql-contrib
 ```
 
-On Windows, you can use the [Chocolatey package manager](http://www.chocolatey.org) to install postgres:
+On Windows, you can use the [Chocolatey package manager](http://www.chocolatey.org) to install Postgres:
 
 ```bash
 choco install postgresql
@@ -116,7 +116,9 @@ is finished, log in to run the rails dev server:
     $ cd /vagrant
     $ rails s
 
-Then you should be able to access the application through your regular browser at http://192.168.12.34:3000 .
+Then you should be able to access the application through your regular browser at http://192.168.12.34:3000.
+
+Simply edit the files in the project directory using your favorite editor on your host machine and the changes will be automatically reflected in the `/vagrant` directory inside the guest virtual machine and so you can see the changes on your browser. 
 
 ### Tests
 
