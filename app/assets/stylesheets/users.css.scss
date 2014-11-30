@@ -56,7 +56,6 @@
 .avatar-cell {
   position: relative;
 
-  $badge-width: 22px;
   .pr-badge {
     position: absolute;
     font-size: 11px;
@@ -69,6 +68,16 @@
     line-height: 1;
 
     .octicon { font-size: 9px; }
+  }
+
+  .username {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    color: #fff;
+    line-height: 1;
+    font-size: 12px;
+    text-shadow: 0 0 1px #222, 0 0 1px #222;
   }
 }
 
