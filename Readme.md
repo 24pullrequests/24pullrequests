@@ -98,7 +98,7 @@ The included Vagrant setup uses Ansible as provisioner. First, you'll need to in
  * [Vagrant](https://www.vagrantup.com/downloads.html)
  * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
  * [Ansible](http://docs.ansible.com/intro_installation.html)
- 
+
 _Windows Users: Ansible does not support Windows as controller machine, but there's a little hack in the Vagrantfile that will allow you to run the provision using a local
 SSH connection Guest-Guest. Just install Vagrant and VirtualBox, and you should be able to get it running._
 
@@ -111,11 +111,11 @@ is finished, log in to run the rails dev server:
 
     $ vagrant ssh
     $ cd /vagrant
-    $ rails s
+    $ bundle exec rails s
 
 Then you should be able to access the application through your regular browser at http://192.168.12.34:3000.
 
-Simply edit the files in the project directory using your favorite editor on your host machine and the changes will be automatically reflected in the `/vagrant` directory inside the guest virtual machine and so you can see the changes on your browser. 
+Simply edit the files in the project directory using your favorite editor on your host machine and the changes will be automatically reflected in the `/vagrant` directory inside the guest virtual machine and so you can see the changes on your browser.
 
 ### Tests
 
