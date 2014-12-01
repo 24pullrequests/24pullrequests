@@ -13,7 +13,7 @@ describe UsersController, :type => :controller do
         get :index
       end
 
-      it { expect(assigns(:users).with(User.order('pull_requests_count desc').where('EXTRACT(year from "created_at") = ?', Date.today.year).page(0) )).to be_truthy }
+      it { expect(assigns(:users).with(User.order('pull_requests_count desc').where('EXTRACT(year from "created_at") = ?', CURRENT_YEAR).page(0) )).to be_truthy }
     end
 
     context 'as json' do
