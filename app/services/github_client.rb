@@ -33,6 +33,10 @@ class GithubClient
     client.rate_limit.remaining > rate_limit
   end
 
+  def commits(repository, options={})
+    client.commits(repository, options)
+  end
+
   private
 
   def client
