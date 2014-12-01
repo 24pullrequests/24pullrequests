@@ -9,9 +9,10 @@ class PopularityScorer
   # Maximum number of points allowed per scoring facet.
   POINTS_PER_FACET = 10
 
-  def initialize(user, project)
-    @user    = user
-    @project = project
+  def initialize(nickname, token, project)
+    @nickname = nickname
+    @token    = token
+    @project  = project
   end
 
   def score
@@ -24,12 +25,12 @@ class PopularityScorer
 private
 
   def score_recent_commits
-    commit_count = @project.commits(@user.nickname, @user.token, MONTHS_OF_ACTIVITY).size
+    commit_count = @project.commits(@nickname, @token, MONTHS_OF_ACTIVITY).size
     points_earned_for_facet(commit_count, MAX_COMMITS)
   end
 
   def score_recent_issues
-    issue_count = @project.issues(@user.nickname, @user.token, MONTHS_OF_ACTIVITY).size
+    issue_count = @project.issues(@nickname, @token, MONTHS_OF_ACTIVITY).size
     points_earned_for_facet(issue_count, MAX_ISSUES)
   end
 

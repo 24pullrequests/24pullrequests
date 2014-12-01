@@ -76,4 +76,8 @@ class Project < ActiveRecord::Base
   def repo(nickname, token)
     GithubClient.new(nickname, token).repository(github_repository)
   end
+
+  def score(nickname, token)
+    PopularityScorer.new(nickname, token, self).score
+  end
 end

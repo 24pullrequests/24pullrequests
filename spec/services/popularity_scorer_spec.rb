@@ -1,9 +1,10 @@
 require "rails_helper"
 
 describe PopularityScorer do
-  let(:user) { FactoryGirl.create(:user) }
+  let(:nickname) { "nickname" }
+  let(:token) { "token" }
   let(:project) { FactoryGirl.create(:project) }
-  subject(:popularity_scorer) { PopularityScorer.new(user, project) }
+  subject(:popularity_scorer) { PopularityScorer.new(nickname, token, project) }
 
   describe "#score" do
     it "returns an integer score of project popularity" do
