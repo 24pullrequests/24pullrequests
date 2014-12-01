@@ -191,7 +191,7 @@ nb:
 
   gifts:
     title: Gitt kode
-    description: Her kan du administrere dine pull requests og velge ditt eget sett av "24 pull requests".
+    description: Her kan du administrere dine pull requests og velge ditt eget sett av "24 Pull Requests".
     view_your_gifts: Alle dine gaver vil vises på din %{calendar_link}.
     calendar_link: offentlige kalender
     none: Ingenting gitt enda.
