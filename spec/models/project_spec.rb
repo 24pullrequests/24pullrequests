@@ -74,6 +74,28 @@ describe Project, :type => :model do
 
       project.issues("username", "token")
     end
+  end
 
+  context "#commits" do
+    let(:project) { FactoryGirl.create(:project) }
+
+    it "retrieves GitHub commits for the project" do
+      client = double(:github_client)
+      expect(GithubClient).to receive(:new).with("username", "token").and_return(client)
+      expect(client).to receive(:commits)
+
+      project.commits("username", "token")
+    end
+  end
+
+  context "#score" do
+    let(:project) { FactoryGirl.create(:project) }
+
+    it "scores the project using the scorer" do
+      scorer = double(:popularity_scorer, :score => 10)
+      expect(PopularityScorer).to receive(:new).with("username", "token", project).and_return(scorer)
+
+      expect(project.score("username", "token")).to eq(10)
+    end
   end
 end
