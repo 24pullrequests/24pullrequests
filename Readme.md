@@ -18,12 +18,9 @@ This is the site to help promote the project, highlighting why, how and where to
 * [Explore projects to help](http://24pullrequests.com/projects)
 * [Submit your project to get help](http://24pullrequests.com/projects/new)
 
-## Authors
+## Contributors
 
-* Andrew Nesbitt
-* Chris Lowder
-* Baris Balic
-* Victoria Holland
+Over 120 different people have contributed to the project, you can see them all here: https://github.com/24pullrequests/24pullrequests/graphs/contributors
 
 ## Development
 

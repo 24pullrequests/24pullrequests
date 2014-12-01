@@ -1,5 +1,8 @@
-%h2= t("events.title")
-%p= t("events.details")
+.title-block
+  %h2.block-title= t("events.title")
+  %p= t("events.details")
+
+  = link_to t("events.index.host_an_event"), new_event_path, class: 'btn btn-default'
 
 - if @events.empty?
   %h4
@@ -8,20 +11,19 @@
       = link_to t("events.index.host_an_event"), new_event_path
 - else
   .row
-    .col-sm-12.col-md-6
+    .col-md-6
       .map
       .js-pins
         - @events.each do |event|
           = link_to "", event, class: "pin", data: { latitude: event.latitude, longitude: event.longitude }
-      %br
     .col-sm-12.col-md-6
       - @events.each do |event|
-        .event
+        .event-item
           %h2
             = link_to event.name, event
-          %h3
-            %small
-              = event.location
-              \/ #{event.formatted_date}
-        .event
-          = link_to t("events.index.host_an_event"), new_event_path, class: 'btn btn-default'
+          %small
+            %span.octicon.octicon-location
+            = event.location
+            %br
+            %span.octicon.octicon-clock
+            = event.formatted_date

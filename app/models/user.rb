@@ -145,6 +145,10 @@ class User < ActiveRecord::Base
     pull_requests.reject{|pr| gifted_pull_requests.include?(pr) }
   end
 
+  def needs_setup?
+    email_frequency.nil?
+  end
+
   def is_admin?
     @admin ||= User.admins.include?(self)
   end
