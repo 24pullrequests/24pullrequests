@@ -105,4 +105,19 @@ describe ApplicationHelper, :type => :helper do
       expect(helper.projects_in(last_year)).to eq(4)
     end
   end
+
+  describe "favicon" do
+    let(:december) { DateTime.parse("1st December 2014") }
+    let(:november) { DateTime.parse("30th November 2014") }
+
+    it "returns a custom favicon if the date is in December" do
+      allow(Time).to receive(:now).and_return(december)
+      expect(helper.favicon).to eq({ filename: "/favicon/01.png", type: "image/png" })
+    end
+
+    it "returns a default favicon if the date is not in December" do
+      allow(Time).to receive(:now).and_return(november)
+      expect(helper.favicon).to eq({ filename: "favicon.ico", type: "image/vnd.microsoft.icon" })
+    end
+  end
 end
