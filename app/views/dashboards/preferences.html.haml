@@ -1,14 +1,14 @@
 .title-block
-  - if current_user.email_frequency.nil?
+  - if current_user.needs_setup?
     %h1.block-title= t("welcome", user: current_user.nickname)
     =t("preferences.setup_help")
   - else
     %h1.block-title= t("preferences.title", user: current_user.nickname)
 
 .row
-  = simple_form_for current_user, :url => update_preferences_path, wrapper: :bootstrap3_horizontal, defaults: {right_column_html: {class: "col-md-8"}, label_html: {class: "col-md-4"} }, :html => {:class => 'form-horizontal', :role => "form"}  do |form|
+  = simple_form_for current_user, :url => update_preferences_path, wrapper: :bootstrap3_horizontal, defaults: {right_column_html: {class: "col-md-8"}, label_html: {class: "col-md-4"} }, :html => {:class => 'block form-horizontal', :role => "form"}  do |form|
 
-    .col-md-6.col-md-offset-3.block
+    .col-md-6.col-md-offset-3
       %p=t("preferences.frequency_message")
 
       - if current_user.email_frequency.present?
@@ -32,7 +32,10 @@
               = language
     .form-group
       .col-sm-12.text-center
-        = form.button :submit, t("preferences.save_and_continue")
+        - if current_user.needs_setup?
+          = form.button :submit, t("preferences.save_and_continue")
+        - else
+          = form.button :submit, t("preferences.save")
 
 
   .col-md-6.col-md-offset-3
