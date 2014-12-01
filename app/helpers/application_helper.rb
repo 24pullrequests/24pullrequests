@@ -77,7 +77,7 @@ module ApplicationHelper
   def favicon
     if (Time.parse("1st December")..Time.parse("25th December")).cover?(Time.zone.now)
       return {
-        filename: "/assets/favicon/#{Time.zone.now.strftime("%d")}.png",
+        filename: image_path("favicon/#{Time.zone.now.strftime("%d")}.png"),
         type: "image/png"
       }
     else
