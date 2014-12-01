@@ -68,6 +68,12 @@ module Tfpullrequests
     if Rails.env.production?
       # Memoize at boot up to prevent GitHub's rate limiting. This should work
       # fine for now.
+      Octokit.configure do |c|
+        c.access_token = ENV['GITHUB_ACCESS_TOKEN']
+      end
+
+      Octokit.auto_paginate = true
+
       config.contributors = begin
         Timeout::timeout(5) {
           Octokit.contributors('24pullrequests/24pullrequests')
