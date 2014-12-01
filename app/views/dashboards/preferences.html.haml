@@ -1,13 +1,14 @@
-- if current_user.email_frequency.nil?
-  .title-block
+.title-block
+  - if current_user.email_frequency.nil?
     %h1.block-title= t("welcome", user: current_user.nickname)
     =t("preferences.setup_help")
+  - else
+    %h1.block-title= t("preferences.title", user: current_user.nickname)
 
 .row
   = simple_form_for current_user, :url => update_preferences_path, wrapper: :bootstrap3_horizontal, defaults: {right_column_html: {class: "col-md-8"}, label_html: {class: "col-md-4"} }, :html => {:class => 'form-horizontal', :role => "form"}  do |form|
 
-    .col-md-6.col-md-offset-3
-      %h2.text-center=t("preferences.title")
+    .col-md-6.col-md-offset-3.block
       %p=t("preferences.frequency_message")
 
       - if current_user.email_frequency.present?
@@ -20,12 +21,6 @@
         = form.input :email, hint: t("preferences.hint.confirm_email")
       - else
         = form.input :email, :label => t("preferences.form.email")
-      - if current_user.twitter_linked?
-        .form-group
-          %label.control-label=t("preferences.twitter")
-          .controls
-            = link_to "@#{current_user.twitter_nickname}", "https://twitter.com/#{current_user.twitter_nickname}", target: '_blank'
-            = link_to t("preferences.remove"), twitter_remove_path, method: :delete, class: 'btn btn-danger'
     .col-md-12
       %h2.text-center=t("preferences.languages")
       .row
