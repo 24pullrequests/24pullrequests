@@ -26,16 +26,16 @@ Once you have the dependencies installed, go to the project directory via consol
 
     $ vagrant up
 
-The first time you run _vagrant_, the process will take several minutes, as it will download the base box and run all the tasks necessary to setup the VM server. 
+The first time you run _vagrant_, the process will take several minutes, as it will download the base box and run all the tasks necessary to setup the VM server.
 Once the process is completed, you need to log in, by running:
 
     $ vagrant ssh
-    
+
 There's no need to provide login or password. Now go to the project directory inside the VM in order to run the rails server:
 
     $ cd /vagrant
-    $ rails s
-    
+    $ bundle exec rails s
+
 This will initialize the development Rails server.
 Now you can go to your regular browser, in the Host machine (your main OS) and access the application through the address `http://192.168.12.34:3000`.
 
@@ -44,11 +44,11 @@ Any changes that you make to the app files will be reflected inside the VM serve
 When you want to pause or finish working, you can run:
 
     $ vagrant suspend
-    
+
 And the VM will be suspended. Whenever you want to get back to it, the state will be saved, you just need to run:
 
     $ vagrant resume
-    
+
 To get the VM running again, in the state you left it. Remember that if you turn off the VM or if you restart your main OS, you will need to run `vagrant up` again, but this time
 it will be much faster because the VM is already provisioned.
 
