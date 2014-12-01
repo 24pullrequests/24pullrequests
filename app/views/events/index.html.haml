@@ -10,17 +10,20 @@
       = t("events.index.no_upcoming_events")
       = link_to t("events.index.host_an_event"), new_event_path
 - else
-  .map
-  .js-pins
-    - @events.each do |event|
-      = link_to "", event, class: "pin", data: { latitude: event.latitude, longitude: event.longitude }
   .row
+    .col-md-6
+      .map
+      .js-pins
+        - @events.each do |event|
+          = link_to "", event, class: "pin", data: { latitude: event.latitude, longitude: event.longitude }
     .col-sm-12.col-md-6
       - @events.each do |event|
-        .event
+        .event-item
           %h2
             = link_to event.name, event
-          %h3
-            %small
-              = event.location
-              \/ #{event.formatted_date}
+          %small
+            %span.octicon.octicon-location
+            = event.location
+            %br
+            %span.octicon.octicon-clock
+            = event.formatted_date
