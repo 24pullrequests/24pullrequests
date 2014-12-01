@@ -15,22 +15,7 @@
   = link_to 'twitter.com/24pullrequests', 'https://twitter.com/24pullrequests'
 
 %section
-  %h3=t("about.sponsors.title")
-  =t("about.sponsors.details")
-
-  =t("about.sponsors.thanks")
-
-  %section.clearfix
-    =link_to 'http://dnsimple.com', :class => 'col-md-3' do
-      = image_tag 'sponsors/dnsimple.png', :class => 'thumbnail'
-    = link_to 'http://postgres.heroku.com/', :class => 'col-md-3' do
-      = image_tag 'sponsors/heroku-pg.png', :class => 'thumbnail'
-    = link_to 'http://bugsnag.com/', :class => 'col-md-3' do
-      = image_tag 'sponsors/bugsnag.jpg', :class => 'thumbnail'
-
-
-  %p
-    =t("about.sponsors.get_in_touch")
-    = mail_to 'info@24pullrequests.com'
+  %h3= t("about.sponsors.title")
+  %p= raw("#{t("about.sponsors.details")} #{link_to(t("about.sponsors.thanks"), sponsors_path)}")
 
 = render 'contributors', users: @contributors
