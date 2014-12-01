@@ -1,38 +1,50 @@
-%h2
-  =t("welcome_back", user: user.nickname)
+.title-block
+  %h2.block-title
+    =t("welcome_back", user: user.nickname)
+  =t("dashboard.christmas_activity")
 
-%p=t("dashboard.christmas_activity")
+.row
+  .col-md-8
+    %hr
 
-%hr
+    - if gift_form
+      =t("dashboard.give_a_gift")
+      = render :partial => 'gifts/mini_form', :locals => { :gift_form => gift_form }
+      %hr
 
-- if gift_form
-  =t("dashboard.give_a_gift")
-  = render :partial => 'gifts/mini_form', :locals => { :gift_form => gift_form }
-  %hr
+    = link_to "#{image_tag('spinner.gif', :id => 'spinner')} #{t('dashboard.synchronize')}".html_safe, pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn btn-default pull-right', :rel => 'tooltip', :title => t('pull_request.download.tooltip')
 
-= link_to t('twitter.link_account.text'), '/auth/twitter', :class => 'btn btn-info pull-right',
-  rel: 'tooltip', title: t('twitter.link_account.tooltip') unless current_user.twitter_linked?
-= link_to "#{image_tag('spinner.gif', :id => 'spinner')} #{t('dashboard.synchronize')}".html_safe, pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn pull-right', :rel => 'tooltip', :title => t('pull_request.download.tooltip')
+    - unless pull_requests.empty?
+      %h3
+        =t("your_pull_requests")
 
-- unless pull_requests.empty?
-  %h3
-    =t("your_pull_requests")
+    %div#pull-requests.clearfix
+      = render :partial => 'pull_requests_if_any', :locals => { :pull_requests => pull_requests }
 
-%div#pull-requests.clearfix
-  = render :partial => 'pull_requests_if_any', :locals => { :pull_requests => pull_requests }
+    %hr
 
-%hr
+    .row.clearfix
+      .col-md-12
+        %h3
+          = t("suggested_projects")
+          = link_to t("suggest_project"), new_project_path, :class => 'btn btn-default pull-right'
+          = link_to t("view_all"), projects_path, :class => 'btn btn-default pull-right'
+        %p
+          #{t("dashboard.help_out")}:
 
-.row.clearfix
-  .col-md-12
-    %h3
-      = t("suggested_projects")
-      = link_to t("suggest_project"), new_project_path, :class => 'btn btn-default pull-right'
-      = link_to t("view_all"), projects_path, :class => 'btn btn-default pull-right'
-    %p
-      #{t("dashboard.help_out")}:
-
-    .row#projects
-      = render projects
-
-    = link_to t("navigation.all_projects"), projects_path, :class => "btn btn-default btn-block"
+        #projects
+          = render projects
+  .col-md-4
+    .sidebar-block
+      %h4.block-title= t("homepage.events")
+      - @events.each do |event|
+        .event-item
+          %strong= link_to event.name, event
+          %br
+          %small
+            %span.octicon.octicon-location
+            = event.location
+            %br
+            %span.octicon.octicon-clock
+            = event.formatted_date
+      = link_to t("view_all"), events_path, :class => 'btn btn-sm btn-default btn-block'

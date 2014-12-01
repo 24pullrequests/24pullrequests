@@ -87,3 +87,17 @@
   .visual-basic & { background-color: #945db7 }
   .xquery & { background-color: #2700e2 }
 }
+
+.language-checkbox {
+  padding: 4px 8px;
+  border: 1px solid #f5f5f5;
+  cursor: pointer;
+
+  input[type=checkbox] {
+    margin-right: 4px;
+  }
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}

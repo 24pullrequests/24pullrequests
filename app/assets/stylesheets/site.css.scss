@@ -403,6 +403,7 @@ footer {
   margin: 20px 0;
   padding-bottom: 20px;
   border-bottom: 1px dotted #d0d0d0;
+  overflow: hidden;
 
   &:last-child {
     border-bottom: 0;
@@ -516,11 +517,6 @@ hr {
   font-size: 30px;
 }
 
-.section-title {
-  text-align: center;
-  color: #fff;
-}
-
 .block-title {
   margin-top: 0;
 }
@@ -553,6 +549,7 @@ hr {
 
   p {
     margin: 0 auto 15px;
+    max-width: 640px;
   }
 }
 
