@@ -33,7 +33,7 @@ pt_br:
     description: "Devolvendo pequenos códigos de presente para o Natal"
     about: "Sobre o que é isso tudo?"
     about_text: "<p>24 Pull Requests é uma iniciativa anual para encorajar desenvolvedores de todo o planeta a enviar pull requests todos os dias do mês de dezembro até o natal.</p> <p> Este site ajuda a promover esse projeto, destacando porque, como e onde enviar seu pull requests.</p><p>Entre com sua conta do Github e nós vamos monitorar e destacar todos os seus pull requests e seus projetos sugeridos.</p>"
-    greeting: "Ta ai a razão"
+    greeting: "Esta é a época"
     give_to_open_source: "Você foi beneficiado pelo uso de projetos open source durante todo o ano, agora é a hora de agradecer aos mantenedores desses projetos, e um passarinho me contou que eles adorariam receber pull requests!"
     q_n_a: "Perguntas & respostas"
     badges:
