@@ -12,6 +12,9 @@ class StaticController < ApplicationController
     @contributors = User.contributors
   end
 
+  def sponsors
+  end
+
   def humans
     @contributors = load_contributors
     render "static/humans.txt.erb", content_type: "text/plain"
