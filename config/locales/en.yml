@@ -58,7 +58,7 @@ en:
       getting_started: It's really easy to get started. Even small contributions can be really valuable to a project.
     event:
       title: Events
-      description: This year we are encouraging organisers around the world to hold 24pullrequests hack events. Get involved this Christmas.
+      description: This year we are encouraging organisers around the world to hold 24 Pull Requests hack events. Get involved this Christmas.
       view_events: View events
       host_an_event: Host an event
 
@@ -170,7 +170,7 @@ en:
 
   preferences:
       title: Set your personal preferences
-      setup_help: "To get started with 24 pull requests, please first fill up the following form."
+      setup_help: "To get started with 24 Pull Requests, please first fill up the following form."
       frequency_message:  At the frequency you choose, we'll send you helpful emails from now until the project is over, highlighting some suggested projects you might consider contributing to. As an added bonus, we'll take the liberty of personalizing our suggestions to your language proficiency based on the repos in your GitHub profile. Alternatively, you can choose your languages below.
       delete: "Want to delete your account?"
       information: You can always change your email preferences later.
@@ -274,7 +274,7 @@ en:
 
   events:
     title: Events
-    details: You don't have to hack alone this Christmas! Host a 24pullrequests hack event at your company, technology meetup, or in your local community. Or you can join a hack event and code together.
+    details: You don't have to hack alone this Christmas! Host a 24 Pull Requests hack event at your company, technology meetup, or in your local community. Or you can join a hack event and code together.
     notice:
       not_logged_in: "You have to be logged in to create or edit events"
       not_authorized: "You can only edit events that you have created"
@@ -289,7 +289,7 @@ en:
     edit:
       title
     new:
-      title: Host a 24pullrequests event
+      title: Host a 24 Pull Requests event
       form:
         name: Event name
         name_placeholder: Bristol Ruby Group Pull-request-a-thon

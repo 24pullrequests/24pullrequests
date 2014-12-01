@@ -29,10 +29,10 @@ zh_Hans:
     logout: 注销
 
   homepage:
-    title: "24 pull requests"
+    title: "24 Pull Requests"
     description: 用代码作圣诞礼物
     about: "它是什么一回事呢？"
-    about_text: "<p>24 pull requests 是每年这个时候的一个倡议， 鼓励开发人员在世界各地的十二月每天发出合并请求(pull request)</p> <p>这个网站是为了宣传这个项目，它的意义，以及如何发出合并请求(pull request)s。</p><p>用你的GitHub帐号登录，我们就可以记录你的合并请求(pull request)。还可以推荐你感兴趣的项目。</p>"
+    about_text: "<p>24 Pull Requests 是每年这个时候的一个倡议， 鼓励开发人员在世界各地的十二月每天发出合并请求(pull request)</p> <p>这个网站是为了宣传这个项目，它的意义，以及如何发出合并请求(pull request)s。</p><p>用你的GitHub帐号登录，我们就可以记录你的合并请求(pull request)。还可以推荐你感兴趣的项目。</p>"
     greeting: "节日季来啦！"
     give_to_open_source: 你在一整年当中一直受益于开源项目。现在是时候对那些项目的维护者说感谢，有一只小小鸟告诉我，他们喜欢接受你的合并请求(pull request)！
     q_n_a: 问与答
@@ -54,9 +54,9 @@ zh_Hans:
     join_the_chat: 参与Gitter上的聊天 %{link_to_chat} 。
 
   information:
-    title: "24 pull requests %{year} is upon us"
+    title: "24 Pull Requests %{year} is upon us"
     last_year_stats: "在 %{year}年， 的24天里， <b>%{developers}</b> 名开发者提交了 <b>%{pull_requests}</b> 次合并请求(pull request) 提供给 <b>%{projects}</b> 个不同的开源项目。"
-    get_ready: 准备好，24 pull requests %{year}！ 让我们再次做到这一切！
+    get_ready: 准备好，24 Pull Requests %{year}！ 让我们再次做到这一切！
     help_open_source: "还想要同时帮助其他开源项目吗？去看看这几个开源项目倡议吧："
     codetriage: "感恩回馈开源，一次一个议题(issue)，CodeTriage与你同行。你会每天从你喜欢的项目那分配到一个议题（issue），并引导你越学越多，参与撰写大家日常所依赖的代码里。"
     contribhub:
@@ -96,7 +96,7 @@ zh_Hans:
       success: "成功更新了Coderwall的用户名！"
       update_button: "更新"
       error_no_user: "没有找到与这个用户名关联的帐号。"
-      error_github_not_connected: "账户 %{username} 在 Coderwall 和 24 pull requests 绑定的GitHub帐号不同"
+      error_github_not_connected: "账户 %{username} 在 Coderwall 和 24 Pull Requests 绑定的GitHub帐号不同"
 
   developers_using_language: Developers using %{language}
   developers_involved: Developers already involved
@@ -190,7 +190,7 @@ zh_Hans:
 
   gifts:
     title: 赠出的代码
-    description: 在这里管理您的合并请求(pull request)并且选择&amp;描述你的"24 pull requests"。
+    description: 在这里管理您的合并请求(pull request)并且选择&amp;描述你的"24 Pull Requests"。
     view_your_gifts: 你所有赠出的代码都会显示在您的%{calendar_link}。
     calendar_link: 公共日历
     none: 没有赠出什么东西…
@@ -206,15 +206,15 @@ zh_Hans:
     title: 主要贡献者
 
   about:
-    title: 关于 24 pull requests
-    description: 24 pull requests 是一个在12月份促进开源合作的小小项目。
+    title: 关于 24 Pull Requests
+    description: 24 Pull Requests 是一个在12月份促进开源合作的小小项目。
     idea: 想法很简单， "在12月到圣诞节之前的每一天发出合并请求(pull request)"， 鼓励开发者在这段时间回馈开源社区。
     more_info: 这个小站也提供一些值得参与的项目，一些指南，并且展示每天哪些出色的合并请求(pull request)。
     on_github: "这个小站的开发也是开源的寄存在GitHub上："
     on_twitter: "我们也在推特上："
     sponsors:
       title: 支持和帮助
-      details: 24 pull requests 接受了他们的支持和帮助。
+      details: 24 Pull Requests 接受了他们的支持和帮助。
       thanks: "特别感谢。。。"
       get_in_touch: "咨询赞助事宜，请邮件联系："
 
@@ -231,7 +231,7 @@ zh_Hans:
 
   api:
     title: JSON API
-    description: 你可能不知到，24 pull requests有JSON API，描述如下。
+    description: 你可能不知到，24 Pull Requests有JSON API，描述如下。
     pagination:
       title: Pagination
       details: 返回多个条目的请求默认以99条分页，您可以在 ?page 参数修改。
