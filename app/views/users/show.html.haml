@@ -23,6 +23,10 @@
   .col-sm-9
     - if @user == current_user
       = link_to t("navigation.preferences"), preferences_path, class: "pull-right btn btn-default"
+      - if current_user.twitter_linked?
+        = link_to t("preferences.remove"), twitter_remove_path, method: :delete, class: 'btn btn-danger pull-right'
+      - else
+        = link_to t('twitter.link_account.text'), '/auth/twitter', :class => 'btn btn-info pull-right', rel: 'tooltip', title: t('twitter.link_account.tooltip')
 
     .page-title 24 Pull Requests
     - if @user.gifts.year(current_year).any? or @user.pull_requests.year(current_year).any?
