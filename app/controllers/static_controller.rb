@@ -13,7 +13,13 @@ class StaticController < ApplicationController
   end
 
   def humans
-    @contributors = load_contributors
+    @contributors = Rails.cache.read("contributors")
+
+    unless @contributors
+      @contributors = load_contributors
+      Rails.cache.write("contributors", @contributors, expires_in: 1.day)
+    end
+
     render "static/humans.txt.erb", content_type: "text/plain"
   end
 
@@ -21,7 +27,7 @@ class StaticController < ApplicationController
 
   def load_contributors
     Rails.application.config.contributors.map(&:login).map do |login|
-      Octokit.user(login)
-    end.compact
+      Rails.application.config.octokit_client.user(login)
+    end
   end
 end
