@@ -1,47 +1,49 @@
-%h2=t("preferences.title")
+- if current_user.email_frequency.nil?
+  .title-block
+    %h1.block-title= t("welcome", user: current_user.nickname)
+    =t("preferences.setup_help")
 
-%p=t("preferences.coderwall")
-= simple_form_for current_user, :url => update_coderwall_path, wrapper: :bootstrap3_horizontal, defaults: {right_column_html: {class: "col-lg-3 col-md-3"}, label_html: {class: "col-lg-3 col-md-3"} }, :html => {:class => 'form-horizontal', :role => "form"}, :method => 'post'  do |form|
-  = form.input :coderwall_username, :label => t("preferences.coderwall_username"), :input_html => {:class => "pull-left"}
-  .form-group
-    .col-md-offset-3.col-sm-10
-      = form.button :submit, t('user.coderwall.update_button')
+.row
+  = simple_form_for current_user, :url => update_preferences_path, wrapper: :bootstrap3_horizontal, defaults: {right_column_html: {class: "col-md-8"}, label_html: {class: "col-md-4"} }, :html => {:class => 'form-horizontal', :role => "form"}  do |form|
 
-%hr
+    .col-md-6.col-md-offset-3
+      %h2.text-center=t("preferences.title")
+      %p=t("preferences.frequency_message")
 
-%p=t("preferences.frequency_message")
+      - if current_user.email_frequency.present?
+        %small= link_to t("preferences.delete"), delete_dashboard_path, :class => 'pull-right'
+      %p
+        %em=t("preferences.information")
 
-- if current_user.email_frequency.present?
-  %small= link_to t("preferences.delete"), delete_dashboard_path, :class => 'pull-right'
-
-%p
-  %em=t("preferences.information")
-
-= simple_form_for current_user, :url => update_preferences_path, wrapper: :bootstrap3_horizontal, defaults: {right_column_html: {class: "col-lg-3 col-md-3"}, label_html: {class: "col-lg-3 col-md-3"} }, :html => {:class => 'form-horizontal', :role => "form"}  do |form|
-  - if current_user.email.present? && !current_user.confirmed?
-    = form.input :email, hint: t("preferences.hint.confirm_email")
-  - else
-    = form.input :email, :label => t("preferences.form.email")
-  = form.input :email_frequency, :label => t("preferences.form.email_frequency"), :collection => [[t("preferences.form.never"), 'none'], [t("preferences.form.daily"), 'daily'], [t("preferences.form.weekly"), 'weekly']], :selected => (form.object.email_frequency || 'daily')
-  - if current_user.twitter_linked?
-    .form-group
-      %label.control-label=t("preferences.twitter")
-      .controls
-        = link_to "@#{current_user.twitter_nickname}", "https://twitter.com/#{current_user.twitter_nickname}", target: '_blank'
-        = link_to t("preferences.remove"), twitter_remove_path, method: :delete, class: 'btn btn-danger'
-
-
-  %hr
-
-  %h3=t("preferences.languages")
-  #skills.clearfix
-    = form.simple_fields_for :skills, Project::LANGUAGES.map{|l| Skill.new(:language => l)} do |skill_form|
-      - language = skill_form.object.language
-      .col-sm-3
-        .col-sm-10
+      = form.input :email_frequency, :label => t("preferences.form.email_frequency"), :collection => [[t("preferences.form.never"), 'none'], [t("preferences.form.daily"), 'daily'], [t("preferences.form.weekly"), 'weekly']], :selected => (form.object.email_frequency || 'daily')
+      - if current_user.email.present? && !current_user.confirmed?
+        = form.input :email, hint: t("preferences.hint.confirm_email")
+      - else
+        = form.input :email, :label => t("preferences.form.email")
+      - if current_user.twitter_linked?
+        .form-group
+          %label.control-label=t("preferences.twitter")
           .controls
-            = skill_form.check_box :language, {:id => language, :checked => current_user.skills.map(&:language).include?(language)}, language
-          %label.control-label{:for => language}= language
-  .form-group
-    .col-md-offset-3.col-sm-10
-      = form.button :submit, t("preferences.save_and_continue")
+            = link_to "@#{current_user.twitter_nickname}", "https://twitter.com/#{current_user.twitter_nickname}", target: '_blank'
+            = link_to t("preferences.remove"), twitter_remove_path, method: :delete, class: 'btn btn-danger'
+    .col-md-12
+      %h2.text-center=t("preferences.languages")
+      .row
+        = form.simple_fields_for :skills, Project::LANGUAGES.map{|l| Skill.new(:language => l)} do |skill_form|
+          - language = skill_form.object.language
+          .col-xs-6.col-sm-4.col-md-2
+            %label.language-checkbox
+              = skill_form.check_box :language, {:id => language, :checked => current_user.skills.map(&:language).include?(language)}, language
+              = language
+    .form-group
+      .col-sm-12.text-center
+        = form.button :submit, t("preferences.save_and_continue")
+
+
+  .col-md-6.col-md-offset-3
+    %p=t("preferences.coderwall")
+    = simple_form_for current_user, :url => update_coderwall_path, wrapper: :bootstrap3_horizontal, defaults: { right_column_html: {class: "col-md-8"}, label_html: {class: "col-md-4"} }, :html => {:class => 'form-horizontal', :role => "form"}, :method => 'post'  do |form|
+      = form.input :coderwall_username, :label => t("preferences.coderwall_username"), :input_html => {:class => "pull-left"}
+      .form-group
+        .col-md-offset-4.col-sm-8
+          = form.button :submit, t('user.coderwall.update_button')

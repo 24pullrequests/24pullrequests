@@ -81,6 +81,7 @@ en:
   how_to_contribute: How to contribute?
   open_source_yey: Open Source FTW!
   welcome_back: Welcome back, %{user}
+  welcome: Welcome, %{user}!
   your_pull_requests: Your Pull Requests
   suggested_projects: Suggested Projects
   suggest_project: Suggest a project
@@ -169,6 +170,7 @@ en:
 
   preferences:
       title: Set your personal preferences
+      setup_help: "To get started with 24 pull requests, please first fill up the following form."
       frequency_message:  At the frequency you choose, we'll send you helpful emails from now until the project is over, highlighting some suggested projects you might consider contributing to. As an added bonus, we'll take the liberty of personalizing our suggestions to your language proficiency based on the repos in your GitHub profile. Alternatively, you can choose your languages below.
       delete: "Want to delete your account?"
       information: You can always change your email preferences later.
