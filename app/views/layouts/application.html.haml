@@ -65,7 +65,7 @@
           .tagline.hidden-phone
 
         - if logged_in?
-          = render :partial => 'user_nav'
+          = render 'user_nav'
 
     %article#main.container{role: :main}
       .row
@@ -90,6 +90,8 @@
         %ul.unstyled.pull-left
           %li
             = link_to t("about_us"), about_path
+          %li
+            = link_to t("sponsors"), sponsors_path
           %li
             = link_to t("how_to_contribute"), contributing_path
           %li
