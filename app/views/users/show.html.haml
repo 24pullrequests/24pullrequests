@@ -18,11 +18,21 @@
       %h4
         =t('user.organisations')
       %ul.avatar-list
-        = render @user.organisations
+        - @user.organisations.each do |organisation|
+          %li.avatar-cell
+            = link_to organisation_path(organisation.login), class: "avatar-link", rel: "tooltip", title: organisation.login do
+              = image_tag(organisation.avatar_url, alt: organisation.login, class: "avatar-img")
+
 
   .col-sm-9
     - if @user == current_user
-      = link_to t("navigation.preferences"), preferences_path, class: "pull-right btn btn-default"
+      = link_to preferences_path, class: "pull-right btn btn-default" do
+        %span.octicon.octicon-gear
+        = t("navigation.preferences")
+      - if current_user.twitter_linked?
+        = link_to t("preferences.remove"), twitter_remove_path, method: :delete, class: 'btn btn-danger pull-right'
+      - else
+        = link_to t('twitter.link_account.text'), '/auth/twitter', :class => 'btn btn-info pull-right', rel: 'tooltip', title: t('twitter.link_account.tooltip')
 
     .page-title 24 Pull Requests
     - if @user.gifts.year(current_year).any? or @user.pull_requests.year(current_year).any?
