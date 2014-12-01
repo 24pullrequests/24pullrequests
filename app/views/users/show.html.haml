@@ -18,7 +18,11 @@
       %h4
         =t('user.organisations')
       %ul.avatar-list
-        = render @user.organisations
+        - @user.organisations.each do |organisation|
+          %li.avatar-cell
+            = link_to organisation_path(organisation.login), class: "avatar-link", rel: "tooltip", title: organisation.login do
+              = image_tag(organisation.avatar_url, alt: organisation.login, class: "avatar-img")
+
 
   .col-sm-9
     - if @user == current_user
