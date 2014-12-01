@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   respond_to :js, only: :index
 
   def index
-    @users = User.order('pull_requests_count desc').includes(:pull_requests).page params[:page]
+    @users = User.order('pull_requests_count desc').joins(:pull_requests).where('EXTRACT(year from pull_requests.created_at) = ?', CURRENT_YEAR).page params[:page]
     respond_with @users
   end
 
