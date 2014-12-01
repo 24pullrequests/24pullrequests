@@ -51,4 +51,13 @@ describe GithubClient do
       github_client.issues(repository, {})
     end
   end
+
+  describe "#commits" do
+    it "returns a repository's commits" do
+      repository = "some-repository"
+      expect(client).to receive(:commits).with(repository, {})
+
+      github_client.commits(repository, {})
+    end
+  end
 end
