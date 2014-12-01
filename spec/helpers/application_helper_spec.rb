@@ -112,7 +112,7 @@ describe ApplicationHelper, :type => :helper do
 
     it "returns a custom favicon if the date is in December" do
       allow(Time).to receive(:now).and_return(december)
-      expect(helper.favicon).to eq({ filename: "/favicon/01.png", type: "image/png" })
+      expect(helper.favicon).to eq({ filename: "/assets/favicon/01.png", type: "image/png" })
     end
 
     it "returns a default favicon if the date is not in December" do
