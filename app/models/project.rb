@@ -65,6 +65,14 @@ class Project < ActiveRecord::Base
     GithubClient.new(nickname, token).issues(github_repository, options)
   end
 
+  def commits(nickname, token, months_ago=3, options={})
+    date = (Time.zone.now - months_ago.months).utc.iso8601
+    options.merge! since: date
+    options.merge! sha: "master"
+
+    GithubClient.new(nickname, token).commits(github_repository, options)
+  end
+
   def repo(nickname, token)
     GithubClient.new(nickname, token).repository(github_repository)
   end
