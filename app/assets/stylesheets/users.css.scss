@@ -95,3 +95,28 @@
   }
 }
 
+.sidebar-block {
+  padding: 30px;
+  margin: 40px 0 30px;
+  background: #f5f5f5;
+  position: relative;
+
+  .block-title {
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    top: -10px;
+    margin: 0;
+    position: absolute;
+  }
+}
+
+.event-item {
+  margin: 0 -30px;
+  padding: 10px 30px;
+  .octicon {
+    font-size: inherit;
+    width: 12px;
+    text-align: center;
+  }
+}
