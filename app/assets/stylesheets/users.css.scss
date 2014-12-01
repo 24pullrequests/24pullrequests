@@ -2,22 +2,25 @@
   display: block;
 }
 
+.box-badge {
+  float: left;
+  list-style: none;
+  margin-bottom: 8px;
+  width: 100px;
+  height: 120px;
+  overflow: none;
+  text-align: center;
+
+  .badge-name {
+    font-size: 12px;
+    line-height: 1.2em;
+    margin-top: 10px;
+  }
+}
+
 #team_box {
   @extend .clearfix;
   margin: 0 0 $grid-gutter-width/2 0;
-  li {
-    float: left;
-    list-style: none;
-    padding: 5px;
-    margin-bottom: 8px;
-    width: 100px;
-    height: 100px;
-    overflow: none;
-    text-align: center;
-  }
-  .badge-name {
-    font-size: 12px
-  }
 }
 
 .team-coders {
@@ -95,3 +98,28 @@
   }
 }
 
+.sidebar-block {
+  padding: 30px;
+  margin: 40px 0 30px;
+  background: #f5f5f5;
+  position: relative;
+
+  .block-title {
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    top: -10px;
+    margin: 0;
+    position: absolute;
+  }
+}
+
+.event-item {
+  margin: 0 -30px;
+  padding: 10px 30px;
+  .octicon {
+    font-size: inherit;
+    width: 12px;
+    text-align: center;
+  }
+}
