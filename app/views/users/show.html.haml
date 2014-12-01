@@ -22,7 +22,9 @@
 
   .col-sm-9
     - if @user == current_user
-      = link_to t("navigation.preferences"), preferences_path, class: "pull-right btn btn-default"
+      = link_to preferences_path, class: "pull-right btn btn-default" do
+        %span.octicon.octicon-gear
+        = t("navigation.preferences")
       - if current_user.twitter_linked?
         = link_to t("preferences.remove"), twitter_remove_path, method: :delete, class: 'btn btn-danger pull-right'
       - else

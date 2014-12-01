@@ -21,7 +21,8 @@ class DashboardsController < ApplicationController
   def update_preferences
     current_user.skills.delete_all
     if current_user.update_attributes(user_params)
-      redirect_to dashboard_path
+      flash[:success] = "Your preferences was successfully saved"
+      redirect_to :back
     else
       render :preferences
     end
