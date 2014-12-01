@@ -1,4 +1,6 @@
 .pull_request {
+  @include clearfix;
+
   h4 {
     margin: 0;
     small {
