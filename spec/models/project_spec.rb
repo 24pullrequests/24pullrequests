@@ -74,6 +74,17 @@ describe Project, :type => :model do
 
       project.issues("username", "token")
     end
+  end
 
+  context "#commits" do
+    let(:project) { FactoryGirl.create(:project) }
+
+    it "retrieves GitHub commits for the project" do
+      client = double(:github_client)
+      expect(GithubClient).to receive(:new).with("username", "token").and_return(client)
+      expect(client).to receive(:commits)
+
+      project.commits("username", "token")
+    end
   end
 end
