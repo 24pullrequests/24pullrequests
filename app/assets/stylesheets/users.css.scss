@@ -42,12 +42,16 @@
 
 .avatar-list-lg {
   background: #f0f0f0;
-  margin: 20px 0 0;
+  margin: 20px 0 20px 0;
   font-size: 0;
 
   .avatar-cell {
     width: 12.5%;
     margin: 0;
+
+    @media (max-width: 767px) {
+      width: 25%;
+    }
   }
 
   .avatar-img {

@@ -19,4 +19,13 @@
   hr {
     clear: left;
   }
+
+  @media (max-width: 767px) {
+
+    small {
+      display:inline-block;
+    }
+
+  }
+
 }
