@@ -13,6 +13,7 @@ body {
   height: 100%;
   font-size: 14px;
   line-height: 1.6em;
+  margin-bottom: 115px;
 }
 
 h1, h2, h3, h4, .page-title {
@@ -314,6 +315,9 @@ nav {
 
 footer {
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 115px;
 
   .dark {
     color: rgba(255,255,255,.2);
