@@ -79,6 +79,10 @@ h1, h2, h3, h4, .page-title {
       font-size: 20px;
       margin: -60px auto 30px;
       line-height: 60px;
+
+      @media (max-width: 767px) {
+	       margin-top: 0;
+      }
     }
   }
 }
@@ -259,6 +263,13 @@ nav {
 
   li {
     margin-right: $grid-gutter-width / 2;
+
+    @media (max-width: 767px) {
+      box-sizing: border-box;
+      width: 100% !important;
+      margin: 0 !important;
+    }
+
   }
 
   .nav-pills a {
@@ -267,6 +278,10 @@ nav {
     text-transform: uppercase;
     padding: 5px 10px;
     color: #DFC1C1;
+
+    @media (max-width: 767px) {
+      margin: 2px 5px !important;
+    }
 
     &.logout {
       margin-right: 0;
@@ -304,6 +319,11 @@ footer {
     color: rgba(255,255,255,.2);
     padding: 2.75em 0;
     background: #434343 asset-url('logo-dark.png') no-repeat center center;
+
+    @media (max-width: 767px) {
+      background: #434343;
+    }
+
   }
   .unstyled {
     padding-left: 0;
@@ -311,7 +331,7 @@ footer {
     margin: 0;
 
     @media (max-width: 767px) {
-      float: none;
+      float: none !important;
       text-align: center;
       margin: 15px 0;
     }
@@ -325,6 +345,29 @@ footer {
       &:first-child {
         border-left: none;
         padding-left: 0;
+      }
+
+      @media (max-width: 767px) {
+
+      	&:last-child {
+      	  border:none;
+      	  width: 100%;
+      	  margin-top: 15px;
+
+      	  button, ul, > div {
+      	    width: 100%;
+      	  }
+
+      	  > div {
+      	    position: relative;
+      	  }
+
+      	  ul {
+      	    bottom: 40px;
+      	  }
+
+      	}
+
       }
 
       > a {
@@ -565,4 +608,21 @@ hr {
   &.right {
     padding-right: 0;
   }
+}
+
+@media (max-width: 767px) {
+
+  .btn {
+    width:100%;
+
+    + .btn {
+      margin-top: 10px;
+    }
+
+  }
+
+  .social-buttons {
+    display:none;
+  }
+
 }
