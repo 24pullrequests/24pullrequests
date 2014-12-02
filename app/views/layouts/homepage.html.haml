@@ -47,7 +47,7 @@
 
     / For all other devices
     / Size should be 32 x 32 pixels
-    = favicon_link_tag favicon[:filename], rel: "shortcut icon", type: favicon[:type]
+    = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
   %body
     = content_for :body_open unless content_for(:body_open).nil?
 
