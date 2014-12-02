@@ -35,7 +35,7 @@ class Notification
   end
 
   def is_frequency?(frequency)
-    return false unless user.email_frequency.to_sym == frequency
+    return false unless user.email_frequency.try(:to_sym) == frequency
 
     user.last_sent_at.nil? || user.last_sent_at < LAST_SEEN[frequency].ago
   end
