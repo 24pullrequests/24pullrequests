@@ -34,8 +34,6 @@ class Notification
     is_frequency?(:weekly)
   end
 
-  private
-
   def is_frequency?(frequency)
     return false unless user.email_frequency.to_sym == frequency
 
