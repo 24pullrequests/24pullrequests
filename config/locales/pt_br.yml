@@ -2,6 +2,11 @@ pt_br:
   activerecord:
     errors:
       models:
+        event:
+          attributes:
+            start_time:
+              not_in_range: "Eventos só podem ser criados do dia 1 até 24 de dezembro"
+              in_past: "Não é possivel criar eventos que já aconteceram"
         user:
           attributes:
             email:
@@ -51,6 +56,12 @@ pt_br:
       title: "Faça seu nome"
       description: "Contrinuir para projetos open source é também uma boa maneira de fazer seu nome dentro da comunidade e melhorar seu CV"
       getting_started: "É realmente muito fácil começar, até mesmo pequenas contribuições podem ter muito valor para um projeto"
+    event:
+      title: "Eventos"
+      description: "Este ano nós encorajamos organizadores pelo mundo a fazer hacks com o projeto do 24 Pull Requests. Participe neste natal!"
+      view_events: "Ver eventos"
+      host_an_event: "Organize um evento"
+
     join_the_chat: "Entre no chat no Gitter, %{link_to_chat}."
 
   information:
@@ -62,6 +73,7 @@ pt_br:
     contribhub:
       tagline: "Você sabia que você tem um vizinho precisando de ajuda com um projeto realmente legal? Com ContribHub você saberá!"
       description: "ContribHub é uma aplicação baseada no GitHub que te ajuda a encontrar projetos para contribuir e ajuda a movimentar a comunidade."
+    happy_holidays_see_you: "Boas festas e vejo vocês no próximo ano, quando faremos tudo novamente!"
 
   happy_holidays: "Boas Festas"
   follow_user: "Siga @%{twitter}"
@@ -69,6 +81,7 @@ pt_br:
   how_to_contribute: "Como contribuir?"
   open_source_yey: "Open Source FTW!"
   welcome_back: "Bem vindo de volta, %{user}"
+  welcome: "Bem vindo, %{user}!"
   your_pull_requests: "Seus Pull Requests"
   suggested_projects: "Projetos Sugeridos"
   suggest_project: "Sugira um projeto"
@@ -79,37 +92,41 @@ pt_br:
   change: "Trocar"
   clear: "Limpar"
   claim: "Reclamar"
-  exempli_gratia:
+  exempli_gratia: "Ex.:"
   edit: "Editar"
   everything: "Tudo"
   about_us: "Sobre"
+  sponsors: "Patrocinadores"
   cancel: "Cancelar"
-  or:
+  or: "ou"
   search: "Buscar"
 
   user:
     grinchy_message: "%{user} você está parecendo um grinch em %{year}, não fez nenhum pull requests de presente. Bah humbug!"
     pull_request_count: "%{user} fez %{count} pull requests até agora, em %{year}"
-    organisations:
+    organisations: "Membro de..."
     coderwall:
-      title:
-      achieved_by:
-      success:
-      update_button:
-      error_no_user:
-      error_github_not_connected:
+      title: "Medalhas Coderwall"
+      achieved_by: "Medalha conquistada por"
+      success: "Seu usuário no Coderwall foi atualizado com sucesso!"
+      update_button: "Atualizar"
+      error_no_user: "Nenhum usuário encontrado com este nome."
+      error_github_not_connected: "O usuário %{username} não utliza a mesma conta de Github para conectar com o 24 Pull Requests e com Coderwall."
 
   developers_using_language: "Desenvolvedores usando %{language}"
   developers_involved: "Desenvolvedores participantes"
+  developers_involved_desc: "Participe junto com todos e faça o open source melhor."
+  organisations_involved_desc: "Convide mais pessoas da sua organização para participar."
 
   dashboard:
     christmas_activity: "Aqui é onde você pode ver todas as atividades que nós estamos monitorando para você na corrida até o Natal."
     give_a_gift: "Parece que você não presenteou ninguém hoje. Você gostaria de presentear alguem"
     synchronize: "Sincronizar Pull Requests"
     help_out: "Não consegue pensar em um projeto para ajudar? Nós juntamos uma lista de projetos populares para você"
+    pull_requests: "Se perguntando o que a galera anda fazendo neste feriado? Veja estes pull requests e envie o seu agora!"
     no_pull_requests: "Você ainda não enviou nenhum pull request, o que você está esperando?!"
     synchronize: "Sincronizar Pull Requests"
-    gift_it:
+    gift_it: "Preseteie!"
 
   language:
     projects_count: "%{count} %{language} projetos"
@@ -132,6 +149,7 @@ pt_br:
       edit: "Editar sugestão"
       update: "Atualizar projeto"
     suggest: "Não existem projetos nesta linguagem ainda, Porque não %{suggest_link}"
+    suggest_link_text: "Sugira um"
     new:
       title: "Sugerir um projeto"
       info: "Uma das maneiras de incentivar a participação da comunidade open source é deixar que os usuários saibam quais projetos valem a pena contribuir. Nós selecionamos os nossos favoritos, mas estamos sempre abertos a sugestões. Tem alguma ideia? Compartilhe conosco abaixo!"
@@ -139,11 +157,11 @@ pt_br:
       issue_link_text: abrir um issue
 
       form:
-        project_name:
-        github_url:
-        summary:
-        main_language:
-        submit_project:
+        project_name: "Nome do projeto"
+        github_url: "URL no Github"
+        summary: "Índice"
+        main_language: "Lingua principal"
+        submit_project: "Enviar projeto"
 
     edit:
       title: "Editar sugestão"
@@ -153,22 +171,24 @@ pt_br:
 
   preferences:
       title: "Configure suas preferências de email"
+      setup_help: "Para começar a participar do 24 Pull Requests, por favor preencha o formulário abaixo."
       frequency_message: "Na frequência que você escolher, até que o projeto esteja finalizado, nós enviaremos para você emails sugerindo alguns projetos que você pode contribuir. Como bônus, nós tomaremos a liberdade de personalizar nossas sugestões com base nas linguaguens mais utilizadas por você na sua conta do Github. Como alternativa você pode escolher as linguagens abaixo"
       delete: "Você que apagar sua conta?"
       information: "Você pode trocar suas preferências de email a qualquer momento."
       twitter: "Twitter"
       languages: "Quais linguagens você conhece?"
       remove: "Remover conta"
+      save: "Salvar"
       save_and_continue: "Salvar e continuar"
-      coderwall:
-      coderwall_username:
+      coderwall: "Conecte para a sua conta do Codewall para mostrar, no seu perfil, as suas medalhas."
+      coderwall_username: "Usuário no Coderwall"
 
       form:
-        email:
-        email_frequency:
-        never:
-        daily:
-        weekly:
+        email: "Email"
+        email_frequency: "Frequência dos emails"
+        never: "Nunca"
+        daily: "Diariamente"
+        weekly: "Semanalmente"
 
       hint:
         confirm_email: "Por favor, confirme seu email usando o link que enviados para você."
@@ -184,7 +204,7 @@ pt_br:
     title: "Deletar sua conta"
     are_you_sure: "Nós só queremos verificar se você realmente quer apagar sua conta, isso irá remover seu perfil e todos os seus pull requests deste site, porem nós não removeremos os projetos que você sugeriu."
     notification_info: "Se você simplesmente gostaria de parar de receber as notificações por email, você pode mudar suas %{email_preferences_link}."
-    email_preferences_link:
+    email_preferences_link: "Configurações de email"
     confirm: "Confirmar"
     cancel: "Mudei de ideia, me leve de volta!"
 
@@ -192,15 +212,15 @@ pt_br:
     title: "Presentes"
     description: "Aqui você pode gerenciar seus pull requests, selecionar e organizar seu próprio conjunto do 24 Pull Requests."
     view_your_gifts: "Todos os seus presentes serão exibidos no seu %{calendar_link}."
-    calender_link:
+    calender_link: "Calendário publico"
     none: "Nenhum presenteado ainda."
     give: "Presenteie algo significativo para os projetos que você gosta."
 
     form:
-      date:
-      pull_request:
-      tweet:
-      gift_it:
+      date: "Data"
+      pull_request: "Pull Requests"
+      tweet: "Tweete este presente!"
+      gift_it: "Presenteie"
 
   contributors:
     title: "Contribuidores"
@@ -217,35 +237,80 @@ pt_br:
       details: "24 Pull Requests foi possível graças a ajuda e a doações de alguns ótimos patrocinadores."
       thanks: "Muitos agracecimentos para..."
       get_in_touch: "Se você gostaria de entrar em contato para saber mais sobre patrocínio ou qualquer outro assunto, envie-nos um email:"
+      pullreview:
+        title: "PullReview"
+        intro_html: '<a href="https://pullreview.com">PullReview</a> prove gratuitamente uma maneira automatizada de fazer revisão de código para projetos open source em Ruby, Rails e Javascript.'
+        maintainer_html: 'Se você é um mantenedor, enviou seu projeto para o 24 Pull Requests e está interessado em verificar as contribuições usando o PullReview, <a href="mailto:support@pullreview.com">entre em contato com eles</a>, eles irão te ajudar a configurar o PullReview no seu projeto.'
+        contributor_html: 'Se você quiser ajuda do PullReview para contribuir em projetos open source em Ruby no 24 Pull Requests, , <a href="http://blog.8thcolor.com/en/2014/12/giving-back-with-24pullrequests/">veja a explicação deles.</a>'
+        gifts: "Se você enviou 24 pull requests em dezembro, você receberá um presente deles. Mais detalhes em breve!"
 
   organisations:
+    title: "%{count} organizações envolvidas"
+    pull_requests: "%{count} pull requests enviados"
     members:
-      one:
-      other:
+      one: "1 membro"
+      other: "%{count} membros"
+    languages: "Línguas"
 
   suggestions:
-    title:
+    title: "Minhas sugestões"
 
   api:
-    title:
-    description:
+    title: "JSON API"
+    description: "Você talvez não saiba disto, mas o 24 Pull Requests tem a própria API em JSON. Todos os detalhes estão descritos abaixo."
     pagination:
-      title:
-      details:
+      title: "Paginação"
+      details: "Requisições que retornam multiplos itens será paginado com 99 itens por padrão. Você pode especificar a página atravez do parametro '?page'"
     callback:
-      title:
-      details:
+      title: JSON-P Callbacks
+      details: "Você pode usar o parametro ?callback em qualquer requisição GET para que o resultado venha envolto em um callback JSON. Isso é tipicamente usado quando os navegadores querem incorporar os proprios conteúdos dentro da página, passando por cima de problemas de cross domain. A resposta tem os dados equivalentes a uma chamada normal."
     projects:
-      title:
-      details:
+      title: "Projetos"
+      details: "Todos os projetos sugeridos, ordenados alfabeticamente."
     pull_requests:
-      title:
-      details:
+      title: "Pull Requests"
+      details: "Retorna todos os pull requests dos usuários do site durante dezembro, ordenados por data, mais novos primeiro. também inclui o usuário que fez o pull request."
     users:
-      title:
-      details:
-      specific:
+      title: "Usuários"
+      details: "Retorna todos os usuários que se increveram no site, ordenado pela quantidade de pull requests enviados durante o mês de dezembro. Também inclui suas organizações de pull requests."
+      specific: "Retorna informações de um usuário em específico."
     organisations:
-      title:
-      details:
-      specific:
+      title: "Organizações"
+      details: "Retorna todas as organizações que se inscreveram no site, também inclui uma lista dos usuários pertecentes a cada organização."
+      specific: "Retorna informações de uma oranização em específico."
+
+  events:
+    title: Eventos
+    details: "Você não precisa participar sozinho este natal! Organize um evento do 24 Pull Requests na sua empresa, meetup ou na sua comunidade local. Ou você pode ir a algum evento e participar!"
+    notice:
+      not_logged_in: "Você precisa estar logado para criar ou editar eventos"
+      not_authorized: "Vocë só pode editar eventos que você mesmo criou"
+      edit_success: "Evendo atualizado com sucesso!"
+      new_success: "Evento criado com sucesso!"
+      destroy_success: "Evento removido com sucesso!"
+    show:
+      view_event_details: "Ver detalhes do evento"
+      destroy_event: "Remover evento"
+      edit_event: "Editar evento"
+      confirm_destroy: "Tem certeza que deseja remover este evento?"
+    edit:
+      title
+    new:
+      title: "Organize um evento do 24 Pull Requests"
+      form:
+        name: "Nome do evento"
+        name_placeholder: "Bristol Ruby Group Pull-request-a-thon"
+        description: "Descrição"
+        description_placeholder: "Faça uma pequena descrição do grupo e do evento"
+        location: "Localização"
+        location_placeholder: e.g. Bristol, UK
+        url: URL
+        url_placeholder: "A URL do seu evento"
+        map: "Marcador de localização"
+        start_time: "Quando"
+
+    edit:
+      title: Editar sugestão
+    admin:
+      title: Gerenciar projetos
+      search: Busque por repositório no Github
