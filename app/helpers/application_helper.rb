@@ -73,14 +73,4 @@ module ApplicationHelper
     return url if type == 'text'
     link_to url, url
   end
-
-  def favicon
-    if (Time.parse("1st December")..Time.parse("25th December")
-    ).cover?(Time.zone.now)
-      return { filename: "/assets/favicon/#{Time.zone.now.strftime("%d")}.png",
-      type: "image/png" }
-    else
-      return { filename: "favicon.ico", type: "image/vnd.microsoft.icon" }
-    end
-  end
 end
