@@ -34,7 +34,7 @@ de:
     about: "Worum geht's?"
     about_text: "<p>24 Pull Requests ist eine jährliche Initiative, die Entwickler aus aller Welt ermutigen möchte, jeden Tag im Dezember einen Pull Request zu senden &mdash; bis Weihnachten.</p> <p>Diese Webseite erklärt das Projekt und zeigt, wie und wohin Du Deine Pull Requests schicken kannst.</p><p>Melde Dich mit Deinem GitHub-Konto an. Wir verfolgen dann all Deine Pull Requests nach, heben sie hervor und schlagen Dir Projekte vor, an denen Du arbeiten könntest.</p>"
     greeting: "Es ist die Zeit"
-    give_to_open_source: Du hast das ganze Jahr über von anden Open Source-Projekten profitiert. Jetzt ist es an der Zeit, den Maintainern dieser Projekte danke zu sagen &mdash; und ein kleiner Vogel hat mir geflüstert, dass sie Pull Requests lieben!
+    give_to_open_source: "Du hast das ganze Jahr über von anderen Open Source-Projekten profitiert. Jetzt ist es an der Zeit, den Maintainern dieser Projekte danke zu sagen &mdash; und ein kleiner Vogel hat mir geflüstert, dass sie Pull Requests lieben!"
     q_n_a: Fragen & Antworten
     badges:
       title: Coderwall Badges verdienen
