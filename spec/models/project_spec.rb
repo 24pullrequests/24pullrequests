@@ -31,6 +31,11 @@ describe Project, :type => :model do
       project.github_url = "https://github.com/kangax/"
       expect(project.valid?).to be false
     end
+
+    it "should not pass on invalid github urls" do
+      project.github_url = "https://github.com//"
+      expect(project.valid?).to be false
+    end
   end
 
   context "#scopes" do
