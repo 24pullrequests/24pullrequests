@@ -12,7 +12,7 @@
   .icheckbox_line.checked#clear_labels All Labels
   = form.input :labels, collection: Label.all.map(&:name), as: :check_boxes, label_method: lambda { |owner| "" }, label: false
   .icheckbox_line.checked#clear_languages All Languages
-  = form.input :languages, collection: Project::LANGUAGES, as: :check_boxes, label_method: lambda { |owner| "" }, label: false, :selected => lambda { |v| @current_user_languages.include?(v) }
+  = form.input :languages, collection: Project::LANGUAGES, as: :check_boxes, label_method: lambda { |owner| "" }, label: false, :selected => lambda { |v| current_user_languages.include?(v) }
   = form.submit "Search", hidden: true
 
 %hr
