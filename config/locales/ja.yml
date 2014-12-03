@@ -1,4 +1,4 @@
-en:
+ja:
   activerecord:
     errors:
       models:
@@ -24,14 +24,14 @@ en:
       tooltip: "If you link your Twitter account, we'll post a new tweet whenever you open a pull request!"
 
   navigation:
-    all_projects: All Projects
-    my_suggestions: My Suggestions
-    dashboard: Dashboard
-    profile: Profile
-    preferences: Preferences
-    gifted_code: Gifted Code
-    manage_projects: Manage Projects
-    logout: Logout
+    all_projects: 全てのプロジェクト
+    my_suggestions: 私のオススメ
+    dashboard: ダッシュボード
+    profile: プロフィール
+    preferences: 設定
+    gifted_code: ギフトコード
+    manage_projects: プロジェクト管理
+    logout: ログアウト
 
   homepage:
     title: "24 Pull Requests"
@@ -314,22 +314,3 @@ en:
     admin:
       title: Manage Projects
       search: Search by GitHub repository
-
-  locale: # Remove this part in your own language file - it's not necessary. Don't forget to include your language here, though!
-    translate: Translate into your language!
-    en: English
-    el: Ελληνικά
-    es: Español
-    pt_br: Português do Brasil
-    fi: Suomi
-    fr: Français
-    de: Deutsch
-    ru: Русский
-    uk: Українська
-    th: ไทย
-    it: Italiano
-    nb: Norsk bokmål
-    ta: தமிழ்
-    zh_Hans: 简体中文
-    zh_Hant: 繁体中文
-    ja: 日本語
