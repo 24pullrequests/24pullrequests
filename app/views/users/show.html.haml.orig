@@ -47,7 +47,7 @@
         #gifts.tab-pane
           = render :partial => 'calendar', :object => @calendar
         #pull_requests.tab-pane
-          = render partial: 'users/pull_request', collection: @user.pull_requests
+          = render partial: 'users/pull_request', collection: @user.pull_requests.year(current_year)
     - else
       %h4=t("user.grinchy_message", user: @user.nickname, year: current_year)
 
