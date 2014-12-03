@@ -47,7 +47,7 @@
         #gifts.tab-pane
           = render :partial => 'calendar', :object => @calendar
         #pull_requests.tab-pane
-          = render partial: 'users/pull_request', collection: @user.pull_requests
+          = render partial: 'users/pull_request', collection: @user.pull_requests.year(current_year)
     - elsif !PullRequest.in_date_range?
       .alert.alert-info
         24 Pull Requests runs from 1st-24th December, come back then to see
