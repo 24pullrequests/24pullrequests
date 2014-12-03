@@ -5,6 +5,15 @@ def load_user
   load_user
 end
 
+desc "Refresh pull request counts"
+task :refresh_pull_request_counts => :environment do
+    User.reset_column_information
+    User.all.each do |u|
+      pull_request_count = u.pull_requests.year(CURRENT_YEAR).count
+      User.update_counters u.id, :pull_requests_count => pull_request_count
+    end
+end
+
 desc "Download new pull requests"
 task :download_pull_requests => :environment do
   next unless PullRequest.in_date_range?
