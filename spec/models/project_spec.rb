@@ -26,6 +26,11 @@ describe Project, :type => :model do
       project.github_url = "https://github.com/kangax/fabric.js"
       expect(project.valid?).to be true
     end
+
+    it "should not pass on github org or user urls" do
+      project.github_url = "https://github.com/kangax/"
+      expect(project.valid?).to be false
+    end
   end
 
   context "#scopes" do
