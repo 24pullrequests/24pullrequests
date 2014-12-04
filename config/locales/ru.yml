@@ -143,11 +143,11 @@ ru:
       issue_link_text: Список задач для проекта
 
       form:
-        project_name:
-        github_url:
-        summary:
-        main_language:
-        submit_project:
+        project_name: "Имя проекта"
+        github_url: "Github ссылка"
+        summary: "Описание"
+        main_language: "Основной язык"
+        submit_project: "Рекомендовать"
 
     edit:
       title: Редактировать рекомендацию
