@@ -90,7 +90,7 @@ ru:
   user:
     grinchy_message: "%{user} в %{year} году не пошлет ни одного пулл-реквеста?! Не верим!"
     pull_request_count: "%{user} в %{year} году послал пулл-реквестов: %{count}"
-    organisations: Огранизации
+    organisations: Организации
     coderwall:
       title: "Бэйджи Coderwall"
       achieved_by: "Бэйджи получил: "
