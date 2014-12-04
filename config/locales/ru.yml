@@ -148,6 +148,7 @@ ru:
         summary: "Описание"
         main_language: "Основной язык"
         submit_project: "Рекомендовать"
+        label: Категории
 
     edit:
       title: Редактировать рекомендацию

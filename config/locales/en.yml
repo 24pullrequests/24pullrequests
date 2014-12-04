@@ -162,6 +162,7 @@ en:
         summary: Summary
         main_language: Main language
         submit_project: Submit Project
+        label: Label
 
     edit:
       title: Edit Suggestion
