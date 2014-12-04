@@ -47,7 +47,7 @@
 
     / For all other devices
     / Size should be 32 x 32 pixels
-    = favicon_link_tag favicon[:filename], rel: "shortcut icon", type: favicon[:type]
+    = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
   %body
     = content_for :body_open unless content_for(:body_open).nil?
 
@@ -65,7 +65,7 @@
           .tagline.hidden-phone
 
         - if logged_in?
-          = render :partial => 'user_nav'
+          = render 'user_nav'
 
     %article#main.container{role: :main}
       .row
@@ -85,11 +85,15 @@
           %li
             #{t("sponsored_by")}&nbsp;
             #{link_to 'DNSimple', 'http://dnsimple.com'}
-            &nbsp;&amp;&nbsp;
+            &#44;&nbsp;
             = link_to 'Heroku Postgres', 'http://postgres.heroku.com/'
+            &nbsp;&amp;&nbsp;
+            = link_to 'SendGrid', 'http://sendgrid.com'
         %ul.unstyled.pull-left
           %li
             = link_to t("about_us"), about_path
+          %li
+            = link_to t("sponsors"), sponsors_path
           %li
             = link_to t("how_to_contribute"), contributing_path
           %li

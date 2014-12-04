@@ -27,12 +27,12 @@ class Project < ActiveRecord::Base
   belongs_to :submitted_by, class_name: "User", foreign_key: :user_id
 
   validates_presence_of :description, :github_url, :name, :main_language
-  validates_format_of :github_url, :with => /\Ahttps?:\/\/(www\.)?github.com\/[\w-]*\/[\w\.-]*(\/)?\Z/i, :message => 'Enter a valid GitHub URL.'
+  validates_format_of :github_url, :with => /\Ahttps?:\/\/(www\.)?github.com\/[\w-]+\/[\w\.-]+(\/)?\Z/i, :message => 'Enter a valid GitHub URL.'
   validates_uniqueness_of :github_url, :case_sensitive => false, :message => "Project has already been suggested."
   validates_length_of :description, :within => 20..200
   validates_inclusion_of :main_language, :in => LANGUAGES, :message => 'must be a programming language'
 
-  scope :not_owner, lambda {|user| where("github_url" != "github.com/#{user}/") }
+  scope :not_owner, lambda { |user| where("github_url" != "github.com/#{user}/") }
   scope :by_language, ->(language) { where("lower(main_language) =?", language.downcase) }
   scope :by_languages, ->(languages) { where("lower(main_language) IN (?)", languages) }
   scope :by_labels, ->(labels) { joins(:labels).where("labels.name  IN (?)", labels).select("distinct(projects.id), projects.*") }
@@ -58,14 +58,14 @@ class Project < ActiveRecord::Base
     update_attribute(:inactive, true)
   end
 
-  def issues(nickname, token, months_ago=6, options={})
+  def issues(nickname, token, months_ago = 6, options = {})
     date = (Time.zone.now - months_ago.months).utc.iso8601
     options.merge! since: date
 
     GithubClient.new(nickname, token).issues(github_repository, options)
   end
 
-  def commits(nickname, token, months_ago=3, options={})
+  def commits(nickname, token, months_ago = 3, options = {})
     date = (Time.zone.now - months_ago.months).utc.iso8601
     options.merge! since: date
     options.merge! sha: "master"

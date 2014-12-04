@@ -1,7 +1,7 @@
 class GiftFactory
   attr_reader :gift
 
-  def self.create!(user, factory, attrs={})
+  def self.create!(user, factory, attrs = {})
     gift_factory = GiftFactory.new(user, factory)
     return gift_factory.create_from_attrs(attrs)
   end
@@ -11,7 +11,7 @@ class GiftFactory
     @factory = factory
   end
 
-  def create_from_attrs(attrs={})
+  def create_from_attrs(attrs = {})
     gift = @factory.call(attrs)
     gift.date ||= closest_free_gift_date
     gift.user = @user
