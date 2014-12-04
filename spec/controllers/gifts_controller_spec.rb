@@ -3,6 +3,7 @@ require 'rails_helper'
 describe GiftsController, :type => :controller do
   let(:user) { create(:user) }
   let(:gift) { create(:gift, :user => user) }
+  let!(:pull_requests) { 2.times.map { create :pull_request, user: user } }
 
   before do
     session[:user_id] = user.id
