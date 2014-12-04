@@ -14,5 +14,17 @@
       .col-md-offset-2.col-sm-10
         = form.button :submit, t("gifts.form.gift_it"), {class: "btn-success"}
 
+  = form.input :pull_request_id, :label => t("gifts.form.pull_requests"), :collection => gift_form.pull_requests_for_select
+  
+  .form-group
+    .col-md-offset-2.col-sm-10
+      = form.input :tweet, as: :boolean, label: false, wrapper_html: { class: "checkbox" } do
+        = form.check_box :tweet, {}, "true", "false"
+        = t("gifts.form.tweet")
+
+  .form-group
+    .col-md-offset-2.col-sm-10
+      = form.button :submit, t("gifts.form.gift_it"), {class: "btn-success"}
 - else 
   .alert.alert-warning=t("gifts.no_pull_requests", user: content_tag(:strong, "@" + @current_user.nickname), year: current_year).html_safe
+
