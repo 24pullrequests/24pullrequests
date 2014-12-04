@@ -1,0 +1,47 @@
+diff --git a/app/views/gifts/_form.html.haml b/app/views/gifts/_form.html.haml
+index ff5e828..2822874 100644
+--- a/app/views/gifts/_form.html.haml
++++ b/app/views/gifts/_form.html.haml
+@@ -1,15 +1,19 @@
+-= simple_form_for gift_form.gift, wrapper: :bootstrap3_horizontal, defaults: {right_column_html: {class: "col-lg-3 col-md-3"}, label_html: {class: "col-lg-2 col-md-2"} }, :html => {:class => 'form-horizontal', :role => "form"}  do |form|
++- if @current_user.pull_requests.year(current_year).count > 0
++  = simple_form_for gift_form.gift, wrapper: :bootstrap3_horizontal, defaults: {right_column_html: {class: "col-lg-3 col-md-3"}, label_html: {class: "col-lg-2 col-md-2"} }, :html => {:class => 'form-horizontal', :role => "form"}  do |form|
+ 
+-  - if gift_form.giftable_dates.any?
+-    = form.input :date, :label => t("gifts.form.date"), :collection => gift_form.giftable_dates
++    - if gift_form.giftable_dates.any?
++      = form.input :date, :label => t("gifts.form.date"), :collection => gift_form.giftable_dates
+ 
+-  = form.input :pull_request_id, :label => t("gifts.form.pull_requests"), :collection => gift_form.pull_requests_for_select
++    = form.input :pull_request_id, :label => t("gifts.form.pull_requests"), :collection => gift_form.pull_requests_for_select
+ 
+-  - if @current_user.twitter_linked?
+-    = form.input :tweet, as: :boolean, label: false, wrapper_html: { class: "checkbox" } do
+-      = form.check_box :tweet, {}, "true", "false"
+-      = t("gifts.form.tweet")
++    - if @current_user.twitter_linked?
++      = form.input :tweet, as: :boolean, label: false, wrapper_html: { class: "checkbox" } do
++        = form.check_box :tweet, {}, "true", "false"
++        = t("gifts.form.tweet")
+ 
+-  .form-group
+-    .col-md-offset-2.col-sm-10
+-      = form.button :submit, t("gifts.form.gift_it"), {class: "btn-success"}
++    .form-group
++      .col-md-offset-2.col-sm-10
++        = form.button :submit, t("gifts.form.gift_it"), {class: "btn-success"}
++
++- else 
++  .alert.alert-warning=t("gifts.no_pull_requests", user: content_tag(:strong, "@" + @current_user.nickname), year: current_year).html_safe
+diff --git a/config/locales/en.yml b/config/locales/en.yml
+index caac3c3..7d9f68c 100644
+--- a/config/locales/en.yml
++++ b/config/locales/en.yml
+@@ -215,6 +215,7 @@ en:
+     calendar_link: public calendar
+     none: Nothing gifted yet.
+     give: Gift something meaningful to a project you love
++    no_pull_requests: "You don't open have pull-requests"
+ 
+     form:
+       date: Date
