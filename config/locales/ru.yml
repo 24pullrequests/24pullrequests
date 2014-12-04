@@ -68,6 +68,7 @@ ru:
   how_to_contribute: Как сделать свой вклад?
   open_source_yey: Open Source FTW!
   welcome_back: "Привет, %{user}"
+  welcome: Привет, %{user}!
   your_pull_requests: Пулл-реквесты
   suggested_projects: " — Рекомендованные проекты"
   suggest_project: Рекомендовать проект
@@ -144,7 +145,7 @@ ru:
 
       form:
         project_name: "Имя проекта"
-        github_url: "Github ссылка"
+        github_url: "Cсылка на Github'e"
         summary: "Описание"
         main_language: "Основной язык"
         submit_project: "Рекомендовать"
@@ -168,6 +169,7 @@ ru:
       save: Сохранить
       coderwall: "Привяжите ваш Coderwall аккаунт, для отображения бэйджов на странице вашего профиля."
       coderwall_username: "Coderwall логин"
+      setup_help: "Для работы с 24 Pull Requests, пожалуйста, заполни форму ниже."
 
       form:
         email:
