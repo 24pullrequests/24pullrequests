@@ -215,6 +215,7 @@ en:
     calendar_link: public calendar
     none: Nothing gifted yet.
     give: Gift something meaningful to a project you love
+    no_pull_requests: "You don't open have pull-requests"
 
     form:
       date: Date
