@@ -1,11 +1,12 @@
 require 'rails_helper'
 
 describe GiftForm, :type => :model do
-  let(:gift)           { create :gift }
-  let(:pull_request)   { create :pull_request }
-  let(:pull_requests)  { [pull_request] }
-  let(:date)           { Time.zone.now.to_s }
-  let(:giftable_dates) { Gift.giftable_dates }
+  let(:gift)               { create :gift }
+  let(:pull_request)       { create :pull_request }
+  let(:old_pull_request)   { create(:pull_request, {created_at: DateTime.new(2012, 12, 2)}) }
+  let(:pull_requests)      { [pull_request, old_pull_request] }
+  let(:date)               { Time.zone.now.to_s }
+  let(:giftable_dates)     { Gift.giftable_dates }
   let(:gift_form) do
     described_class.new :gift => gift,
       :giftable_dates => giftable_dates,
@@ -23,6 +24,10 @@ describe GiftForm, :type => :model do
     context 'when a pull request has been gifted' do
       let(:pull_request) { gift.pull_request }
       it { is_expected.to include ["Gifted: #{pull_request.repo_name} - #{pull_request.title}", pull_request.to_param] }
+    end
+
+    context 'when a pull request is old' do
+      it { is_expected.not_to include ["Not gifted: #{old_pull_request.repo_name} - #{old_pull_request.title}", old_pull_request.to_param] }
     end
   end
 

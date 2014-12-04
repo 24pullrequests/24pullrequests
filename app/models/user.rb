@@ -141,8 +141,8 @@ class User < ActiveRecord::Base
   end
 
   def unspent_pull_requests
-    gifted_pull_requests = gifts.map {|g| g.pull_request }
-    pull_requests.reject{|pr| gifted_pull_requests.include?(pr) }
+    gifted_pull_requests = gifts.map { |g| g.pull_request }
+    pull_requests.reject{ |pr| gifted_pull_requests.include?(pr) }
   end
 
   def needs_setup?

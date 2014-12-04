@@ -25,15 +25,15 @@ class GithubClient
     client.repo(repository)
   end
 
-  def issues(repository, options={})
+  def issues(repository, options = {})
     client.issues(repository, options)
   end
 
-  def high_rate_limit?(rate_limit=4000)
+  def high_rate_limit?(rate_limit = 4000)
     client.rate_limit.remaining > rate_limit
   end
 
-  def commits(repository, options={})
+  def commits(repository, options = {})
     client.commits(repository, options)
   end
 
