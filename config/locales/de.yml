@@ -38,7 +38,7 @@ de:
     q_n_a: Fragen & Antworten
     badges:
       title: Coderwall Badges verdienen
-      description: Zusammen mit Coderwall verteilen wir ein paar tolle Badges, die Du durchs Mitmachen verdienen kannst.
+      description: Zusammen mit Coderwall verteilen wir ein paar tolle Badges, die Du durchs Mitmachen verdienen kannst (freigeschaltet am 24. Dezember).
       involved_link: 'Participant (Teilnehmer) - Mach mit, versende mindestens einen Pull Request vor Weihnachten'
       amazing: "Continuous Sync (Kontinuierliche Synchronisation) - Du bist eine Open Source-Maschine, versende 24 Pull Requests im Dezember"
     involved:
