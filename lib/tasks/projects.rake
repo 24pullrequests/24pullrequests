@@ -10,9 +10,7 @@ task :check_for_inactive_projects => :environment do
       updated_recently = false
     end
 
-    has_active_issues = project.issues(user.nickname, user.token).any? rescue(false) unless updated_recently
-
-    unless updated_recently or has_active_issues
+    unless updated_recently
       project.deactivate!
       count = count + 1
     end
