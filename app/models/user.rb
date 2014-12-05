@@ -51,9 +51,17 @@ class User < ActiveRecord::Base
   end
 
   def self.admins
-    org_members = Rails.configuration.organization_members.map(&:login)
+    @admins ||= where_nickname_in(organization_members.map(&:login))
+  end
 
-    where_nickname_in(org_members)
+  def self.load_user
+    user = User.order('created_at desc').limit(50).sample(1).first
+    return user if user.github_client.high_rate_limit?
+    load_user
+  end
+
+  def self.organization_members
+    load_user.github_client.organization_members('24pullrequests')
   end
 
   def self.where_nickname_in(nicknames)
