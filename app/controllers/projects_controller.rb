@@ -7,8 +7,7 @@ class ProjectsController < ApplicationController
   respond_to :js, only: [:index, :filter]
 
   def index
-    @current_user_languages = logged_in? ? current_user.languages : []
-    @projects = ProjectSearch.new(page: params[:page], languages: @current_user_languages).find.includes(:labels)
+    @projects = ProjectSearch.new(page: params[:page], languages: current_user_languages).find.includes(:labels)
     @has_more_projects = (params[:page].to_i * 20) < Project.active.count
     respond_with @projects
   end
@@ -61,11 +60,26 @@ class ProjectsController < ApplicationController
   def filter
     @languages, @labels = languages, labels
     @labels = [] if @labels.blank?
+    session[:filter_options] = {languages: @languages, labels: @labels}
     @projects = ProjectSearch.new(page: params[:page], labels: @labels, languages: @languages).find.includes(:labels)
     respond_with @projects
   end
 
   protected
+
+  def current_user_languages
+    @current_user_languages ||= begin
+      if session[:filter_options]
+        session[:filter_options][:languages]
+      elsif logged_in?
+        current_user.languages
+      else
+        []
+      end
+    end
+  end
+
+  helper_method :current_user_languages
 
   def project_params
     params.require(:project).permit(:description, :github_url, :name, :main_language, label_ids: [])
