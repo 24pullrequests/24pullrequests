@@ -157,7 +157,7 @@ fr:
       information: Vous pourrez modifier vos préférences plus tard.
       twitter: Compte Twitter
       languages: Quels langages connaissez-vous?
-      remove: Supprimer votre compte
+      unlink_twitter: Supprimer votre compte
       save_and_continue: Enregistrer et Continuer
       coderwall: Liez votre compte coderwall pour afficher les badges que vous avez déjà gagnés sur votre page de profil.
       coderwall_username: "Nom d'utilisateur Coderwall"

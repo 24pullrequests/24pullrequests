@@ -157,7 +157,7 @@ tr:
       information: Daha sonra email ayarlarınızı değiştirebilirsiniz.
       twitter: Twitter Hesabı
       languages: Hangi programlama dillerini biliyorsunuz?
-      remove: Hesabı Kaldır
+      unlink_twitter: Hesabı Kaldır
       save_and_continue: Kaydet ve Devam Et
       coderwall: Kazandığınız rozetlerin profilinizde gösterilmesi için Coderwall hesabınızı bağlanıyız. 
       coderwall_username: "Coderwall Kullanıcı Adı"

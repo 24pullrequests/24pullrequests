@@ -177,7 +177,7 @@ pt_br:
       information: "Você pode trocar suas preferências de email a qualquer momento."
       twitter: "Twitter"
       languages: "Quais linguagens você conhece?"
-      remove: "Remover conta"
+      unlink_twitter: "Remover conta"
       save: "Salvar"
       save_and_continue: "Salvar e continuar"
       coderwall: "Conecte para a sua conta do Codewall para mostrar, no seu perfil, as suas medalhas."

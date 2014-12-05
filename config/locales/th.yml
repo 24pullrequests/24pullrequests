@@ -156,7 +156,7 @@ th:
       information: คุณสามารถแก้ไขการตั้งค่าอีเมลได้ในภายหลัง
       twitter: บัญชีทวิตเตอร์
       languages: คุณรู้ภาษาไหนบ้าง?
-      remove: ลบบัญชี
+      unlink_twitter: ลบบัญชี
       save_and_continue: บันทึก
       coderwall:
       coderwall_username:

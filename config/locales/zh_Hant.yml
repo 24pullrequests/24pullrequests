@@ -158,7 +158,7 @@ zh_Hant:
       information: 你可以在之後修改您接收郵件的偏好設置
       twitter: 推特帳號
       languages: 您知道哪些編程語言？
-      remove: 刪除帳號
+      unlink_twitter: 刪除帳號
       save_and_continue: 保存並繼續
       coderwall: 與您的coderwall帳號綁定，在您的coderwall帳號上顯示徽章
       coderwall_username: "Coderwall用戶名"

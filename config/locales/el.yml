@@ -158,7 +158,7 @@ el:
       information: Mπορείς να αλλάξεις τη συχνότητα που θα λαμβάνεις το email αργότερα
       twitter: Λογαριαμός Twitter
       languages: Ποιές γλώσσες σε ενδιαφέρουν;
-      remove: Remove Account
+      unlink_twitter: Unlink Twitter
       save_and_continue: Αποθήκευση επιλογων
       coderwall:
       coderwall_username:

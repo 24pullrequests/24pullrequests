@@ -2,7 +2,7 @@
   = form.input :name, :label => t("projects.new.form.project_name")
   = form.input :github_url, disabled: @project.persisted?, :label => t("projects.new.form.github_url")
   = form.input :description, :input_html => {:rows => 5}, :label => t("projects.new.form.summary")
-  = form.input :main_language, :label => t("projects.new.form.main_language"), :input_html => {:data => {:provide => "typeahead", :source => Project::LANGUAGES}, :autocomplete => 'off', :placeholder => "Ruby, C++, Java, Python...", :label => t("projects.new.form.main_language")}
+  = form.input :main_language, :label => t("projects.new.form.main_language"), :input_html => {:data => {:provide => "typeahead", :source => Project::LANGUAGES}, :autocomplete => 'off', :placeholder => "Ruby, C++, Java, Python..."}
   = form.association :labels, :label => t("projects.new.form.label"), collection: Label.all, as: :check_boxes
   .form-group
     .col-md-offset-2.col-sm-10
