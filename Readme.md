@@ -51,7 +51,7 @@ brew install postgres phantomjs
 On Debian-based Linux distributions you can use apt-get to install Postgres:
 
 ```bash
-sudo apt-get install postgresql postgresql-contrib
+sudo apt-get install postgresql postgresql-contrib libpq-dev
 ```
 
 On Windows, you can use the [Chocolatey package manager](http://www.chocolatey.org) to install Postgres:

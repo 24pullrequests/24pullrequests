@@ -1,5 +1,5 @@
 class Downloader
-  def initialize(user, access_token=user.token)
+  def initialize(user, access_token = user.token)
     @access_token = access_token
     @user = user
   end

@@ -59,6 +59,7 @@ class ProjectsController < ApplicationController
 
   def filter
     @languages, @labels = languages, labels
+    @labels = [] if @labels.blank?
     session[:filter_options] = {languages: @languages, labels: @labels}
     @projects = ProjectSearch.new(page: params[:page], labels: @labels, languages: @languages).find.includes(:labels)
     respond_with @projects

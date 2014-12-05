@@ -2,7 +2,7 @@ class ProjectSearch
 
   attr_accessor :languages
 
-  def initialize params={}
+  def initialize(params = {})
     @page = params[:page]
     @languages = params[:languages] || []
     @labels = params[:labels] || []
