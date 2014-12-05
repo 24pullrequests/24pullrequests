@@ -216,6 +216,8 @@ en:
     none: Nothing gifted yet.
     give: Gift something meaningful to a project you love
     no_pull_requests: "You don't open have pull-requests"
+    link_twitter_desc: "Want to share information about 24 Pull Requests and your gifts? %{link_twitter} and gift some code to open-source projects."
+    link_twitter: Link Twitter account
 
     form:
       date: Date
