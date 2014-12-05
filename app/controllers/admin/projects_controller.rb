@@ -1,4 +1,5 @@
 class Admin::ProjectsController < ApplicationController
+  before_filter :ensure_logged_in
   before_action :ensure_admin
   before_action :set_project, only: [ :edit, :update, :destroy ]
 
@@ -43,7 +44,6 @@ class Admin::ProjectsController < ApplicationController
   end
 
   def ensure_admin
-    ensure_logged_in
     current_user.is_admin?
   end
 end
