@@ -158,7 +158,7 @@ zh_Hans:
       information: 你可以在之后修改您接收邮件的偏好设置
       twitter: 推特帐号
       languages: 您知道哪些编程语言？
-      remove: 删除帐号
+      unlink_twitter: 删除帐号
       save_and_continue: 保存并继续
       coderwall: 与您的coderwall帐号绑定，在您的coderwall帐号上显示徽章
       coderwall_username: "Coderwall用户名"
