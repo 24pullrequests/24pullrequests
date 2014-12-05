@@ -12,6 +12,15 @@ describe ProjectsController, :type => :controller do
 
       it { expect(response.header['Content-Type']).to include 'application/json' }
     end
+
+    context 'with stored session preferences' do
+      before do 
+        session[:filter_options] = {:languages => ["Ruby", "JavaScript"]}
+        get :index, :format => :html
+      end
+
+      it { expect(assigns(:current_user_languages)).to contain_exactly("Ruby", "JavaScript") }
+    end
   end
 
   describe 'POST create mass assignment' do
@@ -54,6 +63,20 @@ describe ProjectsController, :type => :controller do
       expect(assigns(:projects).size).to eq 7
       expect(assigns(:projects).map{|p| p.main_language}.uniq).to include "JavaScript", "Lua"
     end
+
+    it 'should store filter values in session' do
+      xhr :get, :filter, {:format => :js, :project => {:languages => ["Ruby"]}}
+
+      expect(session[:filter_options]).not_to be_nil
+      expect(session[:filter_options][:labels]).to eq([])
+      expect(session[:filter_options][:languages]).to contain_exactly("Ruby")
+
+      xhr :get, :filter, {:format => :js, :project => {:languages => ["JavaScript", "Lua"], :labels => ["refactoring"]}}
+
+      expect(session[:filter_options]).not_to be_nil
+      expect(session[:filter_options][:labels]).to contain_exactly("refactoring")
+      expect(session[:filter_options][:languages]).to contain_exactly("JavaScript", "Lua")
+    end
   end
 
   describe "POST claim" do
@@ -83,5 +106,4 @@ describe ProjectsController, :type => :controller do
     end
 
   end
-
 end
