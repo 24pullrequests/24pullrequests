@@ -5,16 +5,14 @@ task :check_for_inactive_projects => :environment do
     begin
       user = load_user
       updated_at = project.repo(user.nickname, user.token).updated_at
-      updated_recently = updated_at > Date.today-6.months if updated_at
+      updated_recently = updated_at > Date.today - 6.months if updated_at
     rescue Octokit::NotFound => e
       updated_recently = false
     end
 
-    has_active_issues = project.issues(user.nickname, user.token).any? rescue(false) unless updated_recently
-
-    unless updated_recently or has_active_issues
+    unless updated_recently
       project.deactivate!
-      count = count+1
+      count = count + 1
     end
   end
 

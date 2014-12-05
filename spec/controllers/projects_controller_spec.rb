@@ -68,7 +68,7 @@ describe ProjectsController, :type => :controller do
       xhr :get, :filter, {:format => :js, :project => {:languages => ["Ruby"]}}
 
       expect(session[:filter_options]).not_to be_nil
-      expect(session[:filter_options][:labels]).to be_nil
+      expect(session[:filter_options][:labels]).to eq([])
       expect(session[:filter_options][:languages]).to contain_exactly("Ruby")
 
       xhr :get, :filter, {:format => :js, :project => {:languages => ["JavaScript", "Lua"], :labels => ["refactoring"]}}

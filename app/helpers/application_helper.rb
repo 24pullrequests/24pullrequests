@@ -11,7 +11,7 @@ module ApplicationHelper
     end
   end
 
-  def language_link(language, label=nil)
+  def language_link(language, label = nil)
     language = if language.respond_to? :map
       language.map &method(:escape_language)
     else
@@ -29,26 +29,26 @@ module ApplicationHelper
     %(<a href="https://www.gratipay.com/on/github/#{nickname}/" class="btn btn-success btn-mini btn-block"><span class="glyphicon glyphicon-heart"></span>Support via Gratipay</a>).html_safe
   end
 
-  def contributors_in year
+  def contributors_in(year)
     PullRequest.year(year).load.map(&:user_id).uniq.length
   end
 
-  def pull_requests_in year
+  def pull_requests_in(year)
     PullRequest.year(year).count
   end
 
-  def projects_in year
+  def projects_in(year)
     PullRequest.year(year).select(:repo_name).map(&:repo_name).uniq.count
   end
 
-  def current_path locale=nil
+  def current_path(locale = nil)
     path = request.env["REQUEST_PATH"]
     path += "?locale=#{locale}" if locale.present?
     path
   end
 
   def available_locales
-    [ 'en', 'es', 'el', 'pt_br', 'fi', 'fr', 'de', 'ru', 'uk', 'th', 'it', 'nb', 'ta', 'tr', 'zh_Hans', 'zh_Hant' ]
+    [ 'en', 'es', 'el', 'pt_br', 'fi', 'fr', 'de', 'ru', 'uk', 'th', 'it', 'nb', 'ta', 'tr', 'zh_Hans', 'zh_Hant', 'ja' ]
   end
 
   def current_translations
@@ -56,19 +56,19 @@ module ApplicationHelper
     @translations[I18n.locale].with_indifferent_access
   end
 
-  def contributing_url type='html'
+  def contributing_url(type = 'html')
     url = 'http://24pullrequests.com/contributing'
     return url if type == 'text'
     link_to url, url
   end
 
-  def twitter_url type='html'
+  def twitter_url(type = 'html')
     url = 'http://twitter.com/24pullrequests'
     return url if type == 'text'
     link_to url, url
   end
 
-  def preferences_url type='html'
+  def preferences_url(type = 'html')
     url = 'http://24pullrequests.com/preferences'
     return url if type == 'text'
     link_to url, url

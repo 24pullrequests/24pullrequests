@@ -1,7 +1,7 @@
 class GiftForm
   attr_reader :gift
 
-  def initialize(args={})
+  def initialize(args = {})
     @gift = args.fetch(:gift)
     @giftable_dates = args.fetch(:giftable_dates, [])
     @pull_requests = args.fetch(:pull_requests)

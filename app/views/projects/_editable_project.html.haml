@@ -17,5 +17,6 @@
   .language.label.label-info
     = link_to project.main_language, language_path(project.main_language.downcase)
   - project.labels.each do |label|
-    .labels.label.label-info
+    .project-label
+      %span.octicon.octicon-tag
       = label.name
