@@ -13,14 +13,13 @@ class StaticController < ApplicationController
   end
 
   def humans
-    @contributors = Rails.cache.read("contributors")
-
-    unless @contributors
+    unless Rails.cache.read("humans.txt")
       @contributors = load_contributors
-      Rails.cache.write("contributors", @contributors, expires_in: 1.day)
+      humans = render_to_string "static/humans.txt.erb", content_type: "text/plain"
+      Rails.cache.write("humans.txt", humans, expires_in: 1.day)
     end
 
-    render "static/humans.txt.erb", content_type: "text/plain"
+    render text: Rails.cache.read("humans.txt"), content_type: "text/plain"
   end
 
   private
