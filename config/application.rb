@@ -64,29 +64,5 @@ module Tfpullrequests
     config.exceptions_app = self.routes
 
     I18n.config.enforce_available_locales = false
-
-    if Rails.env.production?
-      # Memoize at boot up to prevent GitHub's rate limiting. This should work
-      # fine for now.
-      config.contributors = begin
-        Timeout::timeout(5) {
-          Octokit.contributors('24pullrequests/24pullrequests')
-        }
-      rescue => e
-        puts "Error when memoizing contributors at boot up:\n #{e.inspect}"
-        []
-      end
-
-      config.organization_members = begin
-        Timeout::timeout(5) {
-          Octokit.organization_members('24pullrequests')
-        }
-      rescue => e
-        puts "Error when memoizing organization members at boot up:\n #{e.inspect}"
-        []
-      end
-    else
-      config.contributors = config.organization_members = []
-    end
   end
 end
