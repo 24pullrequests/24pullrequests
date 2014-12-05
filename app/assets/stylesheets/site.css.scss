@@ -138,14 +138,14 @@ h1, h2, h3, h4, .page-title {
 
 .svg-showblock .snow { 
 /*  -webkit-animation-name: snowfall;
-  -webkit-animation-duration: 20s;
+  -webkit-animation-duration: 10s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in;*/
   
   animation-name: snowfall;
-  animation-duration: 25s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
-  animation-timing-function: ease-out;
+  animation-timing-function: ease-in;
   
 }
 .svg-showblock .snow:nth-child(1) {  
