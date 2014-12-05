@@ -22,6 +22,8 @@ describe 'Gifts', :type => :request do
     end
 
     context "tweeting" do
+      let(:user) { create :user, :email_frequency => 'never', :twitter_token => 'foo', :twitter_secret => 'bar' }
+
       it "posts a tweet when the user selects 'tweet'" do
         expect_any_instance_of(PullRequest).to receive(:post_tweet)
 
