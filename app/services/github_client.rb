@@ -37,6 +37,10 @@ class GithubClient
     client.commits(repository, options)
   end
 
+  def organization_members(repository, options = {})
+    client.organization_members(repository, options)
+  end
+
   private
 
   def client
