@@ -38,26 +38,26 @@ ja:
     description: Giving back little gifts of code for Christmas
     about: "What's it all about?"
     about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your pull requests.</p><p>Log in with your GitHub account and we'll track and highlight all your pull requests and suggest projects to work on.</p>"
-    greeting: "'Tis the season"
+    greeting: クリスマスがきた
     give_to_open_source: You've been benefiting from the use of open source projects all year. Now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving pull requests!
     q_n_a: Questions & Answers
     badges:
-      title: Earn Coderwall badges
+      title: Coderwall バッジをもらおう
       description: We've teamed up with coderwall and created some kickass badges to unlock for participating.
       involved_link: 'Participant - Get involved, send at least one pull request before Christmas'
       amazing: "Continuous Sync - You're an open source machine, send 24 pull requests during December, before Christmas"
     involved:
-      title: Get involved
+      title: 参加しよう
       description: "There are lots of ways to get involved in an open source project: improving documentation, helping fix existing issues and bugs, improving code quality and test coverage, or adding missing features."
       special_page: "We've prepared a %{contributing_path}, where you can find some information about contributing."
       contributing_path: special page
       take_a_look: If you are new to open source, please take a look.
     profile:
-      title: Build your profile
+      title: プロフィールを作ろう
       description: Contributing to open source projects is also a great way to build your profile in the community and improve your CV.
       getting_started: It's really easy to get started. Even small contributions can be really valuable to a project.
     event:
-      title: Events
+      title: イベント
       description: This year we are encouraging organisers around the world to hold 24 Pull Requests hack events. Get involved this Christmas.
       view_events: View events
       host_an_event: Host an event
@@ -78,7 +78,7 @@ ja:
   happy_holidays: Happy Holidays
   follow_user: Follow @%{twitter}
   sponsored_by: Sponsored by
-  how_to_contribute: How to contribute?
+  how_to_contribute: 貢献するには？
   open_source_yey: Open Source FTW!
   welcome_back: Welcome back, %{user}
   welcome: Welcome, %{user}!
@@ -93,13 +93,13 @@ ja:
   clear: Clear
   claim: Claim
   exempli_gratia: "e.g." # Short form of "for example"
-  edit: Edit
+  edit: 編集
   everything: Everything
-  about_us: About
-  sponsors: Sponsors
-  cancel: Cancel
+  about_us: このサイトについて
+  sponsors: スポンサー
+  cancel: キャンセル
   or: or
-  search: Search
+  search: 検索
 
   user:
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
@@ -223,19 +223,19 @@ ja:
       gift_it: "Gift it!"
 
   contributors:
-    title: Contributors
+    title: 貢献者
 
   about:
-    title: About 24 Pull Requests
-    description: 24 Pull Requests is a little project to promote open source collaboration during December.
-    idea: The idea is basically "Send a pull request every day in December leading up to Christmas", encouraging developers to give back to open source with little gifts of code throughout December.
-    more_info: The site also provides suggested projects to help with, guides for contributing and highlights good pull requests submitted each day.
-    on_github: "The site development is open source on GitHub:"
-    on_twitter: "We are also on Twitter:"
+    title: 24 Pull Requests とは
+    description: 24 Pull Requests は12月にオープンソースのコラボレーションを促進する小さなプロジェクトです。
+    idea: '"12月の始まりからクリスマスまで毎日 pull request を送る"ことが基本的なアイデアです。12月を通して開発者達がオープンソースへ、小さなコードの贈り物をお返しすることを促します。'
+    more_info: またこのサイトは、支援するプロジェクトの提案、貢献するためのガイド、毎日投稿される pull request の紹介も提供します。
+    on_github: "このサイトは GitHub 上でオープンソースとして開発されています:"
+    on_twitter: "Twitter アカウントもあります:"
     sponsors:
-      title: Sponsors
-      details: 24 Pull Requests was made possible thanks to the help and donations of some great sponsors.
-      thanks: "Many thanks to..."
+      title: スポンサー
+      details: 24 Pull Requests はスポンサーのご支援、ご寄付によって成り立っています。
+      thanks: ありがとうございます。
       get_in_touch: "If you'd like to get in touch about sponsorship or anything else, drop us an email:"
       pullreview:
         title: "PullReview"
