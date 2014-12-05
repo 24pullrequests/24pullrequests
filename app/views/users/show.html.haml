@@ -30,7 +30,7 @@
         %span.octicon.octicon-gear
         = t("navigation.preferences")
       - if current_user.twitter_linked?
-        = link_to t("preferences.remove"), twitter_remove_path, method: :delete, class: 'btn btn-danger pull-right'
+        = link_to t("preferences.unlink_twitter"), twitter_remove_path, method: :delete, class: 'btn btn-danger pull-right'
       - else
         = link_to t('twitter.link_account.text'), '/auth/twitter', :class => 'btn btn-info pull-right', rel: 'tooltip', title: t('twitter.link_account.tooltip')
 
