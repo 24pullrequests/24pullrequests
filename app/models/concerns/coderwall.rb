@@ -31,7 +31,7 @@ module Concerns
       private
 
       def coderwall
-        @coderwall ||= Coderwall.new
+        @coderwall ||= ::Coderwall.new
       end
     end
   end
