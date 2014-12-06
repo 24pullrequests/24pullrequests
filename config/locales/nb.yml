@@ -159,7 +159,7 @@ nb:
       information: Du kan alltid endre dine epost-preferanser senere.
       twitter: Twitter-konto
       languages: Hvilke språk kan du?
-      remove: Fjern konto
+      unlink_twitter: Fjern konto
       save_and_continue: Lagre og fortsett
       coderwall: Koble til din Coderwall-konto for å vise badges du allerede har tjent på din profilside.
       coderwall_username: "Brukernavn på Coderwall"

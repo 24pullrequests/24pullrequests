@@ -155,7 +155,7 @@ fi:
       information: Voit aina vaihtaa sähköpostisi asetuksia.
       twitter: Twitter Tili
       languages: Mitä kieliä tiedät?
-      remove: Poista tili
+      unlink_twitter: Poista tili
       save_and_continue: Tallenna ja Jatka
       coderwall:
       coderwall_username:

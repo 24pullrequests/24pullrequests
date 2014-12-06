@@ -157,7 +157,7 @@ es:
       information: "Siempre puedes cambiar las preferencias de correo electrónico más tarde."
       twitter: "Cuenta de Twitter"
       languages: "¿Qué lenguajes de programación conoces?"
-      remove: "Eliminar tu cuenta"
+      unlink_twitter: "Eliminar tu cuenta"
       save_and_continue: "Guardar y continuar"
       coderwall:
       coderwall_username:
