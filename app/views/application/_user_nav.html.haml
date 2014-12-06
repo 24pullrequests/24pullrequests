@@ -14,9 +14,15 @@
           %span.octicon.octicon-person
           = t("navigation.profile")
       %li
-        = link_to t("navigation.gifted_code"), gifts_path
+        = link_to gifts_path do
+          %span.octicon.octicon-gift
+          = t("navigation.gifted_code")
       %li
-        = link_to t("navigation.my_suggestions"), my_suggestions_path
+        = link_to my_suggestions_path do
+          %span.octicon.octicon-repo
+          = t("navigation.my_suggestions")
       - if admin?
         %li
-          = link_to t("navigation.manage_projects"), admin_projects_path
+          = link_to admin_projects_path do
+            %span.octicon.octicon-tools
+            = t("navigation.manage_projects")
