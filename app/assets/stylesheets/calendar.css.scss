@@ -79,7 +79,8 @@ $festive-colour: $header-background;
 
 .festive-star {
   display: block;
-  width: 24px;
-  margin: 0 auto 5px;;
+  font-size: 26px;
+  margin: 0 auto 5px;
   clear: both;
+  color: $festive-colour;
 }
