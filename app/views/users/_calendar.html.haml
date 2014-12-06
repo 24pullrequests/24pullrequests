@@ -1,23 +1,19 @@
-.calendar
-  %ol.unstyled.clearfix.calendar-inner
-    - 1.upto(calendar.start_padding) do
-      %li.calendar-day.calendar-padding
+%ol.unstyled.clearfix.calendar-inner
+  - 1.upto(calendar.start_padding) do
+    %li.calendar-day.calendar-padding
 
-    - calendar.each_day do |date, gift|
-      %li.calendar-day
-        .calendar-inner
-          %span{ :class => date == Date.today ? 'calendar-mday calendar-mday-today' : 'calendar-mday' }
-            = date.mday
-          - if gift.present? && gift.user == current_user
-            %small
-              = link_to "x", gift_path(gift), :title => "Remove gift", :method => :delete, "data-confirm" => "Remove this gift?"
-          - if gift.present?
-            %p.large
-              = link_to gift.pull_request_title, gift.pull_request_issue_url, :target => :blank
-            %p.small
-              = link_to gift.pull_request_title, gift.pull_request_issue_url, :target => :blank
+  - calendar.each_day do |date, gift|
+    %li.calendar-day{ :class => ("gifted" if gift.present?) }
+      %span{ :class => date == Date.today ? 'calendar-mday calendar-mday-today' : 'calendar-mday' }
+        = date.mday
+      - if gift.present? && gift.user == current_user
+        .remove-gift
+          = link_to raw("&times;"), gift_path(gift), :title => "Remove gift", :method => :delete, "data-confirm" => "Remove this gift?"
+      - if gift.present?
+        = link_to gift.pull_request_title, gift.pull_request_issue_url, :target => :blank
 
-    %li.calendar-day.calendar-christmas
-      .calendar-inner
-        %span.calendar-mday 25
-        %h4=t("happy_holidays")
+  %li.calendar-day.calendar-christmas
+    .calendar-inner
+      %span.calendar-mday 25
+      = image_tag 'star@2x.png', :class => "festive-star"
+      =t("happy_holidays")
