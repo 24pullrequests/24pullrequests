@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
   after_create :download_pull_requests, :estimate_skills, :download_user_organisations
 
   validates :email, presence: true, if: :send_regular_emails?
-  validates :email, format: true, with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, allow_blank: true, on: :update
+  validates :email, format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, allow_blank: true, on: :update }
 
   def self.find_by_nickname!(nickname)
     where(['lower(nickname) =?', nickname.downcase]).first!

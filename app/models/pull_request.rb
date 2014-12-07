@@ -1,7 +1,7 @@
 class PullRequest  < ActiveRecord::Base
   belongs_to :user, counter_cache: true
 
-  validates :issue_url, unique: true, scope: :user_id
+  validates :issue_url, uniqueness: { scope: :user_id }
 
   after_create :autogift
 
