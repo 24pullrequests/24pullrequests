@@ -20,8 +20,16 @@
   }
 }
 
+.profile-details {
+  min-height: 130px;
+}
+
 .profile-actions {
   float: right;
+
+  .btn {
+    margin-left: 8px;
+  }
 }
 
 .profile-avatar {
@@ -39,6 +47,7 @@
   text-transform: uppercase;
   color: #888;
   margin-right: 10px;
+  vertical-align: middle;
 }
 
 .profile-pull-request-count {
@@ -172,7 +181,7 @@
 
   .avatar-cell {
     width: 24px;
-    margin: 0;
+    margin: 0 8px 0 0;
   }
 
   .avatar-img {
