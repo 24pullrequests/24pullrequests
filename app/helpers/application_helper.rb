@@ -4,20 +4,16 @@ module ApplicationHelper
   end
 
   def parameterize_language(lang)
-    if lang
-      lang.gsub(/\+/, 'p')
-        .gsub(/\#/, 'sharp')
-        .parameterize
-    end
+    lang.gsub(/\+/, 'p').gsub(/\#/, 'sharp').parameterize if lang
   end
 
   def language_link(language, label = nil)
     language = if language.respond_to? :map
-                 language.map &method(:escape_language)
+                 language.map(&method(:escape_language))
                else
                  escape_language language
-    end
-    label = label || [language].flatten.join(', ')
+               end
+    label ||= [language].flatten.join(', ')
     link_to label, '#', data: { language: language }
   end
 
@@ -25,7 +21,7 @@ module ApplicationHelper
     %(<iframe src="http://ghbtns.com/github-btn.html?user=#{nickname}&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="300" height="20"></iframe>).html_safe
   end
 
-  def gratipay_button(nickname, classes="btn btn-success btn-mini btn-block")
+  def gratipay_button(nickname, classes = 'btn btn-success btn-mini btn-block')
     %(<a href="https://www.gratipay.com/on/github/#{nickname}/" class="#{classes}"><span class="glyphicon glyphicon-heart"></span>Support via Gratipay</a>).html_safe
   end
 

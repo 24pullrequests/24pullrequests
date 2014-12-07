@@ -33,6 +33,6 @@ class ApplicationController < ActionController::Base
   end
 
   def admin?
-    current_user.is_admin?
+    current_user.admin?
   end
 end

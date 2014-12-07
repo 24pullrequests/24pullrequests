@@ -6,7 +6,7 @@ describe GiftsController, type: :controller do
   let!(:pull_requests) { 2.times.map { create :pull_request, user: user } }
 
   before do
-    allow_any_instance_of(User).to receive(:is_admin?).and_return(true)
+    allow_any_instance_of(User).to receive(:admin?).and_return(true)
     session[:user_id] = user.id
   end
 
@@ -23,7 +23,7 @@ describe GiftsController, type: :controller do
 
     it 'should pre-fill the date when one is passed' do
       get :new, date: '2014-12-03'
-      expect(response.body).to match /<option selected="selected" value="2014-12-03">/
+      expect(response.body).to match(/<option selected="selected" value="2014-12-03">/)
     end
   end
 end

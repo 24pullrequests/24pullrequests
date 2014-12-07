@@ -22,8 +22,8 @@ class User < ActiveRecord::Base
   before_save :check_email_changed
   after_create :download_pull_requests, :estimate_skills, :download_user_organisations
 
-  validates_presence_of :email, if: :send_regular_emails?
-  validates_format_of :email, with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, allow_blank: true, on: :update
+  validates :email, presence: true, if: :send_regular_emails?
+  validates :email, format: true, with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, allow_blank: true, on: :update
 
   def self.find_by_nickname!(nickname)
     where(['lower(nickname) =?', nickname.downcase]).first!
@@ -69,9 +69,7 @@ class User < ActiveRecord::Base
     nicknames.compact.map { |c| result.find { |u| u.nickname == c } }.compact
   end
 
-  def high_rate_limit?
-    github_client.high_rate_limit?
-  end
+  delegate :high_rate_limit?, to: :github_client
 
   def github_profile
     "https://github.com/#{nickname}" if nickname.present?
@@ -86,11 +84,9 @@ class User < ActiveRecord::Base
   end
 
   def estimate_skills
-    if ENV['GITHUB_KEY'].present?
-      (Project::LANGUAGES & repo_languages).each do |language|
-        skills.create(language: language)
-      end
-    end
+    (Project::LANGUAGES & repo_languages).each do |language|
+      skills.create(language: language)
+    end if ENV['GITHUB_KEY'].present?
   end
 
   def languages
@@ -161,7 +157,7 @@ class User < ActiveRecord::Base
     email_frequency.nil?
   end
 
-  def is_admin?
+  def admin?
     @admin ||= User.admins.include?(self)
   end
 

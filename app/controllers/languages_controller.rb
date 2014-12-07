@@ -26,9 +26,9 @@ class LanguagesController < ApplicationController
   private
 
   def set_language
-    @language = Project::LANGUAGES.select { |lan| lan.downcase.eql? language.downcase }.first
+    @language = Project::LANGUAGES.detect { |lan| lan.downcase.eql? language.downcase }
 
-    fail ActionController::RoutingError.new("#{language} is not a valid language") if @language.nil?
+    fail(ActionController::RoutingError, "#{language} is not a valid language") if @language.nil?
   end
 
   def language
