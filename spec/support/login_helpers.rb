@@ -11,6 +11,10 @@ module LoginHelpers
     )
   end
 
+  def mock_is_admin(admin = false)
+    allow_any_instance_of(User).to receive(:is_admin?).and_return(admin)
+  end
+
   def mock_github_auth(user)
     OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(
       :provider => 'github',
@@ -37,5 +41,5 @@ module LoginHelpers
 end
 
 RSpec.configure do |config|
-  config.include LoginHelpers, :type => :request
+  config.include LoginHelpers
 end

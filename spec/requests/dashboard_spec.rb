@@ -5,7 +5,7 @@ describe 'Dashboard', :type => :request do
   subject { page }
 
   before do
-    allow_any_instance_of(User).to receive(:is_admin?).and_return(true)
+    mock_is_admin
     login user
   end
 

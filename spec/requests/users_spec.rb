@@ -5,7 +5,7 @@ describe 'Users', :type => :request do
   let(:user) { create :user, nickname: "akira" }
 
   before do
-    allow_any_instance_of(User).to receive(:is_admin?).and_return(true)
+    mock_is_admin
   end
 
   describe 'viewing the list of users' do

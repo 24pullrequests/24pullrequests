@@ -6,10 +6,9 @@ describe GiftsController, :type => :controller do
   let!(:pull_requests) { 2.times.map { create :pull_request, user: user } }
 
   before do
-    allow_any_instance_of(User).to receive(:is_admin?).and_return(false)
+    allow_any_instance_of(User).to receive(:is_admin?).and_return(true)
     session[:user_id] = user.id
   end
-
 
   describe 'DELETE destroy' do
     it "removes the gift" do
