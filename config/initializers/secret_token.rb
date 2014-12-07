@@ -1,5 +1,5 @@
 if Rails.env.production? && ENV['SECRET_TOKEN'].blank?
-  raise 'SECRET_TOKEN environment variable must be set!'
+  fail 'SECRET_TOKEN environment variable must be set!'
 end
 
 Tfpullrequests::Application.config.secret_key_base =

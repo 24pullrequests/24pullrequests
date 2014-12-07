@@ -1,13 +1,13 @@
 require 'rails_helper'
 require 'rake'
 
-describe Organisation, :type => :model do
+describe Organisation, type: :model do
 
-  it "pull_request_count" do
+  it 'pull_request_count' do
     setup_pull_request_data
 
     Tfpullrequests::Application.load_tasks
-    Rake::Task["organisations:update_pull_request_count"].invoke
+    Rake::Task['organisations:update_pull_request_count'].invoke
 
     ordered_organisations = Organisation.order_by_pull_requests
 
@@ -15,7 +15,7 @@ describe Organisation, :type => :model do
     expect(ordered_organisations.last.pull_request_count).to eq(2)
   end
 
-  it "with_user_counts" do
+  it 'with_user_counts' do
     setup_organizations_with_users
 
     organisations_with_user_counts = Organisation.with_user_counts
@@ -33,10 +33,10 @@ describe Organisation, :type => :model do
     some_pr_user = create(:user)
     2.times { create :pull_request, user: some_pr_user }
 
-    create :organisation, login: 'pugnation', users: [ most_pr_user, low_pr_user ]
-    create :organisation, login: '24pullrequsts', users: [ some_pr_user ]
-    create :organisation, login: 'kobol',  users: [ most_pr_user, some_pr_user, low_pr_user ]
-    create :organisation, login: 'caprica', users: [ most_pr_user, some_pr_user ]
+    create :organisation, login: 'pugnation', users: [most_pr_user, low_pr_user]
+    create :organisation, login: '24pullrequsts', users: [some_pr_user]
+    create :organisation, login: 'kobol',  users: [most_pr_user, some_pr_user, low_pr_user]
+    create :organisation, login: 'caprica', users: [most_pr_user, some_pr_user]
   end
 
   def setup_organizations_with_users
@@ -44,8 +44,8 @@ describe Organisation, :type => :model do
     user_two = create(:user)
     user_three = create(:user)
 
-    create :organisation, login: 'pugnation', users: [ user_one, user_two, user_three ]
-    create :organisation, login: 'caprica', users: [ user_three ]
+    create :organisation, login: 'pugnation', users: [user_one, user_two, user_three]
+    create :organisation, login: 'caprica', users: [user_three]
   end
 
 end

@@ -1,9 +1,9 @@
 class EventsController < ApplicationController
-  before_action :validate_current_user_exists, only: [ :edit, :new ]
-  before_action :set_event, only: [ :show, :edit, :update, :destroy ]
+  before_action :validate_current_user_exists, only: [:edit, :new]
+  before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
-    @events = Event.where(["start_time >= ?", Date.today]).order("start_time")
+    @events = Event.where(['start_time >= ?', Date.today]).order('start_time')
   end
 
   def new
@@ -25,12 +25,12 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy!
-    redirect_to events_path, notice: t("events.notice.destroy_success")
+    redirect_to events_path, notice: t('events.notice.destroy_success')
   end
 
   def update
     if @event.update_attributes(event_params)
-      redirect_to @event, notice: t("events.notice.edit_success")
+      redirect_to @event, notice: t('events.notice.edit_success')
     else
       render :edit
     end
@@ -43,11 +43,11 @@ class EventsController < ApplicationController
   end
 
   def validate_current_user_exists
-    redirect_to events_path, notice: t("events.notice.not_logged_in") unless current_user.present?
+    redirect_to events_path, notice: t('events.notice.not_logged_in') unless current_user.present?
   end
 
   def set_event
     @event = Event.find(params[:id])
-    redirect_to events_path, notice: t("events.notice.not_authorized") if @event.nil?
+    redirect_to events_path, notice: t('events.notice.not_authorized') if @event.nil?
   end
 end

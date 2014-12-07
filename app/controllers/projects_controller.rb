@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
-  before_action :ensure_logged_in, except: [ :index, :filter ]
-  before_action :set_project, only: [ :edit, :update, :destroy ]
+  before_action :ensure_logged_in, except: [:index, :filter]
+  before_action :set_project, only: [:edit, :update, :destroy]
 
   respond_to :html
   respond_to :json, only: :index
@@ -38,7 +38,7 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update_attributes(editable_project_params)
-      redirect_to projects_path(user: current_user), notice: "Project updated successfully!"
+      redirect_to projects_path(user: current_user), notice: 'Project updated successfully!'
     else
       render :edit
     end
@@ -47,7 +47,7 @@ class ProjectsController < ApplicationController
   def claim
     project = Project.find_by_github_repo(github_url)
 
-    if project.present? and project.submitted_by.nil?
+    if project.present? && project.submitted_by.nil?
       project.update_attribute(:user_id, current_user.id)
       message = "You have successfully claimed <b>#{github_url}</b>".html_safe
     else
@@ -60,7 +60,7 @@ class ProjectsController < ApplicationController
   def filter
     @languages, @labels = languages, labels
     @labels = [] if @labels.blank?
-    session[:filter_options] = {languages: @languages, labels: @labels}
+    session[:filter_options] = { languages: @languages, labels: @labels }
     @projects = ProjectSearch.new(page: params[:page], labels: @labels, languages: @languages).find.includes(:labels)
     respond_with @projects
   end
@@ -108,7 +108,6 @@ class ProjectsController < ApplicationController
   def set_project
     @project = current_user.projects.find_by_id(params[:id])
 
-    redirect_to  user_path(current_user), notice: "You can only edit projects you have suggested!" unless @project.present?
+    redirect_to user_path(current_user), notice: 'You can only edit projects you have suggested!' unless @project.present?
   end
-
 end

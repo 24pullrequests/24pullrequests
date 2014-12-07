@@ -1,5 +1,5 @@
-desc "Mark inactive projects"
-task :check_for_inactive_projects => :environment do
+desc 'Mark inactive projects'
+task check_for_inactive_projects: :environment do
   count = 0
   Project.active.all.each do |project|
     begin
@@ -19,14 +19,13 @@ task :check_for_inactive_projects => :environment do
   puts "#{count} projects have been deactivated!"
 end
 
-
-task :map_labels_from_github_issues => :environment do
+task map_labels_from_github_issues: :environment do
   ACTIVE_LABELS = Label.all.map(&:name)
 
   Project.active.all.each do |project|
-      user = load_user
+    user = load_user
     labels = project.issues(user.nickname, user.token, 6, open: true).map do |issue|
-      issue.labels.map { |label| label.name }
+      issue.labels.map(&:name)
     end.flatten rescue []
 
     labels.try(:uniq!)

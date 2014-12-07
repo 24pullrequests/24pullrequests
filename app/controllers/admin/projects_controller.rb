@@ -1,13 +1,13 @@
 class Admin::ProjectsController < ApplicationController
-  before_filter :ensure_logged_in
+  before_action :ensure_logged_in
   before_action :ensure_admin
-  before_action :set_project, only: [ :edit, :update, :destroy ]
+  before_action :set_project, only: [:edit, :update, :destroy]
 
   respond_to :html
   respond_to :js, only: :index
 
   def index
-    @projects = Project.order("inactive desc").order(:name).filter_by_repository(repository)
+    @projects = Project.order('inactive desc').order(:name).filter_by_repository(repository)
 
     respond_with @projects
   end
@@ -17,7 +17,7 @@ class Admin::ProjectsController < ApplicationController
 
   def update
     if @project.update_attributes(editable_project_params)
-      redirect_to admin_projects_path, notice: "Project updated successfully!"
+      redirect_to admin_projects_path, notice: 'Project updated successfully!'
     else
       render :edit
     end

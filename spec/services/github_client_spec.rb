@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe GithubClient do
-  subject(:github_client) { GithubClient.new("nickname", "token") }
+  subject(:github_client) { GithubClient.new('nickname', 'token') }
 
   let(:client) { double(:client) }
 
@@ -9,8 +9,8 @@ describe GithubClient do
     expect(github_client).to receive(:client).and_return(client)
   end
 
-  describe "#user_repository_languages" do
-    let(:repos) { ["lan-1", "lan-2", "lan-1" ].map { |l| Hashie::Mash.new(:language => l) } }
+  describe '#user_repository_languages' do
+    let(:repos) { ['lan-1', 'lan-2', 'lan-1'].map { |l| Hashie::Mash.new(language: l) } }
     let(:client) { double(:client, repos: repos) }
 
     it "maps the user's repository languages uniqueley" do
@@ -18,24 +18,24 @@ describe GithubClient do
     end
   end
 
-  describe "#user_events" do
+  describe '#user_events' do
     it "maps the user's repository languages" do
-      expect(client).to receive(:user_events).with("nickname")
+      expect(client).to receive(:user_events).with('nickname')
 
       github_client.user_events
     end
   end
 
-  describe "#user_organizations" do
+  describe '#user_organizations' do
     it "maps the user's repository languages" do
-      expect(client).to receive(:organizations).with("nickname")
+      expect(client).to receive(:organizations).with('nickname')
 
       github_client.user_organizations
     end
   end
 
-  describe "#high_rate_limit" do
-    it "checks the available rate_limit" do
+  describe '#high_rate_limit' do
+    it 'checks the available rate_limit' do
       rate_limit = double(:rate_limit, remaining: 300)
       expect(client).to receive(:rate_limit).and_return(rate_limit)
 
@@ -43,18 +43,18 @@ describe GithubClient do
     end
   end
 
-  describe "#issues" do
+  describe '#issues' do
     it "returns a repository's issues" do
-      repository = "some-repository"
+      repository = 'some-repository'
       expect(client).to receive(:issues).with(repository, {})
 
       github_client.issues(repository, {})
     end
   end
 
-  describe "#commits" do
+  describe '#commits' do
     it "returns a repository's commits" do
-      repository = "some-repository"
+      repository = 'some-repository'
       expect(client).to receive(:commits).with(repository, {})
 
       github_client.commits(repository, {})

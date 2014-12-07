@@ -1,5 +1,4 @@
 class DeferredGarbageCollection
-
   DEFERRED_GC_THRESHOLD = (ENV['DEFER_GC'] || 15.0).to_f
 
   @@last_gc_run = Time.zone.now
@@ -10,7 +9,7 @@ class DeferredGarbageCollection
 
   def self.reconsider
     if DEFERRED_GC_THRESHOLD > 0 &&
-    Time.zone.now - @@last_gc_run >= DEFERRED_GC_THRESHOLD
+       Time.zone.now - @@last_gc_run >= DEFERRED_GC_THRESHOLD
       GC.enable
       GC.start
       GC.disable

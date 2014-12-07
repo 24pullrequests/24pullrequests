@@ -5,7 +5,7 @@ module PullRequestHelpers
       'payload' => {
         'pull_request' => {
           'title'      => Faker::Lorem.words.first,
-          '_links' => {
+          '_links'     => {
             'html' => {
               'href' => Faker::Internet.url
             }
@@ -16,8 +16,8 @@ module PullRequestHelpers
           'merged'     => false
         }
       },
-      'repo' => {
-        'name' => Faker::Lorem.words.first,
+      'repo'    => {
+        'name'     => Faker::Lorem.words.first,
         'language' => Project::LANGUAGES.sample
       }
     }
