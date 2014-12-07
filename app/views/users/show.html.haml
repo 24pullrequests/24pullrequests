@@ -39,7 +39,7 @@
 .row
   .col-sm-12
     - if @user.gifts.year(current_year).any? or @user.pull_requests.year(current_year).any?
-      %h4
+      %h4.pull-right
         =t("user.pull_request_count", user: @user.nickname, count: @user.pull_requests.year(current_year).count, year: current_year)
       %ul#presents.nav.nav-tabs
         %li
