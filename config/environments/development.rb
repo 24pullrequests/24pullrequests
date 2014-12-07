@@ -27,10 +27,10 @@ Tfpullrequests::Application.configure do
 
   config.eager_load = false
 
-  config.action_mailer.default_url_options = { :host => '24pullrequests.dev' }
+  config.action_mailer.default_url_options = { host: '24pullrequests.dev' }
   config.action_mailer.smtp_settings = {
-    :address        => 'localhost',
-    :port           => 1025
+    address: 'localhost',
+    port:    1025
   }
 
 end

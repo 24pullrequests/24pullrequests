@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe PullRequestDownloader, :type => :model do
+describe PullRequestDownloader, type: :model do
   let(:pull_request_downloader) { described_class.new 'foobar', 'Aet8Boux' }
 
   describe '.pull_requests' do

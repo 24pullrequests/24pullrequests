@@ -13,6 +13,6 @@ class CreateOrganisations < ActiveRecord::Migration
       t.integer :organisation_id
     end
 
-    add_index :organisations, [:login], :unique => true
+    add_index :organisations, [:login], unique: true
   end
 end

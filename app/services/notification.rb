@@ -2,7 +2,7 @@ class Notification
   LESS_THAN_A_DAY = 23.hours
   LESS_THAN_A_WEEK = 6.days + LESS_THAN_A_DAY
 
-  LAST_SEEN = { daily: LESS_THAN_A_DAY,
+  LAST_SEEN = { daily:  LESS_THAN_A_DAY,
                 weekly: LESS_THAN_A_WEEK }
 
   def initialize(user)
@@ -10,7 +10,7 @@ class Notification
   end
 
   def send_email
-    return unless user.confirmed? and notifications_enabled?
+    return unless user.confirmed? && notifications_enabled?
 
     daily? ? ReminderMailer.daily(user).deliver : ReminderMailer.weekly(user).deliver
     user.update_attribute(:last_sent_at, Time.zone.now.utc)
@@ -18,12 +18,10 @@ class Notification
 
   private
 
-  def user
-    @user
-  end
+  attr_reader :user
 
   def notifications_enabled?
-    daily? or weekly?
+    daily? || weekly?
   end
 
   def daily?

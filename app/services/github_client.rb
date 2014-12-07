@@ -1,5 +1,4 @@
 class GithubClient
-
   def initialize(nickname, token)
     @nickname = nickname
     @token = token
@@ -17,9 +16,7 @@ class GithubClient
     client.organizations(@nickname)
   end
 
-  def issue(repository_name, issue_id)
-    client.issue(repository_name, issue_id)
-  end
+  delegate :issue, to: :client
 
   def repository(repository)
     client.repo(repository)
@@ -40,8 +37,8 @@ class GithubClient
   private
 
   def client
-    @client ||= Octokit::Client.new(:login => @nickname,
-                                    :access_token => @token,
-                                    :auto_paginate => true)
+    @client ||= Octokit::Client.new(login:         @nickname,
+                                    access_token:  @token,
+                                    auto_paginate: true)
   end
 end

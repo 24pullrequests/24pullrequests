@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe UsersController, :type => :controller do
+describe UsersController, type: :controller do
   let(:user) { create :user }
 
   describe 'GET index' do
@@ -13,12 +13,12 @@ describe UsersController, :type => :controller do
         get :index
       end
 
-      it { expect(assigns(:users).with(User.order('pull_requests_count desc').page(0) )).to be_truthy }
+      it { expect(assigns(:users).with(User.order('pull_requests_count desc').page(0))).to be_truthy }
     end
 
     context 'as json' do
       before do
-        get :index, :format  => :json
+        get :index, format: :json
       end
 
       it { expect(response.header['Content-Type']).to include 'application/json' }
@@ -29,7 +29,7 @@ describe UsersController, :type => :controller do
     context 'as html' do
       context 'when the case matches' do
         before do
-          get :show, :id  => user.nickname
+          get :show, id: user.nickname
         end
 
         it { is_expected.to respond_with(200) }
@@ -37,7 +37,7 @@ describe UsersController, :type => :controller do
 
       context 'when the case does not match' do
         before do
-          get :show, :id  => user.nickname.upcase
+          get :show, id: user.nickname.upcase
         end
 
         it { is_expected.to respond_with(200) }
@@ -46,7 +46,7 @@ describe UsersController, :type => :controller do
 
     context 'as json' do
       before do
-        get :show, :id  => user.nickname, :format  => :json
+        get :show, id: user.nickname, format: :json
       end
 
       it { expect(response.header['Content-Type']).to include 'application/json' }
