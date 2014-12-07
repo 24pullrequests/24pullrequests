@@ -45,9 +45,10 @@ class User < ActiveRecord::Base
   end
 
   def self.contributors
-    contribs = Rails.configuration.contributors.map(&:login)
-
-    where_nickname_in(contribs)
+    @contributors ||= begin
+      contribs = load_user.github_client.contributors('24pullrequests/24pullrequests')
+      where_nickname_in(contribs.map(&:login))
+    end
   end
 
   def self.admins
