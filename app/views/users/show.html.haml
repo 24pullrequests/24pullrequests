@@ -1,7 +1,7 @@
 .title-block.profile-title-block.row
   .col-sm-3
     = image_tag(@user.avatar_url(200), :alt => @user.nickname, :class => "profile-avatar")
-  .col-sm-9
+  .col-sm-9.profile-details
     - if @user == current_user
       .profile-actions.hidden-xs
         = link_to preferences_path, class: "btn btn-default btn-sm" do
