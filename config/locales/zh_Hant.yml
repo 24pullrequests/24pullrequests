@@ -10,13 +10,13 @@ zh_Hant:
   pull_request:
     twitter_message: "我送出了一個 Pull Request，來看看吧！ %{issue_url}"
     download:
-      tooltip: "我們每個小時會檢查一次你帳號中的 Pull Requests，你也可以手動隨時檢查並更新。"
+      tooltip: "我們每個小時會檢查一次你帳號中的 Pull Requests，你也可以手動要求檢查並更新。"
   twitter:
-    account_linked: "你的推特帳號已經成功綁定！我們會在你發起合併請求(pull request)時自動發一條信息。"
-    account_removed: "你的推特帳號已經成功斷開綁定。"
+    account_linked: "你的 Twitter 帳號已經成功連結！我們會在你發起 Pull Request 時自動發一則推文。"
+    account_removed: "你的 Twitter 帳號已經成功斷開連結。"
     link_account:
-      text: "與你的推特帳號綁定"
-      tooltip: "如果你綁定你的推特帳號，我們會在你發起合併請求(pull request)時自動發一條信息！"
+      text: "與你的 Twitter 帳號連結"
+      tooltip: "如果你選擇連結你的 Twitter 帳號，我們會在你發起 Pull Request 時自動發一則推文！"
 
   navigation:
     all_projects: "所有的專案"
@@ -24,28 +24,28 @@ zh_Hant:
     dashboard: "控制中心"
     profile: "個人頁面"
     preferences: "偏好設定"
-    gifted_code: "程式碼禮物"
+    gifted_code: "贈與的程式碼"
     manage_projects: "管理專案"
     logout: "登出"
 
   homepage:
     title: "24 Pull Requests"
-    description: "把程式碼當做聖誕禮物"
+    description: "將程式碼作為聖誕禮物"
     about: "到底是要做什麼呢？"
-    about_text: "<p>24 Pull Requests 是每年這個時候的一個倡議， 鼓勵開發人員在世界各地的十二月每天發出合併請求(pull request)</p> <p>這個網站是為了宣傳這個項目，它的意義，以及如何發出合併請求(pull request)s。</p><p>用你的GitHub帳號登錄，我們就可以記錄你的合併請求(pull request)。還可以推薦你感興趣的項目。</p>"
+    about_text: "<p>24 Pull Requests 是每年這個時候的一個倡議， 鼓勵在世界各地的開發者於十二月中的每一天發出 Pull Request</p> <p>這個網站是為了宣傳這個專案、它的意義，以及如何發出 Pull Requests</p><p>用你的 GitHub 帳號登錄，我們就可以記錄你曾發出的 Pull Requests，還可以推薦你可能感興趣的專案。</p>"
     greeting: "聖誕節要到囉！"
-    give_to_open_source: 你在一整年當中一直受益於開源項目。現在是時候對那些項目的維護者說感謝，有一隻小小鳥告訴我，他們喜歡接受你的合併請求(pull request)！
+    give_to_open_source: 你在一整年當中一直受益於開源專案，現在是時候對那些專案的維護者說感謝，有一隻小小鳥告訴我，他們喜歡接受你的 Pull Request！
     q_n_a: "問與答"
     join_the_chat: "我們在 Gitter 上有個聊天室：%{link_to_chat}，歡迎你一起來和大家討論、分享。"
     badges:
       title: "Coderwall 徽章"
-      description: 我們已經聯手與 Coderwall 和設計了幾個好酷的徽章。快來參與破關拿徽章吧！
-      involved_link: "參與者- 積極參與活動，在聖誕節前發送至少一個合併請求(pull request)"
-      amazing: "連續同步- 你真是一個開源機器，十二月份送出24份合併請求(pull request)"
+      description: 我們已經聯手與 Coderwall 和設計了幾個好酷的徽章，快來參與破關拿徽章吧！
+      involved_link: "參與者- 積極參與活動，在聖誕節前發送至少一個 Pull Request"
+      amazing: "連續同步- 你真是一個開源機器，十二月份送出 24 個 Pull Requests"
     involved:
       title: 齊來參與
-      description: "有很多參與開源項目的途徑：提高文檔質量，幫助修復存在的議題(issues)和錯誤(bugs)，提高代碼質量和測試覆蓋率，或添加缺失的功能"
-      special_page: "我們準備了%{contributing_path}，在這裡您可以找到有關的一些信息。"
+      description: "有很多參與開源專案的方法：提高文件的品質，幫助修復存在的議題(issues)和錯誤(bugs)，提高程式碼品質和測試覆蓋率，或添加缺少的功能"
+      special_page: "我們準備了%{contributing_path}，在這裡你可以找到有關的一些訊息。"
       contributing_path: "開源指南"
       take_a_look: 如果你是剛接觸開源，請看～
     event:
@@ -55,18 +55,18 @@ zh_Hant:
       host_an_event: 舉辦活動
     profile:
       title: 建立作品集
-      description: 參與開源項目，也是一個建立起您在社區的經歷，提高您的簡歷的好方法。
+      description: 參與開源專案，也是一個建立起你在社群的經歷，豐富你的簡歷的好方法。
       getting_started: 開源其實很容易上手，不論多小的貢獻都有很大的價值。
 
   information:
-    title: "24 Pull Requests %{year} is upon us"
-    last_year_stats: "在%{year}年， 的24天裡， <b>%{developers}</b> 名開發者提交了<b>%{pull_requests}</b> 次合併請求(pull request) 提供給<b>%{projects}</b> 個不同的開源項目。"
+    title: "24 Pull Requests %{year} 就交給我們了"
+    last_year_stats: "在 %{year} 年最後的24天裡， <b>%{developers}</b> 名開發者送出了<b>%{pull_requests}</b> 次 Pull Requests 提供給<b>%{projects}</b> 個不同的開源專案。"
     get_ready: 準備好，24 Pull Requests %{year}！讓我們再次做到這一切！
-    help_open_source: "還想要同時幫助其他開源項目嗎？去看看這幾個開源項目倡議吧："
-    codetriage: "感恩回饋開源，一次一個議題(issue)，CodeTriage與你同行。你會每天從你喜歡的項目那分配到一個議題（issue），並引導你越學越多，參與撰寫大家日常所依賴的代碼裡。"
+    help_open_source: "還想要同時幫助其他開源專案嗎？去看看這幾個開源專案倡議吧："
+    codetriage: "感恩回饋開源，一次一個議題(issue)，CodeTriage 與你同行。你會每天從你喜歡的專案那分配到一個議題（issue），並引導你越學越多，參與撰寫大家日常所依賴的程式碼裡。"
     contribhub:
-      tagline: 你知道有一個非常酷的項目需要你的一些幫助（就像你的鄰居那樣）?ContribHub來告訴你！
-      description: ContribHub是一個GitHub上的應用，使用它可以更容易找到項目並貢獻一臂之力，並圍繞這個項目形成良好的社區。
+      tagline: 你知道有一個非常酷的專案需要你的一些幫助（就像你的鄰居那樣）？ContribHub 來告訴你！
+      description: ContribHub 是一個 GitHub 上的應用，使用它可以更容易找到專案並貢獻一臂之力，並圍繞這個專案形成良好的社群。
 
   follow_user: 跟隨 @%{twitter}
   sponsored_by: 贊助單位
@@ -75,7 +75,7 @@ zh_Hant:
   open_source_yey: 開源萬歲！
   welcome: "歡迎， %{user}"
   welcome_back: "歡迎回來， %{user}"
-  your_pull_requests: 你的合併請求(pull request)s
+  your_pull_requests: 你的 Pull Requests
   suggested_projects: 大家推薦的專案
   suggest_project: 推薦專案
   no_suggestions: 你還沒有推薦過任何專案。
@@ -96,85 +96,85 @@ zh_Hant:
   happy_holidays: 聖誕節快樂
 
   user:
-    grinchy_message: "在%{year}年，%{user}是一個聖誕怪傑。他發起了〇個合併請求(pull request)。 鴨蛋！"
-    pull_request_count: "在%{year}年， %{user} 一共發起了%{count} 次合併請求(pull request)"
+    grinchy_message: "在 %{year} 年，%{user} 是一個聖誕怪傑，他發起了〇個 Pull Request，鴨蛋！"
+    pull_request_count: "在 %{year} 年， %{user} 一共發起了%{count} 次 Pull Requests"
     organisations: 組織
     coderwall:
       title: Coderwall 徽章
       achieved_by: "贏取的徽章"
-      success: "成功更新了Coderwall的用戶名！"
+      success: "成功更新了 Coderwall 的使用者名稱！"
       update_button: "更新"
-      error_no_user: "沒有找到與這個用戶名關聯的帳號。"
-      error_github_not_connected: "賬戶%{username} 在Coderwall 和24 Pull Requests 綁定的GitHub帳號不同"
+      error_no_user: "沒有找到與這個使用者名稱關聯的帳號。"
+      error_github_not_connected: "帳號 %{username} 在 Coderwall 和24 Pull Requests 綁定的 GitHub 帳號不同"
 
-  developers_using_language: 個工程師使用 %{language}
-  developers_involved: 個工程師已經加入
+  developers_using_language: 位開發者使用 %{language}
+  developers_involved: 位開發者已經加入
   developers_involved_desc: 加入大家一起讓開源軟體更蓬勃。
   organisations_involved_desc: 邀請你公司或組織的朋友、同事們一起加入。
 
   dashboard:
-    christmas_activity: 在這裡，您可以看到所有聖誕節你的活動。
-    give_a_gift: 看起來你今天還沒有贈送任何代碼。你想現在去贈出一份代碼嗎？
-    # This is followed by a select-menu where you can pick one of your non-gifted 合併請求(pull request)s to gift
-    synchronize: 同步合併請求(pull request)
+    christmas_activity: 在這裡，你可以看到所有聖誕節你的活動。
+    give_a_gift: 看起來你今天還沒有贈送任何程式碼。你想現在去贈出一份程式碼嗎？
+    # This is followed by a select-menu where you can pick one of your non-gifted  Pull Request s to gift
+    synchronize: 同步 Pull Request 
     help_out: "不知道該從哪裡開始嗎？這裡是一些大家推薦的專案："
-    no_pull_requests: 您還沒有發送任何合併請求(pull request)， 你還等什麼呢？！
+    no_pull_requests: 你還沒有發送任何 Pull Request ， 你還等什麼呢？！
     gift_it: 贈與！
     pull_requests: 這邊列出了參與者們最新送出的 pull requests。現在送出 pull request，就也可以看到你的唷！
 
   language:
-    projects_count: "%{count} %{language} 項目"
+    projects_count: "%{count} %{language} 專案"
     projects:
-      count: "%{count} 個項目使用 %{language}"
-      suggest: "建議一個 %{language} 的項目"
+      count: "%{count} 個專案使用 %{language}"
+      suggest: "建議一個 %{language} 的專案"
     developers:
       count: "%{count} 名開發者使用 %{language}"
     pull_requests:
       latest:
-        count: 最新的%{language} 合併請求(pull request)有(%{count} 次)
+        count: 最新的 %{language}  Pull Request 有(%{count} 次)
 
   projects:
-    claim: 有哪些你建立的項目沒有列出來？快來認領他們吧！
-    help_out: 不出你想要參與的項目嗎？我們幫您整理好了一些熱門的項目等待你的加入！
-    suggest_new: 你可以建議你支持的項目，也可以把你自己需要幫助的項目列上去。
+    claim: 有哪些你建立的專案沒有列出來？快來認領他們吧！
+    help_out: 不出你想要參與的專案嗎？我們幫你整理好了一些熱門的專案等待你的加入！
+    suggest_new: 你可以建議你支持的專案，也可以把你自己需要幫助的專案列上去。
     filter_by_language: "按語言分類:"
-    for_you: 給您準備的推薦
+    for_you: 給你準備的推薦
     suggestion:
       edit: 編輯
-      update: 更新項目
-    suggest: 還沒有這個語言的項目呢，推薦一個%{suggest_link}?
+      update: 更新專案
+    suggest: 還沒有這個語言的專案呢，推薦一個%{suggest_link}?
     suggest_link_text: 推薦專案
     new:
       title: 推薦專案
-      info: 一個鼓勵大家參與開源社區的方法是讓大家知道哪些熱門項目值得大家一起參與。按照這個標准我們選擇一些項目。如果您有想法，和我們一起分享吧！
-      suggestion: 對項目有建議? 我們洗耳恭聽! 如果你有想要建議的地方，請提出%{issue_link}。
+      info: 一個鼓勵大家參與開源社群的方法是讓大家知道哪些熱門專案值得大家一起參與。按照這個標准我們選擇一些專案。如果你有想法，和我們一起分享吧！
+      suggestion: 對專案有建議? 我們洗耳恭聽! 如果你有想要建議的地方，請提出%{issue_link}。
       issue_link_text: 建議一個議題(issue)
 
       form:
-        project_name: 項目名稱
-        github_url: GitHub 鏈接
+        project_name: 專案名稱
+        github_url: GitHub 連結
         summary: 簡單總結
-        main_language: 主要使用的編程語言
-        submit_project: 提交
+        main_language: 主要使用的程式語言
+        submit_project: 送出
 
     edit:
       title: 編輯建議
     admin:
-      title: 管理項目
-      search: 搜索GitHub的代碼庫
+      title: 管理專案
+      search: 搜索GitHub的程式碼庫
 
   preferences:
-      title: 設置您的個人喜好
+      title: 設定你的個人喜好
       setup_help: 在開始參與 24 Pull Requests 之前，請先設定個人偏好。
-      frequency_message: 在項目結束前，我們會根據您所選擇的頻率，給您發送郵件，推荐一些您可能感興趣的項目。如果您允許，我們已經根據您在GitHub的代碼庫得出您喜好的語言（您可以在下面修改）。
-      delete: "想要刪除您的帳號？"
-      information: 你可以在之後修改您接收郵件的偏好設置
-      twitter: 推特帳號
-      languages: 您知道哪些編程語言？
+      frequency_message: 在專案結束前，我們會根據你所選擇的頻率，給你發送郵件，推荐一些你可能感興趣的專案。如果你允許，我們已經根據你在 GitHub 的程式碼庫得出你喜好的語言（你可以在下面修改）。
+      delete: "想要刪除你的帳號？"
+      information: 你可以在之後修改你接收郵件的偏好設定
+      twitter: Twitter 帳號
+      languages: 你知道哪些程式語言？
       remove: 刪除帳號
       save_and_continue: 保存並繼續
-      coderwall: 與您的coderwall帳號綁定，在您的coderwall帳號上顯示徽章
-      coderwall_username: "Coderwall用戶名"
+      coderwall: 與你的 Coderwall 帳號連結，在你的 Coderwall 帳號上顯示徽章
+      coderwall_username: "Coderwall 用戶名"
 
       form:
         email: 郵件
@@ -184,37 +184,37 @@ zh_Hant:
         weekly: 每週
 
       hint:
-        confirm_email: 請用我們發給您郵箱的鏈接確認郵箱。
+        confirm_email: 請用我們發給你郵箱的鏈接確認郵箱。
 
   pull_requests:
-    count: "%{count} 次合併請求(pull request) 被發起!"
+    count: "%{count} 次 Pull Request  被發起!"
     language:
-      count: "%{count} 次合併請求(pull request) 使用%{language}!"
+      count: "%{count} 次 Pull Request  使用%{language}!"
     latest:
-      count: 最新的合併請求(pull request) (總共%{count} 次)
+      count: 最新的 Pull Requests （總共%{count} 次）
 
   delete_account:
-    title: 刪除您的帳號
-    are_you_sure: 請確認刪除帳號。刪除您的帳號會刪除您的用戶信息，和所有在本站發去的合併請求(pull request)，不過您建議的項目會得到保存。
-    notification_info: 如果您不想接收到郵件提醒，您可以改變設置： %{email_preferences_link}。
+    title: 刪除你的帳號
+    are_you_sure: 請確認刪除帳號。刪除你的帳號會刪除你的用戶訊息，和所有在本站發去的 Pull Request ，不過你建議的專案會得到保存。
+    notification_info: 如果你不想接收到郵件提醒，你可以改變設定： %{email_preferences_link}。
     email_preferences_link: 郵件偏好
     confirm: 確認刪除
     cancel: 我改變主意了
 
   gifts:
-    title: 贈出的代碼
-    description: 在這裡管理您的合併請求(pull request)並且選擇&amp;描述你的"24 Pull Requests"。
-    view_your_gifts: 你所有贈出的代碼都會顯示在您的%{calendar_link}。
-    calendar_link: 公共日曆
+    title: 贈出的程式碼
+    description: 在這裡管理你的 Pull Request 並且選擇&amp;描述你的"24 Pull Requests"。
+    view_your_gifts: 你所有贈出的程式碼都會顯示在你的%{calendar_link}。
+    calendar_link: 公開日曆
     none: 沒有送出程式碼…
-    give: 獻給你愛的項目一點東西…代碼
+    give: 獻給你愛的專案一點東西…程式碼
     link_twitter_desc: "想要和大家分享你送出了哪些程式碼嗎？%{link_twitter}後我們就會幫你和大家分享每一個禮物。"
     link_twitter: "連結 Twitter 帳號"
 
     form:
       date: 日期
-      pull_requests: 合併請求(pull request)
-      tweet: 發推說說你的合併請求(pull request)
+      pull_requests:  Pull Request 
+      tweet: 發推說說你的 Pull Request 
       gift_it: "贈與！"
 
   contributors:
@@ -222,11 +222,11 @@ zh_Hant:
 
   about:
     title: 關於 24 Pull Requests
-    description: 24 Pull Requests 是一個在12月份促進開源合作的小小項目。
-    idea: 想法很簡單， "在12月到聖誕節之前的每一天發出合併請求(pull request)"， 鼓勵開發者在這段時間回饋開源社區。
-    more_info: 這個小站也提供一些值得參與的項目，一些指南，並且展示每天哪些出色的合併請求(pull request)。
-    on_github: "這個小站的開發也是開源的寄存在GitHub上："
-    on_twitter: "我們也在推特上："
+    description: 24 Pull Requests 是一個在 12 月份促進開源合作的小小專案。
+    idea: 想法很簡單， "在12月到聖誕節之前的每一天發出 Pull Request "， 鼓勵開發者在這段時間回饋開源社區。
+    more_info: 這個小站也提供一些值得參與的專案，一些指南，並且展示每天哪些出色的 Pull Request 。
+    on_github: "這個小站的開發也是以開放原始碼存在 GitHub 上："
+    on_twitter: "我們也在 Twitter 上："
     sponsors:
       title: 支持和幫助
       details: 24 Pull Requests 接受了他們的支持和幫助。
@@ -235,35 +235,35 @@ zh_Hant:
 
   organisations:
     title: "%{count} 個組織參與"
-    pull_requests: "%{count} 次合併請求(pull request)由成員發起"
+    pull_requests: "%{count} 次 Pull Requests 由成員發起"
     members:
       one: "一名成員"
       other: "%{count} 名成員"
-    languages: 編程語言
+    languages: 程式語言
 
   suggestions:
     title: 我的建議
 
   api:
     title: JSON API
-    description: 你可能不知到，24 Pull Requests有JSON API，描述如下。
+    description: 你可能不知道，24 Pull Requests 有提供 JSON API，描述如下。
     pagination:
-      title: Pagination
-      details: 返回多個條目的請求默認以99條分頁，您可以在?page 參數修改。
+      title: 分頁
+      details: 返回多個條目的請求預設是以 99 條分頁，你可以透過 ?page 參數修改。
     callback:
       title: JSON-P Callbacks
-      details: 您可以發送一個帶有?callback 參數的發給任何GET 請求，得到包裝在函數里的結果。這主要用來解決跨域名的問題。 （返回與平時相同）
+      details: 你可以發送一個帶有 ?callback 參數的發給任何 GET 請求，得到包裝在函數里的結果。這主要用來解決跨域名的問題。 （返回與平時相同）
     projects:
-      title: Projects
-      details: 所有站點上的項目信息，按字母表排序。
+      title: 專案
+      details: 所有站點上的專案訊息，按字母表排序。
     pull_requests:
       title: Pull Requests
-      details: 在12月份當之所有的合併請求(pull request)，按照時間排序（包含用戶）
+      details: 在12月份當之所有的 Pull Request ，按照時間排序（包含用戶）
     users:
-      title: Users
-      details: 所有註冊用戶，按照他們今年合併請求(pull request)數量排序， 同時包含他們的組織信息和合併請求(pull request)信息。
-      specific: 一個指定用戶的信息。
+      title: 使用者
+      details: 所有註冊用戶，按照他們今年 Pull Request 數量排序， 同時包含他們的組織訊息和 Pull Request 訊息。
+      specific: 一個指定用戶的訊息。
     organisations:
-      title: Organisations
+      title: 組織
       details: 所有註冊組織，包括組織的成員。
-      specific: 一個指定組織的信息。
+      specific: 一個指定組織的訊息。
