@@ -5,7 +5,7 @@ class StaticController < ApplicationController
     @orgs = Organisation.with_user_counts.order_by_pull_requests.limit(200).sample(24)
     @pull_requests = PullRequest.year(current_year).order('created_at desc').limit(5)
 
-    render layout: "homepage"
+    render layout: 'homepage'
   end
 
   def about
@@ -16,13 +16,13 @@ class StaticController < ApplicationController
   end
 
   def humans
-    unless Rails.cache.read("humans.txt")
+    unless Rails.cache.read('humans.txt')
       @contributors = load_contributors
-      humans = render_to_string "static/humans.txt.erb", content_type: "text/plain"
-      Rails.cache.write("humans.txt", humans, expires_in: 1.day)
+      humans = render_to_string 'static/humans.txt.erb', content_type: 'text/plain'
+      Rails.cache.write('humans.txt', humans, expires_in: 1.day)
     end
 
-    render text: Rails.cache.read("humans.txt"), content_type: "text/plain"
+    render text: Rails.cache.read('humans.txt'), content_type: 'text/plain'
   end
 
   private

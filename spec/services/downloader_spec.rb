@@ -4,7 +4,7 @@ describe Downloader do
   let(:user) { FactoryGirl.create(:user) }
   let(:downloader) { Downloader.new(user) }
 
-  describe "#get_organisations" do
+  describe '#get_organisations' do
     before do
       user_downloader = double(:user_downloader, user_organisations: [double_organisation])
       allow(downloader).to receive(:user_downloader).and_return(user_downloader)
@@ -13,11 +13,11 @@ describe Downloader do
     it "creates a copy of all the user's organisations" do
       downloader.get_organisations
 
-      expect(user.organisations.first.login).to eq("kobol")
+      expect(user.organisations.first.login).to eq('kobol')
     end
   end
 
-  describe "#get_pull_requests" do
+  describe '#get_pull_requests' do
     let(:pull_request) { mock_pull_request }
 
     before do
@@ -47,8 +47,8 @@ describe Downloader do
 
   def double_organisation
     double(:organisation,
-           id: 2,
+           id:    2,
            _rels: { avatar: double(:avatar, href: 'href') },
-           login: "kobol")
+           login: 'kobol')
   end
 end

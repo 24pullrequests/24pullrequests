@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe PullRequest, :type => :model do
+describe PullRequest, type: :model do
   let(:user) { create :user }
 
   it { is_expected.to belong_to(:user) }
@@ -26,7 +26,7 @@ describe PullRequest, :type => :model do
     #     twitter = double('twitter')
     #     twitter.stub(:update)
     #     User.any_instance.stub(:twitter).and_return(twitter)
-        
+
     #     user.twitter.should_receive(:update)
     #       .with(I18n.t 'pull_request.twitter_message', :issue_url => json['payload']['pull_request']['_links']['html']['href'])
     #     user.pull_requests.create_from_github(json)
@@ -44,13 +44,13 @@ describe PullRequest, :type => :model do
 
     context 'when PR body does not contain "24 pull requests"' do
       it 'does not create a gift' do
-        pull_request = FactoryGirl.create :pull_request, body: "...and a merry christmas!"
+        pull_request = FactoryGirl.create :pull_request, body: '...and a merry christmas!'
         expect(pull_request.gifts).to be_empty
       end
     end
   end
 
-  describe "#check_state" do
+  describe '#check_state' do
     let(:pull_request) { create(:pull_request, user: user) }
     before do
       client = double(:github_client, issue: Hashie::Mash.new(mock_issue))
@@ -62,20 +62,22 @@ describe PullRequest, :type => :model do
     subject { pull_request }
 
     its(:comments_count) { should eq 5        }
-    its(:state)          { should eq "closed" }
+    its(:state)          { should eq 'closed' }
   end
 
-  context "#scopes" do
+  context '#scopes' do
     let!(:pull_requests) do
-      4.times.map  { |n| create(:pull_request, language: "Haskell",
-                                               created_at: DateTime.now + n.minutes) }
+      4.times.map  do |n|
+        create(:pull_request, language:   'Haskell',
+                              created_at: DateTime.now + n.minutes)
+      end
     end
 
-    it "by_language" do
-      expect(PullRequest.by_language("Haskell").order("created_at asc")).to eq pull_requests
+    it 'by_language' do
+      expect(PullRequest.by_language('Haskell').order('created_at asc')).to eq pull_requests
     end
 
-    it "latest" do
+    it 'latest' do
       expect(PullRequest.latest(3)).to eq(pull_requests.reverse.take(3))
     end
 

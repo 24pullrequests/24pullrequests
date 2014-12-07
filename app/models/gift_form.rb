@@ -11,16 +11,16 @@ class GiftForm
   def pull_requests_for_select
     @pull_requests
       .select { |pr| pr.created_at.year == Time.now.year }
-      .sort{ |pr1, pr2| pr2.gifted_state <=> pr1.gifted_state }
-      .map{ |pr|
+      .sort { |pr1, pr2| pr2.gifted_state <=> pr1.gifted_state }
+      .map do |pr|
         ["#{pr.gifted_state.to_s.humanize}: #{pr.repo_name} - #{pr.title}", pr.to_param]
-      }
+      end
   end
 
   def giftable_dates
-    @giftable_dates.map { |date|
+    @giftable_dates.map do |date|
       ["#{ date.strftime('%B') } #{ date.mday.ordinalize }", date.to_s]
-    }
+    end
   end
 
   def show_date_select?

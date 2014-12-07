@@ -1,14 +1,14 @@
 class PullRequest  < ActiveRecord::Base
-  belongs_to :user, :counter_cache => true
+  belongs_to :user, counter_cache: true
 
-  validates_uniqueness_of :issue_url, :scope => :user_id
+  validates_uniqueness_of :issue_url, scope: :user_id
 
   after_create :autogift
 
   has_many :gifts
 
   scope :year, -> (year) { where('EXTRACT(year FROM "created_at") = ?', year) }
-  scope :by_language, -> (language) { where("lower(language) = ?", language.downcase) }
+  scope :by_language, -> (language) { where('lower(language) = ?', language.downcase) }
   scope :latest, -> (limit) { order('created_at desc').limit(limit) }
 
   EARLIEST_PULL_DATE = Date.parse("01/12/#{CURRENT_YEAR}").midnight
@@ -21,14 +21,14 @@ class PullRequest  < ActiveRecord::Base
 
     def initialize_from_github(json)
       {
-        :title          => json['payload']['pull_request']['title'],
-        :issue_url      => json['payload']['pull_request']['_links']['html']['href'],
-        :created_at     => json['payload']['pull_request']['created_at'],
-        :state          => json['payload']['pull_request']['state'],
-        :body           => json['payload']['pull_request']['body'],
-        :merged         => json['payload']['pull_request']['merged'],
-        :repo_name      => json['repo']['name'],
-        :language       => json['repo']['language']
+        title:      json['payload']['pull_request']['title'],
+        issue_url:  json['payload']['pull_request']['_links']['html']['href'],
+        created_at: json['payload']['pull_request']['created_at'],
+        state:      json['payload']['pull_request']['state'],
+        body:       json['payload']['pull_request']['body'],
+        merged:     json['payload']['pull_request']['merged'],
+        repo_name:  json['repo']['name'],
+        language:   json['repo']['language']
       }
     end
 
@@ -39,16 +39,14 @@ class PullRequest  < ActiveRecord::Base
 
   def check_state
     issue = GithubClient.new(user.nickname, user.token).issue(repo_name, id)
-    self.update_attributes(state: issue.state, comments_count: issue.comments)
+    update_attributes(state: issue.state, comments_count: issue.comments)
   end
 
   def post_tweet
-    begin
-      user.twitter.update(I18n.t 'pull_request.twitter_message', :issue_url => issue_url) if user && user.twitter_linked?
-    rescue => e
-      Rails.logger.error "likely a Twitter API error occurred:\n"\
-                         "#{e.inspect}"
-    end
+    user.twitter.update(I18n.t 'pull_request.twitter_message', issue_url: issue_url) if user && user.twitter_linked?
+  rescue => e
+    Rails.logger.error "likely a Twitter API error occurred:\n"\
+                       "#{e.inspect}"
   end
 
   def gifted_state

@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
-
   unless Rails.env.production?
-    skip_before_filter :verify_authenticity_token, :only => [:create]
+    skip_before_action :verify_authenticity_token, only: [:create]
   end
 
   def new
@@ -17,7 +16,7 @@ class SessionsController < ApplicationController
     flash[:notice] = nil
     session[:user_id] = user.id
 
-    redirect_to dashboard_url and return unless pre_login_destination
+    redirect_to(dashboard_url) && return unless pre_login_destination
     redirect_to pre_login_destination
   end
 
@@ -31,10 +30,9 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
-private
+  private
 
   def pre_login_destination
     session[:pre_login_destination]
   end
-
 end
