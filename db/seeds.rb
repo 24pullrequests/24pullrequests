@@ -42,7 +42,7 @@ if Rails.env.development?
     project.labels << labels.sample(2)
   end
 
-  Rails.configuration.contributors.each do |contributor|
+  User.contributors.each do |contributor|
     user = create :user, nickname: contributor.login, gravatar_id: contributor.gravatar_id
 
     3.times { user.organisations << Organisation.limit(100).sample }
