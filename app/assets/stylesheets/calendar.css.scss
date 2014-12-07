@@ -28,7 +28,7 @@ $festive-colour: $header-background;
   }
 
   &.gifted {
-    border-top-color: $festive-colour;
+    border-color: $festive-colour;
 
     &:hover .remove-gift {
       display: block;
@@ -83,4 +83,36 @@ $festive-colour: $header-background;
   margin: 0 auto 5px;
   clear: both;
   color: $festive-colour;
+}
+
+@media (max-width: 767px) {
+  .calendar-mday {
+    margin-left: -45px;
+    width: 40px;
+    float: left;
+    display: inline-block;
+  }
+
+  .calendar-padding {
+    display: none;
+  }
+
+  .calendar-day {
+    display: block;
+    width: 100%;
+    float: none;
+    height: auto;
+    border-left: 5px solid #eee;
+    border-top: 0;
+    margin-bottom: 1px;
+    padding: 10px;
+    padding-left: 55px;
+
+    .remove-gift {
+      display: block;
+      position: relative;
+      float: right;
+      margin: -5px 5px 0 -5px;
+    }
+  }
 }

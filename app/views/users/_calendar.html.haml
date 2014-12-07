@@ -5,6 +5,7 @@
   - calendar.each_day do |date, gift|
     %li.calendar-day{ :class => ("gifted" if gift.present?) }
       %span{ :class => date == Date.today ? 'calendar-mday calendar-mday-today' : 'calendar-mday' }
+        %span.visible-xs-inline> 12/
         = date.mday
       - if gift.present? && gift.user == current_user
         .remove-gift
@@ -14,6 +15,8 @@
 
   %li.calendar-day.calendar-christmas
     .calendar-inner
-      %span.calendar-mday 25
+      %span.calendar-mday
+        %span.visible-xs-inline> 12/
+        25
       %span.octicon.octicon-star.festive-star
       =t("happy_holidays")
