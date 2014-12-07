@@ -35,12 +35,13 @@
             %li.avatar-cell
               = link_to organisation_path(organisation.login), class: "avatar-link", rel: "tooltip", title: organisation.login, data: { placement: "bottom" } do
                 = image_tag(organisation.avatar_url, alt: organisation.login, class: "avatar-img")
+    .profile-pull-request-count
+      %span.octicon.octicon-gift
+      =t("user.pull_request_count", user: @user.nickname, count: @user.pull_requests.year(current_year).count, year: current_year)
 
 .row
   .col-sm-12
     - if @user.gifts.year(current_year).any? or @user.pull_requests.year(current_year).any?
-      %h4.pull-right
-        =t("user.pull_request_count", user: @user.nickname, count: @user.pull_requests.year(current_year).count, year: current_year)
       %ul#presents.nav.nav-tabs
         %li
           %a.active{"data-toggle" =>"tab", href: "#gifts"}Gifts
