@@ -3,5 +3,5 @@ class ProjectLabel < ActiveRecord::Base
   belongs_to :label
 
   validates :label_id, presence: true
-  validates :label_id, :uniqueness => {:scope => :project_id}
+  validates :label_id, uniqueness: { scope: :project_id }
 end

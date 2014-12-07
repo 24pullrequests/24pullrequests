@@ -6,19 +6,19 @@ module ApplicationHelper
   def parameterize_language(lang)
     if lang
       lang.gsub(/\+/, 'p')
-          .gsub(/\#/, 'sharp')
-          .parameterize
+        .gsub(/\#/, 'sharp')
+        .parameterize
     end
   end
 
   def language_link(language, label = nil)
     language = if language.respond_to? :map
-      language.map &method(:escape_language)
-    else
-      escape_language language
+                 language.map &method(:escape_language)
+               else
+                 escape_language language
     end
     label = label || [language].flatten.join(', ')
-    link_to label, '#', data: {language: language}
+    link_to label, '#', data: { language: language }
   end
 
   def github_button(nickname)
@@ -42,13 +42,13 @@ module ApplicationHelper
   end
 
   def current_path(locale = nil)
-    path = request.env["REQUEST_PATH"]
+    path = request.env['REQUEST_PATH']
     path += "?locale=#{locale}" if locale.present?
     path
   end
 
   def available_locales
-    [ 'en', 'es', 'el', 'pt_br', 'fi', 'fr', 'de', 'ru', 'uk', 'th', 'it', 'nb', 'ta', 'tr', 'zh_Hans', 'zh_Hant', 'ja' ]
+    %w(en es el pt_br fi fr de ru uk th it nb ta tr zh_Hans zh_Hant ja)
   end
 
   def current_translations

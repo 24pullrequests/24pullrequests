@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Gift, :type => :model do
+describe Gift, type: :model do
   let(:gift) { create :gift }
   let(:pull_request) { gift.pull_request }
   let(:user) { gift.user }
@@ -11,14 +11,14 @@ describe Gift, :type => :model do
   it { is_expected.to validate_inclusion_of(:date).in_array(Gift.giftable_dates) }
 
   describe '#find' do
-    subject { described_class.find(user, Time.zone.now.to_date)}
+    subject { described_class.find(user, Time.zone.now.to_date) }
     it { is_expected.to eq gift }
   end
 
   it 'raises a validation error when a gift has already been given for the current day' do
-    expect {
-      user.gifts.create!(:pull_request => pull_request, :date => gift.date)
-    }.to raise_error ActiveRecord::RecordInvalid, 'Validation failed: Date you only need one gift per day. Save it for tomorrow!'
+    expect do
+      user.gifts.create!(pull_request: pull_request, date: gift.date)
+    end.to raise_error ActiveRecord::RecordInvalid, 'Validation failed: Date you only need one gift per day. Save it for tomorrow!'
   end
 
   describe '.date' do

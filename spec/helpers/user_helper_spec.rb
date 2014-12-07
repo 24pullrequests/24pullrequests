@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-describe UserHelper, :type => :helper do
+describe UserHelper, type: :helper do
   before do
-    3.times { create :skill, language: "Erlang" }
-    2.times { create :skill, language: "Python" }
+    3.times { create :skill, language: 'Erlang' }
+    2.times { create :skill, language: 'Python' }
   end
 
   describe '#user_count' do
@@ -12,7 +12,7 @@ describe UserHelper, :type => :helper do
     end
 
     it 'returns the number of all users using a language' do
-      @language = "Python"
+      @language = 'Python'
 
       expect(helper.user_count).to eql(2)
     end

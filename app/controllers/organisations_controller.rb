@@ -1,5 +1,4 @@
 class OrganisationsController < ApplicationController
-
   respond_to :html, :json
   respond_to :js, only: :index
 

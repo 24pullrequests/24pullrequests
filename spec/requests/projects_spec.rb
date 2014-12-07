@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe 'Projects', :type => :request do
-  let(:user) { create :user, :email_frequency => 'daily' }
+describe 'Projects', type: :request do
+  let(:user) { create :user, email_frequency: 'daily' }
   subject { page }
 
   describe 'project index' do
@@ -21,14 +21,14 @@ describe 'Projects', :type => :request do
 
     it 'allows the user to suggest a project to contribute to' do
       click_link 'Suggest a project'
-      fill_in 'Name', :with => Faker::Lorem.words.first
-      fill_in 'GitHub URL', :with => 'http://github.com/akira/24pullrequests'
-      fill_in 'Summary', :with => Faker::Lorem.paragraphs.first[0..199]
-      fill_in 'Main language', :with => 'Ruby'
+      fill_in 'Name', with: Faker::Lorem.words.first
+      fill_in 'GitHub URL', with: 'http://github.com/akira/24pullrequests'
+      fill_in 'Summary', with: Faker::Lorem.paragraphs.first[0..199]
+      fill_in 'Main language', with: 'Ruby'
       click_on 'Submit Project'
 
       click_on 'My Suggestions'
-      is_expected.to have_content("akira/24pullrequests")
+      is_expected.to have_content('akira/24pullrequests')
     end
   end
 
@@ -50,7 +50,7 @@ describe 'Projects', :type => :request do
       end
 
       it 'should display projects for any selected languages' do
-        all('.icheckbox_line', text: "Java").first.click
+        all('.icheckbox_line', text: 'Java').first.click
 
         within '#projects' do
           expect(page).to have_css('.ruby')
@@ -59,7 +59,7 @@ describe 'Projects', :type => :request do
       end
 
       it 'should reset active filter when clicking "All Languages"' do
-        all('.icheckbox_line', text: "All Languages").first.click
+        all('.icheckbox_line', text: 'All Languages').first.click
         within '#projects' do
           expect(page).to have_css('.ruby')
           expect(page).to have_css('.java')
@@ -73,7 +73,7 @@ describe 'Projects', :type => :request do
         visit projects_path
 
         click_on 'More'
-        all('#projects project').each{|project| expect(project) .to have_css('ruby') }
+        all('#projects project').each { |project| expect(project) .to have_css('ruby') }
       end
     end
   end
@@ -99,8 +99,8 @@ describe 'Projects', :type => :request do
       #   page.should have_css('.python')
       # end
 
-      it "can deactive a project" do
-        first(:link, "Deactive").click
+      it 'can deactive a project' do
+        first(:link, 'Deactive').click
 
         is_expected.to have_content "#{user_project.name} has been deactivated."
       end
@@ -109,7 +109,7 @@ describe 'Projects', :type => :request do
     it "should not be able to edit other user's suggestions" do
       visit edit_project_path(other_project)
 
-      is_expected.to have_content "You can only edit projects you have suggested!"
+      is_expected.to have_content 'You can only edit projects you have suggested!'
     end
   end
 end

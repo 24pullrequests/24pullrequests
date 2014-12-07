@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe ApplicationHelper, :type => :helper do
+describe ApplicationHelper, type: :helper do
 
   describe '#parameterize_language' do
     it 'parameterizes a language param' do
@@ -34,11 +34,11 @@ describe ApplicationHelper, :type => :helper do
     end
   end
 
-  describe "#gratipay_button" do
-    it "returns a gratipay button for the nickname" do
+  describe '#gratipay_button' do
+    it 'returns a gratipay button for the nickname' do
       resulting_html = "<a href=\"https://www.gratipay.com/on/github/andrew/\" class=\"btn btn-success btn-mini btn-block\"><span class=\"glyphicon glyphicon-heart\"></span>Support via Gratipay</a>"
 
-      expect(helper.gratipay_button("andrew")).to eql(resulting_html)
+      expect(helper.gratipay_button('andrew')).to eql(resulting_html)
     end
   end
 
@@ -79,7 +79,7 @@ describe ApplicationHelper, :type => :helper do
     end
   end
 
-  describe "stats" do
+  describe 'stats' do
     let(:user) { create(:user) }
     let(:last_year) { DateTime.now.year - 1 }
 
@@ -87,20 +87,20 @@ describe ApplicationHelper, :type => :helper do
       3.times { create(:pull_request, user: user, created_at: DateTime.now - 1.year) }
     end
 
-    it "contributors_in(year)" do
+    it 'contributors_in(year)' do
       2.times { create(:pull_request, created_at: DateTime.now - 1.year) }
 
       expect(helper.contributors_in(last_year)).to eq(3)
     end
 
-    it "pull_requests_in(year)" do
+    it 'pull_requests_in(year)' do
       3.times { create(:pull_request) }
 
       expect(helper.pull_requests_in(last_year)).to eq(3)
     end
 
-    it "projects_in(year)" do
-      3.times { create(:pull_request, repo_name: "24pullrequests", created_at: DateTime.now - 1.year) }
+    it 'projects_in(year)' do
+      3.times { create(:pull_request, repo_name: '24pullrequests', created_at: DateTime.now - 1.year) }
 
       expect(helper.projects_in(last_year)).to eq(4)
     end
