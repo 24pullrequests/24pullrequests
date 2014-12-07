@@ -5,6 +5,7 @@ describe 'Gifts', type: :request do
   let(:user) { create :user, nickname: 'akira' }
 
   before do
+    mock_is_admin
     login(user)
   end
 

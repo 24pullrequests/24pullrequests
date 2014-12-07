@@ -4,6 +4,10 @@ describe 'Users', type: :request do
   subject { page }
   let(:user) { create :user, nickname: 'akira' }
 
+  before do
+    mock_is_admin
+  end
+
   describe 'viewing the list of users' do
     before do
       5.times { create :user }

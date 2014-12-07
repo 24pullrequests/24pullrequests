@@ -6,6 +6,7 @@ describe 'Logging in', type: :request do
 
   context 'when a guest navigates to a page that requires a user session' do
     before do
+      mock_is_admin
       mock_github_auth user
       visit preferences_path
     end
