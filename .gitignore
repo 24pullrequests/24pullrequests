@@ -12,6 +12,7 @@
 coverage
 .idea
 .vagrant
+.env
 
 # Ignore ds_store
 .DS_Store
