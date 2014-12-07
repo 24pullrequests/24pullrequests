@@ -1,0 +1,13 @@
+/* CONTRIBUTORS */
+
+<% @contributors.each do |user| %>
+  <%= user.name || user.nickname %>
+  <%= "GitHub Profile: #{user.github_profile}" %>
+  <% unless user.location.blank? %>
+  <%= "Location: #{user.location}" %>
+  <% end %>
+  <% unless user.blog.blank? %>
+  <%= "Website: #{user.blog}" %>
+  <% end %>
+
+<% end %>
