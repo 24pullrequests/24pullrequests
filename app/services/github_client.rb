@@ -35,7 +35,10 @@ class GithubClient
   end
 
   def contributors(repository, options = {})
-    client.contributors(repository, options)
+    Octokit.auto_paginate = true
+    contributors = client.contributors(repository, options)
+    Octokit.auto_paginate = false
+    contributors
   end
 
   def organization_members(org, options = {})
