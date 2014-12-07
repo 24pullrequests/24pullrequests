@@ -36,10 +36,10 @@ zh_Hant:
     greeting: "聖誕節要到囉！"
     give_to_open_source: 你在一整年當中一直受益於開源項目。現在是時候對那些項目的維護者說感謝，有一隻小小鳥告訴我，他們喜歡接受你的合併請求(pull request)！
     q_n_a: "問與答"
-    join_the_chat: "到 Gitter %{link_to_chat} 和大家討論、分享。"
+    join_the_chat: "我們在 Gitter 上有個聊天室：%{link_to_chat}，歡迎你一起來和大家討論、分享。"
     badges:
       title: "Coderwall 徽章"
-      description: 我們已經聯手與 Coderwall 和設計了幾個酷斃了的徽章，讓大家來參與解鎖。
+      description: 我們已經聯手與 Coderwall 和設計了幾個好酷的徽章。快來參與破關拿徽章吧！
       involved_link: "參與者- 積極參與活動，在聖誕節前發送至少一個合併請求(pull request)"
       amazing: "連續同步- 你真是一個開源機器，十二月份送出24份合併請求(pull request)"
     involved:
@@ -54,9 +54,9 @@ zh_Hant:
       view_events: 所有活動
       host_an_event: 舉辦活動
     profile:
-      title: 構建您的個人資料
+      title: 建立作品集
       description: 參與開源項目，也是一個建立起您在社區的經歷，提高您的簡歷的好方法。
-      getting_started: 這真的很容易上手。即使是很小的貢獻對項目也有很大的價值。
+      getting_started: 開源其實很容易上手，不論多小的貢獻都有很大的價值。
 
   information:
     title: "24 Pull Requests %{year} is upon us"
@@ -74,8 +74,8 @@ zh_Hant:
   open_source_yey: 開源萬歲！
   welcome_back: 歡迎回來， %{user}
   your_pull_requests: 你的合併請求(pull request)s
-  suggested_projects: 推薦項目
-  suggest_project: 推荐一個項目
+  suggested_projects: 大家推薦的專案
+  suggest_project: 推薦專案
   no_suggestions: 你還咩有推薦過呢
   preferred_languages: 首選語言
   view_all: 查看全部
@@ -96,22 +96,24 @@ zh_Hant:
     pull_request_count: "在%{year}年， %{user} 一共發起了%{count} 次合併請求(pull request)"
     organisations: 一名成員
     coderwall:
-      title: Coderwall徽章
+      title: Coderwall 徽章
       achieved_by: "贏取的徽章"
       success: "成功更新了Coderwall的用戶名！"
       update_button: "更新"
       error_no_user: "沒有找到與這個用戶名關聯的帳號。"
       error_github_not_connected: "賬戶%{username} 在Coderwall 和24 Pull Requests 綁定的GitHub帳號不同"
 
-  developers_using_language: Developers using %{language}
-  developers_involved: Developers already involved
+  developers_using_language: 個工程師使用 %{language}
+  developers_involved: 個工程師已經加入
+  developers_involved_desc: 加入大家一起讓開源軟體更蓬勃。
+  organisations_involved_desc: 邀請你公司或組織的朋友、同事們一起加入。
 
   dashboard:
     christmas_activity: 在這裡，您可以看到所有聖誕節你的活動。
     give_a_gift: 看起來你今天還沒有贈送任何代碼。你想現在去贈出一份代碼嗎？
     # This is followed by a select-menu where you can pick one of your non-gifted 合併請求(pull request)s to gift
     synchronize: 同步合併請求(pull request)
-    help_out: "想不出你想要參與的項目嗎？我們幫您整理好了一些熱門的項目："
+    help_out: "不知道該從哪裡開始嗎？這裡是一些大家推薦的專案："
     no_pull_requests: 您還沒有發送任何合併請求(pull request)， 你還等什麼呢？！
     gift_it: 贈與！
 
@@ -135,10 +137,10 @@ zh_Hant:
     suggestion:
       edit: 編輯
       update: 更新項目
-    suggest: 還沒有這個語言的項目呢，推荐一個%{suggest_link}?
-    suggest_link_text: 推荐一個
+    suggest: 還沒有這個語言的項目呢，推薦一個%{suggest_link}?
+    suggest_link_text: 推薦專案
     new:
-      title: 推荐一個項目
+      title: 推薦專案
       info: 一個鼓勵大家參與開源社區的方法是讓大家知道哪些熱門項目值得大家一起參與。按照這個標准我們選擇一些項目。如果您有想法，和我們一起分享吧！
       suggestion: 對項目有建議? 我們洗耳恭聽! 如果你有想要建議的地方，請提出%{issue_link}。
       issue_link_text: 建議一個議題(issue)
