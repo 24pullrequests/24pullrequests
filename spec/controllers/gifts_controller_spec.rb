@@ -6,6 +6,7 @@ describe GiftsController, :type => :controller do
   let!(:pull_requests) { 2.times.map { create :pull_request, user: user } }
 
   before do
+    allow_any_instance_of(User).to receive(:is_admin?).and_return(false)
     session[:user_id] = user.id
   end
 
