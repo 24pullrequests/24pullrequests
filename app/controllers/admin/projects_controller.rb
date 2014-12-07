@@ -44,6 +44,6 @@ class Admin::ProjectsController < ApplicationController
   end
 
   def ensure_admin
-    current_user.is_admin?
+    current_user.admin?
   end
 end

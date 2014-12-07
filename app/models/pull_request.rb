@@ -1,7 +1,7 @@
 class PullRequest  < ActiveRecord::Base
   belongs_to :user, counter_cache: true
 
-  validates_uniqueness_of :issue_url, scope: :user_id
+  validates :issue_url, uniqueness: { scope: :user_id }
 
   after_create :autogift
 
@@ -54,8 +54,6 @@ class PullRequest  < ActiveRecord::Base
   end
 
   def autogift
-    if body && body.scan(/24 ?pull ?request/i).any?
-      user.new_gift(pull_request: self).save
-    end
+    user.new_gift(pull_request: self).save if body && body.scan(/24 ?pull ?request/i).any?
   end
 end

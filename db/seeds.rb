@@ -21,7 +21,7 @@ if Rails.env.development?
   PULL_REQUESTS = (3..20)
   PROJECTS = 50
 
-  puts 'Inserting some test data'
+  Rails.logger.info 'Inserting some test data'
 
   USERS.times do
     user = create :user, provider: 'developer2', gravatar_id: GRAVATARS.sample
