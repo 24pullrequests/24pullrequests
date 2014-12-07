@@ -30,8 +30,14 @@ $festive-colour: $header-background;
   &.gifted {
     border-color: $festive-colour;
 
-    &:hover .remove-gift {
-      display: block;
+    &:hover {
+      .calendar-mday {
+        color: transparent;
+      }
+
+      .remove-gift {
+        display: block;
+      }
     }
   }
 
