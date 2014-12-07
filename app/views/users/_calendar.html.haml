@@ -4,12 +4,12 @@
 
   - calendar.each_day do |date, gift|
     %li.calendar-day{ :class => ("gifted" if gift.present?) }
-      %span{ :class => date == Date.today ? 'calendar-mday calendar-mday-today' : 'calendar-mday' }
-        %span.visible-xs-inline> 12/
-        = date.mday
       - if gift.present? && gift.user == current_user
         .remove-gift
           = link_to raw("&times;"), gift_path(gift), :title => "Remove gift", :method => :delete, "data-confirm" => "Remove this gift?"
+      %span{ :class => date == Date.today ? 'calendar-mday calendar-mday-today' : 'calendar-mday' }
+        %span.visible-xs-inline> 12/
+        = date.mday
       - if gift.present?
         = link_to gift.pull_request_title, gift.pull_request_issue_url, :target => :blank
 

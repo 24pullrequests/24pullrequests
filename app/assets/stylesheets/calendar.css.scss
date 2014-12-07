@@ -31,12 +31,12 @@ $festive-colour: $header-background;
     border-color: $festive-colour;
 
     &:hover {
-      .calendar-mday {
-        color: transparent;
-      }
-
       .remove-gift {
         display: block;
+      }
+
+      .remove-gift + .calendar-mday {
+        color: transparent;
       }
     }
   }
