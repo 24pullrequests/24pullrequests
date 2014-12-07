@@ -1,40 +1,43 @@
-.row
+.title-block.profile-title-block.row
   .col-sm-3
-    = image_tag(@user.avatar_url(200), :width => "100%", :alt => @user.nickname)
-    %h2
-      #{@user.nickname}
-    %p= gratipay_button @user.nickname
-    %p= github_button @user.nickname
-    - if @user.twitter_nickname.present?
-      %a{:href => "https://twitter.com/#{@user.twitter_nickname}", :class => 'twitter-follow-button'}
-        =t("follow_user", twitter: @user.twitter_nickname)
-      :javascript
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-    - if @user.skills.any?
-      %h4
-        =t("preferred_languages")
-      = @user.languages.to_sentence
-    - if @user.organisations.any?
-      %h4
-        =t('user.organisations')
-      %ul.avatar-list
-        - @user.organisations.each do |organisation|
-          %li.avatar-cell
-            = link_to organisation_path(organisation.login), class: "avatar-link", rel: "tooltip", title: organisation.login do
-              = image_tag(organisation.avatar_url, alt: organisation.login, class: "avatar-img")
-
-
+    = image_tag(@user.avatar_url(200), :alt => @user.nickname, :class => "profile-avatar")
   .col-sm-9
     - if @user == current_user
-      = link_to preferences_path, class: "pull-right btn btn-default" do
-        %span.octicon.octicon-gear
-        = t("navigation.preferences")
-      - if current_user.twitter_linked?
-        = link_to t("preferences.remove"), twitter_remove_path, method: :delete, class: 'btn btn-danger pull-right'
-      - else
-        = link_to t('twitter.link_account.text'), '/auth/twitter', :class => 'btn btn-info pull-right', rel: 'tooltip', title: t('twitter.link_account.tooltip')
+      .profile-actions.hidden-xs
+        = link_to preferences_path, class: "btn btn-default btn-sm" do
+          %span.octicon.octicon-gear
+          = t("navigation.preferences")
+        - if current_user.twitter_linked?
+          = link_to t("preferences.remove"), twitter_remove_path, method: :delete, class: 'btn btn-danger btn-sm'
+        - else
+          = link_to t('twitter.link_account.text'), '/auth/twitter', :class => 'btn btn-info btn-sm', rel: 'tooltip', title: t('twitter.link_account.tooltip')
+    %h2.username #{@user.nickname}
+    .profile-item
+      = gratipay_button @user.nickname, "btn btn-xs btn-success"
+      = github_button @user.nickname
+      - if @user.twitter_nickname.present?
+        %a{:href => "https://twitter.com/#{@user.twitter_nickname}", :class => 'twitter-follow-button'}
+          =t("follow_user", twitter: @user.twitter_nickname)
+        :javascript
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    - if @user.skills.any?
+      .profile-item
+        %span.tiny-title=t("preferred_languages")
+        - @user.languages.each do |language|
+          %span{ :class => language.downcase }
+            .label.label-info.language
+              = link_to language, language_path(language)
+    - if @user.organisations.any?
+      .profile-item
+        %span.tiny-title=t('user.organisations')
+        %ul.avatar-list.avatar-list-xs
+          - @user.organisations.each do |organisation|
+            %li.avatar-cell
+              = link_to organisation_path(organisation.login), class: "avatar-link", rel: "tooltip", title: organisation.login, data: { placement: "bottom" } do
+                = image_tag(organisation.avatar_url, alt: organisation.login, class: "avatar-img")
 
-    .page-title 24 Pull Requests
+.row
+  .col-sm-12
     - if @user.gifts.year(current_year).any? or @user.pull_requests.year(current_year).any?
       %h4
         =t("user.pull_request_count", user: @user.nickname, count: @user.pull_requests.year(current_year).count, year: current_year)
