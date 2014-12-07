@@ -7,7 +7,6 @@ module Concerns
     end
 
     module InstanceMethods
-
       def coderwall_username
         coderwall_user_name || nickname
       end
@@ -31,7 +30,7 @@ module Concerns
       private
 
       def coderwall
-        @coderwall ||= Coderwall.new
+        @coderwall ||= ::Coderwall.new
       end
     end
   end

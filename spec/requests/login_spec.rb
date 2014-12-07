@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Logging in', :type => :request do
+describe 'Logging in', type: :request do
   let(:user) { create :user }
   subject { page }
 

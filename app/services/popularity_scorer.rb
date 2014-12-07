@@ -1,5 +1,4 @@
 class PopularityScorer
-
   # The number of months of activity we will look at for scoring.
   MONTHS_OF_ACTIVITY = 3
   # For scoring, the number of commits we consider extremely busy.
@@ -22,7 +21,7 @@ class PopularityScorer
     points
   end
 
-private
+  private
 
   def score_recent_commits
     commit_count = @project.commits(@nickname, @token, MONTHS_OF_ACTIVITY).size
@@ -38,5 +37,4 @@ private
     item_count = [current, maximum].min
     (item_count.to_f / maximum * POINTS_PER_FACET).round
   end
-
 end

@@ -3,7 +3,7 @@ class GiftFactory
 
   def self.create!(user, factory, attrs = {})
     gift_factory = GiftFactory.new(user, factory)
-    return gift_factory.create_from_attrs(attrs)
+    gift_factory.create_from_attrs(attrs)
   end
 
   def initialize(user, factory)

@@ -1,14 +1,16 @@
-require "spec_helper"
+require 'spec_helper'
 
-describe ReminderMailer, :type => :mailer do
+describe ReminderMailer, type: :mailer do
 
   describe 'daily' do
-    let(:user) { mock_model(User, :nickname => 'David',
-                                  :email => 'david@example.com',
-                                  :languages => ['Ruby'],
-                                  :skills => [],
-                                  :pull_requests => double(:pull_request, :year => []),
-                                  :suggested_projects => []) }
+    let(:user) do
+      mock_model(User, nickname:           'David',
+                       email:              'david@example.com',
+                       languages:          ['Ruby'],
+                       skills:             [],
+                       pull_requests:      double(:pull_request, year: []),
+                       suggested_projects: [])
+    end
     let(:mail) { ReminderMailer.daily(user) }
 
     it 'renders the subject' do
@@ -28,18 +30,20 @@ describe ReminderMailer, :type => :mailer do
     end
 
     it 'says daily' do
-      expect(mail.body.encoded).to match("today")
+      expect(mail.body.encoded).to match('today')
     end
 
   end
 
   describe 'weekly' do
-    let(:user) { mock_model(User, :nickname => 'David',
-                                  :email => 'david@example.com',
-                                  :languages => ['Ruby'],
-                                  :skills => [],
-                                  :pull_requests => double(:pull_request, :year => []),
-                                  :suggested_projects => []) }
+    let(:user) do
+      mock_model(User, nickname:           'David',
+                       email:              'david@example.com',
+                       languages:          ['Ruby'],
+                       skills:             [],
+                       pull_requests:      double(:pull_request, year: []),
+                       suggested_projects: [])
+    end
     let(:mail) { ReminderMailer.weekly(user) }
 
     it 'renders the subject' do
@@ -59,7 +63,7 @@ describe ReminderMailer, :type => :mailer do
     end
 
     it 'says weekly' do
-      expect(mail.body.encoded).to match("week")
+      expect(mail.body.encoded).to match('week')
     end
 
   end

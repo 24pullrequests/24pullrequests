@@ -1,5 +1,4 @@
 class ProjectSearch
-
   attr_accessor :languages
 
   def initialize(params = {})
@@ -22,9 +21,7 @@ class ProjectSearch
     @projects ||= Project.active.order('random()').page(page)
   end
 
-  def page
-    @page
-  end
+  attr_reader :page
 
   def by_languages
     @projects = projects.by_languages(languages) if languages.present?
@@ -35,16 +32,16 @@ class ProjectSearch
   end
 
   def labels
-    @labels.reject! { |l| l.empty? }
+    @labels.reject!(&:empty?)
     @labels
   end
 
   def languages
-    @languages.reject! { |l| l.empty? }
+    @languages.reject!(&:empty?)
     @languages.map(&:downcase)
   end
 
   def set_seed
-    Project.connection.execute "select setseed(0.5)"
+    Project.connection.execute 'select setseed(0.5)'
   end
 end

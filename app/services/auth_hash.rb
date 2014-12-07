@@ -9,20 +9,18 @@ class AuthHash
 
   def user_info
     {
-      :provider => provider,
-      :token => token,
-      :uid => uid,
-      :nickname => nickname,
-      :email => email,
-      :gravatar_id => gravatar_id
+      provider:    provider,
+      token:       token,
+      uid:         uid,
+      nickname:    nickname,
+      email:       email,
+      gravatar_id: gravatar_id
     }
   end
 
   private
 
-  def user_hash
-    @user_hash
-  end
+  attr_reader :user_hash
 
   def provider
     user_hash.fetch('provider')
