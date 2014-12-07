@@ -5,12 +5,12 @@ zh_Hant:
         user:
           attributes:
             email:
-              required_for_confirmation: "%{attribute}為必填項"
-              already_confirmed: "%{attribute}已經完成驗證"
+              required_for_confirmation: "一定要填寫 %{attribute}"
+              already_confirmed: "%{attribute} 已經完成驗證"
   pull_request:
-    twitter_message: "我剛發起了一個合併請求(pull request)，來瞧瞧吧！ %{issue_url}"
+    twitter_message: "我送出了一個 Pull Request，來看看吧！ %{issue_url}"
     download:
-      tooltip: "我們會每個小時檢查一次大家的合併請求(pull request)，你也可以選擇現在讓我們檢查並更新。"
+      tooltip: "我們每個小時會檢查一次你帳號中的 Pull Requests，你也可以手動隨時檢查並更新。"
   twitter:
     account_linked: "你的推特帳號已經成功綁定！我們會在你發起合併請求(pull request)時自動發一條信息。"
     account_removed: "你的推特帳號已經成功斷開綁定。"
@@ -19,21 +19,21 @@ zh_Hant:
       tooltip: "如果你綁定你的推特帳號，我們會在你發起合併請求(pull request)時自動發一條信息！"
 
   navigation:
-    all_projects: 所有的項目
-    my_suggestions: 我建議的項目
-    dashboard: 儀錶盤
-    profile: 個人信息
-    preferences: 偏好設置
-    gifted_code: 贈出的優碼
-    manage_projects: 管理項目
-    logout: 註銷
+    all_projects: "所有的專案"
+    my_suggestions: "我建議的專案"
+    dashboard: "控制中心"
+    profile: "個人頁面"
+    preferences: "偏好設定"
+    gifted_code: "程式碼禮物"
+    manage_projects: "管理專案"
+    logout: "登出"
 
   homepage:
     title: "24 Pull Requests"
-    description: 用代碼作聖誕禮物
-    about: "它是什麼一回事呢？"
+    description: "把程式碼當做聖誕禮物"
+    about: "到底是要做什麼呢？"
     about_text: "<p>24 Pull Requests 是每年這個時候的一個倡議， 鼓勵開發人員在世界各地的十二月每天發出合併請求(pull request)</p> <p>這個網站是為了宣傳這個項目，它的意義，以及如何發出合併請求(pull request)s。</p><p>用你的GitHub帳號登錄，我們就可以記錄你的合併請求(pull request)。還可以推薦你感興趣的項目。</p>"
-    greeting: "節日季來啦！"
+    greeting: "聖誕節要到囉！"
     give_to_open_source: 你在一整年當中一直受益於開源項目。現在是時候對那些項目的維護者說感謝，有一隻小小鳥告訴我，他們喜歡接受你的合併請求(pull request)！
     q_n_a: 問與答
     badges:
