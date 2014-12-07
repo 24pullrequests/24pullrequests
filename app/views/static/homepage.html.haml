@@ -75,7 +75,7 @@
     .col-md-6.two-up-split.left
       .block
         .title-block
-          %span.octicon.octicon-git-pull-request
+          %span.mega-octicon.octicon-git-pull-request
           %h3.block-title
             =t("pull_requests.latest.count", count: PullRequest.year(current_year).count)
           %p=t("dashboard.pull_requests")
@@ -90,7 +90,7 @@
     .col-md-6.two-up-split.right
       .block
         .title-block
-          %span.octicon.octicon-repo
+          %span.mega-octicon.octicon-repo
           %h3.block-title
             = Project.count
             = t("suggested_projects")
