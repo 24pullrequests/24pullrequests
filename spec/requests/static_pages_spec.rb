@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe 'Static pages', type: :request do
   subject { page }
+  let(:user) { create :user }
 
   describe 'home page' do
     before do
@@ -21,7 +22,9 @@ describe 'Static pages', type: :request do
 
   describe 'humans.txt' do
     before do
-      visit humans_path
+      allow(User).to receive(:contributors).and_return([user])
+
+      visit humans_path(format: :txt)
     end
 
     it { is_expected.to have_content('CONTRIBUTORS') }

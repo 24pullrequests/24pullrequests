@@ -34,8 +34,15 @@ class GithubClient
     client.commits(repository, options)
   end
 
-  def organization_members(repository, options = {})
-    client.organization_members(repository, options)
+  def contributors(repository, options = {})
+    Octokit.auto_paginate = true
+    contributors = client.contributors(repository, options)
+    Octokit.auto_paginate = false
+    contributors
+  end
+
+  def organization_members(org, options = {})
+    client.organization_members(org, options)
   end
 
   private
