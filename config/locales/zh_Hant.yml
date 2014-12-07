@@ -35,23 +35,28 @@ zh_Hant:
     about_text: "<p>24 Pull Requests 是每年這個時候的一個倡議， 鼓勵開發人員在世界各地的十二月每天發出合併請求(pull request)</p> <p>這個網站是為了宣傳這個項目，它的意義，以及如何發出合併請求(pull request)s。</p><p>用你的GitHub帳號登錄，我們就可以記錄你的合併請求(pull request)。還可以推薦你感興趣的項目。</p>"
     greeting: "聖誕節要到囉！"
     give_to_open_source: 你在一整年當中一直受益於開源項目。現在是時候對那些項目的維護者說感謝，有一隻小小鳥告訴我，他們喜歡接受你的合併請求(pull request)！
-    q_n_a: 問與答
+    q_n_a: "問與答"
+    join_the_chat: "到 Gitter %{link_to_chat} 和大家討論、分享。"
     badges:
-      title: 贏取Coderwall徽章
-      description: 我們已經聯手與coderwall和創造了一些酷斃了的徽章，讓大家來參與解鎖。
-      involved_link: '參與者- 積極參與活動，在聖誕節前發送至少一個合併請求(pull request)'
+      title: "Coderwall 徽章"
+      description: 我們已經聯手與 Coderwall 和設計了幾個酷斃了的徽章，讓大家來參與解鎖。
+      involved_link: "參與者- 積極參與活動，在聖誕節前發送至少一個合併請求(pull request)"
       amazing: "連續同步- 你真是一個開源機器，十二月份送出24份合併請求(pull request)"
     involved:
       title: 齊來參與
       description: "有很多參與開源項目的途徑：提高文檔質量，幫助修復存在的議題(issues)和錯誤(bugs)，提高代碼質量和測試覆蓋率，或添加缺失的功能"
-      special_page: "我們準備了％ { contributing_path } ，在這裡您可以找到有關的一些信息。"
-      contributing_path: 貢獻指南
+      special_page: "我們準備了%{contributing_path}，在這裡您可以找到有關的一些信息。"
+      contributing_path: "開源指南"
       take_a_look: 如果你是剛接觸開源，請看～
+    event:
+      title: 社群活動
+      description: 今年我們開始鼓勵大家在世界各地舉辦 24 Pull Requests 的黑客松，一起共襄盛舉吧！
+      view_events: 所有活動
+      host_an_event: 舉辦活動
     profile:
       title: 構建您的個人資料
       description: 參與開源項目，也是一個建立起您在社區的經歷，提高您的簡歷的好方法。
       getting_started: 這真的很容易上手。即使是很小的貢獻對項目也有很大的價值。
-    join_the_chat: 參與Gitter上的聊天%{link_to_chat} 。
 
   information:
     title: "24 Pull Requests %{year} is upon us"
