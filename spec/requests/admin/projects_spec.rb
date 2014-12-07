@@ -6,14 +6,13 @@ describe 'Admin Projects', :type => :request do
   subject { page }
 
   before do
-    allow(user).to receive_messages(:is_admin? => true)
+    allow_any_instance_of(User).to receive(:is_admin?).and_return(true)
     login(user)
 
     visit admin_projects_path
   end
 
   describe 'project index' do
-
     it "should list all projects" do
       projects.each do |project|
         is_expected.to have_content project.name
