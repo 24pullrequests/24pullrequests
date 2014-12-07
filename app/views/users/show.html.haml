@@ -14,12 +14,12 @@
     %h2.username #{@user.nickname}
     .profile-item
       = gratipay_button @user.nickname, "btn btn-xs btn-success"
-      = github_button @user.nickname
       - if @user.twitter_nickname.present?
         %a{:href => "https://twitter.com/#{@user.twitter_nickname}", :class => 'twitter-follow-button'}
           =t("follow_user", twitter: @user.twitter_nickname)
         :javascript
           !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      = github_button @user.nickname
     - if @user.skills.any?
       .profile-item
         %span.tiny-title=t("preferred_languages")
