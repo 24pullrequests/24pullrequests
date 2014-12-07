@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-describe 'Organisations', :type => :request do
+describe 'Organisations', type: :request do
   subject { page }
 
-  it "viewing a list of organisations" do
+  it 'viewing a list of organisations' do
     3.times { create :organisation }
     visit organisations_path
 

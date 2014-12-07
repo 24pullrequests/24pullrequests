@@ -20,33 +20,29 @@ class PullRequestDownloader
   end
 
   def download_pull_requests
-    begin
-      github_client.user_events.select do |e|
-        event_date = e['created_at']
-        e.type == 'PullRequestEvent' &&
+    github_client.user_events.select do |e|
+      event_date = e['created_at']
+      e.type == 'PullRequestEvent' &&
         e.payload.action == 'opened' &&
         event_date >= PullRequest::EARLIEST_PULL_DATE &&
         event_date <= PullRequest::LATEST_PULL_DATE
-      end
-    rescue => e
-      Rails.logger.error "Pull requests: likely a GitHub API error occurred:\n"\
-                         "#{e.inspect}"
-      []
     end
+  rescue => e
+    Rails.logger.error "Pull requests: likely a GitHub API error occurred:\n"\
+                       "#{e.inspect}"
+    []
   end
 
   def download_user_organisations
-    begin
-      github_client.user_organizations.reject do |o|
-        Rails.logger.info "Updating organisation: #{o.login}"
-        ignored_organisations.include?(o.login)
-      end
-    rescue => e
-      puts e.inspect
-      Rails.logger.error "Organisation error: likely a GitHub API error occurred:\n"\
-                         "#{e.inspect}"
-      []
+    github_client.user_organizations.reject do |o|
+      Rails.logger.info "Updating organisation: #{o.login}"
+      ignored_organisations.include?(o.login)
     end
+  rescue => e
+    puts e.inspect
+    Rails.logger.error "Organisation error: likely a GitHub API error occurred:\n"\
+                       "#{e.inspect}"
+    []
   end
 
   def ignored_organisations
@@ -65,5 +61,4 @@ class PullRequestDownloader
       'coderwall-polygamous'
     ]
   end
-
 end

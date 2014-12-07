@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Skill, :type => :model do
+describe Skill, type: :model do
   let(:skill) { create :skill }
 
   it { is_expected.to belong_to(:user) }

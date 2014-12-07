@@ -1,28 +1,28 @@
 class DashboardsController < ApplicationController
-  before_filter :ensure_logged_in, except: [:confirm_email, :locale]
-  before_filter :set_email_preferences, :except => [:preferences, :update_preferences, :confirm_email, :locale]
+  before_action :ensure_logged_in, except: [:confirm_email, :locale]
+  before_action :set_email_preferences, except: [:preferences, :update_preferences, :confirm_email, :locale]
 
   def show
     pull_requests = current_user.pull_requests.year(current_year).order('created_at desc')
     projects      = current_user.suggested_projects.limit(100).sample(12).sort_by(&:name)
     gifted_today  = current_user.gift_for(today)
-    @events = Event.where(["start_time >= ?", Date.today]).order("start_time").first(5)
+    @events = Event.where(['start_time >= ?', Date.today]).order('start_time').first(5)
 
     if is_giftable_range? && current_user.unspent_pull_requests.any? && !gifted_today
       gift      = current_user.new_gift
-      gift_form = GiftForm.new(:gift => gift, :pull_requests => current_user.unspent_pull_requests)
+      gift_form = GiftForm.new(gift: gift, pull_requests: current_user.unspent_pull_requests)
     end
 
-    render :show, :locals => { :user => current_user,
-                               :pull_requests => pull_requests,
-                               :projects => projects,
-                               :gift_form => gift_form }
+    render :show, locals: { user:          current_user,
+                            pull_requests: pull_requests,
+                            projects:      projects,
+                            gift_form:     gift_form }
   end
 
   def update_preferences
     current_user.skills.delete_all
     if current_user.update_attributes(user_params)
-      flash[:success] = "Your preferences was successfully saved"
+      flash[:success] = 'Your preferences was successfully saved'
       redirect_to :back
     else
       render :preferences
@@ -32,7 +32,7 @@ class DashboardsController < ApplicationController
   def destroy
     current_user.destroy
     session.delete(:user_id)
-    flash[:notice] = "Your account was successfully deleted"
+    flash[:notice] = 'Your account was successfully deleted'
     redirect_to root_path
   end
 
@@ -42,9 +42,9 @@ class DashboardsController < ApplicationController
 
       if user.present?
         user.confirm!
-        flash[:notice] = "Email address confirmed"
+        flash[:notice] = 'Email address confirmed'
       else
-        flash[:notice] = "Unknown confirmation token"
+        flash[:notice] = 'Unknown confirmation token'
       end
     end
 
@@ -63,7 +63,7 @@ class DashboardsController < ApplicationController
   end
 
   def is_giftable_range?
-    today > Date.new(CURRENT_YEAR, 12, 1) and today < Date.new(CURRENT_YEAR, 12, 24)
+    today > Date.new(CURRENT_YEAR, 12, 1) && today < Date.new(CURRENT_YEAR, 12, 24)
   end
 
   def set_email_preferences
@@ -74,8 +74,8 @@ class DashboardsController < ApplicationController
     params.require(:user).permit(:uid, :provider, :nickname, :email, :gravatar_id, :token, :email_frequency, :twitter_token, skills_attributes: [:language])
   end
 
-  def set_locale_to_cookie locale
-    cookies[:locale] = { value: locale,
-                         expires: Time.zone.now + 36000 }
+  def set_locale_to_cookie(locale)
+    cookies[:locale] = { value:   locale,
+                         expires: Time.zone.now + 36_000 }
   end
 end

@@ -28,6 +28,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'thin'
   gem 'quiet_assets'
+  gem 'rubocop', '~> 0.27', require: false
 end
 
 group :development, :test, :cucumber do

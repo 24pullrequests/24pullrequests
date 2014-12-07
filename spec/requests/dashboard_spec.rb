@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Dashboard', :type => :request do
+describe 'Dashboard', type: :request do
   let(:user) { create :user }
   subject { page }
 
@@ -42,7 +42,7 @@ describe 'Dashboard', :type => :request do
       end
 
       it { is_expected.to have_content "Looks like you haven't gifted any code today. Would you like to gift your new pull requests?" }
-      it { is_expected.to have_button "Gift it!" }
+      it { is_expected.to have_button 'Gift it!' }
     end
 
     context 'when the user does not have any unspent pull requests' do
@@ -50,7 +50,7 @@ describe 'Dashboard', :type => :request do
         visit dashboard_path
       end
 
-      it { is_expected.not_to have_button "Gift it!" }
+      it { is_expected.not_to have_button 'Gift it!' }
     end
   end
 

@@ -1,5 +1,4 @@
 module LanguageHelper
-
   def project_count_for_language
     Project.active.by_language(@language).count
   end

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe SessionsController, :type => :controller do
+describe SessionsController, type: :controller do
   describe 'GET new' do
     before do
       get :new
@@ -21,10 +21,10 @@ describe SessionsController, :type => :controller do
 
   describe 'GET failure' do
     before do
-      get :failure, :message => 'foobar'
+      get :failure, message: 'foobar'
     end
 
     it { is_expected.to set_the_flash[:notice].to('foobar') }
-    it { is_expected.to redirect_to(root_path)}
+    it { is_expected.to redirect_to(root_path) }
   end
 end
