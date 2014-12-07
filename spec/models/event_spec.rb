@@ -58,7 +58,7 @@ describe Event, type: :model do
 
   context 'can_edit?' do
     context 'for an admin' do
-      let(:user) { mock_model(User, is_admin?: true) }
+      let(:user) { mock_model(User, admin?: true) }
       let(:event) { FactoryGirl.build(:event) }
 
       it 'should return true' do
@@ -75,7 +75,7 @@ describe Event, type: :model do
     end
 
     context 'when the user is the event owner logged in' do
-      let(:user) { mock_model(User, id: 1, is_admin?: false) }
+      let(:user) { mock_model(User, id: 1, admin?: false) }
       let(:event) { FactoryGirl.build(:event) }
 
       it 'should return true' do
@@ -85,7 +85,7 @@ describe Event, type: :model do
     end
 
     context 'when the user is not the event owner' do
-      let(:user) { mock_model(User, id: 1, is_admin?: false) }
+      let(:user) { mock_model(User, id: 1, admin?: false) }
       let(:event) { FactoryGirl.build(:event) }
 
       it 'should return false' do

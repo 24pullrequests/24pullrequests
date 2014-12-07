@@ -13,7 +13,7 @@ module Humans
             config.octokit_client.contributors('24pullrequests/24pullrequests')
           end
         rescue => e
-          puts "Error when memoizing contributors at boot up:\n #{e.inspect}"
+          Rails.logger.error "Error when memoizing contributors at boot up:\n #{e.inspect}"
           []
         end
       else

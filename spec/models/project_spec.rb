@@ -77,7 +77,6 @@ describe Project, type: :model do
     let(:project) { FactoryGirl.create(:project) }
 
     it 'retrieves github issues that have been active in the last 6 months' do
-      date = (Time.zone.now - 6.months).utc.iso8601
       client = double(:github_client)
       expect(GithubClient).to receive(:new).with('username', 'token').and_return(client)
       expect(client).to receive(:issues)
