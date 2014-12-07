@@ -14,7 +14,10 @@ class AuthHash
       uid:         uid,
       nickname:    nickname,
       email:       email,
-      gravatar_id: gravatar_id
+      gravatar_id: gravatar_id,
+      name:        name,
+      blog:        blog,
+      location:    location
     }
   end
 
@@ -31,18 +34,40 @@ class AuthHash
   end
 
   def nickname
-    user_hash.fetch('info', {}).fetch('nickname')
+    info.fetch('nickname')
   end
 
   def email
-    user_hash.fetch('info', {}).fetch('email', nil)
+    info.fetch('email', nil)
   end
 
   def gravatar_id
-    user_hash.fetch('extra', {}).fetch('raw_info', {}).fetch('gravatar_id', nil)
+    raw_info.fetch('gravatar_id', nil)
+  end
+
+  def name
+    raw_info.fetch('name', nil)
+  end
+
+  def blog
+    raw_info.fetch('blog', nil)
+  end
+
+  def location
+    raw_info.fetch('location', nil)
   end
 
   def token
     user_hash.fetch('credentials', {}).fetch('token')
+  end
+
+  private
+
+  def info
+    user_hash.fetch('info', {})
+  end
+
+  def raw_info
+    user_hash.fetch('extra', {}).fetch('raw_info', {})
   end
 end

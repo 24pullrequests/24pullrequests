@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141027215446) do
+ActiveRecord::Schema.define(version: 20141207102627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -152,6 +152,9 @@ ActiveRecord::Schema.define(version: 20141027215446) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.string   "coderwall_user_name"
+    t.string   "name"
+    t.string   "blog"
+    t.string   "location"
   end
 
   add_index "users", ["nickname"], name: "index_users_on_nickname", using: :btree
