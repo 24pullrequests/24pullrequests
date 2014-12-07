@@ -28,9 +28,7 @@ class Downloader
 
   private
 
-  def user
-    @user
-  end
+  attr_reader :user
 
   def user_downloader
     @user_downloader ||= Rails.application.config.pull_request_downloader.call(user.nickname, @access_token)

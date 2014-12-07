@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :ensure_logged_in, only: [ :projects ]
+  before_action :ensure_logged_in, only: [:projects]
 
   respond_to :html, :json
   respond_to :js, only: :index
@@ -16,6 +16,6 @@ class UsersController < ApplicationController
   end
 
   def projects
-    @projects = current_user.projects.order("inactive desc")
+    @projects = current_user.projects.order('inactive desc')
   end
 end

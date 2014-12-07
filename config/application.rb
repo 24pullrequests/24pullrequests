@@ -1,16 +1,16 @@
 require File.expand_path('../boot', __FILE__)
 
 # Pick the frameworks you want:
-require "active_record/railtie"
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "sprockets/railtie"
+require 'active_record/railtie'
+require 'action_controller/railtie'
+require 'action_mailer/railtie'
+require 'sprockets/railtie'
 require 'open-uri'
 # require "rails/test_unit/railtie"
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
+  Bundler.require(*Rails.groups(assets: %w(development test)))
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
@@ -37,10 +37,10 @@ module Tfpullrequests
 
     config.i18n.default_locale = :en
     config.i18n.fallbacks = true
-    config.i18n.available_locales = [ :en, :el, :es, :pt_br, :fi, :fr, :de, :ru, :uk, :th, :it, :nb, :ta, :tr, :zh_Hans, :zh_Hant, :ja ]
+    config.i18n.available_locales = [:en, :el, :es, :pt_br, :fi, :fr, :de, :ru, :uk, :th, :it, :nb, :ta, :tr, :zh_Hans, :zh_Hant, :ja]
 
     # Configure the default encoding used in templates for Ruby 1.9.
-    config.encoding = "utf-8"
+    config.encoding = 'utf-8'
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
@@ -61,7 +61,7 @@ module Tfpullrequests
 
     config.assets.initialize_on_precompile = false
 
-    config.exceptions_app = self.routes
+    config.exceptions_app = routes
 
     I18n.config.enforce_available_locales = false
   end

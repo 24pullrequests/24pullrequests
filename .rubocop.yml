@@ -1,0 +1,59 @@
+AllCops:
+  Include:
+    - 'Capfile'
+    - 'Gemfile'
+    - 'Rakefile'
+    - '**/config.ru'
+    - 'app/**/*'
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'lib/**/*'
+    - 'spec/**/*'
+  Exclude:
+    - '**/*.coffee'
+    - '**/*.css'
+    - '**/*.gif'
+    - '**/*.html.erb'
+    - '**/*.ico'
+    - '**/*.jpeg'
+    - '**/*.jpg'
+    - '**/*.js'
+    - '**/*.png'
+    - '**/*.scss'
+    - '**/*.sqlite3'
+    - '**/*.yml'
+    - 'coverage/**/*'
+    - 'db/schema.rb'
+    - 'log/**/*'
+    - 'public/**/*'
+    - 'tmp/**/*'
+  RunRailsCops: true
+Lint/HandleExceptions:
+  Exclude:
+    - 'config/unicorn.rb'
+Metrics/LineLength:
+  Enabled: false
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/*devise_create_admin_users.rb'
+Style/AlignHash:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+Style/Documentation:
+  Enabled: false
+Style/RegexpLiteral:
+  Enabled: false
+Style/CollectionMethods:
+  # Mapping from undesired method to desired_method
+  # e.g. to use `detect` over `find`:
+  #
+  # CollectionMethods:
+  #   PreferredMethods:
+  #     find: detect
+  PreferredMethods:
+    map: 'collect'
+    map!: 'collect!'
+    reduce: 'inject'
+    detect: 'find'
+    select: 'find_all'
