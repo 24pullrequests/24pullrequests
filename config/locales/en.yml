@@ -5,8 +5,8 @@ en:
         event:
           attributes:
             start_time:
-              not_in_range: "Events can only be created between 1st and 24th December"
-              in_past: "Events can not be created in the past"
+              not_in_range: "Events can only be created between December 1st and 24th"
+              in_past: "Events cannot be created in the past"
         user:
           attributes:
             email:
@@ -15,13 +15,13 @@ en:
   pull_request:
     twitter_message: "I just gifted a pull request for http://24pullrequests.com, check it out: %{issue_url}"
     download:
-      tooltip: "Usually we check for pull requests every hour, but you can check now if you really want."
+      tooltip: "We usually check for pull requests every hour, but you can check now."
   twitter:
     account_linked: "Your Twitter account has been linked! We'll post a tweet whenever you open a pull request."
     account_removed: "Your Twitter account has been removed."
     link_account:
       text: "Link Your Twitter Account"
-      tooltip: "If you link your Twitter account, we'll post a new tweet whenever you open a pull request!"
+      tooltip: "If you link your Twitter account, we'll post a tweet whenever you open a pull request!"
 
   navigation:
     all_projects: All Projects
@@ -44,11 +44,11 @@ en:
     badges:
       title: Earn Coderwall badges
       description: We've teamed up with coderwall and created some kickass badges to unlock for participating (awarded December 24th).
-      involved_link: 'Participant - Get involved, send at least one pull request before Christmas'
-      amazing: "Continuous Sync - You're an open source machine, send 24 pull requests during December, before Christmas"
+      involved_link: 'Participant - Get involved and send at least one pull request before Christmas'
+      amazing: "Continuous Sync - Send 24 pull requests before Christmas"
     involved:
       title: Get involved
-      description: "There are lots of ways to get involved in an open source project: improving documentation, helping fix existing issues and bugs, improving code quality and test coverage, or adding missing features."
+      description: "There are lots of ways to get involved in an open source project: improving documentation, fixing issues and bugs, improving code quality and test coverage, or adding missing features."
       special_page: "We've prepared a %{contributing_path}, where you can find some information about contributing."
       contributing_path: special page
       take_a_look: If you are new to open source, please take a look.
@@ -71,7 +71,7 @@ en:
     help_open_source: "Want to help out with open source projects in the meantime? Check out these other great initiatives:"
     codetriage: "Give back to open source, one issue at a time, with CodeTriage. You'll get one issue from your favorite repo per day to help you dig deeper, learn more, and stay involved with the code you rely on."
     contribhub:
-      tagline: Do you know you have a neighbor needing some help with a really cool project? With ContribHub you will!
+      tagline: Do you know you have a neighbor that needs help with a project? With ContribHub you will!
       description: ContribHub is a GitHub-based application that makes it easier to find projects to contribute to and grow a community around it.
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
 
@@ -102,8 +102,8 @@ en:
   search: Search
 
   user:
-    grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests. Bah humbug!"
-    pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
+    grinchy_message: "%{user} is being a grinch for Christmas %{year} with no gifted pull requests. Bah humbug!"
+    pull_request_count: "%{user} has made %{count} total pull requests so far in Christmas %{year}"
     organisations: Member of...
     coderwall:
       title: Coderwall Badges
@@ -111,7 +111,7 @@ en:
       success: "Successfully updated your coderwall username!"
       update_button: "Update"
       error_no_user: "No user found with this name."
-      error_github_not_connected: "The user %{username} has not the same GitHub account connected with Coderwall as the one you connected to 24 Pull Requests with."
+      error_github_not_connected: "The user %{username} has not connected to Coderwall with this GitHub account."
 
   developers_using_language: Developers using %{language}
   developers_involved: Developers already involved
@@ -215,7 +215,7 @@ en:
     calendar_link: public calendar
     none: Nothing gifted yet.
     give: Gift something meaningful to a project you love
-    no_pull_requests: "You don't open have pull-requests"
+    no_pull_requests: "You don't have any pull-requests"
     link_twitter_desc: "Want to share information about 24 Pull Requests and your gifts? %{link_twitter} and gift some code to open-source projects."
     link_twitter: Link Twitter account
 
@@ -233,7 +233,7 @@ en:
     description: 24 Pull Requests is a little project to promote open source collaboration during December.
     idea: The idea is basically "Send a pull request every day in December leading up to Christmas", encouraging developers to give back to open source with little gifts of code throughout December.
     more_info: The site also provides suggested projects to help with, guides for contributing and highlights good pull requests submitted each day.
-    on_github: "The site development is open source on GitHub:"
+    on_github: "Our code is located on GitHub:"
     on_twitter: "We are also on Twitter:"
     sponsors:
       title: Sponsors
@@ -286,7 +286,7 @@ en:
     title: Events
     details: You don't have to hack alone this Christmas! Host a 24 Pull Requests hack event at your company, technology meetup, or in your local community. Or you can join a hack event and code together.
     notice:
-      not_logged_in: "You have to be logged in to create or edit events"
+      not_logged_in: "You must be logged in to create or edit events"
       not_authorized: "You can only edit events that you have created"
       edit_success: "Event updated successfully!"
       new_success: "Event created successfully!"
