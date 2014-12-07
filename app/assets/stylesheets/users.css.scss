@@ -41,9 +41,42 @@
   margin-right: 10px;
 }
 
+.profile-pull-request-count {
+  position: absolute;
+  padding: 3px 8px;
+  background: $festive-colour;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 15px;
+  right: 0;
+
+  transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+
+  // Ribbon <3
+  &:before, &:after {
+    display: block;
+    content: "";
+    border: 10px solid #8E2121;
+    position: absolute;
+    top: 5px;
+  }
+
+  &:before {
+    border-left-color: transparent;
+    left: -20px;
+  }
+
+  &:after {
+    border-right-color: transparent;
+    right: -20px;
+  }
+}
+
 @media (max-width: 767px) {
   .profile-title-block {
-    margin-bottom: 0;
+    margin-bottom: 25px;
 
     .btn-xs {
       width: auto;
@@ -61,6 +94,17 @@
 
   .tiny-title {
     display: block;
+  }
+
+  .profile-pull-request-count {
+    position: relative;
+  }
+
+  .profile-pull-request-count:before,
+  .profile-pull-request-count:after {
+    transform: none;
+    -moz-transform: none;
+    -webkit-transform: none;
   }
 }
 
