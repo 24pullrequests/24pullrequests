@@ -69,20 +69,22 @@ zh_Hant:
       description: ContribHub是一個GitHub上的應用，使用它可以更容易找到項目並貢獻一臂之力，並圍繞這個項目形成良好的社區。
 
   follow_user: 跟隨 @%{twitter}
-  sponsored_by: 主辦單位
+  sponsored_by: 贊助單位
+  sponsors: 贊助
   how_to_contribute: 如何貢獻？
   open_source_yey: 開源萬歲！
-  welcome_back: 歡迎回來， %{user}
+  welcome: "歡迎， %{user}"
+  welcome_back: "歡迎回來， %{user}"
   your_pull_requests: 你的合併請求(pull request)s
   suggested_projects: 大家推薦的專案
   suggest_project: 推薦專案
-  no_suggestions: 你還咩有推薦過呢
-  preferred_languages: 首選語言
+  no_suggestions: 你還沒有推薦過任何專案。
+  preferred_languages: 語言偏好
   view_all: 查看全部
   more: 更多
   change: 編輯
-  clear: 清除
-  claim: 領取
+  clear: 取消
+  claim: 認領
   exempli_gratia: "比如：" # Short form of "for example"
   edit: 編輯
   everything: 所有一切
@@ -90,11 +92,13 @@ zh_Hant:
   cancel: 取消
   or: 或
   search: 搜索
+  deactive: 撤銷
+  happy_holidays: 聖誕節快樂
 
   user:
     grinchy_message: "在%{year}年，%{user}是一個聖誕怪傑。他發起了〇個合併請求(pull request)。 鴨蛋！"
     pull_request_count: "在%{year}年， %{user} 一共發起了%{count} 次合併請求(pull request)"
-    organisations: 一名成員
+    organisations: 組織
     coderwall:
       title: Coderwall 徽章
       achieved_by: "贏取的徽章"
@@ -116,6 +120,7 @@ zh_Hant:
     help_out: "不知道該從哪裡開始嗎？這裡是一些大家推薦的專案："
     no_pull_requests: 您還沒有發送任何合併請求(pull request)， 你還等什麼呢？！
     gift_it: 贈與！
+    pull_requests: 這邊列出了參與者們最新送出的 pull requests。現在送出 pull request，就也可以看到你的唷！
 
   language:
     projects_count: "%{count} %{language} 項目"
@@ -160,6 +165,7 @@ zh_Hant:
 
   preferences:
       title: 設置您的個人喜好
+      setup_help: 在開始參與 24 Pull Requests 之前，請先設定個人偏好。
       frequency_message: 在項目結束前，我們會根據您所選擇的頻率，給您發送郵件，推荐一些您可能感興趣的項目。如果您允許，我們已經根據您在GitHub的代碼庫得出您喜好的語言（您可以在下面修改）。
       delete: "想要刪除您的帳號？"
       information: 你可以在之後修改您接收郵件的偏好設置
@@ -200,8 +206,10 @@ zh_Hant:
     description: 在這裡管理您的合併請求(pull request)並且選擇&amp;描述你的"24 Pull Requests"。
     view_your_gifts: 你所有贈出的代碼都會顯示在您的%{calendar_link}。
     calendar_link: 公共日曆
-    none: 沒有贈出什麼東西…
+    none: 沒有送出程式碼…
     give: 獻給你愛的項目一點東西…代碼
+    link_twitter_desc: "想要和大家分享你送出了哪些程式碼嗎？%{link_twitter}後我們就會幫你和大家分享每一個禮物。"
+    link_twitter: "連結 Twitter 帳號"
 
     form:
       date: 日期
