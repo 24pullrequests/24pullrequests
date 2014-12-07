@@ -14,7 +14,8 @@ AllCops:
     - '**/*.coffee'
     - '**/*.css'
     - '**/*.gif'
-    - '**/*.html.erb'
+    - '**/*.haml*'
+    - '**/*.erb*'
     - '**/*.ico'
     - '**/*.jpeg'
     - '**/*.jpg'
@@ -43,6 +44,8 @@ Style/AlignHash:
 Style/Documentation:
   Enabled: false
 Style/RegexpLiteral:
+  Enabled: false
+Style/RescueModifier:
   Enabled: false
 Style/CollectionMethods:
   # Mapping from undesired method to desired_method

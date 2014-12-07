@@ -10,7 +10,7 @@ class Calendar
 
   def each
     giftable_dates.each do |date|
-      gift = gifts.find { |gift| gift.date == date }
+      gift = gifts.find { |g| g.date == date }
 
       yield(date, gift)
     end

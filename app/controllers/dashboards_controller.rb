@@ -8,7 +8,7 @@ class DashboardsController < ApplicationController
     gifted_today  = current_user.gift_for(today)
     @events = Event.where(['start_time >= ?', Date.today]).order('start_time').first(5)
 
-    if is_giftable_range? && current_user.unspent_pull_requests.any? && !gifted_today
+    if giftable_range? && current_user.unspent_pull_requests.any? && !gifted_today
       gift      = current_user.new_gift
       gift_form = GiftForm.new(gift: gift, pull_requests: current_user.unspent_pull_requests)
     end
@@ -62,7 +62,7 @@ class DashboardsController < ApplicationController
     Time.zone.now.to_date
   end
 
-  def is_giftable_range?
+  def giftable_range?
     today > Date.new(CURRENT_YEAR, 12, 1) && today < Date.new(CURRENT_YEAR, 12, 24)
   end
 

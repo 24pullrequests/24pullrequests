@@ -292,7 +292,7 @@ describe User, type: :model do
     end
   end
 
-  describe '.is_admin?' do
+  describe '.admin?' do
     let(:admin) { create :user, nickname: 'akira' }
     let(:non_admin) { create :user }
 
@@ -300,11 +300,11 @@ describe User, type: :model do
       expect(User).to receive(:admins).and_return([admin])
     end
     it 'identifies if a user is a admin' do
-      expect(admin.is_admin?).to eq(true)
+      expect(admin.admin?).to eq(true)
     end
 
     it 'identifies if a user is not a admin' do
-      expect(non_admin.is_admin?).to eq(false)
+      expect(non_admin.admin?).to eq(false)
     end
   end
 

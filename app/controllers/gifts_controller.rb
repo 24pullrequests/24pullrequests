@@ -85,6 +85,6 @@ class GiftsController < ApplicationController
   end
 
   def tweet?
-    gift_permitted_params[:tweet] === 'true'
+    gift_permitted_params[:tweet] == 'true'
   end
 end

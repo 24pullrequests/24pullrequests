@@ -12,7 +12,7 @@ module LoginHelpers
   end
 
   def mock_is_admin(admin = false)
-    allow_any_instance_of(User).to receive(:is_admin?).and_return(admin)
+    allow_any_instance_of(User).to receive(:admin?).and_return(admin)
   end
 
   def mock_github_auth(user)

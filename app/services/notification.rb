@@ -25,14 +25,14 @@ class Notification
   end
 
   def daily?
-    is_frequency?(:daily)
+    frequency?(:daily)
   end
 
   def weekly?
-    is_frequency?(:weekly)
+    frequency?(:weekly)
   end
 
-  def is_frequency?(frequency)
+  def frequency?(frequency)
     return false unless user.email_frequency.try(:to_sym) == frequency
 
     user.last_sent_at.nil? || user.last_sent_at < LAST_SEEN[frequency].ago
