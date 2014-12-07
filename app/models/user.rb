@@ -4,26 +4,26 @@ class User < ActiveRecord::Base
 
   attr_writer :gift_factory
 
-  has_many :pull_requests, :dependent => :destroy
-  has_many :skills,        :dependent => :destroy
-  has_many :gifts,         :dependent => :destroy
+  has_many :pull_requests, dependent: :destroy
+  has_many :skills,        dependent: :destroy
+  has_many :gifts,         dependent: :destroy
   has_many :projects
   has_many :events
   has_and_belongs_to_many :organisations
 
   has_many :archived_pull_requests
 
-  scope :by_language, -> (language) { joins(:skills).where("lower(language) = ?", language.downcase) }
+  scope :by_language, -> (language) { joins(:skills).where('lower(language) = ?', language.downcase) }
 
   paginates_per 99
 
-  accepts_nested_attributes_for :skills, :reject_if => proc { |attributes| !Project::LANGUAGES.include?(attributes['language']) }
+  accepts_nested_attributes_for :skills, reject_if: proc { |attributes| !Project::LANGUAGES.include?(attributes['language']) }
 
   before_save :check_email_changed
   after_create :download_pull_requests, :estimate_skills, :download_user_organisations
 
-  validates_presence_of :email, :if => :send_regular_emails?
-  validates_format_of :email, :with => /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, :allow_blank => true, :on => :update
+  validates_presence_of :email, if: :send_regular_emails?
+  validates_format_of :email, with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, allow_blank: true, on: :update
 
   def self.find_by_nickname!(nickname)
     where(['lower(nickname) =?', nickname.downcase]).first!
@@ -77,7 +77,7 @@ class User < ActiveRecord::Base
     "https://github.com/#{nickname}" if nickname.present?
   end
 
-  def avatar_url(size=80)
+  def avatar_url(size = 80)
     "https://avatars.githubusercontent.com/u/#{uid}?size=#{size}"
   end
 
@@ -88,7 +88,7 @@ class User < ActiveRecord::Base
   def estimate_skills
     if ENV['GITHUB_KEY'].present?
       (Project::LANGUAGES & repo_languages).each do |language|
-        skills.create(:language => language)
+        skills.create(language: language)
       end
     end
   end
@@ -108,7 +108,7 @@ class User < ActiveRecord::Base
   def confirm!
     if email.present? && !confirmed?
       return update_attributes(confirmation_token: nil,
-      confirmed_at: Time.zone.now.utc)
+                               confirmed_at:       Time.zone.now.utc)
     elsif confirmed?
       errors.add(:email, :already_confirmed)
     else
@@ -124,7 +124,7 @@ class User < ActiveRecord::Base
     end
   end
 
-  def new_gift(attrs={})
+  def new_gift(attrs = {})
     GiftFactory.create!(self, gift_factory, attrs)
   end
 
@@ -137,7 +137,7 @@ class User < ActiveRecord::Base
   end
 
   def send_regular_emails?
-    ['daily', 'weekly'].include?(email_frequency)
+    %w(daily weekly).include?(email_frequency)
   end
 
   def to_param
@@ -153,8 +153,8 @@ class User < ActiveRecord::Base
   end
 
   def unspent_pull_requests
-    gifted_pull_requests = gifts.map { |g| g.pull_request }
-    pull_requests.reject{ |pr| gifted_pull_requests.include?(pr) }
+    gifted_pull_requests = gifts.map(&:pull_request)
+    pull_requests.reject { |pr| gifted_pull_requests.include?(pr) }
   end
 
   def needs_setup?
@@ -165,8 +165,8 @@ class User < ActiveRecord::Base
     @admin ||= User.admins.include?(self)
   end
 
-  def self.users_with_pull_request_counts pull_request_year
-    joins(:pull_requests).where('EXTRACT(year FROM pull_requests.created_at) = ?', pull_request_year).select("users.*, COUNT(pull_requests.id) as pull_requests_count").group("users.id")
+  def self.users_with_pull_request_counts(pull_request_year)
+    joins(:pull_requests).where('EXTRACT(year FROM pull_requests.created_at) = ?', pull_request_year).select('users.*, COUNT(pull_requests.id) as pull_requests_count').group('users.id')
   end
 
   private
@@ -176,9 +176,9 @@ class User < ActiveRecord::Base
   end
 
   def check_email_changed
-    return unless self.email_changed? && self.email.present?
+    return unless self.email_changed? && email.present?
 
-    self.generate_confirmation_token
+    generate_confirmation_token
     self.confirmed_at = nil
 
     ConfirmationMailer.confirmation(self).deliver

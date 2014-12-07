@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe 'Twitter', :type => :request do
-  let(:user) { create :user, :email_frequency => 'never' }
+describe 'Twitter', type: :request do
+  let(:user) { create :user, email_frequency: 'never' }
   subject { page }
 
   before do

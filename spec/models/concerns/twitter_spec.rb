@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-describe Concerns::Twitter, :type => :model do
+describe Concerns::Twitter, type: :model do
   let(:user) { create(:user) }
 
-  describe "#authorize_twitter!" do
-    it "configures the twitter client" do
+  describe '#authorize_twitter!' do
+    it 'configures the twitter client' do
       expect(user).to receive(:twitter_nickname=).with(:nickname)
       expect(user).to receive(:twitter_token=).with(:token)
       expect(user).to receive(:twitter_secret=).with(:secret)
@@ -14,10 +14,9 @@ describe Concerns::Twitter, :type => :model do
     end
   end
 
-
-  describe "#remove_twitter!" do
-    it "configures the twitter client" do
-      [:twitter_nickname=, :twitter_token=, :twitter_secret= ].each do |method|
+  describe '#remove_twitter!' do
+    it 'configures the twitter client' do
+      [:twitter_nickname=, :twitter_token=, :twitter_secret=].each do |method|
         expect(user).to receive(method).with(nil)
       end
       expect(user).to receive(:save!)
@@ -25,8 +24,8 @@ describe Concerns::Twitter, :type => :model do
       user.remove_twitter!
     end
 
-    describe "#twitter_linked?" do
-      it "checks if twitter is configured" do
+    describe '#twitter_linked?' do
+      it 'checks if twitter is configured' do
         user.twitter_token = :token
         user.twitter_secret = :secret
 

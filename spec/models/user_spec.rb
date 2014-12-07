@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'ostruct'
 
-describe User, :type => :model do
+describe User, type: :model do
   let(:user) { create :user }
 
   it { is_expected.to have_many(:pull_requests) }
@@ -26,7 +26,7 @@ describe User, :type => :model do
           end
 
           it 'sends a confirmation email' do
-            expect(ConfirmationMailer).to receive(:confirmation).and_return double("ConfirmationMailer", deliver: true)
+            expect(ConfirmationMailer).to receive(:confirmation).and_return double('ConfirmationMailer', deliver: true)
             subject.save
           end
         end
@@ -51,7 +51,7 @@ describe User, :type => :model do
     end
   end
 
-  %w[daily weekly].each do |frequency|
+  %w(daily weekly).each do |frequency|
     context "when user has subscribed to #{frequency} emails" do
       before do
         subject.email_frequency = frequency
@@ -62,11 +62,11 @@ describe User, :type => :model do
   end
 
   describe '#admins' do
-    let!(:user) { create :user, :nickname => 'foobar' }
+    let!(:user) { create :user, nickname: 'foobar' }
 
     before do
       3.times { create :user }
-      allow(User).to receive(:organization_members).and_return([ Hashie::Mash.new(:login => 'foobar') ])
+      allow(User).to receive(:organization_members).and_return([Hashie::Mash.new(login: 'foobar')])
     end
 
     subject { described_class.admins }
@@ -237,7 +237,7 @@ describe User, :type => :model do
 
     context 'when the user has skillz' do
       before do
-        create :skill, :language => 'JavaScript', :user => user
+        create :skill, language: 'JavaScript', user: user
       end
 
       it { is_expected.to eq ['JavaScript'] }
@@ -261,12 +261,12 @@ describe User, :type => :model do
     subject { user.pull_requests_count }
 
     context 'by default' do
-      it { is_expected.to eq 0}
+      it { is_expected.to eq 0 }
     end
 
     context 'when a pull request is added' do
       before do
-        create :pull_request, :user => user
+        create :pull_request, user: user
         user.reload
       end
 
@@ -279,21 +279,21 @@ describe User, :type => :model do
     it { is_expected.to eq user.nickname }
   end
 
-  describe "gifting" do
-    it "creates new gifts that belong to itself" do
+  describe 'gifting' do
+    it 'creates new gifts that belong to itself' do
       expect(user.new_gift.user).to eq(user)
     end
 
-    it "forwards attributes to newly created gifts" do
+    it 'forwards attributes to newly created gifts' do
       gift_factory = ->(attrs) { OpenStruct.new(attrs) }
       user.gift_factory = gift_factory
 
-      expect(user.new_gift(:foo => 'bar').foo).to eq('bar')
+      expect(user.new_gift(foo: 'bar').foo).to eq('bar')
     end
   end
 
   describe '.is_admin?' do
-    let(:admin) { create :user, nickname: "akira" }
+    let(:admin) { create :user, nickname: 'akira' }
     let(:non_admin) { create :user }
 
     before do
@@ -308,12 +308,12 @@ describe User, :type => :model do
     end
   end
 
-  context "#scopes" do
-    let!(:haskell_users) { 2.times.map { create(:skill, language: "Haskell").user } }
+  context '#scopes' do
+    let!(:haskell_users) { 2.times.map { create(:skill, language: 'Haskell').user } }
 
-    it "by_language" do
-      expect(User.by_language("haskell")).to eq(haskell_users)
-      expect(User.by_language("ruby")).to eq([])
+    it 'by_language' do
+      expect(User.by_language('haskell')).to eq(haskell_users)
+      expect(User.by_language('ruby')).to eq([])
     end
   end
 

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe AuthHash do
 
-  describe "#user_info" do
+  describe '#user_info' do
     it "it extracts the user's information" do
       auth = AuthHash.new(user_hash)
 
@@ -13,8 +13,8 @@ describe AuthHash do
 end
 
 def user_hash
-  { "provider" => 'github',
-    "uid" => "uid",
-    "info" => { "nickname" => "jane-doe" },
-    "credentials" => { "token" => 'some-token' } }
+  { 'provider'    => 'github',
+    'uid'         => 'uid',
+    'info'        => { 'nickname' => 'jane-doe' },
+    'credentials' => { 'token' => 'some-token' } }
 end
