@@ -6,14 +6,13 @@ describe 'Admin Projects', type: :request do
   subject { page }
 
   before do
-    allow(user).to receive_messages(:is_admin? => true)
+    mock_is_admin
     login(user)
 
     visit admin_projects_path
   end
 
   describe 'project index' do
-
     it 'should list all projects' do
       projects.each do |project|
         is_expected.to have_content project.name

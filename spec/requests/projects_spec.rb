@@ -4,6 +4,10 @@ describe 'Projects', type: :request do
   let(:user) { create :user, email_frequency: 'daily' }
   subject { page }
 
+  before do
+    mock_is_admin
+  end
+
   describe 'project index' do
     before do
       2.times { create :project }

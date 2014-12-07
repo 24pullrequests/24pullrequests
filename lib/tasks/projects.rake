@@ -3,7 +3,7 @@ task check_for_inactive_projects: :environment do
   count = 0
   Project.active.all.each do |project|
     begin
-      user = load_user
+      user = User.load_user
       updated_at = project.repo(user.nickname, user.token).updated_at
       updated_recently = updated_at > Date.today - 6.months if updated_at
     rescue Octokit::NotFound => e
@@ -23,7 +23,7 @@ task map_labels_from_github_issues: :environment do
   ACTIVE_LABELS = Label.all.map(&:name)
 
   Project.active.all.each do |project|
-    user = load_user
+    user = User.load_user
     labels = project.issues(user.nickname, user.token, 6, open: true).map do |issue|
       issue.labels.map(&:name)
     end.flatten rescue []

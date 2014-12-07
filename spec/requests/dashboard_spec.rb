@@ -5,6 +5,7 @@ describe 'Dashboard', type: :request do
   subject { page }
 
   before do
+    mock_is_admin
     login user
   end
 

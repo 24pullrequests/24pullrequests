@@ -16,17 +16,8 @@ module Humans
           puts "Error when memoizing contributors at boot up:\n #{e.inspect}"
           []
         end
-
-        config.organization_members = begin
-          Timeout.timeout(5) do
-            config.octokit_client.organization_members('24pullrequests')
-          end
-        rescue => e
-          puts "Error when memoizing organization members at boot up:\n #{e.inspect}"
-          []
-        end
       else
-        config.contributors = config.organization_members = []
+        config.contributors = []
       end
     end
   end
