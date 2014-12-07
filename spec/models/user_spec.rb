@@ -66,7 +66,7 @@ describe User, :type => :model do
 
     before do
       3.times { create :user }
-      allow(Rails.configuration).to receive(:organization_members).and_return([ Hashie::Mash.new(:login => 'foobar') ])
+      allow(User).to receive(:organization_members).and_return([ Hashie::Mash.new(:login => 'foobar') ])
     end
 
     subject { described_class.admins }
