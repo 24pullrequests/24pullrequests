@@ -16,12 +16,6 @@ class StaticController < ApplicationController
   end
 
   def humans
-    unless Rails.cache.read('humans.txt')
-      @contributors = User.contributors
-      humans = render_to_string 'static/humans.txt.erb', content_type: 'text/plain'
-      Rails.cache.write('humans.txt', humans, expires_in: 1.day)
-    end
-
-    render text: Rails.cache.read('humans.txt'), content_type: 'text/plain'
+    @contributors = User.contributors
   end
 end
