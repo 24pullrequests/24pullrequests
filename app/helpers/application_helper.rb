@@ -25,8 +25,8 @@ module ApplicationHelper
     %(<iframe src="http://ghbtns.com/github-btn.html?user=#{nickname}&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="300" height="20"></iframe>).html_safe
   end
 
-  def gratipay_button(nickname)
-    %(<a href="https://www.gratipay.com/on/github/#{nickname}/" class="btn btn-success btn-mini btn-block"><span class="glyphicon glyphicon-heart"></span>Support via Gratipay</a>).html_safe
+  def gratipay_button(nickname, classes="btn btn-success btn-mini btn-block")
+    %(<a href="https://www.gratipay.com/on/github/#{nickname}/" class="#{classes}"><span class="glyphicon glyphicon-heart"></span>Support via Gratipay</a>).html_safe
   end
 
   def contributors_in(year)
