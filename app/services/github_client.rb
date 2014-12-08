@@ -27,7 +27,11 @@ class GithubClient
   end
 
   def high_rate_limit?(rate_limit = 4000)
-    client.rate_limit.remaining > rate_limit
+    begin
+      client.rate_limit.remaining > rate_limit
+    rescue Octokit::Unauthorized => e
+      true
+    end
   end
 
   def commits(repository, options = {})
@@ -36,13 +40,22 @@ class GithubClient
 
   def contributors(repository, options = {})
     Octokit.auto_paginate = true
-    contributors = client.contributors(repository, options)
+    begin
+      contributors = client.contributors(repository, options)
+    rescue Octokit::Unauthorized => e
+      contributors = []
+    end
+
     Octokit.auto_paginate = false
     contributors
   end
 
   def organization_members(org, options = {})
-    client.organization_members(org, options)
+    begin
+      client.organization_members(org, options)
+    rescue Octokit::Unauthorized => e
+      []
+    end
   end
 
   private
