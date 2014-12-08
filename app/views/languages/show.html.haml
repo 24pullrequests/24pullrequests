@@ -27,4 +27,4 @@
         = link_to t("language.projects.suggest", language: @language), new_project_path(language: @language.downcase), :class => 'btn btn-default pull-right'
         = link_to t("view_all"), projects_language_path(@language.downcase), :class => 'btn btn-default pull-right'
 
-    = render @projects
+      = render @projects
