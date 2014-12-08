@@ -71,7 +71,7 @@ describe 'Users', type: :request do
       it 'when there are none' do
         click_on 'My Suggestions'
 
-        is_expected.to have_content "You haven't suggested any projects yet."
+        is_expected.to have_content "You haven’t suggested any projects yet."
       end
 
       it 'when the user has suggested projects' do
