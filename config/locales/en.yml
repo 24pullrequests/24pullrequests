@@ -17,11 +17,11 @@ en:
     download:
       tooltip: "We usually check for pull requests every hour, but you can check now."
   twitter:
-    account_linked: "Your Twitter account has been linked! We'll post a tweet whenever you open a pull request."
+    account_linked: "Your Twitter account has been linked! We’ll post a tweet whenever you open a pull request."
     account_removed: "Your Twitter account has been removed."
     link_account:
       text: "Link Your Twitter Account"
-      tooltip: "If you link your Twitter account, we'll post a tweet whenever you open a pull request!"
+      tooltip: "If you link your Twitter account, we’ll post a tweet whenever you open a pull request!"
 
   navigation:
     all_projects: All Projects
@@ -36,26 +36,26 @@ en:
   homepage:
     title: "24 Pull Requests"
     description: Giving back little gifts of code for Christmas
-    about: "What's it all about?"
-    about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your pull requests.</p><p>Log in with your GitHub account and we'll track and highlight all your pull requests and suggest projects to work on.</p>"
-    greeting: "'Tis the season"
-    give_to_open_source: You've been benefiting from the use of open source projects all year. Now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving pull requests!
+    about: "What’s it all about?"
+    about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your pull requests.</p><p>Log in with your GitHub account and we’ll track and highlight all your pull requests and suggest projects to work on.</p>"
+    greeting: "’Tis the season"
+    give_to_open_source: You’ve been benefiting from the use of open source projects all year. Now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving pull requests!
     q_n_a: Questions & Answers
     badges:
       title: Earn Coderwall badges
-      description: We've teamed up with coderwall and created some kickass badges to unlock for participating (awarded December 24th).
-      involved_link: 'Participant - Get involved and send at least one pull request before Christmas'
+      description: We’ve teamed up with coderwall and created some kickass badges to unlock for participating (awarded December 24th).
+      involved_link: "Participant - Get involved and send at least one pull request before Christmas"
       amazing: "Continuous Sync - Send 24 pull requests before Christmas"
     involved:
       title: Get involved
       description: "There are lots of ways to get involved in an open source project: improving documentation, fixing issues and bugs, improving code quality and test coverage, or adding missing features."
-      special_page: "We've prepared a %{contributing_path}, where you can find some information about contributing."
+      special_page: "We’ve prepared a %{contributing_path}, where you can find some information about contributing."
       contributing_path: special page
       take_a_look: If you are new to open source, please take a look.
     profile:
       title: Build your profile
       description: Contributing to open source projects is also a great way to build your profile in the community and improve your CV.
-      getting_started: It's really easy to get started. Even small contributions can be really valuable to a project.
+      getting_started: It’s really easy to get started. Even small contributions can be really valuable to a project.
     event:
       title: Events
       description: This year we are encouraging organisers around the world to hold 24 Pull Requests hack events. Get involved this Christmas.
@@ -69,7 +69,7 @@ en:
     last_year_stats: "In %{year}, over 24 days, <b>%{developers}</b> developers submitted <b>%{pull_requests}</b> pull requests to <b>%{projects}</b> different open source projects."
     get_ready: Get ready for 24 Pull Requests %{year} when we do it all again!
     help_open_source: "Want to help out with open source projects in the meantime? Check out these other great initiatives:"
-    codetriage: "Give back to open source, one issue at a time, with CodeTriage. You'll get one issue from your favorite repo per day to help you dig deeper, learn more, and stay involved with the code you rely on."
+    codetriage: "Give back to open source, one issue at a time, with CodeTriage. You’ll get one issue from your favorite repo per day to help you dig deeper, learn more, and stay involved with the code you rely on."
     contribhub:
       tagline: Do you know you have a neighbor that needs help with a project? With ContribHub you will!
       description: ContribHub is a GitHub-based application that makes it easier to find projects to contribute to and grow a community around it.
@@ -85,7 +85,7 @@ en:
   your_pull_requests: Your Pull Requests
   suggested_projects: Suggested Projects
   suggest_project: Suggest a project
-  no_suggestions: You haven't suggested any projects yet.
+  no_suggestions: You haven’t suggested any projects yet.
   preferred_languages: Preferred Languages
   view_all: View All
   more: More
@@ -119,12 +119,12 @@ en:
   organisations_involved_desc: Invite more people from your organisation to participate.
 
   dashboard:
-    christmas_activity: This is where you can see all the activity we've tracked for you in the run up to Christmas.
-    give_a_gift: Looks like you haven't gifted any code today. Would you like to gift your new pull requests? # This is followed by a select-menu where you can pick one of your non-gifted pull requests to gift
+    christmas_activity: This is where you can see all the activity we’ve tracked for you in the run up to Christmas.
+    give_a_gift: Looks like you haven’t gifted any code today. Would you like to gift your new pull requests? # This is followed by a select-menu where you can pick one of your non-gifted pull requests to gift
     synchronize: Synchronize Pull Requests
-    help_out: "Can't think of a project you'd like to help contribute to? We've put together a list of popular projects here."
+    help_out: "Can’t think of a project you’d like to help contribute to? We’ve put together a list of popular projects here."
     pull_requests: "Wonder what people up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!"
-    no_pull_requests: You've not sent any pull requests, what are you waiting for?!
+    no_pull_requests: You’ve not sent any pull requests, what are you waiting for?!
     not_december: 24 Pull Requests runs from 1st-24th December, come back then!
     gift_it: Gift it!
 
@@ -141,7 +141,7 @@ en:
 
   projects:
     claim: Are any of the projects you suggested not listed? Claim them!
-    help_out: Can't think of a project to contribute to? We've collected a list of brilliant open source projects who would love your pull requests.
+    help_out: Can’t think of a project to contribute to? We’ve collected a list of brilliant open source projects who would love your pull requests.
     suggest_new: You can also suggest projects that should be added to the list, or add your own project if you would like some help with it.
     filter_by_language: "Filter by Language:"
     for_you: Suggested for you
@@ -152,8 +152,8 @@ en:
     suggest_link_text: suggest one
     new:
       title: Suggest a Project
-      info: One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We've selected our favorites, but we're always open to suggestions. Have some ideas? Share them below!
-      suggestion: Have a suggestion for this project? We're all ears! If there's something you'd like fixed, feel free to %{issue_link}.
+      info: One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We’ve selected our favorites, but we’re always open to suggestions. Have some ideas? Share them below!
+      suggestion: Have a suggestion for this project? We’re all ears! If there’s something you’d like fixed, feel free to %{issue_link}.
       issue_link_text: suggest an issue
 
       form:
@@ -172,7 +172,7 @@ en:
   preferences:
       title: Set your personal preferences
       setup_help: "To get started with 24 Pull Requests, please first fill up the following form."
-      frequency_message:  At the frequency you choose, we'll send you helpful emails from now until the project is over, highlighting some suggested projects you might consider contributing to. As an added bonus, we'll take the liberty of personalizing our suggestions to your language proficiency based on the repos in your GitHub profile. Alternatively, you can choose your languages below.
+      frequency_message:  At the frequency you choose, we’ll send you helpful emails from now until the project is over, highlighting some suggested projects you might consider contributing to. As an added bonus, we’ll take the liberty of personalizing our suggestions to your language proficiency based on the repos in your GitHub profile. Alternatively, you can choose your languages below.
       delete: "Want to delete your account?"
       information: You can always change your email preferences later.
       twitter: Twitter Account
@@ -191,7 +191,7 @@ en:
         weekly: Weekly
 
       hint:
-        confirm_email: Please confirm your email address using the link we've sent you.
+        confirm_email: Please confirm your email address using the link we’ve sent you.
 
   pull_requests:
     count: "%{count} Pull Requests already made!"
@@ -215,7 +215,7 @@ en:
     calendar_link: public calendar
     none: Nothing gifted yet.
     give: Gift something meaningful to a project you love
-    no_pull_requests: "You don't have any pull-requests"
+    no_pull_requests: "You don’t have any pull-requests"
     link_twitter_desc: "Want to share information about 24 Pull Requests and your gifts? %{link_twitter} and gift some code to open-source projects."
     link_twitter: Link Twitter account
 
@@ -239,13 +239,13 @@ en:
       title: Sponsors
       details: 24 Pull Requests was made possible thanks to the help and donations of some great sponsors.
       thanks: "Many thanks to..."
-      get_in_touch: "If you'd like to get in touch about sponsorship or anything else, drop us an email:"
+      get_in_touch: "If you’d like to get in touch about sponsorship or anything else, drop us an email:"
       pullreview:
         title: "PullReview"
         intro_html: "<a href=\"https://pullreview.com\">PullReview</a> provides for free automated code review for Ruby, Rails, and Javascript open source projects."
         maintainer_html: "If you are a maintainer, have submitted your project to 24 Pull Requests, and are interested in checking submitted contributions with PullReview, <a href=\"mailto:support@pullreview.com\">just contact them</a>, they’ll help you set up PullReview to do so."
         contributor_html: "If you want to get help from PullReview to contribute to open source Ruby projects on 24 Pull Requests, <a href=\"http://blog.8thcolor.com/en/2014/12/giving-back-with-24pullrequests/\">look at their explanations.</a>"
-        gifts: "If you've sent 24 pull requests in December, you'll get a gift from them. More details soon."
+        gifts: "If you’ve sent 24 pull requests in December, you’ll get a gift from them. More details soon."
 
   organisations:
     title: "%{count} organisations involved"
@@ -284,7 +284,7 @@ en:
 
   events:
     title: Events
-    details: You don't have to hack alone this Christmas! Host a 24 Pull Requests hack event at your company, technology meetup, or in your local community. Or you can join a hack event and code together.
+    details: You don’t have to hack alone this Christmas! Host a 24 Pull Requests hack event at your company, technology meetup, or in your local community. Or you can join a hack event and code together.
     notice:
       not_logged_in: "You must be logged in to create or edit events"
       not_authorized: "You can only edit events that you have created"
