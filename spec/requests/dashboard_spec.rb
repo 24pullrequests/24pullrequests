@@ -33,7 +33,7 @@ describe 'Dashboard', type: :request do
         visit dashboard_path
       end
 
-      it { is_expected.to have_content "You've not sent any pull requests, what are you waiting for?!" }
+      it { is_expected.to have_content "You’ve not sent any pull requests, what are you waiting for?!" }
     end
 
     context 'when the user has unspent pull requests' do
@@ -42,7 +42,7 @@ describe 'Dashboard', type: :request do
         visit dashboard_path
       end
 
-      it { is_expected.to have_content "Looks like you haven't gifted any code today. Would you like to gift your new pull requests?" }
+      it { is_expected.to have_content "Looks like you haven’t gifted any code today. Would you like to gift your new pull requests?" }
       it { is_expected.to have_button 'Gift it!' }
     end
 
