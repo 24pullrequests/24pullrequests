@@ -41,15 +41,4 @@ if Rails.env.development?
     project = create :project
     project.labels << labels.sample(2)
   end
-
-  User.contributors.each do |contributor|
-    user = create :user, nickname: contributor.login, gravatar_id: contributor.gravatar_id
-
-    3.times { user.organisations << Organisation.limit(100).sample }
-
-    create :skill, user: user
-    PULL_REQUESTS.to_a.sample.times do |i|
-      create :pull_request, user: user, created_at: DateTime.now - i.day
-    end
-  end
 end
