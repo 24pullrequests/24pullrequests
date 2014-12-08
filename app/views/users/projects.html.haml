@@ -6,7 +6,7 @@
     = render partial: 'projects/editable_project', collection:  @projects, as: :project, locals: { admin: false }
   - else
     = t("no_suggestions")
-    = link_to t("suggest_project"), new_project_path
+  %p= link_to t("suggest_project"), new_project_path
 
 %hr
 =render partial: "projects/claim"
