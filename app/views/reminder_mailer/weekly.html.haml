@@ -1,1 +1,1 @@
-= render partial: 'reminder_mailer/sign_off_msg', locals => { :time => 'day' }
+= render 'reminder_mailer/mail_content', this_time: 'week', next_time: 'next week'
