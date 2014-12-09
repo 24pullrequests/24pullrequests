@@ -119,7 +119,7 @@ zh_Hant:
     synchronize: "同步 Pull Request"
     help_out: "不知道該從哪裡開始嗎？這裡是一些大家推薦的專案："
     no_pull_requests: "你還沒有發送任何 Pull Request，你還等什麼呢？！"
-    gift_it: "贈與！"
+    gift_it: "送出！"
     pull_requests: "這邊列出了參與者們最新送出的 pull requests。現在送出 pull request，就也可以看到你的唷！"
 
   language:
@@ -138,30 +138,30 @@ zh_Hant:
     help_out: "沒有你想要參與的專案嗎？我們幫你整理好了一些熱門的專案等待你的加入！"
     suggest_new: "你可以建議你支持的專案，也可以把你自己需要幫助的專案列上去。"
     filter_by_language: "按語言分類："
-    for_you: "給你準備的推薦"
+    for_you: "你可能會感興趣的專案"
     suggestion:
       edit: "編輯"
       update: "更新專案"
-    suggest: "還沒有這個語言的專案呢，推薦一個%{suggest_link}?"
-    suggest_link_text: "推薦專案"
+    suggest: "還沒有這個語言的專案呢，到 %{suggest_link} 推薦一個？"
+    suggest_link_text: "新增專案頁面"
     new:
       title: "推薦專案"
-      info: "一個鼓勵大家參與開源社群的方法是讓大家知道哪些熱門專案值得大家一起參與。按照這個標准我們選擇一些專案。如果你有想法，和我們一起分享吧！"
-      suggestion: "對專案有建議? 我們洗耳恭聽! 如果你有想要建議的地方，請提出%{issue_link}。"
-      issue_link_text: "建議一個議題（issue）"
+      info: "藉由推薦大家適合的計畫來鼓勵大家參與開源社群。我們已經有選了一些我們最喜歡的專案。如果你有想法，和我們一起分享吧！"
+      suggestion: "對 24 Pull Requests 有建議嗎？我們非常歡迎。請到 GitHub 上%{issue_link}。"
+      issue_link_text: "新增一個 Issue"
 
       form:
         project_name: "專案名稱"
         github_url: "GitHub 連結"
-        summary: "簡單總結"
-        main_language: "主要使用的程式語言"
+        summary: "簡介"
+        main_language: "主要程式語言"
         submit_project: "送出"
 
     edit:
-      title: "編輯建議"
+      title: "修改"
     admin:
       title: "管理專案"
-      search: "搜索 GitHub 的程式碼庫"
+      search: "搜索 GitHub 程式庫"
 
   preferences:
       title: "設定你的個人喜好"
@@ -177,27 +177,27 @@ zh_Hant:
       coderwall_username: "Coderwall 用戶名"
 
       form:
-        email: "郵件"
-        email_frequency: "發送頻率"
-        never: "從不"
+        email: "電子報"
+        email_frequency: "電子報頻率"
+        never: "不訂閱"
         daily: "每天"
         weekly: "每週"
 
       hint:
-        confirm_email: "請用我們發給你郵箱的鏈接確認郵箱。"
+        confirm_email: "我們寄了一封確認信給你，請收信並點選連結確認你的電子信箱。"
 
   pull_requests:
     count: "%{count} 次 Pull Request 被發起!"
     language:
       count: "%{count} 次 Pull Request 使用 %{language}!"
     latest:
-      count: "最新的 Pull Requests（總共 %{count} 次）"
+      count: "最新的 Pull Requests（總共 %{count} 則）"
 
   delete_account:
     title: "刪除你的帳號"
-    are_you_sure: "請確認刪除帳號。刪除你的帳號會刪除你的用戶訊息，和所有在本站發去的 Pull Request ，不過你建議的專案會得到保存。"
-    notification_info: "如果你不想接收到郵件提醒，你可以改變設定： %{email_preferences_link}。"
-    email_preferences_link: "郵件偏好"
+    are_you_sure: "確定要刪除帳號嗎？刪除你的帳號會刪除你在 24 Pull Requests 上的使用者資料以及 Pull Request 記錄。你推薦的專案並不會被刪除。"
+    notification_info: "如果你不想接收到電子報，你可以 %{email_preferences_link} 修改。"
+    email_preferences_link: "偏好設定"
     confirm: "確認刪除"
     cancel: "我改變主意了"
 
