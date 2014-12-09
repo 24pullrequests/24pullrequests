@@ -28,4 +28,8 @@ class Organisation < ActiveRecord::Base
   def to_param
     login
   end
+
+  def avatar_url(size = 80)
+    "https://avatars.githubusercontent.com/u/#{github_id}?size=#{size}"
+  end
 end
