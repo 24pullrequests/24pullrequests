@@ -3,8 +3,8 @@ class ProjectSearch
 
   def initialize(params = {})
     @page = params[:page]
-    @languages = params[:languages] || []
-    @labels = params[:labels] || []
+    @languages = Array(params[:languages])
+    @labels = Array(params[:labels])
     set_seed
     self
   end
