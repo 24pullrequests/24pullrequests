@@ -1,1 +1,1 @@
-<%= render partial: 'reminder_mailer/mail_content', :locals => { :time_period => 'week' } %>
+<%= render 'reminder_mailer/mail_content', this_time: 'week', next_time: 'next week'  %>
