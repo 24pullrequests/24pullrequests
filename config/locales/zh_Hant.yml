@@ -213,7 +213,7 @@ zh_Hant:
 
     form:
       date: "日期"
-      pull_requests: "Pull Request"
+      pull_requests: "Pull Request"ˇ
       tweet: "發推說說你的 Pull Request"
       gift_it: "贈與！"
 
@@ -222,16 +222,16 @@ zh_Hant:
 
   about:
     title: "關於 24 Pull Requests"
-    description: "24 Pull Requests 是一個在 12 月份促進開源合作的小小專案。"
-    idea: "想法很簡單， 「在 12 月到聖誕節之前的每一天發出 Pull Request」， 鼓勵開發者在這段時間回饋開源社區。"
-    more_info: "這個小站也提供一些值得參與的專案，一些指南，並且展示每天哪些出色的 Pull Request。"
-    on_github: "這個小站的開發也是以開放原始碼存在 GitHub 上："
-    on_twitter: "我們也在 Twitter 上："
+    description: "24 Pull Requests 是一個在 12 月份促進開源合作的小小計畫。"
+    idea: "想法很簡單， 「12 月開始，到聖誕節之前的每一天都發出一個 Pull Request」， 鼓勵開發者在這段時間回饋開源社群。"
+    more_info: "24 Pull Requests 也提供一些值得參與的專案的建議、一些貢獻指南，並且展示每天使用者們所送出優秀的 Pull Requests。"
+    on_github: "我們網站的程式碼存在 GitHub 上："
+    on_twitter: "還有個 Twitter 帳號："
     sponsors:
-      title: "支持和幫助"
+      title: "贊助"
       details: "24 Pull Requests 接受了他們的支持和幫助。"
-      thanks: "特別感謝。。。"
-      get_in_touch: "諮詢贊助事宜，請郵件聯繫："
+      thanks: "特別感謝..."
+      get_in_touch: "接洽贊助事宜，請寄信到："
 
   organisations:
     title: "%{count} 個組織參與"
@@ -246,24 +246,24 @@ zh_Hant:
 
   api:
     title: "JSON API"
-    description: "你可能不知道，24 Pull Requests 有提供 JSON API，描述如下。"
+    description: "24 Pull Requests 有提供 JSON API，如下。"
     pagination:
       title: "分頁"
-      details: "返回多個條目的請求預設是以 99 條分頁，你可以透過 ?page 參數修改。"
+      details: "大量資料的 request 預設是每 99 筆分一頁，你可以透過 ?page 參數自訂這個數字。"
     callback:
       title: "JSON-P Callbacks"
       details: "你可以發送一個帶有 ?callback 參數的發給任何 GET 請求，得到包裝在函數里的結果。這主要用來解決跨域名的問題。（返回與平時相同）"
     projects:
       title: "專案"
-      details: "所有站點上的專案訊息，按字母表排序。"
+      details: "所有 24 Pull Requests 上的專案訊息，按字母順序排序。"
     pull_requests:
       title: "Pull Requests"
-      details: "在 12 月份當之所有的 Pull Request，按照時間排序（包含用戶）"
+      details: "在 12 月份當之所有的 Pull Requests，按照時間排序（包含使用者資訊）"
     users:
       title: "使用者"
-      details: "所有註冊用戶，按照他們今年 Pull Request 數量排序，同時包含他們的組織訊息和 Pull Request 訊息。"
-      specific: "一個指定用戶的訊息。"
+      details: "所有註冊使用者，按照他們今年的 Pull Requests 數量排序，同時也包含他們的組織細節和 Pull Request 資料。"
+      specific: "某一個指定用戶的訊息。"
     organisations:
       title: "組織"
       details: "所有註冊組織，包括組織的成員。"
-      specific: "一個指定組織的訊息。"
+      specific: "某一個指定組織的訊息。"
