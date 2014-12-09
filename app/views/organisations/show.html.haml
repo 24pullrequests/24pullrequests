@@ -4,7 +4,7 @@
     = link_to "#{@organisation.login} on GitHub", "https://github.com/#{@organisation.login}", class: 'btn btn-default'
 
   .col-md-2
-    .avatar= image_tag(@organisation.avatar_url, :width => 100, :alt => @organisation.login)
+    .avatar= image_tag(@organisation.avatar_url(160), :width => 80, :height => 80, :alt => @organisation.login)
 
 
 #users.row.clearfix
