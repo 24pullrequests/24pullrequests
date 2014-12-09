@@ -213,7 +213,7 @@ zh_Hant:
 
     form:
       date: "日期"
-      pull_requests: "Pull Request"ˇ
+      pull_requests: "Pull Request"
       tweet: "發推說說你的 Pull Request"
       gift_it: "贈與！"
 
