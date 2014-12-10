@@ -11,7 +11,7 @@
         %span.visible-xs-inline> 12/
         = date.mday
       - if gift.present?
-        = link_to gift.pull_request_title, gift.pull_request_issue_url, :target => :blank
+        = link_to gift.pull_request_title, gift.pull_request_issue_url, :target => :_blank
 
   %li.calendar-day.calendar-christmas
     .calendar-inner
