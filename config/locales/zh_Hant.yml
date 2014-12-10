@@ -34,17 +34,17 @@ zh_Hant:
     about: "到底是要做什麼呢？"
     about_text: "<p>24 Pull Requests 是發生在每年十二月的一個活動，目的在鼓勵世界各地的開發者於十二月中、聖誕節之前的每一天發出至少一個 Pull Request</p><p>這個網站是為了宣傳這個活動，以及如何發出 Pull Requests</p><p>用你的 GitHub 帳號登錄，我們就回開始記錄你曾發出的 Pull Requests，並且推薦你可能感興趣的專案。</p>"
     greeting: "聖誕節要到囉！"
-    give_to_open_source: "你在過去一整年中一直受益於開源專案，快趁著聖誕節前夕回報那些專案的維護者吧！有一隻小小鳥告訴我，他們最想收到的禮物就是你的 Pull Request！"
+    give_to_open_source: "你在過去一整年中一直受益於開源專案，快趁著聖誕節前夕回報那些專案的維護者吧！有一隻小小鳥告訴我們，維護者們最想收到的聖誕節禮物就是你的 Pull Request！"
     q_n_a: "問與答"
     join_the_chat: "我們在 Gitter 上有個聊天室：%{link_to_chat}，歡迎你一起來和大家討論、分享。"
     badges:
       title: "Coderwall 徽章"
       description: "我們與 Coderwall 合作設計了幾個好酷的徽章，快來參與破關拿徽章吧！"
       involved_link: "參與者 - 積極參與活動，在聖誕節前送出至少一個 Pull Request"
-      amazing: "連續同步 - 好厲害！你簡直是個開源機器人，在聖誕節前送出了 24 個 Pull Requests"
+      amazing: "連續同步 - 好厲害！你在聖誕節前送出了 24 個 Pull Requests，簡直是個開源機器人！"
     involved:
       title: "共襄盛舉"
-      description: "要貢獻開源專案有很多方法，例如：寫更好的教學文件、幫助修復存在的問題（issues）和錯誤（bugs）、改善程式碼品質、寫更多測試以提高覆蓋率，或開發缺少的功能。"
+      description: "要貢獻開源專案有很多方法，例如：寫更好的教學文件、幫助修復專案中的 issues 和 bugs、改善程式碼品質、寫更多測試以提高覆蓋率，或開發缺少的功能。"
       special_page: "我們準備了%{contributing_path}來幫你踏出第一步。"
       contributing_path: "貢獻指南"
       take_a_look: "如果你是剛接觸開源，快去看看吧。"
@@ -55,7 +55,7 @@ zh_Hant:
       host_an_event: "舉辦活動"
     profile:
       title: "建立作品集"
-      description: "參與開源專案，也是一個建立起你在社群的經歷，豐富簡歷的好方法。"
+      description: "參與開源專案是一個融入社群，並豐富自己履歷的好方法。"
       getting_started: "開源其實很容易上手，不論多小的貢獻都有很大的價值。"
 
   information:
@@ -97,7 +97,7 @@ zh_Hant:
 
   user:
     grinchy_message: "在 %{year} 年，%{user} 是一個聖誕怪傑，他發起了〇個 Pull Request，鴨蛋！"
-    pull_request_count: "在 %{year} 年， %{user} 一共發起了%{count} 次 Pull Requests"
+    pull_request_count: "在 %{year} 年， %{user} 一共送出了 %{count} 個 Pull Requests"
     organisations: "組織"
     coderwall:
       title: "Coderwall 徽章"
@@ -113,10 +113,10 @@ zh_Hant:
   organisations_involved_desc: "邀請你公司或組織的朋友、同事們一起加入。"
 
   dashboard:
-    christmas_activity: "在這裡，你可以看到所有聖誕節你的活動。"
-    give_a_gift: "看起來你今天還沒有贈送任何程式碼。你想現在去贈出一份程式碼嗎？"
+    christmas_activity: "在這裡你可以看到你在聖誕節前的所有動態。"
+    give_a_gift: "看起來你今天還沒有贈送任何程式碼。何不現在就送出一個 Pull Request 呢？"
     # This is followed by a select-menu where you can pick one of your non-gifted  Pull Request s to gift
-    synchronize: "同步 Pull Request"
+    synchronize: "同步 Pull Requests"
     help_out: "不知道該從哪裡開始嗎？這裡是一些大家推薦的專案："
     no_pull_requests: "你還沒有發送任何 Pull Request，你還等什麼呢？！"
     gift_it: "送出！"
@@ -166,13 +166,13 @@ zh_Hant:
   preferences:
       title: "設定你的個人喜好"
       setup_help: "在開始參與 24 Pull Requests 之前，請先設定個人偏好。"
-      frequency_message: "在專案結束前，我們會根據你所選擇的頻率，給你發送郵件，推荐一些你可能感興趣的專案。如果你允許，我們已經根據你在 GitHub 的程式碼庫得出你喜好的語言（你可以在下面修改）。"
+      frequency_message: "在活動結束前，我們會根據你所選擇的頻率寄送電子報。電子報會建議一些你可能感興趣的專案。我們已經根據你在 GitHub 上的資料分析出了你喜好的語言（你可以在下面修改）。"
       delete: "想要刪除你的帳號？"
-      information: "你可以在之後修改你接收郵件的偏好設定"
+      information: "你之後也隨時可以再修改這些設定"
       twitter: "Twitter 帳號"
       languages: "你知道哪些程式語言？"
       remove: "刪除帳號"
-      save_and_continue: "保存並繼續"
+      save_and_continue: "儲存並繼續"
       coderwall: "與你的 Coderwall 帳號連結，在你的 Coderwall 帳號上顯示徽章"
       coderwall_username: "Coderwall 用戶名"
 
@@ -203,8 +203,8 @@ zh_Hant:
 
   gifts:
     title: "贈出的程式碼"
-    description: "在這裡管理你的 Pull Request 並且選擇&amp;描述你的「24 Pull Requests」。"
-    view_your_gifts: "你所有贈出的程式碼都會顯示在你的%{calendar_link}。"
+    description: "在這裡管理你所送出的 Pull Requests，並且精選出你自己獨一無二的「24 Pull Requests」。"
+    view_your_gifts: "你所贈出的 Pull Requests 會顯示在你的%{calendar_link}上。"
     calendar_link: "公開日曆"
     none: "沒有送出程式碼…"
     give: "獻給你愛的專案一點東西…程式碼"
@@ -228,7 +228,7 @@ zh_Hant:
     on_github: "我們網站的程式碼存在 GitHub 上："
     on_twitter: "還有個 Twitter 帳號："
     sponsors:
-      title: "贊助"
+      title: "贊助單位"
       details: "24 Pull Requests 接受了他們的支持和幫助。"
       thanks: "特別感謝..."
       get_in_touch: "接洽贊助事宜，請寄信到："
