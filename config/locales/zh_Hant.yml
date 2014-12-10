@@ -50,7 +50,7 @@ zh_Hant:
       take_a_look: "如果你是剛接觸開源，快去看看吧。"
     event:
       title: "社群活動"
-      description: "今年我們開始鼓勵大家在世界各地舉辦 24 Pull Requests 的黑客松。找場黑客松，和大家一起些程式吧！"
+      description: "今年我們開始鼓勵大家在世界各地舉辦 24 Pull Requests 的黑客松。找場黑客松，和大家一起寫程式吧！"
       view_events: "所有活動"
       host_an_event: "舉辦活動"
     profile:
@@ -60,7 +60,7 @@ zh_Hant:
 
   information:
     title: "24 Pull Requests %{year} 就要開始了"
-    last_year_stats: "在 %{year} 年最後的24天裡，<b>%{developers}</b> 名開發者送出了<b>%{pull_requests}</b> 個 Pull Requests 給 <b>%{projects}</b> 個不同的開源專案。"
+    last_year_stats: "在 %{year} 年最後的 24 天裡，<b>%{developers}</b> 名開發者送出了<b>%{pull_requests}</b> 個 Pull Requests 給 <b>%{projects}</b> 個不同的開源專案。"
     get_ready: "摩拳擦掌開始預備 24 Pull Requests %{year} 吧！"
     help_open_source: "在那之前，想要繼續幫助其他開源專案嗎？去看看這幾個開源專案活動吧："
     codetriage: "感恩回饋開源，一次一個議題（issue），CodeTriage 與你同行。你會每天從你喜歡的專案那分配到一個議題（issue），並引導你越學越多，參與撰寫大家日常所依賴的程式碼裡。"
@@ -120,7 +120,7 @@ zh_Hant:
     help_out: "不知道該從哪裡開始嗎？這裡是一些大家推薦的專案："
     no_pull_requests: "你還沒有發送任何 Pull Request，你還等什麼呢？！"
     gift_it: "送出！"
-    pull_requests: "這邊列出了參與者們最新送出的 pull requests。現在送出 pull request，就也可以看到你的唷！"
+    pull_requests: "這邊列出了參與者們最新送出的 Pull Requests。現在送出 Pull Request 就也可以看到你的唷！"
 
   language:
     projects_count: "%{count} %{language} 專案"
@@ -262,8 +262,8 @@ zh_Hant:
     users:
       title: "使用者"
       details: "所有註冊使用者，按照他們今年的 Pull Requests 數量排序，同時也包含他們的組織細節和 Pull Request 資料。"
-      specific: "某一個指定用戶的訊息。"
+      specific: "某一個指定使用者的資訊。"
     organisations:
       title: "組織"
       details: "所有註冊組織，包括組織的成員。"
-      specific: "某一個指定組織的訊息。"
+      specific: "某一個指定組織的資訊。"
