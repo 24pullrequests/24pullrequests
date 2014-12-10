@@ -223,7 +223,7 @@
     position: absolute;
     bottom: 5px;
     left: 5px;
-    right: 20px;
+    right: 34px;
     color: #fff;
     line-height: 1;
     font-size: 12px;
@@ -232,6 +232,7 @@
     overflow: hidden;
     text-align: left;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .avatar-link {
