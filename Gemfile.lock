@@ -247,6 +247,9 @@ GEM
     rabl (0.11.5)
       activesupport (>= 2.3.14)
     rack (1.5.2)
+    rack-canonical-host (0.1.0)
+      addressable
+      rack (~> 1.0)
     rack-google-analytics (1.2.0)
       actionpack
       activesupport
@@ -446,6 +449,7 @@ DEPENDENCIES
   pullreview-coverage
   quiet_assets
   rabl
+  rack-canonical-host
   rack-google-analytics
   rails (= 4.1.8)
   rails_12factor
