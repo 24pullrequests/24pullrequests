@@ -159,10 +159,15 @@
   background: #f0f0f0;
   margin: 20px 0 20px 0;
   font-size: 0;
+  overflow: hidden;
 
   .avatar-cell {
     width: 12.5%;
     margin: 0;
+
+    .username {
+      display: block;
+    }
 
     @media (max-width: 767px) {
       width: 25%;
@@ -192,6 +197,12 @@
 
 .avatar-cell {
   position: relative;
+  display: inline-block;
+  text-align: center;
+  list-style: none;
+  overflow: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
 
   .pr-badge {
     position: absolute;
@@ -208,24 +219,21 @@
   }
 
   .username {
+    display: none;
     position: absolute;
     bottom: 5px;
     left: 5px;
+    right: 34px;
     color: #fff;
     line-height: 1;
     font-size: 12px;
-    text-shadow: 0 0 1px #222, 0 0 1px #222;
+    text-shadow: 0 0 1px #222, 0 0 1px #222, 0 0 1px #222;
+    font-weight: bold;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
-}
-
-
-.avatar-cell {
-  display: inline-block;
-  text-align: center;
-  list-style: none;
-  overflow: none;
-  margin-right: 10px;
-  margin-bottom: 10px;
 
   .avatar-link {
     display: block;
