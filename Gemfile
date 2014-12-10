@@ -22,6 +22,7 @@ gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
 gem 'octicons-rails'
+gem 'rack-canonical-host'
 
 group :development do
   gem 'better_errors'
