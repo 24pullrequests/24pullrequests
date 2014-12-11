@@ -133,7 +133,7 @@ h1, h2, h3, h4, .page-title {
 .svg-snow .snow {
   animation-name: snowfall;
   animation-duration: 5s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
 }
 .svg-snow .snow.snow-1 { animation-delay: 1s;}
@@ -149,7 +149,7 @@ h1, h2, h3, h4, .page-title {
   0%   { fill-opacity: 0; }
   25%  { fill-opacity: 1; }
   65%  { transform: translateY(420px); fill-opacity: 0; }
-  100% { fill-opacity: 0 }
+  100% { fill-opacity: 0; }
 }
 /* snow - end */
 
