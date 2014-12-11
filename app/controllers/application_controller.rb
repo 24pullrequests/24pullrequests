@@ -3,10 +3,16 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user, :logged_in?, :current_year, :admin?
 
-  before_action :set_locale
+  before_action :set_locale, :ensure_email_address_confirmed
 
   def set_locale
     I18n.locale = cookies[:locale] || I18n.default_locale
+  end
+
+  def ensure_email_address_confirmed
+    if logged_in? && current_user.confirmed_at.nil?
+      flash.now[:notice] = "You must confirm your email address"
+    end
   end
 
   private
