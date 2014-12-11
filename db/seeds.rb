@@ -20,10 +20,13 @@ if Rails.env.development?
   USERS = 50
   PULL_REQUESTS = (3..20)
   PROJECTS = 50
+  
+  EVENTS = ["PullRequest-a-thon", "24 Pull Requests Hack event", "Open Source Hackday", "Christmas Bugmash"]
+
 
   Rails.logger.info 'Inserting some test data'
 
-  USERS.times do
+  users = USERS.times do
     user = create :user, provider: 'developer2', gravatar_id: GRAVATARS.sample
     user.uid = user.nickname # For developer2 omniauth
     2.times { user.organisations << create(:organisation, avatar_url: "https://1.gravatar.com/avatar/#{ORGGRAVATARS.sample}") rescue nil }
@@ -41,4 +44,18 @@ if Rails.env.development?
     project = create :project
     project.labels << labels.sample(2)
   end
+
+  EVENTS.each do |event_name|
+    december_first = Time.parse("1/12/#{CURRENT_YEAR}")
+
+    Event.create name: event_name, 
+                 location: "#{Faker::Address.city}, #{Faker::Address.country}", 
+                 url: Faker::Internet.url,
+                 start_time:  Faker::Time.between(december_first, december_first + 23.days, :day),
+                 latitude: Faker::Address.latitude,
+                 longitude: Faker::Address.longitude,
+                 description: Faker::Lorem.sentence(3),
+                 user_id: users.take.id
+  end
+
 end
