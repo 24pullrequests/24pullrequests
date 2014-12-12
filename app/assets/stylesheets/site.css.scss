@@ -124,57 +124,70 @@ h1, h2, h3, h4, .page-title {
   }
 }
 
-@media (min-width: 767px) {
-
-  .snow {
-    background: $header-background asset-url('snow-bg.png') 50% 0 no-repeat;
-    position: absolute;
-    top: -47px;
-    left: 0;
-    right: 0;
-    display: block;
-    height: 543px;
-    z-index: -1;
-
-    -webkit-animation: move 5s 1;
-     -khtml-animation: move 5s 1;
-       -moz-animation: move 5s 1;
-	      -ms-animation: move 5s 1;
-	       -o-animation: move 5s 1;
-	          animation: move 5s 1;
-  }
-
-  @-webkit-keyframes move {
-    0%   { opacity: 0; -webkit-transform: translateY(-400px); }
-    100% { opacity: 1; -webkit-transform: translateY(0); }
-  }
-
-  @-khtml-keyframes move {
-    0%   { opacity: 0; -khtml-transform: translateY(-400px); }
-    100% { opacity: 1; -khtml-transform: translateY(0); }
-  }
-
-  @-moz-keyframes move {
-    0%   { opacity: 0; -moz-transform: translateY(-400px); }
-    100% { opacity: 1; -moz-transform: translateY(0); }
-  }
-
-  @-ms-keyframes move {
-    0%   { opacity: 0; -ms-transform: translateY(-400px); }
-    100% { opacity: 1; -ms-transform: translateY(0); }
-  }
-
-  @-o-keyframes move {
-    0%   { opacity: 0; -o-transform: translateY(-400px); }
-    100% { opacity: 1; -o-transform: translateY(0); }
-  }
-
-  @keyframes move {
-    0%   { opacity: 0; transform: translateY(-400px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-
+/* snow - start */
+.svg-snow {
+  position: absolute;
+  top: 0;
+  height: 420px;
+  width: 100%;
 }
+.svg-snow .snow {
+  fill: #fff;
+  fill-opacity: 0;
+}
+.svg-snow .snow-end {
+  fill: #fff;
+}
+.svg-snow .snow {
+  animation-name: snowfall;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+.svg-snow .snow.snow-1 { animation-delay: 1s;}
+.svg-snow .snow.snow-2 { animation-delay: 2s;}
+.svg-snow .snow.snow-3 { animation-delay: 3s;}
+.svg-snow .snow.snow-4 { animation-delay: 4s;}
+.svg-snow .snow.snow-5 { animation-delay: 5s;}
+.svg-snow .snow.snow-6 { animation-delay: 6s;}
+.svg-snow .snow.snow-7 { animation-delay: 7s;}
+.svg-snow .snow.snow-8 { animation-delay: 8s;}
+.svg-snow .snow.snow-9 { animation-delay: 9s;}
+@keyframes snowfall {
+  0%   { fill-opacity: 0; }
+  25%  { fill-opacity: 1; }
+  65%  { transform: translateY(420px); fill-opacity: 0; }
+  100% { fill-opacity: 0; }
+}
+
+@keyframes snowfall-1 { 100% { transform: translateY(100px); } }
+@keyframes snowfall-2 { 100% { transform: translateY(300px); } }
+@keyframes snowfall-3 { 100% { transform: translateY(200px); } }
+@keyframes snowfall-4 { 100% { transform: translateY(180px); } }
+@keyframes snowfall-5 { 100% { transform: translateY(240px); } }
+@keyframes snowfall-6 { 100% { transform: translateY(110px); } }
+@keyframes snowfall-7 { 100% { transform: translateY(290px); } }
+@keyframes snowfall-8 { 100% { transform: translateY(150px); } }
+@keyframes snowfall-9 { 100% { transform: translateY(220px); } }
+
+.svg-snow .snow-end {
+  transform: translateY(-100px);
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.svg-snow .snow-end.snow-end-1 { animation-name: snowfall-1; animation-delay: 1s; }
+.svg-snow .snow-end.snow-end-2 { animation-name: snowfall-2; animation-delay: 2s; }
+.svg-snow .snow-end.snow-end-3 { animation-name: snowfall-3; animation-delay: 3s; }
+.svg-snow .snow-end.snow-end-4 { animation-name: snowfall-4; animation-delay: 4s; }
+.svg-snow .snow-end.snow-end-5 { animation-name: snowfall-5; animation-delay: 5s; }
+.svg-snow .snow-end.snow-end-6 { animation-name: snowfall-6; animation-delay: 6s; }
+.svg-snow .snow-end.snow-end-7 { animation-name: snowfall-7; animation-delay: 7s; }
+.svg-snow .snow-end.snow-end-8 { animation-name: snowfall-8; animation-delay: 8s; }
+.svg-snow .snow-end.snow-end-9 { animation-name: snowfall-9; animation-delay: 9s; }
+/* snow - end */
 
 a {
   color: $link-color;
