@@ -36,6 +36,12 @@ class DashboardsController < ApplicationController
     redirect_to root_path
   end
 
+  def resend_confirmation_email
+    current_user.send_confirmation_email
+    flash[:notice] = 'Confirmation email sent. Please check your inbox.'
+    redirect_to :back
+  end
+
   def confirm_email
     if params[:confirmation_token].present?
       user = User.where(confirmation_token: params[:confirmation_token]).first

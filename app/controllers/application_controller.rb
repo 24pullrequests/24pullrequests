@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user, :logged_in?, :current_year, :admin?
 
-  before_action :set_locale
+  before_action :set_locale, :unconfirmed_email_alert
 
   def set_locale
     I18n.locale = cookies[:locale] || I18n.default_locale
@@ -34,5 +34,9 @@ class ApplicationController < ActionController::Base
 
   def admin?
     current_user.admin?
+  end
+
+  def unconfirmed_email_alert
+    @email_unconfirmed = (logged_in? && current_user.confirmed?) ? false : true
   end
 end
