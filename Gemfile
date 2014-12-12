@@ -54,7 +54,7 @@ group :development, :test, :cucumber do
   gem 'simplecov'
 
   # Auto testing
-  gem 'guard-rspec'
+  gem 'guard-rspec', '~> 4.4.2'
   gem 'guard-spork'
   gem 'ruby_gntp'
   gem 'rb-fsevent'
