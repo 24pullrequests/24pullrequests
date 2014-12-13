@@ -33,6 +33,7 @@ describe ReminderMailer, type: :mailer do
     it 'contains periodicity in body' do
       expect(mail.body.encoded).to match("We've got some suggested projects for you to send pull requests to #{this_time}")
       expect(mail.body.encoded).to match("See you #{next_time}!")
+      expect(mail.body.encoded).to_not match("See you next #{next_time}!")
     end
   end
 
