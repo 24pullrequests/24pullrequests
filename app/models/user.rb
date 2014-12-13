@@ -121,6 +121,12 @@ class User < ActiveRecord::Base
     end
   end
 
+  def send_confirmation_email
+    generate_confirmation_token
+    self.save
+    ConfirmationMailer.confirmation(self).deliver
+  end
+
   def new_gift(attrs = {})
     GiftFactory.create!(self, gift_factory, attrs)
   end
