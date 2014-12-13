@@ -69,4 +69,8 @@ module ApplicationHelper
     return url if type == 'text'
     link_to url, url
   end
+
+  def unconfirmed_email?
+    logged_in? && !current_user.confirmed?
+  end
 end

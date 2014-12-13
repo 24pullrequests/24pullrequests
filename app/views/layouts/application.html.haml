@@ -76,7 +76,7 @@
                 .alert= flash[:alert]
               - if flash[:notice]
                 .alert.alert-info= flash[:notice]
-          - if @email_unconfirmed
+          - if unconfirmed_email?
             .alert.alert-info
               You must confirm your email address. 
               = link_to "Click here", resend_confirmation_path
