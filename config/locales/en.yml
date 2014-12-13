@@ -112,7 +112,7 @@ en:
       success: "Successfully updated your coderwall username!"
       update_button: "Update"
       error_no_user: "No user found with this name."
-      error_github_not_connected: "The user %{username} has not connected to Coderwall with this GitHub account."
+      error_github_not_connected: "Please link your Coderwall account to your GitHub account and try again."
 
   developers_using_language: Developers using %{language}
   developers_involved: Developers already involved
