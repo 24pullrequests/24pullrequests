@@ -203,8 +203,8 @@ section {
   margin: 20px 0;
 }
 
-.btn.pull-right {
-  margin-left: 10px;
+.btn.pull-right, .pull-right .btn {
+  margin-left: 5px;
 }
 
 .hb {
@@ -646,4 +646,10 @@ hr {
     display:none;
   }
 
+}
+
+.user-pull-requests {
+  margin: 40px 0 30px;
+  border-bottom: 1px dashed #E3E3E3;
+  padding-bottom: 20px;
 }
