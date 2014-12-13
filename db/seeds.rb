@@ -8,6 +8,13 @@
 
 # Create some test data for development environments.
 if Rails.env.development?
+
+  User.delete_all
+  PullRequest.delete_all
+  Event.delete_all
+  Project.delete_all
+  Label.delete_all
+
   require 'factory_girl_rails'
   require 'faker'
   include FactoryGirl::Syntax::Methods
@@ -26,7 +33,8 @@ if Rails.env.development?
 
   Rails.logger.info 'Inserting some test data'
 
-  users = USERS.times do
+  users = []
+  USERS.times do
     user = create :user, provider: 'developer2', gravatar_id: GRAVATARS.sample
     user.uid = user.nickname # For developer2 omniauth
     2.times { user.organisations << create(:organisation, avatar_url: "https://1.gravatar.com/avatar/#{ORGGRAVATARS.sample}") rescue nil }
@@ -34,6 +42,7 @@ if Rails.env.development?
     PULL_REQUESTS.to_a.sample.times do |i|
       create :pull_request, user: user, created_at: DateTime.now - i.day
     end
+    users << user
   end
 
   labels = LABELS.map do |name|
@@ -55,7 +64,7 @@ if Rails.env.development?
                  latitude: Faker::Address.latitude,
                  longitude: Faker::Address.longitude,
                  description: Faker::Lorem.sentence(3),
-                 user_id: users.take.id
+                 user_id: users.take(1).first.id
   end
 
 end
