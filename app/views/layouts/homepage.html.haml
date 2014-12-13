@@ -95,7 +95,7 @@
           - if flash.any?
             .messages
               - if flash[:alert]
-                .alert= flash[:alert]
+                .alert.alert-danger= flash[:alert]
               - if flash[:notice]
                 .alert.alert-info= flash[:notice]
           - if unconfirmed_email?
