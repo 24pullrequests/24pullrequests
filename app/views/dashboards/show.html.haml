@@ -15,7 +15,6 @@
       = link_to preferences_path, class: "btn btn-default btn-sm" do
         %span.octicon.octicon-gear
         = t("navigation.preferences")
-
       = link_to pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn btn-info btn-sm', :rel => 'tooltip', :title => t('pull_request.download.tooltip') do
         = image_tag('spinner.gif', :id => 'spinner') 
         = t('dashboard.synchronize')
