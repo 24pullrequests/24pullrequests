@@ -93,15 +93,15 @@ describe 'Projects', type: :request do
     end
 
     context 'a logged-in user' do
-      # it "should be able to edit projects they have suggested" do
-      #   within('.java') { click_on "Edit" }
+       it "should be able to edit projects they have suggested" do
+         within('.java') { click_on "Edit" }
 
-      #   fill_in 'Main language', with: 'Python'
-      #   click_on "Submit Project"
+         fill_in 'Main language', with: 'Python'
+         click_on "Submit Project"
 
-      #   should have_content "Project updated successfully!"
-      #   page.should have_css('.python')
-      # end
+         should have_content "Project updated successfully!"
+         expect(page).to have_css('.python')
+       end
 
       it 'can deactive a project' do
         first(:link, 'Deactive').click
