@@ -11,10 +11,16 @@
       =t("dashboard.give_a_gift")
       = render :partial => 'gifts/mini_form', :locals => { :gift_form => gift_form }
       %hr
+    .pull-right
+      = link_to preferences_path, class: "btn btn-default btn-sm" do
+        %span.octicon.octicon-gear
+        = t("navigation.preferences")
 
-    = link_to "#{image_tag('spinner.gif', :id => 'spinner')} #{t('dashboard.synchronize')}".html_safe, pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn btn-default pull-right', :rel => 'tooltip', :title => t('pull_request.download.tooltip')
+      = link_to pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn btn-info btn-sm', :rel => 'tooltip', :title => t('pull_request.download.tooltip') do
+        = image_tag('spinner.gif', :id => 'spinner') 
+        = t('dashboard.synchronize')
 
-    - unless pull_requests.empty?
+    - if true || pull_requests.any?
       %h3
         =t("your_pull_requests")
 
@@ -25,10 +31,11 @@
 
     .row.clearfix
       .col-md-12
+        .pull-right
+          = link_to t("view_all"), projects_path, :class => 'btn btn-default btn-sm'
+          = link_to t("suggest_project"), new_project_path, :class => 'btn btn-info btn-sm'
         %h3
           = t("suggested_projects")
-          = link_to t("suggest_project"), new_project_path, :class => 'btn btn-default pull-right'
-          = link_to t("view_all"), projects_path, :class => 'btn btn-default pull-right'
         %p
           #{t("dashboard.help_out")}:
 
