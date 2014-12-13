@@ -25,18 +25,14 @@
       %div#pull-requests.clearfix
         = render :partial => 'pull_requests_if_any', :locals => { :pull_requests => pull_requests }
 
-    .row.clearfix
-      .col-md-12
-        .pull-right<
-          = link_to t("view_all"), projects_path, :class => 'btn btn-default btn-sm'
-          = link_to t("suggest_project"), new_project_path, :class => 'btn btn-info btn-sm'
-        %h3
-          = t("suggested_projects")
-        %p
-          #{t("dashboard.help_out")}:
+    .pull-right<
+      = link_to t("view_all"), projects_path, :class => 'btn btn-default btn-sm'
+      = link_to t("suggest_project"), new_project_path, :class => 'btn btn-info btn-sm'
+    %h3= t("suggested_projects")
+    %p= t("dashboard.help_out")
 
-        #projects
-          = render projects
+    #projects
+      = render projects
   .col-md-4
     .sidebar-block
       %h4.block-title= t("homepage.events")
