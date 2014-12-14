@@ -18,7 +18,7 @@
           = image_tag('spinner.gif', :id => 'spinner') 
           = t('dashboard.synchronize')
 
-      - if true || pull_requests.any?
+      - if pull_requests.any?
         %h3
           =t("your_pull_requests")
           - if current_user.pull_requests.year(current_year).any?
