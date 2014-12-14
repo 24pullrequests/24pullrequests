@@ -21,6 +21,9 @@
       - if true || pull_requests.any?
         %h3
           =t("your_pull_requests")
+          - if current_user.pull_requests.year(current_year).any?
+            %span.label.label-info
+              = current_user.pull_requests.year(current_year).count
 
       %div#pull-requests.clearfix
         = render :partial => 'pull_requests_if_any', :locals => { :pull_requests => pull_requests }
