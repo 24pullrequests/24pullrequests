@@ -78,4 +78,14 @@ module ApplicationHelper
     logged_in? && current_user.email_frequency != 'none'
   end
 
+  def emojify(content)
+    h(content).to_str.gsub(/:([\w+-]+):/) do |match|
+      if emoji_path = Emoji.image_url_for_name($1)
+        %(<img alt="#$1" src="#{emoji_path}" style="vertical-align:middle" width="20" height="20"/>)
+      else
+        match
+      end
+    end.html_safe if content.present?
+  end
+
 end

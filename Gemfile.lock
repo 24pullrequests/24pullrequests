@@ -99,8 +99,11 @@ GEM
     docile (1.1.5)
     dotenv (1.0.2)
     ejs (1.1.1)
+    emoji (1.0.1)
+      json
     equalizer (0.0.9)
     erubis (2.7.0)
+    escape_utils (1.0.1)
     eventmachine (1.0.3)
     execjs (2.2.2)
     factory_girl (4.5.0)
@@ -428,6 +431,8 @@ DEPENDENCIES
   dalli
   database_cleaner
   ejs
+  emoji
+  escape_utils
   factory_girl_rails
   faker
   ffi
