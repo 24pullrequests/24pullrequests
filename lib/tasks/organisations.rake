@@ -1,4 +1,3 @@
-
 namespace :organisations do
   desc 'Update organisations pull_request_count'
   task update_pull_request_count: :environment do
