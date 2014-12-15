@@ -1,5 +1,5 @@
 %h2
-  = Project.count
+  = Project.active.count
   = t("suggested_projects")
   = link_to t("suggest_project"), new_project_path, :class => 'btn btn-default pull-right'
 
