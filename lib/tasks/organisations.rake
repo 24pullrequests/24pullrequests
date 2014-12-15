@@ -14,6 +14,6 @@ task download_user_organisations: :environment do
   next unless PullRequest.in_date_range?
   User.all.each do |user|
     puts "Importing organisations for #{user.nickname}"
-    user.download_user_organisations(load_user.token) rescue nil
+    user.download_user_organisations(User.load_user.token) rescue nil
   end
 end
