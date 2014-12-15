@@ -38,7 +38,7 @@ class PopularityScorer
   end
 
   def score_recent_issues
-    issue_count = @project.issues(@nickname, @token, MONTHS_OF_ACTIVITY).size
+    issue_count = @project.issues(@nickname, @token, MONTHS_OF_ACTIVITY, per_page: MAX_ISSUES).size
     points_earned_for_facet(issue_count, MAX_ISSUES)
   end
 
