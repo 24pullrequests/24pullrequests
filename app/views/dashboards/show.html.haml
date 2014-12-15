@@ -22,7 +22,7 @@
         %h3
           =t("your_pull_requests")
           - if current_user.pull_requests.year(current_year).any?
-            %span.label.label-info
+            %span.label.label-info#pull-requests-count
               = current_user.pull_requests.year(current_year).count
 
       %div#pull-requests.clearfix
