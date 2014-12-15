@@ -10,6 +10,7 @@ class Gift < ActiveRecord::Base
 
   validates :user, presence: true
   validates :pull_request, presence: true
+  validates :pull_request, uniqueness: { message: 'you can only gift each pull request once!' }
   validates :date, presence:   true,
                    uniqueness: { scope:   :user_id,
                                  message: 'you only need one gift per day. Save it for tomorrow!' },
