@@ -19,7 +19,7 @@ class GiftForm
 
   def giftable_dates
     @giftable_dates.map do |date|
-      [month_day_date_format(date), date.to_s]
+      [Gift.format_gift_date(date), date.to_s]
     end
   end
 

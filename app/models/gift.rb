@@ -37,6 +37,10 @@ class Gift < ActiveRecord::Base
     @default_date.call
   end
 
+  def self.format_gift_date date
+    "#{ date.strftime('%B') } #{ date.mday.ordinalize }"
+  end
+
   def to_param
     date.to_s
   end
