@@ -245,6 +245,7 @@ nb:
     pull_requests:
       title: Pull Requests
       details: Hent alle pull requests fra brukere of siden i desember, sortert med den nyeste først. Inkluderer også brukeren som gjorde pull requesten.
+      meta_details: Laste informasjon om alle pull forespørsler i år.
     users:
       title: Brukere
       details: Hent alle brukere som har signet opp på siden, sortert etter hvor mange pull requests de har sendt så langt i desember. Inkluderer også deres organisasjon(er) og pull requests.

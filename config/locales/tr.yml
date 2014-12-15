@@ -243,6 +243,7 @@ tr:
     pull_requests:
       title: Pull Requests
       details: Kullanıcının kendi yaptığı pull request'ler dahil olmak üzere tüm pull requestler Aralık ayındankiler olmak üzere yeniden eskiye doğru sıralanır.
+      meta_details: Bu yıl tüm çekme istekleri hakkında bilgi yükleyin.
     users:
       title: Kullanıclar
       details: Siteye kayıtlı tüm kullanıcılar Aralık ayı boyunca kendi ve organizasyonları üzerinden yaptıkları pull requestler'i görürler.

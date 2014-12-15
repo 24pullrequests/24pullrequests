@@ -259,6 +259,7 @@ zh_Hant:
     pull_requests:
       title: "Pull Requests"
       details: "在 12 月份當之所有的 Pull Requests，按照時間排序（包含使用者資訊）"
+      meta_details: 加载所有拉请求的信息，今年。
     users:
       title: "使用者"
       details: "所有註冊使用者，按照他們今年的 Pull Requests 數量排序，同時也包含他們的組織細節和 Pull Request 資料。"

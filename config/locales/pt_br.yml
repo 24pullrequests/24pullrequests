@@ -270,6 +270,7 @@ pt_br:
     pull_requests:
       title: "Pull Requests"
       details: "Retorna todos os pull requests dos usuários do site durante dezembro, ordenados por data, mais novos primeiro. também inclui o usuário que fez o pull request."
+      meta_details: "Coloque informações sobre todos os pedidos de puxar este ano."
     users:
       title: "Usuários"
       details: "Retorna todos os usuários que se increveram no site, ordenado pela quantidade de pull requests enviados durante o mês de dezembro. Também inclui suas organizações de pull requests."
