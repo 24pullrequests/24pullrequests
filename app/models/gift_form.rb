@@ -19,7 +19,7 @@ class GiftForm
 
   def giftable_dates
     @giftable_dates.map do |date|
-      ["#{ date.strftime('%B') } #{ date.mday.ordinalize }", date.to_s]
+      [Gift.format_gift_date(date), date.to_s]
     end
   end
 
