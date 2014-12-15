@@ -274,6 +274,7 @@ en:
     pull_requests:
       title: Pull Requests
       details: Load all pull requests by users of the site during December, ordered by newest first, also includes the user who made the pull request.
+      meta_details: Load information about all the pull requests this year.
     users:
       title: Users
       details: Load all users who have signed up to the site, ordered by how many pull requests they have sent so far in December, also includes their organisation(s) and pull requests.

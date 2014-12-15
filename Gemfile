@@ -23,6 +23,7 @@ gem 'coffee-rails'
 gem 'uglifier'
 gem 'octicons-rails'
 gem 'rack-canonical-host'
+gem 'draper'
 
 group :development do
   gem 'better_errors'

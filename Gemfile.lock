@@ -98,6 +98,11 @@ GEM
     diff-lcs (1.2.5)
     docile (1.1.5)
     dotenv (1.0.2)
+    draper (1.4.0)
+      actionpack (>= 3.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0)
     ejs (1.1.1)
     equalizer (0.0.9)
     erubis (2.7.0)
@@ -281,6 +286,7 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
+    request_store (1.1.0)
     rest-client (1.7.2)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
@@ -427,6 +433,7 @@ DEPENDENCIES
   coveralls
   dalli
   database_cleaner
+  draper
   ejs
   factory_girl_rails
   faker

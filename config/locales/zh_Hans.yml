@@ -244,6 +244,7 @@ zh_Hans:
     pull_requests:
       title: Pull Requests
       details: 在12月份当之所有的合并请求(pull request)，按照时间排序（包含用户）
+      meta_details: 加载所有拉请求的信息，今年。
     users:
       title: Users
       details: 所有注册用户，按照他们今年合并请求(pull request)数量排序， 同时包含他们的组织信息和合并请求(pull request)信息。

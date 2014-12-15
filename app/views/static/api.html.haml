@@ -117,6 +117,17 @@
       }
     ]
 
+%p=t("api.pull_requests.meta_details")
+
+%pre
+  :plain
+    $ curl http://24pullrequests.com/pull_requests/meta.json
+
+    {
+      "count": 500,
+      "total_pages": 20
+    }
+
 %h2=t("api.users.title")
 
 %p=t("api.users.details")
