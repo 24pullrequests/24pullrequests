@@ -32,4 +32,8 @@ class Organisation < ActiveRecord::Base
   def avatar_url(size = 80)
     "https://avatars.githubusercontent.com/u/#{github_id}?size=#{size}"
   end
+
+  def update_pull_request_count
+    update_attribute(:pull_request_count, pull_requests.count)
+  end
 end
