@@ -78,4 +78,8 @@ module ApplicationHelper
     logged_in? && current_user.email_frequency != 'none'
   end
 
+  def month_day_date_format date
+    "#{ date.strftime('%B') } #{ date.mday.ordinalize }"
+  end
+
 end
