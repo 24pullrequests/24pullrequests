@@ -23,6 +23,8 @@ gem 'coffee-rails'
 gem 'uglifier'
 gem 'octicons-rails'
 gem 'rack-canonical-host'
+gem 'escape_utils'
+gem 'emoji'
 
 group :development do
   gem 'better_errors'
