@@ -14,7 +14,6 @@ describe PopularityScorer do
     end
 
     it 'returns a score of 5 if there are recent commits' do
-      commit = double(:commit)
       expect(project).to receive(:repo).and_return(double(updated_at: Time.now))
       expect(project).to receive(:issues).and_return([])
       expect(popularity_scorer.score).to eq(5)
