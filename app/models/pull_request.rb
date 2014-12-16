@@ -1,11 +1,8 @@
-include EmojiHelper
-
 class PullRequest  < ActiveRecord::Base
   belongs_to :user, counter_cache: true
 
   validates :issue_url, uniqueness: { scope: :user_id }
 
-  before_create :emojify_content
   after_create :autogift
 
   has_many :gifts
@@ -58,9 +55,5 @@ class PullRequest  < ActiveRecord::Base
 
   def autogift
     user.new_gift(pull_request: self).save if body && body.scan(/24 ?pull ?request/i).any?
-  end
-
-  def emojify_content
-    self.body = emojify(body)
   end
 end
