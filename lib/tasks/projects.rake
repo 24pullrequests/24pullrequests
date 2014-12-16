@@ -13,7 +13,7 @@ task check_for_inactive_projects: :environment do
 
     puts "#{project.name} - #{score}"
 
-    if score < 5
+    if score < 6
       project.deactivate!
       count += 1
     end
