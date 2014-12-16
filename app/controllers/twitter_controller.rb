@@ -3,7 +3,7 @@ class TwitterController < ApplicationController
     auth_hash = request.env['omniauth.auth']
     current_user.authorize_twitter!(auth_hash.info.nickname, auth_hash.credentials.token, auth_hash.credentials.secret)
     flash[:notice] = I18n.t 'twitter.account_linked'
-    redirect_to dashboard_path
+    redirect_to user_path(current_user)
   end
 
   def remove

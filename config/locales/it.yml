@@ -244,6 +244,7 @@ it:
     pull_requests:
       title: Pull Request
       details: Carica tutte le pull request degli utenti del sito inviate in dicembre, elencando per prime quelle più nuove, includendo anche l'utente che ha inviato la pull request
+      meta_details: Caricare le informazioni su tutte le richieste di trazione di quest'anno.
     users:
       title: Utenti
       details: Carica tutti gli utenti che si sono iscritti al sito, ordinati per la quantità di pull request che hanno inviato in dicembre, includendo le loro organizzazioni e le pull request

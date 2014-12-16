@@ -20,7 +20,12 @@ Tfpullrequests::Application.routes.draw do
     end
   end
 
-  resources :pull_requests, only: [:index]
+  resources :pull_requests, only: [:index] do
+    collection do
+      get :meta
+    end
+  end
+
   resource :dashboard, only: [:show, :destroy] do
     member do
       get :delete

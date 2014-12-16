@@ -9,7 +9,7 @@
     - calendar.each_day do |date, gift|
       %tr
         %td
-          %strong= "#{ date.strftime('%B') } #{ date.mday.ordinalize }"
+          %strong= Gift.format_gift_date(date)
         - if gift
           %td
             = link_to gift.pull_request_title, gift.pull_request_issue_url

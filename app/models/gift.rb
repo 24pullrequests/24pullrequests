@@ -10,6 +10,7 @@ class Gift < ActiveRecord::Base
 
   validates :user, presence: true
   validates :pull_request, presence: true
+  validates :pull_request, uniqueness: { message: 'you can only gift each pull request once!' }
   validates :date, presence:   true,
                    uniqueness: { scope:   :user_id,
                                  message: 'you only need one gift per day. Save it for tomorrow!' },
@@ -35,6 +36,10 @@ class Gift < ActiveRecord::Base
   def self.default_date
     @default_date ||= -> { Time.zone.now.to_date }
     @default_date.call
+  end
+
+  def self.format_gift_date date
+    "#{ date.strftime('%B') } #{ date.mday.ordinalize }"
   end
 
   def to_param

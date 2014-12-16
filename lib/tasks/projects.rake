@@ -7,11 +7,13 @@ task check_for_inactive_projects: :environment do
       score = project.score(user.nickname, user.token)
     rescue Octokit::NotFound
       score = 0
+    rescue Octokit::Unauthorized
+      score = 99
     end
 
     puts "#{project.name} - #{score}"
 
-    if score == 0
+    if score < 6
       project.deactivate!
       count += 1
     end

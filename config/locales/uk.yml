@@ -240,6 +240,7 @@ uk:
     pull_requests:
       title:
       details:
+      meta_details:
     users:
       title:
       details:

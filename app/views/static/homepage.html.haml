@@ -92,7 +92,7 @@
         .title-block
           %span.mega-octicon.octicon-repo
           %h3.block-title
-            = Project.count
+            = Project.active.count
             = t("suggested_projects")
           %p=t("dashboard.help_out")
           = link_to t("suggest_project"), new_project_path, :class => 'btn btn-default btn-sm'

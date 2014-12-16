@@ -270,6 +270,7 @@ ja:
     pull_requests:
       title: Pull Requests
       details: このサイトのユーザによる12月中の全ての pull request を新しいもの順に返します。pull request を作成したユーザ情報も含まれます。
+      meta_details: 今年すべてのプル要求についての情報をロードします。
     users:
       title: Users
       details: このサイトにサインアップしている全てのユーザを、12月中の pull request が多い順に返します。組織情報、pull request 情報も含まれます。

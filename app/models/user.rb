@@ -148,7 +148,8 @@ class User < ActiveRecord::Base
   end
 
   def download_user_organisations(access_token = token)
-    Downloader.new(self, access_token).get_organisations
+    orgs = Downloader.new(self, access_token).get_organisations
+    orgs.each(&:update_pull_request_count)
   end
 
   def download_pull_requests(access_token = token)
