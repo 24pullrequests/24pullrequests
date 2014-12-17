@@ -43,3 +43,18 @@ cs:
     q_n_a: Otázky a odpovědi
     badges:
       title: Získejte Coderwall badge
+      description: Spojili jsme se s coderwall a vytvořili jsme některé dechberoucí badge, které můžete odemknout participací (udělování 24. prosince).
+      involved_link: "Participant - Zapojte se a pošlete alespoň jeden pull request před Vánoci"
+      amazing: "Continuous Sync - Pošlete 24 pull requestů před Vánoci"
+    involved:
+      title: Zapojte se
+      description: "Je tu mnoho cest jak se zapojit do open source projektů: vylepšete dokumentaci, opravte problémy a bugy, zlepšete kvalitu kódu a vylepšete testy, nebo přidejte chybějící funkci."
+      special_page: "Připravili jsme %{contributing_path}, kde můžete najít nějaké informace o tom, jak se zapojit."
+      contributing_path: special page
+      take_a_look: Pokud jste noví v open source, prosím podívejte se.
+    profile:
+      title: Vytvořte si profil
+      description: Přispívání do open source projektů je také skvělý způsob jak si vytvořit profil v komunitě a vylepšit své CV.
+      getting_started: Je opravdu jednoduché začít. I malá pomoc může být pro projekt opravdu cenná.
+    event:
+      title: Události
