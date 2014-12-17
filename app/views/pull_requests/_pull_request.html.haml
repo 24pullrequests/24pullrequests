@@ -11,4 +11,4 @@
         = link_to pull_request.repo_name, "https://github.com/#{pull_request.repo_name}", :target => :_blank
         %small
           %abbr.timeago{:title => pull_request.created_at.iso8601}= pull_request.created_at
-    %p.js-twemoji=truncate pull_request.body, :length => 240
+    %p.js-emoji=truncate pull_request.body, :length => 240
