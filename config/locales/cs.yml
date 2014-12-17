@@ -1,0 +1,45 @@
+en:
+  activerecord:
+    errors:
+      models:
+        event:
+          attributes:
+            start_time:
+              not_in_range: "Události mohou být vytvořeny pouze mezi prvním a dvacátýmčtvrtým prosincem"
+              in_past: "Události nemohou být vytvořeny v minulosti"
+        user:
+          attributes:
+            email:
+              required_for_confirmation: "Je vyžadováno potvrzení pro %{attribute}."
+              already_confirmed: "%{attribute} už byl potvrzen"
+  pull_request:
+    twitter_message: "Právě jsem daroval pull request pro http://24pullrequests.com, sledujte: %{issue_url}"
+    download:
+      tooltip: "Běžně aktualizujeme vaše pull requesty každou hodinu, můžete je ale aktualizovat hned."
+  twitter:
+    account_linked: "Váš Twitter účet byl připojen! Budeme tweetovat vaše pull requesty."
+    account_removed: "Váš Twitter účet byl odebrán."
+    link_account:
+      text: "Připojte Váš Twitter účet"
+      tooltip: "Když připojíte Váš Twitter účet, tak budeme tweetovat vaše pull requesty!"
+
+  navigation:
+    all_projects: Všechny projekty
+    my_suggestions: Mé doporučení
+    dashboard: Nástěnka
+    profile: Profil
+    preferences: Nastavení
+    gifted_code: Darovaný kód
+    manage_projects: Spravovat projekty
+    logout: Odhlásit se
+
+  homepage:
+    title: "24 Pull Requestů"
+    description: Darujte na Vánoce malé dárečky kódu
+    about: "O co jde?"
+    about_text: "<p>24 Pull Requests je každoroční iniciativa podporující vývojáře po celém světě poslat každý den před Vánoci pull request.</p> <p>Tohle je stránka pomáhající v propagaci tohoto projektu, zdůraznění proč, jak a kde poslat svůje pull requesty.</p><p>Přihlašte se svým GitHub účtem and my budeme sledovat a zvýraznovat všechny vaše pull requesty a doporučovat projekty, na kterých můžete pracovat.</p>"
+    greeting: "Už je čas"
+    give_to_open_source: Celý rok benefitujete z opensource projektů. Nastal čas poděkovat všek správcům těchto projektům, a andílci mi říkají že milují pull requesty!
+    q_n_a: Otázky a odpovědi
+    badges:
+      title: Získejte Coderwall badge
