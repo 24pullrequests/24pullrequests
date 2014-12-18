@@ -2,7 +2,9 @@ class Organisation < ActiveRecord::Base
   has_and_belongs_to_many :users
   has_many :pull_requests, -> { order('created_at desc') }, through: :users
 
-  scope :order_by_pull_requests, -> { order('organisations.pull_request_count desc') }
+  scope :order_by_pull_requests, -> do
+    order('organisations.pull_request_count desc, organisations.login asc')
+  end
 
   paginates_per 99
 
