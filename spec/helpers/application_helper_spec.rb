@@ -84,7 +84,7 @@ describe ApplicationHelper, type: :helper do
     let(:last_year) { DateTime.now.year - 1 }
 
     before do
-      3.times { create(:pull_request, user: user, created_at: DateTime.now - 1.year) }
+      3.times { create(:pull_request, user: user, repo_name: 'test_repo', created_at: DateTime.now - 1.year) }
     end
 
     it 'contributors_in(year)' do
@@ -102,7 +102,7 @@ describe ApplicationHelper, type: :helper do
     it 'projects_in(year)' do
       3.times { create(:pull_request, repo_name: '24pullrequests', created_at: DateTime.now - 1.year) }
 
-      expect(helper.projects_in(last_year)).to eq(4)
+      expect(helper.projects_in(last_year)).to eq(2)
     end
   end
 end
