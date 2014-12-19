@@ -1,274 +1,320 @@
+---
 ta:
+  about:
+    description: 24 Pull Requests ஒரு சிறிய திட்டம்.  இது டிசம்பர் காலத்தில்  open
+      source collaboration-ஐ  ஊக்குவிக்கிறது.
+    idea: "அடிப்படையில் இந்த யோசனை,  டிசம்பரிலிருந்து  கிறிஸ்துமஸ் வரை  ஒவ்வொரு
+      நாளும் ஒரு  pull request-ஐ  அனுப்ப developers-ஐ  டிசம்பர் முழுவதும் பரிசு கொடுத்து
+      ஊக்குவிக்கிறது."
+    more_info: "மேலும், இந்த  தளம் உதவி ஆலோசனை திட்டங்கள் வழங்குகிறது பங்களிப்பு
+      வழிகாட்டிகள் மற்றும் ஒவ்வொரு நாளும் சமர்ப்பிக்கப்பட்ட நல்ல pull requests-களை
+      உயர்த்தி காட்டுகிறது."
+    on_github: "இந்த  தளம் வளர்ச்சி GitHub-ல் open source-ஆக  இருக்கிறது:"
+    on_twitter: "மேலும், நாம் ட்விட்டர்-ல்  இருக்கிறோம்:"
+    sponsors:
+      details: 24 Pull Requests சில பெரிய விளம்பரதாரர்கள் நன்கொடைகள் மற்றும் உதவியுடன்  உருவக்கப்பட்டது
+      get_in_touch: "நீங்கள்  விளம்பரம் அல்லது வேறு எதையும் பற்றி தொடர்பு கொள்ள
+        விரும்பினால், எங்களுக்கு ஒரு மின்னஞ்சல் அனுப்பவும்:"
+      thanks: "பல நன்றிகள்..."
+      title: "விளம்பரதாரர்கள்"
+    title: 24 Pull Requests பற்றி
+  about_us: "எங்களைப் பற்றி"
   activerecord:
     errors:
       models:
         user:
           attributes:
             email:
-              required_for_confirmation: "%{attribute} உறுதிப்படுத்துவதற்கு தேவை"
               already_confirmed: "%{attribute} ஏற்கனவே உறுதி செய்யப்பட்டுள்ளது."
-  pull_request:
-    twitter_message: "நான் ஒரு 'pull request'-ஐ  http://24pullrequests.com-க்கு பரிசளித்துள்ளேன். இங்கு சென்று பாருங்கள்: %{issue_url}"
-
-    download:
-      tooltip: "பொதுவாக நாங்கள் 'pull request'-களை ஒவ்வொரு மணிதோரும் பார்க்கிறோம். நீங்கள் விரும்பினால் இப்போதே பார்க்கலாம்"
-
-  twitter:
-    account_linked: "உங்கள் ட்விட்டர் கணக்கு இணைக்கப்பட்டுவிட்டது! நீங்கள் ஒவ்வொரு 'pull request' கொடுக்கும்போது ட்வீட் செய்வோம்."
-    account_removed: "உங்கள் ட்விட்டர் கணக்கு நீக்கப்பட்டது."
-    link_account:
-      text: "ட்விட்டர் கணக்கை இணைத்திடுங்க"
-      tooltip: "உங்கள் ட்விட்டர் கணக்கை இணைத்தால், நீங்கள் ஒவ்வொரு 'pull request' கொடுக்கும்போது ட்வீட் செய்வோம்"
-
-  navigation:
-    all_projects: அனைத்து பிராஜக்ட்கள்
-    my_suggestions: என் பரிந்துரைகள்
-    dashboard: டேஷ்போர்ட்
-    profile: சுயவிவரம்
-    preferences: என் விருப்பங்கள்
-    gifted_code: பரிசலித்த நிரல்கள்
-    manage_projects: பிராஜக்ட்களை நிர்வகி
-    logout: விடு பதிகை
-
-  homepage:
-    title: "24 Pull Requests"
-    description: "கிறிஸ்துமஸையொட்டி சிறு நிரல்களை பரிசளித்தல்!"
-    about: "அது என்ன பற்றியது?"
-    about_text: "<p>24 Pull Requests உலகமெங்கும் உள்ள நிரலர்களை ஒவ்வொரு வருடமும் டிசம்பர் மாதத்தில் கிறிஸ்துமஸ் நாள் வரை ஒவ்வொரு நாளும் pull request-கள் கொடுக்க ஊக்குவிக்கும் ஒரு முயற்சி.</p> <p>இந்த இணையதளம் இந்த முயற்சியை பிரபலப்படுத்தவும், pull requests கொடுப்பதின் காரணத்தை, எப்படி மற்றும் எவ்வாறு கொடுப்பது என்பதை சுட்டிக்காட்ட பயன்படுகிறது.</p><p>உங்கள் GitHub அக்கௌன்டைக்கொண்டு புகுபதிகை செய்தீர்களானல், நாங்கள் உங்கள் pull requests-களை கண்கானித்து இங்கு காண்பிப்போம். மற்றும் நீங்கள் பங்களிக்க பிராஜக்ட்களை பரிந்துரைப்போம்.</p>"
-    greeting: "இது பரிசளிக்கும் பருவம்"
-    give_to_open_source: நீங்கள் ஓபன்சோர்ஸ் பிராஜக்ட்கள் மூலமாக வருடம் முழுவதும் பயனடைகிறீர்கள். இப்பொழுது அந்த பிராஜக்ட்களின் காப்பாளர்களுக்கு நன்றி சொல்லும் காலம். அவர்கள் உங்களிடமிரருந்து pull requests-களை பெருவதை மிகவும் விரும்புவதாக கேள்விபடுகின்றோம்!
-    q_n_a: கேள்வி பதில்கள்
-    badges:
-      title: Coderwall பதக்கங்கள் பெறுங்கள்
-      description: நீங்கள் இதில் பங்கு பெற்றால் வெல்வதற்கு சில அற்புதமான பதக்கங்கள் நாங்கள் Coderwall-உடன் சேர்ந்து உருவாக்கியிருக்கின்றோம்.
-      involved_link: 'பங்கேற்றவர் - பங்குபெற்று கிறிஸ்துமஸ் வருமுன் குறைந்தபட்சம் ஒரு pull request அனுப்புங்கள்'
-      amazing: "தொடர் ஒத்திசை - நீங்கள் ஒரு ஒபன்சொர்ஸ் எந்திரம், டிசம்பரில் 24 pull requests அனுப்புங்கள்"
-
-    involved:
-      title: ஈடுபடுங்கள்
-      description: "ஒபன்சொர்ஸ் பிராஜக்ட்களின் ஈடுபடுவதற்கு பல வழிகள் உள்ளன: ஆவணங்களை மேம்படுத்துதல், பிரச்சினைகளையும் பிழைகளையும் சரி செய்ய உதவுதல், நிரல்களின் தரத்தையும் சோதனை நிரலர்களின் சதவீதத்தையும் மேம்படுத்துதல், அல்லது இல்லாத அம்சங்களை சேர்த்தல்."
-      special_page: "பங்களிப்பதைப் பற்றிய விவரங்களை நீங்கள் அறிவதற்காக, நாங்கள் %{contributing_path} ஒன்றை தயார் செய்துள்ளோம்."
-      contributing_path: சிறப்பு பக்கம்
-      take_a_look: நீங்கள் ஒபன்சோர்ஸ்ஸிற்கு புதியவர் என்றால் இதனைப் பாருங்கள்.
-    profile:
-      title: உங்கள் சுயவிவரத்தை மேம்படுத்துங்கள்
-      description: ஒபன்சோர்ஸ் பிரஜக்ட்களுக்கு பங்களித்தால் சமூகத்தில் உங்கள் பெயரை தெரியப்படுத்துவதற்கும், உங்கள் அனுபவ விவரக் குறிப்பை மேம்படுத்தவும் மிகச் சிறப்பான ஒரு வழி.
-      getting_started: பங்களிக்கத்  துவங்குவது மிகவும் எளிது. சிறு உதவிகளும் மிகவும் பெருமதிப்புடையது.
-    join_the_chat: Gitter %{link_to_chat}-கு வாருங்கள் பேசலாம்!
-
-  information:
-    title: "24 Pull Requests %{year} வந்துவிட்டது"
-    last_year_stats: "%{year}-ல் 24 நாட்களில் <b>%{developers}</b> நிரலர்கள் <b>%{pull_requests}</b> pull request-களை <b>%{projects}</b> ஒபன்சோர்ஸ் பிராஜக்ட்களுக்கு கொடுத்தனர்."
-    get_ready: அதை இந்த முறையும் 24 Pull Requests %{year} மூலமாக செய்ய தயாராகுங்கள்! 
-    help_open_source: "ஒபன்சோர்ஸ் பிரஜக்ட்களுக்கு உதவ வேண்டுமா? இந்த மற்ற பெரிய முயற்சிகளைப் பாருங்கள்:" 
-    codetriage: "CodeTriage மூலமாக ஒபன்சோர்ஸிற்கு சிறிது சிறிதாக பங்களியுங்கள். ஒவ்வொரு நாளும் உங்களின் விருப்பமான பிராஜக்ட் இடமிருந்து ஒரு வாத செய்தி, நீங்கள் அந்த பிராஜக்ட் பற்றிய ஆழமான அறிவைப் பெறுவதற்கும், அதில் ஈடுபாடுடன் இருப்பதற்கும் உதவ அனுப்பிவைக்கப்படும்."
-    contribhub:
-      tagline: உங்கள் பக்கத்தில் வசிகிறவருக்கு அவரின் சுவாரசியமான பிராஜக்ட்டில் உதவி தேவையென்று உங்களுக்கு தெரியுமா? ContribHub மூலமாக இதனை தெரிந்துகொள்வீர்கள்!
-      description: ContribHub என்பது ஒரு GitHub அடிப்படையில் இயங்கும் ஒரு சேவை. அதன் மூலமாக நீங்கள் பங்களிப்பதற்கு பிராஜக்ட்களை எளிதாக கண்டுப்பிடிக்க முடியும். மேலும் அந்த பிராஜக்ட்கள் சுற்றி ஒரு சமூகத்தை உருவாக்கவும் உதவுகிறது.
-    happy_holidays_see_you: விடுமுறை வாழ்த்துக்கள். நாம் அடுத்த ஆண்டு இது போன்று சந்திப்போம்!
-
-  happy_holidays: விடுமுறை வாழ்த்துக்கள்
-  follow_user: "@%{twitter} பின்பற்று"
-  sponsored_by: ஆதரவளிப்பவர்கள்
-  how_to_contribute: எவ்வாறு பங்களிப்பது
-  open_source_yey: ஒபன்சோர்ஸ் வாழ்க!
-  welcome_back: மீண்டும் வரவேற்கிறோம், %{user}
-  your_pull_requests: உங்கள் Pull Request-கள்
-  suggested_projects: பரிந்துரைக்கப்பட்ட பிராஜக்ட்கள்
-  suggest_project: பிராஜக்ட்டை பரிந்துரையுங்கள்
-  no_suggestions: நீங்கள் பிராஜக்ட் ஒன்றையும் பரிந்துரைக்கவில்லை 
-  preferred_languages: விருப்பப்பட்ட மொழிகள்
-  view_all: அனைத்தையும் காண்பி
-  more: இன்னுங்கூடுதலாக
-  change: மாற்று
-  clear: அழி
-  claim: உரிமை வாதாடு
-  exempli_gratia: "எ.கா." 
-  edit: திருத்து
-  everything: எல்லாம்
-  about_us: எங்களைப் பற்றி
-  cancel: ரத்து செய்
-  or: அல்லது
-  search: தேடு
-
-  user:
-    grinchy_message: "%{year}-ல் ஒரு pull request கூட பரிசளிக்காமல் மிக சுயநலவாதியாக %{user} இருக்கிறார்!" 
-    pull_request_count: "%{year}-ல் %{user} இதுவரைக்கும் %{count} pull request-கள் செய்திருக்கிறார்"
-    organisations: Member of...
-    coderwall:
-      title: Coderwall பதக்கங்கள்
-      achieved_by: "பதக்கங்கள் வென்றவர்"
-      success: "உங்கள் Coderwall பெயர் வெற்றிகரமாக இற்றைப்படுத்தப்பட்டது!"
-      update_button: "இற்றைப்படுத்து"
-      error_no_user: "இந்த பெயரைக்கொண்ட நபர் எவரும் இங்கு இல்லை"
-      error_github_not_connected: "24 Pull Requests-இல் நீங்கள் இணைத்த GitHub கணக்கு, %{username} என்ற பெயரைக்கொண்ட Coderwall கணக்கில் இணைக்கப்படவில்லை"
-
-  developers_using_language: "%{language} பயன்படுத்தும் நிரலர்கள்"
-  developers_involved: ஈடுபாடான நிரலர்கள்
-
+              required_for_confirmation: "%{attribute} உறுதிப்படுத்துவதற்கு தேவை"
+  api:
+    callback:
+      details: You can send a ?callback parameter to any GET call to have the results
+        wrapped in a JSON function. This is typically used when browsers want to embed
+        content in web pages by getting around cross domain issues. The response includes
+        the same data output as the regular API.
+      title: JSON-P Callbacks
+    description: You may not know this, but 24 Pull Requests has its own JSON API.
+      Details of each endpoint are described below.
+    organisations:
+      details: Load all organisations that have signed up to the site, also includes
+        the users that belong to each organisation.
+      specific: Load information for a specific organisation.
+      title: Organisations
+    pagination:
+      details: Requests that return multiple items will be paginated to 99 items by
+        default. You can specify further pages with the ?page parameter.
+      title: Pagination
+    projects:
+      details: All suggested projects on the site, ordered alphabetically.
+      title: Projects
+    pull_requests:
+      details: Load all pull requests by users of the site during December, ordered
+        by newest first, also includes the user who made the pull request.
+      meta_details: Load information about all the pull requests this year.
+      title: Pull Requests
+    title: JSON API
+    users:
+      details: Load all users who have signed up to the site, ordered by how many
+        pull requests they have sent so far in December, also includes their organisation(s)
+        and pull requests.
+      specific: Load information for a specific user.
+      title: Users
+  cancel: "ரத்து செய்"
+  change: "மாற்று"
+  claim: "உரிமை வாதாடு"
+  clear: "அழி"
+  contributors:
+    title: "கோர் பங்களிப்பாளர்கள்"
   dashboard:
-    christmas_activity: இங்குதான் இந்த கிறிஸ்துமஸ்வரை நாங்கள் கண்காணித்த உங்கள் நடவடிக்கைகளைக் காணலாம்.
-    give_a_gift: இன்று நீங்கள் ஒன்றும் பரிசளிக்கவில்லை. நீங்கள் பரிசளிக்க விரும்பினால், இதுவரையில் பரிசளிக்கப்படாத உங்களின் ஒரு pull request-ஐ தேர்ந்தெடுத்து பரிசளிக்கலாம்.
+    christmas_activity: "இங்குதான் இந்த கிறிஸ்துமஸ்வரை நாங்கள் கண்காணித்த உங்கள் நடவடிக்கைகளைக்
+      காணலாம்."
+    gift_it: "பரிசளி!"
+    give_a_gift: "இன்று நீங்கள் ஒன்றும் பரிசளிக்கவில்லை. நீங்கள் பரிசளிக்க விரும்பினால்,
+      இதுவரையில் பரிசளிக்கப்படாத உங்களின் ஒரு pull request-ஐ தேர்ந்தெடுத்து பரிசளிக்கலாம்."
+    help_out: "பங்களிப்பதற்கு பிரஜக்ட் எதுவும் கிடைக்களையா? நாங்கள் உங்களுக்காக சில
+      பிரபலமான பிரஜக்ட்களை பட்டியலிட்டிருக்கின்றோம்:"
+    no_pull_requests: "ஒரு pull request கூட நீங்கள் இன்னும் அனுப்பவில்லை. எதற்காக
+      காத்திருக்கிறீர்கள்?"
     synchronize: Pull Request-களை ஒத்தியக்கம் செய்
-    help_out: "பங்களிப்பதற்கு பிரஜக்ட் எதுவும் கிடைக்களையா? நாங்கள் உங்களுக்காக சில பிரபலமான பிரஜக்ட்களை பட்டியலிட்டிருக்கின்றோம்:"
-    no_pull_requests: ஒரு pull request கூட நீங்கள் இன்னும் அனுப்பவில்லை. எதற்காக காத்திருக்கிறீர்கள்?
-    gift_it: பரிசளி!
-
+  delete_account:
+    are_you_sure: "உண்மையில் நீங்கள் உங்கள் கணக்கை நீக்க விரும்புகிறீர்கள். இந்த தளத்தில்
+      இருந்து உங்கள் சுயவிவரம் மற்றும் அனைத்து மிகுதி கோரிக்கைகளை நீக்கும், என்றாலும்
+      ஆலோசனை திட்டங்கள் இருக்கும்."
+    cancel: "என் மனதை நான் மாற்றிக்கொண்டேன். என்னை மீண்டும் எடுத்துகொள்!"
+    confirm: "நீக்கலை உறுதிப்படுத்து"
+    email_preferences_link: "மின்னஞ்சல் முன்னுரிமை"
+    notification_info: "நீங்கள் மின்னஞ்சல் அறிவிப்புகளை பெறுவதை நிறுத்த வேண்டும் என்றால்
+      நீங்கள் உங்கள் %{email_preferences_link} மாற்ற முடியும்."
+    title: "உங்கள் கணக்கை நீக்கவிரும்பினால்"
+  developers_involved: "ஈடுபாடான நிரலர்கள்"
+  developers_using_language: "%{language} பயன்படுத்தும் நிரலர்கள்"
+  edit: "திருத்து"
+  everything: "எல்லாம்"
+  exempli_gratia: "எ.கா."
+  follow_user: "@%{twitter} பின்பற்று"
+  gifts:
+    calendar_link: "பொது காலண்டர்"
+    description: இங்கே நீங்கள் உங்கள் pull requests-களை  நிர்வகிக்க  மற்றும் உங்கள்
+      சொந்த  "24 Pull Requests"-களை தேர்வு செய்ய முடியும்  .
+    form:
+      date: "தேதி"
+      gift_it: "பரிசு கொடு!"
+      pull_requests: Pull Requests
+      tweet: "உங்கள் பரிசு பற்றி ட்வீட்  செய்!"
+    give: "நீங்கள் விரும்பும் ஒரு project-க்கு அர்த்தமுள்ள பரிசு ஏதாவது"
+    none: "இன்னும் எதுவும் பரிசாக அளிக்கப்படவில்லை."
+    title: "பரிசு அளிக்கப்பட்ட கோட்"
+    view_your_gifts: "எல்லா பரிசுகளையும்  உங்கள்  %{calendar_link}-ல் காண்பிக்கப்படும்."
+  happy_holidays: "விடுமுறை வாழ்த்துக்கள்"
+  homepage:
+    about: "அது என்ன பற்றியது?"
+    about_text: "<p>24 Pull Requests உலகமெங்கும் உள்ள நிரலர்களை ஒவ்வொரு வருடமும் டிசம்பர்
+      மாதத்தில் கிறிஸ்துமஸ் நாள் வரை ஒவ்வொரு நாளும் pull request-கள் கொடுக்க ஊக்குவிக்கும்
+      ஒரு முயற்சி.</p> <p>இந்த இணையதளம் இந்த முயற்சியை பிரபலப்படுத்தவும், pull requests
+      கொடுப்பதின் காரணத்தை, எப்படி மற்றும் எவ்வாறு கொடுப்பது என்பதை சுட்டிக்காட்ட
+      பயன்படுகிறது.</p><p>உங்கள் GitHub அக்கௌன்டைக்கொண்டு புகுபதிகை செய்தீர்களானல்,
+      நாங்கள் உங்கள் pull requests-களை கண்கானித்து இங்கு காண்பிப்போம். மற்றும் நீங்கள்
+      பங்களிக்க பிராஜக்ட்களை பரிந்துரைப்போம்.</p>"
+    badges:
+      amazing: "தொடர் ஒத்திசை - நீங்கள் ஒரு ஒபன்சொர்ஸ் எந்திரம், டிசம்பரில் 24 pull
+        requests அனுப்புங்கள்"
+      description: "நீங்கள் இதில் பங்கு பெற்றால் வெல்வதற்கு சில அற்புதமான பதக்கங்கள்
+        நாங்கள் Coderwall-உடன் சேர்ந்து உருவாக்கியிருக்கின்றோம்."
+      involved_link: "பங்கேற்றவர் - பங்குபெற்று கிறிஸ்துமஸ் வருமுன் குறைந்தபட்சம்
+        ஒரு pull request அனுப்புங்கள்"
+      title: Coderwall பதக்கங்கள் பெறுங்கள்
+    description: "கிறிஸ்துமஸையொட்டி சிறு நிரல்களை பரிசளித்தல்!"
+    give_to_open_source: "நீங்கள் ஓபன்சோர்ஸ் பிராஜக்ட்கள் மூலமாக வருடம் முழுவதும்
+      பயனடைகிறீர்கள். இப்பொழுது அந்த பிராஜக்ட்களின் காப்பாளர்களுக்கு நன்றி சொல்லும்
+      காலம். அவர்கள் உங்களிடமிரருந்து pull requests-களை பெருவதை மிகவும் விரும்புவதாக
+      கேள்விபடுகின்றோம்!"
+    greeting: "இது பரிசளிக்கும் பருவம்"
+    involved:
+      contributing_path: "சிறப்பு பக்கம்"
+      description: "ஒபன்சொர்ஸ் பிராஜக்ட்களின் ஈடுபடுவதற்கு பல வழிகள் உள்ளன: ஆவணங்களை
+        மேம்படுத்துதல், பிரச்சினைகளையும் பிழைகளையும் சரி செய்ய உதவுதல், நிரல்களின்
+        தரத்தையும் சோதனை நிரலர்களின் சதவீதத்தையும் மேம்படுத்துதல், அல்லது இல்லாத அம்சங்களை
+        சேர்த்தல்."
+      special_page: "பங்களிப்பதைப் பற்றிய விவரங்களை நீங்கள் அறிவதற்காக, நாங்கள் %{contributing_path}
+        ஒன்றை தயார் செய்துள்ளோம்."
+      take_a_look: "நீங்கள் ஒபன்சோர்ஸ்ஸிற்கு புதியவர் என்றால் இதனைப் பாருங்கள்."
+      title: "ஈடுபடுங்கள்"
+    join_the_chat: Gitter %{link_to_chat}-கு வாருங்கள் பேசலாம்!
+    profile:
+      description: "ஒபன்சோர்ஸ் பிரஜக்ட்களுக்கு பங்களித்தால் சமூகத்தில் உங்கள் பெயரை
+        தெரியப்படுத்துவதற்கும், உங்கள் அனுபவ விவரக் குறிப்பை மேம்படுத்தவும் மிகச்
+        சிறப்பான ஒரு வழி."
+      getting_started: "பங்களிக்கத்  துவங்குவது மிகவும் எளிது. சிறு உதவிகளும் மிகவும்
+        பெருமதிப்புடையது."
+      title: "உங்கள் சுயவிவரத்தை மேம்படுத்துங்கள்"
+    q_n_a: "கேள்வி பதில்கள்"
+    title: 24 Pull Requests
+  how_to_contribute: "எவ்வாறு பங்களிப்பது"
+  information:
+    codetriage: CodeTriage மூலமாக ஒபன்சோர்ஸிற்கு சிறிது சிறிதாக பங்களியுங்கள். ஒவ்வொரு
+      நாளும் உங்களின் விருப்பமான பிராஜக்ட் இடமிருந்து ஒரு வாத செய்தி, நீங்கள் அந்த
+      பிராஜக்ட் பற்றிய ஆழமான அறிவைப் பெறுவதற்கும், அதில் ஈடுபாடுடன் இருப்பதற்கும்
+      உதவ அனுப்பிவைக்கப்படும்.
+    contribhub:
+      description: ContribHub என்பது ஒரு GitHub அடிப்படையில் இயங்கும் ஒரு சேவை. அதன்
+        மூலமாக நீங்கள் பங்களிப்பதற்கு பிராஜக்ட்களை எளிதாக கண்டுப்பிடிக்க முடியும்.
+        மேலும் அந்த பிராஜக்ட்கள் சுற்றி ஒரு சமூகத்தை உருவாக்கவும் உதவுகிறது.
+      tagline: "உங்கள் பக்கத்தில் வசிகிறவருக்கு அவரின் சுவாரசியமான பிராஜக்ட்டில் உதவி
+        தேவையென்று உங்களுக்கு தெரியுமா? ContribHub மூலமாக இதனை தெரிந்துகொள்வீர்கள்!"
+    get_ready: "அதை இந்த முறையும் 24 Pull Requests %{year} மூலமாக செய்ய தயாராகுங்கள்!"
+    happy_holidays_see_you: "விடுமுறை வாழ்த்துக்கள். நாம் அடுத்த ஆண்டு இது போன்று
+      சந்திப்போம்!"
+    help_open_source: "ஒபன்சோர்ஸ் பிரஜக்ட்களுக்கு உதவ வேண்டுமா? இந்த மற்ற பெரிய முயற்சிகளைப்
+      பாருங்கள்:"
+    last_year_stats: "%{year}-ல் 24 நாட்களில் <b>%{developers}</b> நிரலர்கள் <b>%{pull_requests}</b>
+      pull request-களை <b>%{projects}</b> ஒபன்சோர்ஸ் பிராஜக்ட்களுக்கு கொடுத்தனர்."
+    title: 24 Pull Requests %{year} வந்துவிட்டது
   language:
-    projects_count: "%{count} %{language} பிரஜக்ட்கள்"
+    developers:
+      count: "%{count} நிரலர்கள் %{language}-ஐ பயன்படுத்துகின்றார்கள்"
     projects:
       count: "%{count} பிரஜக்ட்கள் %{language}-ஐ பயன்படுத்துகின்றன"
       suggest: "%{language} பிரஜக்ட் ஒன்றை பரிந்துரையுங்கள்"
-    developers:
-      count: "%{count} நிரலர்கள் %{language}-ஐ பயன்படுத்துகின்றார்கள்"
+    projects_count: "%{count} %{language} பிரஜக்ட்கள்"
     pull_requests:
       latest:
-        count: சமீபத்திய %{language} Pull Request-கள் (மொத்தம் %{count})
-
-  projects:
-    claim: நீங்கள் கருத்து தெரிவித்த திட்டம் பெயர் விடுபட்டிருந்தால் அவர்களை கேளுங்கள்?
-    help_out: தங்களால் எந்த திட்டத்தில் பங்களிப்பது என்று முடிவு செய்ய இயலவில்லயா? நாங்கள் உஙக்ளுக்கு பொருத்தமான திட்டங்களை சேகரித்த்து வைத்துள்ளோம்.
-    suggest_new: பட்டியலில் சேர்ப்பதற்கான திட்டங்களை நீங்களும் கூறலாம் அல்லது தங்களது சொந்த திட்டங்களை பகிர்ந்து உங்களுக்கு தேவயான உதவிகளை பெற்றுக்கொள்ளலாம்.
-    filter_by_language: "மொழி மூலம் வடிகட்டி:"
-    for_you: உங்களுக்கான பரிந்துரை
-    suggestion:
-      edit: தொகுத்து அமைக்க கருத்து
-      update: திட்டம் மேம்படுத்தல்
-    suggest: அந்த மொழி திட்டங்கள் எதுவும் இல்‌லை. why not %{suggest_link}?
-    suggest_link_text: ஒன்றை பரிந்துரை செய்யவும்
-    new:
-      title: திட்டம் பற்றி கருத்து தெரிவிக்கவும்
-      info: One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We've selected our favorites, but we're always open to suggestions. Have some ideas? Share them below!
-      suggestion: இந்த திட்டத்திற்கு தாங்கள் ஏதேனும் கருத்து கூற விரும்புகிறீர்களா? If there's something you'd like fixed, feel free to %{issue_link}.
-      issue_link_text: பிரச்சினை பற்றி கருத்து தெரிவிக்கவும்
-
-      form:
-        project_name: திட்டத்தின் பெயர்
-        github_url: GitHub URL
-        summary: சுருக்கம்
-        main_language: முக்கிய மொழி
-        submit_project: திட்டத்தை சாம்ர்பிக்கவும்
-
-    edit:
-      title: தொகுத்து அமைக்க கருத்து
-    admin:
-      title: திட்டத்தை நிர்வகிக்கவும்
-      search: GitHub களஞ்சியத்‌தில் தேடவும்
-
+        count: "சமீபத்திய %{language} Pull Request-கள் (மொத்தம் %{count})"
+  locale:
+    de: Deutsch
+    el: "Ελληνικά"
+    en: English
+    es: Español
+    fi: Suomi
+    fr: Français
+    it: Italiano
+    nb: Norsk bokmål
+    pt_br: Português do Brasil
+    ru: "Русский"
+    th: "ไทย"
+    translate: "உங்கள் மொழியில் மொழிபெயருங்கள்!"
+    uk: "Українська"
+  more: "இன்னுங்கூடுதலாக"
+  navigation:
+    all_projects: "அனைத்து பிராஜக்ட்கள்"
+    dashboard: "டேஷ்போர்ட்"
+    gifted_code: "பரிசலித்த நிரல்கள்"
+    logout: "விடு பதிகை"
+    manage_projects: "பிராஜக்ட்களை நிர்வகி"
+    my_suggestions: "என் பரிந்துரைகள்"
+    preferences: "என் விருப்பங்கள்"
+    profile: "சுயவிவரம்"
+  no_suggestions: "நீங்கள் பிராஜக்ட் ஒன்றையும் பரிந்துரைக்கவில்லை"
+  open_source_yey: "ஒபன்சோர்ஸ் வாழ்க!"
+  or: "அல்லது"
+  organisations:
+    languages: "மொழிகள்"
+    members:
+      one: 1 உறுப்பினர்
+      other: "%{count} உறுப்பினர்கள்"
+    pull_requests: "%{count} pull requests உறுப்பினர்கள் சமர்ப்பித்தனர்"
+    title: "%{count} தொடர்புடைய நிறுவனங்கள்"
   preferences:
-      title: உங்கள் தனிப்பட்ட விருப்பங்களை அமைக்கவும்
-      frequency_message:  நீங்கள் தேர்வு  செய்த அதிர்வெண், project முடியும் வரை நாங்கள் இப்பொழுதில் இருந்து உங்களுக்கு பயனுள்ள மின்னஞ்சல்களை  அனுப்புவொம்,  உங்கள் பங்களிப்பை கருத்தில்  கொண்டு சில ஆலோசனை project-களை காண்பிப்பார. ஒரு சேர்க்கப்பட்ட போனஸ், நாங்கள் உங்கள் github சுயவிவரத்தில் repo அடிப்படையில் உங்கள் மொழி திறமைக்கு எங்கள் பரிந்துரைகள் தனிப்பயனாக்க சுதந்திரம் எடுக்க வேண்டும். மாற்றாக, நீங்கள் கீழே உங்கள் மொழிகள் தேர்வு செய்யலாம்.
-      delete: "உங்கள் கணக்கை நீக்க வேண்டுமா?"
-      information: நீங்கள் எப்போது வேண்டுமானாலும் உங்கள் மின்னஞ்சல் விருப்பங்களை மாற்ற முடியும்.
-      twitter: ட்விட்டர் கணக்கு
-      languages: எந்த மொழிகள் உங்களுக்கு தெரியும்?
-      remove: கணக்கை நீக்குக
-      save_and_continue: சேமிக்கவும் மற்றும் தொடரவும்
-      coderwall: நீங்கள் ஏற்கனவே உங்கள் சுயவிவர பக்கத்தில் பெற்ற பதக்கங்கள் காண்பிக்க உங்கள் coderwall கணக்கை இணை.
-      coderwall_username: "Coderwall பயனாளர் பெயர்"
-
+    coderwall: "நீங்கள் ஏற்கனவே உங்கள் சுயவிவர பக்கத்தில் பெற்ற பதக்கங்கள் காண்பிக்க
+      உங்கள் coderwall கணக்கை இணை."
+    coderwall_username: Coderwall பயனாளர் பெயர்
+    delete: "உங்கள் கணக்கை நீக்க வேண்டுமா?"
+    form:
+      daily: "தினசரி"
+      email: "மின்னஞ்சல்"
+      email_frequency: "மின்னஞ்சல் அதிர்வெண்"
+      never: "எப்பொழுதும் இல்லை"
+      weekly: "வாரந்தோறும்"
+    frequency_message: "நீங்கள் தேர்வு  செய்த அதிர்வெண், project முடியும் வரை நாங்கள்
+      இப்பொழுதில் இருந்து உங்களுக்கு பயனுள்ள மின்னஞ்சல்களை  அனுப்புவொம்,  உங்கள் பங்களிப்பை
+      கருத்தில்  கொண்டு சில ஆலோசனை project-களை காண்பிப்பார. ஒரு சேர்க்கப்பட்ட போனஸ்,
+      நாங்கள் உங்கள் github சுயவிவரத்தில் repo அடிப்படையில் உங்கள் மொழி திறமைக்கு
+      எங்கள் பரிந்துரைகள் தனிப்பயனாக்க சுதந்திரம் எடுக்க வேண்டும். மாற்றாக, நீங்கள்
+      கீழே உங்கள் மொழிகள் தேர்வு செய்யலாம்."
+    hint:
+      confirm_email: "தயவு செய்து, நாங்கள் உங்களுக்கு அனுப்பிய இணைப்பை பயன்படுத்தி,
+        உங்கள் மின்னஞ்சல் முகவரியை உறுதிப்படுத்தவும்."
+    information: "நீங்கள் எப்போது வேண்டுமானாலும் உங்கள் மின்னஞ்சல் விருப்பங்களை மாற்ற
+      முடியும்."
+    languages: "எந்த மொழிகள் உங்களுக்கு தெரியும்?"
+    remove: "கணக்கை நீக்குக"
+    save_and_continue: "சேமிக்கவும் மற்றும் தொடரவும்"
+    title: "உங்கள் தனிப்பட்ட விருப்பங்களை அமைக்கவும்"
+    twitter: "ட்விட்டர் கணக்கு"
+  preferred_languages: "விருப்பப்பட்ட மொழிகள்"
+  projects:
+    admin:
+      search: GitHub களஞ்சியத்‌தில் தேடவும்
+      title: "திட்டத்தை நிர்வகிக்கவும்"
+    claim: "நீங்கள் கருத்து தெரிவித்த திட்டம் பெயர் விடுபட்டிருந்தால் அவர்களை கேளுங்கள்?"
+    edit:
+      title: "தொகுத்து அமைக்க கருத்து"
+    filter_by_language: "மொழி மூலம் வடிகட்டி:"
+    for_you: "உங்களுக்கான பரிந்துரை"
+    help_out: "தங்களால் எந்த திட்டத்தில் பங்களிப்பது என்று முடிவு செய்ய இயலவில்லயா?
+      நாங்கள் உஙக்ளுக்கு பொருத்தமான திட்டங்களை சேகரித்த்து வைத்துள்ளோம்."
+    new:
       form:
-        email: மின்னஞ்சல்
-        email_frequency: மின்னஞ்சல் அதிர்வெண்
-        never:  எப்பொழுதும் இல்லை
-        daily: தினசரி
-        weekly: வாரந்தோறும்
-
-      hint:
-        confirm_email: தயவு செய்து, நாங்கள் உங்களுக்கு அனுப்பிய இணைப்பை பயன்படுத்தி, உங்கள் மின்னஞ்சல் முகவரியை உறுதிப்படுத்தவும்.
-
+        github_url: GitHub URL
+        main_language: "முக்கிய மொழி"
+        project_name: "திட்டத்தின் பெயர்"
+        submit_project: "திட்டத்தை சாம்ர்பிக்கவும்"
+        summary: "சுருக்கம்"
+      info: One of the ways we encourage participation in the open source community
+        is by letting users know what popular projects might be worth contributing
+        to. We've selected our favorites, but we're always open to suggestions. Have
+        some ideas? Share them below!
+      issue_link_text: "பிரச்சினை பற்றி கருத்து தெரிவிக்கவும்"
+      suggestion: "இந்த திட்டத்திற்கு தாங்கள் ஏதேனும் கருத்து கூற விரும்புகிறீர்களா?
+        If there's something you'd like fixed, feel free to %{issue_link}."
+      title: "திட்டம் பற்றி கருத்து தெரிவிக்கவும்"
+    suggest: "அந்த மொழி திட்டங்கள் எதுவும் இல்‌லை. why not %{suggest_link}?"
+    suggest_link_text: "ஒன்றை பரிந்துரை செய்யவும்"
+    suggest_new: "பட்டியலில் சேர்ப்பதற்கான திட்டங்களை நீங்களும் கூறலாம் அல்லது தங்களது
+      சொந்த திட்டங்களை பகிர்ந்து உங்களுக்கு தேவயான உதவிகளை பெற்றுக்கொள்ளலாம்."
+    suggestion:
+      edit: "தொகுத்து அமைக்க கருத்து"
+      update: "திட்டம் மேம்படுத்தல்"
+  pull_request:
+    download:
+      tooltip: "பொதுவாக நாங்கள் 'pull request'-களை ஒவ்வொரு மணிதோரும் பார்க்கிறோம்.
+        நீங்கள் விரும்பினால் இப்போதே பார்க்கலாம்"
+    twitter_message: "நான் ஒரு 'pull request'-ஐ  http://24pullrequests.com-க்கு பரிசளித்துள்ளேன்.
+      இங்கு சென்று பாருங்கள்: %{issue_url}"
   pull_requests:
     count: " ஏற்கனவே, %{count} Pull Requests உருவக்கப்பட்டது!"
     language:
       count: "ஏற்கனவே, %{count} pull requests %{language}-ல்  உருவக்கப்பட்டது!"
     latest:
-      count: சமீபத்திய  Pull Requests (மொத்தம் %{count})
-
-  delete_account:
-    title: உங்கள் கணக்கை நீக்கவிரும்பினால்
-    are_you_sure: உண்மையில் நீங்கள் உங்கள் கணக்கை நீக்க விரும்புகிறீர்கள். இந்த தளத்தில் இருந்து உங்கள் சுயவிவரம் மற்றும் அனைத்து மிகுதி கோரிக்கைகளை நீக்கும், என்றாலும் ஆலோசனை திட்டங்கள் இருக்கும்.
-    notification_info: நீங்கள் மின்னஞ்சல் அறிவிப்புகளை பெறுவதை நிறுத்த வேண்டும் என்றால் நீங்கள் உங்கள் %{email_preferences_link} மாற்ற முடியும்.
-    email_preferences_link: மின்னஞ்சல் முன்னுரிமை
-    confirm: நீக்கலை உறுதிப்படுத்து
-    cancel: என் மனதை நான் மாற்றிக்கொண்டேன். என்னை மீண்டும் எடுத்துகொள்!
-
-  gifts:
-    title: பரிசு அளிக்கப்பட்ட கோட்
-    description: இங்கே நீங்கள் உங்கள் pull requests-களை  நிர்வகிக்க  மற்றும் உங்கள் சொந்த  "24 Pull Requests"-களை தேர்வு செய்ய முடியும்  .
-    view_your_gifts: எல்லா பரிசுகளையும்  உங்கள்  %{calendar_link}-ல் காண்பிக்கப்படும்.
-    calendar_link: பொது காலண்டர்
-    none: இன்னும் எதுவும் பரிசாக அளிக்கப்படவில்லை.
-    give: நீங்கள் விரும்பும் ஒரு project-க்கு அர்த்தமுள்ள பரிசு ஏதாவது
-
-    form:
-      date: தேதி
-      pull_requests: Pull Requests
-      tweet: உங்கள் பரிசு பற்றி ட்வீட்  செய்!
-      gift_it: "பரிசு கொடு!"
-
-  contributors:
-    title: கோர் பங்களிப்பாளர்கள்
-
-  about:
-    title: 24 Pull Requests பற்றி
-    description: 24 Pull Requests ஒரு சிறிய திட்டம்.  இது டிசம்பர் காலத்தில்  open source collaboration-ஐ  ஊக்குவிக்கிறது.
-    idea: அடிப்படையில் இந்த யோசனை,  டிசம்பரிலிருந்து  கிறிஸ்துமஸ் வரை  ஒவ்வொரு நாளும் ஒரு  pull request-ஐ  அனுப்ப developers-ஐ  டிசம்பர் முழுவதும் பரிசு கொடுத்து ஊக்குவிக்கிறது.
-    more_info: மேலும், இந்த  தளம் உதவி ஆலோசனை திட்டங்கள் வழங்குகிறது பங்களிப்பு வழிகாட்டிகள் மற்றும் ஒவ்வொரு நாளும் சமர்ப்பிக்கப்பட்ட நல்ல pull requests-களை உயர்த்தி காட்டுகிறது.
-    on_github: "இந்த  தளம் வளர்ச்சி GitHub-ல் open source-ஆக  இருக்கிறது:"
-    on_twitter: "மேலும், நாம் ட்விட்டர்-ல்  இருக்கிறோம்:"
-    sponsors:
-      title: விளம்பரதாரர்கள்
-      details: 24 Pull Requests சில பெரிய விளம்பரதாரர்கள் நன்கொடைகள் மற்றும் உதவியுடன்  உருவக்கப்பட்டது
-      thanks:  "பல நன்றிகள்..."
-      get_in_touch: "நீங்கள்  விளம்பரம் அல்லது வேறு எதையும் பற்றி தொடர்பு கொள்ள விரும்பினால், எங்களுக்கு ஒரு மின்னஞ்சல் அனுப்பவும்:"
-
-  organisations:
-    title: "%{count} தொடர்புடைய நிறுவனங்கள்"
-    pull_requests: "%{count} pull requests உறுப்பினர்கள் சமர்ப்பித்தனர்"
-    members:
-      one: "1 உறுப்பினர்"
-      other: "%{count} உறுப்பினர்கள்"
-    languages: மொழிகள்
-
+      count: "சமீபத்திய  Pull Requests (மொத்தம் %{count})"
+  search: "தேடு"
+  sponsored_by: "ஆதரவளிப்பவர்கள்"
+  suggest_project: "பிராஜக்ட்டை பரிந்துரையுங்கள்"
+  suggested_projects: "பரிந்துரைக்கப்பட்ட பிராஜக்ட்கள்"
   suggestions:
-    title: என் பரிந்துரைகள்
-
-  api:
-    title: JSON API
-    description:  You may not know this, but 24 Pull Requests has its own JSON API. Details of each endpoint are described below.
-    pagination:
-      title: Pagination
-      details: Requests that return multiple items will be paginated to 99 items by default. You can specify further pages with the ?page parameter.
-    callback:
-      title: JSON-P Callbacks
-      details: You can send a ?callback parameter to any GET call to have the results wrapped in a JSON function. This is typically used when browsers want to embed content in web pages by getting around cross domain issues. The response includes the same data output as the regular API.
-    projects:
-      title: Projects
-      details: All suggested projects on the site, ordered alphabetically.
-    pull_requests:
-      title: Pull Requests
-      details: Load all pull requests by users of the site during December, ordered by newest first, also includes the user who made the pull request.
-      meta_details: Load information about all the pull requests this year.
-    users:
-      title: Users
-      details: Load all users who have signed up to the site, ordered by how many pull requests they have sent so far in December, also includes their organisation(s) and pull requests.
-      specific: Load information for a specific user.
-    organisations:
-      title: Organisations
-      details: Load all organisations that have signed up to the site, also includes the users that belong to each organisation.
-      specific: Load information for a specific organisation.
-
-  locale: 
-    translate: உங்கள் மொழியில் மொழிபெயருங்கள்!
-    en: English
-    el: Ελληνικά
-    es: Español
-    pt_br: Português do Brasil
-    fi: Suomi
-    fr: Français
-    de: Deutsch
-    ru: Русский
-    uk: Українська
-    th: ไทย
-    it: Italiano
-    nb: Norsk bokmål
+    title: "என் பரிந்துரைகள்"
+  twitter:
+    account_linked: "உங்கள் ட்விட்டர் கணக்கு இணைக்கப்பட்டுவிட்டது! நீங்கள் ஒவ்வொரு
+      'pull request' கொடுக்கும்போது ட்வீட் செய்வோம்."
+    account_removed: "உங்கள் ட்விட்டர் கணக்கு நீக்கப்பட்டது."
+    link_account:
+      text: "ட்விட்டர் கணக்கை இணைத்திடுங்க"
+      tooltip: "உங்கள் ட்விட்டர் கணக்கை இணைத்தால், நீங்கள் ஒவ்வொரு 'pull request'
+        கொடுக்கும்போது ட்வீட் செய்வோம்"
+  user:
+    coderwall:
+      achieved_by: "பதக்கங்கள் வென்றவர்"
+      error_github_not_connected: 24 Pull Requests-இல் நீங்கள் இணைத்த GitHub கணக்கு,
+        %{username} என்ற பெயரைக்கொண்ட Coderwall கணக்கில் இணைக்கப்படவில்லை
+      error_no_user: "இந்த பெயரைக்கொண்ட நபர் எவரும் இங்கு இல்லை"
+      success: "உங்கள் Coderwall பெயர் வெற்றிகரமாக இற்றைப்படுத்தப்பட்டது!"
+      title: Coderwall பதக்கங்கள்
+      update_button: "இற்றைப்படுத்து"
+    grinchy_message: "%{year}-ல் ஒரு pull request கூட பரிசளிக்காமல் மிக சுயநலவாதியாக
+      %{user} இருக்கிறார்!"
+    organisations: Member of...
+    pull_request_count: "%{year}-ல் %{user} இதுவரைக்கும் %{count} pull request-கள்
+      செய்திருக்கிறார்"
+  view_all: "அனைத்தையும் காண்பி"
+  welcome_back: "மீண்டும் வரவேற்கிறோம், %{user}"
+  your_pull_requests: "உங்கள் Pull Request-கள்"

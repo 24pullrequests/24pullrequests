@@ -1,284 +1,313 @@
+---
 el:
+  about:
+    description: "Το 24 Pull Requests είναι ένα μικρό project που προωθά τη συνεργασία
+      ανοιχτού κώδικα κατα τη διάρκεια του Δεκέμβρη."
+    idea: Η ιδέα είναι "Στείλε ενα a pull request κάθε μέρα του Δεκέμβρη μέχρι τα
+      Χριστόυγεννα", και ενθάρρυνε άλλους προγραμματιστές να δώσουν πίσω  δωράκια
+      κώδικα κατα τη διάρκει του Δεκέμβρη.
+    more_info: "Εκτός αυτού, η σελίδα εισηγείται projects στα τα οποία χρειάζονται
+      βοήθεια, οδηγούς συμβολής και παρουσιάζει pull requests που υποβάλλονται καθημερινά."
+    on_github: "Το κτίσιμο της σελίδας είναι ανοικτό στη GitHub:"
+    on_twitter: "Μπορείτε να μας βρείτε και στο Twitter:"
+    sponsors:
+      details: "Το 24 Pull Requests έγινε δυνατό με τη βοήθεια και την προσφορά από
+        τους φανταστικούς χορηγούς μας."
+      get_in_touch: "Αν θέλετε να επικοινωνήσετε μαζί μας για χορηγία ή για οτιδήποτε
+        άλλο, στείλτε μας ένα email:"
+      thanks: "Ευχαριστούμε τους..."
+      title: "Χορηγοί"
+    title: "Σχετικα με το 24 Pull Requests"
+  about_us: "Σχετικά"
   activerecord:
     errors:
       models:
         user:
           attributes:
             email:
-              required_for_confirmation: "%{attribute} χρειάζεται για επιβεβαίωσηn"
               already_confirmed: "%{attribute} έχει ήδη επιβεβαιωθεί"
-  pull_request:
-    twitter_message: "I just gifted a pull request for http://24pullrequests.com, check it out: %{issue_url}"
-    download:
-      tooltip: "Συνήθως ελέγχουμε τα pull requests κάθε ώρα, αλλά μπορείς να ελέχξεις τώρα αν θέλεις."
-  twitter:
-    account_linked: "Ο λογαριασμός του twitter σου έχει συνδεθεί! Θα στέλνουμε ένα tweet κάθε φορά που ανοίγεις ένα καινούριο pull request."
-    account_removed: "Ο λογαριασμός του twitter σου έχει αφαιρεθεί."
-    link_account:
-      text: "Σύνδεσε το twitter σου"
-      tooltip: "Αν συνδέσεις το λογαριασμό του twitter σου, θα στέλνουμε ένα tweet κάθε φορά που ανοίγεις ένα καινούριο pull request"
-
-  navigation:
-    all_projects: Όλα τα projects
-    my_suggestions: Οι εισηγησεις μου
-    dashboard: Ταμπλο
-    profile: Προφιλ
-    preferences: Διαχείρηση προφίλ
-    gifted_code: Δωρακια κωδικα
-    manage_projects: Διαχείρηση project
-    events: Εκδηλωσεις
-    logout: Αποσύνδεση
-
-  homepage:
-    title: "24 Pull Requests"
-    description: Δινοντας πισω δωρακια κωδικα για τα Χριστουγεννα
-    about: Τι ειναι ολα αυτα;
-    about_text: "<p>24 Pull Requests είναι μια ετήσια πρωτοβουλία για να ενθαρρύνει προγραμματιστές από όλο τον κόσμο να στείλουν pull requests κάθε μέρα του Δεκέμβρη μέχρι τα Χριστούγεννα.</p> <p>Αυτή η σελίδα βοηθά στην προώθηση του project, τονίζοντας το γιατί, πως και που να στείλετε τα pull requests σας.</p><p>Συνδεθείτε με το λογαριασμό GitHub σας για να παρακολουθήσουμε και να δείξουμε όλα τα pull requests σου και να εισηγηθούμε projects στα οποία μπορείς να δουλέψεις.</p>"
-    greeting: "'Tis the season"
-    give_to_open_source: Επωφελείσε από τη χρήση project ανοικτού κώδικα όλο το χρόνο, τώρα είναι η ώρα να ευχαριστήσεις αυτούς που τα διατηρούν. Ένα μικρό πουλάκι μου έχει πεις πως αγαπούν να λαμβάνουν pull requests!
-    q_n_a: Ερωτησεις & Απαντησεις
-    badges:
-      title: Κερδισε κονκαρδες Coderwall
-      description: Σε συνεργασία με το coderwall δημιουργήσαμε καταπληκτικές κονκάρδες που μπορούν να ξεκλειδώσουν όσοι λάβουν μέρος.
-      involved_link: 'Participant - Στείλε τουλάχιστον ένα pull request πριν τα Χριστούγεννα'
-      amazing: "Continuous sync συγχρονισμός - Είσαι μιά μηχανή ανοικτού κώδικα, στείλε 24 pull requests κατά τη διάρκεια του Δεκέμβρη"
-    involved:
-      title: Βοηθησε!
-      description: Υπάρχουν πολλοί τρόποι που μπορείτε να βοηθήσετε ένα project ανοικτού κώδικα, βελτιώνοντας τις οδηγίες χρήσεις, διορθώνοντας υπάρχοντα προβλήματα, βελτιώνοντας την ποιότητα του κώδικα και προσθέτοντας tests η καινούριες λειτουργίες.
-      special_page: "Ετοιμάσαμε μια %{contributing_path}, όπου μπορείς να βρεις πληροφορίες για το πως να συνεισφέρεις."
-      contributing_path:
-      take_a_look: Αν τώρα ξεκινάς με τον ανοικτό κώδικα, ρίξε μια ματιά.
-    profile:
-      title: Κτισε το προφιλ σου
-      description: Συνεισφέροντας στον ανοικτό κώδικα είναι ένας φανταστικός τρόπος για να κτίσεις το προφίλ σου στην κοινότητα και να βελτιώσεις το βιογραφικό σου.
-      getting_started: Δεν είναι δύσκολο να ξεκινήσεις, ακόμη και η πιό μικρές συνεισφορές είναι πολύτιμες για ένα project.
-    join_the_chat: Λάβε μέρος στη συζήτηση στο Gitter στο %{link_to_chat}.
-
-  information:
-    title: "24 Pull Requests %{year} εχει φτασει!"
-    last_year_stats: "Το %{year}, σε 24 days, <b>%{developers}</b> προγραμματιστές υπόβαλαν <b>%{pull_requests}</b> pull requests σε <b>%{projects}</b> διαφορετικά projects ανοικτού κώδικα."
-    get_ready: Ετοιμαστείτε για το 24 Pull Requests %{year}, όπου θα ξανακάνουμε το ίδιο!
-    help_open_source: "Θέλεις να βοηθήσεις με projects ανοικτού κώδικα μέχρι τότε? Κοίταξε σε αυτές τις άλλες μεγάλες πρωτοβουλίες:"
-    codetriage: "Δώσε πίσω στον ανοικτό κώδικα, με το CodeTriage. Θα λάβεις ένα πρόβλημα από το αγαπημένο σου repo κάθε μέρα για να σε βοηθήσεις να μάθεις περισσότερα, να σκάψεις βαθύτερα και να μείνεις ανεμειγμένος με κώδικα στον οποίο μπορείς να βασιστείς."
-    contribhub:
-      tagline: Ξέρεις κάποιο γείτονα που να χρειάζεται βοήθεια με ένα project? Με την ContribHub θα γνωρίσεις!
-      description: Η ContribHub είναι μία GitHub-based εφαρμογλη που διευκολύνει την εύρεση projects που μπορείς να συνεισφέρεις και την επέκταση της κοινότητας γύρω τους.
-    happy_holidays_see_you: Καλές Γιορτές και θα τα ξαναπούμε του χρόνου!
-
-  happy_holidays: Καλές Γιορτές
-
-  follow_user: "Ακολούθησε τον χρήστη @%{twitter}"
-  sponsored_by: "Χορηγοί"
-  how_to_contribute: "Πώς να συνεισφέρετε"
-  open_source_yey: Ανοικτός Κώδικα;. Για τη νίκη!
-  welcome_back: "Καλωσήρθες %{user}"
-  your_pull_requests: Τα Pull Requests σου
-  suggested_projects: Εισηγήσεις
-  suggest_project: Εισηγήσου project
-  no_suggestions: Δεν έχεις εισηγηθεί projects ακόμη
-  preferred_languages: Προτιμωμενες γλωσσες
-  view_all: Ολα
-  more: Περισσότερα
-  change: Αλλαξε
-  clear: Αφαίρεση
-  claim: Διεκδίκηση
-  exempli_gratia:
-  edit: Τροποποιηση
-  everything: Ολα
-  about_us: Σχετικά
-  search: Αναζήτηση
-  or:
-
-  user:
-    grinchy_message: "η/ο %{user} ειναι ενας καλικάντζαρος. Δεν έχει δωρίσει κανένα pull request για το %{year}!"
-    pull_request_count: "%{user} έχει δωρίσει συνολικά %{count} pull requests μέχρι τώρα για το %{year}"
+              required_for_confirmation: "%{attribute} χρειάζεται για επιβεβαίωσηn"
+  api:
+    callback:
+      details: 
+      title: 
+    description: 
     organisations:
-    coderwall:
-      title:
-      achieved_by:
-      success:
-      update_button:
-      error_no_user:
-      error_github_not_connected:
-
-  developers_using_language: Προγραμματιστες χρησιμοποιουν %{language}
-  developers_involved: Προγραμματιστες συμμετεχουν ηδη
-
+      details: 
+      specific: 
+      title: 
+    pagination:
+      details: 
+      title: 
+    projects:
+      details: 
+      title: 
+    pull_requests:
+      details: 
+      meta_details: 
+      title: 
+    title: 
+    users:
+      details: 
+      specific: 
+      title: 
+  change: "Αλλαξε"
+  claim: "Διεκδίκηση"
+  clear: "Αφαίρεση"
+  contributors:
+    title: Contributors
   dashboard:
-    christmas_activity: Εδώ μπορείς να δεις τη δραστηριότητα σου για τις μέρες μέχρι τα Χριστούγεννα.
-    give_a_gift: Δεν έχετε δωρίσει κώδικα σήμερα. Θέλεις να δώσεις ένα δώρο;
-    help_out: Δεν μπορείς να σκεφτείς κάποιο project που μπορείς να βοηθήσεις; Δημιουργήσαμε μια λίστα με δημοφιλή projects.
-    no_pull_requests: Δεν έχεις στείλει καθόλου pull requests, τί περιμένεις?!
-    synchronize: Συγχρόνισε τα Pull Requests σου
-    gift_it: Δώρισε το!
-
+    christmas_activity: "Εδώ μπορείς να δεις τη δραστηριότητα σου για τις μέρες μέχρι
+      τα Χριστούγεννα."
+    gift_it: "Δώρισε το!"
+    give_a_gift: "Δεν έχετε δωρίσει κώδικα σήμερα. Θέλεις να δώσεις ένα δώρο;"
+    help_out: "Δεν μπορείς να σκεφτείς κάποιο project που μπορείς να βοηθήσεις; Δημιουργήσαμε
+      μια λίστα με δημοφιλή projects."
+    no_pull_requests: "Δεν έχεις στείλει καθόλου pull requests, τί περιμένεις?!"
+    synchronize: "Συγχρόνισε τα Pull Requests σου"
+  delete_account:
+    are_you_sure: "Θέλουμε να σιγουρευτούμε ότι πραγματικά θέλεις να διαγράωψεις το
+      λογαριασμό σου. Το προφίλ σου και όλες οι pull requests σου θα αφαιρεθούν από
+      τη σελίδα, αλλά τα projects που έχεις εισηγηθεί θα μείνουν."
+    cancel: "Άλλαξα γνώμη, πάρε με πίσω!"
+    confirm: "Επιβεβαίωση διαγραφής"
+    email_preferences_link: 
+    notification_info: "Αν θέλεις απλά να σταμτήσεις να λαμβάνεις ειδοποιήσεις με
+      email μπορείς να αλλάξεις τις %{email_preferences_link}."
+    title: "Διαγραφη λογαριασμου"
+  developers_involved: "Προγραμματιστες συμμετεχουν ηδη"
+  developers_using_language: "Προγραμματιστες χρησιμοποιουν %{language}"
+  edit: "Τροποποιηση"
+  events:
+    description: "Ενθαρρύνουμε όλους τους οργανωτές event σε όλο τον κόσμο να φιλοξενήσουν
+      εκδηλώσεις 24pullrequests. Λάβετε μέρος και εσείς αυτά τα Χριστούγεννα!"
+    edit: title
+    index:
+      host_an_event: "Καταχώρηση εκδήλωσης"
+      no_upcoming_events: "Δεν υπάρχουν επερχόμενες εκδηλώσεις"
+    new:
+      form:
+        description: "Περιγραφή"
+        description_placeholder: "Δώστε μια μικρή περιγραφή της ομάδας και εκδήλωσης"
+        location: "Τοποθεσία"
+        location_placeholder: e.g. Bristol, UK
+        map: "Δείκτης τοποθεσίας"
+        name: "Όνομα"
+        name_placeholder: Bristol Ruby Group Pull-request-a-thon
+        start_time: "Ημερομηνία"
+        url_placeholder: "Σελίδα εκδήλωσης / εγγραφές"
+      title: "Δημιουργία εκδήλωσης 24pullrequests"
+    notice:
+      destroy_success: "Η εκδήλωση έχει διαγραφεί"
+      edit_success: "Η εκδήλωση έχει ενημερωθει"
+      new_success: "Η εκδήλωση έχει δημιουργηθεί"
+      not_authorized: "Μπορείς να τροποποιήσεις μόνο εκδηλώσεις που δημιούργησες"
+      not_logged_in: "Για να δημιουργήσετε ή να τροποποιήσετε εκδηλώσεις πρέπει να
+        είστε συνδεδεμένος."
+    show:
+      confirm_destroy: "Είστε σίγουρος ότι θέλετε να διαγράψετε την εκδήλωση;"
+      destroy_event: "Διαγραφή"
+      edit_event: "Ενημέρωση"
+      view_event_details: View event details
+    title: "Εκδηλώσεις"
+  everything: "Ολα"
+  exempli_gratia: 
+  follow_user: "Ακολούθησε τον χρήστη @%{twitter}"
+  gifts:
+    calendar_link: 
+    description: Εδώ μπορείς να διαχειριστείς τα pull requests σου και να διαρρυθμίσεις
+      τη δική σου συλλογή των "24 Pull Requests".
+    form:
+      data: 
+      gift_it: 
+      pull_request: 
+      tweet: 
+    give: "Δωρισε κατι ουσιαστικο σε ενα project που αγαπας"
+    none: "Δεν έχεις δωρίσει κάτι."
+    title: "Δωρισμενος Κωδικας"
+    view_your_gifts: "Όλα τα δώρα σου θα φαίνονται στο %{calendar_link}."
+  happy_holidays: "Καλές Γιορτές"
+  homepage:
+    about: "Τι ειναι ολα αυτα;"
+    about_text: "<p>24 Pull Requests είναι μια ετήσια πρωτοβουλία για να ενθαρρύνει
+      προγραμματιστές από όλο τον κόσμο να στείλουν pull requests κάθε μέρα του Δεκέμβρη
+      μέχρι τα Χριστούγεννα.</p> <p>Αυτή η σελίδα βοηθά στην προώθηση του project,
+      τονίζοντας το γιατί, πως και που να στείλετε τα pull requests σας.</p><p>Συνδεθείτε
+      με το λογαριασμό GitHub σας για να παρακολουθήσουμε και να δείξουμε όλα τα pull
+      requests σου και να εισηγηθούμε projects στα οποία μπορείς να δουλέψεις.</p>"
+    badges:
+      amazing: Continuous sync συγχρονισμός - Είσαι μιά μηχανή ανοικτού κώδικα, στείλε
+        24 pull requests κατά τη διάρκεια του Δεκέμβρη
+      description: "Σε συνεργασία με το coderwall δημιουργήσαμε καταπληκτικές κονκάρδες
+        που μπορούν να ξεκλειδώσουν όσοι λάβουν μέρος."
+      involved_link: Participant - Στείλε τουλάχιστον ένα pull request πριν τα Χριστούγεννα
+      title: "Κερδισε κονκαρδες Coderwall"
+    description: "Δινοντας πισω δωρακια κωδικα για τα Χριστουγεννα"
+    give_to_open_source: "Επωφελείσε από τη χρήση project ανοικτού κώδικα όλο το χρόνο,
+      τώρα είναι η ώρα να ευχαριστήσεις αυτούς που τα διατηρούν. Ένα μικρό πουλάκι
+      μου έχει πεις πως αγαπούν να λαμβάνουν pull requests!"
+    greeting: "'Tis the season"
+    involved:
+      contributing_path: 
+      description: "Υπάρχουν πολλοί τρόποι που μπορείτε να βοηθήσετε ένα project ανοικτού
+        κώδικα, βελτιώνοντας τις οδηγίες χρήσεις, διορθώνοντας υπάρχοντα προβλήματα,
+        βελτιώνοντας την ποιότητα του κώδικα και προσθέτοντας tests η καινούριες λειτουργίες."
+      special_page: "Ετοιμάσαμε μια %{contributing_path}, όπου μπορείς να βρεις πληροφορίες
+        για το πως να συνεισφέρεις."
+      take_a_look: "Αν τώρα ξεκινάς με τον ανοικτό κώδικα, ρίξε μια ματιά."
+      title: "Βοηθησε!"
+    join_the_chat: "Λάβε μέρος στη συζήτηση στο Gitter στο %{link_to_chat}."
+    profile:
+      description: "Συνεισφέροντας στον ανοικτό κώδικα είναι ένας φανταστικός τρόπος
+        για να κτίσεις το προφίλ σου στην κοινότητα και να βελτιώσεις το βιογραφικό
+        σου."
+      getting_started: "Δεν είναι δύσκολο να ξεκινήσεις, ακόμη και η πιό μικρές συνεισφορές
+        είναι πολύτιμες για ένα project."
+      title: "Κτισε το προφιλ σου"
+    q_n_a: "Ερωτησεις & Απαντησεις"
+    title: 24 Pull Requests
+  how_to_contribute: "Πώς να συνεισφέρετε"
+  information:
+    codetriage: "Δώσε πίσω στον ανοικτό κώδικα, με το CodeTriage. Θα λάβεις ένα πρόβλημα
+      από το αγαπημένο σου repo κάθε μέρα για να σε βοηθήσεις να μάθεις περισσότερα,
+      να σκάψεις βαθύτερα και να μείνεις ανεμειγμένος με κώδικα στον οποίο μπορείς
+      να βασιστείς."
+    contribhub:
+      description: "Η ContribHub είναι μία GitHub-based εφαρμογλη που διευκολύνει
+        την εύρεση projects που μπορείς να συνεισφέρεις και την επέκταση της κοινότητας
+        γύρω τους."
+      tagline: "Ξέρεις κάποιο γείτονα που να χρειάζεται βοήθεια με ένα project? Με
+        την ContribHub θα γνωρίσεις!"
+    get_ready: "Ετοιμαστείτε για το 24 Pull Requests %{year}, όπου θα ξανακάνουμε
+      το ίδιο!"
+    happy_holidays_see_you: "Καλές Γιορτές και θα τα ξαναπούμε του χρόνου!"
+    help_open_source: "Θέλεις να βοηθήσεις με projects ανοικτού κώδικα μέχρι τότε?
+      Κοίταξε σε αυτές τις άλλες μεγάλες πρωτοβουλίες:"
+    last_year_stats: "Το %{year}, σε 24 days, <b>%{developers}</b> προγραμματιστές
+      υπόβαλαν <b>%{pull_requests}</b> pull requests σε <b>%{projects}</b> διαφορετικά
+      projects ανοικτού κώδικα."
+    title: 24 Pull Requests %{year} εχει φτασει!
   language:
-    projects_count: "%{count} %{language} Projects"
+    developers:
+      count: "%{count} Προγραμματιστες χρησιμοποιουν %{language}"
     projects:
       count: "%{count} Projects χρησιμοποιούν %{language}"
       suggest: "Εισηγησου ενα %{language} project"
-    developers:
-      count: "%{count} Προγραμματιστες χρησιμοποιουν %{language}"
+    projects_count: "%{count} %{language} Projects"
     pull_requests:
       latest:
-        count: Τελευταια Pull Requests στη %{language} (%{count} συνολικα)
-
-  projects:
-    claim: Are any of the projects you suggested not listed? Claim them!
-    help_out: Δεν μπορείς να σκεφτείς κάποιο project που μπορείς να βοηθήσεις; Συντάξαμε μια λίστα με φανταστικά projects που χρειάζονται λίγη pull request αγάπη
-    suggest_new: Μπορείς να εισηγηθείς projects για τη λίστα μας ή ακόμη να προσθέσεις το δικό σου project αν χρειάζεσαι κάποια βοήθεια.
-    filter_by_language: "Δες ανα γλωσσα:"
-    for_you: Προσωπικές εισηγήσεις
-    suggestion:
-      update: Ενημέρωση
-    suggest: Δεν υπάρχουν projects για αυτή τη γλώσσα, γιατί δεν %{suggest_link}
-    new:
-      title: Εισηγησου ενα Project
-      info: Ένας απο τους τρόπους που ενθαρρύνουμε τη συμμετοχή στην κοινότητα Ανοικτού Κώδικα είναι λέγοντας στους χρήστες μας ποια projects χρειάζονται βοήθεια. Επιλέξαμε ήδη μερικά από τα αγαπημένα μας, αλλά ήμαστε ανοικτοί και σε άλλες εισηγήσεις. Ξέρετε κάποιο project που δεν υπάρχει εδώ; Εισηγηθείτε το!
-      suggestion: Έχεις κάποια εισήγηση για το 24pullrequests; Ήμαστε όλο αυτιά! Αν πρόσεξες κάτι που χρειάζεται διόρθωση, υπόβαλε %{issue_link}.
-      issue_link_text: ένα ζήτημα
-
-      form:
-        project_name:
-        github_url:
-        summary:
-        main_language:
-        submit_project:
-
-    edit:
-      title: Διαρρυθμιση εισηγησης
-    admin:
-      title: Διαχειρηση Projects
-      search: Αναζητήστε με GitHub repository
-
+        count: "Τελευταια Pull Requests στη %{language} (%{count} συνολικα)"
+  more: "Περισσότερα"
+  navigation:
+    all_projects: "Όλα τα projects"
+    dashboard: "Ταμπλο"
+    events: "Εκδηλωσεις"
+    gifted_code: "Δωρακια κωδικα"
+    logout: "Αποσύνδεση"
+    manage_projects: "Διαχείρηση project"
+    my_suggestions: "Οι εισηγησεις μου"
+    preferences: "Διαχείρηση προφίλ"
+    profile: "Προφιλ"
+  no_suggestions: "Δεν έχεις εισηγηθεί projects ακόμη"
+  open_source_yey: "Ανοικτός Κώδικα;. Για τη νίκη!"
+  or: 
+  organisations:
+    members:
+      one: 
+      other: 
   preferences:
-      title: Προτιμήσεις ηλεκτρονικου ταχυδρομίου
-      frequency_message: Θα σου στέλνουμε e-mail με τη συχνότητα που θα επιλέξεις από τώρα μέχρι το τέλος του project, με κάποιες εισηγήσεις project στα οποία μπορεί να θέλεις να βοηθήσεις βάση των επιλογών σου.
-      delete: "Θέλεις να διαγράψεις το λογαριασμό σου;"
-      information: Mπορείς να αλλάξεις τη συχνότητα που θα λαμβάνεις το email αργότερα
-      twitter: Λογαριαμός Twitter
-      languages: Ποιές γλώσσες σε ενδιαφέρουν;
-      remove: Remove Account
-      save_and_continue: Αποθήκευση επιλογων
-      coderwall:
-      coderwall_username:
-
+    coderwall: 
+    coderwall_username: 
+    delete: "Θέλεις να διαγράψεις το λογαριασμό σου;"
+    form:
+      daily: 
+      email: 
+      email_frequency: 
+      never: 
+      weekly: 
+    frequency_message: "Θα σου στέλνουμε e-mail με τη συχνότητα που θα επιλέξεις από
+      τώρα μέχρι το τέλος του project, με κάποιες εισηγήσεις project στα οποία μπορεί
+      να θέλεις να βοηθήσεις βάση των επιλογών σου."
+    hint:
+      confirm_email: "Επιβεβαίωσε την ηλεκτρονική σου διεύθηνση χρησιμοποιώντας το
+        σύνδεσμο που σου έχουμε στείλει."
+    information: Mπορείς να αλλάξεις τη συχνότητα που θα λαμβάνεις το email αργότερα
+    languages: "Ποιές γλώσσες σε ενδιαφέρουν;"
+    remove: Remove Account
+    save_and_continue: "Αποθήκευση επιλογων"
+    title: "Προτιμήσεις ηλεκτρονικου ταχυδρομίου"
+    twitter: "Λογαριαμός Twitter"
+  preferred_languages: "Προτιμωμενες γλωσσες"
+  projects:
+    admin:
+      search: "Αναζητήστε με GitHub repository"
+      title: "Διαχειρηση Projects"
+    claim: Are any of the projects you suggested not listed? Claim them!
+    edit:
+      title: "Διαρρυθμιση εισηγησης"
+    filter_by_language: "Δες ανα γλωσσα:"
+    for_you: "Προσωπικές εισηγήσεις"
+    help_out: "Δεν μπορείς να σκεφτείς κάποιο project που μπορείς να βοηθήσεις; Συντάξαμε
+      μια λίστα με φανταστικά projects που χρειάζονται λίγη pull request αγάπη"
+    new:
       form:
-        email:
-        email_frequency:
-        never:
-        daily:
-        weekly:
-
-      hint:
-        confirm_email: Επιβεβαίωσε την ηλεκτρονική σου διεύθηνση χρησιμοποιώντας το σύνδεσμο που σου έχουμε στείλει.
-
+        github_url: 
+        main_language: 
+        project_name: 
+        submit_project: 
+        summary: 
+      info: "Ένας απο τους τρόπους που ενθαρρύνουμε τη συμμετοχή στην κοινότητα Ανοικτού
+        Κώδικα είναι λέγοντας στους χρήστες μας ποια projects χρειάζονται βοήθεια.
+        Επιλέξαμε ήδη μερικά από τα αγαπημένα μας, αλλά ήμαστε ανοικτοί και σε άλλες
+        εισηγήσεις. Ξέρετε κάποιο project που δεν υπάρχει εδώ; Εισηγηθείτε το!"
+      issue_link_text: "ένα ζήτημα"
+      suggestion: "Έχεις κάποια εισήγηση για το 24pullrequests; Ήμαστε όλο αυτιά!
+        Αν πρόσεξες κάτι που χρειάζεται διόρθωση, υπόβαλε %{issue_link}."
+      title: "Εισηγησου ενα Project"
+    suggest: "Δεν υπάρχουν projects για αυτή τη γλώσσα, γιατί δεν %{suggest_link}"
+    suggest_new: "Μπορείς να εισηγηθείς projects για τη λίστα μας ή ακόμη να προσθέσεις
+      το δικό σου project αν χρειάζεσαι κάποια βοήθεια."
+    suggestion:
+      update: "Ενημέρωση"
+  pull_request:
+    download:
+      tooltip: "Συνήθως ελέγχουμε τα pull requests κάθε ώρα, αλλά μπορείς να ελέχξεις
+        τώρα αν θέλεις."
+    twitter_message: 'I just gifted a pull request for http://24pullrequests.com,
+      check it out: %{issue_url}'
   pull_requests:
     count: "%{count} Pull Requests εχουν ηδη γινει!"
     language:
       count: "%{count} pull requests στη %{language}!"
     latest:
-      count: Τελευταια Pull Requests (%{count} συνολικα)
-
-  delete_account:
-    title: Διαγραφη λογαριασμου
-    are_you_sure: Θέλουμε να σιγουρευτούμε ότι πραγματικά θέλεις να διαγράωψεις το λογαριασμό σου. Το προφίλ σου και όλες οι pull requests σου θα αφαιρεθούν από τη σελίδα, αλλά τα projects που έχεις εισηγηθεί θα μείνουν.
-    notification_info:  Αν θέλεις απλά να σταμτήσεις να λαμβάνεις ειδοποιήσεις με email μπορείς να αλλάξεις τις %{email_preferences_link}.
-    email_preferences_link:
-    confirm: Επιβεβαίωση διαγραφής
-    cancel: Άλλαξα γνώμη, πάρε με πίσω!
-
-  gifts:
-    title: Δωρισμενος Κωδικας
-    description: Εδώ μπορείς να διαχειριστείς τα pull requests σου και να διαρρυθμίσεις τη δική σου συλλογή των "24 Pull Requests".
-    view_your_gifts: Όλα τα δώρα σου θα φαίνονται στο %{calendar_link}.
-    calendar_link:
-    none: Δεν έχεις δωρίσει κάτι.
-    give: Δωρισε κατι ουσιαστικο σε ενα project που αγαπας
-
-    form:
-      data:
-      pull_request:
-      tweet:
-      gift_it:
-
-  contributors:
-    title: Contributors
-
-  about:
-    title: Σχετικα με το 24 Pull Requests
-    description: Το 24 Pull Requests είναι ένα μικρό project που προωθά τη συνεργασία ανοιχτού κώδικα κατα τη διάρκεια του Δεκέμβρη.
-    idea: Η ιδέα είναι "Στείλε ενα a pull request κάθε μέρα του Δεκέμβρη μέχρι τα Χριστόυγεννα", και ενθάρρυνε άλλους προγραμματιστές να δώσουν πίσω  δωράκια κώδικα κατα τη διάρκει του Δεκέμβρη.
-    more_info: Εκτός αυτού, η σελίδα εισηγείται projects στα τα οποία χρειάζονται βοήθεια, οδηγούς συμβολής και παρουσιάζει pull requests που υποβάλλονται καθημερινά.
-    on_github: "Το κτίσιμο της σελίδας είναι ανοικτό στη GitHub:"
-    on_twitter: "Μπορείτε να μας βρείτε και στο Twitter:"
-    sponsors:
-      title: Χορηγοί
-      details: Το 24 Pull Requests έγινε δυνατό με τη βοήθεια και την προσφορά από τους φανταστικούς χορηγούς μας.
-      thanks: "Ευχαριστούμε τους..."
-      get_in_touch: "Αν θέλετε να επικοινωνήσετε μαζί μας για χορηγία ή για οτιδήποτε άλλο, στείλτε μας ένα email:"
-
-  organisations:
-    members:
-      one:
-      other:
-
+      count: "Τελευταια Pull Requests (%{count} συνολικα)"
+  search: "Αναζήτηση"
+  sponsored_by: "Χορηγοί"
+  suggest_project: "Εισηγήσου project"
+  suggested_projects: "Εισηγήσεις"
   suggestions:
-    title: Οι εισηγησεις μου
-
-  api:
-    title:
-    description:
-    pagination:
-      title:
-      details:
-    callback:
-      title:
-      details:
-    projects:
-      title:
-      details:
-    pull_requests:
-      title:
-      details:
-      meta_details:
-    users:
-      title:
-      details:
-      specific:
-    organisations:
-      title:
-      details:
-      specific:
-
-  events:
-    title: Εκδηλώσεις
-    description: Ενθαρρύνουμε όλους τους οργανωτές event σε όλο τον κόσμο να φιλοξενήσουν εκδηλώσεις 24pullrequests. Λάβετε μέρος και εσείς αυτά τα Χριστούγεννα!
-    notice:
-      not_logged_in: "Για να δημιουργήσετε ή να τροποποιήσετε εκδηλώσεις πρέπει να είστε συνδεδεμένος."
-      not_authorized: "Μπορείς να τροποποιήσεις μόνο εκδηλώσεις που δημιούργησες"
-      edit_success: "Η εκδήλωση έχει ενημερωθει"
-      new_success: "Η εκδήλωση έχει δημιουργηθεί"
-      destroy_success: "Η εκδήλωση έχει διαγραφεί"
-    show:
-      view_event_details: View event details
-      destroy_event: Διαγραφή
-      edit_event: Ενημέρωση
-      confirm_destroy: "Είστε σίγουρος ότι θέλετε να διαγράψετε την εκδήλωση;"
-    edit:
-      title
-    new:
-      title: Δημιουργία εκδήλωσης 24pullrequests
-      form:
-        name: Όνομα
-        name_placeholder: Bristol Ruby Group Pull-request-a-thon
-        description: Περιγραφή
-        description_placeholder: Δώστε μια μικρή περιγραφή της ομάδας και εκδήλωσης
-        location: Τοποθεσία
-        location_placeholder: e.g. Bristol, UK
-        url_placeholder: "Σελίδα εκδήλωσης / εγγραφές"
-        map: "Δείκτης τοποθεσίας"
-        start_time: "Ημερομηνία"
-    index:
-      no_upcoming_events: "Δεν υπάρχουν επερχόμενες εκδηλώσεις"
-      host_an_event: "Καταχώρηση εκδήλωσης"
+    title: "Οι εισηγησεις μου"
+  twitter:
+    account_linked: "Ο λογαριασμός του twitter σου έχει συνδεθεί! Θα στέλνουμε ένα
+      tweet κάθε φορά που ανοίγεις ένα καινούριο pull request."
+    account_removed: "Ο λογαριασμός του twitter σου έχει αφαιρεθεί."
+    link_account:
+      text: "Σύνδεσε το twitter σου"
+      tooltip: "Αν συνδέσεις το λογαριασμό του twitter σου, θα στέλνουμε ένα tweet
+        κάθε φορά που ανοίγεις ένα καινούριο pull request"
+  user:
+    coderwall:
+      achieved_by: 
+      error_github_not_connected: 
+      error_no_user: 
+      success: 
+      title: 
+      update_button: 
+    grinchy_message: "η/ο %{user} ειναι ενας καλικάντζαρος. Δεν έχει δωρίσει κανένα
+      pull request για το %{year}!"
+    organisations: 
+    pull_request_count: "%{user} έχει δωρίσει συνολικά %{count} pull requests μέχρι
+      τώρα για το %{year}"
+  view_all: "Ολα"
+  welcome_back: "Καλωσήρθες %{user}"
+  your_pull_requests: "Τα Pull Requests σου"
