@@ -22,7 +22,14 @@ class Downloader
 
   def get_pull_requests
     user_downloader.pull_requests.each do |pr|
-      user.pull_requests.create_from_github(pr) unless pull_request_exists?(pr)
+      if pull_request = pull_request_exists?(pr)
+        pull_request.update(
+          title: pr['payload']['pull_request']['title'],
+          body: pr['payload']['pull_request']['body']
+        )
+      else
+        user.pull_requests.create_from_github(pr)
+      end
     end
   end
 
@@ -35,6 +42,6 @@ class Downloader
   end
 
   def pull_request_exists?(pull_request)
-    user.pull_requests.find_by_issue_url(pull_request['payload']['pull_request']['_links']['html']['href']).present?
+    user.pull_requests.find_by_issue_url(pull_request['payload']['pull_request']['_links']['html']['href'])
   end
 end
