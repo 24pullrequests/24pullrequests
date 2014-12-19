@@ -28,7 +28,8 @@ class Downloader
           body: pr['payload']['pull_request']['body']
         )
       else
-        user.pull_requests.create_from_github(pr)
+        pull_request = user.pull_requests.create_from_github(pr)
+        auto_gift_today(pull_request) unless gifted_any_today?
       end
     end
   end
@@ -43,5 +44,13 @@ class Downloader
 
   def pull_request_exists?(pull_request)
     user.pull_requests.find_by_issue_url(pull_request['payload']['pull_request']['_links']['html']['href'])
+  end
+
+  def gifted_any_today?
+    user.gift_for(Date.today).present?
+  end
+
+  def auto_gift_today(pull_request)
+    user.gifts.create({pull_request_id: pull_request.id, date: Date.today})
   end
 end
