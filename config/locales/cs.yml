@@ -133,6 +133,49 @@ cs:
       latest:
         count: Posledních %{count} pull requestů pro %{language}
 
+  projects:
+    help_out: Nevíte jakému projektu pomoci? Připravili jsme seznam zajímavých open source projektů, které budou za vaši pomoc velice rádi!
+    suggest_new: Můžete také navrhnout projekt, který by měl být přidán do seznamu. Případně můžete přidat svůj projekt - pokud potřebujete pomoci.
+    filter_by_language: "Filtrovat podle jazyka:"
+    for_you: Doporučené pro vás
+    suggestion:
+      edit: Upravit návrh
+      update: Upravit projekt
+    suggest: Zatím zde není žádný projekt pro tento jazyk, proč %{suggest_link}?
+    suggest_link_text: navrhnout také jeden?
+    new:
+      title: Navrhnout projekt
+      info: Možnost jak pomoci je také navrhnout zajímavý projekt, snažili jsme se dát dohromady seznam zajímavých projektů. Stále je ale spousta zajímavých projektů, do kterých by mohla open source komunita přispět!
+      suggestion: Našli jste problém na těchto stránkách? Jsme jedno velké ucho. Pokud jde chcete něco opravit, nebojte se %{issue_link}.
+      issue_link_text: nahlásit problém
+
+      form:
+        project_name: Jméno projektu
+        github_url: GitHub URL
+        summary: Shrnutí
+        main_language: Hlavní jazyk
+        submit_project: Odeslat projekt
+
+    edit:
+      title: Spravovat návrhy
+    admin:
+      title: Spravovat projekty
+      search: Hledat v GitHub repozitích
+
+  preferences:
+      title: Nastavte si své osobní preference
+      setup_help: "Než začnete, prosím vyplňte tento formulář"
+      frequency_message: Ve frekvenci, kterou si zvolíte Vám budeme e-maily s užitečnými informacemi, dokud projekt neskončí. Doporučíme Vám některé zajímavé projekty. Zohledníme Vaše repozitáře na GitHubu a můžete si i vybrat preferované jazyky.
+      delete: "Chcete odstranit svůj účet?"
+      information: Vždy můžete své e-mailové nastavení upravit.
+      twitter: Twitter účet
+      languages: Jaké jazyky znáte?
+      remove: Odstranit účet
+      save: Uložit
+      save_and_continue: Uložit a pokračovat
+      coderwall: Připojte svůj coderwall účet pro zobrazení všech badges, které již máte.
+      coderwall_username: "Coderwall uživatelské jméno"
+
       form:
         email: E-mail
         email_frequency: Frekvence e-mailů
