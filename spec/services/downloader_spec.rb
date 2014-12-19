@@ -43,6 +43,21 @@ describe Downloader do
 
       expect(user.pull_requests.length).to eq(1)
     end
+
+    it "when the pull request already exists it updates it" do
+      old_title = pull_request['payload']['pull_request']['title']
+      old_body = pull_request['payload']['pull_request']['body']
+      updated_pull_request = pull_request.clone
+      updated_pull_request['payload']['pull_request']['title'] += 'updated'
+      updated_pull_request['payload']['pull_request']['body'] += 'updated'
+
+      double(:user_downlaoder, pull_requests: [pull_request, updated_pull_request])
+      downloader.get_pull_requests
+
+      expect(user.pull_requests.length).to eq(1)
+      expect(user.pull_requests.first.title).to eq(old_title + 'updated')
+      expect(user.pull_requests.first.body).to eq(old_body + 'updated')
+    end
   end
 
   def double_organisation
