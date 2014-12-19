@@ -1,0 +1,280 @@
+cs:
+  activerecord:
+    errors:
+      models:
+        event:
+          attributes:
+            start_time:
+              not_in_range: "Události mohou být vytvořeny pouze mezi prvním a dvacátýmčtvrtým prosincem"
+              in_past: "Události nemohou být vytvořeny v minulosti"
+        user:
+          attributes:
+            email:
+              required_for_confirmation: "Je vyžadováno potvrzení pro %{attribute}."
+              already_confirmed: "%{attribute} už byl potvrzen"
+  pull_request:
+    twitter_message: "Právě jsem daroval pull request pro http://24pullrequests.com, sledujte: %{issue_url}"
+    download:
+      tooltip: "Běžně aktualizujeme vaše pull requesty každou hodinu, můžete je ale aktualizovat hned."
+  twitter:
+    account_linked: "Váš Twitter účet byl připojen! Budeme tweetovat vaše pull requesty."
+    account_removed: "Váš Twitter účet byl odebrán."
+    link_account:
+      text: "Připojte Váš Twitter účet"
+      tooltip: "Když připojíte Váš Twitter účet, tak budeme tweetovat vaše pull requesty!"
+
+  navigation:
+    all_projects: Všechny projekty
+    my_suggestions: Mé návrhy
+    dashboard: Nástěnka
+    profile: Profil
+    preferences: Nastavení
+    gifted_code: Darovaný kód
+    manage_projects: Spravovat projekty
+    logout: Odhlásit se
+
+  homepage:
+    title: "24 Pull Requestů"
+    description: Darujte na Vánoce malé dárečky kódu
+    about: "O co jde?"
+    about_text: "<p>24 Pull Requests je každoroční iniciativa podporující vývojáře po celém světě poslat každý den před Vánoci pull request.</p> <p>Tohle je stránka pomáhající v propagaci tohoto projektu, zdůraznění proč, jak a kde poslat svůje pull requesty.</p><p>Přihlašte se svým GitHub účtem and my budeme sledovat a zvýraznovat všechny vaše pull requesty a doporučovat projekty, na kterých můžete pracovat.</p>"
+    greeting: "Už je čas"
+    give_to_open_source: Celý rok benefitujete z opensource projektů. Nastal čas poděkovat všem správcům těchto projektům, a andílci mi říkají že oni milují pull requesty!
+    q_n_a: Otázky a odpovědi
+    badges:
+      title: Získejte Coderwall badge
+      description: Spojili jsme se s coderwall a vytvořili jsme některé dechberoucí badge, které můžete odemknout participací (udělování 24. prosince).
+      involved_link: "Participant - Zapojte se a pošlete alespoň jeden pull request před Vánoci"
+      amazing: "Continuous Sync - Pošlete 24 pull requestů před Vánoci"
+    involved:
+      title: Zapojte se
+      description: "Je tu mnoho cest jak se zapojit do open source projektů: vylepšete dokumentaci, opravujte problémy a bugy, zlepšete kvalitu kódu a vylepšete testy, nebo přidejte chybějící funkci."
+      special_page: "Připravili jsme %{contributing_path}, kde můžete najít nějaké informace o tom, jak se zapojit."
+      contributing_path: special page
+      take_a_look: Pokud jste noví v open source, prosím podívejte se.
+    profile:
+      title: Vytvořte si profil
+      description: Přispívání do open source projektů je také skvělý způsob jak si vytvořit profil v komunitě a vylepšit své CV.
+      getting_started: Je opravdu jednoduché začít. I malá pomoc může být pro projekt opravdu cenná.
+    event:
+      title: Události
+      description: Tento rok jsme požádali organizátory po celém světě a vy se před Vánoci můžete zapojit do 24 Pull Requests hack eventů.
+      view_events: Zobrazit eventy
+      host_an_event: Uspořádat event
+
+    join_the_chat: Zapojte se do chatu na Gitteru, %{link_to_chat}.
+
+  information:
+    title: "24 Pull Requests %{year} je tu"
+    last_year_stats: "V roce %{year}, v průběhu dvaceti čtyř dnů, <b>%{developers}</b> vývojářů poslalo <b>%{pull_requests}</b> pull requestů do <b>%{projects}</b> různých open source projektů."
+    get_ready: Připravte se na 24 Pull Requests %{year}, kdy to celé zopakujeme.
+    help_open_source: "Chceš mezitím pomoci open source projektům? Sleduj ostatní skvělé akce:"
+    happy_holidays_see_you: Veselé svátky a uvidíme se znovu za rok!
+
+  happy_holidays: Veselé svátky
+  follow_user: Sleduj @%{twitter}
+  sponsored_by: Sponzorováno
+  how_to_contribute: Jak se zapojit?
+  welcome_back: Vítez zpět, %{user}
+  welcome: Vítej, %{user}!
+  your_pull_requests: Tvé pull requesty
+  suggested_projects: doporučených projektů
+  suggest_project: Doporuč projekt
+  no_suggestions: Zatím jsi nedoporučil žádné projekty.
+  preferred_languages: Preferované jazyky
+  view_all: Zobrazit vše
+  more: Více
+  change: Změnit
+  clear: Vyčistit
+  claim: Potvrdit
+  edit: Upravit
+  everything: Vše
+  about_us: O nás
+  sponsors: Sponzoři
+  cancel: Ukončit
+  or: nebo
+  search: hledat
+
+  user:
+    grinchy_message: "%{user} je o Vánocích %{year} grinch! Žádné darované pull requesty!"
+    pull_request_count: "%{user} poslal o Vánocích %{year} celkem %{count} pull requestů"
+    organisations: Člen
+    coderwall:
+      title: Coderwall Badges
+      achieved_by: "Badges dosažen"
+      success: "Úspěšně aktualizováno tvůj coderwall username!"
+      update_button: "Aktualizovat"
+      error_no_user: "Nebyl nalezen žádný uživatel s tímto jménem."
+      error_github_not_connected: "Uživatel %{username} nemá propojený svůj GitHub účet s Coderwall profilem."
+
+  developers_using_language: vývojářů používá %{language}
+  developers_involved: vývojářů se již účastní.
+  developers_involved_desc: Přihlašte se a udělejte open source lepší.
+  organisations_involved_desc: Pozvěte další vývojáře ze své společnosti.
+
+  dashboard:
+    christmas_activity: Zde pro vás trackujeme všechnu vaši aktivitu v průběhu prosince
+    give_a_gift: Vypadá to, že jste dnes zatím neposlali žádný pull request. Chcete poslat svůj dnešní pull request?
+    synchronize: Synchronizovat pull requesty
+    help_out: "Nevíte jakému projektu pomoci? Dali jsme do kupy seznam projektů, které by vás mohli zajímat."
+    pull_requests: "Zajímá vás co ostatní dělají tyto Vánoce? Podívejte se na tyhle pull requesty a nebo pošlete nějaké vlastní - najdete je pak zde!"
+    no_pull_requests: Zatím jsi neposlal žádný pull request, na co čekáš?!
+    not_december: 24 Pull Requests probíhá od 1. do 24. prosince - přijďte později.
+    gift_it: Daruj!
+
+  language:
+    projects_count: "%{count} %{language} projektů"
+    projects:
+      count: "%{count} projektů používá %{language}"
+      suggest: "Navrhněte %{language} projektů"
+    developers:
+      count: "%{count} vývojářů používá %{language}"
+    pull_requests:
+      latest:
+        count: Posledních %{count} pull requestů pro %{language}
+
+  projects:
+    help_out: Nevíte jakému projektu pomoci? Připravili jsme seznam zajímavých open source projektů, které budou za vaši pomoc velice rádi!
+    suggest_new: Můžete také navrhnout projekt, který by měl být přidán do seznamu. Případně můžete přidat svůj projekt - pokud potřebujete pomoci.
+    filter_by_language: "Filtrovat podle jazyka:"
+    for_you: Doporučené pro vás
+    suggestion:
+      edit: Upravit návrh
+      update: Upravit projekt
+    suggest: Zatím zde není žádný projekt pro tento jazyk, proč %{suggest_link}?
+    suggest_link_text: navrhnout také jeden?
+    new:
+      title: Navrhnout projekt
+      info: Možnost jak pomoci je také navrhnout zajímavý projekt, snažili jsme se dát dohromady seznam zajímavých projektů. Stále je ale spousta zajímavých projektů, do kterých by mohla open source komunita přispět!
+      suggestion: Našli jste problém na těchto stránkách? Jsme jedno velké ucho. Pokud jde chcete něco opravit, nebojte se %{issue_link}.
+      issue_link_text: nahlásit problém
+
+      form:
+        project_name: Jméno projektu
+        github_url: GitHub URL
+        summary: Shrnutí
+        main_language: Hlavní jazyk
+        submit_project: Odeslat projekt
+
+    edit:
+      title: Spravovat návrhy
+    admin:
+      title: Spravovat projekty
+      search: Hledat v GitHub repozitích
+
+  preferences:
+      title: Nastavte si své osobní preference
+      setup_help: "Než začnete, prosím vyplňte tento formulář"
+      frequency_message: Ve frekvenci, kterou si zvolíte Vám budeme posílat e-maily s užitečnými informacemi, dokud projekt neskončí. Doporučíme Vám některé zajímavé projekty. Zohledníme Vaše repozitáře na GitHubu a můžete si i vybrat preferované jazyky.
+      delete: "Chcete odstranit svůj účet?"
+      information: Vždy můžete své e-mailové nastavení upravit.
+      twitter: Twitter účet
+      languages: Jaké jazyky znáte?
+      remove: Odstranit účet
+      save: Uložit
+      save_and_continue: Uložit a pokračovat
+      coderwall: Připojte svůj coderwall účet pro zobrazení všech badges, které již máte.
+
+      form:
+        email: E-mail
+        email_frequency: Frekvence e-mailů
+        never: Nikdy
+        daily: Každý den
+        weekly: Každý týden
+
+      hint:
+        confirm_email: Prosím potvrďte váši e-mailovou adresu navštívením odkazu, který jsme vám zaslali.
+
+  pull_requests:
+    count: "%{count} pull requestů již bylo odesláno!"
+    language:
+      count: "%{count} pull requestů v jazyce %{language} již bylo odesláno!"
+    latest:
+      count: Poslední pull requesty (%{count} celkem)
+
+  delete_account:
+    title: Odstranit účet
+    are_you_sure: Chceme jenom vědět, jestli chcete opravdu odstranit svůj účet. Odstraníme Váš profil a všechny vaše pull requesty z těchto stránek. Všechny navrhované projekty nicméně zústanou.
+    notification_info: Pokud jednoduše chcete přestat dostávat e-mailové notifikace, pak můžete změnit své %{email_preferences_link}.
+    email_preferences_link: nastavení e-mailu
+    confirm: Potvrdit odstranění
+    cancel: Změnil jsem se nároz, beru zpět.
+
+  gifts:
+    title: Darovaný kód
+    description: Tady můžete spravovat své pull requesty připravit si vlastní set "dvaceti čtyř pull requestů".
+    view_your_gifts: Všechny vaše dárky budou zobrazeny ve tvém %{calendar_link}.
+    calendar_link: veřejném kalendáři
+    none: Zatím nebylo nic darováno.
+    give: Daruj něco dobrého projektům, které máš rád
+    no_pull_requests: "Nemáš žádné pull requesty"
+    link_twitter_desc: "Chcete sdílet informace o 24 Pull Requests a dárcích? %{link_twitter} a darum nějaké dárky open source projektům."
+    link_twitter: Připojte Twitter account
+
+    form:
+      date: Datum
+      pull_requests: Pull Requesty
+      tweet: Tweetni o tomto dárku!
+      gift_it: "Daruj!"
+
+  contributors:
+    title: Přispěvatelé
+
+  about:
+    title: O 24 Pull Requests
+    description: 24 Pull Requests je malý projekt sloužící k propagaci open source spolupráce během prosince.
+    idea: Nápad je jednoduše "poslat pull request každý prosincový den před Vánoci", čímž mohou vývojáři darovat malé dárečky ostatním vývojářům.
+    more_info: Tyto stránky také nabízejí seznam projektů, kterým je možné pomoci, příručky jak pomoci a vybrané pull requesty každý den.
+    on_github: "Náš kód je na GitHubu:"
+    on_twitter: "Jsme také na Twitteru:"
+    sponsors:
+      title: Sponzoři
+      details: Chtěli bychom poděkovat za pomoc a příspěvek našim skvělým sponzorům.
+      thanks: "Velice děkujeme ..."
+      get_in_touch: "Pokud nás chcete sponzorovat, či být s námi jinak v kontaktu, zanechte nám svůj e-mail:"
+
+  organisations:
+    title: "%{count} organizací se zapojilo"
+    pull_requests: "%{count} pull requestů od všech členů"
+    members:
+      one: "1 člen"
+      other: "%{count} členů"
+    languages: Jazyky
+
+  suggestions:
+    title: Mé návrhy
+
+  api:
+    title: JSON API
+    description: Možná jste to nevěděl(a), ale 24 Pull Requests má své vlastní JSON API. Detaily o každém endpointu jsou popsány níže.
+
+  events:
+    title: Události
+    details: Určitě nejsi jedin(ý/á) v okolí, kdo letošní Vánoce posílá pull requesty! Uspořádej 24 Pull Requests hack event ve své firmě, ve škole či pro lokální komunitu. Nebo přijď na jiný event a programuj s ostatními.
+    notice:
+      not_logged_in: "Pro přidávání/úpravu událostí musíte být přihlášen(a)"
+      not_authorized: "Můžete upravovat pouze události, které jste vytvořil(a)"
+      edit_success: "Událost upravena!"
+      new_success: "Událost vytvořena!"
+      destroy_success: "Událost odstraněna!"
+    show:
+      view_event_details: Zobrazit detaily o události
+      destroy_event: Odstranit událost
+      edit_event: Upravit událost
+      confirm_destroy: "Opravdu chcete odstranit tuto událost?"
+    new:
+      title: Uspořádej 24 Pull Requests event
+      form:
+        name: Jméno události
+        description: Popis
+        description_placeholder: Stručný popis události
+        location: Místo
+        url: URL
+        url_placeholder: "Stránka události / registrace"
+        start_time: "Kdy"
+
+    edit:
+      title: Upravit návrh
+    admin:
+      title: Spravovat projekty
+      search: Hledat Github repositář
