@@ -1,254 +1,287 @@
+---
 tr:
+  about:
+    description: 24 Pull Requests Aralık ayı boyunca açık kaynak kodlu projeleri destekleyen
+      küçük bir projedir.
+    idea: Temel fikir Aralıktan Noel'e kadar her gün bir pull request yollanması ve
+      Aralık ayı boyunca küçük hediyeler ile geliştircilerin cesaretlendirilmesidir.
+    more_info: Bu site ilgili projeleri de destekler ve her gün gönderilen pull request'ler
+      ile onlar destek ve rehber olur.
+    on_github: 'Bu sitenin geliştirilmesi Github üzerindedir:'
+    on_twitter: 'Twitter''da da varız:'
+    sponsors:
+      details: 24 Pull Requests sponsorlar ve bağış yapanlara teşekkürlerini sunar.
+      get_in_touch: 'Eğer sponsorluk hakkında bizim ile iletişime geçmek istiyorsanız
+        email adresimiz:'
+      thanks: "Çok teşekkür ederiz..."
+      title: Sponsonlar
+    title: 24 Pull Requests Hakkında
+  about_us: Hakkında
   activerecord:
     errors:
       models:
         user:
           attributes:
             email:
-              required_for_confirmation: "%{attribute} alanı doğrulama için gerekli"
               already_confirmed: "%{attribute} daha önce doğrulanmış"
-  pull_request:
-    twitter_message: "Az önce http://24pullrequests.com 'a pull request gönderdim, buradan bakabilirsin: %{issue_url}"
-    download:
-      tooltip: "Pull request'leri genellikle her saat kontrol ederiz, fakat çok istiyorsan şimdi kontrol edebilirsiniz."
-  twitter:
-    account_linked: "Twitter hesabınız bağlandı! Bir pull request yapıtığız zaman bir tweet atacağız."
-    account_removed: "Twitter hesabınız kaldırıldı."
-    link_account:
-      text: "Twitter hesabınızı bağlayın."
-      tooltip: "Eğer Twitter hesabınızı bağlarsanız, Bir pull request yapıtığız zaman bir tweet atacağız!"
-
-  navigation:
-    all_projects: Bütün Projeler
-    my_suggestions: Önerilerim
-    dashboard: Kontrol Paneli
-    profile: Profil
-    preferences: Özellikler
-    gifted_code: Gifted Code
-    manage_projects: Projeleri Yönet
-    logout: Çıkış
-
-  homepage:
-    title: "24 Pull Requests"
-    description: Noel için küçük kod parçaları hediye etmek.
-    about: "Bütün bunlar ne için?"
-    about_text: "<p>24 Pull Requests, dünyadaki bütün geliştiricileri Aralık ayından Noel'e teşvik etmek için oluşmuş yıllık bir girişimdir.</p> <p>Bu site projelere pull request'lerinizin neden, nasıl ve nereye göndereceliğine yardımcı olur. </p><p>Github hesabınız ile giriş yapın ve sizlerin bütün pull request'lerinizi izleyelim ve sizler için üzerinde çalışabileceğeniz projeler önerelim.</p>"
-    greeting: "Bu sezon"
-    give_to_open_source: Bütün yıl açık kaynak kodlu projeleri kullanmaktan faydalanabilirsiniz. Şimdi bu projelerin destekcilerine teşekkür etme zamanı ve küçük bir kuşun bana dediğine göre onlar pull request'leri kabul etmekten mutluluk duyacaklar!
-    q_n_a: Sorular & Cevaplar
-    badges:
-      title: Coderwall Rozetleri Kazan
-      description: Coderwall ile bir ekip oluşturduk ve katılımcıların kazanabilmeleri için mükemmel rozetler yarattık.
-      involved_link: 'Katılımcı - Dahil olmalı, Noel den önce en az bir tane pull request göndermeli!'
-      amazing: "Continuous Sync - You're an open source machine, send 24 pull requests during December"
-    involved:
-      title: Dahil olmak
-      description: "Açık kaynak bir porjeye dahil olmanın bir çok yolu vardır: dökümantasyon içeriklerini geliştirmek, mevcut sorun ve bugları düzeltmek, kod kalitesini ve testlerin kapmasımını arttırmak ya da olmayan bir özellik eklemek."
-      special_page: "Katılım hakkında bilgiler bulabileceğiniz %{contributing_path} hazırladık."
-      contributing_path: özel sayfa
-      take_a_look: Eğer açık kaynak kodda yeniyseniz, bir göz atın.
-    profile:
-      title: Profilinizi Oluşturun
-      description: Açık kaynak projelere katılmak, topluluk içinde profilinizin oluşması ve CVnizi geliştirmeniz için iyi bir yoldur.
-      getting_started: Küçük katılımlar bir projeyi değerli yapabilir. Projelere katılım başlatmak gerçekten kolaydır.
-    join_the_chat: Gitter de konuşmalara dahil olun %{link_to_chat}
-
-  information:
-    title: "24 Pull Requests %{year} yılında üzerimizde"
-    last_year_stats: "%{year} yılında 24 günün üzerinde, <b>%{developers}</b> geliştirici kayıt oldu. <b>%{projects}</b> farklı açık kaynak projesine <b>%{pull_requests}</b> pull requests yapıldı."
-    get_ready: "%{year} yılında tekrar yaptığımızda 24 Pull Requests için hazır olun!"
-    help_open_source: "Bu arada bir projeye dahil olmak ister misiniz? Diğer başarılı girişimleri kontrol edin!"
-    codetriage: "CodeTriage ile bir açık kaynak önerin. Daha derine inmek için favori kod deponuzdan günlük olarak bir konuya yardımcı olun, bağlı olduğunuz kodu daha fazla öğrenin."
-    contribhub:
-      tagline: Süper bir projede yardıma ihtiyacı olan bir komşunuz olduğunu biliyor musunuz? ContribHub ile ona yardım edin!
-      description: ContribHub GitHub-based tabanlı bir uygulama olup etrafınızdaki açık kaynak kodları bulmanıza ve onlara yardım etmenize yarar.
-
-  follow_user: '@%{twitter} hesabını takip edin.'
-  sponsored_by: Sponsorluk
-  how_to_contribute: Nasıl katılım olabilir?
-  open_source_yey: Açık Kaynak FTW!
-  welcome_back: Hoşgeldin, %{user}
-  your_pull_requests: Pull Requests'lerin
-  suggested_projects: Önerilen Projeler
-  suggest_project: Proje Öner
-  no_suggestions: Henüz bir proje önermediniz.
-  preferred_languages: Tercih edilen programlama dilleri
-  view_all: Hepsini Göster
-  more: Daha Fazla
+              required_for_confirmation: "%{attribute} alanı doğrulama için gerekli"
+  api:
+    callback:
+      details: You can send a ?callback parameter to any GET call to have the results
+        wrapped in a JSON function. This is typically used when browsers want to embed
+        content in web pages by getting around cross domain issues. The response includes
+        the same data output as the regular API.
+      title: JSON-P Callbacks
+    description: Bunu bilmiyor olabilirsiniz, fakat 24 Pull Requests kendi JSON API
+      ya sahip. Detayları aşağıda bulabilirsiniz.
+    organisations:
+      details: Siteye kayıtlı bütün organizasyonlar kullanıcıları ile birlikte bulunur.
+      specific: Belirli bir organizasyon için bilgilerin alınması.
+      title: Organizasyonlar
+    pagination:
+      details: Requests that return multiple items will be paginated to 99 items by
+        default. You can specify further pages with the ?page parameter.
+      title: Sayfalandırma
+    projects:
+      details: Bütün önerilen projeler sayfada alfabetik olarak sıralanır.
+      title: Projeler
+    pull_requests:
+      details: Kullanıcının kendi yaptığı pull request'ler dahil olmak üzere tüm pull
+        requestler Aralık ayındankiler olmak üzere yeniden eskiye doğru sıralanır.
+      meta_details: Bu yıl tüm çekme istekleri hakkında bilgi yükleyin.
+      title: Pull Requests
+    title: JSON API
+    users:
+      details: Siteye kayıtlı tüm kullanıcılar Aralık ayı boyunca kendi ve organizasyonları
+        üzerinden yaptıkları pull requestler'i görürler.
+      specific: Belirli bir kişi için bilgilerin alınması.
+      title: Kullanıclar
+  cancel: "İptal et"
   change: Değiştir
-  clear: Sil
   claim: Talep et
-  exempli_gratia: "örn." # Short form of "for example"
+  clear: Sil
+  contributors:
+    title: "Çekirdek Kadro"
+  dashboard:
+    christmas_activity: Burası Noel'e kadar sizin için takip ettiğimiz bütün aktiviteleri
+      görebileceğiniz yer.
+    gift_it: Hediye et!
+    give_a_gift: Bugün hiç kod hediye etmemiş görülüyorsunuz? Bir tane pull request
+      yapmaya ne dersiniz?
+    help_out: 'Bir projeye katkı yapabileceğinizi düşünmüyor musunuz? O zaman popüler
+      bütün projelere bakalım:'
+    no_pull_requests: Henüz hiç pull request göndermedeniz. Daha ne bekliyorsunuz?
+    synchronize: Pull Request'leri senkon et
+  delete_account:
+    are_you_sure: Hesabınızı gerçekten silmek istediğinizden emin olmak istiyoruz.
+      Hesabınızı ve pull request'leriniz bu site üzerinden silinecektir.
+    cancel: Fikrimi değiştirdim, beni geri al!
+    confirm: Silimi onayla
+    email_preferences_link: email özellikleri
+    notification_info: email bildirimlerini almak istemiyorsanız  %{email_preferences_link}
+      den email ayarlarını değiştiriniz.
+    title: Hesabı sil
+  developers_involved: Henüz Katılan geliştiriciler
+  developers_using_language: Geliştiriciler %{language} kullanıyor.
   edit: Düzenle
   everything: Herşey
-  about_us: Hakkında
-  cancel: İptal et
-  or: yada
-  search: Ara
-
-  user:
-    grinchy_message: "%{user} kullanıcısı %{year} yılında hiç pull request olmadığı için can sıkıyor. Bah humbug!"
-    pull_request_count: "%{user} kullancısı %{year} yılınca %{count} pull request yaptı."
-    organisations: ... üyesi
-    coderwall:
-      title: Coderwall Rozetleri
-      achieved_by: "Rozetler tarafından kazanıldı"
-      success: "Coderwall hesap adınız başarılı bir şekilde güncellendi."
-      update_button: "Güncelle"
-      error_no_user: "Bu isim ile kullancı bulunamadı."
-      error_github_not_connected: "%{username} adlı kullanıcı 24 Pull Request ile aynı olan Coderwall hesabına bağlanan GitHub hesabı ile aynı isime sahip değil."
-
-  developers_using_language: Geliştiriciler %{language} kullanıyor.
-  developers_involved: Henüz Katılan geliştiriciler
-
-  dashboard:
-    christmas_activity: Burası Noel'e kadar sizin için takip ettiğimiz bütün aktiviteleri görebileceğiniz yer.
-    give_a_gift: Bugün hiç kod hediye etmemiş görülüyorsunuz? Bir tane pull request yapmaya ne dersiniz? # This is followed by a select-menu where you can pick one of your non-gifted pull requests to gift
-    synchronize: Pull Request'leri senkon et
-    help_out: "Bir projeye katkı yapabileceğinizi düşünmüyor musunuz? O zaman popüler bütün projelere bakalım:"
-    no_pull_requests: Henüz hiç pull request göndermedeniz. Daha ne bekliyorsunuz?
-    gift_it: Hediye et!
-
+  exempli_gratia: "örn."
+  follow_user: "@%{twitter} hesabını takip edin."
+  gifts:
+    calendar_link: Genel takvim
+    description: Buradan pull request'lerini yönetebilir ve seçebilirsin &amp; "24
+      Pull Requests".
+    form:
+      date: Tarih
+      gift_it: Hediye et!
+      pull_requests: Pull Requests
+      tweet: Hediyen hakkında Tweet at!
+    give: Sevdiğin bir proje hakkında hediye gönder.
+    none: Henüz bir hediye gönderilmedi.
+    title: Hediye Edilmiş Kod
+    view_your_gifts: Bütün hedilerin bu takvimde görülecek %{calendar_link}.
+  homepage:
+    about: Bütün bunlar ne için?
+    about_text: "<p>24 Pull Requests, dünyadaki bütün geliştiricileri Aralık ayından
+      Noel'e teşvik etmek için oluşmuş yıllık bir girişimdir.</p> <p>Bu site projelere
+      pull request'lerinizin neden, nasıl ve nereye göndereceliğine yardımcı olur.
+      </p><p>Github hesabınız ile giriş yapın ve sizlerin bütün pull request'lerinizi
+      izleyelim ve sizler için üzerinde çalışabileceğeniz projeler önerelim.</p>"
+    badges:
+      amazing: Continuous Sync - You're an open source machine, send 24 pull requests
+        during December
+      description: Coderwall ile bir ekip oluşturduk ve katılımcıların kazanabilmeleri
+        için mükemmel rozetler yarattık.
+      involved_link: Katılımcı - Dahil olmalı, Noel den önce en az bir tane pull request
+        göndermeli!
+      title: Coderwall Rozetleri Kazan
+    description: Noel için küçük kod parçaları hediye etmek.
+    give_to_open_source: Bütün yıl açık kaynak kodlu projeleri kullanmaktan faydalanabilirsiniz.
+      Şimdi bu projelerin destekcilerine teşekkür etme zamanı ve küçük bir kuşun bana
+      dediğine göre onlar pull request'leri kabul etmekten mutluluk duyacaklar!
+    greeting: Bu sezon
+    involved:
+      contributing_path: "özel sayfa"
+      description: 'Açık kaynak bir porjeye dahil olmanın bir çok yolu vardır: dökümantasyon
+        içeriklerini geliştirmek, mevcut sorun ve bugları düzeltmek, kod kalitesini
+        ve testlerin kapmasımını arttırmak ya da olmayan bir özellik eklemek.'
+      special_page: Katılım hakkında bilgiler bulabileceğiniz %{contributing_path}
+        hazırladık.
+      take_a_look: Eğer açık kaynak kodda yeniyseniz, bir göz atın.
+      title: Dahil olmak
+    join_the_chat: Gitter de konuşmalara dahil olun %{link_to_chat}
+    profile:
+      description: Açık kaynak projelere katılmak, topluluk içinde profilinizin oluşması
+        ve CVnizi geliştirmeniz için iyi bir yoldur.
+      getting_started: Küçük katılımlar bir projeyi değerli yapabilir. Projelere katılım
+        başlatmak gerçekten kolaydır.
+      title: Profilinizi Oluşturun
+    q_n_a: Sorular & Cevaplar
+    title: 24 Pull Requests
+  how_to_contribute: Nasıl katılım olabilir?
+  information:
+    codetriage: CodeTriage ile bir açık kaynak önerin. Daha derine inmek için favori
+      kod deponuzdan günlük olarak bir konuya yardımcı olun, bağlı olduğunuz kodu
+      daha fazla öğrenin.
+    contribhub:
+      description: ContribHub GitHub-based tabanlı bir uygulama olup etrafınızdaki
+        açık kaynak kodları bulmanıza ve onlara yardım etmenize yarar.
+      tagline: Süper bir projede yardıma ihtiyacı olan bir komşunuz olduğunu biliyor
+        musunuz? ContribHub ile ona yardım edin!
+    get_ready: "%{year} yılında tekrar yaptığımızda 24 Pull Requests için hazır olun!"
+    help_open_source: Bu arada bir projeye dahil olmak ister misiniz? Diğer başarılı
+      girişimleri kontrol edin!
+    last_year_stats: "%{year} yılında 24 günün üzerinde, <b>%{developers}</b> geliştirici
+      kayıt oldu. <b>%{projects}</b> farklı açık kaynak projesine <b>%{pull_requests}</b>
+      pull requests yapıldı."
+    title: 24 Pull Requests %{year} yılında üzerimizde
   language:
-    projects_count: "%{language} %{count} tane Proje"
+    developers:
+      count: "%{count} tane geliştici %{language} kullanıyor."
     projects:
       count: "%{count} tane proje %{language} kullanıyor."
       suggest: "%{language} projesi öner."
-    developers:
-      count: "%{count} tane geliştici %{language} kullanıyor."
+    projects_count: "%{language} %{count} tane Proje"
     pull_requests:
       latest:
         count: En son %{language} Pull Requests (toplamda %{count})
-
+  more: Daha Fazla
+  navigation:
+    all_projects: Bütün Projeler
+    dashboard: Kontrol Paneli
+    gifted_code: Gifted Code
+    logout: "Çıkış"
+    manage_projects: Projeleri Yönet
+    my_suggestions: "Önerilerim"
+    preferences: "Özellikler"
+    profile: Profil
+  no_suggestions: Henüz bir proje önermediniz.
+  open_source_yey: Açık Kaynak FTW!
+  or: yada
+  organisations:
+    languages: Diller
+    members:
+      one: 1 Üye
+      other: "%{count} Üyeler"
+    pull_requests: Kullanıcılar tarafından %{count} pull request yapıldı
+    title: "%{count} organizasyon katıldı."
+  preferences:
+    coderwall: Kazandığınız rozetlerin profilinizde gösterilmesi için Coderwall hesabınızı
+      bağlanıyız.
+    coderwall_username: Coderwall Kullanıcı Adı
+    delete: Hesabınızı silmek istiyor musunuz?
+    form:
+      daily: Günlük
+      email: Email
+      email_frequency: Email Sıklığı
+      never: Hiç bir zaman
+      weekly: Haftalık
+    frequency_message: Seçtiğiniz sıklıkta proje bitene kadar sizlere projeleri göndereceğiz
+      ve geliştirilmesi düşünülen projeler önereceğiz. Kişisel ayarlarınızı değişterebilir,
+      Github hesabınızı değiştirebilirsiniz. Aynı zamanda bildiğiniz programlama dillerinizi
+      işaretleyip, projeleri takip edebilirsiniz.
+    hint:
+      confirm_email: Size email olarak gönderilen linki onaylayınız.
+    information: Daha sonra email ayarlarınızı değiştirebilirsiniz.
+    languages: Hangi programlama dillerini biliyorsunuz?
+    remove: Hesabı Kaldır
+    save_and_continue: Kaydet ve Devam Et
+    title: Kişisel Özelliklerini Ayarla
+    twitter: Twitter Hesabı
+  preferred_languages: Tercih edilen programlama dilleri
   projects:
-    claim: Önerdiğiniz projeler listede yok mu? Yayınlanmasını talep edin!
-    help_out: Bir projeye katkı yapabileceğinizi düşünmüyor musunuz? Sizin için süper projeler sunalım.
-    suggest_new: Proje önerebilir ya da listeye ekleyebilirsin. Kendi projen varsa yardım almak için öneri yapabilirsin.
-    filter_by_language: "Dile göre filtrele:"
+    admin:
+      search: Github deposunda ara.
+      title: Projeleri Yönelt
+    claim: "Önerdiğiniz projeler listede yok mu? Yayınlanmasını talep edin!"
+    edit:
+      title: "Öneri Düzenle"
+    filter_by_language: 'Dile göre filtrele:'
     for_you: Senin için önerilenler
-    suggestion:
-      edit: Önerileri Düzenle
-      update: Projeyi Güncelle
+    help_out: Bir projeye katkı yapabileceğinizi düşünmüyor musunuz? Sizin için süper
+      projeler sunalım.
+    new:
+      form:
+        github_url: GitHub Linki
+        main_language: Temel Dil
+        project_name: Proje Adı
+        submit_project: Proje yükle
+        summary: "Özet"
+      info: One of the ways we encourage participation in the open source community
+        is by letting users know what popular projects might be worth contributing
+        to. We've selected our favorites, but we're always open to suggestions. Have
+        some ideas? Share them below!
+      issue_link_text: Bir konu öner
+      suggestion: Have a suggestion for this project? We're all ears! If there's something
+        you'd like fixed, feel free to %{issue_link}.
+      title: Bir proje öner
     suggest: Bu dilde henüz bir proje yok, acaba neden %{suggest_link}?
     suggest_link_text: Bir tane öner
-    new:
-      title: Bir proje öner
-      info: One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We've selected our favorites, but we're always open to suggestions. Have some ideas? Share them below!
-      suggestion: Have a suggestion for this project? We're all ears! If there's something you'd like fixed, feel free to %{issue_link}.
-      issue_link_text: Bir konu öner
-
-      form:
-        project_name: Proje Adı
-        github_url: GitHub Linki
-        summary: Özet
-        main_language: Temel Dil
-        submit_project: Proje yükle
-
-    edit:
-      title: Öneri Düzenle
-    admin:
-      title: Projeleri Yönelt
-      search: Github deposunda ara.
-
-  preferences:
-      title: Kişisel Özelliklerini Ayarla
-      frequency_message: Seçtiğiniz sıklıkta proje bitene kadar sizlere projeleri göndereceğiz ve geliştirilmesi düşünülen projeler önereceğiz. Kişisel ayarlarınızı değişterebilir, Github hesabınızı değiştirebilirsiniz. Aynı zamanda bildiğiniz programlama dillerinizi işaretleyip, projeleri takip edebilirsiniz.
-      delete: "Hesabınızı silmek istiyor musunuz?"
-      information: Daha sonra email ayarlarınızı değiştirebilirsiniz.
-      twitter: Twitter Hesabı
-      languages: Hangi programlama dillerini biliyorsunuz?
-      remove: Hesabı Kaldır
-      save_and_continue: Kaydet ve Devam Et
-      coderwall: Kazandığınız rozetlerin profilinizde gösterilmesi için Coderwall hesabınızı bağlanıyız. 
-      coderwall_username: "Coderwall Kullanıcı Adı"
-
-      form:
-        email: Email
-        email_frequency: Email Sıklığı
-        never: Hiç bir zaman
-        daily: Günlük
-        weekly: Haftalık
-
-      hint:
-        confirm_email: Size email olarak gönderilen linki onaylayınız.
-
+    suggest_new: Proje önerebilir ya da listeye ekleyebilirsin. Kendi projen varsa
+      yardım almak için öneri yapabilirsin.
+    suggestion:
+      edit: "Önerileri Düzenle"
+      update: Projeyi Güncelle
+  pull_request:
+    download:
+      tooltip: Pull request'leri genellikle her saat kontrol ederiz, fakat çok istiyorsan
+        şimdi kontrol edebilirsiniz.
+    twitter_message: 'Az önce http://24pullrequests.com ''a pull request gönderdim,
+      buradan bakabilirsin: %{issue_url}'
   pull_requests:
     count: "%{count} tane Pull Request yapıldı!"
     language:
       count: "%{count} tane %{language} dilinde Pull Request yapıldı!"
     latest:
       count: Latest Pull Requests (%{count} total)
-
-  delete_account:
-    title: Hesabı sil
-    are_you_sure: Hesabınızı gerçekten silmek istediğinizden emin olmak istiyoruz. Hesabınızı ve pull request'leriniz bu site üzerinden silinecektir.
-    notification_info: email bildirimlerini almak istemiyorsanız  %{email_preferences_link} den email ayarlarını değiştiriniz.
-    email_preferences_link: email özellikleri
-    confirm: Silimi onayla
-    cancel: Fikrimi değiştirdim, beni geri al!
-
-  gifts:
-    title: Hediye Edilmiş Kod
-    description: Buradan pull request'lerini yönetebilir ve seçebilirsin &amp; "24 Pull Requests".
-    view_your_gifts: Bütün hedilerin bu takvimde görülecek %{calendar_link}.
-    calendar_link: Genel takvim
-    none: Henüz bir hediye gönderilmedi.
-    give: Sevdiğin bir proje hakkında hediye gönder.
-
-    form:
-      date: Tarih
-      pull_requests: Pull Requests
-      tweet: Hediyen hakkında Tweet at!
-      gift_it: "Hediye et!"
-
-  contributors:
-    title: Çekirdek Kadro
-
-  about:
-    title: 24 Pull Requests Hakkında
-    description: 24 Pull Requests Aralık ayı boyunca açık kaynak kodlu projeleri destekleyen küçük bir projedir.
-    idea: Temel fikir Aralıktan Noel'e kadar her gün bir pull request yollanması ve Aralık ayı boyunca küçük hediyeler ile geliştircilerin cesaretlendirilmesidir.
-    more_info: Bu site ilgili projeleri de destekler ve her gün gönderilen pull request'ler ile onlar destek ve rehber olur.
-    on_github: "Bu sitenin geliştirilmesi Github üzerindedir:"
-    on_twitter: "Twitter'da da varız:"
-    sponsors:
-      title: Sponsonlar
-      details: 24 Pull Requests sponsorlar ve bağış yapanlara teşekkürlerini sunar.
-      thanks: "Çok teşekkür ederiz..."
-      get_in_touch: "Eğer sponsorluk hakkında bizim ile iletişime geçmek istiyorsanız email adresimiz:"
-
-  organisations:
-    title: "%{count} organizasyon katıldı."
-    pull_requests: "Kullanıcılar tarafından %{count} pull request yapıldı"
-    members:
-      one: "1 Üye"
-      other: "%{count} Üyeler"
-    languages: Diller
-
+  search: Ara
+  sponsored_by: Sponsorluk
+  suggest_project: Proje Öner
+  suggested_projects: "Önerilen Projeler"
   suggestions:
-    title: Önerilerim
-
-  api:
-    title: JSON API
-    description: Bunu bilmiyor olabilirsiniz, fakat 24 Pull Requests kendi JSON API ya sahip. Detayları aşağıda bulabilirsiniz.
-    pagination:
-      title: Sayfalandırma
-      details: Requests that return multiple items will be paginated to 99 items by default. You can specify further pages with the ?page parameter.
-    callback:
-      title: JSON-P Callbacks
-      details: You can send a ?callback parameter to any GET call to have the results wrapped in a JSON function. This is typically used when browsers want to embed content in web pages by getting around cross domain issues. The response includes the same data output as the regular API.
-    projects:
-      title: Projeler
-      details: Bütün önerilen projeler sayfada alfabetik olarak sıralanır.
-    pull_requests:
-      title: Pull Requests
-      details: Kullanıcının kendi yaptığı pull request'ler dahil olmak üzere tüm pull requestler Aralık ayındankiler olmak üzere yeniden eskiye doğru sıralanır.
-      meta_details: Bu yıl tüm çekme istekleri hakkında bilgi yükleyin.
-    users:
-      title: Kullanıclar
-      details: Siteye kayıtlı tüm kullanıcılar Aralık ayı boyunca kendi ve organizasyonları üzerinden yaptıkları pull requestler'i görürler.
-      specific: Belirli bir kişi için bilgilerin alınması.
-    organisations:
-      title: Organizasyonlar
-      details: Siteye kayıtlı bütün organizasyonlar kullanıcıları ile birlikte bulunur.
-      specific: Belirli bir organizasyon için bilgilerin alınması.
+    title: "Önerilerim"
+  twitter:
+    account_linked: Twitter hesabınız bağlandı! Bir pull request yapıtığız zaman bir
+      tweet atacağız.
+    account_removed: Twitter hesabınız kaldırıldı.
+    link_account:
+      text: Twitter hesabınızı bağlayın.
+      tooltip: Eğer Twitter hesabınızı bağlarsanız, Bir pull request yapıtığız zaman
+        bir tweet atacağız!
+  user:
+    coderwall:
+      achieved_by: Rozetler tarafından kazanıldı
+      error_github_not_connected: "%{username} adlı kullanıcı 24 Pull Request ile
+        aynı olan Coderwall hesabına bağlanan GitHub hesabı ile aynı isime sahip değil."
+      error_no_user: Bu isim ile kullancı bulunamadı.
+      success: Coderwall hesap adınız başarılı bir şekilde güncellendi.
+      title: Coderwall Rozetleri
+      update_button: Güncelle
+    grinchy_message: "%{user} kullanıcısı %{year} yılında hiç pull request olmadığı
+      için can sıkıyor. Bah humbug!"
+    organisations: "... üyesi"
+    pull_request_count: "%{user} kullancısı %{year} yılınca %{count} pull request
+      yaptı."
+  view_all: Hepsini Göster
+  welcome_back: Hoşgeldin, %{user}
+  your_pull_requests: Pull Requests'lerin

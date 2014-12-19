@@ -26,6 +26,7 @@ gem 'rack-canonical-host'
 gem 'draper'
 
 group :development do
+  gem 'i18n-tasks'
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'better_errors'

@@ -103,6 +103,10 @@ GEM
       activemodel (>= 3.0)
       activesupport (>= 3.0)
       request_store (~> 1.0)
+    easy_translate (0.5.0)
+      json
+      thread
+      thread_safe
     ejs (1.1.1)
     equalizer (0.0.9)
     erubis (2.7.0)
@@ -164,6 +168,15 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
+    i18n-tasks (0.7.10)
+      activesupport
+      easy_translate (>= 0.5.0)
+      erubis
+      highline
+      i18n
+      slop (>= 3.5.0)
+      term-ansicolor
+      terminal-table
     jquery-datetimepicker-rails (2.3.7.0)
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
@@ -387,6 +400,7 @@ GEM
       eventmachine (~> 1.0)
       rack (~> 1.0)
     thor (0.19.1)
+    thread (0.1.4)
     thread_safe (0.3.4)
     tilt (1.4.1)
     timecop (0.7.1)
@@ -447,6 +461,7 @@ DEPENDENCIES
   guard-rspec (~> 4.4.2)
   guard-spork
   haml-rails
+  i18n-tasks
   jquery-datetimepicker-rails (~> 2.3.7.0)
   jquery-rails
   kaminari
