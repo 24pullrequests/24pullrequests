@@ -11,7 +11,7 @@
       %br
       %small= @event.formatted_date
     %hr
-    %p= @event.description
+    %p.js-emoji= @event.description
     = link_to t("events.show.view_event_details"), @event.url, class: "btn btn-primary"
 
     - if @event.can_edit?(current_user)
