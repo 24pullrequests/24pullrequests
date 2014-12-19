@@ -25,7 +25,7 @@ cs:
 
   navigation:
     all_projects: Všechny projekty
-    my_suggestions: Mé doporučení
+    my_suggestions: Mé návrhy
     dashboard: Nástěnka
     profile: Profil
     preferences: Nastavení
@@ -39,7 +39,7 @@ cs:
     about: "O co jde?"
     about_text: "<p>24 Pull Requests je každoroční iniciativa podporující vývojáře po celém světě poslat každý den před Vánoci pull request.</p> <p>Tohle je stránka pomáhající v propagaci tohoto projektu, zdůraznění proč, jak a kde poslat svůje pull requesty.</p><p>Přihlašte se svým GitHub účtem and my budeme sledovat a zvýraznovat všechny vaše pull requesty a doporučovat projekty, na kterých můžete pracovat.</p>"
     greeting: "Už je čas"
-    give_to_open_source: Celý rok benefitujete z opensource projektů. Nastal čas poděkovat všek správcům těchto projektům, a andílci mi říkají že milují pull requesty!
+    give_to_open_source: Celý rok benefitujete z opensource projektů. Nastal čas poděkovat všem správcům těchto projektům, a andílci mi říkají že oni milují pull requesty!
     q_n_a: Otázky a odpovědi
     badges:
       title: Získejte Coderwall badge
@@ -48,7 +48,7 @@ cs:
       amazing: "Continuous Sync - Pošlete 24 pull requestů před Vánoci"
     involved:
       title: Zapojte se
-      description: "Je tu mnoho cest jak se zapojit do open source projektů: vylepšete dokumentaci, opravte problémy a bugy, zlepšete kvalitu kódu a vylepšete testy, nebo přidejte chybějící funkci."
+      description: "Je tu mnoho cest jak se zapojit do open source projektů: vylepšete dokumentaci, opravujte problémy a bugy, zlepšete kvalitu kódu a vylepšete testy, nebo přidejte chybějící funkci."
       special_page: "Připravili jsme %{contributing_path}, kde můžete najít nějaké informace o tom, jak se zapojit."
       contributing_path: special page
       take_a_look: Pokud jste noví v open source, prosím podívejte se.
@@ -58,7 +58,7 @@ cs:
       getting_started: Je opravdu jednoduché začít. I malá pomoc může být pro projekt opravdu cenná.
     event:
       title: Události
-      description: Tento rok jsme požádali organizátory po celém světě vy se před Vánoci můžete zapojit do 24 Pull Requests hack eventů.
+      description: Tento rok jsme požádali organizátory po celém světě a vy se před Vánoci můžete zapojit do 24 Pull Requests hack eventů.
       view_events: Zobrazit eventy
       host_an_event: Uspořádat event
 
@@ -78,7 +78,7 @@ cs:
   welcome_back: Vítez zpět, %{user}
   welcome: Vítej, %{user}!
   your_pull_requests: Tvé pull requesty
-  suggested_projects: Doporučené projekty
+  suggested_projects: doporučených projektů
   suggest_project: Doporuč projekt
   no_suggestions: Zatím jsi nedoporučil žádné projekty.
   preferred_languages: Preferované jazyky
@@ -165,7 +165,7 @@ cs:
   preferences:
       title: Nastavte si své osobní preference
       setup_help: "Než začnete, prosím vyplňte tento formulář"
-      frequency_message: Ve frekvenci, kterou si zvolíte Vám budeme e-maily s užitečnými informacemi, dokud projekt neskončí. Doporučíme Vám některé zajímavé projekty. Zohledníme Vaše repozitáře na GitHubu a můžete si i vybrat preferované jazyky.
+      frequency_message: Ve frekvenci, kterou si zvolíte Vám budeme posílat e-maily s užitečnými informacemi, dokud projekt neskončí. Doporučíme Vám některé zajímavé projekty. Zohledníme Vaše repozitáře na GitHubu a můžete si i vybrat preferované jazyky.
       delete: "Chcete odstranit svůj účet?"
       information: Vždy můžete své e-mailové nastavení upravit.
       twitter: Twitter účet
@@ -174,7 +174,6 @@ cs:
       save: Uložit
       save_and_continue: Uložit a pokračovat
       coderwall: Připojte svůj coderwall účet pro zobrazení všech badges, které již máte.
-      coderwall_username: "Coderwall uživatelské jméno"
 
       form:
         email: E-mail
@@ -247,24 +246,7 @@ cs:
 
   api:
     title: JSON API
-    description: Možná jsi to nevěděl, ale 24 Pull Requests má své vlastní JSON API. Detaily o každém endpointu jsou popsány dole.
-    pagination:
-      title: Stránkování
-      details: Requesty, které vrací více položek, budou stránkovány. Pro dalších 99 položek použijte ?page parametr.
-    projects:
-      title: Projekty
-      details: Všechny projekty seřazeny podle abecedy.
-    pull_requests:
-      title: Pull Requesty
-      details: Načti všechny pull requesty od přihlášených uživatelů během prosince. Řazeno od nejnovějších, zobrazený je i uživatel, který daný pull request zaslal.
-    users:
-      title: Uživatelé
-      details: Načti všechny naše uživatele, seřazeno podle počtu pull requestů za tento prosinec, obsahuje i organizace a pull requesty.
-      specific: Načti informace pro specifického uživatele.
-    organisations:
-      title: Organizace
-      details: Načti všechny organizace včetně jejich členů.
-      specific: Načti informace pro specifickou organizaci.
+    description: Možná jste to nevěděl(a), ale 24 Pull Requests má své vlastní JSON API. Detaily o každém endpointu jsou popsány níže.
 
   events:
     title: Události
