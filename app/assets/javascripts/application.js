@@ -17,5 +17,6 @@
 //= require coderwall
 //= require jquery.timeago
 //= require jquery.datetimepicker
+//= require emojione
 //= require_tree .
 //
