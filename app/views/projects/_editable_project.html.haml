@@ -12,8 +12,7 @@
         = link_to t("edit"), edit_path_for_project(project, admin), class: 'btn pull-right'
 
     = link_to project.github_repository, project.github_url, :target => '_blank'
-  %p
-    = truncate project.description, :length => 200
+  %p.js-emoji= truncate project.description, :length => 200
   .language.label.label-info
     = link_to project.main_language, language_path(project.main_language.downcase)
   - project.labels.each do |label|

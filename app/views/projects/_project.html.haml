@@ -4,7 +4,7 @@
 
   = link_to project.github_url, :target => "_blank", :title => project.github_repository, :class => "project-link" do
     %span.project-title= project.name
-    %p= project.description
+    %p.js-emoji= project.description
 
   - project.labels.each do |label|
     .project-label
