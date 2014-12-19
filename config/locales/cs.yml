@@ -107,6 +107,98 @@ cs:
       error_no_user: "Nebyl nalezen žádný uživatel s tímto jménem."
       error_github_not_connected: "Uživatel %{username} nemá propojený svůj GitHub účet s Coderwall profilem."
 
+  developers_using_language: vývojářů používá %{language}
+  developers_involved: vývojářů se již účastní.
+  developers_involved_desc: Přihlašte se a udělejte open source lepší.
+  organisations_involved_desc: Pozvěte další vývojáře ze své společnosti.
+
+  dashboard:
+    christmas_activity: Zde pro vás trackujeme všechnu vaši aktivitu v průběhu prosince
+    give_a_gift: Vypadá to, že jste dnes zatím neposlali žádný pull request. Chcete poslat svůj dnešní pull request?
+    synchronize: Synchronizovat pull requesty
+    help_out: "Nevíte jakému projektu pomoci? Dali jsme do kupy seznam projektů, které by vás mohli zajímat."
+    pull_requests: "Zajímá vás co ostatní dělají tyto Vánoce? Podívejte se na tyhle pull requesty a nebo pošlete nějaké vlastní - najdete je pak zde!"
+    no_pull_requests: Zatím jsi neposlal žádný pull request, na co čekáš?!
+    not_december: 24 Pull Requests probíhá od 1. do 24. prosince - přijďte později.
+    gift_it: Daruj!
+
+  language:
+    projects_count: "%{count} %{language} projektů"
+    projects:
+      count: "%{count} projektů používá %{language}"
+      suggest: "Navrhněte %{language} projektů"
+    developers:
+      count: "%{count} vývojářů používá %{language}"
+    pull_requests:
+      latest:
+        count: Posledních %{count} pull requestů pro %{language}
+
+      form:
+        email: E-mail
+        email_frequency: Frekvence e-mailů
+        never: Nikdy
+        daily: Každý den
+        weekly: Každý týden
+
+      hint:
+        confirm_email: Prosím potvrďte váši e-mailovou adresu navštívením odkazu, který jsme vám zaslali.
+
+  pull_requests:
+    count: "%{count} pull requestů již bylo odesláno!"
+    language:
+      count: "%{count} pull requestů v jazyce %{language} již bylo odesláno!"
+    latest:
+      count: Poslední pull requesty (%{count} celkem)
+
+  delete_account:
+    title: Odstranit účet
+    are_you_sure: Chceme jenom vědět, jestli chcete opravdu odstranit svůj účet. Odstraníme Váš profil a všechny vaše pull requesty z těchto stránek. Všechny navrhované projekty nicméně zústanou.
+    notification_info: Pokud jednoduše chcete přestat dostávat e-mailové notifikace, pak můžete změnit své %{email_preferences_link}.
+    email_preferences_link: nastavení e-mailu
+    confirm: Potvrdit odstranění
+    cancel: Změnil jsem se nároz, beru zpět.
+
+  gifts:
+    title: Darovaný kód
+    description: Tady můžete spravovat své pull requesty připravit si vlastní set "dvaceti čtyř pull requestů".
+    view_your_gifts: Všechny vaše dárky budou zobrazeny ve tvém %{calendar_link}.
+    calendar_link: veřejném kalendáři
+    none: Zatím nebylo nic darováno.
+    give: Daruj něco dobrého projektům, které máš rád
+    no_pull_requests: "Nemáš žádné pull requesty"
+    link_twitter_desc: "Chcete sdílet informace o 24 Pull Requests a dárcích? %{link_twitter} a darum nějaké dárky open source projektům."
+    link_twitter: Připojte Twitter account
+
+    form:
+      date: Datum
+      pull_requests: Pull Requesty
+      tweet: Tweetni o tomto dárku!
+      gift_it: "Daruj!"
+
+  contributors:
+    title: Přispěvatelé
+
+  about:
+    title: O 24 Pull Requests
+    description: 24 Pull Requests je malý projekt sloužící k propagaci open source spolupráce během prosince.
+    idea: Nápad je jednoduše "poslat pull request každý prosincový den před Vánoci", čímž mohou vývojáři darovat malé dárečky ostatním vývojářům.
+    more_info: Tyto stránky také nabízejí seznam projektů, kterým je možné pomoci, příručky jak pomoci a vybrané pull requesty každý den.
+    on_github: "Náš kód je na GitHubu:"
+    on_twitter: "Jsme také na Twitteru:"
+    sponsors:
+      title: Sponzoři
+      details: Chtěli bychom poděkovat za pomoc a příspěvek našim skvělým sponzorům.
+      thanks: "Velice děkujeme ..."
+      get_in_touch: "Pokud nás chcete sponzorovat, či být s námi jinak v kontaktu, zanechte nám svůj e-mail:"
+
+  organisations:
+    title: "%{count} organizací se zapojilo"
+    pull_requests: "%{count} pull requestů od všech členů"
+    members:
+      one: "1 člen"
+      other: "%{count} členů"
+    languages: Jazyky
+
   suggestions:
     title: Mé návrhy
 
