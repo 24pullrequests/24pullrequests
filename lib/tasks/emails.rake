@@ -10,6 +10,6 @@ end
 desc 'Send a november reminder to everyone'
 task send_reminder: :environment do
   User.where("email <> ''").where.not(email_frequency: 'none').each do |user|
-    ReminderMailer.november(user).deliver rescue nil
+    ReminderMailer.november(user).deliver_now rescue nil
   end
 end
