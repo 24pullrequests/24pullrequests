@@ -24,6 +24,7 @@ gem 'uglifier'
 gem 'octicons-rails'
 gem 'rack-canonical-host'
 gem 'draper'
+gem 'responders', '~> 2.0'
 
 group :development do
   gem 'i18n-tasks'

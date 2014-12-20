@@ -325,6 +325,8 @@ GEM
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     request_store (1.1.0)
+    responders (2.0.2)
+      railties (>= 4.2.0.alpha, < 5)
     rest-client (1.7.2)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
@@ -507,6 +509,7 @@ DEPENDENCIES
   rails (= 4.2.0)
   rails_12factor
   rb-fsevent
+  responders (~> 2.0)
   rspec-activemodel-mocks
   rspec-collection_matchers
   rspec-its
