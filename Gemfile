@@ -35,6 +35,7 @@ group :development do
   gem 'thin'
   gem 'quiet_assets'
   gem 'rubocop', '~> 0.27', require: false
+  gem 'web-console', '~> 2.0'
 end
 
 group :development, :test, :cucumber do
