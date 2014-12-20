@@ -31,7 +31,7 @@ class Project < ActiveRecord::Base
   validates_length_of :description, within: 20..200
   validates_inclusion_of :main_language, in: LANGUAGES, message: 'must be a programming language'
 
-  scope :not_owner, ->(user) { where('github_url' != "github.com/#{user}/") }
+  scope :not_owner, ->(user) { where('github_url NOT ILIKE ?', "%github.com/#{user}/%") }
   scope :by_language, ->(language) { where('lower(main_language) =?', language.downcase) }
   scope :by_languages, ->(languages) { where('lower(main_language) IN (?)', languages) }
   scope :by_labels, ->(labels) { joins(:labels).where('labels.name  IN (?)', labels).select('distinct(projects.id), projects.*') }
