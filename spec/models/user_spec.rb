@@ -26,7 +26,7 @@ describe User, type: :model do
           end
 
           it 'sends a confirmation email' do
-            expect(ConfirmationMailer).to receive(:confirmation).and_return double('ConfirmationMailer', deliver: true)
+            expect(ConfirmationMailer).to receive(:confirmation).and_return double('ConfirmationMailer', deliver_now: true)
             subject.save
           end
         end
@@ -207,7 +207,7 @@ describe User, type: :model do
 
       it 'sends a confirmation email' do
         stub_mailer = double(ConfirmationMailer)
-        allow(stub_mailer).to receive(:deliver)
+        allow(stub_mailer).to receive(:deliver_now)
         expect(ConfirmationMailer).to receive(:confirmation).and_return(stub_mailer)
 
         subject.update_attribute(:email, 'different@email.addr')

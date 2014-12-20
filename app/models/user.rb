@@ -124,7 +124,7 @@ class User < ActiveRecord::Base
   def send_confirmation_email
     generate_confirmation_token
     self.save
-    ConfirmationMailer.confirmation(self).deliver
+    ConfirmationMailer.confirmation(self).deliver_now
   end
 
   def new_gift(attrs = {})
@@ -185,6 +185,6 @@ class User < ActiveRecord::Base
     generate_confirmation_token
     self.confirmed_at = nil
 
-    ConfirmationMailer.confirmation(self).deliver
+    ConfirmationMailer.confirmation(self).deliver_now
   end
 end

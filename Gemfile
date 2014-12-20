@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.1.5'
 
-gem 'rails', '4.1.8'
+gem 'rails', '4.2.0'
 
 gem 'jquery-rails'
 gem 'pg'
@@ -24,6 +24,7 @@ gem 'uglifier'
 gem 'octicons-rails'
 gem 'rack-canonical-host'
 gem 'draper'
+gem 'responders', '~> 2.0'
 
 group :development do
   gem 'i18n-tasks'
@@ -34,6 +35,7 @@ group :development do
   gem 'thin'
   gem 'quiet_assets'
   gem 'rubocop', '~> 0.27', require: false
+  gem 'web-console', '~> 2.0'
 end
 
 group :development, :test, :cucumber do

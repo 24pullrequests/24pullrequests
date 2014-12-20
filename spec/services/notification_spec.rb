@@ -15,7 +15,7 @@ describe Notification do
     end
 
     context 'sends notifications' do
-      let(:mailer) { double(:reminder_mailer, deliver: nil, weekly: nil) }
+      let(:mailer) { double(:reminder_mailer, deliver_now: nil, weekly: nil) }
 
       before do
         user.confirm!
