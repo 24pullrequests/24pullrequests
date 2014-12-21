@@ -501,6 +501,7 @@ DEPENDENCIES
   omniauth-twitter
   pg
   poltergeist
+  pry
   pullreview-coverage
   quiet_assets
   rabl

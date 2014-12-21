@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   respond_to :js, only: :index
 
   def index
-    @users = User.order('pull_requests_count desc, nickname asc').page params[:page]
+    @users = User.with_repo_count.order("#{sort_by} desc, nickname asc").page params[:page]
     respond_with @users
   end
 
@@ -17,5 +17,15 @@ class UsersController < ApplicationController
 
   def projects
     @projects = current_user.projects.order('inactive desc')
+  end
+
+  protected
+
+  def sort_by
+    if params[:sort] == 'repo_count'
+      :repo_count
+    else
+      :pull_requests_count
+    end
   end
 end

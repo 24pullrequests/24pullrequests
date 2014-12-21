@@ -13,7 +13,13 @@ class User < ActiveRecord::Base
 
   has_many :archived_pull_requests
 
-  scope :by_language, -> (language) { joins(:skills).where('lower(language) = ?', language.downcase) }
+  scope :by_language, -> (language) { joins(:skills).where('lower(skills.language) = ?', language.downcase) }
+
+  scope :with_repo_count, -> {
+    joins(:pull_requests)
+      .select('count(*) as repo_count')
+      .group('pull_requests.repo_name')
+  }
 
   paginates_per 99
 

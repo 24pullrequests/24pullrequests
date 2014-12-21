@@ -25,6 +25,7 @@ FactoryGirl.define do
     email
     gravatar_id { Faker::Internet.email }
     token { SecureRandom.hex }
+    repo_count 0
   end
 
   factory :skill do
