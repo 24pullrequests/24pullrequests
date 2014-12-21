@@ -31,28 +31,28 @@ es:
               required_for_confirmation: "%{attribute} es requerido para la confirmación"
   api:
     callback:
-      details: 
-      title: 
-    description: 
+      details:
+      title:
+    description:
     organisations:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
     pagination:
-      details: 
-      title: 
+      details:
+      title:
     projects:
-      details: 
-      title: 
+      details:
+      title:
     pull_requests:
-      details: 
-      meta_details: 
-      title: 
-    title: 
+      details:
+      meta_details:
+      title:
+    title:
     users:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
   cancel: Cancelar
   change: Cambiar
   claim: Reclamar
@@ -62,11 +62,13 @@ es:
   dashboard:
     christmas_activity: Aquí puedes ver todo de la actividad monitorizada antes de
       la Navidad.
-    gift_it: 
+    gift_it:
     give_a_gift: Parece que no has regalado ninguno código hoy. Quieres regalar?
     help_out: No puedes pensar en un proyecto que quieres ayudar? Tenemos una lista
       de proyectos populares
     no_pull_requests: No has enviado ninguno 'pull requests'. Qué esperas?!
+    pull_requests: ¿Se pregunta que ha hecho la gente estas vacaciones? Echa un vistazo a
+      estos pull requests, o envia un pull request y verás el tuyo ¡Aquí!
     synchronize: Sincronizar Pull Requests
   delete_account:
     are_you_sure: Queremos estar seguro que quieres eliminar tu cuenta. Este elimnar
@@ -74,25 +76,26 @@ es:
       permanecerán.
     cancel: Cambié mi mente, regresar!
     confirm: Confirmar la eliminación
-    email_preferences_link: 
+    email_preferences_link:
     notification_info: Si solo quieres eliminar los notificaciones por correo electronico,
       puedes cambiar sus preferencias %{email_preferences_link}.
     title: Eliminar mi cuenta
   developers_involved: Desarrolladores trabajando
+  developers_involved_desc: Únete a todos aquí y haz el código abierto mejor.
   developers_using_language: Desarrolladores usando %{language}
   edit: Editar
   everything: Todo
-  exempli_gratia: 
+  exempli_gratia:
   follow_user: Sigue @%{twitter}
   gifts:
-    calendar_link: 
+    calendar_link:
     description: Aqui puedes manejar 'pull requests' y elegir tu propia colección
       de '24 Pull Requests'.
     form:
-      date: 
-      gift_it: 
-      pull_request: 
-      tweet: 
+      date:
+      gift_it:
+      pull_request:
+      tweet:
     give: Da algo importante a un proyecto que te gusta
     none: No has regalado nada.
     title: Código obsequiado
@@ -114,13 +117,19 @@ es:
         de Navidad
       title: Gana medallas de Coderwall
     description: Retribuyendo regalitos de código en Navidad
+    event:
+      description: Este año estamos alentando a organizadores de todo el mundo a que
+        planeen eventos de 24 Pull Requests. Participa esta Navidad.
+      host_an_event: Organiza un evento
+      title: Eventos
+      view_events: Ver eventos
     give_to_open_source: Nos hemos beneficiado por el uso de proyectos de código abierto
       todo el año. Ahora, es el momento de decir gracias a todos los responsables
       de esos proyectos. Un pequeño pajarito no has contado, que ¡ha ellos les encantará
       recibir pull requests!.
     greeting: Es la temporada
     involved:
-      contributing_path: 
+      contributing_path:
       description: 'Hay un muchas formas de participar en un proyecto de código abierto:
         mejorando la documentación, ayudando a resolver los problemas y errores existentes,
         mejorar la calidad del código y la cobertura de pruebas, o añadiendo características
@@ -179,21 +188,24 @@ es:
     profile: Perfil
   no_suggestions: No se ha sugerido ningún proyecto.
   open_source_yey: Código abierto, yah!
-  or: 
+  or:
   organisations:
     members:
-      one: 
-      other: 
+      one: Un Miembro
+      other: "%{count} Miembros"
+    pull_requests: "%{count} pull requests submitted by members"
+    title: "%{count} organizaciones involucradas"
+  organisations_involved_desc: Invite a más personas de su organización a participar.
   preferences:
-    coderwall: 
-    coderwall_username: 
+    coderwall:
+    coderwall_username:
     delete_account: "¿Quieres eliminar su cuenta?"
     form:
-      daily: 
-      email: 
-      email_frequency: 
-      never: 
-      weekly: 
+      daily:
+      email:
+      email_frequency:
+      never:
+      weekly:
     frequency_message: Con la frecuencia que selecciones, le enviaremos correos electrónicos
       a partir de ahora hasta que el proyecto esté terminado, destacando algunos proyectos
       sugeridos que podría interesarle contribuir. Adicionalmente, vamos a personalizar
@@ -224,11 +236,11 @@ es:
       ayuda."
     new:
       form:
-        github_url: 
-        main_language: 
-        project_name: 
-        submit_project: 
-        summary: 
+        github_url:
+        main_language:
+        project_name:
+        submit_project:
+        summary:
       info: Una de las maneras en que fomentamos la participación en la comunidad
         de código abierto es informando a nuestros usuarios conozcan en qué proyectos
         populares pueden contribuir. Seleccionamos nuestros favoritos, pero siempre
@@ -257,11 +269,12 @@ es:
     latest:
       count: "Últimos Pull Requests (%{count} total)"
   search: Buscar
+  sponsors: Patrocinadores
   sponsored_by: Patrocinado por
   suggest_project: Sugerir un proyecto
   suggested_projects: Proyectos sugeridos
   suggestions:
-    title: 
+    title:
   twitter:
     account_linked: "¡Su cuenta de Twitter ha sido vinculada! Publicaremos un tweet
       cada vez que envías un pull request."
@@ -272,12 +285,12 @@ es:
         que envíes un pull request.
   user:
     coderwall:
-      achieved_by: 
-      error_github_not_connected: 
-      error_no_user: 
-      success: 
-      title: 
-      update_button: 
+      achieved_by:
+      error_github_not_connected:
+      error_no_user:
+      success:
+      title:
+      update_button:
     grinchy_message: "%{user} es un gruñón para el año de %{year} porque no ha regalado
       ningún pull request. ¡Bah, paparruchas!"
     organisations: Miembro de ...
