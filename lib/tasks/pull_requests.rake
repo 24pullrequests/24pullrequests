@@ -42,3 +42,10 @@ task update_pull_requests: :environment do
     pr.check_state rescue nil
   end
 end
+
+desc "Gift unspent pull requests"
+task :gift_unspent_requests => :environment do
+  User.all.each do |user|
+    user.gift_unspent_pull_requests!
+  end
+end
