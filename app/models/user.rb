@@ -103,7 +103,7 @@ class User < ActiveRecord::Base
   end
 
   def unconfirmed?
-    !confirmed? && email_frequency != 'none'
+    !confirmed? && email_frequency != 'none' && email.present?
   end
 
   def confirm!
