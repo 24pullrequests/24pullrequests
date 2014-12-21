@@ -19,11 +19,16 @@ class DashboardsController < ApplicationController
                             gift_form:     gift_form }
   end
 
+  def preferences
+    session[:preferences_referrer] = request.referrer unless current_user.email_frequency.nil?
+  end
+
   def update_preferences
     current_user.skills.delete_all
     if current_user.update_attributes(user_params)
       flash[:success] = 'Your preferences was successfully saved'
-      redirect_to :back
+      redirect_to session[:preferences_referrer] || dashboard_path
+      session.delete(:preferences_referrer)
     else
       render :preferences
     end
