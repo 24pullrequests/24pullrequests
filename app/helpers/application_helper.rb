@@ -71,11 +71,6 @@ module ApplicationHelper
   end
 
   def unconfirmed_email?
-    logged_in? && !current_user.confirmed?
+    logged_in? && !current_user.confirmed? && current_user.email_frequency != 'none'
   end
-
-  def helpful_emails?
-    logged_in? && current_user.email_frequency != 'none'
-  end
-
 end
