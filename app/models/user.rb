@@ -102,6 +102,10 @@ class User < ActiveRecord::Base
     !!confirmed_at
   end
 
+  def unconfirmed?
+    !confirmed? && email_frequency != 'none'
+  end
+
   def confirm!
     if email.present? && !confirmed?
       return update_attributes(confirmation_token: nil,
