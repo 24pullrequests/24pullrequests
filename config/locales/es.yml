@@ -130,6 +130,7 @@ es:
       take_a_look: Si eres nuevo en el mundo Open Source, por favor, échale un vistazo.
       title: Involúcrese
     join_the_chat: "Únete al chat en Gitter, %{link_to_chat}."
+    login_with_github: Entra Con GitHub
     profile:
       description: Contribuir a proyectos de código abierto es también una gran forma
         de construir su perfil en la comunidad y mejorar su CV.
