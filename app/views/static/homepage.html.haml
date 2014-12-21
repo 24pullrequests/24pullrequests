@@ -22,7 +22,7 @@
         .cta-block
           = link_to login_path, :class => 'btn cta' do
             %span.octicon.octicon-mark-github
-            %strong Log in with GitHub
+            %strong=t("homepage.login_with_github")
         = render :partial => 'shared/social_buttons'
 
 .container.tips
