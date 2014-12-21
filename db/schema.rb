@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141207102627) do
+ActiveRecord::Schema.define(version: 20141215161710) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "archived_pull_requests", force: true do |t|
+  create_table "archived_pull_requests", force: :cascade do |t|
     t.string   "title"
     t.string   "issue_url"
     t.text     "body"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20141207102627) do
     t.integer  "comments_count", default: 0
   end
 
-  create_table "events", force: true do |t|
+  create_table "events", force: :cascade do |t|
     t.string   "name"
     t.string   "location"
     t.string   "url"
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20141207102627) do
 
   add_index "events", ["start_time"], name: "index_events_on_start_time", using: :btree
 
-  create_table "gifts", force: true do |t|
+  create_table "gifts", force: :cascade do |t|
     t.integer  "user_id",         null: false
     t.integer  "pull_request_id", null: false
     t.date     "date",            null: false
@@ -52,15 +52,15 @@ ActiveRecord::Schema.define(version: 20141207102627) do
     t.datetime "updated_at",      null: false
   end
 
-  add_index "gifts", ["user_id", "pull_request_id"], name: "index_gifts_on_user_id_and_pull_request_id", using: :btree
+  add_index "gifts", ["user_id", "pull_request_id"], name: "index_gifts_on_user_id_and_pull_request_id", unique: true, using: :btree
 
-  create_table "labels", force: true do |t|
+  create_table "labels", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "organisations", force: true do |t|
+  create_table "organisations", force: :cascade do |t|
     t.string   "login"
     t.string   "avatar_url"
     t.integer  "github_id"
@@ -71,12 +71,12 @@ ActiveRecord::Schema.define(version: 20141207102627) do
 
   add_index "organisations", ["login"], name: "index_organisations_on_login", unique: true, using: :btree
 
-  create_table "organisations_users", force: true do |t|
+  create_table "organisations_users", force: :cascade do |t|
     t.integer "user_id"
     t.integer "organisation_id"
   end
 
-  create_table "project_labels", force: true do |t|
+  create_table "project_labels", force: :cascade do |t|
     t.integer  "project_id"
     t.integer  "label_id"
     t.datetime "created_at"
@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 20141207102627) do
   add_index "project_labels", ["label_id"], name: "index_project_labels_on_label_id", using: :btree
   add_index "project_labels", ["project_id"], name: "index_project_labels_on_project_id", using: :btree
 
-  create_table "projects", force: true do |t|
+  create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.string   "github_url"
@@ -97,7 +97,7 @@ ActiveRecord::Schema.define(version: 20141207102627) do
     t.boolean  "inactive"
   end
 
-  create_table "pull_request_archives", force: true do |t|
+  create_table "pull_request_archives", force: :cascade do |t|
     t.string   "title"
     t.string   "issue_url"
     t.text     "body"
@@ -110,7 +110,7 @@ ActiveRecord::Schema.define(version: 20141207102627) do
     t.integer  "comments_count", default: 0
   end
 
-  create_table "pull_requests", force: true do |t|
+  create_table "pull_requests", force: :cascade do |t|
     t.string   "title"
     t.string   "issue_url"
     t.text     "body"
@@ -125,7 +125,7 @@ ActiveRecord::Schema.define(version: 20141207102627) do
 
   add_index "pull_requests", ["user_id"], name: "index_pull_requests_on_user_id", using: :btree
 
-  create_table "skills", force: true do |t|
+  create_table "skills", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "language"
     t.datetime "created_at", null: false
@@ -134,7 +134,7 @@ ActiveRecord::Schema.define(version: 20141207102627) do
 
   add_index "skills", ["user_id"], name: "index_skills_on_user_id", using: :btree
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "uid",                             null: false
     t.string   "provider",                        null: false
     t.string   "nickname",                        null: false
