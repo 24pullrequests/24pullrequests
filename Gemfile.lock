@@ -161,7 +161,7 @@ GEM
       slop (>= 3.5.0)
       term-ansicolor
       terminal-table
-    jquery-datetimepicker-rails (2.3.7.0)
+    jquery-datetimepicker-rails (2.4.1.0)
     jquery-rails (4.0.2)
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
@@ -433,7 +433,7 @@ DEPENDENCIES
   foreman
   haml-rails
   i18n-tasks
-  jquery-datetimepicker-rails (~> 2.3.7.0)
+  jquery-datetimepicker-rails (~> 2.4.1.0)
   jquery-rails
   kaminari
   konacha
