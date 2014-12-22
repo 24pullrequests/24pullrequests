@@ -10,7 +10,7 @@ Tfpullrequests::Application.configure do
   config.cache_store                       = :dalli_store
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_files = false
+  config.serve_static_files = true
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
