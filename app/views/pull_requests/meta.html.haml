@@ -1,7 +1,7 @@
 %h2
   - if @language
-    =t("pull_requests.language.count", count: pull_request_count, language: @language)
+    =t("pull_requests.language.count", count: number_with_delimiter(pull_request_count), language: @language)
   - else
-    =t("pull_requests.count", count: pull_request_count)
+    =t("pull_requests.count", count: number_with_delimiter(pull_request_count))
 = render @pull_requests_decorator.paginated
 = paginate @pull_requests_decorator.paginated
