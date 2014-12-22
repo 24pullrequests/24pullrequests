@@ -58,7 +58,7 @@ ja:
       title: Projects
     pull_requests:
       details: "このサイトのユーザによる12月中の全ての pull request を新しいもの順に返します。pull request を作成したユーザ情報も含まれます。"
-      meta_details: "今年すべてのプル要求についての情報をロードします。"
+      meta_details: "今年行った pull request 情報を取得します。"
       title: Pull Requests
     title: JSON API
     users:
