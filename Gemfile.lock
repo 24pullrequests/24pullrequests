@@ -461,7 +461,6 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  binding_of_caller
   bootstrap-sass (~> 3.3.1)
   brakeman
   bugsnag
