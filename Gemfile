@@ -36,14 +36,14 @@ group :development do
 end
 
 group :development, :test, :cucumber do
-  gem 'rspec-rails'
+  gem 'rspec-rails', require: false
   gem 'coveralls', require: false
   gem 'codeclimate-test-reporter', require: nil
   gem 'pullreview-coverage', require: false
 
-  gem 'rspec-its'
-  gem 'rspec-collection_matchers'
-  gem 'rspec-activemodel-mocks'
+  gem 'rspec-its', require: false
+  gem 'rspec-collection_matchers', require: false
+  gem 'rspec-activemodel-mocks', require: false
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'brakeman'

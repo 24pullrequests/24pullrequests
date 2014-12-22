@@ -21,6 +21,9 @@ require 'rails/application'
 
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
+require 'rspec/active_model/mocks'
+require 'rspec/its'
+require 'rspec/collection_matchers'
 # require 'rspec/autorun'
 require 'shoulda-matchers'
 require 'webmock'
