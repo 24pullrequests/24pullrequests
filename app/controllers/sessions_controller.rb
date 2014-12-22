@@ -26,8 +26,7 @@ class SessionsController < ApplicationController
   end
 
   def failure
-    flash[:notice] = params[:message]
-    redirect_to root_path
+    redirect_to root_path, notice: params[:message]
   end
 
   private

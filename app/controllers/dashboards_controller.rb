@@ -26,8 +26,7 @@ class DashboardsController < ApplicationController
   def update_preferences
     current_user.skills.delete_all
     if current_user.update_attributes(user_params)
-      flash[:success] = 'Your preferences was successfully saved'
-      redirect_to session[:preferences_referrer] || dashboard_path
+      redirect_to(session[:preferences_referrer] || dashboard_path, notice: 'Your preferences was successfully saved')
       session.delete(:preferences_referrer)
     else
       render :preferences
@@ -37,14 +36,12 @@ class DashboardsController < ApplicationController
   def destroy
     current_user.destroy
     session.delete(:user_id)
-    flash[:notice] = 'Your account was successfully deleted'
-    redirect_to root_path
+    redirect_to root_path, notice: 'Your account was successfully deleted'
   end
 
   def resend_confirmation_email
     current_user.send_confirmation_email
-    flash[:notice] = 'Confirmation email sent. Please check your inbox.'
-    redirect_to :back
+    redirect_to :back, notice: 'Confirmation email sent. Please check your inbox.'
   end
 
   def confirm_email
