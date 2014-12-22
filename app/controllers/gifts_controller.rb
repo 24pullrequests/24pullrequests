@@ -60,8 +60,7 @@ class GiftsController < ApplicationController
   end
 
   def gift_given
-    flash[:notice] = 'Your code has been gifted.'
-    redirect_to gifts_path
+    redirect_to gifts_path, notice: 'Your code has been gifted.'
   end
 
   def gift_failed(gift)

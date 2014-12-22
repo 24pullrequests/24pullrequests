@@ -36,14 +36,12 @@ class DashboardsController < ApplicationController
   def destroy
     current_user.destroy
     session.delete(:user_id)
-    flash[:notice] = 'Your account was successfully deleted'
-    redirect_to root_path
+    redirect_to root_path, notice: 'Your account was successfully deleted'
   end
 
   def resend_confirmation_email
     current_user.send_confirmation_email
-    flash[:notice] = 'Confirmation email sent. Please check your inbox.'
-    redirect_to :back
+    redirect_to :back, notice: 'Confirmation email sent. Please check your inbox.'
   end
 
   def confirm_email
