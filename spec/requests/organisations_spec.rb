@@ -7,7 +7,7 @@ describe 'Organisations', type: :request do
     3.times { create :organisation }
     visit organisations_path
 
-    is_expected.to have_content '3 organisations involved'
+    is_expected.to have_content '3 Organisations involved'
   end
 
   # it "viewing an organization" do
