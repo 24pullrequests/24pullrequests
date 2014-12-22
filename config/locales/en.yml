@@ -278,7 +278,7 @@ en:
       one: 1 Member
       other: "%{count} Members"
     pull_requests: "%{count} pull requests submitted by members"
-    title: "%{count} organisations involved"
+    title: "%{count} Organisations involved"
   organisations_involved_desc: Invite more people from your organisation to participate.
   preferences:
     coderwall: Link your coderwall account to display the badges you have already
