@@ -32,7 +32,6 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'binding_of_caller'
   gem 'thin'
-  gem 'quiet_assets'
   gem 'rubocop', '~> 0.27', require: false
   gem 'web-console', '~> 2.0'
 end

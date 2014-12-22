@@ -272,8 +272,6 @@ GEM
       slop (~> 3.4)
     pullreview-coverage (0.0.2)
       simplecov (>= 0.7.1, < 1.0.0)
-    quiet_assets (1.0.3)
-      railties (>= 3.1, < 5.0)
     rabl (0.11.5)
       activesupport (>= 2.3.14)
     rack (1.6.0)
@@ -498,7 +496,6 @@ DEPENDENCIES
   pg
   poltergeist
   pullreview-coverage
-  quiet_assets
   rabl
   rack-canonical-host
   rack-google-analytics
