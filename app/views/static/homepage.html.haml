@@ -55,7 +55,7 @@
     .col-md-6.two-up-split.left
       .block
         %h3.block-title
-          = User.count
+          = number_with_delimiter User.count
           = t("developers_involved")
         %p=t("developers_involved_desc")
         = link_to t("view_all"), users_path, :class => 'btn btn-default btn-sm'
@@ -65,7 +65,7 @@
     .col-md-6.two-up-split.right
       .block
         %h3.block-title
-          =t("organisations.title", count: Organisation.count)
+          =t("organisations.title", count: number_with_delimiter(Organisation.count))
         %p=t("organisations_involved_desc")
         = link_to t("view_all"), organisations_path, :class => 'btn btn-default btn-sm'
         %ul.avatar-list.avatar-list-lg.clearfix
@@ -77,7 +77,7 @@
         .title-block
           %span.mega-octicon.octicon-git-pull-request
           %h3.block-title
-            =t("pull_requests.latest.count", count: PullRequest.year(current_year).count)
+            =t("pull_requests.latest.count", count: number_with_delimiter(PullRequest.year(current_year).count))
           %p=t("dashboard.pull_requests")
           = link_to t("view_all"), pull_requests_path, :class => 'btn btn-default btn-sm'
         - if @pull_requests.any?
@@ -92,7 +92,7 @@
         .title-block
           %span.mega-octicon.octicon-repo
           %h3.block-title
-            = Project.active.count
+            = number_with_delimiter Project.active.count
             = t("suggested_projects")
           %p=t("dashboard.help_out")
           = link_to t("suggest_project"), new_project_path, :class => 'btn btn-default btn-sm'

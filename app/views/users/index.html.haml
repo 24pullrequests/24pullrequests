@@ -1,7 +1,7 @@
 .row.clearfix.fullwidth-panel
   .col-md-12
     %h3
-      = user_count
+      = number_with_delimiter user_count
       - if @language
         = t("developers_using_language", language: @language)
       - else

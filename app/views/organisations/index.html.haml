@@ -1,6 +1,6 @@
 .row.clearfix.fullwidth-panel
   .col-md-12
-    %h3=t("organisations.title", count: organisation_count)
+    %h3=t("organisations.title", count: number_with_delimiter(organisation_count))
 
     .js-org-pagination
       %ul.clearfix.avatar-list.avatar-list-lg.js-org-list
