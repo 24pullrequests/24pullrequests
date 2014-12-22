@@ -24,7 +24,7 @@ task download_pull_requests: :environment do
   next unless PullRequest.in_date_range?
   User.all.each do |user|
     user.download_pull_requests(User.load_user.token) rescue nil
-    user.gift_unspent_pull_requests!
+    user.gift_unspent_pull_requests! rescue nil
   end
 end
 
@@ -33,7 +33,7 @@ task download_active_pulls: :environment do
   next unless PullRequest.in_date_range?
   PullRequest.year(CURRENT_YEAR).select(:user_id).distinct.all.map(&:user).each do |user|
     user.download_pull_requests(User.load_user.token) rescue nil
-    user.gift_unspent_pull_requests!
+    user.gift_unspent_pull_requests! rescue nil
   end
 end
 
