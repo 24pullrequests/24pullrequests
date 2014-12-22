@@ -56,12 +56,6 @@ group :development, :test, :cucumber do
   gem 'timecop'
   gem 'simplecov'
 
-  # Auto testing
-  gem 'guard-rspec', '~> 4.4.2'
-  gem 'guard-spork'
-  gem 'ruby_gntp'
-  gem 'rb-fsevent'
-
   # Javascript
   gem 'konacha'
   gem 'chai-jquery-rails'
