@@ -36,16 +36,6 @@ describe 'Dashboard', type: :request do
       it { is_expected.to have_content "You’ve not sent any pull requests, what are you waiting for?!" }
     end
 
-    context 'when the user has unspent pull requests' do
-      before do
-        user.pull_requests.create(attributes_for(:pull_request))
-        visit dashboard_path
-      end
-
-      it { is_expected.to have_content "Looks like you haven’t gifted any code today. Would you like to gift your new pull requests?" }
-      it { is_expected.to have_button 'Gift it!' }
-    end
-
     context 'when the user does not have any unspent pull requests' do
       before do
         visit dashboard_path

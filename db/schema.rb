@@ -17,25 +17,25 @@ ActiveRecord::Schema.define(version: 20141215161710) do
   enable_extension "plpgsql"
 
   create_table "archived_pull_requests", force: :cascade do |t|
-    t.string   "title"
-    t.string   "issue_url"
+    t.string   "title",          limit: 255
+    t.string   "issue_url",      limit: 255
     t.text     "body"
-    t.string   "state"
+    t.string   "state",          limit: 255
     t.boolean  "merged"
     t.datetime "created_at"
-    t.string   "repo_name"
+    t.string   "repo_name",      limit: 255
     t.integer  "user_id"
-    t.string   "language"
-    t.integer  "comments_count", default: 0
+    t.string   "language",       limit: 255
+    t.integer  "comments_count",             default: 0
   end
 
   create_table "events", force: :cascade do |t|
-    t.string   "name"
-    t.string   "location"
-    t.string   "url"
+    t.string   "name",        limit: 255
+    t.string   "location",    limit: 255
+    t.string   "url",         limit: 255
     t.datetime "start_time"
-    t.decimal  "latitude",    precision: 10, scale: 6
-    t.decimal  "longitude",   precision: 10, scale: 6
+    t.decimal  "latitude",                precision: 10, scale: 6
+    t.decimal  "longitude",               precision: 10, scale: 6
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "description"
@@ -55,18 +55,18 @@ ActiveRecord::Schema.define(version: 20141215161710) do
   add_index "gifts", ["user_id", "pull_request_id"], name: "index_gifts_on_user_id_and_pull_request_id", unique: true, using: :btree
 
   create_table "labels", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "organisations", force: :cascade do |t|
-    t.string   "login"
-    t.string   "avatar_url"
+    t.string   "login",              limit: 255
+    t.string   "avatar_url",         limit: 255
     t.integer  "github_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "pull_request_count", default: 0
+    t.integer  "pull_request_count",             default: 0
   end
 
   add_index "organisations", ["login"], name: "index_organisations_on_login", unique: true, using: :btree
@@ -87,71 +87,71 @@ ActiveRecord::Schema.define(version: 20141215161710) do
   add_index "project_labels", ["project_id"], name: "index_project_labels_on_project_id", using: :btree
 
   create_table "projects", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",          limit: 255
     t.text     "description"
-    t.string   "github_url"
-    t.string   "main_language"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "github_url",    limit: 255
+    t.string   "main_language", limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.integer  "user_id"
     t.boolean  "inactive"
   end
 
   create_table "pull_request_archives", force: :cascade do |t|
-    t.string   "title"
-    t.string   "issue_url"
+    t.string   "title",          limit: 255
+    t.string   "issue_url",      limit: 255
     t.text     "body"
-    t.string   "state"
+    t.string   "state",          limit: 255
     t.boolean  "merged"
     t.datetime "created_at"
-    t.string   "repo_name"
+    t.string   "repo_name",      limit: 255
     t.integer  "user_id"
-    t.string   "language"
-    t.integer  "comments_count", default: 0
+    t.string   "language",       limit: 255
+    t.integer  "comments_count",             default: 0
   end
 
   create_table "pull_requests", force: :cascade do |t|
-    t.string   "title"
-    t.string   "issue_url"
+    t.string   "title",          limit: 255
+    t.string   "issue_url",      limit: 255
     t.text     "body"
-    t.string   "state"
+    t.string   "state",          limit: 255
     t.boolean  "merged"
     t.datetime "created_at"
-    t.string   "repo_name"
+    t.string   "repo_name",      limit: 255
     t.integer  "user_id"
-    t.integer  "comments_count", default: 0
-    t.string   "language"
+    t.integer  "comments_count",             default: 0
+    t.string   "language",       limit: 255
   end
 
   add_index "pull_requests", ["user_id"], name: "index_pull_requests_on_user_id", using: :btree
 
   create_table "skills", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "language"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "language",   limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   add_index "skills", ["user_id"], name: "index_skills_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "uid",                             null: false
-    t.string   "provider",                        null: false
-    t.string   "nickname",                        null: false
-    t.string   "email"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.string   "gravatar_id"
-    t.string   "token"
-    t.string   "email_frequency"
-    t.integer  "pull_requests_count", default: 0
+    t.string   "uid",                 limit: 255,             null: false
+    t.string   "provider",            limit: 255,             null: false
+    t.string   "nickname",            limit: 255,             null: false
+    t.string   "email",               limit: 255
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
+    t.string   "gravatar_id",         limit: 255
+    t.string   "token",               limit: 255
+    t.string   "email_frequency",     limit: 255
+    t.integer  "pull_requests_count",             default: 0
     t.datetime "last_sent_at"
-    t.string   "twitter_token"
-    t.string   "twitter_secret"
-    t.string   "twitter_nickname"
-    t.string   "confirmation_token"
+    t.string   "twitter_token",       limit: 255
+    t.string   "twitter_secret",      limit: 255
+    t.string   "twitter_nickname",    limit: 255
+    t.string   "confirmation_token",  limit: 255
     t.datetime "confirmed_at"
-    t.string   "coderwall_user_name"
+    t.string   "coderwall_user_name", limit: 255
     t.string   "name"
     t.string   "blog"
     t.string   "location"

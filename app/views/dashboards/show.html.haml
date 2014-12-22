@@ -6,10 +6,6 @@
 .row
   .col-md-8
     .user-pull-requests
-      - if gift_form
-        =t("dashboard.give_a_gift")
-        = render :partial => 'gifts/mini_form', :locals => { :gift_form => gift_form }
-        %hr
       .pull-right
         = link_to preferences_path, class: "btn btn-default btn-sm" do
           %span.octicon.octicon-gear

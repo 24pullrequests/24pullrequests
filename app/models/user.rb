@@ -36,7 +36,8 @@ class User < ActiveRecord::Base
   def assign_from_auth_hash(hash)
     # do not update the email address in case the user has updated their
     # email prefs and used a new email
-    update_attributes(AuthHash.new(hash).user_info.except(:email))
+    ignored_fields = %i(email name blog location)
+    update_attributes(AuthHash.new(hash).user_info.except(*ignored_fields))
   end
 
   def self.find_by_auth_hash(hash)
@@ -147,7 +148,7 @@ class User < ActiveRecord::Base
     Gift.giftable_dates - gifts.pluck(:date)
   end
 
-  def gift_unspent_pull_requests
+  def gift_unspent_pull_requests!
     if ungifted_dates.any?
       pull_requests = unspent_pull_requests.slice(0, ungifted_dates.count)
       pull_requests.each do |pull_request|
