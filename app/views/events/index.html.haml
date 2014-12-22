@@ -18,30 +18,11 @@
         - @upcoming_events.each do |event|
           = link_to "", event, class: "pin", data: { latitude: event.latitude, longitude: event.longitude }
     .col-sm-12.col-md-6
-      - @upcoming_events.each do |event|
-        .event-item
-          %h2
-            = link_to event.name, event
-          %small
-            %span.octicon.octicon-location
-            = event.location
-            %br
-            %span.octicon.octicon-clock
-            = event.formatted_date
+      = render @upcoming_events
 
 - unless @past_events.empty?
   %hr
   %h4 Past 24 Pull Requests Events
   .row
     .col-md-12
-      - @past_events.each do |event|
-        .event-item
-          %h2
-            = link_to event.name, event
-          %small
-            %span.octicon.octicon-location
-            = event.location
-            %br
-            %span.octicon.octicon-clock
-            = event.formatted_date
-
+      = render @past_events
