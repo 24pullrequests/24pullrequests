@@ -147,7 +147,7 @@ class User < ActiveRecord::Base
     Gift.giftable_dates - gifts.pluck(:date)
   end
 
-  def gift_unspent_pull_requests
+  def gift_unspent_pull_requests!
     if ungifted_dates.any?
       pull_requests = unspent_pull_requests.slice(0, ungifted_dates.count)
       pull_requests.each do |pull_request|
