@@ -33,4 +33,11 @@ $(document).ready(function() {
     $('form#filters').submit();
   });
 
+  if($('.more').size() > 0){
+    $(window).scroll(function() {
+      if($(window).scrollTop() + $(window).height() == $(document).height()) {
+        $('.more').click();
+      }
+    });
+  }
 });
