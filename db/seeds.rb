@@ -27,7 +27,7 @@ if Rails.env.development?
   USERS = 50
   PULL_REQUESTS = (3..20)
   PROJECTS = 50
-  
+
   EVENTS = ["PullRequest-a-thon", "24 Pull Requests Hack event", "Open Source Hackday", "Christmas Bugmash"]
 
 
@@ -57,8 +57,8 @@ if Rails.env.development?
   EVENTS.each do |event_name|
     december_first = Time.parse("1/12/#{CURRENT_YEAR}")
 
-    Event.create name: event_name, 
-                 location: "#{Faker::Address.city}, #{Faker::Address.country}", 
+    Event.create name: event_name,
+                 location: "#{Faker::Address.city}, #{Faker::Address.country}",
                  url: Faker::Internet.url,
                  start_time:  Faker::Time.between(december_first, december_first + 23.days, :day),
                  latitude: Faker::Address.latitude,
