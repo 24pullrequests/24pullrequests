@@ -143,6 +143,19 @@ class User < ActiveRecord::Base
     Gift.find(id, date)
   end
 
+  def ungifted_dates
+    Gift.giftable_dates - gifts.pluck(:date)
+  end
+
+  def gift_unspent_pull_requests
+    if ungifted_dates.any?
+      pull_requests = unspent_pull_requests.slice(0, ungifted_dates.count)
+      pull_requests.each do |pull_request|
+        new_gift(pull_request: pull_request).save
+      end
+    end
+  end
+
   def send_regular_emails?
     %w(daily weekly).include?(email_frequency)
   end

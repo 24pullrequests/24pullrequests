@@ -13,18 +13,14 @@ class GiftFactory
 
   def create_from_attrs(attrs = {})
     gift = @factory.call(attrs)
-    gift.date ||= closest_free_gift_date
+    gift.date = earliest_free_gift_date
     gift.user = @user
     gift
   end
 
   private
 
-  def closest_free_gift_date
-    previous_gift.present? ? previous_gift.date + 1.day : PullRequest::EARLIEST_PULL_DATE
-  end
-
-  def previous_gift
-    @previous_gift ||= @user.gifts.last
+  def earliest_free_gift_date
+    @user.ungifted_dates.first || PullRequest::EARLIEST_PULL_DATE
   end
 end
