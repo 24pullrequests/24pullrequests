@@ -272,8 +272,6 @@ GEM
       slop (~> 3.4)
     pullreview-coverage (0.0.2)
       simplecov (>= 0.7.1, < 1.0.0)
-    quiet_assets (1.0.3)
-      railties (>= 3.1, < 5.0)
     rabl (0.11.5)
       activesupport (>= 2.3.14)
     rack (1.6.0)
@@ -304,10 +302,6 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.1)
       loofah (~> 2.0)
-    rails_12factor (0.0.3)
-      rails_serve_static_assets
-      rails_stdout_logging
-    rails_serve_static_assets (0.0.2)
     rails_stdout_logging (0.0.3)
     railties (4.2.0)
       actionpack (= 4.2.0)
@@ -467,7 +461,6 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  binding_of_caller
   bootstrap-sass (~> 3.3.1)
   brakeman
   bugsnag
@@ -502,12 +495,11 @@ DEPENDENCIES
   pg
   poltergeist
   pullreview-coverage
-  quiet_assets
   rabl
   rack-canonical-host
   rack-google-analytics
   rails (= 4.2.0)
-  rails_12factor
+  rails_stdout_logging
   rb-fsevent
   responders (~> 2.0)
   rspec-activemodel-mocks

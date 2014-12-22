@@ -30,9 +30,7 @@ group :development do
   gem 'i18n-tasks'
   gem 'spring'
   gem 'spring-commands-rspec'
-  gem 'binding_of_caller'
   gem 'thin'
-  gem 'quiet_assets'
   gem 'rubocop', '~> 0.27', require: false
   gem 'web-console', '~> 2.0'
 end
@@ -77,7 +75,7 @@ group :production do
   gem 'foreman'
   gem 'memcachier'
   gem 'dalli'
-  gem 'rails_12factor'
+  gem 'rails_stdout_logging'
   gem 'newrelic_rpm'
   gem 'bugsnag'
   gem 'rack-google-analytics'
