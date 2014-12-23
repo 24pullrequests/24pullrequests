@@ -21,6 +21,7 @@ class User < ActiveRecord::Base
 
   before_save :check_email_changed
   after_create :download_pull_requests, :estimate_skills, :download_user_organisations
+  after_update :check_24_pull_requests
 
   validates :email, presence: true, if: :send_regular_emails?
   validates :email, format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, allow_blank: true, on: :update }
@@ -192,6 +193,12 @@ class User < ActiveRecord::Base
   end
 
   private
+
+  def check_24_pull_requests
+    return unless pull_requests_count >= 24 && !thank_you_email_sent
+    ThankYouMailer.thank_you(self).deliver_now
+    update_column(:thank_you_email_sent, true)
+  end
 
   def repo_languages
     @repo_languages ||= github_client.user_repository_languages
