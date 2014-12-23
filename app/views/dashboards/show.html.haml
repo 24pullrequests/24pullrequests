@@ -11,7 +11,7 @@
           %span.octicon.octicon-gear
           = t("navigation.preferences")
         = link_to pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn btn-info btn-sm', :rel => 'tooltip', :title => t('pull_request.download.tooltip') do
-          = image_tag('spinner.gif', :id => 'spinner')
+          = image_tag('spinner.gif', :id => 'spinner', :alt => ' ')
           = t('dashboard.synchronize')
 
       - if pull_requests.any?

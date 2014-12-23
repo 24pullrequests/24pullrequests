@@ -106,14 +106,14 @@
           %li
             .locale.dropup
               %button.btn.btn-default.dropdown-toggle{ type: "button", id: "locale", "data-toggle" => "dropdown" }
-                =image_tag "flags/#{I18n.locale}.png", class: "flag"
+                =image_tag "flags/#{I18n.locale}.png", class: "flag", alt: " "
                 =t("locale.#{I18n.locale}")
                 %span.caret
               %ul.dropdown-menu.pull-right{ role:"menu", "aria-labelledby" => "dropdownMenu1"}
                 - available_locales.each do |locale|
                   %li{ role: "presentation"}
                     =link_to locale_path(locale), role: "menuitem" do
-                      =image_tag "flags/#{locale}.png", class: "flag"
+                      =image_tag "flags/#{locale}.png", class: "flag", alt: " "
                       =t("locale.#{locale}")
                 %li.divider
                 %li{ role: "presentation"}
