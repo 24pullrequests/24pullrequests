@@ -78,7 +78,7 @@
     %header
       .container
         .logo
-          = link_to image_tag('logo.png'), root_path
+          = link_to image_tag('logo.png', alt: "24 Pull Requests"), root_path
 
         - if params[:action] == 'homepage'
           .tagline.hidden-phone
