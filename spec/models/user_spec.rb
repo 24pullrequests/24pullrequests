@@ -312,7 +312,7 @@ describe User, type: :model do
     let!(:haskell_users) { 2.times.map { create(:skill, language: 'Haskell').user } }
 
     it 'by_language' do
-      expect(User.by_language('haskell')).to eq(haskell_users)
+      expect(User.by_language('haskell')).to match_array(haskell_users)
       expect(User.by_language('ruby')).to eq([])
     end
   end
