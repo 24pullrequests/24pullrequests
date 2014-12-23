@@ -29,7 +29,6 @@ class Downloader
         )
       else
         pull_request = user.pull_requests.create_from_github(pr)
-        auto_gift_today(pull_request) unless gifted_any_today?
       end
     end
   end
