@@ -47,11 +47,17 @@
           %a.active{"data-toggle" =>"tab", href: "#gifts"}Gifts
         %li
           %a{"data-toggle" =>"tab", href: "#pull_requests"}Pull Requests
+        - for year in ArchivedPullRequest::PAST_YEARS
+          %li
+            %a{"data-toggle" =>"tab", href: "##{year}"}= year
       .tab-content
         #gifts.tab-pane
           = render :partial => 'calendar', :object => @calendar
         #pull_requests.tab-pane
           = render partial: 'users/pull_request', collection: @user.pull_requests.year(current_year).latest(nil)
+        - for year in ArchivedPullRequest::PAST_YEARS
+          .tab-pane{id: year}
+            = render partial: 'users/pull_request', collection: @user.archived_pull_requests.year(year)
     - elsif !PullRequest.in_date_range?
       .alert.alert-info
         24 Pull Requests runs from 1st-24th December, come back then to see

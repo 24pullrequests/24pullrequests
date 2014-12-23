@@ -1,6 +1,5 @@
-class ArchivedPullRequest  < ActiveRecord::Base
-  PAST_YEARS = [2013, 2012]
-
+class ArchivedPullRequest < ActiveRecord::Base
   belongs_to :user
+
   scope :year, -> (year) { where('EXTRACT(year FROM "created_at") = ?', year) }
- end
+end
