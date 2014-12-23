@@ -124,7 +124,7 @@ en:
     new:
       form:
         description: Description
-        description_placeholder: Give a little desciption of the group and event
+        description_placeholder: Give a little description of the group and event
         location: Location
         location_placeholder: e.g. Bristol, UK
         map: Location marker
