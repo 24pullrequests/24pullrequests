@@ -1,10 +1,10 @@
 # 24 Pull Requests
 
 [![Build Status](https://travis-ci.org/24pullrequests/24pullrequests.svg?branch=master)](https://travis-ci.org/24pullrequests/24pullrequests)
-[![Dependency Status](https://gemnasium.com/24pullrequests/24pullrequests.svg)](https://gemnasium.com/24pullrequests/24pullrequests)
-[![Code Climate](https://codeclimate.com/github/24pullrequests/24pullrequests/badges/gpa.svg)](https://codeclimate.com/github/24pullrequests/24pullrequests)
-[![Test Coverage](https://codeclimate.com/github/24pullrequests/24pullrequests/badges/coverage.svg)](https://codeclimate.com/github/24pullrequests/24pullrequests)
-[![Gitter chat](http://img.shields.io/badge/gitter-24pullrequests-brightgreen.svg)](https://gitter.im/24pullrequests/24pullrequests)
+[![Dependency Status](https://img.shields.io/gemnasium/24pullrequests/24pullrequests.svg?style=flat)](https://gemnasium.com/24pullrequests/24pullrequests)
+[![Gitter chat](http://img.shields.io/badge/gitter-24pullrequests-brightgreen.svg?style=flat)](https://gitter.im/24pullrequests/24pullrequests)
+[![Code Climate](https://img.shields.io/codeclimate/github/24pullrequests/24pullrequests.svg?style=flat)](https://codeclimate.com/github/24pullrequests/24pullrequests)
+[![Test Coverage](https://img.shields.io/codeclimate/coverage/github/24pullrequests/24pullrequests.svg?style=flat)](https://codeclimate.com/github/24pullrequests/24pullrequests)
 [![PullReview stats](https://www.pullreview.com/github/24pullrequests/24pullrequests/badges/master.svg?)](https://www.pullreview.com/github/24pullrequests/24pullrequests/reviews/master)
 
 > **Giving back little gifts of code**
