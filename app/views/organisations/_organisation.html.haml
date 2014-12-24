@@ -1,6 +1,6 @@
 %li.avatar-cell
   = link_to organisation_path(organisation.login), class: "avatar-link" do
-    = image_tag(organisation.avatar_url(160), alt: organisation.login, class: "avatar-img")
+    = image_tag(organisation.avatar_url(160), alt: organisation.login, class: "avatar-img", alt: " ")
     .username @#{organisation.login}
     %span.pr-badge
       %span.octicon.octicon-git-pull-request
