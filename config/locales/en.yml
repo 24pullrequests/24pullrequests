@@ -213,14 +213,14 @@ en:
     title: 24 Pull Requests
   how_to_contribute: How to contribute?
   information:
+    codemontage: Give forward by contributing to open source, social good projects
+      that benefit organizations making a difference in the world.
     codetriage: Give back to open source, one issue at a time, with CodeTriage. You’ll
       get one issue from your favorite repo per day to help you dig deeper, learn
       more, and stay involved with the code you rely on.
-    contribhub:
-      description: ContribHub is a GitHub-based application that makes it easier to
-        find projects to contribute to and grow a community around it.
-      tagline: Do you know you have a neighbor that needs help with a project? With
-        ContribHub you will!
+    docsdoctor: Sign up to receive documented method or class in your inbox every
+      day from your favorite GitHub repos. If you're really pro, recieve un-documented
+      methods or classes and super charge your commit history.
     get_ready: Get ready for 24 Pull Requests %{year} when we do it all again!
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it
       all again!

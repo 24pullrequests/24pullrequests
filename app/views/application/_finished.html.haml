@@ -1,5 +1,7 @@
 .alert.alert-info
-  %h2 24 Pull Requests is finished for this year
+  %h2
+    24 Pull Requests is finished for
+    = CURRENT_YEAR
   %p
     In
     = CURRENT_YEAR
@@ -15,15 +17,21 @@
   %hr
   %p=t("information.help_open_source")
 
+  %h4= link_to 'CodeMontage', 'http://codemontage.com/'
+
+  %p=t("information.codemontage")
+
   %h4= link_to 'CodeTriage', 'http://www.codetriage.com/'
 
   %p=t("information.codetriage")
 
-  %h4= link_to 'CodeMontage', 'http://codemontage.com/'
+  %h4= link_to 'DocsDoctor', 'http://www.docsdoctor.org/'
 
-  %p Give forward by contributing to open source, social good projects that benefit organizations making a difference in the world.
+  %p=t("information.docsdoctor")
 
-  %h4= link_to 'ContribHub', 'http://contribhub.com/'
+  %hr
 
-  %p=t("information.contribhub.tagline")
-  %p=t("information.contribhub.description")
+  See you on
+  = succeed(',') do
+    %strong December 1st, #{CURRENT_YEAR+1}
+  Happy Hacking!

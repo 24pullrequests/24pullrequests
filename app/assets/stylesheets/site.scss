@@ -32,7 +32,7 @@ h1, h2, h3, h4, .page-title {
   padding: 30px;
 
   &.intro {
-    padding: 60px 30px;
+    padding: 20px 30px 60px;
   }
 }
 
@@ -353,7 +353,7 @@ footer {
     position: relative;
     margin: 0;
     line-height: 38px;
-    
+
     @media (max-width: 767px) {
       float: none !important;
       text-align: center;
