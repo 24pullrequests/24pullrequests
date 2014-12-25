@@ -1,5 +1,6 @@
 require 'rails_helper'
 require 'ostruct'
+require 'pry'
 
 describe User, type: :model do
   let(:user) { create :user }
@@ -271,6 +272,46 @@ describe User, type: :model do
       end
 
       it { is_expected.to eq 1 }
+    end
+  end
+
+  describe '.repo_count' do
+    subject {
+      User.with_repo_count.find(user.id).repo_count
+    }
+
+    before do
+      user.reload
+    end
+
+    context 'by default' do
+      it { is_expected.to eq 0 }
+    end
+
+    context 'when a pull request is added' do
+      before do
+        create :pull_request, user: user, repo_name: 'foo/bar1'
+      end
+
+      it { is_expected.to eq 1 }
+    end
+
+    context 'when two pull requests on the same project are added' do
+      before do
+        create :pull_request, user: user, repo_name: 'foo/bar'
+        create :pull_request, user: user, repo_name: 'foo/bar'
+      end
+
+      it { is_expected.to eq 1 }
+    end
+
+    context 'when two pull requests on different projects are added' do
+      before do
+        create :pull_request, user: user, repo_name: 'foo/bar'
+        create :pull_request, user: user, repo_name: 'foo/baz'
+      end
+
+      it { is_expected.to eq 2 }
     end
   end
 

@@ -451,6 +451,7 @@ DEPENDENCIES
   omniauth-twitter
   pg
   poltergeist
+  pry
   pullreview-coverage
   rabl
   rack-canonical-host
