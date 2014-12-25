@@ -3,14 +3,12 @@
     24 Pull Requests is finished for
     = CURRENT_YEAR
   %p
-    In
-    = CURRENT_YEAR
-    , over 24 days,
-    %b= contributors_in(CURRENT_YEAR)
+    In #{CURRENT_YEAR}, over 24 days,
+    %b= number_with_delimiter contributors_in(CURRENT_YEAR)
     developers submitted
-    %b= pull_requests_in(CURRENT_YEAR)
+    %b= number_with_delimiter pull_requests_in(CURRENT_YEAR)
     pull requests to
-    %b= projects_in(CURRENT_YEAR)
+    %b= number_with_delimiter projects_in(CURRENT_YEAR)
     different open source projects.
 
   %p=t("information.happy_holidays_see_you")
