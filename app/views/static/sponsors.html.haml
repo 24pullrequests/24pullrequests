@@ -28,3 +28,6 @@
   %p= t("about.sponsors.pullreview.contributor_html")
 
   %p= t("about.sponsors.pullreview.gifts")
+
+  - if @coupon
+    %p= "#{t("about.sponsors.pullreview.coupon")} #{@coupon}."

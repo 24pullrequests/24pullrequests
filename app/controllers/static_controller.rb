@@ -13,6 +13,7 @@ class StaticController < ApplicationController
   end
 
   def sponsors
+    @coupon = current_user.award_pullreview_coupon if current_user
   end
 
   def humans

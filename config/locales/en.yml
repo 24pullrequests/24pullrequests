@@ -19,8 +19,9 @@ en:
         contributor_html: If you want to get help from PullReview to contribute to
           open source Ruby projects on 24 Pull Requests, <a href="http://blog.8thcolor.com/en/2014/12/giving-back-with-24pullrequests/">look
           at their explanations.</a>
-        gifts: If you’ve sent 24 pull requests in December, you’ll get a gift from
-          them. More details soon.
+        coupon: "Well done, here's your pull review coupon:"
+        gifts: "If you’ve sent 24 pull requests in December, you’ll get a gift:
+          50% during 6 months from them."
         intro_html: <a href="https://pullreview.com">PullReview</a> provides for free
           automated code review for Ruby, Rails, and Javascript open source projects.
         maintainer_html: If you are a maintainer, have submitted your project to 24
