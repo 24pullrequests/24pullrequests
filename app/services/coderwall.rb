@@ -14,6 +14,7 @@ class Coderwall
 
     connection.post do |req|
       req.url '/award'
+      req.headers['Accept'] = 'application/json'
       req.headers['Content-Type'] = 'application/json'
       req.body = payload.to_json
     end
