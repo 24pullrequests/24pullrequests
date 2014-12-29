@@ -28,7 +28,7 @@ describe Coderwall do
                   date:    '12/25/2014',
                   api_key: 'the-key' }
 
-      expect(coderwall.connection).to receive(:post).with('/award', payload.to_json, 'Content-Type' => 'application/json', :accept => 'application/json')
+      expect(coderwall.connection).to receive(:get).with('/award', payload)
 
       coderwall.award_badge('akira', Coderwall::PARTICIPANT)
     end
