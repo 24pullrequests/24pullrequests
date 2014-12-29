@@ -12,7 +12,7 @@ class Coderwall
                 date:    "12/25/#{CURRENT_YEAR}",
                 api_key: api_key }
 
-    conn.get '/award', payload
+    connection.get '/award', payload
   end
 
   def connection
