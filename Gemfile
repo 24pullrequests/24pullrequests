@@ -65,7 +65,7 @@ group :development, :test, :cucumber do
 end
 
 group :production do
-  gem 'unicorn'
+  gem 'puma'
   gem 'foreman'
   gem 'memcachier'
   gem 'dalli'
