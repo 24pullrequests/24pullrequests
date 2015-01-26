@@ -233,7 +233,7 @@ GEM
     powerpack (0.0.9)
     pullreview-coverage (0.0.2)
       simplecov (>= 0.7.1, < 1.0.0)
-    rabl (0.11.5)
+    rabl (0.11.6)
       activesupport (>= 2.3.14)
     rack (1.6.0)
     rack-canonical-host (0.1.0)
