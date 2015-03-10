@@ -1,5 +1,5 @@
 window.emojify = ->
   $(".js-emoji").each ->
-    $(@).html(emojione.toImage($(@).text()))
+    # $(@).html(emojione.toImage($(@).text()))
 
 $ -> emojify()
