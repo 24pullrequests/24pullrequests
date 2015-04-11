@@ -233,7 +233,7 @@ GEM
     powerpack (0.1.0)
     pullreview-coverage (0.0.3)
       simplecov (>= 0.7.1, < 1.0.0)
-    puma (2.11.1)
+    puma (2.11.2)
       rack (>= 1.1, < 2.0)
     rabl (0.11.6)
       activesupport (>= 2.3.14)
