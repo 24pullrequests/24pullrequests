@@ -25,6 +25,7 @@ gem 'octicons-rails'
 gem 'rack-canonical-host'
 gem 'draper'
 gem 'responders', '~> 2.0'
+gem 'sprockets', '~> 2.12'
 
 group :development do
   gem 'i18n-tasks'
