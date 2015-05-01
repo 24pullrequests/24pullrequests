@@ -5,7 +5,6 @@
 [![Gitter chat](http://img.shields.io/badge/gitter-24pullrequests-brightgreen.svg?style=flat)](https://gitter.im/24pullrequests/24pullrequests)
 [![Code Climate](https://img.shields.io/codeclimate/github/24pullrequests/24pullrequests.svg?style=flat)](https://codeclimate.com/github/24pullrequests/24pullrequests)
 [![Test Coverage](https://img.shields.io/codeclimate/coverage/github/24pullrequests/24pullrequests.svg?style=flat)](https://codeclimate.com/github/24pullrequests/24pullrequests)
-[![PullReview stats](https://www.pullreview.com/github/24pullrequests/24pullrequests/badges/master.svg?)](https://www.pullreview.com/github/24pullrequests/24pullrequests/reviews/master)
 
 > **Giving back little gifts of code**
 
