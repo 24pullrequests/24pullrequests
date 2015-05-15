@@ -15,7 +15,7 @@ describe SessionsController, type: :controller do
       get :destroy
     end
 
-    it { is_expected.to set_session(:user_id).to(nil) }
+    it { is_expected.to_not set_session[:user_id] }
     it { is_expected.to redirect_to(root_path) }
   end
 
@@ -24,7 +24,7 @@ describe SessionsController, type: :controller do
       get :failure, message: 'foobar'
     end
 
-    it { is_expected.to set_the_flash[:notice].to('foobar') }
+    it { is_expected.to set_flash[:notice].to('foobar') }
     it { is_expected.to redirect_to(root_path) }
   end
 end

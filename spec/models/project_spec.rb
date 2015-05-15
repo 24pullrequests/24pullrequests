@@ -6,7 +6,7 @@ describe Project, type: :model do
   it { is_expected.to validate_presence_of(:name) }
   it { is_expected.to validate_presence_of(:main_language) }
   it { is_expected.to validate_uniqueness_of(:github_url).with_message('Project has already been suggested.') }
-  it { is_expected.to ensure_length_of(:description).is_at_least(20).is_at_most(200) }
+  it { is_expected.to validate_length_of(:description).is_at_least(20).is_at_most(200) }
 
   context 'validations' do
     let(:project) { FactoryGirl.build(:project) }
