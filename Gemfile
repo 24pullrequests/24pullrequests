@@ -24,16 +24,16 @@ gem 'uglifier'
 gem 'octicons-rails'
 gem 'rack-canonical-host'
 gem 'draper'
-gem 'responders', '~> 2.0'
-gem 'sprockets', '~> 2.12'
+gem 'responders'
+gem 'sprockets'
 
 group :development do
   gem 'i18n-tasks'
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'thin'
-  gem 'rubocop', '~> 0.27', require: false
-  gem 'web-console', '~> 2.0'
+  gem 'rubocop', require: false
+  gem 'web-console'
 end
 
 group :development, :test, :cucumber do
