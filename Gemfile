@@ -37,7 +37,7 @@ group :development do
 end
 
 group :development, :test, :cucumber do
-  gem 'rspec-rails', require: false
+  gem 'rspec-rails'
   gem 'coveralls', require: false
   gem 'codeclimate-test-reporter', require: nil
   gem 'pullreview-coverage', require: false
