@@ -52,7 +52,7 @@ describe Event, type: :model do
 
     it 'should be formatted correctly' do
       event.start_time = Time.parse('1st December 2015 15:30 GMT')
-      expect(event.formatted_date).to eq 'Monday 01 December 2015 at 03:30PM'
+      expect(event.formatted_date).to eq 'Tuesday 01 December 2015 at 03:30PM'
     end
   end
 

@@ -5,7 +5,7 @@ class CreateOrganisations < ActiveRecord::Migration
       t.string :avatar_url
       t.integer :github_id
 
-      t.timestamps
+      t.timestamps null: false
     end
 
     create_table :organisations_users do |t|

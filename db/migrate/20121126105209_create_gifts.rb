@@ -5,7 +5,7 @@ class CreateGifts < ActiveRecord::Migration
       t.integer :pull_request_id, null: false
       t.date :date,            null: false
 
-      t.timestamps
+      t.timestamps null: false
     end
 
     add_index :gifts, [:user_id, :pull_request_id], unique: true

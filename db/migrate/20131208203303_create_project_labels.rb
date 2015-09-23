@@ -4,7 +4,7 @@ class CreateProjectLabels < ActiveRecord::Migration
       t.references :project, index: true
       t.references :label, index: true
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
