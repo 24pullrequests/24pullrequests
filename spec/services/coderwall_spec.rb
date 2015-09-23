@@ -1,4 +1,6 @@
 require 'rails_helper'
+require 'webmock/rspec'
+WebMock.disable_net_connect!(allow_localhost: true)
 
 describe Coderwall do
   subject(:coderwall) { Coderwall.new }
@@ -28,7 +30,13 @@ describe Coderwall do
                   date:    '12/25/2015',
                   api_key: 'the-key' }
 
-      expect(coderwall.connection).to receive(:post).with('/award', payload)
+#FIXME: expect(coderwall.connection).to receive(:post).with('/award', payload)
+
+      stub_request(:post, "https://coderwall.com/award").
+         with(:body => payload, :headers => {'Accept'=>'application/json',
+         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+         'Content-Type'=>'application/json', 'User-Agent'=>'Faraday v0.9.1'}).
+         to_return(:status => 200, :body => "", :headers => {})
 
       coderwall.award_badge('akira', Coderwall::PARTICIPANT)
     end
