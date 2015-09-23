@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/rtomayko/tilt.git
+  revision: 1e388dbaab5bf39ccaada5a495c97c10ab91358c
+  specs:
+    tilt (2.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -376,7 +382,6 @@ GEM
     thor (0.19.1)
     thread (0.2.2)
     thread_safe (0.3.5)
-    tilt (2.0.1)
     timecop (0.8.0)
     tins (1.6.0)
     twitter (5.15.0)
@@ -471,6 +476,7 @@ DEPENDENCIES
   spring-commands-rspec
   sprockets
   thin
+  tilt!
   timecop
   twitter
   uglifier

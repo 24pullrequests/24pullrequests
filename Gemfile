@@ -3,6 +3,8 @@ ruby '2.2.3'
 
 gem 'rails', '4.2.4'
 
+gem 'tilt', git: 'git://github.com/rtomayko/tilt.git'
+
 gem 'jquery-rails'
 gem 'pg'
 gem 'omniauth'
