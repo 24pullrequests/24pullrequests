@@ -1,4 +1,5 @@
 require File.expand_path('../../../app/models/calendar', __FILE__)
+require 'date'
 
 describe Calendar, type: :model do
   it 'returns an enumerator for the giftable_dates' do
@@ -30,6 +31,6 @@ describe Calendar, type: :model do
     giftable_dates = [Date.new(2015, 12, 1)]
 
     calendar = Calendar.new(giftable_dates, [])
-#FIXME:    expect(calendar.start_padding).to eq(0)
+    expect(calendar.start_padding).to eq(1)
   end
 end
