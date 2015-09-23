@@ -28,9 +28,9 @@ describe Coderwall do
                   date:    '12/25/2015',
                   api_key: 'the-key' }
 
-#FIXME:      expect(coderwall.connection).to receive(:post).with('/award', payload)
+      expect(coderwall.connection).to receive(:post).with('/award', payload)
 
-#FIXME:      coderwall.award_badge('akira', Coderwall::PARTICIPANT)
+      coderwall.award_badge('akira', Coderwall::PARTICIPANT)
     end
 
   end
