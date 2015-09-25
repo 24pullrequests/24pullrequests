@@ -209,7 +209,7 @@ GEM
       rack (~> 1.2)
     octicons-rails (2.1.1)
       railties (>= 3.2, < 5.0)
-    octokit (4.1.0)
+    octokit (4.1.1)
       sawyer (~> 0.6.0, >= 0.5.3)
     omniauth (1.2.2)
       hashie (>= 1.2, < 4)
