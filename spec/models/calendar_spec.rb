@@ -1,4 +1,5 @@
 require File.expand_path('../../../app/models/calendar', __FILE__)
+require 'date'
 
 describe Calendar, type: :model do
   it 'returns an enumerator for the giftable_dates' do
