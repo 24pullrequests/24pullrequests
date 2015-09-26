@@ -24,13 +24,13 @@ describe Coderwall do
 
   describe '#award_badge' do
     it 'awards a participant badge' do
-      stub_const('CURRENT_YEAR', '2015')
+      stub_const('CURRENT_YEAR', '2014')
       payload = { github:  'akira',
-                  badge:   'TwentyFourPullRequestsParticipant2015',
-                  date:    '12/25/2015',
+                  badge:   'TwentyFourPullRequestsParticipant2014',
+                  date:    '12/25/2014',
                   api_key: 'the-key' }
 
-#FIXME: expect(coderwall.connection).to receive(:post).with('/award', payload)
+      expect(coderwall.connection).to receive(:post).with('/award', payload)
 
       stub_request(:post, "https://coderwall.com/award").
          with(:body => payload, :headers => {'Accept'=>'application/json',
