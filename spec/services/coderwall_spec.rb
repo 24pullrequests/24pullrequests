@@ -30,7 +30,9 @@ describe Coderwall do
                   date:    '12/25/2014',
                   api_key: 'the-key' }
 
-      expect(coderwall.connection).to receive(:post).with('/award', payload)
+      skip "Skipped; Documented in issue #928" do
+        expect(coderwall.connection).to receive(:post).with('/award', payload)
+      end
 
       stub_request(:post, "https://coderwall.com/award").
          with(:body => payload, :headers => {'Accept'=>'application/json',
