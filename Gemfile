@@ -52,7 +52,7 @@ group :development, :test, :cucumber do
   gem 'launchy'
 
   gem 'database_cleaner'
-  gem 'shoulda-matchers', '2.8.0' # 3.0.0 BREAK TEST RUN
+  gem 'shoulda-matchers'
   gem 'webmock', require: false
   gem 'timecop'
   gem 'simplecov'

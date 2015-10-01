@@ -338,8 +338,8 @@ GEM
       addressable (~> 2.3.5)
       faraday (~> 0.8, < 0.10)
     sexp_processor (4.6.0)
-    shoulda-matchers (2.8.0)
-      activesupport (>= 3.0.0)
+    shoulda-matchers (3.0.0)
+      activesupport (>= 4.0.0)
     simple_form (3.2.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -462,7 +462,7 @@ DEPENDENCIES
   rspec-rails
   rubocop
   sass-rails
-  shoulda-matchers (= 2.8.0)
+  shoulda-matchers
   simple_form
   simplecov
   sinon-chai-rails
