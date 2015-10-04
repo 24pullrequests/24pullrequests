@@ -462,7 +462,7 @@ DEPENDENCIES
   rspec-rails
   rubocop
   sass-rails
-  shoulda-matchers
+  shoulda-matchers (= 2.8.0)
   simple_form
   simplecov
   sinon-chai-rails
