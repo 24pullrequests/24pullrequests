@@ -109,4 +109,13 @@ RSpec.configure do |config|
 
   config.include FactoryGirl::Syntax::Methods
   config.include Capybara::DSL
+
+  # 10/1/2015: Needed for shoulda-matchers 3.0.
+  Shoulda::Matchers.configure do |config|
+    config.integrate do |with|
+      with.test_framework :rspec
+
+      with.library :rails
+    end
+  end
 end
