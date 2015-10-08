@@ -226,7 +226,7 @@ GEM
     omniauth-twitter (1.2.1)
       json (~> 1.3)
       omniauth-oauth (~> 1.1)
-    parser (2.2.2.6)
+    parser (2.2.3.0)
       ast (>= 1.1, < 3.0)
     pg (0.18.3)
     poltergeist (1.7.0)
