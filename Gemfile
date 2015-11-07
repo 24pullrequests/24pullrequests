@@ -28,7 +28,6 @@ gem 'responders'
 gem 'sprockets'
 
 group :development do
-  gem 'i18n-tasks'
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'thin'
@@ -37,6 +36,7 @@ group :development do
 end
 
 group :development, :test, :cucumber do
+  gem 'i18n-tasks'
   gem 'rspec-rails'
   gem 'coveralls', require: false
   gem 'codeclimate-test-reporter', require: nil
