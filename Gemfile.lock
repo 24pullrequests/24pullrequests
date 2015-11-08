@@ -242,7 +242,7 @@ GEM
     pullreview-coverage (0.0.5)
       certifi
       simplecov (>= 0.7.1, < 1.0.0)
-    puma (2.15.2)
+    puma (2.15.3)
     rabl (0.11.6)
       activesupport (>= 2.3.14)
     rack (1.6.4)
