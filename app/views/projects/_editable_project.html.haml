@@ -2,9 +2,13 @@
   .title.clearfix
     %h4
       = project.name
-      - if project.inactive
+      - if project.inactive?
         %small= inactive?(project)
-      - unless project.inactive.eql?(true)
+        = link_to t("delete"), path_for_project(project, admin),
+                                 method: :delete,
+                                 data: { confirm: 'Are you sure you want to delete this project?' },
+                                 class: 'btn btn-danger pull-right'
+      - else
         = link_to t("deactive"), path_for_project(project, admin),
                                 method: :delete,
                                 data: { confirm: "Are you sure you want to deactive this project?" },

@@ -99,6 +99,7 @@ en:
       or submit a pull request now and find yours here!
     synchronize: Synchronize Pull Requests
   deactive: Deactive
+  delete: Delete
   delete_account:
     are_you_sure: We just wanted to make sure you really do wish to delete your account.
       This will remove your profile and all pull requests from the site, although

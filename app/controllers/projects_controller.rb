@@ -31,9 +31,14 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    @project.deactivate!
-
-    redirect_to :back, notice: "#{@project.name} has been deactivated."
+    if @project.inactive?
+      @project.destroy!
+      flash[:notice] = "#{@project.name} has been deleted."
+    else
+      @project.deactivate!
+      flash[:notice] = "#{@project.name} has been deactivated."
+    end
+    redirect_to :back
   end
 
   def update
