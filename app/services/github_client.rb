@@ -29,7 +29,7 @@ class GithubClient
   def high_rate_limit?(rate_limit = 4000)
     begin
       client.rate_limit.remaining > rate_limit
-    rescue Octokit::Unauthorized => e
+    rescue Octokit::Unauthorized, Faraday::ConnectionFailed
       true
     end
   end
@@ -42,7 +42,7 @@ class GithubClient
     Octokit.auto_paginate = true
     begin
       contributors = client.contributors(repository, options)
-    rescue Octokit::Unauthorized => e
+    rescue Octokit::Unauthorized, Faraday::ConnectionFailed
       contributors = []
     end
 
@@ -53,7 +53,7 @@ class GithubClient
   def organization_members(org, options = {})
     begin
       client.organization_members(org, options)
-    rescue Octokit::Unauthorized => e
+    rescue Octokit::Unauthorized, Faraday::ConnectionFailed
       []
     end
   end
