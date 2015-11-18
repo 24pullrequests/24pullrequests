@@ -37,8 +37,8 @@ describe 'Static pages', type: :request do
     end
 
     context "not in December" do
-      it "doesnt show the finished partial on the first day" do
-        Timecop.travel(Date.new(CURRENT_YEAR, 4, 3))
+      it "shows the finished partial" do
+        Timecop.travel(Date.new(CURRENT_YEAR, 11, 30))
         visit root_path
         is_expected.to have_content('24 Pull Requests is finished for')
       end
