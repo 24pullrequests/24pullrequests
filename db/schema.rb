@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141215161710) do
+ActiveRecord::Schema.define(version: 20151122220446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,8 +48,8 @@ ActiveRecord::Schema.define(version: 20141215161710) do
     t.integer  "user_id",         null: false
     t.integer  "pull_request_id", null: false
     t.date     "date",            null: false
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "gifts", ["user_id", "pull_request_id"], name: "index_gifts_on_user_id_and_pull_request_id", unique: true, using: :btree
@@ -91,8 +91,8 @@ ActiveRecord::Schema.define(version: 20141215161710) do
     t.text     "description"
     t.string   "github_url",    limit: 255
     t.string   "main_language", limit: 255
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "user_id"
     t.boolean  "inactive"
   end
@@ -119,8 +119,8 @@ ActiveRecord::Schema.define(version: 20141215161710) do
     t.datetime "created_at"
     t.string   "repo_name",      limit: 255
     t.integer  "user_id"
-    t.integer  "comments_count",             default: 0
     t.string   "language",       limit: 255
+    t.integer  "comments_count",             default: 0
   end
 
   add_index "pull_requests", ["user_id"], name: "index_pull_requests_on_user_id", using: :btree
@@ -128,23 +128,23 @@ ActiveRecord::Schema.define(version: 20141215161710) do
   create_table "skills", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "language",   limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "skills", ["user_id"], name: "index_skills_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "uid",                 limit: 255,             null: false
-    t.string   "provider",            limit: 255,             null: false
-    t.string   "nickname",            limit: 255,             null: false
+    t.string   "uid",                 limit: 255,                                     null: false
+    t.string   "provider",            limit: 255,                                     null: false
+    t.string   "nickname",            limit: 255,                                     null: false
     t.string   "email",               limit: 255
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "gravatar_id",         limit: 255
     t.string   "token",               limit: 255
     t.string   "email_frequency",     limit: 255
-    t.integer  "pull_requests_count",             default: 0
+    t.integer  "pull_requests_count",                                     default: 0
     t.datetime "last_sent_at"
     t.string   "twitter_token",       limit: 255
     t.string   "twitter_secret",      limit: 255
@@ -152,12 +152,14 @@ ActiveRecord::Schema.define(version: 20141215161710) do
     t.string   "confirmation_token",  limit: 255
     t.datetime "confirmed_at"
     t.string   "coderwall_user_name", limit: 255
-    t.string   "name"
-    t.string   "blog"
-    t.string   "location"
+    t.string   "name",                limit: 255
+    t.string   "blog",                limit: 255
+    t.string   "location",            limit: 255
+    t.decimal  "lat",                             precision: 8, scale: 6
+    t.decimal  "lng",                             precision: 9, scale: 6
   end
 
-  add_index "users", ["nickname"], name: "index_users_on_nickname", using: :btree
-  add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", using: :btree
+  add_index "users", ["nickname"], name: "index_users_on_nickname", unique: true, using: :btree
+  add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
 
 end

@@ -26,6 +26,9 @@ gem 'rack-canonical-host'
 gem 'draper'
 gem 'responders'
 gem 'sprockets'
+gem 'gmaps4rails'
+gem 'geocoder'
+gem 'lodash-rails'
 
 group :development do
   gem 'spring'

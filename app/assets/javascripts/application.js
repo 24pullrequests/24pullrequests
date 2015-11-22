@@ -18,5 +18,7 @@
 //= require jquery.timeago
 //= require jquery.datetimepicker
 //= require emojione
+//= require lodash
+//= require gmaps/google
 //= require_tree .
 //
