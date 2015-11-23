@@ -4,7 +4,9 @@
 
 <div id="map" style="width: 100%; height: 500px;"></div>
 
+<div class="hidden" id="maps-data"><%= raw @map_markers.to_json %></div>
+
 <%= javascript_include_tag "//maps.google.com/maps/api/js?v=3.18&sensor=false&client=&key=&libraries=geometry&language=&hl=&region=" %>
 <%= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js" %>
 
-<div class="hidden" id="maps-data"><%= raw @map_markers.to_json %></div>
+<%= javascript_include_tag "maps" %>

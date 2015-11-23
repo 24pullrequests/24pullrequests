@@ -1,5 +1,6 @@
-$(document).ready(function() {
-  if (!$('#maps-data')) {
+document.addEventListener("DOMContentLoaded", function(event) {
+  var mapMarkers = document.getElementById('maps-data');
+  if (!mapMarkers) {
     return;
   }
 
@@ -10,7 +11,7 @@ $(document).ready(function() {
       id: 'map'
     }
   }, function() {
-    var data = JSON.parse($('#maps-data').text());
+    var data = JSON.parse(mapMarkers.innerHTML);
     var markers = handler.addMarkers(data);
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
