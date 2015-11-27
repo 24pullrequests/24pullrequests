@@ -1,4 +1,6 @@
 .project{:class => parameterize_language(project.main_language), :data => {:id => project.id}}
+  - if defined?(show_avatar) && show_avatar
+    = link_to image_tag(project.submitted_by.avatar_url, :width => 80, :height => 80, :alt => project.submitted_by.nickname), user_path(project.submitted_by.nickname), :rel => 'tooltip', :data => { :original_title => project.submitted_by.nickname }, :class => 'image'
   .language.label.label-info.pull-right
     = link_to project.main_language, language_path(project.main_language.downcase)
 

@@ -62,7 +62,7 @@
             %span.mega-octicon.octicon-repo
             %h3.block-title
               = t("featured_projects")
-          = render @featured_projects
+          = render partial: "projects/project", locals: { show_avatar: true }, collection: @featured_projects
 
 .container
   .row.avatar-block
