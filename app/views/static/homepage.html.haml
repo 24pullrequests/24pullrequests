@@ -56,13 +56,12 @@
 - if @featured_projects.any?
   .container.featured_projects
     .row
-      .col-md-12.two-up-split.right
-        .block
-          .title-block
-            %span.mega-octicon.octicon-repo
-            %h3.block-title
-              = t("featured_projects")
-          = render partial: "projects/project", locals: { show_avatar: true }, collection: @featured_projects
+      .block
+        .title-block
+          %span.mega-octicon.octicon-repo
+          %h3.block-title
+            = t("featured_projects")
+        = render partial: "projects/project", locals: { show_avatar: true }, collection: @featured_projects
 
 .container
   .row.avatar-block
