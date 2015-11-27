@@ -27,7 +27,7 @@ gem 'draper'
 gem 'responders'
 gem 'sprockets'
 gem 'mime-types', '2.6.2' # LOCKED DOWN per issue #299
-  
+
 group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
@@ -41,7 +41,6 @@ group :development, :test, :cucumber do
   gem 'rspec-rails'
   gem 'coveralls', require: false
   gem 'codeclimate-test-reporter', require: nil
-  gem 'pullreview-coverage', require: false
 
   gem 'rspec-its', require: false
   gem 'rspec-collection_matchers', require: false

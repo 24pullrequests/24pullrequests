@@ -5,29 +5,9 @@
 %section.clearfix
   =link_to 'http://dnsimple.com', :class => 'col-md-3' do
     = image_tag 'sponsors/dnsimple.png', :class => 'thumbnail', :alt => 'dnsimple'
-  = link_to 'http://postgres.heroku.com/', :class => 'col-md-3' do
-    = image_tag 'sponsors/heroku-pg.png', :class => 'thumbnail', :alt => 'Heroku Postgres'
   = link_to 'http://bugsnag.com/', :class => 'col-md-3' do
     = image_tag 'sponsors/bugsnag.jpg', :class => 'thumbnail', :alt => 'Bugsnag'
-  = link_to 'https://pullreview.com/', :class => 'col-md-3' do
-    = image_tag 'sponsors/pullreview.png', :class => 'thumbnail', :alt => 'PullReview'
-  = link_to 'https://sendgrid.com/', :class => 'col-md-3' do
-    = image_tag 'sponsors/sendgrid.png', :class => 'thumbnail', :alt => 'SendGrid'
 
 %p
   =t("about.sponsors.get_in_touch")
   = mail_to 'info@24pullrequests.com'
-
-%section
-  %h3=t("about.sponsors.pullreview.title")
-
-  %p= t("about.sponsors.pullreview.intro_html")
-
-  %p= t("about.sponsors.pullreview.maintainer_html")
-
-  %p= t("about.sponsors.pullreview.contributor_html")
-
-  %p= t("about.sponsors.pullreview.gifts")
-
-  - if @coupon
-    %p= "#{t("about.sponsors.pullreview.coupon")} #{@coupon}."

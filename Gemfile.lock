@@ -71,7 +71,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    certifi (2015.11.20)
     chai-jquery-rails (2.0.0)
       railties (>= 3.1)
       sprockets
@@ -240,9 +239,6 @@ GEM
       multi_json (~> 1.0)
       websocket-driver (>= 0.2.0)
     powerpack (0.1.1)
-    pullreview-coverage (0.0.5)
-      certifi
-      simplecov (>= 0.7.1, < 1.0.0)
     puma (2.15.3)
     rabl (0.11.6)
       activesupport (>= 2.3.14)
@@ -456,7 +452,6 @@ DEPENDENCIES
   omniauth-twitter
   pg
   poltergeist
-  pullreview-coverage
   puma
   rabl
   rack-canonical-host
