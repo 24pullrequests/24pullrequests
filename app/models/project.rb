@@ -41,6 +41,10 @@ class Project < ActiveRecord::Base
 
   paginates_per 20
 
+  def feature!(owner_id)
+    update(featured: true, avatar_url: "https://avatars.githubusercontent.com/u/#{owner_id}?v=3")
+  end
+
   def self.find_by_github_repo(repository)
     filter_by_repository(repository).first
   end

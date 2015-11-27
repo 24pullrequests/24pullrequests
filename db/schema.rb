@@ -96,6 +96,7 @@ ActiveRecord::Schema.define(version: 20151127190033) do
     t.integer  "user_id"
     t.boolean  "inactive"
     t.boolean  "featured",      default: false
+    t.string   "avatar_url"
   end
 
   create_table "pull_request_archives", force: :cascade do |t|
