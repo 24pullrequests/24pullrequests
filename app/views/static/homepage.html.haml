@@ -53,6 +53,16 @@
         =t("homepage.q_n_a")
       %p=t("homepage.join_the_chat", link_to_chat: link_to('24pullrequests/24pullrequests', 'https://gitter.im/24pullrequests/24pullrequests')).html_safe
 
+- if @featured_projects.any?
+  .container.featured_projects
+    .row
+      .block
+        .title-block
+          %span.mega-octicon.octicon-repo
+          %h3.block-title
+            = t("featured_projects")
+        = render partial: "projects/project", locals: { show_avatar: true }, collection: @featured_projects
+
 .container
   .row.avatar-block
     .col-md-6.two-up-split.left
@@ -73,6 +83,7 @@
         = link_to t("view_all"), organisations_path, :class => 'btn btn-default btn-sm'
         %ul.avatar-list.avatar-list-lg.clearfix
           = render @orgs
+
 .container
   .row
     .col-md-6.two-up-split.left
