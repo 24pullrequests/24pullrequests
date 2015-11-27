@@ -73,6 +73,18 @@
         = link_to t("view_all"), organisations_path, :class => 'btn btn-default btn-sm'
         %ul.avatar-list.avatar-list-lg.clearfix
           = render @orgs
+
+- if @featured_projects.any?
+  .container.featured_projects
+    .row
+      .col-md-12.two-up-split.right
+        .block
+          .title-block
+            %span.mega-octicon.octicon-repo
+            %h3.block-title
+              = t("featured_projects")
+          = render @featured_projects
+
 .container
   .row
     .col-md-6.two-up-split.left

@@ -18,7 +18,16 @@ describe 'Static pages', type: :request do
     it { is_expected.to have_link('View All', href: projects_path) }
     it { is_expected.to have_link('View All', href: pull_requests_path) }
     it { is_expected.to have_link('Suggest a project', href: new_project_path) }
+    it { is_expected.to_not have_css('.featured_projects') }
 
+    context "when it has featured projects" do
+      before do
+        create :project, name: 'foobar'
+      end
+      it "show the featured project" do
+        is_expected.to_not have_css('.featured_projects span.project_name', text: 'foobar')
+      end
+    end
   end
 
   describe 'homepage in different dates' do

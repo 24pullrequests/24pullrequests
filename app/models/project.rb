@@ -36,7 +36,7 @@ class Project < ActiveRecord::Base
   scope :by_languages, ->(languages) { where('lower(main_language) IN (?)', languages) }
   scope :by_labels, ->(labels) { joins(:labels).where('labels.name  IN (?)', labels).select('distinct(projects.id), projects.*') }
   scope :active, -> { where(inactive: [false, nil]) }
-
+  scope :featured, -> { where(featured: true) }
   accepts_nested_attributes_for :labels,  reject_if: proc { |attributes| attributes['id'].blank? }
 
   paginates_per 20
