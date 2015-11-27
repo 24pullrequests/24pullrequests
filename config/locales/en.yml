@@ -15,19 +15,6 @@ en:
         of some great sponsors.
       get_in_touch: 'If you’d like to get in touch about sponsorship or anything else,
         drop us an email:'
-      pullreview:
-        contributor_html: If you want to get help from PullReview to contribute to
-          open source Ruby projects on 24 Pull Requests, <a href="http://blog.8thcolor.com/en/2014/12/giving-back-with-24pullrequests/">look
-          at their explanations.</a>
-        gifts: If you’ve sent 24 pull requests in December, you’ll get a gift from
-          them. More details soon.
-        intro_html: <a href="https://pullreview.com">PullReview</a> provides for free
-          automated code review for Ruby, Rails, and Javascript open source projects.
-        maintainer_html: If you are a maintainer, have submitted your project to 24
-          Pull Requests, and are interested in checking submitted contributions with
-          PullReview, <a href="mailto:support@pullreview.com">just contact them</a>,
-          they’ll help you set up PullReview to do so.
-        title: PullReview
       thanks: Many thanks to...
       title: Sponsors
     title: About 24 Pull Requests
@@ -98,6 +85,7 @@ en:
       or submit a pull request now and find yours here!
     synchronize: Synchronize Pull Requests
   deactive: Deactive
+  delete: Delete
   delete_account:
     are_you_sure: We just wanted to make sure you really do wish to delete your account.
       This will remove your profile and all pull requests from the site, although
@@ -124,7 +112,7 @@ en:
     new:
       form:
         description: Description
-        description_placeholder: Give a little desciption of the group and event
+        description_placeholder: Give a little description of the group and event
         location: Location
         location_placeholder: e.g. Bristol, UK
         map: Location marker
@@ -148,6 +136,7 @@ en:
     title: Events
   everything: Everything
   exempli_gratia: e.g.
+  featured_projects: Featured Projects
   follow_user: Follow @%{twitter}
   gifts:
     calendar_link: public calendar
@@ -213,14 +202,24 @@ en:
     title: 24 Pull Requests
   how_to_contribute: How to contribute?
   information:
+    codemontage: Give forward by contributing to open source, social good projects
+      that benefit organizations making a difference in the world.
     codetriage: Give back to open source, one issue at a time, with CodeTriage. You’ll
       get one issue from your favorite repo per day to help you dig deeper, learn
       more, and stay involved with the code you rely on.
+    docsdoctor: Sign up to receive documented method or class in your inbox every
+      day from your favorite GitHub repos. If you're really pro, recieve un-documented
+      methods or classes and super charge your commit history.
+    rubyissues: A guided tour of significant, compelling, bizarre, tricky
+      and all together worthwhile issues within open source Ruby projects.
+      Issue(s) are issued bi-monthly and you can subscribe if you wish.
     contribhub:
-      description: ContribHub is a GitHub-based application that makes it easier to
-        find projects to contribute to and grow a community around it.
-      tagline: Do you know you have a neighbor that needs help with a project? With
-        ContribHub you will!
+      description: ContribHub is a GitHub based application that makes it
+        easy to find projects to contribute and grow the community around it.
+      tagline: "You know you have a neighbor who needs some help with a project
+        really good? With ContribHub you find out!"
+    issuehubio: Contribute to Open Source. Search issue labels to find
+      the right project for you!
     get_ready: Get ready for 24 Pull Requests %{year} when we do it all again!
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it
       all again!

@@ -20,6 +20,11 @@ ru:
   activerecord:
     errors:
       models:
+        event:
+          attributes:
+            start_time:
+              in_past: "Событие не может быть создано в прошлом"
+              not_in_range: "События могут быть созданы только в промежутке с 1 декабря до 24 декабря"
         user:
           attributes:
             email:
@@ -27,28 +32,28 @@ ru:
               required_for_confirmation: "введите %{attribute}"
   api:
     callback:
-      details: 
-      title: 
-    description: 
+      details:
+      title:
+    description:
     organisations:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
     pagination:
-      details: 
-      title: 
+      details:
+      title:
     projects:
-      details: 
-      title: 
+      details:
+      title:
     pull_requests:
-      details: 
-      meta_details: 
-      title: 
-    title: 
+      details:
+      meta_details:
+      title:
+    title:
     users:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
   cancel: "Отмена"
   change: "Изменить"
   claim: "Заявка"
@@ -63,16 +68,19 @@ ru:
     help_out: "Не может найти проект, которому вы бы хотели помочь? Посмотрите список
       популярных проектов:"
     no_pull_requests: "Вы не послали еще ни одного пулл-реквеста, чего вы ждете?!"
+    not_december: "24 пулл-реквеста проходят только с 1 по 24 декабря, приходите в это время!"
     pull_requests: "Интересно чем заняты люди в эти праздники? Проверьте эти пулл-реквесты,
       или пришлите ваш пулл-реквест и найдите здесь себя!"
     synchronize: "Синхронизировать"
+  deactive: "Выключить"
+  delete: "Удалить"
   delete_account:
     are_you_sure: "Мы хотим быть уверены, что вы дйствительно хотите удалить вашу
       учетную запись. Мы удалим не только профиль но и всю информацию о ваших пулл-реквестах.
       Но ваши рекомендации очень важны для нас и их мы удалять не будем."
     cancel: "Я передумал!"
     confirm: "Да, удаляйте меня полностью"
-    email_preferences_link: 
+    email_preferences_link:
     notification_info: "Может вы просто хотите изменить настройки почтовый рассылки?
       Нет ничего проще: %{email_preferences_link}."
     title: "Удалить учетную запись"
@@ -81,10 +89,14 @@ ru:
   developers_using_language: "Разработчики использующие %{language}"
   edit: "Редактировать"
   events:
+    admin:
+      search: "Поиск по GitHub репозиториям"
+      title: "Управление проектами"
     details: "Вы не должны оставаться одни в это Рождество! Проведите 24 Pull Requests
       событие в вашей компании, или в вашей дев-тусе. Или же вы можете присоединиться
       к событию и кодить вместе."
-    edit: title
+    edit:
+      title: "Редактировать предложение"
     new:
       form:
         description: "Описание"
@@ -111,7 +123,7 @@ ru:
       view_event_details: "Посмотреть детали события"
     title: "События"
   everything: "Всё"
-  exempli_gratia: 
+  exempli_gratia: "например"
   follow_user: "Читать @%{twitter}"
   gifts:
     calendar_link: "календаре"
@@ -122,6 +134,10 @@ ru:
       pull_request: "Пулл-реквесты"
       tweet: "Твитнуть о вашем подарке!"
     give: "Подарите проекту полезный код."
+    link_twitter: "Ссылка на твиттер"
+    link_twitter_desc: "Хотите поделиться информацией о 24 пулл-реквест и ваших подарках?
+      %{link_twitter} и подарите Ваш код в проекты с открытым кодом."
+    no_pull_requests: "У вас нет пулл реквестов"
     none: "Пока ничего не подарено."
     title: "Подаренный код"
     view_your_gifts: "Все ваши подарки вы можете посмотреть в %{calendar_link}."
@@ -146,7 +162,7 @@ ru:
       пулл-реквеста?!"
     greeting: "Время дарить подарки"
     involved:
-      contributing_path: 
+      contributing_path:
       description: "Есть множество способов помочь проектам с открытым исходным кодом:
         совершенствование документации, помощь в исправлении существующих проблем
         и ошибок, улучшению качества кода и покрытия тестами или добавление новых
@@ -156,6 +172,7 @@ ru:
       take_a_look: "Если вы новичок в open source, то это продлится недолго."
       title: "Примите участие"
     join_the_chat: "Заходите в наш Gitter чат, %{link_to_chat}."
+    login_with_github: "Войти через GitHub"
     profile:
       description: "Участие в проектах с открытым кодом - отличный способ улучшить
         свое резюме, а также заявить о себе, как о гениальном програмисте."
@@ -218,7 +235,7 @@ ru:
     delete: "Хотите удалить вашу учетную запись?"
     form:
       daily: "Ежедневно"
-      email: 
+      email:
       email_frequency: "Получать рассылку"
       never: "Никогда"
       weekly: "Еженедельно"
@@ -234,6 +251,7 @@ ru:
     remove: "Удалить учетную запись"
     save: "Сохранить"
     save_and_continue: "Сохранить и продолжить"
+    setup_help: "Для того, что бы начать 24 пулл реквеста, пожалуйста, с начала заполните следуюшую форму"
     title: "Настройки рассылки"
     twitter: Twitter
   preferred_languages: "Предпочитаемые языки"
@@ -250,11 +268,11 @@ ru:
       популярных проектов."
     new:
       form:
-        github_url: 
-        main_language: 
-        project_name: 
-        submit_project: 
-        summary: 
+        github_url:
+        main_language:
+        project_name:
+        submit_project:
+        summary:
       info: "Одним из способов для поощряения участия в проектах с открытым исходным
         кодом является возможность рассказать пользователям про популярные проекты,
         которые нужнаются в помощи. Мы выбираем свои любимые проекты, но вы можете
@@ -283,7 +301,8 @@ ru:
     latest:
       count: "Недавние пулл-реквесты (%{count})"
   search: "Поиск"
-  sponsored_by: "Спонсоры:"
+  sponsored_by: "Спонсируется"
+  sponsors: "Спонсоры"
   suggest_project: "Рекомендовать проект"
   suggested_projects: " — Рекомендованные проекты"
   suggestions:
@@ -299,7 +318,7 @@ ru:
   user:
     coderwall:
       achieved_by: "Бэйджи получил: "
-      error_github_not_connected: 
+      error_github_not_connected:
       error_no_user: "Пользователь не найден"
       success: Coderwall логин изменён!
       title: "Бэйджи Coderwall"
@@ -309,5 +328,6 @@ ru:
     organisations: "Огранизации"
     pull_request_count: "%{user} в %{year} году послал пулл-реквестов: %{count}"
   view_all: "Посмотреть все"
+  welcome: "Добро пожаловать, %{user}!"
   welcome_back: "Привет, %{user}"
   your_pull_requests: "Пулл-реквесты"

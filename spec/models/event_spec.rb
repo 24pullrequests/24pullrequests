@@ -21,23 +21,23 @@ describe Event, type: :model do
     end
 
     it 'should not pass with a start_at in the past' do
-      Timecop.freeze(Time.parse('15th December 2014')) do
-        event.start_time = Time.parse('14th December 2014')
+      Timecop.freeze(Time.parse('15th December 2015')) do
+        event.start_time = Time.parse('14th December 2015')
         expect(event.valid?).not_to be true
         expect(event.errors[:start_time].include?('Events cannot be created in the past')).to be true
       end
     end
 
     it 'should pass with a start_at on current date' do
-      Timecop.freeze(Time.parse('15th December 2014 12:00')) do
-        event.start_time = Time.parse('15th December 2014 13:00')
+      Timecop.freeze(Time.parse('15th December 2015 12:00')) do
+        event.start_time = Time.parse('15th December 2015 13:00')
         expect(event.valid?).to be true
       end
     end
 
     context 'after 1st December' do
       it 'should not pass with a start_at within of 1st December - 24th December' do
-        Timecop.freeze(Time.parse('1st December 2014')) do
+        Timecop.freeze(Time.parse('1st December 2015')) do
           ['1st December', '15th December', '24th December'].each do |time|
             event.start_time = Time.parse(time)
             expect(event.valid?).to be true
@@ -51,8 +51,8 @@ describe Event, type: :model do
     let(:event) { FactoryGirl.build(:event) }
 
     it 'should be formatted correctly' do
-      event.start_time = Time.parse('1st December 2014 15:30 GMT')
-      expect(event.formatted_date).to eq 'Monday 01 December 2014 at 03:30PM'
+      event.start_time = Time.parse('1st December 2015 15:30 GMT')
+      expect(event.formatted_date).to eq 'Tuesday 01 December 2015 at 03:30PM'
     end
   end
 

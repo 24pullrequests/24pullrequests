@@ -18,6 +18,42 @@ describe 'Static pages', type: :request do
     it { is_expected.to have_link('View All', href: projects_path) }
     it { is_expected.to have_link('View All', href: pull_requests_path) }
     it { is_expected.to have_link('Suggest a project', href: new_project_path) }
+    it { is_expected.to_not have_css('.featured_projects') }
+
+  end
+
+  context "homepage when it has featured projects" do
+    before do
+      create :project, name: 'foobar', featured: true
+      visit root_path
+    end
+    it "show the featured project" do
+      is_expected.to have_css('.featured_projects span.project-title', text: 'foobar')
+    end
+  end
+
+  describe 'homepage in different dates' do
+    context "during December" do
+      it "doesnt show the finished partial on the first day" do
+        Timecop.travel(Date.new(CURRENT_YEAR, 12, 1))
+        visit root_path
+        is_expected.to_not have_content('24 Pull Requests is finished for')
+      end
+
+      it "doesnt show the finished partial on the last day" do
+        Timecop.travel(Date.new(CURRENT_YEAR, 12, 24))
+        visit root_path
+        is_expected.to_not have_content('24 Pull Requests is finished for')
+      end
+    end
+
+    context "not in December or November" do
+      it "shows the finished partial" do
+        Timecop.travel(Date.new(CURRENT_YEAR, 10, 29))
+        visit root_path
+        is_expected.to have_content('24 Pull Requests is finished for')
+      end
+    end
   end
 
   describe 'humans.txt' do

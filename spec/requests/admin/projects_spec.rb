@@ -25,7 +25,7 @@ describe 'Admin Projects', type: :request do
       fill_in '_repository', with: 'apples'
       click_on 'Search'
 
-      sleep(Capybara.default_wait_time)
+      sleep(Capybara.default_max_wait_time)
 
       is_expected.to have_content 'apples'
       is_expected.not_to have_content 'mandarins'

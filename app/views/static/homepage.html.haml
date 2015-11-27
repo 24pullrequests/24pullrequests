@@ -1,5 +1,8 @@
 .container.block.intro
   .row
+    - unless Date.today.between?(Date.new(CURRENT_YEAR, 10, 30), Date.new(CURRENT_YEAR, 12, 24))
+      = render :partial => 'finished'
+  .row
     .col-md-4.intro-block
       %span.octicon.octicon-gift
       %h4=t("homepage.greeting")
@@ -41,14 +44,24 @@
         =t("homepage.badges.title")
       %p=t("homepage.badges.description")
       .center
-        = link_to image_tag('24-participant.png'), 'https://coderwall.com', :rel => 'tooltip', :title => t("homepage.badges.involved_link"), :class => "coderwall-badge-link"
-        = link_to image_tag('24-continuous-sync.png'), 'https://coderwall.com', :rel => 'tooltip', :title => t("homepage.badges.amazing"), :class => "coderwall-badge-link"
+        = link_to image_tag('24-participant.png', :alt => "Participant Coderwall badge"), 'https://coderwall.com', :rel => 'tooltip', :title => t("homepage.badges.involved_link"), :class => "coderwall-badge-link"
+        = link_to image_tag('24-continuous-sync.png', :alt => "Continous Sync Coderwall badge"), 'https://coderwall.com', :rel => 'tooltip', :title => t("homepage.badges.amazing"), :class => "coderwall-badge-link"
 
     .col-md-4.tip-block
       %h4.subtitle
         %span.octicon.octicon-question
         =t("homepage.q_n_a")
       %p=t("homepage.join_the_chat", link_to_chat: link_to('24pullrequests/24pullrequests', 'https://gitter.im/24pullrequests/24pullrequests')).html_safe
+
+- if @featured_projects.any?
+  .container.featured_projects
+    .row
+      .block
+        .title-block
+          %span.mega-octicon.octicon-repo
+          %h3.block-title
+            = t("featured_projects")
+        = render partial: "projects/project", locals: { show_avatar: true }, collection: @featured_projects
 
 .container
   .row.avatar-block
@@ -70,6 +83,7 @@
         = link_to t("view_all"), organisations_path, :class => 'btn btn-default btn-sm'
         %ul.avatar-list.avatar-list-lg.clearfix
           = render @orgs
+
 .container
   .row
     .col-md-6.two-up-split.left

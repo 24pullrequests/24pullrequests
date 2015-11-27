@@ -12,7 +12,12 @@ class Coderwall
                 date:    "12/25/#{CURRENT_YEAR}",
                 api_key: api_key }
 
-    connection.post '/award', payload.to_json, 'Content-Type' => 'application/json', :accept => 'application/json'
+    connection.post do |req|
+      req.url '/award'
+      req.headers['Accept'] = 'application/json'
+      req.headers['Content-Type'] = 'application/json'
+      req.body = payload.to_json
+    end
   end
 
   def connection

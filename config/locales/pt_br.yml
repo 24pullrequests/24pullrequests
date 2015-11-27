@@ -15,20 +15,6 @@ pt_br:
         ótimos patrocinadores.
       get_in_touch: 'Se você gostaria de entrar em contato para saber mais sobre patrocínio
         ou qualquer outro assunto, envie-nos um email:'
-      pullreview:
-        contributor_html: Se você quiser ajuda do PullReview para contribuir em projetos
-          open source em Ruby no 24 Pull Requests, , <a href="http://blog.8thcolor.com/en/2014/12/giving-back-with-24pullrequests/">veja
-          a explicação deles.</a>
-        gifts: Se você enviou 24 pull requests em dezembro, você receberá um presente
-          deles. Mais detalhes em breve!
-        intro_html: <a href="https://pullreview.com">PullReview</a> prove gratuitamente
-          uma maneira automatizada de fazer revisão de código para projetos open source
-          em Ruby, Rails e Javascript.
-        maintainer_html: Se você é um mantenedor, enviou seu projeto para o 24 Pull
-          Requests e está interessado em verificar as contribuições usando o PullReview,
-          <a href="mailto:support@pullreview.com">entre em contato com eles</a>, eles
-          irão te ajudar a configurar o PullReview no seu projeto.
-        title: PullReview
       thanks: Muitos agracecimentos para...
       title: Patrocinadores
     title: Sobre 24 Pull Requests
@@ -191,7 +177,7 @@ pt_br:
       um passarinho me contou que eles adorariam receber pull requests!
     greeting: Esta é a época
     involved:
-      contributing_path: 
+      contributing_path:
       description: Existem várias maneiras de se envolver em um projeto open source,
         melhorando a documentação, ajudando a acertar problemas e bugs, melhorando
         a qualidade do código e a cobertura dos testes ou mesmo adicionardo uma funcionalidade

@@ -19,3 +19,6 @@ coverage
 
 Thumbs.db
 .ruby-gemset
+
+# To not force .overcommit.yml on anyone.
+.overcommit.yml

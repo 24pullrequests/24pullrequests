@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141223044223) do
+ActiveRecord::Schema.define(version: 20151127190033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 20141223044223) do
     t.datetime "start_time"
     t.decimal  "latitude",    precision: 10, scale: 6
     t.decimal  "longitude",   precision: 10, scale: 6
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
     t.text     "description"
     t.integer  "user_id"
   end
@@ -56,16 +56,16 @@ ActiveRecord::Schema.define(version: 20141223044223) do
 
   create_table "labels", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "organisations", force: :cascade do |t|
     t.string   "login"
     t.string   "avatar_url"
     t.integer  "github_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.integer  "pull_request_count", default: 0
   end
 
@@ -79,8 +79,8 @@ ActiveRecord::Schema.define(version: 20141223044223) do
   create_table "project_labels", force: :cascade do |t|
     t.integer  "project_id"
     t.integer  "label_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "project_labels", ["label_id"], name: "index_project_labels_on_label_id", using: :btree
@@ -91,10 +91,12 @@ ActiveRecord::Schema.define(version: 20141223044223) do
     t.text     "description"
     t.string   "github_url"
     t.string   "main_language"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.integer  "user_id"
     t.boolean  "inactive"
+    t.boolean  "featured",      default: false
+    t.string   "avatar_url"
   end
 
   create_table "pull_request_archives", force: :cascade do |t|
@@ -119,8 +121,8 @@ ActiveRecord::Schema.define(version: 20141223044223) do
     t.datetime "created_at"
     t.string   "repo_name"
     t.integer  "user_id"
-    t.integer  "comments_count", default: 0
     t.string   "language"
+    t.integer  "comments_count", default: 0
   end
 
   add_index "pull_requests", ["user_id"], name: "index_pull_requests_on_user_id", using: :btree
@@ -135,16 +137,16 @@ ActiveRecord::Schema.define(version: 20141223044223) do
   add_index "skills", ["user_id"], name: "index_skills_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "uid",                                  null: false
-    t.string   "provider",                             null: false
-    t.string   "nickname",                             null: false
+    t.string   "uid",                             null: false
+    t.string   "provider",                        null: false
+    t.string   "nickname",                        null: false
     t.string   "email"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "gravatar_id"
     t.string   "token"
     t.string   "email_frequency"
-    t.integer  "pull_requests_count",  default: 0
+    t.integer  "pull_requests_count", default: 0
     t.datetime "last_sent_at"
     t.string   "twitter_token"
     t.string   "twitter_secret"
@@ -158,7 +160,7 @@ ActiveRecord::Schema.define(version: 20141223044223) do
     t.boolean  "thank_you_email_sent", default: false
   end
 
-  add_index "users", ["nickname"], name: "index_users_on_nickname", using: :btree
-  add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", using: :btree
+  add_index "users", ["nickname"], name: "index_users_on_nickname", unique: true, using: :btree
+  add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
 
 end

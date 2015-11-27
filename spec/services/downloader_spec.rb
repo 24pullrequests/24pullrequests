@@ -3,6 +3,7 @@ require 'rails_helper'
 describe Downloader do
   let(:user) { FactoryGirl.create(:user) }
   let(:downloader) { Downloader.new(user) }
+  let(:gifttoday) { user.gift_for(Date.today) }
 
   describe '#get_organisations' do
     before do
@@ -61,8 +62,7 @@ describe Downloader do
 
     it "when there are no gifts for today it gifts a pull request" do
       downloader.get_pull_requests
-
-      expect(user.gift_for(Date.today)).to_not be_nil
+      expect(:gifttoday).to_not be_nil
     end
   end
 

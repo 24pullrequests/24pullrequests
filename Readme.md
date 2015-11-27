@@ -1,11 +1,10 @@
 # 24 Pull Requests
 
 [![Build Status](https://travis-ci.org/24pullrequests/24pullrequests.svg?branch=master)](https://travis-ci.org/24pullrequests/24pullrequests)
-[![Dependency Status](https://gemnasium.com/24pullrequests/24pullrequests.svg)](https://gemnasium.com/24pullrequests/24pullrequests)
-[![Code Climate](https://codeclimate.com/github/24pullrequests/24pullrequests/badges/gpa.svg)](https://codeclimate.com/github/24pullrequests/24pullrequests)
-[![Test Coverage](https://codeclimate.com/github/24pullrequests/24pullrequests/badges/coverage.svg)](https://codeclimate.com/github/24pullrequests/24pullrequests)
-[![Gitter chat](http://img.shields.io/badge/gitter-24pullrequests-brightgreen.svg)](https://gitter.im/24pullrequests/24pullrequests)
-[![PullReview stats](https://www.pullreview.com/github/24pullrequests/24pullrequests/badges/master.svg?)](https://www.pullreview.com/github/24pullrequests/24pullrequests/reviews/master)
+[![Dependency Status](https://img.shields.io/gemnasium/24pullrequests/24pullrequests.svg?style=flat)](https://gemnasium.com/24pullrequests/24pullrequests)
+[![Gitter chat](http://img.shields.io/badge/gitter-24pullrequests-brightgreen.svg?style=flat)](https://gitter.im/24pullrequests/24pullrequests)
+[![Code Climate](https://img.shields.io/codeclimate/github/24pullrequests/24pullrequests.svg?style=flat)](https://codeclimate.com/github/24pullrequests/24pullrequests)
+[![Test Coverage](https://img.shields.io/codeclimate/coverage/github/24pullrequests/24pullrequests.svg?style=flat)](https://codeclimate.com/github/24pullrequests/24pullrequests)
 
 > **Giving back little gifts of code**
 
@@ -33,12 +32,12 @@ New to Ruby? No worries! You can follow these instructions to install a local se
 
 #### Installing a Local Server
 
-First things first, you'll need to install Ruby 2.0. I recommend using the excellent [rbenv](https://github.com/sstephenson/rbenv),
+First things first, you'll need to install Ruby 2.2.3. I recommend using the excellent [rbenv](https://github.com/sstephenson/rbenv),
 and [ruby-build](https://github.com/sstephenson/ruby-build)
 
 ```bash
-rbenv install 2.1.5
-rbenv global 2.1.5
+rbenv install 2.2.3
+rbenv global 2.2.3
 ```
 
 Next, you'll need to make sure that you have PostgreSQL installed. This can be
@@ -149,4 +148,4 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 
 ## Copyright
 
-Copyright (c) 2014 Andrew Nesbitt. See [LICENSE](https://github.com/24pullrequests/24pullrequests/blob/master/LICENSE) for details.
+Copyright (c) 2015 Andrew Nesbitt. See [LICENSE](https://github.com/24pullrequests/24pullrequests/blob/master/LICENSE) for details.

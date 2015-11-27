@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.1.5'
+ruby '2.2.3'
 
-gem 'rails', '4.2.0'
+gem 'rails', '4.2.5'
 
 gem 'jquery-rails'
 gem 'pg'
@@ -13,8 +13,8 @@ gem 'octokit'
 gem 'rabl'
 gem 'kaminari'
 gem 'twitter'
-gem 'bootstrap-sass', '~> 3.3.1'
-gem 'jquery-datetimepicker-rails', '~> 2.4.1.0'
+gem 'bootstrap-sass'
+gem 'jquery-datetimepicker-rails'
 gem 'autoprefixer-rails'
 gem 'simple_form'
 gem 'ffi'
@@ -24,22 +24,23 @@ gem 'uglifier'
 gem 'octicons-rails'
 gem 'rack-canonical-host'
 gem 'draper'
-gem 'responders', '~> 2.0'
+gem 'responders'
+gem 'sprockets'
+gem 'mime-types', '2.6.2' # LOCKED DOWN per issue #299
 
 group :development do
-  gem 'i18n-tasks'
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'thin'
-  gem 'rubocop', '~> 0.27', require: false
-  gem 'web-console', '~> 2.0'
+  gem 'rubocop', require: false
+  gem 'web-console'
 end
 
 group :development, :test, :cucumber do
-  gem 'rspec-rails', require: false
+  gem 'i18n-tasks'
+  gem 'rspec-rails'
   gem 'coveralls', require: false
   gem 'codeclimate-test-reporter', require: nil
-  gem 'pullreview-coverage', require: false
 
   gem 'rspec-its', require: false
   gem 'rspec-collection_matchers', require: false
@@ -65,7 +66,7 @@ group :development, :test, :cucumber do
 end
 
 group :production do
-  gem 'unicorn'
+  gem 'puma'
   gem 'foreman'
   gem 'memcachier'
   gem 'dalli'

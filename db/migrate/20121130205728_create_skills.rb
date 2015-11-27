@@ -4,7 +4,7 @@ class CreateSkills < ActiveRecord::Migration
       t.integer :user_id
       t.string :language
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

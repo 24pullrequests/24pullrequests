@@ -9,7 +9,7 @@ Tfpullrequests::Application.routes.draw do
 
   resources :organisations, only: [:show, :index]
 
-  get '/users/:id/:year', to: 'users#show'
+  get '/users/:id', to: 'users#show'
 
   resources :events
 
