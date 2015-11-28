@@ -12,11 +12,13 @@ class StaticController < ApplicationController
 
     # a user's location is pulled from public GitHub data
     # available on their profile when authenticating with the site
-    @map_markers = Gmaps4rails.build_markers(active_users) do |user, marker|
-      next if user.lat.nil? || user.lng.nil?
+    @map_markers = Rails.cache.fetch "contributors-map-markers", expires_in: 24.hours do
+      Gmaps4rails.build_markers(active_users) do |user, marker|
+        next if user.lat.nil? || user.lng.nil?
 
-      marker.lat user.lat
-      marker.lng user.lng
+        marker.lat user.lat
+        marker.lng user.lng
+      end
     end
   end
 
