@@ -15,20 +15,6 @@ en:
         of some great sponsors.
       get_in_touch: 'If you’d like to get in touch about sponsorship or anything else,
         drop us an email:'
-      pullreview:
-        contributor_html: If you want to get help from PullReview to contribute to
-          open source Ruby projects on 24 Pull Requests, <a href="http://blog.8thcolor.com/en/2014/12/giving-back-with-24pullrequests/">look
-          at their explanations.</a>
-        coupon: "Well done, here's your pull review coupon:"
-        gifts: "If you’ve sent 24 pull requests in December, you’ll get a gift:
-          50% during 6 months from them."
-        intro_html: <a href="https://pullreview.com">PullReview</a> provides for free
-          automated code review for Ruby, Rails, and Javascript open source projects.
-        maintainer_html: If you are a maintainer, have submitted your project to 24
-          Pull Requests, and are interested in checking submitted contributions with
-          PullReview, <a href="mailto:support@pullreview.com">just contact them</a>,
-          they’ll help you set up PullReview to do so.
-        title: PullReview
       thanks: Many thanks to...
       title: Sponsors
     title: About 24 Pull Requests
@@ -151,6 +137,7 @@ en:
     title: Events
   everything: Everything
   exempli_gratia: e.g.
+  featured_projects: Featured Projects
   follow_user: Follow @%{twitter}
   gifts:
     calendar_link: public calendar
@@ -233,7 +220,7 @@ en:
       tagline: "You know you have a neighbor who needs some help with a project
         really good? With ContribHub you find out!"
     issuehubio: Contribute to Open Source. Search issue labels to find
-      the right project for you! 
+      the right project for you!
     get_ready: Get ready for 24 Pull Requests %{year} when we do it all again!
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it
       all again!

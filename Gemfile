@@ -29,6 +29,7 @@ gem 'sprockets'
 gem 'gmaps4rails'
 gem 'geocoder'
 gem 'lodash-rails'
+gem 'mime-types', '2.6.2' # LOCKED DOWN per issue #299
 
 group :development do
   gem 'spring'
@@ -43,7 +44,6 @@ group :development, :test, :cucumber do
   gem 'rspec-rails'
   gem 'coveralls', require: false
   gem 'codeclimate-test-reporter', require: nil
-  gem 'pullreview-coverage', require: false
 
   gem 'rspec-its', require: false
   gem 'rspec-collection_matchers', require: false

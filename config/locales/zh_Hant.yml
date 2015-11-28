@@ -9,12 +9,6 @@ zh_Hant:
     sponsors:
       details: 24 Pull Requests 接受了他們的支持和幫助。
       get_in_touch: "接洽贊助事宜，請寄信到："
-      pullreview:
-        contributor_html: 如果你想從 PullReview 得到協助，並在 24 Pull Requests 中貢獻程式碼到 Ruby 的開放原始碼專案，<a href="http://blog.8thcolor.com/en/2014/12/giving-back-with-24pullrequests/">你可以看看他們的說明。</a>
-        gifts: 如果你在 12 月送出了 24 個 Pull requests，你將從他們那邊收到一份禮物。細節稍後會公佈。
-        intro_html: <a href="https://pullreview.com">PullReview</a> 提供 Ruby、Rails 以及 JavaScript 開放原始碼專案免費的自動化程式碼審查。
-        maintainer_html: 如果你是曾經將專案提交到 24 Pull Request 的專案維護者，且有興趣試試 PullReview，<a href="mailto:support@pullreview.com">請寫信給他們</a>，他們將協助你設定。
-        title: PullReview
       thanks: "特別感謝..."
       title: "贊助單位"
     title: "關於 24 Pull Requests"

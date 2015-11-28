@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   include Concerns::Coderwall
   include Concerns::Twitter
-  include Concerns::PullReview
 
   attr_writer :gift_factory
 

@@ -10,19 +10,6 @@ ja:
       details: 24 Pull Requests はスポンサーのご支援、ご寄付によって成り立っています。
       get_in_touch: 'If you''d like to get in touch about sponsorship or anything
         else, drop us an email:'
-      pullreview:
-        contributor_html: If you want to get help from PullReview to contribute to
-          open source Ruby projects on 24 Pull Requests, <a href="http://blog.8thcolor.com/en/2014/12/giving-back-with-24pullrequests/">look
-          at their explanations.</a>
-        gifts: If you've sent 24 pull requests in December, you'll get a gift from
-          them. More details soon.
-        intro_html: <a href="https://pullreview.com">PullReview</a> provides for free
-          automated code review for Ruby, Rails, and Javascript open source projects.
-        maintainer_html: If you are a maintainer, have submitted your project to 24
-          Pull Requests, and are interested in checking submitted contributions with
-          PullReview, <a href="mailto:support@pullreview.com">just contact them</a>,
-          they’ll help you set up PullReview to do so.
-        title: PullReview
       thanks: "ありがとうございます。"
       title: "スポンサー"
     title: 24 Pull Requests とは
