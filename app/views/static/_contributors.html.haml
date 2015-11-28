@@ -7,7 +7,7 @@
       %p.text-muted=t("contributors.location_privacy")
       #maps-data.hidden
         = raw @map_markers.to_json
-
+      %hr
   .row
     - users.each_slice(6) do |row|
       %ul.thumbnails.clearfix
