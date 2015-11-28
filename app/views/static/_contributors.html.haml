@@ -1,5 +1,13 @@
 %section
   %h3=t("contributors.title")
+
+  .row
+    .col-md-12
+      #map{ :style => "width: 100%; height: 300px;" }
+      %p.text-muted=t("contributors.location_privacy")
+      #maps-data.hidden
+        = raw @map_markers.to_json
+
   .row
     - users.each_slice(6) do |row|
       %ul.thumbnails.clearfix
@@ -9,3 +17,7 @@
               = link_to image_tag(user.avatar_url(200), :width => 200, :height => 200, :alt => user.nickname).html_safe, user
               .caption
                 %strong= link_to "@#{user.nickname}", user
+
+  = javascript_include_tag "//maps.google.com/maps/api/js?v=3.18&sensor=false&client=&key=&libraries=geometry&language=&hl=&region="
+  = javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js"
+  = javascript_include_tag "maps"
