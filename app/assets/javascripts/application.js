@@ -21,3 +21,5 @@
 //= require lodash
 //= require gmaps/google
 //= require_tree .
+//= stub maps
+//
