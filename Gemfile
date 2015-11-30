@@ -26,6 +26,9 @@ gem 'rack-canonical-host'
 gem 'draper'
 gem 'responders'
 gem 'sprockets'
+gem 'gmaps4rails'
+gem 'geocoder'
+gem 'lodash-rails'
 gem 'mime-types', '2.6.2' # LOCKED DOWN per issue #299
 
 group :development do

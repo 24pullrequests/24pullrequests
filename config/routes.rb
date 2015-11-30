@@ -44,6 +44,8 @@ Tfpullrequests::Application.routes.draw do
   get '/login',  to: 'sessions#new',     as: 'login'
   get '/logout', to: 'sessions#destroy', as: 'logout'
 
+  get '/contributors/map', to: 'contributor_map#show'
+
   get '/auth/twitter/callback',    to: 'twitter#authorize'
   delete '/twitter/remove',         to: 'twitter#remove'
 

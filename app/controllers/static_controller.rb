@@ -5,12 +5,21 @@ class StaticController < ApplicationController
     @users = User.order('pull_requests_count desc').limit(200).sample(24)
     @orgs = Organisation.with_user_counts.order_by_pull_requests.limit(200).sample(24)
     @pull_requests = PullRequest.year(current_year).order('created_at desc').limit(5)
-
-    render layout: 'homepage'
   end
 
   def about
     @contributors = User.contributors
+
+    # a user's location is pulled from public GitHub data
+    # available on their profile when authenticating with the site
+    @map_markers = Rails.cache.fetch "contributors-map-markers", expires_in: 24.hours do
+      Gmaps4rails.build_markers(active_users) do |user, marker|
+        next if user.lat.nil? || user.lng.nil?
+
+        marker.lat user.lat
+        marker.lng user.lng
+      end
+    end
   end
 
   def sponsors
@@ -18,5 +27,11 @@ class StaticController < ApplicationController
 
   def humans
     @contributors = User.contributors
+  end
+
+protected
+  # Currently-active contributors, i.e. users with a pull request this year
+  def active_users
+    PullRequest.year(current_year).map(&:user).uniq
   end
 end
