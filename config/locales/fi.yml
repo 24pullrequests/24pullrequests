@@ -29,28 +29,28 @@ fi:
               required_for_confirmation: "%{attribute} tarvitaan vahvistukseen"
   api:
     callback:
-      details: 
-      title: 
-    description: 
+      details:
+      title:
+    description:
     organisations:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
     pagination:
-      details: 
-      title: 
+      details:
+      title:
     projects:
-      details: 
-      title: 
+      details:
+      title:
     pull_requests:
-      details: 
-      meta_details: 
-      title: 
-    title: 
+      details:
+      meta_details:
+      title:
+    title:
     users:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
   cancel: Peruuta
   change: Vaihda
   claim: Lunasta
@@ -59,7 +59,7 @@ fi:
   dashboard:
     christmas_activity: Täältä näet kaikki tapahtumat mitä olemme jäljittäneet sinulle
       tämän Joulun juoksusta.
-    gift_it: 
+    gift_it:
     give_a_gift: Näyttää siltä että et ole lahjoittanut yhtään koodia tänään. Haluaisitko
       lahjoittaa
     help_out: 'Etkö keksi projektia mitä haluaisit auttaa? Me olemme laittaneet yhteen
@@ -72,7 +72,7 @@ fi:
       jäävät.
     cancel: Muutin mieleni, vie minut takaisin!
     confirm: Vahvista poisto
-    email_preferences_link: 
+    email_preferences_link:
     notification_info: jos haluat lopettaa pelkästään sähköpostien vastaan ottamiset
       voit vaihtaa sinun  %{email_preferences_link}.
     title: Poista tili
@@ -80,17 +80,17 @@ fi:
   developers_using_language: Kehittäjää käyttää %{language}
   edit: Muokkaa
   everything: Kaikki
-  exempli_gratia: 
+  exempli_gratia:
   follow_user: Seuraa @%{twitter}
   gifts:
-    calendar_link: 
+    calendar_link:
     description: Täällä voit hallita vetopyyntöjäsi ja valita &amp; curate your own
       set of "24 Pull Requests".
     form:
-      date: 
-      gift_it: 
-      pull_request: 
-      tweet: 
+      date:
+      gift_it:
+      pull_request:
+      tweet:
     give: Lahjoita jotain merkittävää rakastamaasi projektiin
     none: Mitään ei ole vielä lahjoitettu.
     title: Lahjoitettu koodi
@@ -116,7 +116,7 @@ fi:
       että he rakastavat vastaan ottaa vetopyyntöjä!
     greeting: "'Tis the season"
     involved:
-      contributing_path: 
+      contributing_path:
       description: On olemassa tuhansia tapoja osallistua avoimen lähdekoodin projekteihin,
         paranna dokumentointia, auta korjaamaan olemassa olevia ongelmia ja bugeja,
         paranna koodin laatua ja testaa kattavuus, tai lisää puuttuvia ominaisuuksia.
@@ -172,21 +172,21 @@ fi:
     profile: Profiili
   no_suggestions: Et ole vielä suositellut yhtään projektia.
   open_source_yey: Avoin lähdekoodi FTW!
-  or: 
+  or:
   organisations:
     members:
-      one: 
-      other: 
+      one:
+      other:
   preferences:
-    coderwall: 
-    coderwall_username: 
+    coderwall:
+    coderwall_username:
     delete: Haluatko poistaa tilisi?
     form:
-      daily: 
-      email: 
-      email_frequency: 
-      never: 
-      weekly: 
+      daily:
+      email:
+      email_frequency:
+      never:
+      weekly:
     frequency_message: Valitsemallasi nopeudella, lähetämme hyödyllisiä sähköposteja
       tästä lähtien siihen asti kunnes projekti on ohi, korostaen suositeltuja projekteja
       joita saatat olla kiinnostunut auttamaan. Bonuksena, Otamme vapauden yksilöidä
@@ -203,7 +203,7 @@ fi:
   preferred_languages: Toivotut kielet
   projects:
     admin:
-      search: Hae Github repon mukaan
+      search: Hae GitHub repon mukaan
       title: Hallitse projekteja
     claim: Onko yhtään ehdottamistasi projekteista listaamatta? Lunasta ne!
     edit:
@@ -214,11 +214,11 @@ fi:
       avoimen lähdekoodin projekteista jotka tykkäisivät vetopyynnöistäsi.
     new:
       form:
-        github_url: 
-        main_language: 
-        project_name: 
-        submit_project: 
-        summary: 
+        github_url:
+        main_language:
+        project_name:
+        submit_project:
+        summary:
       info: Yksi tapa millä kannustamme osallistujia avoimen lähdekoodin yhteisöön
         on että annamme käyttäjän tietää suosituista projekteista joita voisi olla
         hyötyä auttaa. Me valitsemme meidän suosikit, mutta olemme aina avoimia ehdotuksille.
@@ -250,7 +250,7 @@ fi:
   suggest_project: Suosittele projektia
   suggested_projects: Suositellut Projektit
   suggestions:
-    title: 
+    title:
   twitter:
     account_linked: Twitter tilisi on yhdistetty! Lähetämme tweetin aina kun avaat
       vetopyynnön.
@@ -260,15 +260,15 @@ fi:
       tooltip: Jos yhdistät twitter tilisi, lähetämme tweetin aina kun avaat vetopyynnön!
   user:
     coderwall:
-      achieved_by: 
-      error_github_not_connected: 
-      error_no_user: 
-      success: 
-      title: 
-      update_button: 
+      achieved_by:
+      error_github_not_connected:
+      error_no_user:
+      success:
+      title:
+      update_button:
     grinchy_message: "%{user} on grinch %{year} vuonna lahjoittamatta yhtään vetopyyntöä.
       Bah humbug!"
-    organisations: 
+    organisations:
     pull_request_count: "%{user} on tehnyt %{count} vetopyyntöä tähän mennessä vuonna
       %{year}"
   view_all: Katso kaikki
