@@ -18,7 +18,7 @@ class StaticController < ApplicationController
 
         marker.lat user.lat
         marker.lng user.lng
-      end
+      end.reject { |m| m.empty? }
     end
   end
 
