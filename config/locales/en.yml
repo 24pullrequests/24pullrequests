@@ -3,7 +3,7 @@ en:
   about:
     description: 24 Pull Requests is a little project to promote open source collaboration
       during December.
-    idea: The idea is basically "Send 24 pull requests between December 1 and December 24",
+    idea: The idea is basically "Send 24 pull requests between December 1st and December 24th",
       encouraging developers to give back to open source with little
       gifts of code throughout December.
     more_info: The site also provides suggested projects to help with, guides for
@@ -160,7 +160,7 @@ en:
   homepage:
     about: What’s it all about?
     about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers
-      around the world to send 24 pull requests between December 1 and December 24.</p>
+      around the world to send 24 pull requests between December 1st and December 24th.</p>
       <p>This is the site to help promote the project, highlighting why, how and where
       to send your pull requests.</p><p>Log in with your GitHub account and we’ll
       track and highlight all your pull requests and suggest projects to work on.</p>"

@@ -8,7 +8,7 @@
 
 > **Giving back little gifts of code**
 
-24 Pull Requests is a yearly initiative to encourage developers around the world to send 24 pull requests between December 1 and December 24.
+24 Pull Requests is a yearly initiative to encourage developers around the world to send 24 pull requests between December 1st and December 24th.
 
 This is the site to help promote the project, highlighting why, how and where to send your pull requests.
 
