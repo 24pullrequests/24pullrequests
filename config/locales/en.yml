@@ -270,6 +270,11 @@ en:
     preferences: Preferences
     profile: Profile
   no_suggestions: You haven’t suggested any projects yet.
+  nov_reminder:
+    how_to_contribute:
+      to find out how to contribute 24 pull requests between December 1st and December 24th.
+      Your contributions can be tiny, as simple as fixing a typo, to something incredible.
+      Speed up Rails. Document Express. Fix a bug that you reported.
   open_source_yey: Open Source FTW!
   or: or
   organisations:
