@@ -7,7 +7,7 @@ tr:
       Aralık ayı boyunca küçük hediyeler ile geliştircilerin cesaretlendirilmesidir.
     more_info: Bu site ilgili projeleri de destekler ve her gün gönderilen pull request'ler
       ile onlar destek ve rehber olur.
-    on_github: 'Bu sitenin geliştirilmesi Github üzerindedir:'
+    on_github: 'Bu sitenin geliştirilmesi GitHub üzerindedir:'
     on_twitter: 'Twitter''da da varız:'
     sponsors:
       details: 24 Pull Requests sponsorlar ve bağış yapanlara teşekkürlerini sunar.
@@ -105,7 +105,7 @@ tr:
     about_text: "<p>24 Pull Requests, dünyadaki bütün geliştiricileri Aralık ayından
       Noel'e teşvik etmek için oluşmuş yıllık bir girişimdir.</p> <p>Bu site projelere
       pull request'lerinizin neden, nasıl ve nereye göndereceliğine yardımcı olur.
-      </p><p>Github hesabınız ile giriş yapın ve sizlerin bütün pull request'lerinizi
+      </p><p>GitHub hesabınız ile giriş yapın ve sizlerin bütün pull request'lerinizi
       izleyelim ve sizler için üzerinde çalışabileceğeniz projeler önerelim.</p>"
     badges:
       amazing: Continuous Sync - You're an open source machine, send 24 pull requests
@@ -198,7 +198,7 @@ tr:
       weekly: Haftalık
     frequency_message: Seçtiğiniz sıklıkta proje bitene kadar sizlere projeleri göndereceğiz
       ve geliştirilmesi düşünülen projeler önereceğiz. Kişisel ayarlarınızı değişterebilir,
-      Github hesabınızı değiştirebilirsiniz. Aynı zamanda bildiğiniz programlama dillerinizi
+      GitHub hesabınızı değiştirebilirsiniz. Aynı zamanda bildiğiniz programlama dillerinizi
       işaretleyip, projeleri takip edebilirsiniz.
     hint:
       confirm_email: Size email olarak gönderilen linki onaylayınız.
@@ -211,7 +211,7 @@ tr:
   preferred_languages: Tercih edilen programlama dilleri
   projects:
     admin:
-      search: Github deposunda ara.
+      search: GitHub deposunda ara.
       title: Projeleri Yönelt
     claim: "Önerdiğiniz projeler listede yok mu? Yayınlanmasını talep edin!"
     edit:

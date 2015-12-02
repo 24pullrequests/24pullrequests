@@ -8,7 +8,7 @@ pt_br:
       com pequenos códigos de presente durante dezembro.
     more_info: O site também fornece sugestões de projetos para ajudar, guias para
       contribuição e destaca ótimos pull requests enviados todos os dias.
-    on_github: 'O desenvolvimento deste site é open source no Github:'
+    on_github: 'O desenvolvimento deste site é open source no GitHub:'
     on_twitter: 'Também estamos no Twitter:'
     sponsors:
       details: 24 Pull Requests foi possível graças a ajuda e a doações de alguns
@@ -101,7 +101,7 @@ pt_br:
   edit: Editar
   events:
     admin:
-      search: Busque por repositório no Github
+      search: Busque por repositório no GitHub
       title: Gerenciar projetos
     details: Você não precisa participar sozinho este natal! Organize um evento do
       24 Pull Requests na sua empresa, meetup ou na sua comunidade local. Ou você
@@ -155,7 +155,7 @@ pt_br:
     about_text: "<p>24 Pull Requests é uma iniciativa anual para encorajar desenvolvedores
       de todo o planeta a enviar pull requests todos os dias do mês de dezembro até
       o natal.</p> <p> Este site ajuda a promover esse projeto, destacando porque,
-      como e onde enviar seu pull requests.</p><p>Entre com sua conta do Github e
+      como e onde enviar seu pull requests.</p><p>Entre com sua conta do GitHub e
       nós vamos monitorar e destacar todos os seus pull requests e seus projetos sugeridos.</p>"
     badges:
       amazing: Continous Sync - Você é uma maquina de pull request, enviou 24 pull
@@ -259,7 +259,7 @@ pt_br:
     frequency_message: Na frequência que você escolher, até que o projeto esteja finalizado,
       nós enviaremos para você emails sugerindo alguns projetos que você pode contribuir.
       Como bônus, nós tomaremos a liberdade de personalizar nossas sugestões com base
-      nas linguaguens mais utilizadas por você na sua conta do Github. Como alternativa
+      nas linguaguens mais utilizadas por você na sua conta do GitHub. Como alternativa
       você pode escolher as linguagens abaixo
     hint:
       confirm_email: Por favor, confirme seu email usando o link que enviados para
@@ -276,7 +276,7 @@ pt_br:
   preferred_languages: Linguagens de preferência
   projects:
     admin:
-      search: Buscar por repositório do Github
+      search: Buscar por repositório do GitHub
       title: Organizar projetos
     claim: Algum projeto que você sugeriu não está na lista? Reclame!
     edit:
@@ -287,7 +287,7 @@ pt_br:
       de brilhantes projetos open source que amariam um pull request seu.
     new:
       form:
-        github_url: URL no Github
+        github_url: URL no GitHub
         main_language: Lingua principal
         project_name: Nome do projeto
         submit_project: Enviar projeto
@@ -338,7 +338,7 @@ pt_br:
     coderwall:
       achieved_by: Medalha conquistada por
       error_github_not_connected: O usuário %{username} não utliza a mesma conta de
-        Github para conectar com o 24 Pull Requests e com Coderwall.
+        GitHub para conectar com o 24 Pull Requests e com Coderwall.
       error_no_user: Nenhum usuário encontrado com este nome.
       success: Seu usuário no Coderwall foi atualizado com sucesso!
       title: Medalhas Coderwall

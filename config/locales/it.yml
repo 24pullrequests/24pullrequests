@@ -8,7 +8,7 @@ it:
       source con piccoli codici in regalo.
     more_info: Il sito segnala progetti sui quali lavorare, guide per contribuire
       e mette in rilievo ogni giorno le pull request più interessanti.
-    on_github: 'Lo sviluppo di questo sito web è open source e disponibile su Github:'
+    on_github: 'Lo sviluppo di questo sito web è open source e disponibile su GitHub:'
     on_twitter: 'Siamo anche su Twitter:'
     sponsors:
       details: 24 Pull Requests è reso possibile grazie al generoso aiuto e alle donazioni
@@ -114,7 +114,7 @@ it:
     about_text: "<p>24 Pull Requests è un iniziativa annuale che incoraggia gli sviluppatori
       di tutto il mondo ad inviare pull request ogni giorno a dicembre, fino a Natale.</p>
       <p>Questo sito sostiene il progetto e spiega perché, come e dove inviare una
-      pull request.</p><p>Effettua il Login con il tuo account Github, terremo traccia
+      pull request.</p><p>Effettua il Login con il tuo account GitHub, terremo traccia
       delle tue pull request e ti suggeriremo progetti su cui lavorare.</p>"
     badges:
       amazing: Sync Continuo - Sei una macchina dell'open source, manda 24 pull request
@@ -209,7 +209,7 @@ it:
       costruttive alla frequenza che desideri, mettendo in evidenza i progetti ai
       quali farebbe comodo un contributo. Come bonus, ci prendiamo la libertà di personalizzare
       i nostri suggerimenti in base alle tue conoscenze linguistiche, dopo aver analizzato
-      le tue repository su Github. In alternativa, puoi sempre scegliere i linguaggi
+      le tue repository su GitHub. In alternativa, puoi sempre scegliere i linguaggi
       qui sotto.
     hint:
       confirm_email: Conferma il tuo indirizzo email tramite il link che ti abbiamo
@@ -223,7 +223,7 @@ it:
   preferred_languages: Lingue preferite
   projects:
     admin:
-      search: Cerca nei Repo di Github
+      search: Cerca nei Repo di GitHub
       title: Gestisci i progetti
     claim: Nessuno dei progetti da te suggeriti è nell'elenco? Richiedili ora!
     edit:
@@ -283,7 +283,7 @@ it:
   user:
     coderwall:
       achieved_by: Badge ottenuti da
-      error_github_not_connected: L'account Github legato a Coderwall dell'utente
+      error_github_not_connected: L'account GitHub legato a Coderwall dell'utente
         %{username} non è lo stesso con cui ti sei autenticato a 24pullrequests.
       error_no_user: Nome utente non trovato.
       success: Abbiamo aggiornato il tuo nome utente Coderwall!
