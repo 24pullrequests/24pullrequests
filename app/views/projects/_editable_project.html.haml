@@ -9,9 +9,9 @@
                                  data: { confirm: 'Are you sure you want to delete this project?' },
                                  class: 'btn btn-danger pull-right'
       - else
-        = link_to t("deactive"), path_for_project(project, admin),
+        = link_to t("deactivate"), path_for_project(project, admin),
                                 method: :delete,
-                                data: { confirm: "Are you sure you want to deactive this project?" },
+                                data: { confirm: "Are you sure you want to deactivate this project?" },
                                 class: 'btn btn-danger pull-right'
         = link_to t("edit"), edit_path_for_project(project, admin), class: 'btn pull-right'
 

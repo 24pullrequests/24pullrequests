@@ -65,7 +65,7 @@ zh_Hant:
     not_december: "24 Pull Requests 是在 12 月 1 到 24 舉辦的活動，到時候再回來！"
     pull_requests: "這邊列出了參與者們最新送出的 Pull Requests。現在送出 Pull Request 就也可以看到你的唷！"
     synchronize: "同步 Pull Requests"
-  deactive: "撤銷"
+  deactivate: "撤銷"
   delete_account:
     are_you_sure: "確定要刪除帳號嗎？刪除你的帳號會刪除你在 24 Pull Requests 上的使用者資料以及 Pull Request 記錄。你推薦的專案並不會被刪除。"
     cancel: "我改變主意了"

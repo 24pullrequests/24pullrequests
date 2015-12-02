@@ -85,7 +85,7 @@ en:
     pull_requests: Wonder what people are up to this holiday? Check out these pull requests,
       or submit a pull request now and find yours here!
     synchronize: Synchronize Pull Requests
-  deactive: Deactive
+  deactivate: Deactivate
   delete: Delete
   delete_account:
     are_you_sure: We just wanted to make sure you really do wish to delete your account.
@@ -209,7 +209,7 @@ en:
       get one issue from your favorite repo per day to help you dig deeper, learn
       more, and stay involved with the code you rely on.
     docsdoctor: Sign up to receive documented method or class in your inbox every
-      day from your favorite GitHub repos. If you're really pro, recieve un-documented
+      day from your favorite GitHub repos. If you're really pro, receive un-documented
       methods or classes and super charge your commit history.
     rubyissues: A guided tour of significant, compelling, bizarre, tricky
       and all together worthwhile issues within open source Ruby projects.

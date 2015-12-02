@@ -64,7 +64,7 @@ describe Project, type: :model do
     end
   end
 
-  context '#deactive' do
+  context '#deactivate' do
     let(:project) { FactoryGirl.create(:project) }
 
     it 'sets the project to inactive' do
