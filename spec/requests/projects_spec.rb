@@ -103,14 +103,14 @@ describe 'Projects', type: :request do
         expect(page).to have_css('.python')
       end
 
-      it 'can deactive a project' do
-        first(:link, 'Deactive').click
+      it 'can deactivate a project' do
+        first(:link, 'Deactivate').click
 
         is_expected.to have_content "#{user_project.name} has been deactivated."
       end
 
       it 'can delete a project' do
-        first(:link, 'Deactive').click
+        first(:link, 'Deactivate').click
         is_expected.to have_content "#{user_project.name} has been deactivated."
 
         first(:link, 'Delete').click
