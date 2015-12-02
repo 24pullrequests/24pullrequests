@@ -70,7 +70,7 @@ es:
     pull_requests: ¿Se pregunta que ha hecho la gente estas vacaciones? Echa un vistazo a
       estos pull requests, o envia un pull request y verás el tuyo ¡Aquí!
     synchronize: Sincronizar Pull Requests
-  deactive: Desactivar
+  deactivate: Desactivar
   delete: Borrar
   delete_account:
     are_you_sure: Queremos estar seguro que quieres eliminar tu cuenta. Este elimnar

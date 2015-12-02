@@ -42,8 +42,8 @@ describe 'Admin Projects', type: :request do
       is_expected.to have_content 'Pugalicious'
     end
 
-    it 'deactives a project' do
-      first(:link, 'Deactive').click
+    it 'deactivates a project' do
+      first(:link, 'Deactivate').click
 
       is_expected.to have_content "#{projects.first.name} has been deactivated."
     end

@@ -85,7 +85,7 @@ en:
     pull_requests: Wonder what people are up to this holiday? Check out these pull requests,
       or submit a pull request now and find yours here!
     synchronize: Synchronize Pull Requests
-  deactive: Deactive
+  deactivate: Deactivate
   delete: Delete
   delete_account:
     are_you_sure: We just wanted to make sure you really do wish to delete your account.
