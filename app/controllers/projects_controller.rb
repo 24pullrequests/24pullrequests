@@ -74,7 +74,7 @@ class ProjectsController < ApplicationController
 
   def current_user_languages
     @current_user_languages ||= begin
-      if session[:filter_options]
+      if session[:filter_options] && session[:filter_options][:languages].present?
         session[:filter_options][:languages]
       elsif logged_in?
         current_user.languages
