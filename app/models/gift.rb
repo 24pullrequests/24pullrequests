@@ -21,7 +21,7 @@ class Gift < ActiveRecord::Base
   delegate :title, :issue_url, to: :pull_request_with_archive, prefix: :pull_request
 
   def pull_request_with_archive
-    pull_request || archived_pull_request
+    date.year == CURRENT_YEAR ? pull_request : archived_pull_request
   end
 
   scope :year, -> (year) { where('EXTRACT(year FROM "created_at") = ?', year) }
