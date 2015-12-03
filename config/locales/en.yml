@@ -15,7 +15,7 @@ en:
         of some great sponsors.
       get_in_touch: 'If you’d like to get in touch about sponsorship or anything else,
         drop us an email:'
-      thanks: Many thanks to...
+      thanks: Many thanks to...d
       title: Sponsors
     title: About 24 Pull Requests
   about_us: About
@@ -304,7 +304,7 @@ en:
     hint:
       confirm_email: Please confirm your email address using the link we’ve sent you.
     information: You can always change your email preferences later.
-    languages: Which languages do you know?
+    languages: Which languages do prefer?
     remove: Unlink Twitter Account
     save: Save
     save_and_continue: Save and Continue
