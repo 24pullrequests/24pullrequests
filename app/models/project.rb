@@ -57,22 +57,22 @@ class Project < ActiveRecord::Base
     github_url.gsub(/^(((https|http|git)?:\/\/(www\.)?)|git@)github.com(:|\/)/i, '').gsub(/(\.git|\/)$/i, '')
   end
 
+  def get_github_data(data_type, nickname, token, months_ago, options)
+    date = (Time.zone.now - months_ago.months).utc.iso8601
+    options.merge! since: date
+    GithubClient.new(nickname, token).send(data_type.to_sym, github_repository, options)
+  end
+
   def deactivate!
     update_attribute(:inactive, true)
   end
 
   def issues(nickname, token, months_ago = 6, options = {})
-    date = (Time.zone.now - months_ago.months).utc.iso8601
-    options.merge! since: date
-
-    GithubClient.new(nickname, token).issues(github_repository, options)
+    get_github_data('issues', nickname, token, months_ago, options)
   end
 
   def commits(nickname, token, months_ago = 3, options = {})
-    date = (Time.zone.now - months_ago.months).utc.iso8601
-    options.merge! since: date
-
-    GithubClient.new(nickname, token).commits(github_repository, options)
+    get_github_data('commits', nickname, token, months_ago, options)
   end
 
   def repo(nickname, token)
