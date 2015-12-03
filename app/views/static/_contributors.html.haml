@@ -12,7 +12,7 @@
     - users.each_slice(6) do |row|
       %ul.thumbnails.clearfix
         - row.each do |user|
-          %li.collaborator.col-md-2
+          %li.collaborator.col-md-2.col-sm-4.col-xs-6
             .thumbnail
               = link_to image_tag(user.avatar_url(200), :width => 200, :height => 200, :alt => user.nickname).html_safe, user
               .caption
