@@ -41,7 +41,7 @@ rbenv global 2.2.3
 ```
 
 Next, you'll need to make sure that you have PostgreSQL installed. This can be
-done easily on OSX using [Homebrew](http://mxcl.github.io/homebrew/) or by using [http://postgresapp.com](http://postgresapp.com). Please see these [further instructions for installing Postgres via homebrew](http://www.mikeball.us/blog/setting-up-postgres-with-homebrew/).
+done easily on OSX using [Homebrew](http://mxcl.github.io/homebrew/) or by using [http://postgresapp.com](http://postgresapp.com). Please see these [further instructions for installing Postgres via Homebrew](http://www.mikeball.us/blog/setting-up-postgres-with-homebrew/).
 
 ```bash
 brew install postgres phantomjs
@@ -75,14 +75,14 @@ bundle exec rake db:create:all
 bundle exec rake db:migrate
 ```
 
-And we can also add some sample data with the **seed** task
+And we can also add some sample data with the **seed** task.
 
 ```bash
 bundle exec rake db:seed
 ```
 
-If you are working on anything related to the email-generation code, you can use [mailcatcher](https://github.com/sj26/mailcatcher)
-Since we use bundler, please read the [following](https://github.com/sj26/mailcatcher#bundler) before using mailcatcher
+If you are working on anything related to the email-generation code, you can use [MailCatcher](https://github.com/sj26/mailcatcher).
+Since we use Bundler, please read the [following](https://github.com/sj26/mailcatcher#bundler) before using MailCatcher.
 
 Almost there! Now all we have to do is start up the Rails server and point
 our browser to <http://localhost:3000>
