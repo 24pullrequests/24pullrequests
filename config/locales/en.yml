@@ -3,8 +3,8 @@ en:
   about:
     description: 24 Pull Requests is a little project to promote open source collaboration
       during December.
-    idea: The idea is basically "Send a pull request every day in December leading
-      up to Christmas", encouraging developers to give back to open source with little
+    idea: The idea is basically "Send 24 pull requests between December 1st and December 24th",
+      encouraging developers to give back to open source with little
       gifts of code throughout December.
     more_info: The site also provides suggested projects to help with, guides for
       contributing and highlights good pull requests submitted each day.
@@ -160,7 +160,7 @@ en:
   homepage:
     about: What’s it all about?
     about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers
-      around the world to send a pull request every day in December up to Christmas.</p>
+      around the world to send 24 pull requests between December 1st and December 24th.</p>
       <p>This is the site to help promote the project, highlighting why, how and where
       to send your pull requests.</p><p>Log in with your GitHub account and we’ll
       track and highlight all your pull requests and suggest projects to work on.</p>"
@@ -270,6 +270,11 @@ en:
     preferences: Preferences
     profile: Profile
   no_suggestions: You haven’t suggested any projects yet.
+  nov_reminder:
+    how_to_contribute:
+      to find out how to contribute 24 pull requests between December 1st and December 24th.
+      Your contributions can be tiny, as simple as fixing a typo, to something incredible.
+      Speed up Rails. Document Express. Fix a bug that you reported.
   open_source_yey: Open Source FTW!
   or: or
   organisations:

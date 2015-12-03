@@ -140,7 +140,7 @@ ja:
   homepage:
     about: What's it all about?
     about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers
-      around the world to send a pull request every day in December up to Christmas.</p>
+      around the world to send 24 pull requests between December 1st and December 24th.</p>
       <p>This is the site to help promote the project, highlighting why, how and where
       to send your pull requests.</p><p>Log in with your GitHub account and we'll
       track and highlight all your pull requests and suggest projects to work on.</p>"
@@ -221,6 +221,11 @@ ja:
     preferences: "設定"
     profile: "プロフィール"
   no_suggestions: You haven't suggested any projects yet.
+  nov_reminder:
+    how_to_contribute:
+      to find out how to contribute 24 pull requests between December 1st and December 24th.
+      Your contributions can be tiny, as simple as fixing a typo, to something incredible.
+      Speed up Rails. Document Express. Fix a bug that you reported.
   open_source_yey: Open Source FTW!
   or: or
   organisations:
