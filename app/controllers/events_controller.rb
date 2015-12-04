@@ -3,8 +3,8 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
-    @upcoming_events = Event.where(['start_time >= ?', Date.today]).order('start_time')
-    @past_events = Event.where(['start_time < ?', Date.today]).order('start_time DESC')
+    @upcoming_events = Event.where(['start_time >= ?', Time.zone.today]).order('start_time')
+    @past_events = Event.where(['start_time < ?', Time.zone.today]).order('start_time DESC')
   end
 
   def new

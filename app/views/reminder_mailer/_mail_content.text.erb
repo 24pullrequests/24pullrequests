@@ -1,6 +1,6 @@
 Hi <%= @user.nickname %>,
 
-Only <%= 25 - Date.today.day %> <% if (25 - Date.today.day) > 1 %>days<%else%>day<%end%> left until Christmas!
+Only <%= 25 - Time.zone.today.day %> <% if (25 - Time.zone.today.day) > 1 %>days<%else%>day<%end%> left until Christmas!
 
 We've got some suggested projects for you to send pull requests to <%= this_time %>
 

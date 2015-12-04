@@ -1,6 +1,6 @@
 .container.block.intro
   .row
-    - unless Date.today.between?(Date.new(CURRENT_YEAR, 10, 30), Date.new(CURRENT_YEAR, 12, 24))
+    - unless Time.zone.today.between?(Date.new(CURRENT_YEAR, 10, 30), Date.new(CURRENT_YEAR, 12, 24))
       = render :partial => 'finished'
   .row
     .col-md-4.intro-block
