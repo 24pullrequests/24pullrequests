@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Downloader do
   let(:user) { FactoryGirl.create(:user) }
   let(:downloader) { Downloader.new(user) }
-  let(:gifttoday) { user.gift_for(Date.today) }
+  let(:gifttoday) { user.gift_for(Time.zone.today) }
 
   describe '#get_organisations' do
     before do

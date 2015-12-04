@@ -7,7 +7,7 @@
       - if gift.present? && gift.user == current_user
         .remove-gift
           = link_to raw("&times;"), gift_path(gift), :title => "Remove gift", :method => :delete, "data-confirm" => "Remove this gift?"
-      %span{ :class => date == Date.today ? 'calendar-mday calendar-mday-today' : 'calendar-mday' }
+      %span{ :class => date == Time.zone.today ? 'calendar-mday calendar-mday-today' : 'calendar-mday' }
         %span.visible-xs-inline> 12/
         = date.mday
       - if gift.present?

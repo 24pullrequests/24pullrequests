@@ -2,8 +2,8 @@
 
 %p
   Only
-  = 25 - Date.today.day
-  - if (25 - Date.today.day) > 1
+  = 25 - Time.zone.today.day
+  - if (25 - Time.zone.today.day) > 1
     days left until Christmas!
   - else
     day left until Christmas!
