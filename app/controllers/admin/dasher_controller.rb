@@ -11,7 +11,8 @@ class Admin::DasherController < ApplicationController
 		head :ok
 	end
 
-	private 
+	private
+	
 	def check_api_key
 		if ENV['API_KEY'] != params['api_key']
 			render :json => { error: "Error incorrect api key" }, :status => :bad_request
