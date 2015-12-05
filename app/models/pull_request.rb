@@ -46,7 +46,7 @@ class PullRequest  < ActiveRecord::Base
     return unless Rails.env.production?
     Typhoeus::Request.new(ENV['FIREHOSE_URL'],
       method: :post,
-      body: self.to_json,
+      body: self.to_json(:include => {:user => {:only => [:uid,:nickname, :name, :blog, :location]}}),
       headers: { 'Content-Type' => 'application/json' }).run
   end
 
