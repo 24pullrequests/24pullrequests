@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.3'
+ruby '2.1.1'
 
 gem 'rails', '4.2.5'
 
@@ -30,6 +30,7 @@ gem 'gmaps4rails'
 gem 'geocoder'
 gem 'lodash-rails'
 gem 'mime-types', '2.6.2' # LOCKED DOWN per issue #299
+gem 'typhoeus'
 
 group :development do
   gem 'spring'
