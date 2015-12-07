@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
   def assign_from_auth_hash(hash)
     # do not update the email address in case the user has updated their
     # email prefs and used a new email
-    ignored_fields = %i(email name blog location)
+    ignored_fields = %i(email name blog)
     update_attributes(AuthHash.new(hash).user_info.except(*ignored_fields))
   end
 
