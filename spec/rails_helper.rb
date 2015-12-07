@@ -23,6 +23,7 @@ require 'rspec/collection_matchers'
 # require 'rspec/autorun'
 require 'shoulda-matchers'
 require 'webmock'
+require 'webmock/rspec'
 
 OmniAuth.config.test_mode = true
 

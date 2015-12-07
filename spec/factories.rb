@@ -25,6 +25,7 @@ FactoryGirl.define do
     email
     gravatar_id { Faker::Internet.email }
     token { SecureRandom.hex }
+    location { Faker::Address.country }
   end
 
   factory :skill do
