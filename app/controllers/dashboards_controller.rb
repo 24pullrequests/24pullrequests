@@ -41,7 +41,7 @@ class DashboardsController < ApplicationController
 
   def resend_confirmation_email
     current_user.send_confirmation_email
-    redirect_to :back, notice: 'Confirmation email sent. Please check your inbox.'
+    redirect_to resend_redirect_path, notice: 'Confirmation email sent. Please check your inbox.'
   end
 
   def confirm_email
@@ -85,5 +85,9 @@ class DashboardsController < ApplicationController
   def set_locale_to_cookie(locale)
     cookies[:locale] = { value:   locale,
                          expires: Time.zone.now + 36_000 }
+  end
+
+  def resend_redirect_path
+    request.env['HTTP_REFERER'] ? :back : dashboard_path
   end
 end
