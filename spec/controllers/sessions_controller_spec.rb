@@ -15,12 +15,12 @@ describe SessionsController, type: :controller do
     end
 
     it "updates the user's particulars" do
-      expect(User.find_by_auth_hash(user_hash).location).to eq('georgia')
+      expect(User.find_by_auth_hash(session_spec_user_hash).location).to eq('georgia')
 
-      request.env['omniauth.auth'] = user_hash # note new location!
+      request.env['omniauth.auth'] = session_spec_user_hash # note new location!
       post :create, {provider: :github}, format: :json
 
-      expect(User.find_by_auth_hash(user_hash).location).to eq('london')
+      expect(User.find_by_auth_hash(session_spec_user_hash).location).to eq('london')
     end
   end
 
@@ -44,7 +44,7 @@ describe SessionsController, type: :controller do
   end
 end
 
-def user_hash
+def session_spec_user_hash
   { 'provider'    => 'github',
     'uid'         => 'uid',
     'info'        => {
