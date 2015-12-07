@@ -159,6 +159,7 @@ ActiveRecord::Schema.define(version: 20151127190033) do
     t.string   "location",            limit: 255
     t.decimal  "lat",                             precision: 8, scale: 6
     t.decimal  "lng",                             precision: 9, scale: 6
+    t.boolean  "thank_you_email_sent", default: false
   end
 
   add_index "users", ["nickname"], name: "index_users_on_nickname", unique: true, using: :btree
