@@ -29,28 +29,28 @@ el:
               required_for_confirmation: "%{attribute} χρειάζεται για επιβεβαίωσηn"
   api:
     callback:
-      details: 
-      title: 
-    description: 
+      details:
+      title:
+    description:
     organisations:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
     pagination:
-      details: 
-      title: 
+      details:
+      title:
     projects:
-      details: 
-      title: 
+      details:
+      title:
     pull_requests:
-      details: 
-      meta_details: 
-      title: 
-    title: 
+      details:
+      meta_details:
+      title:
+    title:
     users:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
   change: "Αλλαξε"
   claim: "Διεκδίκηση"
   clear: "Αφαίρεση"
@@ -71,7 +71,7 @@ el:
       τη σελίδα, αλλά τα projects που έχεις εισηγηθεί θα μείνουν."
     cancel: "Άλλαξα γνώμη, πάρε με πίσω!"
     confirm: "Επιβεβαίωση διαγραφής"
-    email_preferences_link: 
+    email_preferences_link:
     notification_info: "Αν θέλεις απλά να σταμτήσεις να λαμβάνεις ειδοποιήσεις με
       email μπορείς να αλλάξεις τις %{email_preferences_link}."
     title: "Διαγραφη λογαριασμου"
@@ -111,17 +111,17 @@ el:
       view_event_details: View event details
     title: "Εκδηλώσεις"
   everything: "Ολα"
-  exempli_gratia: 
+  exempli_gratia:
   follow_user: "Ακολούθησε τον χρήστη @%{twitter}"
   gifts:
-    calendar_link: 
+    calendar_link:
     description: Εδώ μπορείς να διαχειριστείς τα pull requests σου και να διαρρυθμίσεις
       τη δική σου συλλογή των "24 Pull Requests".
     form:
-      data: 
-      gift_it: 
-      pull_request: 
-      tweet: 
+      data:
+      gift_it:
+      pull_request:
+      tweet:
     give: "Δωρισε κατι ουσιαστικο σε ενα project που αγαπας"
     none: "Δεν έχεις δωρίσει κάτι."
     title: "Δωρισμενος Κωδικας"
@@ -138,7 +138,7 @@ el:
     badges:
       amazing: Continuous sync συγχρονισμός - Είσαι μιά μηχανή ανοικτού κώδικα, στείλε
         24 pull requests κατά τη διάρκεια του Δεκέμβρη
-      description: "Σε συνεργασία με το coderwall δημιουργήσαμε καταπληκτικές κονκάρδες
+      description: "Σε συνεργασία με το Coderwall δημιουργήσαμε καταπληκτικές κονκάρδες
         που μπορούν να ξεκλειδώσουν όσοι λάβουν μέρος."
       involved_link: Participant - Στείλε τουλάχιστον ένα pull request πριν τα Χριστούγεννα
       title: "Κερδισε κονκαρδες Coderwall"
@@ -148,7 +148,7 @@ el:
       μου έχει πεις πως αγαπούν να λαμβάνουν pull requests!"
     greeting: "'Tis the season"
     involved:
-      contributing_path: 
+      contributing_path:
       description: "Υπάρχουν πολλοί τρόποι που μπορείτε να βοηθήσετε ένα project ανοικτού
         κώδικα, βελτιώνοντας τις οδηγίες χρήσεις, διορθώνοντας υπάρχοντα προβλήματα,
         βελτιώνοντας την ποιότητα του κώδικα και προσθέτοντας tests η καινούριες λειτουργίες."
@@ -210,21 +210,21 @@ el:
     profile: "Προφιλ"
   no_suggestions: "Δεν έχεις εισηγηθεί projects ακόμη"
   open_source_yey: "Ανοικτός Κώδικα;. Για τη νίκη!"
-  or: 
+  or:
   organisations:
     members:
-      one: 
-      other: 
+      one:
+      other:
   preferences:
-    coderwall: 
-    coderwall_username: 
+    coderwall:
+    coderwall_username:
     delete: "Θέλεις να διαγράψεις το λογαριασμό σου;"
     form:
-      daily: 
-      email: 
-      email_frequency: 
-      never: 
-      weekly: 
+      daily:
+      email:
+      email_frequency:
+      never:
+      weekly:
     frequency_message: "Θα σου στέλνουμε e-mail με τη συχνότητα που θα επιλέξεις από
       τώρα μέχρι το τέλος του project, με κάποιες εισηγήσεις project στα οποία μπορεί
       να θέλεις να βοηθήσεις βάση των επιλογών σου."
@@ -251,11 +251,11 @@ el:
       μια λίστα με φανταστικά projects που χρειάζονται λίγη pull request αγάπη"
     new:
       form:
-        github_url: 
-        main_language: 
-        project_name: 
-        submit_project: 
-        summary: 
+        github_url:
+        main_language:
+        project_name:
+        submit_project:
+        summary:
       info: "Ένας απο τους τρόπους που ενθαρρύνουμε τη συμμετοχή στην κοινότητα Ανοικτού
         Κώδικα είναι λέγοντας στους χρήστες μας ποια projects χρειάζονται βοήθεια.
         Επιλέξαμε ήδη μερικά από τα αγαπημένα μας, αλλά ήμαστε ανοικτοί και σε άλλες
@@ -297,15 +297,15 @@ el:
         κάθε φορά που ανοίγεις ένα καινούριο pull request"
   user:
     coderwall:
-      achieved_by: 
-      error_github_not_connected: 
-      error_no_user: 
-      success: 
-      title: 
-      update_button: 
+      achieved_by:
+      error_github_not_connected:
+      error_no_user:
+      success:
+      title:
+      update_button:
     grinchy_message: "η/ο %{user} ειναι ενας καλικάντζαρος. Δεν έχει δωρίσει κανένα
       pull request για το %{year}!"
-    organisations: 
+    organisations:
     pull_request_count: "%{user} έχει δωρίσει συνολικά %{count} pull requests μέχρι
       τώρα για το %{year}"
   view_all: "Ολα"

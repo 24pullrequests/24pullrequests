@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
   def show
     @user      = User.find_by_nickname!(params[:id])
-    @calendar  = Calendar.new(Gift.giftable_dates(current_year), @user.gifts)
+    @calendar  = Calendar.new(Gift.giftable_dates(current_year), @user.gifts.year(current_year))
     respond_with @user
   end
 

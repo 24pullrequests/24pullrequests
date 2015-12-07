@@ -140,46 +140,37 @@ ja:
   homepage:
     about: What's it all about?
     about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers
-      around the world to send a pull request every day in December up to Christmas.</p>
+      around the world to send 24 pull requests between December 1st and December 24th.</p>
       <p>This is the site to help promote the project, highlighting why, how and where
       to send your pull requests.</p><p>Log in with your GitHub account and we'll
       track and highlight all your pull requests and suggest projects to work on.</p>"
     badges:
       amazing: Continuous Sync - You're an open source machine, send 24 pull requests
         during December, before Christmas
-      description: We've teamed up with coderwall and created some kickass badges
-        to unlock for participating.
+      description: 私たちは coderwall と提携して、24 Pull Requestsに参加するといくつかの最高なバッジをアンロックされるようにしました。
       involved_link: Participant - Get involved, send at least one pull request before
         Christmas
       title: Coderwall バッジをもらおう
     description: Giving back little gifts of code for Christmas
     event:
-      description: This year we are encouraging organisers around the world to hold
-        24 Pull Requests hack events. Get involved this Christmas.
-      host_an_event: Host an event
+      description: 今年は世界中で24 Pull Requests ハックイベントを主催することを推奨しています。このクリスマスに参加してください。
+      host_an_event: イベントを主催する
       title: "イベント"
-      view_events: View events
-    give_to_open_source: You've been benefiting from the use of open source projects
-      all year. Now is the time to say thanks to the maintainers of those projects,
-      and a little birdy tells me that they love receiving pull requests!
+      view_events: イベントを見る
+    give_to_open_source: あなたはオープンソースプロジェクトから通年にわたって恩恵を得られています。今こそ多くのオープンソースプロジェクトとそれをメンテナンスしてくれている人たちに感謝の言葉を伝えましょう。そしてPull Requestsを送られることは彼らはとても嬉しいことなのです。
     greeting: "クリスマスがきた"
     involved:
-      contributing_path: special page
-      description: 'There are lots of ways to get involved in an open source project:
-        improving documentation, helping fix existing issues and bugs, improving code
-        quality and test coverage, or adding missing features.'
-      special_page: We've prepared a %{contributing_path}, where you can find some
-        information about contributing.
-      take_a_look: If you are new to open source, please take a look.
+      contributing_path: 特別なページ
+      description: 'オープンソースプロジェクトに貢献する方法はたくさんあります。例えば、ドキュメントを向上させる、バグや問題の解決を手助けする、コード品質を向上させたり、テストカバレッジを上げる、不足している機能を追加するなど様々です。'
+      special_page: 私たちは、あなたがプロジェクトに貢献するための情報を見つけるために%{contributing_path}を用意しました。
+      take_a_look: もし、新しいオープンソースを探しているようであれば、ぜひ覗いてみてください。
       title: "参加しよう"
-    join_the_chat: Join the chat on Gitter, %{link_to_chat}.
+    join_the_chat: Gitter に参加してください（英語）, %{link_to_chat}.
     profile:
-      description: Contributing to open source projects is also a great way to build
-        your profile in the community and improve your CV.
-      getting_started: It's really easy to get started. Even small contributions can
-        be really valuable to a project.
+      description: オープンソースプロジェクトに貢献することは、コミュニティでのあなたのプロフィールを構築し、あなたの履歴書の価値を高めるはずです。
+      getting_started: このような貢献は簡単に始めることができます。たとえ小さな貢献でも、プロジェクトにはとても価値のあることなのです。
       title: "プロフィールを作ろう"
-    q_n_a: Questions & Answers
+    q_n_a: 質問と回答
     title: 24 Pull Requests
   how_to_contribute: "貢献するには？"
   information:
@@ -221,6 +212,11 @@ ja:
     preferences: "設定"
     profile: "プロフィール"
   no_suggestions: You haven't suggested any projects yet.
+  nov_reminder:
+    how_to_contribute:
+      to find out how to contribute 24 pull requests between December 1st and December 24th.
+      Your contributions can be tiny, as simple as fixing a typo, to something incredible.
+      Speed up Rails. Document Express. Fix a bug that you reported.
   open_source_yey: Open Source FTW!
   or: or
   organisations:

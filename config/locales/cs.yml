@@ -69,7 +69,7 @@ cs:
   edit: Upravit
   events:
     admin:
-      search: Hledat Github repositář
+      search: Hledat GitHub repositář
       title: Spravovat projekty
     details: Určitě nejsi jedin(ý/á) v okolí, kdo letošní Vánoce posílá pull requesty!
       Uspořádej 24 Pull Requests hack event ve své firmě, ve škole či pro lokální

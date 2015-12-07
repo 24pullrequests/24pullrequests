@@ -7,6 +7,7 @@ class Gift < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :pull_request
+  belongs_to :archived_pull_request, foreign_key: :pull_request_id
 
   validates :user, presence: true
   validates :pull_request, presence: true
@@ -17,7 +18,11 @@ class Gift < ActiveRecord::Base
                    inclusion:  { in:      proc { Gift.giftable_dates },
                                  message: 'your gift should be for the month of December.' }
 
-  delegate :title, :issue_url, to: :pull_request, prefix: true
+  delegate :title, :issue_url, to: :pull_request_with_archive, prefix: :pull_request
+
+  def pull_request_with_archive
+    date.year == CURRENT_YEAR ? pull_request : archived_pull_request
+  end
 
   scope :year, -> (year) { where('EXTRACT(year FROM "created_at") = ?', year) }
 

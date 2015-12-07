@@ -114,10 +114,10 @@ nb:
     badges:
       amazing: Continuous Sync - Du er en open-source maskin, send 24 pull requests
         i løpet av desember
-      description: Vi har samarbeidet med coderwall om å lage noen fantastiske badges
+      description: Vi har samarbeidet med Coderwall om å lage noen fantastiske badges
         som du kan låse opp ved å delta.
       involved_link: Participant - Vær involvert, send minst én pull request før jul
-      title: Tjen coderwall-badges
+      title: Tjen Coderwall-badges
     description: Gi små kodegaver til jul
     give_to_open_source: Du har hatt nytte av open-source prosjekter i hele år. Nå
       er tiden inne for å si takk til de som vedlikeholder disse prosjektene, og en
@@ -282,7 +282,7 @@ nb:
       error_github_not_connected: Brukeren %{username} har ikke den samme GitHub-konto
         koblet til Coderwall som du logget inn på 24pullrequests med.
       error_no_user: Ingen bruker funnet med dette navnet.
-      success: Oppdaterte ditt coderwall-brukernavn
+      success: Oppdaterte ditt Coderwall-brukernavn
       title: Coderwall badges
       update_button: Oppdatér
     grinchy_message: "%{user} er en grinch i %{year} med ingen pull requests. Humbug!"

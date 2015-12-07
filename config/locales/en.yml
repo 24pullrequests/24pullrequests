@@ -3,8 +3,8 @@ en:
   about:
     description: 24 Pull Requests is a little project to promote open source collaboration
       during December.
-    idea: The idea is basically "Send a pull request every day in December leading
-      up to Christmas", encouraging developers to give back to open source with little
+    idea: The idea is basically "Send 24 pull requests between December 1st and December 24th",
+      encouraging developers to give back to open source with little
       gifts of code throughout December.
     more_info: The site also provides suggested projects to help with, guides for
       contributing and highlights good pull requests submitted each day.
@@ -71,6 +71,7 @@ en:
   clear: Clear
   contributors:
     title: Contributors
+    location_privacy: All location data is sourced from public GitHub profiles of currently active users.
   dashboard:
     christmas_activity: This is where you can see all the activity we’ve tracked for
       you in the run up to Christmas.
@@ -84,7 +85,7 @@ en:
     pull_requests: Wonder what people are up to this holiday? Check out these pull requests,
       or submit a pull request now and find yours here!
     synchronize: Synchronize Pull Requests
-  deactive: Deactive
+  deactivate: Deactivate
   delete: Delete
   delete_account:
     are_you_sure: We just wanted to make sure you really do wish to delete your account.
@@ -159,13 +160,13 @@ en:
   homepage:
     about: What’s it all about?
     about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers
-      around the world to send a pull request every day in December up to Christmas.</p>
+      around the world to send 24 pull requests between December 1st and December 24th.</p>
       <p>This is the site to help promote the project, highlighting why, how and where
       to send your pull requests.</p><p>Log in with your GitHub account and we’ll
       track and highlight all your pull requests and suggest projects to work on.</p>"
     badges:
       amazing: Continuous Sync - Send 24 pull requests before Christmas
-      description: We’ve teamed up with coderwall and created some kickass badges
+      description: We’ve teamed up with Coderwall and created some kickass badges
         to unlock for participating (awarded December 24th).
       involved_link: Participant - Get involved and send at least one pull request
         before Christmas
@@ -208,7 +209,7 @@ en:
       get one issue from your favorite repo per day to help you dig deeper, learn
       more, and stay involved with the code you rely on.
     docsdoctor: Sign up to receive documented method or class in your inbox every
-      day from your favorite GitHub repos. If you're really pro, recieve un-documented
+      day from your favorite GitHub repos. If you're really pro, receive un-documented
       methods or classes and super charge your commit history.
     rubyissues: A guided tour of significant, compelling, bizarre, tricky
       and all together worthwhile issues within open source Ruby projects.
@@ -269,6 +270,11 @@ en:
     preferences: Preferences
     profile: Profile
   no_suggestions: You haven’t suggested any projects yet.
+  nov_reminder:
+    how_to_contribute:
+      to find out how to contribute 24 pull requests between December 1st and December 24th.
+      Your contributions can be tiny, as simple as fixing a typo, to something incredible.
+      Speed up Rails. Document Express. Fix a bug that you reported.
   open_source_yey: Open Source FTW!
   or: or
   organisations:
@@ -280,7 +286,7 @@ en:
     title: "%{count} Organisations involved"
   organisations_involved_desc: Invite more people from your organisation to participate.
   preferences:
-    coderwall: Link your coderwall account to display the badges you have already
+    coderwall: Link your Coderwall account to display the badges you have already
       earned on your profile page.
     coderwall_username: Coderwall username
     delete: Want to delete your account?
@@ -298,7 +304,7 @@ en:
     hint:
       confirm_email: Please confirm your email address using the link we’ve sent you.
     information: You can always change your email preferences later.
-    languages: Which languages do you know?
+    languages: Which languages do prefer?
     remove: Unlink Twitter Account
     save: Save
     save_and_continue: Save and Continue
@@ -372,7 +378,7 @@ en:
       error_github_not_connected: Please link your Coderwall account to your GitHub
         account and try again.
       error_no_user: No user found with this name.
-      success: Successfully updated your coderwall username!
+      success: Successfully updated your Coderwall username!
       title: Coderwall Badges
       update_button: Update
     grinchy_message: "%{user} is being a grinch for Christmas %{year} with no gifted

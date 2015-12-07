@@ -2,13 +2,13 @@
 
 [![Build Status](https://travis-ci.org/24pullrequests/24pullrequests.svg?branch=master)](https://travis-ci.org/24pullrequests/24pullrequests)
 [![Dependency Status](https://img.shields.io/gemnasium/24pullrequests/24pullrequests.svg?style=flat)](https://gemnasium.com/24pullrequests/24pullrequests)
-[![Gitter chat](http://img.shields.io/badge/gitter-24pullrequests-brightgreen.svg?style=flat)](https://gitter.im/24pullrequests/24pullrequests)
+[![Gitter chat](https://img.shields.io/badge/gitter-24pullrequests-brightgreen.svg?style=flat)](https://gitter.im/24pullrequests/24pullrequests)
 [![Code Climate](https://img.shields.io/codeclimate/github/24pullrequests/24pullrequests.svg?style=flat)](https://codeclimate.com/github/24pullrequests/24pullrequests)
 [![Test Coverage](https://img.shields.io/codeclimate/coverage/github/24pullrequests/24pullrequests.svg?style=flat)](https://codeclimate.com/github/24pullrequests/24pullrequests)
 
 > **Giving back little gifts of code**
 
-24 Pull Requests is a yearly initiative to encourage developers around the world to send a pull request every day in December up to Christmas.
+24 Pull Requests is a yearly initiative to encourage developers around the world to send 24 pull requests between December 1st and December 24th.
 
 This is the site to help promote the project, highlighting why, how and where to send your pull requests.
 
@@ -23,8 +23,8 @@ Over 150 different people have contributed to the project, you can see them all 
 
 ## Development
 
-Source hosted at [GitHub](http://github.com/24pullrequests/24pullrequests).
-Report issues/feature requests on [GitHub Issues](http://github.com/24pullrequests/24pullrequests/issues). Follow us on Twitter [@24pullrequests](https://twitter.com/24pullrequests). We also hangout on [Gitter](https://gitter.im/24pullrequests/24pullrequests).
+Source hosted at [GitHub](https://github.com/24pullrequests/24pullrequests).
+Report issues/feature requests on [GitHub Issues](https://github.com/24pullrequests/24pullrequests/issues). Follow us on Twitter [@24pullrequests](https://twitter.com/24pullrequests). We also hangout on [Gitter](https://gitter.im/24pullrequests/24pullrequests).
 
 ### Getting Started
 
@@ -32,8 +32,8 @@ New to Ruby? No worries! You can follow these instructions to install a local se
 
 #### Installing a Local Server
 
-First things first, you'll need to install Ruby 2.2.3. I recommend using the excellent [rbenv](https://github.com/sstephenson/rbenv),
-and [ruby-build](https://github.com/sstephenson/ruby-build)
+First things first, you'll need to install Ruby 2.2.3. I recommend using the excellent [rbenv](https://github.com/rbenv/rbenv),
+and [ruby-build](https://github.com/rbenv/ruby-build)
 
 ```bash
 rbenv install 2.2.3
@@ -41,7 +41,7 @@ rbenv global 2.2.3
 ```
 
 Next, you'll need to make sure that you have PostgreSQL installed. This can be
-done easily on OSX using [Homebrew](http://mxcl.github.com/homebrew/) or by using [http://postgresapp.com](http://postgresapp.com). Please see these [further instructions for installing Postgres via homebrew](http://www.mikeball.us/blog/setting-up-postgres-with-homebrew/).
+done easily on OSX using [Homebrew](http://mxcl.github.io/homebrew/) or by using [http://postgresapp.com](http://postgresapp.com). Please see these [further instructions for installing Postgres via Homebrew](http://www.mikeball.us/blog/setting-up-postgres-with-homebrew/).
 
 ```bash
 brew install postgres phantomjs
@@ -53,7 +53,7 @@ On Debian-based Linux distributions you can use apt-get to install Postgres:
 sudo apt-get install postgresql postgresql-contrib libpq-dev
 ```
 
-On Windows, you can use the [Chocolatey package manager](http://www.chocolatey.org) to install Postgres:
+On Windows, you can use the [Chocolatey package manager](http://chocolatey.org/) to install Postgres:
 
 ```bash
 choco install postgresql
@@ -75,14 +75,14 @@ bundle exec rake db:create:all
 bundle exec rake db:migrate
 ```
 
-And we can also add some sample data with the **seed** task
+And we can also add some sample data with the **seed** task.
 
 ```bash
 bundle exec rake db:seed
 ```
 
-If you are working on anything related to the email-generation code, you can use [mailcatcher](https://github.com/sj26/mailcatcher)
-Since we use bundler, please read the [following](https://github.com/sj26/mailcatcher#bundler) before using mailcatcher
+If you are working on anything related to the email-generation code, you can use [MailCatcher](https://github.com/sj26/mailcatcher).
+Since we use Bundler, please read the [following](https://github.com/sj26/mailcatcher#bundler) before using MailCatcher.
 
 Almost there! Now all we have to do is start up the Rails server and point
 our browser to <http://localhost:3000>
@@ -131,7 +131,7 @@ If you are using the omniauth environment variables
 (GITHUB_KEY, GITHUB_SECRET, TWITTER_KEY, TWITTER_SECRET)
 for **another** project, you will need to either
  * unset them before running your tests or
- * reset the omniauth environment variables after creating a Github (omniauth) application for this project
+ * reset the omniauth environment variables after creating a GitHub (omniauth) application for this project
 
 as it will use it to learn more about the developers and for pull requests.
 

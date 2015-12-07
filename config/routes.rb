@@ -44,6 +44,8 @@ Tfpullrequests::Application.routes.draw do
   get '/login',  to: 'sessions#new',     as: 'login'
   get '/logout', to: 'sessions#destroy', as: 'logout'
 
+  get '/contributors/map', to: 'contributor_map#show'
+
   get '/auth/twitter/callback',    to: 'twitter#authorize'
   delete '/twitter/remove',         to: 'twitter#remove'
 
@@ -73,6 +75,7 @@ Tfpullrequests::Application.routes.draw do
   get '/:id' => redirect('/users/%{id}') # User public vanity url, must be lowest priority
 
   namespace :admin do
+    post '/dasher', to: 'dasher#new_pull_request'
     resources :projects, only: [:index, :edit, :update, :destroy]
   end
 end

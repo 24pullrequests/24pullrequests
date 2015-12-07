@@ -3,7 +3,7 @@ class PullRequest  < ActiveRecord::Base
 
   validates :issue_url, uniqueness: { scope: :user_id }
 
-  after_create :autogift
+  after_create :autogift, :post_to_firehose
 
   has_many :gifts
 
@@ -40,6 +40,14 @@ class PullRequest  < ActiveRecord::Base
   def check_state
     issue = GithubClient.new(user.nickname, user.token).issue(repo_name, id)
     update_attributes(state: issue.state, comments_count: issue.comments)
+  end
+
+  def post_to_firehose
+    return unless Rails.env.production?
+    Typhoeus::Request.new(ENV['FIREHOSE_URL'],
+      method: :post,
+      body: self.to_json(:include => {:user => {:only => [:uid,:nickname, :name, :blog, :location]}}),
+      headers: { 'Content-Type' => 'application/json' }).run
   end
 
   def post_tweet

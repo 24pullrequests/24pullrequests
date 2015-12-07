@@ -17,7 +17,7 @@ describe LanguageHelper, type: :helper do
   describe '#pull_request_count_for_language' do
     it 'returns the number of pull requests using the given language' do
       5.times { create :pull_request, language: 'Erlang' }
-      3.times { create :pull_request, language: 'Erlang', created_at: Date.today - 1.year }
+      3.times { create :pull_request, language: 'Erlang', created_at: Time.zone.today - 1.year }
 
       expect(helper.pull_request_count_for_language).to eql(5)
     end

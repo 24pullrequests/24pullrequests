@@ -46,10 +46,10 @@ class Downloader
   end
 
   def gifted_any_today?
-    user.gift_for(Date.today).present?
+    user.gift_for(Time.zone.today).present?
   end
 
   def auto_gift_today(pull_request)
-    user.gifts.create({pull_request_id: pull_request.id, date: Date.today})
+    user.gifts.create({pull_request_id: pull_request.id, date: Time.zone.today})
   end
 end

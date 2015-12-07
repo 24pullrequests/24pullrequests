@@ -6,7 +6,7 @@ class DashboardsController < ApplicationController
     pull_requests = current_user.pull_requests.year(current_year).order('created_at desc')
     projects      = current_user.suggested_projects.limit(100).sample(12).sort_by(&:name)
     gifted_today  = current_user.gift_for(today)
-    @events = Event.where(['start_time >= ?', Date.today]).order('start_time').first(5)
+    @events = Event.where(['start_time >= ?', Time.zone.today]).order('start_time').first(5)
 
     if giftable_range? && current_user.unspent_pull_requests.any? && !gifted_today
       gift      = current_user.new_gift
@@ -26,7 +26,7 @@ class DashboardsController < ApplicationController
   def update_preferences
     current_user.skills.delete_all
     if current_user.update_attributes(user_params)
-      redirect_to(session[:preferences_referrer] || dashboard_path, notice: 'Your preferences was successfully saved')
+      redirect_to(session[:preferences_referrer] || dashboard_path, notice: 'Your preferences were successfully saved')
       session.delete(:preferences_referrer)
     else
       render :preferences
