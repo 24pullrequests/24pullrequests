@@ -153,12 +153,13 @@ ActiveRecord::Schema.define(version: 20151127190033) do
     t.string   "twitter_nickname"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
-    t.string   "coderwall_user_name"
-    t.string   "name"
-    t.string   "blog"
-    t.string   "location"
-    t.decimal  "lat",                 precision: 8, scale: 6
-    t.decimal  "lng",                 precision: 9, scale: 6
+    t.string   "coderwall_user_name", limit: 255
+    t.string   "name",                limit: 255
+    t.string   "blog",                limit: 255
+    t.string   "location",            limit: 255
+    t.decimal  "lat",                             precision: 8, scale: 6
+    t.decimal  "lng",                             precision: 9, scale: 6
+    t.boolean  "thank_you_email_sent", default: false
   end
 
   add_index "users", ["nickname"], name: "index_users_on_nickname", unique: true, using: :btree

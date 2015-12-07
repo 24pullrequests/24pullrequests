@@ -17,6 +17,7 @@ describe PullRequestDownloadsController, type: :controller do
       expect(Downloader).to receive(:new).with(user).and_return(downloader)
       expect(downloader).to receive(:get_pull_requests)
       expect(user).to receive(:gift_unspent_pull_requests!)
+      expect(user).to receive(:send_thank_you_email_on_24)
 
       post 'create'
       expect(response).to be_success

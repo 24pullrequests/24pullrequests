@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
   def assign_from_auth_hash(hash)
     # do not update the email address in case the user has updated their
     # email prefs and used a new email
-    ignored_fields = %i(email name blog location)
+    ignored_fields = %i(email name blog)
     update_attributes(AuthHash.new(hash).user_info.except(*ignored_fields))
   end
 
@@ -192,6 +192,12 @@ class User < ActiveRecord::Base
 
   def self.users_with_pull_request_counts(pull_request_year)
     joins(:pull_requests).where('EXTRACT(year FROM pull_requests.created_at) = ?', pull_request_year).select('users.*, COUNT(pull_requests.id) as pull_requests_count').group('users.id')
+  end
+
+  def send_thank_you_email_on_24
+    return unless pull_requests_count >= 24 && !thank_you_email_sent
+    ThankYouMailer.thank_you(self).deliver_later
+    update_column(:thank_you_email_sent, true)
   end
 
   private
