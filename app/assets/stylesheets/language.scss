@@ -92,7 +92,7 @@
   padding: 4px 8px;
   border: 1px solid #f5f5f5;
   cursor: pointer;
-
+  white-space: nowrap;
   input[type=checkbox] {
     margin-right: 4px;
   }
@@ -100,4 +100,9 @@
   &:hover {
     background-color: #f5f5f5;
   }
+}
+
+.xs-space {
+  display: block;
+  height: 40px;
 }
