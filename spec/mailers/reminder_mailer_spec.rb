@@ -51,7 +51,7 @@ describe ReminderMailer, type: :mailer do
 
     it_behaves_like :reminder_mailer,
       subject: '[24 Pull Requests] Weekly Reminder',
-      this_time: 'week',
+      this_time: 'this week',
       next_time: 'next week'
   end
 end
