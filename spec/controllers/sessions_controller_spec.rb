@@ -10,24 +10,17 @@ describe SessionsController, type: :controller do
   end
 
   describe 'POST create' do
-
     before do
-      stub_request(:get, "https://maps.googleapis.com/maps/api/geocode/json?address=georgia&key=&language=en&sensor=false").
-        to_return(:status => 200, :body => "{}", :headers => {})
-
-      stub_request(:get, "https://maps.googleapis.com/maps/api/geocode/json?address=london&key=&language=en&sensor=false").
-        to_return(:status => 200, :body => "{}", :headers => {})
+      create :user, uid: 'uid', nickname: 'jane-doe', location: 'georgia'
     end
 
     it "updates the user's particulars" do
-      create :user, uid: 'uid', nickname: 'jane-doe', location: 'georgia'
+      expect(User.find_by_auth_hash(session_spec_user_hash).location).to eq('georgia')
 
-      expect(User.find_by_auth_hash(user_hash).location).to eq('georgia')
-
-      request.env['omniauth.auth'] = user_hash # note new location!
+      request.env['omniauth.auth'] = session_spec_user_hash # note new location!
       post :create, {provider: :github}, format: :json
 
-      expect(User.find_by_auth_hash(user_hash).location).to eq('london')
+      expect(User.find_by_auth_hash(session_spec_user_hash).location).to eq('london')
     end
   end
 
@@ -51,7 +44,7 @@ describe SessionsController, type: :controller do
   end
 end
 
-def user_hash
+def session_spec_user_hash
   { 'provider'    => 'github',
     'uid'         => 'uid',
     'info'        => {
