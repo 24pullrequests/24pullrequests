@@ -23,18 +23,19 @@
         = form.input :email, :label => t("preferences.form.email")
     .col-md-12
       %h2.text-center=t("preferences.languages")
-      .row.col-languages
-        - Project::LANGUAGES.in_groups(6, '') do |col_form| p col_form
-          .col-xs-6.col-sm-4.col-md-2
-            = form.simple_fields_for :skills, col_form.map{|l| Skill.new(:language => l)} do |skill_form|
-              - language = skill_form.object.language
-              .col-md-12
-                - if !language.empty?
-                  %label.language-checkbox
-                    = skill_form.check_box :language, {:id => language, :checked => current_user.skills.map(&:language).include?(language)}, language
-                    = language
-                - else
-                  .xs-space
+      .row
+        - Project::LANGUAGES.in_groups(2, '') do |main_col|
+          .col-xs-6.col-languages
+            - main_col.in_groups(3, '') do |col_form|
+              .col-xs-12.col-md-4
+                = form.simple_fields_for :skills, col_form.map{|l| Skill.new(:language => l)} do |skill_form|
+                  - language = skill_form.object.language
+                  - if !language.empty?
+                    %label.language-checkbox
+                      = skill_form.check_box :language, {:id => language, :checked => current_user.skills.map(&:language).include?(language)}, language
+                      = language
+                  - else
+                    .xs-space
     .form-group
       .col-sm-12.text-center
         - if current_user.needs_setup?
