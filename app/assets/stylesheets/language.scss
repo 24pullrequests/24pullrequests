@@ -90,10 +90,8 @@
 
 .language-checkbox {
   padding: 4px 8px;
-  border: 1px solid #f5f5f5;
   cursor: pointer;
   white-space: nowrap;
-  width: 100%;
 
   input[type=checkbox] {
     margin-right: 4px;
@@ -102,15 +100,4 @@
   &:hover {
     background-color: #f5f5f5;
   }
-}
-
-@media (max-width: 400px) {
-  .col-languages {
-    width: 100%;
-  }
-}
-
-.xs-space {
-  display: block;
-  height: 40px;
 }
