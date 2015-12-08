@@ -137,29 +137,29 @@ ActiveRecord::Schema.define(version: 20151127190033) do
   add_index "skills", ["user_id"], name: "index_skills_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "uid",                                                     null: false
-    t.string   "provider",                                                null: false
-    t.string   "nickname",                                                null: false
+    t.string   "uid",                                                          null: false
+    t.string   "provider",                                                     null: false
+    t.string   "nickname",                                                     null: false
     t.string   "email"
-    t.datetime "created_at",                                              null: false
-    t.datetime "updated_at",                                              null: false
+    t.datetime "created_at",                                                   null: false
+    t.datetime "updated_at",                                                   null: false
     t.string   "gravatar_id"
     t.string   "token"
     t.string   "email_frequency"
-    t.integer  "pull_requests_count",                         default: 0
+    t.integer  "pull_requests_count",                          default: 0
     t.datetime "last_sent_at"
     t.string   "twitter_token"
     t.string   "twitter_secret"
     t.string   "twitter_nickname"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
-    t.string   "coderwall_user_name", limit: 255
-    t.string   "name",                limit: 255
-    t.string   "blog",                limit: 255
-    t.string   "location",            limit: 255
-    t.decimal  "lat",                             precision: 8, scale: 6
-    t.decimal  "lng",                             precision: 9, scale: 6
-    t.boolean  "thank_you_email_sent", default: false
+    t.string   "coderwall_user_name"
+    t.string   "name"
+    t.string   "blog"
+    t.string   "location"
+    t.decimal  "lat",                  precision: 8, scale: 6
+    t.decimal  "lng",                  precision: 9, scale: 6
+    t.boolean  "thank_you_email_sent",                         default: false
   end
 
   add_index "users", ["nickname"], name: "index_users_on_nickname", unique: true, using: :btree
