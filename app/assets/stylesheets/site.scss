@@ -78,11 +78,11 @@ h1, h2, h3, h4, .page-title {
       width: 60px;
       border-radius: 50px;
       font-size: 20px;
-      margin: -60px auto 30px;
+      margin: 0 auto 30px;
       line-height: 60px;
 
-      @media (max-width: 767px) {
-	       margin-top: 0;
+      @media (min-width: $screen-md-min) {
+	       margin-top: -70px;
       }
     }
   }
