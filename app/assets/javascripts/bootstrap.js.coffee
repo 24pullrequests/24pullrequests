@@ -1,3 +1,12 @@
+window.languageAutocomplete = ->
+  return false if !$("[data-provide=typeahead]").length
+
+  projectLanguages = $("[data-provide=typeahead]").data "source"
+
+  $("[data-provide=typeahead]").typeahead
+    name: $(this).attr "name"
+    local: projectLanguages
+
 jQuery ->
   $("a[rel=popover]").popover()
   $(".tooltip").tooltip()
@@ -9,14 +18,4 @@ jQuery ->
     e.preventDefault()
     $(this).tab "show"
 
-
-  languageAutocomplete = ->
-    return false if !$("[data-provide=typeahead]").length
-
-    projectLanguages = $("[data-provide=typeahead]").data "source"
-
-    $("[data-provide=typeahead]").typeahead
-      name: $(this).attr "name"
-      local: projectLanguages
-
-  languageAutocomplete()
+    languageAutocomplete()

@@ -44,7 +44,7 @@ describe GithubClient do
   end
 
   describe '#issues' do
-    it "returns a repository's issues" do
+    it "returns a repositories issues" do
       repository = 'some-repository'
       expect(client).to receive(:issues).with(repository, {})
 
@@ -53,11 +53,29 @@ describe GithubClient do
   end
 
   describe '#commits' do
-    it "returns a repository's commits" do
+    it "returns a repositories commits" do
       repository = 'some-repository'
       expect(client).to receive(:commits).with(repository, {})
 
       github_client.commits(repository, {})
+    end
+  end
+
+  describe '#repository' do
+    it "returns a repository" do
+      repository = '24pullrequests/24pullrequests'
+      expect(client).to receive(:repo).with(repository)
+
+      github_client.repository(repository)
+    end
+  end
+
+  describe '#labels' do
+    it "returns a repositories labels" do
+      repository = '24pullrequests/24pullrequests'
+      expect(client).to receive(:labels).with(repository)
+
+      github_client.labels(repository)
     end
   end
 end
