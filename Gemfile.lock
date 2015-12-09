@@ -130,6 +130,8 @@ GEM
       multipart-post (>= 1.2, < 3)
     fastercsv (1.5.5)
     ffi (1.9.10)
+    figaro (1.1.1)
+      thor (~> 0.14)
     foreman (0.78.0)
       thor (~> 0.19.1)
     geocoder (1.2.12)
@@ -444,6 +446,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   ffi
+  figaro
   foreman
   geocoder
   gmaps4rails

@@ -135,6 +135,12 @@ for **another** project, you will need to either
 
 as it will use it to learn more about the developers and for pull requests.
 
+### Environment variables
+
+`bundle exec figaro install`
+
+Or for more information about using figaro, see https://github.com/laserlemon/figaro
+
 ### Note on Patches/Pull Requests
 
  * Fork the project.
