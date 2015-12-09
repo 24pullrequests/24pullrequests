@@ -40,7 +40,7 @@ describe ProjectsController, type: :controller do
         admin: 1
       }
       parameters = ActionController::Parameters.new(raw)
-      expect { create :project, parameters }.to raise_error NoMethodError 
+      expect { create :project, parameters }.to raise_error NoMethodError
     end
   end
 
@@ -104,6 +104,41 @@ describe ProjectsController, type: :controller do
         expect(flash[:notice]).to eq "This repository doesn't exist or belongs to someone else"
       end
     end
+  end
 
+  describe 'GET autofill' do
+    context 'Logged in' do
+      let(:user) { create(:user) }
+
+      before do
+        session[:user_id] = user.id
+      end
+
+      it 'Repo with labels' do
+        allow(controller).to receive(:repo_with_labels)
+          .with('24pullrequests/24pullrequests')
+          .and_return({
+            data: {
+              repository: { html_url: "/foo" },
+              labels: ['foo', 'bar']
+            },
+            status: 200
+          })
+
+        get :autofill, repo: '24pullrequests/24pullrequests'
+
+        expect(response.status).to eq(200)
+
+        expect(JSON.parse(response.body)).to eq({
+          "repository" => { "html_url" => "/foo" },
+          "labels" => ['foo', 'bar']
+        })
+      end
+    end
+
+    it 'Logged out' do
+      get :autofill, repo: '24pullrequests/24pullrequests'
+      expect(response).to redirect_to(login_path)
+    end
   end
 end

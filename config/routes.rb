@@ -16,6 +16,7 @@ Tfpullrequests::Application.routes.draw do
   resources :projects, only: [:index, :new, :create, :edit, :update, :destroy] do
     collection do
       get :filter
+      get :autofill
       post :claim
     end
   end

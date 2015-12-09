@@ -22,6 +22,10 @@ class GithubClient
     client.repo(repository)
   end
 
+  def labels(repository)
+    client.labels(repository)
+  end
+
   def issues(repository, options = {})
     client.issues(repository, options)
   end

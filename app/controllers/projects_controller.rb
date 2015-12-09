@@ -70,7 +70,16 @@ class ProjectsController < ApplicationController
     respond_with @projects
   end
 
+  def autofill
+    request = repo_with_labels(params[:repo])
+    render json: request[:data], status: request[:status]
+  end
+
   protected
+
+  def repo_with_labels(url)
+    RepoWithLabels.new(current_user.github_client, url).call
+  end
 
   def current_user_languages
     @current_user_languages ||= begin
