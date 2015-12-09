@@ -22,3 +22,6 @@ Thumbs.db
 
 # To not force .overcommit.yml on anyone.
 .overcommit.yml
+
+# Ignore application configuration
+/config/application.yml

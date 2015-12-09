@@ -38,6 +38,7 @@ group :development do
   gem 'thin'
   gem 'rubocop', require: false
   gem 'web-console'
+  gem 'figaro'
 end
 
 group :development, :test, :cucumber do
