@@ -52,6 +52,27 @@ h1, h2, h3, h4, .page-title {
   }
 }
 
+.social-buttons {
+  display: none;
+
+  @media(min-width: $screen-sm-min) {
+    display: block;
+
+    .col-sm-2 {
+      padding: 0;
+      width: 15.75%;
+    }
+  }
+
+  @media(min-width: $screen-md-min) {
+    margin-left: 30px;
+  }
+
+  @media(min-width: $screen-lg-min) {
+    margin-left: 50px;
+  }
+}
+
 .tips {
   background: #fff;
   margin: -60px auto 60px;
@@ -626,21 +647,14 @@ hr {
   }
 }
 
-@media (max-width: 767px) {
-
+@media (max-width: $screen-sm-min) {
   .btn {
     width:100%;
 
     + .btn {
       margin-top: 10px;
     }
-
   }
-
-  .social-buttons {
-    display:none;
-  }
-
 }
 
 .user-pull-requests {
