@@ -39,6 +39,7 @@ group :development do
   gem 'rubocop', require: false
   gem 'web-console'
   gem 'figaro'
+  gem 'meta_request'
 end
 
 group :development, :test, :cucumber do
