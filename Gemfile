@@ -62,6 +62,7 @@ group :development, :test, :cucumber do
   gem 'webmock', require: false
   gem 'timecop'
   gem 'simplecov'
+  gem 'christmas_tree_formatter'
 
   # Javascript
   gem 'konacha'
