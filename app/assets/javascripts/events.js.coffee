@@ -65,6 +65,17 @@ class Map
 
 $ ->
 
+  $('.toggle-past-events').click (evt) =>
+    pastEvents = $('.past-events')
+    spanTxt = $('.toggle-past-events').children('span')
+
+    if pastEvents.hasClass('hidden')
+      pastEvents.removeClass('hidden')
+      spanTxt.text('Hide')
+    else
+      pastEvents.addClass('hidden')
+      spanTxt.text('Show')
+
   allowTimes =  []
   for hour in [0..23]
     for quarter in ["00", "15", "30", "45"]
