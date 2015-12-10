@@ -5,9 +5,10 @@ describe Event, type: :model do
   it { is_expected.to validate_presence_of(:location) }
   it { is_expected.to validate_presence_of(:url) }
   it { is_expected.to validate_presence_of(:start_time) }
-  it { is_expected.to validate_presence_of(:latitude) }
-  it { is_expected.to validate_presence_of(:longitude) }
   it { is_expected.to validate_presence_of(:description) }
+
+  it { is_expected.to have_db_column(:latitude).with_options(default: 0.0) }
+  it { is_expected.to have_db_column(:longitude).with_options(default: 0.0) }
 
   context 'validations' do
     let(:event) { FactoryGirl.build(:event) }
