@@ -75,6 +75,8 @@ GEM
     chai-jquery-rails (2.0.0)
       railties (>= 3.1)
       sprockets
+    christmas_tree_formatter (0.1.0)
+      rspec-core (~> 3.0)
     cliver (0.3.2)
     codeclimate-test-reporter (0.4.8)
       simplecov (>= 0.7.1, < 1.0.0)
@@ -445,6 +447,7 @@ DEPENDENCIES
   brakeman
   bugsnag
   chai-jquery-rails
+  christmas_tree_formatter
   codeclimate-test-reporter
   coffee-rails
   coveralls
