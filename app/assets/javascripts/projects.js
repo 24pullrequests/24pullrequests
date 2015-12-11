@@ -13,7 +13,7 @@ $(document).ready(function() {
       insert: label_text
     });
 
-    if (self.attr('selected') === "selected") {
+    if (self.is(':checked')) {
       self.iCheck('check');
       self.closest('.form-group').find('[id^="clear_"]').removeClass('checked');
     }

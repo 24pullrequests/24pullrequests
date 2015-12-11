@@ -10,10 +10,10 @@
 %h4 Filter:
 = simple_form_for :project, url: projects_path, method: :get, remote: true, html: { id: 'filters' }  do |form|
   .icheckbox_line.checked#clear_labels All Labels
-  = form.input :labels, collection: Label.all.map(&:name), as: :check_boxes, label_method: lambda { |owner| content_tag(:span, owner) }, label: false, :selected => lambda { |v| @labels.include?(v) }
+  = form.input :labels, collection: Label.all.map(&:name), as: :check_boxes, label_method: lambda { |owner| content_tag(:span, owner) }, label: false, :checked => lambda { |v| @labels.include?(v) }
   .icheckbox_line.checked#clear_languages All Languages
-  = form.input :languages, collection: Project::LANGUAGES, as: :check_boxes, label_method: lambda { |owner| content_tag(:span, owner) }, label: false, :selected => lambda { |v| @languages.include?(v) }
-  = form.submit "Search", hidden: true
+  = form.input :languages, collection: Project::LANGUAGES, as: :check_boxes, label_method: lambda { |owner| content_tag(:span, owner) }, label: false, :checked => lambda { |v| @languages.include?(v) }
+  = form.submit "Search"
 
 %hr
 
