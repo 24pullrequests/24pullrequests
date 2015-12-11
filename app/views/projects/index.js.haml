@@ -1,17 +1,23 @@
-:plain
-  (function($projects) {
-    var $new = $("#{escape_javascript(render(@projects))}");
+- if @projects.any?
+  :plain
+    (function($projects) {
+      var $new = $("#{escape_javascript(render(@projects))}");
 
-    $projects.find('.col-md-12')
-          .append($new)
+      $projects.find('.col-md-12')['#{params[:page].blank? ? "html" : "append"}']($new)
 
-    $('#someprojects').find('.col-md-12')
-          .html(
-            "#{escape_javascript(link_to_next_page @projects,
-                                                   t('more'),
-                                                   remote: true,
-                                                   class: 'btn btn-success more')}"
-          );
-  })($("#projects"));
-  $('#noprojects').hide();
-  $('#someprojects').show();
+      $('#someprojects').find('.col-md-12')
+        .html(
+          "#{escape_javascript(link_to_next_page @projects,
+                                                 t('more'),
+                                                 remote: true,
+                                                 params: {project: {languages: @languages, labels: @labels}},
+                                                 class: 'btn btn-success more')}"
+        );
+    })($("#projects"));
+    $('#noprojects').hide()
+    $('#someprojects').show()
+- else
+  :plain
+    $('#projects').find('.col-md-12').empty()
+    $('#noprojects').show()
+    $('#someprojects').hide()
