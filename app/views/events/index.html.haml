@@ -19,10 +19,14 @@
           = link_to "", event, class: "pin", data: { latitude: event.latitude, longitude: event.longitude }
     .col-sm-12.col-md-6
       = render @upcoming_events
-
 - unless @past_events.empty?
   %hr
-  %h4 Past 24 Pull Requests Events
   .row
+    %p
+      %button.btn.btn-default.toggle-past-events
+        %span Show
+        Past 24 Pull Requests Events
+  .row.past-events.hidden
+    %h4 Past 24 Pull Requests Events
     .col-md-12
       = render @past_events
