@@ -13,13 +13,63 @@ describe ProjectsController, type: :controller do
       it { expect(response.header['Content-Type']).to include 'application/json' }
     end
 
-    context 'with stored session preferences' do
-      before do
-        session[:filter_options] = { languages: %w(Ruby JavaScript) }
-        get :index, format: :html
+    context 'filter' do
+      let!(:ruby) do
+        create_list :project, 5, main_language: 'Ruby'
       end
 
-      it { expect(assigns(:current_user_languages)).to contain_exactly('Ruby', 'JavaScript') }
+      let!(:python) do
+        create_list :project, 5, main_language: 'Python'
+      end
+
+      it 'from params' do
+        allow(ProjectSearch).to receive(:new).with({ languages: %w(Ruby), labels: [], page: nil }).and_call_original
+        get :index, project: { languages: %w(Ruby) }
+        expect(assigns(:projects)).to match_array(ruby)
+        expect(assigns(:has_more_projects)).to eq(false)
+        expect(assigns(:languages)).to eq(%w(Ruby))
+        expect(assigns(:labels)).to eq([])
+        expect(session[:filter_options]).to eq({ languages: %w(Ruby), labels: [] })
+      end
+
+      it 'from session filter_options' do
+        session[:filter_options] = { languages: %w(Ruby), labels: [] }
+        allow(ProjectSearch).to receive(:new).with({ languages: %w(Ruby), labels: [], page: nil }).and_call_original
+        get :index
+        expect(assigns(:projects)).to match_array(ruby)
+        expect(assigns(:has_more_projects)).to eq(false)
+        expect(assigns(:languages)).to eq(%w(Ruby))
+        expect(assigns(:labels)).to eq([])
+        expect(session[:filter_options]).to eq({ languages: %w(Ruby), labels: [] })
+      end
+
+      it 'from current_user languages' do
+        allow(controller).to receive(:current_user).and_return(double('User', languages: %(Ruby)))
+        allow(ProjectSearch).to receive(:new).with({ languages: %w(Ruby), labels: [], page: nil }).and_call_original
+        get :index
+        expect(assigns(:projects)).to match_array(ruby)
+        expect(assigns(:has_more_projects)).to eq(false)
+        expect(assigns(:languages)).to eq(%w(Ruby))
+        expect(assigns(:labels)).to eq([])
+        expect(session[:filter_options]).to eq({ languages: %w(Ruby), labels: [] })
+      end
+
+      it 'searches all rpojects with empty arrays' do
+        allow(ProjectSearch).to receive(:new).with({ languages: [], labels: [], page: nil }).and_call_original
+        get :index, project: { languages: [], labels: [] }
+        expect(assigns(:projects).length).to eq(10)
+        expect(assigns(:has_more_projects)).to eq(false)
+        expect(assigns(:languages)).to eq([])
+        expect(assigns(:labels)).to eq([])
+        expect(session[:filter_options]).to eq({ languages: [], labels: [] })
+      end
+
+      it 'label is passed to search' do
+        allow(ProjectSearch).to receive(:new).with({ languages: [], labels: %w(foo), page: nil }).and_call_original
+        get :index, project: { languages: [], labels: %w(foo) }
+        expect(assigns(:labels)).to eq(%w(foo))
+        expect(session[:filter_options]).to eq({ languages: [], labels: %w(foo) })
+      end
     end
   end
 
@@ -41,41 +91,6 @@ describe ProjectsController, type: :controller do
       }
       parameters = ActionController::Parameters.new(raw)
       expect { create :project, parameters }.to raise_error NoMethodError
-    end
-  end
-
-  describe 'GET filter' do
-    before do
-      5.times do
-        create :project, main_language: 'Ruby'
-        create :project, main_language: 'JavaScript'
-        create :project, main_language: 'Python'
-      end
-      2.times { |_i| create :project, main_language: 'Lua' }
-    end
-
-    it 'should do only return filter projects' do
-      xhr :get, :filter, format: :js, project: { languages: ['Ruby'] }
-      expect(assigns(:projects).size).to eq 5
-      expect(assigns(:projects).map(&:main_language).uniq).to eq ['Ruby']
-
-      xhr :get, :filter, format: :js, project: { languages: %w(JavaScript Lua) }
-      expect(assigns(:projects).size).to eq 7
-      expect(assigns(:projects).map(&:main_language).uniq).to include 'JavaScript', 'Lua'
-    end
-
-    it 'should store filter values in session' do
-      xhr :get, :filter, format: :js, project: { languages: ['Ruby'] }
-
-      expect(session[:filter_options]).not_to be_nil
-      expect(session[:filter_options][:labels]).to eq([])
-      expect(session[:filter_options][:languages]).to contain_exactly('Ruby')
-
-      xhr :get, :filter, format: :js, project: { languages: %w(JavaScript Lua), labels: ['refactoring'] }
-
-      expect(session[:filter_options]).not_to be_nil
-      expect(session[:filter_options][:labels]).to contain_exactly('refactoring')
-      expect(session[:filter_options][:languages]).to contain_exactly('JavaScript', 'Lua')
     end
   end
 
