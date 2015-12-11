@@ -107,12 +107,18 @@ class ProjectsController < ApplicationController
     params[:language]
   end
 
+  def filters
+    ProjectFilters::Chain.new(params[:project],
+                              session[:filter_options],
+                              current_user)
+  end
+
   def languages
-    params[:project][:languages] rescue []
+    filters.array(:languages)
   end
 
   def labels
-    params[:project][:labels] rescue []
+    filters.array(:labels)
   end
 
   def github_url
