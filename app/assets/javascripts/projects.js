@@ -33,11 +33,11 @@ $(document).ready(function() {
     $('form#filters').submit();
   });
 
-  if($('.more').size() > 0){
-    $(window).scroll(function() {
-      if($(window).scrollTop() + $(window).height() == $(document).height()) {
-        $('.more').click();
-      }
-    });
-  }
+  $(window).scroll(function() {
+    if ($('.more').length == 0)
+      return;
+
+    if ($(window).scrollTop() + $(window).height() == $(document).height())
+      $('.more').click();
+  });
 });
