@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  $('[id^="clear_"]').each(function() {
+    $(this).next().prepend($(this));
+  });
+
   $('#filters input').each(function() {
     var self = $(this),
         label_text = self.val();
@@ -11,12 +15,8 @@ $(document).ready(function() {
 
     if (self.attr('selected') === "selected") {
       self.iCheck('check');
-      $("#clear_languages").removeClass('checked');
+      self.closest('.form-group').find('[id^="clear_"]').removeClass('checked');
     }
-  });
-
-  $('[id^="clear_"]').each(function() {
-    $(this).next().prepend($(this));
   });
 
   $('#noprojects').hide();
