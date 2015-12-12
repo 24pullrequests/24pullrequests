@@ -92,3 +92,8 @@
   padding-left: 5px;
   margin-top: 0px;
 }
+
+/* Hides labels when you dont have javascript */
+.icheckbox_line + span {
+  display: none;
+}

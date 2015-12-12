@@ -53,6 +53,10 @@ FactoryGirl.define do
     submitted_by { create(:user) }
   end
 
+  factory :label do
+    name { %w(documentation design tests feature refactoring).sample }
+  end
+
   factory :gift do
     user
     pull_request

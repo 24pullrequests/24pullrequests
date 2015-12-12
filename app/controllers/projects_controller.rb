@@ -7,8 +7,12 @@ class ProjectsController < ApplicationController
   respond_to :js, only: [:index, :filter]
 
   def index
-    @projects = ProjectSearch.new(page: params[:page], languages: current_user_languages).find.includes(:labels)
-    @has_more_projects = (params[:page].to_i * 20) < Project.active.count
+    @labels = labels
+    @languages = languages
+    session[:filter_options] = search_params.slice(:languages, :labels)
+    search = ProjectSearch.new(search_params)
+    @projects = search.call.includes(:labels)
+    @has_more_projects = search.more?
     respond_with @projects
   end
 
@@ -62,14 +66,6 @@ class ProjectsController < ApplicationController
     redirect_to :back, notice: message
   end
 
-  def filter
-    @languages, @labels = languages, labels
-    @labels = [] if @labels.blank?
-    session[:filter_options] = { languages: @languages, labels: @labels }
-    @projects = ProjectSearch.new(page: params[:page], labels: @labels, languages: @languages).find.includes(:labels)
-    respond_with @projects
-  end
-
   def autofill
     request = repo_with_labels(params[:repo])
     render json: request[:data], status: request[:status]
@@ -77,23 +73,13 @@ class ProjectsController < ApplicationController
 
   protected
 
+  def search_params
+    { languages: languages, labels: labels, page: params[:page] }
+  end
+
   def repo_with_labels(url)
     RepoWithLabels.new(current_user.github_client, url).call
   end
-
-  def current_user_languages
-    @current_user_languages ||= begin
-      if session[:filter_options] && session[:filter_options][:languages].present?
-        session[:filter_options][:languages]
-      elsif logged_in?
-        current_user.languages
-      else
-        []
-      end
-    end
-  end
-
-  helper_method :current_user_languages
 
   def project_params
     params.require(:project).permit(:description, :github_url, :name, :main_language, label_ids: [])
@@ -107,12 +93,18 @@ class ProjectsController < ApplicationController
     params[:language]
   end
 
+  def filters
+    ProjectFilters::Chain.new(params[:project],
+                              session[:filter_options],
+                              current_user)
+  end
+
   def languages
-    params[:project][:languages] rescue []
+    filters.array(:languages)
   end
 
   def labels
-    params[:project][:labels] rescue []
+    filters.array(:labels)
   end
 
   def github_url

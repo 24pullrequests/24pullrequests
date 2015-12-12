@@ -25,6 +25,10 @@
   top: -3px;
 }
 
+.js #filters input[type="submit"] {
+  display: none;
+}
+
 #filters .checkbox {
   display: inline-block;
 }

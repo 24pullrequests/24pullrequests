@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  $('[id^="clear_"]').each(function() {
+    $(this).next().prepend($(this));
+  });
+
   $('#filters input').each(function() {
     var self = $(this),
         label_text = self.val();
@@ -9,14 +13,10 @@ $(document).ready(function() {
       insert: label_text
     });
 
-    if (self.attr('selected') === "selected") {
+    if (self.is(':checked')) {
       self.iCheck('check');
-      $("#clear_languages").removeClass('checked');
+      self.closest('.form-group').find('[id^="clear_"]').removeClass('checked');
     }
-  });
-
-  $('[id^="clear_"]').each(function() {
-    $(this).next().prepend($(this));
   });
 
   $('#noprojects').hide();
@@ -33,11 +33,11 @@ $(document).ready(function() {
     $('form#filters').submit();
   });
 
-  if($('.more').size() > 0){
-    $(window).scroll(function() {
-      if($(window).scrollTop() + $(window).height() == $(document).height()) {
-        $('.more').click();
-      }
-    });
-  }
+  $(window).scroll(function() {
+    if ($('.more').length == 0)
+      return;
+
+    if ($(window).scrollTop() + $(window).height() == $(document).height())
+      $('.more').click();
+  });
 });
