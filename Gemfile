@@ -40,6 +40,7 @@ group :development do
   gem 'web-console'
   gem 'figaro'
   gem 'meta_request'
+  gem 'quiet_assets'
 end
 
 group :development, :test, :cucumber do

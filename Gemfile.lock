@@ -257,6 +257,8 @@ GEM
       websocket-driver (>= 0.2.0)
     powerpack (0.1.1)
     puma (2.15.3)
+    quiet_assets (1.1.0)
+      railties (>= 3.1, < 5.0)
     rabl (0.11.7)
       activesupport (>= 2.3.14)
     rack (1.6.4)
@@ -482,6 +484,7 @@ DEPENDENCIES
   pg
   poltergeist
   puma
+  quiet_assets
   rabl
   rack-canonical-host
   rack-google-analytics
