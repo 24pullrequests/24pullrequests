@@ -153,7 +153,7 @@ ja:
       title: Coderwall バッジをもらおう
     description: Giving back little gifts of code for Christmas
     event:
-      description: 今年は世界中で24 Pull Requests ハックイベントを主催することを推奨しています。このクリスマスに参加してください。
+      description: 今年は世界中で 24 Pull Requests ハックイベントを主催することを推奨しています。このクリスマスに参加してください。
       host_an_event: イベントを主催する
       title: "イベント"
       view_events: イベントを見る
@@ -228,30 +228,24 @@ ja:
     title: "%{count} organisations involved"
   organisations_involved_desc: Invite more people from your organisation to participate.
   preferences:
-    coderwall: Link your coderwall account to display the badges you have already
-      earned on your profile page.
-    coderwall_username: Coderwall username
+    coderwall: あなたが既に獲得しているバッジをプロフィールページに表示するためにあなたの Coderwall アカウントとリンクします。
+    coderwall_username: Coderwall ユーザー名
     delete: Want to delete your account?
     form:
-      daily: Daily
-      email: Email
-      email_frequency: Email Frequency
-      never: Never
-      weekly: Weekly
-    frequency_message: At the frequency you choose, we'll send you helpful emails
-      from now until the project is over, highlighting some suggested projects you
-      might consider contributing to. As an added bonus, we'll take the liberty of
-      personalizing our suggestions to your language proficiency based on the repos
-      in your GitHub profile. Alternatively, you can choose your languages below.
+      daily: 日次
+      email: Email アドレス
+      email_frequency: メールの送信頻度
+      never: 送信しない
+      weekly: 週次
+    frequency_message: 今からプロジェクトが終了するまで、あなたが選択した頻度で、あなたが貢献を検討する可能性のあるプロジェクトを提案するメールを送信します。加えて、あなたのGitHubのプロフィールに記載の開発言語のリポジトリに基づいて、私たちは提案します。また、あなたは以下に記載の開発言語を選択することができます。
     hint:
       confirm_email: Please confirm your email address using the link we've sent you.
-    information: You can always change your email preferences later.
-    languages: Which languages do you know?
+    information: 後からいつでもメールの設定を変更することができます。
+    languages: あなたはどの言語を知っていますか？
     remove: Remove Account
     save: Save
     save_and_continue: Save and Continue
-    setup_help: To get started with 24 Pull Requests, please first fill up the following
-      form.
+    setup_help: 24 Pull Requests を始めるにあたり、まず最初に以下のフォームに記入してください。
     title: Set your personal preferences
     twitter: Twitter Account
   preferred_languages: Preferred Languages
@@ -329,6 +323,6 @@ ja:
     organisations: Member of...
     pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
   view_all: View All
-  welcome: Welcome, %{user}!
+  welcome: ようこそ、%{user}さん!
   welcome_back: Welcome back, %{user}
   your_pull_requests: Your Pull Requests
