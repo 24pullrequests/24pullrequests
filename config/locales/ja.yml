@@ -97,17 +97,17 @@ ja:
       title: Edit Suggestion
     new:
       form:
-        description: Description
-        description_placeholder: Give a little desciption of the group and event
-        location: Location
-        location_placeholder: e.g. Bristol, UK
-        map: Location marker
-        name: Event name
-        name_placeholder: Bristol Ruby Group Pull-request-a-thon
-        start_time: When
+        description: 説明
+        description_placeholder: イベントグループの説明を記載してください
+        location: 場所
+        location_placeholder: 例. ブリストル、イギリス
+        map: 地図
+        name: イベント名
+        name_placeholder: ブリストル Ruby グループ Pull-request-a-thon
+        start_time: 開始日時
         url: URL
-        url_placeholder: Your event page / registration
-      title: Host a 24 Pull Requests event
+        url_placeholder: あなたのイベントページ / 登録
+      title: 24 Pull Requests のイベントを主催する
     notice:
       destroy_success: Event removed successfully!
       edit_success: Event updated successfully!
