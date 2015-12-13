@@ -1,5 +1,4 @@
 class AppDecorator < Draper::Decorator
-
   class << self
     attr_accessor :attributes
 
@@ -13,7 +12,5 @@ class AppDecorator < Draper::Decorator
         end
       end
     end
-
   end
-
 end

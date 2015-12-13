@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true, if: :send_regular_emails?
   validates :email, format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, allow_blank: true, on: :update }
 
-  geocoded_by :location, :latitude => :lat, :longitude => :lng
+  geocoded_by :location, latitude: :lat, longitude: :lng
   after_validation :geocode
 
   def self.find_by_nickname!(nickname)
@@ -131,7 +131,7 @@ class User < ActiveRecord::Base
 
   def send_confirmation_email
     generate_confirmation_token
-    self.save
+    save
     ConfirmationMailer.confirmation(self).deliver_now
   end
 
@@ -152,11 +152,10 @@ class User < ActiveRecord::Base
   end
 
   def gift_unspent_pull_requests!
-    if ungifted_dates.any?
-      pull_requests = unspent_pull_requests.slice(0, ungifted_dates.count)
-      pull_requests.each do |pull_request|
-        new_gift(pull_request: pull_request).save
-      end
+    return if ungifted_dates.empty?
+    pull_requests = unspent_pull_requests.slice(0, ungifted_dates.count)
+    pull_requests.each do |pull_request|
+      new_gift(pull_request: pull_request).save
     end
   end
 

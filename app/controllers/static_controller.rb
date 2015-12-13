@@ -12,7 +12,7 @@ class StaticController < ApplicationController
 
     # a user's location is pulled from public GitHub data
     # available on their profile when authenticating with the site
-    @map_markers = Rails.cache.fetch "contributors-map-markers", expires_in: 24.hours do
+    @map_markers = Rails.cache.fetch 'contributors-map-markers', expires_in: 24.hours do
       Gmaps4rails.build_markers(active_users) do |user, marker|
         next if user.lat.nil? || user.lng.nil?
 
@@ -29,7 +29,8 @@ class StaticController < ApplicationController
     @contributors = User.contributors
   end
 
-protected
+  protected
+
   # Currently-active contributors, i.e. users with a pull request this year
   def active_users
     PullRequest.year(current_year).map(&:user).uniq

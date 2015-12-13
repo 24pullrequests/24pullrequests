@@ -28,7 +28,7 @@ class Downloader
           body: pr['payload']['pull_request']['body']
         )
       else
-        pull_request = user.pull_requests.create_from_github(pr)
+        user.pull_requests.create_from_github(pr)
       end
     end
   end
@@ -50,6 +50,6 @@ class Downloader
   end
 
   def auto_gift_today(pull_request)
-    user.gifts.create({pull_request_id: pull_request.id, date: Time.zone.today})
+    user.gifts.create(pull_request_id: pull_request.id, date: Time.zone.today)
   end
 end

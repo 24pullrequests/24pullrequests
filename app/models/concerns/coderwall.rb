@@ -11,13 +11,11 @@ module Concerns
     def award_coderwall_badges
       return unless coderwall.configured?
 
-      if pull_requests.year(CURRENT_YEAR).any?
-        coderwall.award_badge(coderwall_username, ::Coderwall::PARTICIPANT)
-      end
+      return unless pull_requests.year(CURRENT_YEAR).any?
+      coderwall.award_badge(coderwall_username, ::Coderwall::PARTICIPANT)
 
-      if pull_requests.year(CURRENT_YEAR).length > 23
-        coderwall.award_badge(coderwall_username, ::Coderwall::CONTINUOUS)
-      end
+      return unless pull_requests.year(CURRENT_YEAR).length > 23
+      coderwall.award_badge(coderwall_username, ::Coderwall::CONTINUOUS)
     end
 
     private

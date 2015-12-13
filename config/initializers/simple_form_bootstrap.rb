@@ -65,7 +65,7 @@ SimpleForm.setup do |config|
   end
 
   config.wrappers :group, tag: 'div', class: 'form-group', error_class: 'has-error',
-      defaults: { input_html: { class: 'default-class ' } }  do |b|
+      defaults: { input_html: { class: 'default-class ' } } do |b|
 
     b.use :html5
     b.use :min_max

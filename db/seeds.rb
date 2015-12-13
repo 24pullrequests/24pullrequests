@@ -28,7 +28,7 @@ if Rails.env.development?
   PULL_REQUESTS = (3..20)
   PROJECTS = 50
 
-  EVENTS = ["PullRequest-a-thon", "24 Pull Requests Hack event", "Open Source Hackday", "Christmas Bugmash"]
+  EVENTS = ['PullRequest-a-thon', '24 Pull Requests Hack event', 'Open Source Hackday', 'Christmas Bugmash']
 
 
   Rails.logger.info 'Inserting some test data'

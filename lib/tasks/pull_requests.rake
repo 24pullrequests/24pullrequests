@@ -1,5 +1,5 @@
 desc 'Archive old pull requests'
-task archive_old_pull_requests: :environment  do
+task archive_old_pull_requests: :environment do
   copy_query = 'INSERT INTO archived_pull_requests (title, issue_url, body, state, merged, created_at, repo_name, user_id, language, comments_count)
     SELECT title, issue_url, body, state, merged, created_at, repo_name, user_id, language, comments_count FROM pull_requests
     WHERE EXTRACT(year FROM "created_at") < ' + CURRENT_YEAR.to_s
@@ -45,9 +45,7 @@ task update_pull_requests: :environment do
   end
 end
 
-desc "Gift unspent pull requests"
-task :gift_unspent_requests => :environment do
-  User.all.each do |user|
-    user.gift_unspent_pull_requests!
-  end
+desc 'Gift unspent pull requests'
+task gift_unspent_requests: :environment do
+  User.all.each(&:gift_unspent_pull_requests!)
 end
