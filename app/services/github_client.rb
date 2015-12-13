@@ -31,11 +31,9 @@ class GithubClient
   end
 
   def high_rate_limit?(rate_limit = 4000)
-    begin
-      client.rate_limit.remaining > rate_limit
-    rescue Octokit::Unauthorized, Faraday::ConnectionFailed
-      true
-    end
+    client.rate_limit.remaining > rate_limit
+  rescue Octokit::Unauthorized, Faraday::ConnectionFailed
+    true
   end
 
   def commits(repository, options = {})
@@ -55,11 +53,9 @@ class GithubClient
   end
 
   def organization_members(org, options = {})
-    begin
-      client.organization_members(org, options)
-    rescue Octokit::Unauthorized, Faraday::ConnectionFailed
-      []
-    end
+    client.organization_members(org, options)
+  rescue Octokit::Unauthorized, Faraday::ConnectionFailed
+    []
   end
 
   private

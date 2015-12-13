@@ -37,7 +37,7 @@ Tfpullrequests::Application.routes.draw do
   get '/resend_confirmation', to: 'dashboards#resend_confirmation_email', as: 'resend_confirmation'
   get '/confirm/:confirmation_token', to: 'dashboards#confirm_email', as: 'confirm_email'
 
-  get '/preferences',        to: 'dashboards#preferences',        as: 'preferences'
+  get '/preferences', to: 'dashboards#preferences', as: 'preferences'
   patch '/preferences/update', to: 'dashboards#update_preferences', as: 'update_preferences'
   get :my_suggestions, to: 'users#projects', as: :my_suggestions
 

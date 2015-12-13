@@ -64,7 +64,7 @@ describe RepoWithLabels do
         { "name" => 'bar' }
       ])
 
-      expect(res.call.as_json).to eq({
+      expect(res.call.as_json).to eq(
         'data' => {
           'repository' => {
             'foo' => 'bar'
@@ -73,34 +73,34 @@ describe RepoWithLabels do
           'repo_exists' => false
         },
         'status' => 200
-      })
+      )
     end
 
     it 'InvalidRepository' do
       allow(client).to receive(:repository)
         .and_raise(Octokit::InvalidRepository)
 
-      expect(res.call.as_json).to eq({
+      expect(res.call.as_json).to eq(
         'data' => { 'message' => 'Invalid repository' },
-        'status' => 422 })
+        'status' => 422)
     end
 
     it 'NotFound' do
       allow(client).to receive(:repository)
         .and_raise(Octokit::NotFound)
 
-      expect(res.call.as_json).to eq({
+      expect(res.call.as_json).to eq(
         'data' => { 'message' => 'Repo not found' },
-        'status' => 404 })
+        'status' => 404)
     end
 
     it 'TooManyRequests' do
       allow(client).to receive(:repository)
         .and_raise(Octokit::TooManyRequests)
 
-      expect(res.call.as_json).to eq({
+      expect(res.call.as_json).to eq(
         'data' => { 'message' => 'Too many requests' },
-        'status' => 403 })
+        'status' => 403)
     end
   end
 end

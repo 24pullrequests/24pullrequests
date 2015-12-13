@@ -2,7 +2,8 @@ class PullRequestDownloader
   attr_reader :login, :oauth_token
 
   def initialize(login, oauth_token)
-    @login, @oauth_token = login, oauth_token
+    @login = login
+    @oauth_token = oauth_token
   end
 
   def pull_requests

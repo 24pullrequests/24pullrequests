@@ -18,6 +18,6 @@ module ProjectHelper
   end
 
   def avatar_url(project)
-    project.avatar_url || "https://avatars.githubusercontent.com/u/10137?v=3"
+    project.avatar_url || 'https://avatars.githubusercontent.com/u/10137?v=3'
   end
 end

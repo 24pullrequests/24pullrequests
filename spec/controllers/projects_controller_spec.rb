@@ -23,24 +23,24 @@ describe ProjectsController, type: :controller do
       end
 
       it 'from params' do
-        allow(ProjectSearch).to receive(:new).with({ languages: %w(Ruby), labels: [], page: nil }).and_call_original
+        allow(ProjectSearch).to receive(:new).with(languages: %w(Ruby), labels: [], page: nil).and_call_original
         get :index, project: { languages: %w(Ruby) }
         expect(assigns(:projects)).to match_array(ruby)
         expect(assigns(:has_more_projects)).to eq(false)
         expect(assigns(:languages)).to eq(%w(Ruby))
         expect(assigns(:labels)).to eq([])
-        expect(session[:filter_options]).to eq({ languages: %w(Ruby), labels: [] })
+        expect(session[:filter_options]).to eq(languages: %w(Ruby), labels: [])
       end
 
       it 'from session filter_options' do
         session[:filter_options] = { languages: %w(Ruby), labels: [] }
-        allow(ProjectSearch).to receive(:new).with({ languages: %w(Ruby), labels: [], page: nil }).and_call_original
+        allow(ProjectSearch).to receive(:new).with(languages: %w(Ruby), labels: [], page: nil).and_call_original
         get :index
         expect(assigns(:projects)).to match_array(ruby)
         expect(assigns(:has_more_projects)).to eq(false)
         expect(assigns(:languages)).to eq(%w(Ruby))
         expect(assigns(:labels)).to eq([])
-        expect(session[:filter_options]).to eq({ languages: %w(Ruby), labels: [] })
+        expect(session[:filter_options]).to eq(languages: %w(Ruby), labels: [])
       end
 
       it 'from current_user languages' do

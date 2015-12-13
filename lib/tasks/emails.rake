@@ -2,7 +2,7 @@ desc 'Send daily emails'
 task send_emails: :environment do
   next unless PullRequest.in_date_range?
 
-  User.all.each  do |user|
+  User.all.each do |user|
     Notification.new(user).send_email # rescue nil
   end
 end
@@ -17,10 +17,10 @@ end
 desc 'Find all users who sent 24 pull requests'
 task continuous_sync_users: :environment do
   users = PullRequest.year(CURRENT_YEAR)
-             .includes(:user)
-             .map(&:user)
-             .uniq.compact.sort_by(&:id)
-             .select{|u| u.pull_requests.year(CURRENT_YEAR).length > 23 }
+                     .includes(:user)
+                     .map(&:user)
+                     .uniq.compact.sort_by(&:id)
+                     .select { |u| u.pull_requests.year(CURRENT_YEAR).length > 23 }
   puts "#{users.length} users"
   users.each do |user|
     puts "#{user.nickname} - #{user.email}"

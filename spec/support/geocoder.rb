@@ -1,5 +1,5 @@
 
-Geocoder.configure(:lookup => :test)
+Geocoder.configure(lookup: :test)
 
 # just whatever, man
 Geocoder::Lookup::Test.set_default_stub(

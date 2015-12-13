@@ -5,7 +5,6 @@ AllCops:
     - 'Rakefile'
     - '**/config.ru'
     - 'app/**/*'
-    - 'bin/**/*'
     - 'config/**/*'
     - 'db/**/*'
     - 'lib/**/*'
@@ -25,11 +24,14 @@ AllCops:
     - '**/*.sqlite3'
     - '**/*.yml'
     - 'coverage/**/*'
-    - 'db/schema.rb'
+    - 'db/**/*'
     - 'log/**/*'
     - 'public/**/*'
     - 'tmp/**/*'
-  RunRailsCops: true
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'script/**/*'
+
 Lint/HandleExceptions:
   Exclude:
     - 'config/unicorn.rb'

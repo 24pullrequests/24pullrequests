@@ -12,6 +12,7 @@ class PullRequestsController < ApplicationController
   end
 
   protected
+
   def pull_requests
     PullRequest.year(current_year).order('created_at desc').includes(:user)
   end

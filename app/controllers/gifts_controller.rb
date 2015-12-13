@@ -2,7 +2,7 @@ class GiftsController < ApplicationController
   before_action :ensure_logged_in
 
   def index
-    calendar  = Calendar.new(Gift.giftable_dates, current_user.gifts.year(current_year))
+    calendar = Calendar.new(Gift.giftable_dates, current_user.gifts.year(current_year))
 
     render :index, locals: { calendar: calendar }
   end

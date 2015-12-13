@@ -1,4 +1,4 @@
-class PullRequest  < ActiveRecord::Base
+class PullRequest < ActiveRecord::Base
   belongs_to :user, counter_cache: true
 
   validates :issue_url, uniqueness: { scope: :user_id }
@@ -46,7 +46,7 @@ class PullRequest  < ActiveRecord::Base
     return unless Rails.env.production?
     Typhoeus::Request.new(ENV['FIREHOSE_URL'],
       method: :post,
-      body: self.to_json(:include => {:user => {:only => [:uid,:nickname, :name, :blog, :location]}}),
+      body: self.to_json(include: { user: { only: [:uid, :nickname, :name, :blog, :location] } }),
       headers: { 'Content-Type' => 'application/json' }).run
   end
 
