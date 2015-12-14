@@ -20,8 +20,8 @@ ja:
         event:
           attributes:
             start_time:
-              in_past: Events can not be created in the past
-              not_in_range: Events can only be created between 1st and 24th December
+              in_past: イベントの開始日時に過去は設定できません
+              not_in_range: イベントの開始日時は今年の12月1日から12月24日の間である必要があります
         user:
           attributes:
             email:
