@@ -20,4 +20,5 @@ jQuery ->
 
     languageAutocomplete()
 
-  Emojify.replace('.js-emoji');
+$(document).on 'ready page:load', ->
+  Emojify.replace '.js-emoji'
