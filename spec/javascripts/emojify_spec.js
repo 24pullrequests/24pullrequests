@@ -46,4 +46,11 @@ describe('Emojify', function(){
     Emojify.replace(node);
     expect(node.html()).to.eq('::Session::');
   });
+
+  it('Run twice', function(){
+    var node = $('<p>:smile:</p>');
+    Emojify.replace(node);
+    Emojify.replace(node);
+    expect(node.html()).to.eq('<span>' + smile + '</span>');
+  });
 });
