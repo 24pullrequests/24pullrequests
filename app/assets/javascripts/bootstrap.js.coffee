@@ -19,3 +19,5 @@ jQuery ->
     $(this).tab "show"
 
     languageAutocomplete()
+
+  Emojify.replace('.js-emoji');
