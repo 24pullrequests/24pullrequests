@@ -68,6 +68,23 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    celluloid (0.17.2)
+      celluloid-essentials
+      celluloid-extras
+      celluloid-fsm
+      celluloid-pool
+      celluloid-supervision
+      timers (>= 4.1.1)
+    celluloid-essentials (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-extras (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-fsm (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-pool (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-supervision (0.20.5)
+      timers (>= 4.1.1)
     chai-jquery-rails (2.0.0)
       railties (>= 3.1)
       sprockets
@@ -147,6 +164,7 @@ GEM
     hashdiff (0.2.3)
     hashie (3.4.3)
     highline (1.7.8)
+    hitimes (1.2.3)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
       haml (~> 4.0.0)
@@ -401,6 +419,8 @@ GEM
     thread_safe (0.3.5)
     tilt (2.0.2)
     timecop (0.8.0)
+    timers (4.1.1)
+      hitimes
     tins (1.6.0)
     twitter (5.15.0)
       addressable (~> 2.3)
@@ -445,6 +465,7 @@ DEPENDENCIES
   bootstrap-sass
   brakeman
   bugsnag
+  celluloid (~> 0)
   chai-jquery-rails
   christmas_tree_formatter
   codeclimate-test-reporter
