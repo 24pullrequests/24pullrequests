@@ -17,4 +17,4 @@
     - if @event.can_edit?(current_user)
       %hr
       = link_to t("events.show.edit_event"), edit_event_path(@event), class: "btn btn-default"
-      = link_to t("events.show.destroy_event"), @event, data: { confirm: "event.show.confirm_destroy" }, method: :delete, class: "btn btn-danger"
+      = link_to t("events.show.destroy_event"), @event, data: { confirm: I18n.t("events.show.confirm_destroy") }, method: :delete, class: "btn btn-danger"
