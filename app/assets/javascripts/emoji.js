@@ -6,7 +6,7 @@ Emojify = {
   },
 
   _updateNode: function(node) {
-    if (!Emojify._replace(node.textContent).match(/\[:\w+:\]/m))
+    if (!Emojify._replace($(node).text()).match(/\[:\w+:\]/m))
       return;
 
     for (var i = 0; i < node.childNodes.length; i++) {
@@ -15,11 +15,11 @@ Emojify = {
       if (n.nodeName == '#text') {
         var newNode = document.createElement('span');
 
-        Emojify._splitEmo(Emojify._replace(n.textContent)).forEach(function(e){
+        $.each(Emojify._splitEmo(Emojify._replace($(n).text())), function(i, e){
           newNode.appendChild(e);
         });
 
-        n.parentNode.replaceChild(newNode, n);
+        $(n).replaceWith(newNode);
       }
     }
   },
@@ -31,7 +31,7 @@ Emojify = {
   },
 
   _splitEmo: function(str) {
-    return str.split(/(\[:\w+:\])/gm).map(function(e){
+    return $.map(str.split(/(\[:\w+:\])/gm), function(e){
       if (e.match(/^\[:\w+:\]$/))
         return Emojify._createEmojiNode(e.replace(/(\[|\])/, ''));
 
@@ -54,7 +54,7 @@ Emojify = {
       return str;
 
     str = str.replace(r, function(e){
-      return '[' + e.trim() + '] ';
+      return '[' + $.trim(e) + '] ';
     });
 
     return Emojify._replace_at_start(str);
@@ -67,7 +67,7 @@ Emojify = {
       return str;
 
     str = str.replace(r, function(e){
-      return ' [' + e.trim() + '] ';
+      return ' [' + $.trim(e) + '] ';
     });
 
     return Emojify._replace_at_end(str);
@@ -80,7 +80,7 @@ Emojify = {
       return str;
 
     str = str.replace(r, function(e){
-      return '[' + e.trim() + ']';
+      return '[' + $.trim(e) + ']';
     });
 
     return Emojify._replace_whole_line(str);
@@ -93,7 +93,7 @@ Emojify = {
       return str;
 
     str = str.replace(r, function(e){
-      return ' [' + e.trim() + '] ';
+      return ' [' + $.trim(e) + '] ';
     });
 
     return Emojify._replace_with_spaces_around(str);
