@@ -12,5 +12,5 @@ $ ->
         $('#pull-requests').html(data)
         $('#pull-requests-count').html $('.pull_request').length
         $("#spinner, #search_button").toggle()
-        emojify()
+        $(document).trigger('page:load')
         $('abbr.timeago').timeago()
