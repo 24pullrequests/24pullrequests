@@ -14,7 +14,7 @@ class StaticController < ApplicationController
     # available on their profile when authenticating with the site
     @map_markers = Rails.cache.fetch 'contributors-map-markers', expires_in: 24.hours do
       Gmaps4rails.build_markers(active_users) do |user, marker|
-        next if user.lat.nil? || user.lng.nil?
+        next if user.nil? || user.lat.nil? || user.lng.nil?
 
         marker.lat user.lat
         marker.lng user.lng
