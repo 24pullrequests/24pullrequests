@@ -29,8 +29,7 @@ ja:
               required_for_confirmation: "%{attribute} is required for confirmation"
   api:
     callback:
-      details: "?callback パラメータを指定することで、GET で取得できるいずれの API も、結果を JSON 関数でラップして受け取れます。これはブラウザがクロスドメインの問題を避けてウェブページの埋め込みコンテンツを表示するのに、一般的に使われる方法です。レスポンスに含まれるデータは通常の
-        API 呼び出し結果と同じです。"
+      details: "?callback パラメータを指定することで、GET で取得できるいずれの API も、結果を JSON 関数でラップして受け取れます。これはブラウザがクロスドメインの問題を避けてウェブページの埋め込みコンテンツを表示するのに、一般的に使われる方法です。レスポンスに含まれるデータは通常の API 呼び出し結果と同じです。"
       title: JSON-P Callbacks
     description: "あなたはこのことを知らないかもしれませんが、24 Pull Requests には JSON API があります。それぞれのエンドポイントの詳細は以下に記載します。"
     organisations:
@@ -49,8 +48,7 @@ ja:
       title: Pull Requests
     title: JSON API
     users:
-      details: "このサイトにサインアップしている全てのユーザを、12月中の pull request が多い順に返します。組織情報、pull request
-        情報も含まれます。"
+      details: "このサイトにサインアップしている全てのユーザを、12月中の pull request が多い順に返します。組織情報、pull request 情報も含まれます。"
       specific: "特定ユーザの情報を返します。"
       title: Users
   cancel: "キャンセル"
@@ -115,10 +113,10 @@ ja:
       not_authorized: You can only edit events that you have created
       not_logged_in: You have to be logged in to create or edit events
     show:
-      confirm_destroy: Are you sure you want to remove this event?
-      destroy_event: Remove event
-      edit_event: Edit event
-      view_event_details: View event details
+      confirm_destroy: このイベントを削除してもよいですか?
+      destroy_event: イベントを削除する
+      edit_event: イベントを編集する
+      view_event_details: イベントの詳細を見る
     title: Events
   everything: Everything
   exempli_gratia: e.g.
