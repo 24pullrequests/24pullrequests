@@ -107,11 +107,11 @@ ja:
         url_placeholder: あなたのイベントページ / 登録
       title: 24 Pull Requests のイベントを主催する
     notice:
-      destroy_success: Event removed successfully!
-      edit_success: Event updated successfully!
-      new_success: Event created successfully!
-      not_authorized: You can only edit events that you have created
-      not_logged_in: You have to be logged in to create or edit events
+      destroy_success: イベントを削除しました!
+      edit_success: イベントを更新しました!
+      new_success: イベントを作成しました!
+      not_authorized: 自身が作成したイベントのみ編集可能です
+      not_logged_in: イベントを作成または編集するにはログインが必要です
     show:
       confirm_destroy: このイベントを削除してもよいですか?
       destroy_event: イベントを削除する
