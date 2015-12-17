@@ -8,5 +8,5 @@
 - name: Install Ruby 2.1
   apt: pkg={{ item }} state=latest
   with_items:
-    - ruby2.1
-    - ruby2.1-dev
+    - ruby2.2
+    - ruby2.2-dev
