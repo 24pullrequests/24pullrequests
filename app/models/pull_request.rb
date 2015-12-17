@@ -11,6 +11,12 @@ class PullRequest < ActiveRecord::Base
   scope :by_language, -> (language) { where('lower(language) = ?', language.downcase) }
   scope :latest, -> (limit) { order('created_at desc').limit(limit) }
 
+  scope :for_aggregation, -> {
+    where(
+      'NOT EXISTS (SELECT 1 FROM aggregation_filters f WHERE pull_requests.user_id = f.user_id AND pull_requests.repo_name LIKE f.repo_pattern)'
+    )
+  }
+
   EARLIEST_PULL_DATE = Date.parse("01/12/#{CURRENT_YEAR}").midnight
   LATEST_PULL_DATE   = Date.parse("25/12/#{CURRENT_YEAR}").midnight
 
@@ -63,6 +69,10 @@ class PullRequest < ActiveRecord::Base
 
   def gifted_state
     gifts.any? ? :gifted : :not_gifted
+  end
+
+  def update_user_pr_count
+    user.update_pr_count
   end
 
   def autogift

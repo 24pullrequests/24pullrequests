@@ -4,11 +4,14 @@ class User < ActiveRecord::Base
 
   attr_writer :gift_factory
 
-  has_many :pull_requests, dependent: :destroy
-  has_many :skills,        dependent: :destroy
-  has_many :gifts,         dependent: :destroy
+  has_many :pull_requests,       dependent: :destroy
+  has_many :skills,              dependent: :destroy
+  has_many :gifts,               dependent: :destroy
+  has_many :aggregation_filters, dependent: :destroy
+
   has_many :projects
   has_many :events
+
   has_and_belongs_to_many :organisations
 
   has_many :archived_pull_requests

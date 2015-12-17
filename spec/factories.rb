@@ -2,6 +2,11 @@ require 'securerandom'
 require 'rspec/mocks'
 
 FactoryGirl.define do
+  factory :aggregation_filter do
+    user nil
+    repo_pattern "MyString"
+  end
+
   sequence :email do |n|
     "email#{n}@factory.com"
   end
