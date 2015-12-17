@@ -1,4 +1,7 @@
-database:
-    db: tfpullrequests_development
+databases:
+  - db: tfpullrequests_development
     user: vagrant
-    pass: 
+    pass:
+  - db: tfpullrequests_test
+    user: vagrant
+    pass:
