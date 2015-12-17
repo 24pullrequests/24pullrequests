@@ -110,7 +110,7 @@ is finished, log in to run the rails dev server:
 
     $ vagrant ssh
     $ cd /vagrant
-    $ bundle exec rails s
+    $ bundle exec rails s -b 0.0.0.0
 
 Then you should be able to access the application through your regular browser at http://192.168.12.34:3000.
 
