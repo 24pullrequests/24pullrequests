@@ -34,7 +34,7 @@ Once the process is completed, you need to log in, by running:
 There's no need to provide login or password. Now go to the project directory inside the VM in order to run the rails server:
 
     $ cd /vagrant
-    $ bundle exec rails s
+    $ bundle exec rails s -b 0.0.0.0
 
 This will initialize the development Rails server.
 Now you can go to your regular browser, in the Host machine (your main OS) and access the application through the address `http://192.168.12.34:3000`.
