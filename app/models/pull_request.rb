@@ -10,11 +10,8 @@ class PullRequest < ActiveRecord::Base
   scope :year, -> (year) { where('EXTRACT(year FROM "created_at") = ?', year) }
   scope :by_language, -> (language) { where('lower(language) = ?', language.downcase) }
   scope :latest, -> (limit) { order('created_at desc').limit(limit) }
-
   scope :for_aggregation, -> {
-    where(
-      'NOT EXISTS (SELECT 1 FROM aggregation_filters f WHERE pull_requests.user_id = f.user_id AND pull_requests.repo_name LIKE f.repo_pattern)'
-    )
+    where(AggregationFilter::PULL_REQUEST_SQL_FILTER)
   }
 
   EARLIEST_PULL_DATE = Date.parse("01/12/#{CURRENT_YEAR}").midnight
