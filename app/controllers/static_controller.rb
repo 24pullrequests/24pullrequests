@@ -14,8 +14,6 @@ class StaticController < ApplicationController
     # available on their profile when authenticating with the site
     @map_markers = Rails.cache.fetch 'contributors-map-markers', expires_in: 24.hours do
       Gmaps4rails.build_markers(active_users) do |user, marker|
-        next if user.nil? || user.lat.nil? || user.lng.nil?
-
         marker.lat user.lat
         marker.lng user.lng
       end.reject { |m| m.empty? }
@@ -33,6 +31,6 @@ class StaticController < ApplicationController
 
   # Currently-active contributors, i.e. users with a pull request this year
   def active_users
-    PullRequest.year(current_year).map(&:user).uniq
+    PullRequest.active_users(current_year)
   end
 end

@@ -15,6 +15,10 @@ class PullRequest < ActiveRecord::Base
   LATEST_PULL_DATE   = Date.parse("25/12/#{CURRENT_YEAR}").midnight
 
   class << self
+    def active_users(year)
+      PullRequest.includes(:user).year(year).map(&:user).uniq.compact
+    end
+
     def create_from_github(json)
       create(initialize_from_github(json))
     end
