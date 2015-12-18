@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151210211153) do
+ActiveRecord::Schema.define(version: 20151217162334) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -97,6 +97,7 @@ ActiveRecord::Schema.define(version: 20151210211153) do
     t.boolean  "inactive"
     t.boolean  "featured",      default: false
     t.string   "avatar_url"
+    t.integer  "contribulator"
   end
 
   create_table "pull_request_archives", force: :cascade do |t|

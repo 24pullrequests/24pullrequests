@@ -9,6 +9,8 @@ describe Project, type: :model do
     case_insensitive.with_message('Project has already been suggested.') }
   it { is_expected.to validate_length_of(:description).is_at_least(20).is_at_most(200) }
 
+  it { is_expected.to have_db_column(:contribulator).of_type(:integer) }
+
   context 'validations' do
     let(:project) { FactoryGirl.build(:project) }
 
@@ -107,5 +109,10 @@ describe Project, type: :model do
 
       expect(project.score('username', 'token')).to eq(10)
     end
+  end
+
+  it 'contribulator url' do
+    project = FactoryGirl.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests')
+    expect(project.contribulator_url).to eq('https://contribulator.herokuapp.com/24pullrequests/24pullrequests')
   end
 end

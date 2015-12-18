@@ -82,4 +82,8 @@ class Project < ActiveRecord::Base
   def score(nickname, token)
     PopularityScorer.new(nickname, token, self).score
   end
+
+  def contribulator_url
+    "https://contribulator.herokuapp.com/#{github_repository}"
+  end
 end
