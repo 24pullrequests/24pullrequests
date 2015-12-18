@@ -66,10 +66,15 @@ describe PullRequest, type: :model do
   end
 
   context '#scopes' do
+    let(:user) do
+      create :user, nickname: 'foo'
+    end
+
     let!(:pull_requests) do
       4.times.map  do |n|
         create(:pull_request, language:   'Haskell',
-                              created_at: DateTime.now + n.minutes)
+                              created_at: DateTime.now + n.minutes,
+                              user: user)
       end
     end
 
@@ -81,5 +86,16 @@ describe PullRequest, type: :model do
       expect(PullRequest.latest(3)).to eq(pull_requests.reverse.take(3))
     end
 
+    describe '#active_users' do
+      it 'Find users' do
+        expect(PullRequest.active_users(2015).map(&:nickname)).to eq(%w(foo))
+      end
+
+      it 'Prevent nils' do
+        nil_user = double('PullRequest', user: nil)
+        allow(PullRequest).to receive(:year).and_return([nil_user, nil_user])
+        expect(PullRequest.active_users(2015)).to eq([])
+      end
+    end
   end
 end
