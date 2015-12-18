@@ -1,5 +1,7 @@
 class PullRequest < ActiveRecord::Base
-  belongs_to :user, counter_cache: true
+  belongs_to :user
+  after_save { user.update_pull_request_count }
+  after_destroy { user.update_pull_request_count }
 
   validates :issue_url, uniqueness: { scope: :user_id }
 

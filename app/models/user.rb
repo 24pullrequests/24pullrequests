@@ -198,6 +198,10 @@ class User < ActiveRecord::Base
     update_column(:thank_you_email_sent, true)
   end
 
+  def update_pull_request_count
+    update_attribute(:pull_requests_count, pull_requests.for_aggregation.count)
+  end
+
   private
 
   def repo_languages
