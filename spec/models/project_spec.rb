@@ -9,6 +9,8 @@ describe Project, type: :model do
     case_insensitive.with_message('Project has already been suggested.') }
   it { is_expected.to validate_length_of(:description).is_at_least(20).is_at_most(200) }
 
+  it { is_expected.to have_db_column(:contribulator).of_type(:integer) }
+
   context 'validations' do
     let(:project) { FactoryGirl.build(:project) }
 

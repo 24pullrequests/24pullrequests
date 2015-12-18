@@ -1,3 +1,5 @@
+require_relative '../json_api'
+
 desc 'Mark inactive projects'
 task check_for_inactive_projects: :environment do
   count = 0
@@ -35,5 +37,24 @@ task map_labels_from_github_issues: :environment do
 
     labels.reject! { |label| !ACTIVE_LABELS.include?(label) }
     labels.each { |name| project.labels << Label.find_by_name(name) rescue nil }
+  end
+end
+
+namespace :projects do
+  desc 'Fetch contribulator scores'
+  task :contribulator => :environment do
+    api = JsonApi::PaginatedCollection.new(
+      domain: 'https://contribulator.herokuapp.com',
+      path:   '/api/projects'
+    )
+
+    api.fetch.each do |item|
+      github_url = "https://github.com/#{item['attributes']['name_with_owner']}"
+
+      if p = Project.find_by_github_repo(github_url)
+        p.update_attributes(contribulator: item['attributes']['score'].to_i)
+        puts "Updated #{p.name} contribulator #{p.contribulator}"
+      end
+    end
   end
 end
