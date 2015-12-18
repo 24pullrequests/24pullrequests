@@ -102,5 +102,14 @@ describe RepoWithLabels do
         'data' => { 'message' => 'Too many requests' },
         'status' => 403)
     end
+
+    it 'Unauthorized' do
+      allow(client).to receive(:repository)
+        .and_raise(Octokit::Unauthorized)
+
+      expect(res.call.as_json).to eq(
+        'data' => { 'message' => 'Bad credentials' },
+        'status' => 401)
+    end
   end
 end
