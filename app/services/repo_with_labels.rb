@@ -34,6 +34,8 @@ class RepoWithLabels
     response({ message: 'Repo not found' }, 404)
   rescue Octokit::TooManyRequests
     response({ message: 'Too many requests' }, 403)
+  rescue Octokit::Unauthorized
+    response({ message: 'Bad credentials' }, 401)
   end
 
   def fetch_labels
