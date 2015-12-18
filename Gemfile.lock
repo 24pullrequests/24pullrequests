@@ -502,6 +502,7 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   sprockets
+  sprockets-rails (= 2.3.3)
   thin
   timecop
   twitter
