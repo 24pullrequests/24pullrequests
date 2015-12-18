@@ -12,3 +12,6 @@
     .project-label
       %span.octicon.octicon-tag
       = label.name
+
+  - if project.contribulator?
+    = link_to "Contribulator score #{project.contribulator}", project.contribulator_url, class: 'label label-info', target: '_blank'

@@ -110,4 +110,9 @@ describe Project, type: :model do
       expect(project.score('username', 'token')).to eq(10)
     end
   end
+
+  it 'contribulator url' do
+    project = FactoryGirl.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests')
+    expect(project.contribulator_url).to eq('https://contribulator.herokuapp.com/24pullrequests/24pullrequests')
+  end
 end
