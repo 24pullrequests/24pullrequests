@@ -110,6 +110,8 @@ en:
       you can join a hack event and code together.
     edit:
       title: Edit Suggestion
+    index:
+      host_an_event: Host an event
     new:
       form:
         description: Description
