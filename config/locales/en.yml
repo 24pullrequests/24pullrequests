@@ -112,6 +112,8 @@ en:
       title: Edit Suggestion
     index:
       host_an_event: Host an event
+      show_past_24_pull_requests_events: Show Past 24 Pull Requests Events
+      past_24_pull_requests_events: Past 24 Pull Requests Events
     new:
       form:
         description: Description
