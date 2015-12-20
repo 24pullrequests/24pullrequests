@@ -24,9 +24,10 @@
   .row
     %p
       %button.btn.btn-default.toggle-past-events
-        %span Show
-        Past 24 Pull Requests Events
+        %span
+          = t("events.index.show_past_24_pull_requests_events")
   .row.past-events.hidden
-    %h4 Past 24 Pull Requests Events
+    %h4
+      = t("events.index.past_24_pull_requests_events")
     .col-md-12
       = render @past_events

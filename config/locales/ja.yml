@@ -95,6 +95,8 @@ ja:
       title: Edit Suggestion
     index:
       host_an_event: イベントを主催する
+      show_past_24_pull_requests_events: 過去の 24 Pull Requests イベントを見る
+      past_24_pull_requests_events: 過去の 24 Pull Requests イベント
     new:
       form:
         description: 説明
@@ -119,7 +121,7 @@ ja:
       destroy_event: イベントを削除する
       edit_event: イベントを編集する
       view_event_details: イベントの詳細を見る
-    title: Events
+    title: イベント
   everything: Everything
   exempli_gratia: e.g.
   follow_user: Follow @%{twitter}
