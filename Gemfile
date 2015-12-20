@@ -33,6 +33,8 @@ gem 'lodash-rails'
 gem 'mime-types', '2.6.2' # LOCKED DOWN per issue #299
 gem 'typhoeus'
 
+gem 'parser', '2.3.0.pre.6' # WORK-AROUND for Ruby 2.2.4
+
 group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
