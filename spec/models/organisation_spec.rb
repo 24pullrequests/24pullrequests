@@ -50,8 +50,6 @@ describe Organisation, type: :model do
       organisation = create :organisation, login: 'filtered-org', users: [user]
       update_pull_request_counts
       organisation.reload
-
-      organisation
     end
 
     describe '.pull_requests' do
