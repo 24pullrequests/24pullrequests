@@ -1,7 +1,7 @@
 class PullRequest < ActiveRecord::Base
   belongs_to :user
-  after_save { user.update_pull_request_count }
-  after_destroy { user.update_pull_request_count }
+  after_save { if user then user.update_pull_request_count end }
+  after_destroy { if user then user.update_pull_request_count end }
 
   validates :issue_url, uniqueness: { scope: :user_id }
 
