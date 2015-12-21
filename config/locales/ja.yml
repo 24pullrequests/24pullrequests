@@ -92,7 +92,7 @@ ja:
       hack event at your company, technology meetup, or in your local community. Or
       you can join a hack event and code together.
     edit:
-      title: Edit Suggestion
+      title: イベントを編集する
     index:
       host_an_event: イベントを主催する
       show_past_24_pull_requests_events: 過去の 24 Pull Requests イベントを見る
@@ -317,7 +317,7 @@ ja:
       error_github_not_connected: The user %{username} has not the same GitHub account
         connected with Coderwall as the one you connected to 24 Pull Requests with.
       error_no_user: No user found with this name.
-      success: Successfully updated your coderwall username!
+      success: Successfully updated your Coderwall username!
       title: Coderwall Badges
       update_button: Update
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests.
