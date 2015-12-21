@@ -11,4 +11,17 @@ describe 'PullRequests', type: :request do
 
     it { is_expected.to have_content '5 Pull Requests already made!' }
   end
+
+  describe 'Users' do
+    before do
+      user = create :user
+      create :pull_request, user: user
+      create :pull_request, user_id: nil
+      visit pull_requests_path
+    end
+
+    it 'Only show the image when there is a user' do
+      expect(page.all('.pull_request a.image').length).to eq(1)
+    end
+  end
 end
