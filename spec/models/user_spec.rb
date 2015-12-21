@@ -272,6 +272,41 @@ describe User, type: :model do
 
       it { is_expected.to eq 1 }
     end
+
+    context 'with some pull requests filtered' do
+      before do
+        create :aggregation_filter, user: user, repo_pattern: '%_filtered'
+        create(:pull_request, user: user, repo_name: 'should be included')
+        create(:pull_request, user: user, repo_name: 'should_be_filtered')
+      end
+
+      it "should not include all the user's filtered requests in their aggregated count" do
+        is_expected.to eq(user.pull_requests.all.count - 1)
+      end
+    end
+  end
+
+  describe '.pull_requests' do
+    subject { user.pull_requests }
+
+    context 'with some pull requests filtered' do
+      before do
+        create :aggregation_filter, user: user, repo_pattern: '%_filtered'
+      end
+
+      let(:included_pr) do
+        create(:pull_request, user: user, repo_name: 'should be included')
+      end
+
+      let(:filtered_pr) do
+        create(:pull_request, user: user, repo_name: 'should_be_filtered')
+      end
+
+      it 'should always show the full pull request list' do
+        is_expected.to include included_pr
+        is_expected.to include filtered_pr
+      end
+    end
   end
 
   describe '.to_param' do

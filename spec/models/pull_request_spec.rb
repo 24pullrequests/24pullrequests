@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe PullRequest, type: :model do
   let(:user) { create :user }
+  subject { create :pull_request, user: user }
 
   it { is_expected.to belong_to(:user) }
   it { is_expected.to validate_uniqueness_of(:issue_url).scoped_to(:user_id) }
