@@ -58,18 +58,16 @@ ja:
   contributors:
     title: "貢献者"
   dashboard:
-    christmas_activity: This is where you can see all the activity we've tracked for
-      you in the run up to Christmas.
+    christmas_activity: ここではクリスマスまでにあなたが行い、トレースされたすべての活動を見ることができます。
     gift_it: Gift it!
     give_a_gift: Looks like you haven't gifted any code today. Would you like to gift
       your new pull requests?
-    help_out: Can't think of a project you'd like to help contribute to? We've put
-      together a list of popular projects here.
-    no_pull_requests: You've not sent any pull requests, what are you waiting for?!
+    help_out: 貢献したいプロジェクトが思いつきませんか? ここにポピュラーなプロジェクトを集めたので、参考にしてください。
+    no_pull_requests: あなたはまだ pull request を送信していません、何を待っているのですか!?
     not_december: 24 Pull Requests runs from 1st-24th December, come back then!
     pull_requests: Wonder what people up to this holiday? Check out these pull requests,
       or submit a pull request now and find yours here!
-    synchronize: Synchronize Pull Requests
+    synchronize: Pull Requests を同期
   delete_account:
     are_you_sure: We just wanted to make sure you really do wish to delete your account.
       This will remove your profile and all pull requests from the site, although
@@ -244,7 +242,7 @@ ja:
     hint:
       confirm_email: Please confirm your email address using the link we've sent you.
     information: 後からいつでもメールの設定を変更することができます。
-    languages: あなたはどの言語を知っていますか？
+    languages: あなたはどの言語を知っていますか?
     remove: Remove Account
     save: Save
     save_and_continue: Save and Continue
@@ -300,8 +298,8 @@ ja:
   search: "検索"
   sponsored_by: Sponsored by
   sponsors: "スポンサー"
-  suggest_project: Suggest a project
-  suggested_projects: Suggested Projects
+  suggest_project: プロジェクトをオススメする
+  suggested_projects: オススメのプロジェクト
   suggestions:
     title: My Suggestions
   twitter:
@@ -325,7 +323,7 @@ ja:
       Bah humbug!"
     organisations: Member of...
     pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
-  view_all: View All
+  view_all: すべてを見る
   welcome: ようこそ、%{user}さん!
-  welcome_back: Welcome back, %{user}
+  welcome_back: お帰りなさい、%{user}さん
   your_pull_requests: Your Pull Requests
