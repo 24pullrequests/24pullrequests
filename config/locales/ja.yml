@@ -121,6 +121,7 @@ ja:
       destroy_event: イベントを削除する
       edit_event: イベントを編集する
       view_event_details: イベントの詳細を見る
+    save_event: 保存
     title: イベント
   everything: Everything
   exempli_gratia: e.g.

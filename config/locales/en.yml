@@ -138,6 +138,7 @@ en:
       destroy_event: Remove event
       edit_event: Edit event
       view_event_details: View event details
+    save_event: Save event
     title: Events
   everything: Everything
   exempli_gratia: e.g.
