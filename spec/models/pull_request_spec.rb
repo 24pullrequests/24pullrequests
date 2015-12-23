@@ -19,19 +19,20 @@ describe PullRequest, type: :model do
     its(:repo_name)  { should eq json['repo']['name'] }
     its(:language)   { should eq json['repo']['language'] }
 
-    # context 'when the user has authed their twitter account' do
-    #   let(:user) { create :user, :twitter_token => 'foo', :twitter_secret => 'bar' }
+    context 'when the user has authed their twitter account' do
+      let(:user) { create :user, :twitter_token => 'foo', :twitter_secret => 'bar' }
 
-    #   it 'tweets the pull request' do
-    #     twitter = double('twitter')
-    #     twitter.stub(:update)
-    #     User.any_instance.stub(:twitter).and_return(twitter)
+      it 'can tweet the pull request' do
+        twitter = double('twitter')
+        twitter.stub(:update)
+        User.any_instance.stub(:twitter).and_return(twitter)
 
-    #     user.twitter.should_receive(:update)
-    #       .with(I18n.t 'pull_request.twitter_message', :issue_url => json['payload']['pull_request']['_links']['html']['href'])
-    #     user.pull_requests.create_from_github(json)
-    #   end
-    # end
+        user.twitter.should_receive(:update)
+          .with(I18n.t 'pull_request.twitter_message', :issue_url => json['payload']['pull_request']['_links']['html']['href'])
+
+        user.pull_requests.create_from_github(json).post_tweet
+      end
+    end
   end
 
   describe '#autogift' do
