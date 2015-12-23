@@ -18,19 +18,33 @@ describe PullRequest, type: :model do
     its(:merged)     { should eq json['payload']['pull_request']['merged'] }
     its(:repo_name)  { should eq json['repo']['name'] }
     its(:language)   { should eq json['repo']['language'] }
+  end
 
-    context 'when the user has authed their twitter account' do
+  describe ".post_tweet" do
+    let(:twitter) { double(Twitter::REST::Client) }
+
+    before do
+      allow_any_instance_of(User).to receive(:twitter).and_return(twitter)
+    end
+
+    let(:issue_url) { 'http://github.com/my/issue/url' }
+    let(:pull_request) { FactoryGirl.create :pull_request, :user => user, :issue_url => issue_url }
+
+    context 'if the user has authed their twitter account' do
       let(:user) { create :user, :twitter_token => 'foo', :twitter_secret => 'bar' }
 
-      it 'can tweet the pull request' do
-        twitter = double('twitter')
-        twitter.stub(:update)
-        User.any_instance.stub(:twitter).and_return(twitter)
+      it 'tweets the pull request' do
+        expect(twitter).to receive(:update).with(I18n.t 'pull_request.twitter_message', :issue_url => issue_url)
+        pull_request.post_tweet
+      end
+    end
 
-        user.twitter.should_receive(:update)
-          .with(I18n.t 'pull_request.twitter_message', :issue_url => json['payload']['pull_request']['_links']['html']['href'])
+    context 'if the user has not authed their twitter account' do
+      let(:user) { create :user }
 
-        user.pull_requests.create_from_github(json).post_tweet
+      it 'silently does not tweet the pull request' do
+        expect(twitter).not_to receive(:update)
+        pull_request.post_tweet
       end
     end
   end
