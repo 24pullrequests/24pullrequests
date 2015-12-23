@@ -13,7 +13,7 @@ class PullRequest < ActiveRecord::Base
   scope :by_language, -> (language) { where('lower(language) = ?', language.downcase) }
   scope :latest, -> (limit) { order('created_at desc').limit(limit) }
   scope :for_aggregation, -> {
-    where(AggregationFilter::PULL_REQUEST_FILTER)
+    where(AggregationFilter.pull_request_filter)
   }
 
   EARLIEST_PULL_DATE = Date.parse("01/12/#{CURRENT_YEAR}").midnight
