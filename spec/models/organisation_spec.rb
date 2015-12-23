@@ -33,17 +33,17 @@ describe Organisation, type: :model do
   context 'with pull request filtering' do
     let(:user) do
       user = create(:user)
-      create :aggregation_filter, user: user, repo_pattern: '%_filtered'
+      create :aggregation_filter, user: user, title_pattern: '% filtered'
 
       user
     end
 
     let!(:included_pr) do
-      create(:pull_request, user: user, repo_name: 'should be included')
+      create(:pull_request, user: user, title: 'should be included')
     end
 
     let!(:filtered_pr) do
-      create(:pull_request, user: user, repo_name: 'should_be_filtered')
+      create(:pull_request, user: user, title: 'should be filtered')
     end
 
     let(:organisation) do

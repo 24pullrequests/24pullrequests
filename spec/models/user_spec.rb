@@ -275,9 +275,9 @@ describe User, type: :model do
 
     context 'with some pull requests filtered' do
       before do
-        create :aggregation_filter, user: user, repo_pattern: '%_filtered'
-        create(:pull_request, user: user, repo_name: 'should be included')
-        create(:pull_request, user: user, repo_name: 'should_be_filtered')
+        create :aggregation_filter, user: user, title_pattern: '% filtered'
+        create(:pull_request, user: user, title: 'should be included')
+        create(:pull_request, user: user, title: 'should be filtered')
       end
 
       it "should not include all the user's filtered requests in their aggregated count" do
@@ -291,15 +291,15 @@ describe User, type: :model do
 
     context 'with some pull requests filtered' do
       before do
-        create :aggregation_filter, user: user, repo_pattern: '%_filtered'
+        create :aggregation_filter, user: user, title_pattern: '% filtered'
       end
 
       let(:included_pr) do
-        create(:pull_request, user: user, repo_name: 'should be included')
+        create(:pull_request, user: user, title: 'should be included')
       end
 
       let(:filtered_pr) do
-        create(:pull_request, user: user, repo_name: 'should_be_filtered')
+        create(:pull_request, user: user, title: 'should be filtered')
       end
 
       it 'should always show the full pull request list' do
