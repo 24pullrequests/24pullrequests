@@ -231,7 +231,7 @@ ja:
   preferences:
     coderwall: あなたが既に獲得しているバッジをプロフィールページに表示するためにあなたの Coderwall アカウントとリンクします。
     coderwall_username: Coderwall ユーザー名
-    delete: Want to delete your account?
+    delete: あなたのアカウントを削除したいですか?
     form:
       daily: 日次
       email: Email アドレス
@@ -240,15 +240,15 @@ ja:
       weekly: 週次
     frequency_message: 今からプロジェクトが終了するまで、あなたが選択した頻度で、あなたが貢献を検討する可能性のあるプロジェクトを提案するメールを送信します。加えて、あなたのGitHubのプロフィールに記載の開発言語のリポジトリに基づいて、私たちは提案します。また、あなたは以下に記載の開発言語を選択することができます。
     hint:
-      confirm_email: Please confirm your email address using the link we've sent you.
+      confirm_email: 私たちがあなたに送ったメールのリンクで、あなたのメールアドレスを確認してください。
     information: 後からいつでもメールの設定を変更することができます。
     languages: あなたはどの言語を知っていますか?
-    remove: Remove Account
-    save: Save
-    save_and_continue: Save and Continue
+    remove: アカウントを削除する
+    save: 保存
+    save_and_continue: 保存後、続ける
     setup_help: 24 Pull Requests を始めるにあたり、まず最初に以下のフォームに記入してください。
-    title: Set your personal preferences
-    twitter: Twitter Account
+    title: アカウントを設定してください
+    twitter: Twitter アカウント
   preferred_languages: Preferred Languages
   projects:
     admin:
@@ -318,7 +318,7 @@ ja:
       error_no_user: No user found with this name.
       success: Successfully updated your Coderwall username!
       title: Coderwall Badges
-      update_button: Update
+      update_button: 更新
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests.
       Bah humbug!"
     organisations: Member of...
