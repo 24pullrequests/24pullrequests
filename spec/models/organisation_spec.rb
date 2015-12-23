@@ -46,6 +46,10 @@ describe Organisation, type: :model do
       create(:pull_request, user: user, title: 'should be filtered')
     end
 
+    let!(:uppercase_filtered_pr) do
+      create(:pull_request, user: user, title: 'SHOULD ALSO BE FILTERED')
+    end
+
     let(:organisation) do
       organisation = create :organisation, login: 'filtered-org', users: [user]
       update_pull_request_counts
@@ -59,13 +63,19 @@ describe Organisation, type: :model do
         is_expected.to include included_pr
         is_expected.not_to include filtered_pr
       end
+
+      it 'should not be case sensitive when filtering pull requests' do
+        is_expected.to include included_pr
+        is_expected.not_to include filtered_pr
+        is_expected.not_to include uppercase_filtered_pr
+      end
     end
 
     describe '.pull_requests_count' do
       subject { organisation.pull_request_count }
 
       it 'should count only non-filtered pull requests' do
-        is_expected.to eq(PullRequest.all.count - 1)
+        is_expected.to eq(PullRequest.all.count - 2)
       end
     end
   end
