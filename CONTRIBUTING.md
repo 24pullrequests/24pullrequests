@@ -41,6 +41,8 @@ Now you can go to your regular browser, in the Host machine (your main OS) and a
 
 Any changes that you make to the app files will be reflected inside the VM server. You can use your regular workflow for development, as if the server was local.
 
+You can run the tests with `bundle exec rake spec` (or spec:models, etc) from inside the VM too. As outside, you may need to run `bundle exec rake db:test:prepare` occasionally to bring the DB up to date with recent changes.
+
 When you want to pause or finish working, you can run:
 
     $ vagrant suspend

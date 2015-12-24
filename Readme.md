@@ -120,7 +120,7 @@ Simply edit the files in the project directory using your favorite editor on you
 
 Standard RSpec/Capybara tests are used for testing the application. The tests can be run with `bundle exec rake`.
 
-You can set up the test environment with `rake db:test:prepare`, which will create the test DB and populate its schema automatically. You don't need to do this for every test run, but it will let you easily keep up with migrations. If you find a large number of tests are failing you should probably run this.
+You can set up the test environment with `bundle exec rake db:test:prepare`, which will create the test DB and populate its schema automatically. You don't need to do this for every test run, but it will let you easily keep up with migrations. If you find a large number of tests are failing you should probably run this.
 
 Mocha/Konacha is used for unit testing any JavaScript. JavaScript specs
 should be placed in `spec/javascripts`. Run the JavaScript specs with
