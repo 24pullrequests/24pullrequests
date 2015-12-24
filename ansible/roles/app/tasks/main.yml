@@ -31,3 +31,7 @@
 - name: Feed DB
   sudo: false
   shell: bundle exec rake db:seed chdir=/vagrant
+
+- name: Rake db:test:prepare
+  sudo: false
+  shell: bundle exec rake db:test:prepare chdir=/vagrant
