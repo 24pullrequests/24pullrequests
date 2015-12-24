@@ -1,5 +1,7 @@
 class PullRequest < ActiveRecord::Base
-  belongs_to :user, counter_cache: true
+  belongs_to :user
+  after_save { if user then user.update_pull_request_count end }
+  after_destroy { if user then user.update_pull_request_count end }
 
   validates :issue_url, uniqueness: { scope: :user_id }
 
@@ -10,6 +12,9 @@ class PullRequest < ActiveRecord::Base
   scope :year, -> (year) { where('EXTRACT(year FROM "created_at") = ?', year) }
   scope :by_language, -> (language) { where('lower(language) = ?', language.downcase) }
   scope :latest, -> (limit) { order('created_at desc').limit(limit) }
+  scope :for_aggregation, -> {
+    where(AggregationFilter.pull_request_filter)
+  }
 
   EARLIEST_PULL_DATE = Date.parse("01/12/#{CURRENT_YEAR}").midnight
   LATEST_PULL_DATE   = Date.parse("25/12/#{CURRENT_YEAR}").midnight
@@ -63,6 +68,10 @@ class PullRequest < ActiveRecord::Base
 
   def gifted_state
     gifts.any? ? :gifted : :not_gifted
+  end
+
+  def update_user_pr_count
+    user.update_pr_count
   end
 
   def autogift

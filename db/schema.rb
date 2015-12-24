@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151217162334) do
+ActiveRecord::Schema.define(version: 20151223170543) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "aggregation_filters", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "title_pattern"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "aggregation_filters", ["user_id"], name: "index_aggregation_filters_on_user_id", using: :btree
 
   create_table "archived_pull_requests", force: :cascade do |t|
     t.string   "title"
@@ -158,12 +167,13 @@ ActiveRecord::Schema.define(version: 20151217162334) do
     t.string   "name"
     t.string   "blog"
     t.string   "location"
+    t.boolean  "thank_you_email_sent",                         default: false
     t.decimal  "lat",                  precision: 8, scale: 6
     t.decimal  "lng",                  precision: 9, scale: 6
-    t.boolean  "thank_you_email_sent",                         default: false
   end
 
   add_index "users", ["nickname"], name: "index_users_on_nickname", unique: true, using: :btree
   add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
 
+  add_foreign_key "aggregation_filters", "users"
 end

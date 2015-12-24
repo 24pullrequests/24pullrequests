@@ -14,9 +14,7 @@ end
 desc 'Refresh pull request counts'
 task refresh_pull_request_counts: :environment do
   User.reset_column_information
-  User.all.each do |u|
-    User.reset_counters(u.id, :pull_requests)
-  end
+  User.all.find_each(&:update_pull_request_count)
 end
 
 desc 'Download new pull requests'

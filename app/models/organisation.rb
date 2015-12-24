@@ -1,6 +1,6 @@
 class Organisation < ActiveRecord::Base
   has_and_belongs_to_many :users
-  has_many :pull_requests, -> { order('created_at desc') }, through: :users
+  has_many :pull_requests, -> { order('created_at desc').for_aggregation }, through: :users
 
   scope :order_by_pull_requests, -> do
     order('organisations.pull_request_count desc, organisations.login asc')
@@ -16,10 +16,6 @@ class Organisation < ActiveRecord::Base
       }
 
       where(login: response.login).first_or_create(params)
-    end
-
-    def with_user_counts
-      joins(:users).select('organisations.*, COUNT(users.id) as users_count').group('organisations.id')
     end
   end
 

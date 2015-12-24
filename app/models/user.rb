@@ -4,11 +4,14 @@ class User < ActiveRecord::Base
 
   attr_writer :gift_factory
 
-  has_many :pull_requests, dependent: :destroy
-  has_many :skills,        dependent: :destroy
-  has_many :gifts,         dependent: :destroy
+  has_many :pull_requests,       dependent: :destroy
+  has_many :skills,              dependent: :destroy
+  has_many :gifts,               dependent: :destroy
+  has_many :aggregation_filters, dependent: :destroy
+
   has_many :projects
   has_many :events
+
   has_and_belongs_to_many :organisations
 
   has_many :archived_pull_requests
@@ -193,6 +196,10 @@ class User < ActiveRecord::Base
     return unless pull_requests_count >= 24 && !thank_you_email_sent
     ThankYouMailer.thank_you(self).deliver_later
     update_column(:thank_you_email_sent, true)
+  end
+
+  def update_pull_request_count
+    update_attribute(:pull_requests_count, pull_requests.for_aggregation.count)
   end
 
   private
