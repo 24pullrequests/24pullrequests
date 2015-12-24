@@ -249,7 +249,7 @@ ja:
     setup_help: 24 Pull Requests を始めるにあたり、まず最初に以下のフォームに記入してください。
     title: アカウントを設定してください
     twitter: Twitter アカウント
-  preferred_languages: Preferred Languages
+  preferred_languages: 好きな言語
   projects:
     admin:
       search: Search by GitHub repository
@@ -303,27 +303,25 @@ ja:
   suggestions:
     title: My Suggestions
   twitter:
-    account_linked: Your Twitter account has been linked! We'll post a tweet whenever
-      you open a pull request.
-    account_removed: Your Twitter account has been removed.
+    account_linked: あなたの Twitter アカウントとは既にリンクしています! あなたがOSSへの pull request をする度に私たちはツイートします。
+    account_removed: あなたの Twitter アカウントとのリンクを削除しました。
     link_account:
-      text: Link Your Twitter Account
-      tooltip: If you link your Twitter account, we'll post a new tweet whenever you
-        open a pull request!
+      text: あなたの Twitter アカウントとリンクしましょう
+      tooltip: あなたの Twitter アカウントとリンクすると、あなたがOSSへの pull request をする度に私たちはツイートします!
   user:
     coderwall:
       achieved_by: Badges achieved by
       error_github_not_connected: The user %{username} has not the same GitHub account
         connected with Coderwall as the one you connected to 24 Pull Requests with.
-      error_no_user: No user found with this name.
-      success: Successfully updated your Coderwall username!
-      title: Coderwall Badges
+      error_no_user: この名前ではユーザーは見つかりません。
+      success: Coderwall ユーザー名の更新に成功しました!
+      title: Coderwall バッジ
       update_button: 更新
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests.
       Bah humbug!"
     organisations: Member of...
-    pull_request_count: "%{user} has made %{count} total pull requests so far in %{year}"
+    pull_request_count: "%{user}さんは%{year}の12月の間に合計%{count}個の pull request をしました"
   view_all: すべてを見る
   welcome: ようこそ、%{user}さん!
   welcome_back: お帰りなさい、%{user}さん
-  your_pull_requests: Your Pull Requests
+  your_pull_requests: あなたの Pull Requests
