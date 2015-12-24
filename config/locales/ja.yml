@@ -285,8 +285,7 @@ ja:
       update: Update Project
   pull_request:
     download:
-      tooltip: Usually we check for pull requests every hour, but you can check now
-        if you really want.
+      tooltip: 通常、私たちは pull request を毎時チェックしますが、もし望むのであれば、今すぐ確認することができます。
     twitter_message: 'I just gifted a pull request for http://24pullrequests.com,
       check it out: %{issue_url}'
   pull_requests:
