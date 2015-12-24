@@ -17,5 +17,5 @@
         = render @organisation.users.order('pull_requests_count desc')
 
 #pull_requests
-  %h3= t("organisations.pull_requests", count: @organisation.pull_request_count)
+  %h3= t("organisations.pull_requests", count: @organisation.pull_requests.length)
   = render @organisation.pull_requests
