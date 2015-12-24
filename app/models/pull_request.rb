@@ -70,10 +70,6 @@ class PullRequest < ActiveRecord::Base
     gifts.any? ? :gifted : :not_gifted
   end
 
-  def update_user_pr_count
-    user.update_pr_count
-  end
-
   def autogift
     user.new_gift(pull_request: self).save if body && body.scan(/24 ?pull ?request/i).any?
   end
