@@ -22,6 +22,7 @@ Thumbs.db
 
 # To not force .overcommit.yml on anyone.
 .overcommit.yml
+.rvmrc
 
 # Ignore application configuration
 /config/application.yml
