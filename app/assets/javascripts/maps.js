@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", function(event) {
+  function hasLatLng(marker) {
+    return marker.lat && marker.lng;
+  }
+
   var mapMarkers = document.getElementById('maps-data');
+
   if (!mapMarkers) {
     return;
   }
@@ -11,8 +16,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       id: 'map'
     }
   }, function() {
-    var data = JSON.parse(mapMarkers.innerHTML);
-    var markers = handler.addMarkers(data);
+    var data = JSON.parse(mapMarkers.innerHTML).filter(hasLatLng),
+        markers = handler.addMarkers(data);
+
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
   });

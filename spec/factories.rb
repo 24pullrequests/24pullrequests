@@ -30,7 +30,7 @@ FactoryGirl.define do
     email
     gravatar_id { Faker::Internet.email }
     token { SecureRandom.hex }
-    location { Faker::Address.country }
+    location { Faker::Address.country unless [0,1,2].sample == 0 }
   end
 
   factory :skill do

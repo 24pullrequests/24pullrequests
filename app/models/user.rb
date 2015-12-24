@@ -202,6 +202,10 @@ class User < ActiveRecord::Base
     update_attribute(:pull_requests_count, pull_requests.for_aggregation.count)
   end
 
+  def lat_lng
+    lat && lng
+  end
+
   private
 
   def repo_languages
