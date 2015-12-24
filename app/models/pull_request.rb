@@ -9,7 +9,7 @@ class PullRequest < ActiveRecord::Base
 
   has_many :gifts
 
-  scope :year, -> (year) { where('EXTRACT(year FROM "created_at") = ?', year) }
+  scope :year, -> (year) { where('EXTRACT(year FROM pull_requests.created_at) = ?', year) }
   scope :by_language, -> (language) { where('lower(language) = ?', language.downcase) }
   scope :latest, -> (limit) { order('created_at desc').limit(limit) }
   scope :for_aggregation, -> {
@@ -21,7 +21,7 @@ class PullRequest < ActiveRecord::Base
 
   class << self
     def active_users(year)
-      PullRequest.includes(:user).year(year).map(&:user).uniq.compact
+      User.find(PullRequest.year(year).map(&:user_id).compact.uniq)
     end
 
     def create_from_github(json)
