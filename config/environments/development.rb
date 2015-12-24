@@ -35,4 +35,7 @@ Tfpullrequests::Application.configure do
     address: 'localhost',
     port:    1025
   }
+
+  # Allow Vagrant host access to web console
+  config.web_console.whitelisted_ips = '192.168.12.1'
 end
