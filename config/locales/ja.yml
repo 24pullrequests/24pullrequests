@@ -53,7 +53,7 @@ ja:
       title: Users
   cancel: "キャンセル"
   change: Change
-  claim: Claim
+  claim: 主張
   clear: Clear
   contributors:
     title: "貢献者"
@@ -212,7 +212,7 @@ ja:
     my_suggestions: "私のオススメ"
     preferences: "設定"
     profile: "プロフィール"
-  no_suggestions: You haven't suggested any projects yet.
+  no_suggestions: あなたはまだプロジェクトをオススメをしていません。
   nov_reminder:
     how_to_contribute:
       to find out how to contribute 24 pull requests between December 1st and December 24th.
@@ -254,7 +254,7 @@ ja:
     admin:
       search: Search by GitHub repository
       title: Manage Projects
-    claim: Are any of the projects you suggested not listed? Claim them!
+    claim: 一覧に載っていないオススメのプロジェクトがありますか? 主張してください！
     edit:
       title: Edit Suggestion
     filter_by_language: 'Filter by Language:'
@@ -300,7 +300,7 @@ ja:
   suggest_project: プロジェクトをオススメする
   suggested_projects: オススメのプロジェクト
   suggestions:
-    title: My Suggestions
+    title: 私のオススメ
   twitter:
     account_linked: あなたの Twitter アカウントとは既にリンクしています! あなたがOSSへの pull request をする度に私たちはツイートします。
     account_removed: あなたの Twitter アカウントとのリンクを削除しました。
