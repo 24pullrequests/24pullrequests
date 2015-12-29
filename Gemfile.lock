@@ -208,7 +208,7 @@ GEM
       callsite (~> 0.0, >= 0.0.11)
       rack-contrib (~> 1.1)
       railties (>= 3.0.0, < 5.0.0)
-    mime-types (2.6.2)
+    mime-types (2.99)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
     multi_json (1.11.2)
@@ -471,7 +471,6 @@ DEPENDENCIES
   lodash-rails
   memcachier
   meta_request
-  mime-types (= 2.6.2)
   newrelic_rpm
   octicons-rails
   octokit
