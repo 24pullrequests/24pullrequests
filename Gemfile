@@ -30,7 +30,6 @@ gem 'sprockets-rails', '2.3.3'
 gem 'gmaps4rails'
 gem 'geocoder'
 gem 'lodash-rails'
-gem 'mime-types', '2.6.2' # LOCKED DOWN per issue #299
 gem 'typhoeus'
 
 gem 'parser', '2.3.0.pre.6' # WORK-AROUND for Ruby 2.2.4
