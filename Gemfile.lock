@@ -427,8 +427,8 @@ GEM
       activemodel (>= 4.2)
       debug_inspector
       railties (>= 4.2)
-    webmock (1.22.5)
-      addressable (< 2.4.0)
+    webmock (1.22.6)
+      addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
     websocket-driver (0.6.3)
