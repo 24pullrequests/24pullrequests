@@ -31,7 +31,7 @@ gem 'gmaps4rails'
 gem 'geocoder'
 gem 'lodash-rails'
 gem 'typhoeus'
-
+gem 'sassc-rails'
 gem 'parser', '2.3.0.pre.6' # WORK-AROUND for Ruby 2.2.4
 
 group :development do

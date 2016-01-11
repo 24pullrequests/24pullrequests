@@ -356,6 +356,16 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    sassc (1.8.3)
+      bundler
+      ffi (~> 1.9.6)
+      sass (>= 3.3.0)
+    sassc-rails (1.1.0)
+      rails (>= 4.0.0)
+      sass
+      sassc (~> 1.6)
+      sprockets (> 2.11)
+      tilt
     sawyer (0.6.0)
       addressable (~> 2.3.5)
       faraday (~> 0.8, < 0.10)
@@ -494,6 +504,7 @@ DEPENDENCIES
   rspec-rails
   rubocop
   sass-rails
+  sassc-rails
   shoulda-matchers (= 3.0.1)
   simple_form
   simplecov
