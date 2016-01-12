@@ -61,7 +61,7 @@ group :development, :test, :cucumber do
   gem 'launchy'
 
   gem 'database_cleaner'
-  gem 'shoulda-matchers', '3.0.1' # LOCKED DOWN
+  gem 'shoulda-matchers'
   gem 'webmock', require: false
   gem 'timecop'
   gem 'simplecov'
