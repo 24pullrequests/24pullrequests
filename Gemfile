@@ -33,11 +33,11 @@ gem 'lodash-rails'
 gem 'typhoeus'
 gem 'sassc-rails'
 gem 'parser', '2.3.0.pre.6' # WORK-AROUND for Ruby 2.2.4
+gem 'puma'
 
 group :development do
   gem 'spring'
   gem 'spring-commands-rspec'
-  gem 'thin'
   gem 'rubocop', require: false
   gem 'web-console'
   gem 'figaro'
@@ -76,7 +76,6 @@ group :development, :test, :cucumber do
 end
 
 group :production do
-  gem 'puma'
   gem 'foreman'
   gem 'memcachier'
   gem 'dalli'
