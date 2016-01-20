@@ -214,7 +214,7 @@ GEM
     naught (1.1.0)
     netrc (0.11.0)
     newrelic_rpm (3.14.1.311)
-    nokogiri (1.6.7.1)
+    nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     oauth (0.4.7)
     oauth2 (1.0.0)
