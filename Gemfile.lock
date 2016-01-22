@@ -365,7 +365,7 @@ GEM
     sawyer (0.6.0)
       addressable (~> 2.3.5)
       faraday (~> 0.8, < 0.10)
-    sexp_processor (4.6.0)
+    sexp_processor (4.6.1)
     shoulda-matchers (3.0.1)
       activesupport (>= 4.0.0)
     simple_form (3.2.1)
