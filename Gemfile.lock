@@ -245,7 +245,7 @@ GEM
     parser (2.3.0.2)
       ast (~> 2.2)
     pg (0.18.4)
-    poltergeist (1.8.1)
+    poltergeist (1.9.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
       multi_json (~> 1.0)
