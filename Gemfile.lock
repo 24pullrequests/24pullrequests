@@ -145,7 +145,7 @@ GEM
       haml (>= 4.0.6, < 5.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
-    hashdiff (0.2.3)
+    hashdiff (0.3.0)
     hashie (3.4.3)
     highline (1.7.8)
     html2haml (2.0.0)
@@ -333,7 +333,7 @@ GEM
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
-    rubocop (0.37.1)
+    rubocop (0.37.2)
       parser (>= 2.3.0.4, < 3.0)
       powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
@@ -515,8 +515,5 @@ DEPENDENCIES
   web-console
   webmock
 
-RUBY VERSION
-   ruby 2.3.0p0
-
 BUNDLED WITH
-   1.12.0.pre.1
+   1.11.2
