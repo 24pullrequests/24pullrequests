@@ -44,7 +44,7 @@ class GithubClient
     Octokit.auto_paginate = true
     begin
       contributors = client.contributors(repository, options)
-    rescue Octokit::Unauthorized, Faraday::ConnectionFailed
+    rescue Octokit::Unauthorized, Octokit::RepositoryUnavailable, Faraday::ConnectionFailed
       contributors = []
     end
 
@@ -54,7 +54,7 @@ class GithubClient
 
   def organization_members(org, options = {})
     client.organization_members(org, options)
-  rescue Octokit::Unauthorized, Faraday::ConnectionFailed
+  rescue Octokit::Unauthorized, Octokit::RepositoryUnavailable, Faraday::ConnectionFailed
     []
   end
 
