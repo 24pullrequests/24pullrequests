@@ -95,7 +95,7 @@ GEM
       tins (~> 1.6.0)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
-    dalli (2.7.5)
+    dalli (2.7.6)
     database_cleaner (1.5.1)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
