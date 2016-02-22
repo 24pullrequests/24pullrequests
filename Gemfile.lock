@@ -39,9 +39,8 @@ GEM
     addressable (2.3.8)
     arel (6.0.3)
     ast (2.2.0)
-    autoprefixer-rails (6.3.3)
+    autoprefixer-rails (6.3.3.1)
       execjs
-      json
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
