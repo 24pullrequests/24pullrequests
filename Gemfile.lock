@@ -83,7 +83,7 @@ GEM
     coffee-script-source (1.10.0)
     colorize (0.7.7)
     concurrent-ruby (1.0.1)
-    coveralls (0.8.12)
+    coveralls (0.8.13)
       json (~> 1.8)
       simplecov (~> 0.11.0)
       term-ansicolor (~> 1.3)
