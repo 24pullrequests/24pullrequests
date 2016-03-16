@@ -187,7 +187,7 @@ GEM
       tilt
     launchy (2.4.3)
       addressable (~> 2.3)
-    lodash-rails (4.5.1)
+    lodash-rails (4.6.1)
       railties (>= 3.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
