@@ -76,7 +76,6 @@ end
 
 group :production do
   gem 'foreman'
-  gem 'memcachier'
   gem 'dalli'
   gem 'rails_12factor'
   gem 'newrelic_rpm'

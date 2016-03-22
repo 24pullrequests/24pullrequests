@@ -193,7 +193,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    memcachier (0.0.2)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     meta_request (0.4.0)
@@ -462,7 +461,6 @@ DEPENDENCIES
   konacha
   launchy
   lodash-rails
-  memcachier
   meta_request
   newrelic_rpm
   octicons-rails
