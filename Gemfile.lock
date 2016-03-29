@@ -336,7 +336,7 @@ GEM
     ruby_parser (3.8.1)
       sexp_processor (~> 4.1)
     safe_yaml (1.0.4)
-    sass (3.4.21)
+    sass (3.4.22)
     sassc (1.8.5)
       bundler
       ffi (~> 1.9.6)
@@ -410,7 +410,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
-    unicode-display_width (1.0.2)
+    unicode-display_width (1.0.3)
     web-console (3.1.1)
       activemodel (>= 4.2)
       debug_inspector
