@@ -60,7 +60,8 @@ group :development, :test, :cucumber do
   gem 'timecop'
   gem 'simplecov'
   gem 'christmas_tree_formatter'
-
+  gem 'celluloid', '~> 0'
+  
   # Javascript
   gem 'konacha'
   gem 'chai-jquery-rails'
