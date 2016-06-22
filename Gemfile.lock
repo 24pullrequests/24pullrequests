@@ -327,7 +327,7 @@ GEM
       sexp_processor (~> 4.1)
     safe_yaml (1.0.4)
     sass (3.4.22)
-    sassc (1.9.0)
+    sassc (1.10.0)
       bundler
       ffi (~> 1.9.6)
       sass (>= 3.3.0)
