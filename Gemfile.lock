@@ -71,7 +71,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    colorize (0.7.7)
+    colorize (0.8.0)
     concurrent-ruby (1.0.2)
     coveralls (0.8.13)
       json (~> 1.8)
