@@ -238,7 +238,7 @@ GEM
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
     powerpack (0.1.1)
-    puma (3.5.0)
+    puma (3.5.2)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rabl (0.13.0)
