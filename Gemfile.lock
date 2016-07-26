@@ -119,7 +119,7 @@ GEM
       thor (~> 0.19.1)
     geocoder (1.3.7)
     git-version-bump (0.15.1)
-    globalid (0.3.6)
+    globalid (0.3.7)
       activesupport (>= 4.1.0)
     gmaps4rails (2.1.2)
     haml (4.0.7)
