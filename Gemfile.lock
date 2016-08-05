@@ -374,7 +374,7 @@ GEM
     thread_safe (0.3.5)
     tilt (2.0.5)
     timecop (0.8.1)
-    tins (1.11.0)
+    tins (1.12.0)
     twitter (5.16.0)
       addressable (~> 2.3)
       buftok (~> 0.2.0)
