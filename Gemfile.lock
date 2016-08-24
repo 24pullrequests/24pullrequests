@@ -46,7 +46,7 @@ GEM
       sass (>= 3.3.4)
     brakeman (3.3.5)
     buftok (0.2.0)
-    bugsnag (4.2.1)
+    bugsnag (5.0.0)
     builder (3.2.2)
     callsite (0.0.11)
     capybara (2.8.0)
