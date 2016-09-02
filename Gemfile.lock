@@ -39,7 +39,7 @@ GEM
     addressable (2.4.0)
     arel (6.0.3)
     ast (2.3.0)
-    autoprefixer-rails (6.4.0.3)
+    autoprefixer-rails (6.4.1)
       execjs
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -178,7 +178,7 @@ GEM
       tilt
     launchy (2.4.3)
       addressable (~> 2.3)
-    lodash-rails (4.14.1)
+    lodash-rails (4.15.0)
       railties (>= 3.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -295,7 +295,7 @@ GEM
       rspec-mocks (>= 2.99, < 4.0)
     rspec-collection_matchers (1.1.2)
       rspec-expectations (>= 2.99.0.beta1)
-    rspec-core (3.5.2)
+    rspec-core (3.5.3)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
