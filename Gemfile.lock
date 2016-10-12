@@ -231,7 +231,7 @@ GEM
     parser (2.3.1.4)
       ast (~> 2.2)
     pg (0.19.0)
-    poltergeist (1.10.0)
+    poltergeist (1.11.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
@@ -481,4 +481,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.13.2
+   1.13.3
