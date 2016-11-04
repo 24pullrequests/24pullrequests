@@ -42,8 +42,8 @@ end
 group :development, :test, :cucumber do
   gem 'i18n-tasks'
   gem 'rspec-rails'
-  gem 'coveralls', require: false
-  gem 'codeclimate-test-reporter', require: nil
+  gem 'simplecov', require: false
+  gem 'codeclimate-test-reporter', require: false
 
   gem 'rspec-its', require: false
   gem 'rspec-collection_matchers', require: false
@@ -58,7 +58,6 @@ group :development, :test, :cucumber do
   gem 'shoulda-matchers'
   gem 'webmock', require: false
   gem 'timecop'
-  gem 'simplecov'
   gem 'christmas_tree_formatter'
 
   # Javascript

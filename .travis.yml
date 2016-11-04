@@ -7,7 +7,7 @@ env:
   - DB=postgresql
 
 script:
-  - RAILS_ENV=test POLTERGEIST=true bundle exec rake --trace db:migrate spec konacha:run
+  - RAILS_ENV=test POLTERGEIST=true bundle exec rake --trace db:migrate spec konacha:run && bundle exec codeclimate-test-reporter
 
 before_script:
   - psql -c 'create database tfpullrequests_test' -U postgres
