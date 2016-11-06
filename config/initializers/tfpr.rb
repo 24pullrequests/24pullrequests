@@ -1,2 +1,2 @@
-CURRENT_YEAR = 2015
+CURRENT_YEAR = 2016
 Haml::Template.options[:ugly] = true
