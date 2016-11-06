@@ -71,9 +71,9 @@ $ ->
       allowTimes.push "#{hour}:#{quarter}"
 
   $('.js-datetimepicker').datetimepicker(
-    minDate:'2015/12/01'
-    maxDate:'2015/12/24'
-    startDate:'2015/12/01'
+    minDate:'2016/12/01'
+    maxDate:'2016/12/24'
+    startDate:'2016/12/01'
     allowTimes: allowTimes
   )
 
