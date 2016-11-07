@@ -103,14 +103,14 @@ describe PullRequest, type: :model do
 
     describe '#active_users' do
       it 'finds users' do
-        expect(PullRequest.active_users(2015).map(&:nickname)).to eq(%w(foo))
+        expect(PullRequest.active_users(CURRENT_YEAR).map(&:nickname)).to eq(%w(foo))
       end
 
       it 'prevents nils' do
         nil_user = double('PullRequest', user: nil)
         allow(nil_user).to receive(:user_id).and_return(nil)
         allow(PullRequest).to receive(:year).and_return([nil_user, nil_user])
-        expect(PullRequest.active_users(2015)).to eq([])
+        expect(PullRequest.active_users(CURRENT_YEAR)).to eq([])
       end
     end
   end
