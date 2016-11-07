@@ -22,8 +22,9 @@ describe GiftsController, type: :controller do
     render_views
 
     it 'should pre-fill the date when one is passed' do
-      get :new, date: '2015-12-03'
-      expect(response.body).to match(/<option selected="selected" value="2015-12-03">/)
+      date = "#{CURRENT_YEAR}-12-03"
+      get :new, date: date
+      expect(response.body).to match(/<option selected="selected" value="#{date}">/)
     end
   end
 end
