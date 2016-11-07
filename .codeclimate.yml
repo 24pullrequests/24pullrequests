@@ -26,7 +26,6 @@ ratings:
   paths:
   - Gemfile.lock
   - "**.erb"
-  - "**.haml"
   - "**.rb"
   - "**.rhtml"
   - "**.slim"

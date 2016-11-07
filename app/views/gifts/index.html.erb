@@ -1,0 +1,38 @@
+<h2>
+  <%= t("gifts.title") %>
+</h2>
+<p>
+  <%= t("gifts.description").html_safe %>
+</p>
+<p>
+  <%= t("gifts.view_your_gifts", calendar_link: link_to(t("gifts.calendar_link"), current_user)).html_safe %>
+</p>
+<table class="table table-striped table-condensed table-hover" id="gifts">
+  <div class="tbody">
+    <% calendar.each_day do |date, gift| %>
+      <tr>
+        <td>
+          <strong>
+            <%= Gift.format_gift_date(date) %>
+          </strong>
+        </td>
+        <% if gift %>
+          <td>
+            <%= link_to gift.pull_request_title, gift.pull_request_issue_url %>
+          </td>
+          <td>
+            <%= link_to t("clear"), gift_path(gift), :title => "Remove gift", :method => :delete, "data-confirm" => "Remove this gift?", :class => 'btn btn-default btn-small pull-right' %>
+            <%= link_to t("change"), edit_gift_path(gift), :class => 'btn btn-default btn-small pull-right' %>
+          </td>
+        <% else %>
+          <td>
+            <%= t("gifts.none") %>
+          </td>
+          <td>
+            <%= link_to t("change"), new_gift_path(:date => date), :class => 'btn btn-default btn-small pull-right' %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </div>
+</table>

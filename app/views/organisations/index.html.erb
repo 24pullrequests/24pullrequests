@@ -1,0 +1,13 @@
+<div class="row clearfix fullwidth-panel">
+  <div class="col-md-12">
+    <h3>
+      <%= t("organisations.title", count: number_with_delimiter(Organisation.count)) %>
+    </h3>
+    <div class="js-org-pagination">
+      <ul class="clearfix avatar-list avatar-list-lg js-org-list">
+        <%= render @organisations %>
+      </ul>
+      <%= link_to_next_page @organisations, t("more"), remote: true, class: 'btn btn-success more' %>
+    </div>
+  </div>
+</div>

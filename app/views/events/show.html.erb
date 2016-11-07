@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <div class="map" data-latitude="<%= @event.latitude %>" data-longitude="<%= @event.longitude %>"></div>
+    <div class="js-pins">
+      <span class="pin" data-latitude="<%= @event.latitude %>" data-longitude="<%= @event.longitude %>"></span>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6">
+    <h1>
+      <%= @event.name %>
+      <br/>
+      <small>
+        <%= @event.location %>
+      </small>
+      <br/>
+      <small>
+        <%= @event.formatted_date %>
+      </small>
+    </h1>
+    <hr/>
+    <p class="js-emoji">
+      <%= @event.description %>
+    </p>
+    <%= link_to t("events.show.view_event_details"), @event.url, class: "btn btn-primary" %>
+    <% if @event.can_edit?(current_user) %>
+      <hr/>
+      <%= link_to t("events.show.edit_event"), edit_event_path(@event), class: "btn btn-default" %>
+      <%= link_to t("events.show.destroy_event"), @event, data: { confirm: I18n.t("events.show.confirm_destroy") }, method: :delete, class: "btn btn-danger" %>
+    <% end %>
+  </div>
+</div>

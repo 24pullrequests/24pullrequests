@@ -1,0 +1,4 @@
+<%= simple_form_for gift_form.gift, :html => { :class => 'form-inline' }  do |form| %>
+  <%= form.select :pull_request_id, gift_form.pull_requests_for_select %>
+  <%= form.button :submit, t("dashboard.gift_it") %>
+<% end %>

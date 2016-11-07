@@ -1,0 +1,77 @@
+<div class="alert alert-info">
+  <h2>
+    24 Pull Requests is finished for
+    <%= CURRENT_YEAR %>
+  </h2>
+  <p>
+    In #{CURRENT_YEAR}, over 24 days,
+    <b>
+      <%= number_with_delimiter contributors_in(CURRENT_YEAR) %>
+    </b>
+    developers submitted
+    <b>
+      <%= number_with_delimiter pull_requests_in(CURRENT_YEAR) %>
+    </b>
+    pull requests to
+    <b>
+      <%= number_with_delimiter projects_in(CURRENT_YEAR) %>
+    </b>
+    different open source projects.
+  </p>
+  <p>
+    <%= t("information.happy_holidays_see_you") %>
+  </p>
+  <hr/>
+  <p>
+    <%= t("information.help_open_source") %>
+  </p>
+  <h4>
+    <%= link_to 'CodeMontage', 'http://codemontage.com/' %>
+  </h4>
+  <p>
+    <%= t("information.codemontage") %>
+  </p>
+  <h4>
+    <%= link_to 'CodeTriage', 'http://www.codetriage.com/' %>
+  </h4>
+  <p>
+    <%= t("information.codetriage") %>
+  </p>
+  <h4>
+    <%= link_to 'DocsDoctor', 'http://www.docsdoctor.org/' %>
+  </h4>
+  <p>
+    <%= t("information.docsdoctor") %>
+  </p>
+  <h4>
+    <%= link_to 'RubyIssues', 'https://rubyissues.ongoodbits.com/' %>
+  </h4>
+  <p>
+    <%= t("information.rubyissues") %>
+  </p>
+  <h4>
+    <%= link_to 'issuehub.io', 'http://issuehub.io/' %>
+  </h4>
+  <p>
+    <%= t("information.issuehubio") %>
+  </p>
+  <h4>
+    <%= link_to 'ContribHub', 'http://contribhub.org/' %>
+  </h4>
+  <p>
+    <%= t("information.contribhub.tagline") %>
+  </p>
+  <p>
+    <%= t("information.contribhub.description") %>
+  </p>
+  <h4>
+    <%= link_to 'Pull Request Roulette', 'http://www.pullrequestroulette.com/' %>
+  </h4>
+  <p>Find open source pull requests that need a reviewer before merging.</p>
+  <hr/>
+  See you on
+  <%= succeed(',') do %>
+    <strong>December 1st, #{CURRENT_YEAR+1}</strong>
+  <% end %>
+  Happy Hacking!
+</div>
