@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
 
   has_many :archived_pull_requests
 
-  scope :by_language, -> (language) { joins(:skills).where('lower(language) = ?', language.downcase) }
+  scope :by_language, ->(language) { joins(:skills).where('lower(language) = ?', language.downcase) }
 
   paginates_per 99
 
@@ -92,9 +92,10 @@ class User < ActiveRecord::Base
   end
 
   def estimate_skills
+    return if ENV['GITHUB_KEY'].empty?
     (Project::LANGUAGES & repo_languages).each do |language|
       skills.create(language: language)
-    end if ENV['GITHUB_KEY'].present?
+    end
   end
 
   def languages
@@ -213,7 +214,7 @@ class User < ActiveRecord::Base
   end
 
   def check_email_changed
-    return unless self.email_changed? && email.present?
+    return unless email_changed? && email.present?
 
     generate_confirmation_token
     self.confirmed_at = nil
