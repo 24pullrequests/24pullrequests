@@ -20,6 +20,7 @@
 //= require jquery.datetimepicker
 //= require emojione
 //= require emoji
+//= require jquery.icheck
 //= require lodash
 //= require gmaps/google
 //= require_tree .
