@@ -1,0 +1,38 @@
+<h2>
+  <%= number_with_delimiter Project.active.count %>
+  <%= t("suggested_projects") %>
+  <%= link_to t("suggest_project"), new_project_path, :class => 'btn btn-default pull-right' %>
+</h2>
+<p>
+  <%= t("projects.help_out") %>
+</p>
+<p>
+  <%= t("projects.suggest_new") %>
+</p>
+<hr/>
+<h4>Filter:</h4>
+<%= simple_form_for :project, url: projects_path, method: :get, remote: true, html: { id: 'filters' }  do |form| %>
+  <div class="icheckbox_line checked" id="clear_labels">All Labels</div>
+  <%= form.input :labels, collection: Label.all.map(&:name), as: :check_boxes, label_method: lambda { |owner| content_tag(:span, owner) }, label: false, :checked => lambda { |v| @labels.include?(v) } %>
+  <div class="icheckbox_line checked" id="clear_languages">All Languages</div>
+  <%= form.input :languages, collection: Project::LANGUAGES, as: :check_boxes, label_method: lambda { |owner| content_tag(:span, owner) }, label: false, :checked => lambda { |v| @languages.include?(v) } %>
+  <%= form.submit "Search" %>
+<% end %>
+<hr/>
+<div class="row" id="projects">
+  <div class="col-md-12">
+    <%= render @projects %>
+  </div>
+</div>
+<% if @has_more_projects %>
+  <div class="row" id="someprojects">
+    <div class="col-md-12">
+      <%= link_to_next_page @projects, t("more"), remote: true, class: 'btn btn-success more' %>
+    </div>
+  </div>
+<% end %>
+<div id="noprojects">
+  <p>
+    <%= t("projects.suggest", suggest_link: link_to(t("projects.suggest_link_text"), new_project_path)).html_safe %>
+  </p>
+</div>

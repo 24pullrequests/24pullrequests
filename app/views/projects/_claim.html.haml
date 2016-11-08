@@ -1,7 +1,0 @@
-=t("projects.claim")
-%br
-%br
-
-=simple_form_for Project.new, url: claim_projects_path do |form|
-  = form.input :github_url, wrapper_html: { class:  'col-lg-3 col-md-3' }, :label => false, required: false, placeholder: t("exempli_gratia") + " 24pullrequests/24pullrequests"
-  = form.button :submit, t("claim")

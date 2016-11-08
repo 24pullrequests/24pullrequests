@@ -1,0 +1,18 @@
+<div class="row clearfix fullwidth-panel">
+  <div class="col-md-12">
+    <h3>
+      <%= number_with_delimiter user_count %>
+      <% if @language %>
+        <%= t("developers_using_language", language: @language) %>
+      <% else %>
+        <%= t("developers_involved") %>
+      <% end %>
+    </h3>
+    <div class="js-user-pagination">
+      <ul class="clearfix avatar-list avatar-list-lg js-user-list">
+        <%= render @users %>
+      </ul>
+      <%= link_to_next_page @users, t("more"), remote: true, class: 'btn btn-success more' %>
+    </div>
+  </div>
+</div>

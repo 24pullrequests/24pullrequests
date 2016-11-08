@@ -13,7 +13,6 @@ AllCops:
     - '**/*.coffee'
     - '**/*.css'
     - '**/*.gif'
-    - '**/*.haml*'
     - '**/*.erb*'
     - '**/*.ico'
     - '**/*.jpeg'

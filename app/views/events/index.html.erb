@@ -1,0 +1,52 @@
+<div class="title-block">
+  <h2 class="block-title">
+    <%= t("events.title") %>
+  </h2>
+  <p>
+    <%= t("events.details") %>
+  </p>
+  <%= link_to t("events.index.host_an_event"), new_event_path, class: 'btn btn-default' %>
+</div>
+<% if @upcoming_events.empty? %>
+  <h4>
+    <i>
+      <%= t("events.index.no_upcoming_events") %>
+      <%= link_to t("events.index.host_an_event"), new_event_path %>
+    </i>
+  </h4>
+<% else %>
+  <div class="row">
+    <div class="col-md-6">
+      <hr/>
+      <div class="map"></div>
+      <div class="js-pins">
+        <% @upcoming_events.each do |event| %>
+          <%= link_to "", event, class: "pin", data: { latitude: event.latitude, longitude: event.longitude } %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <%= render @upcoming_events %>
+    </div>
+  </div>
+<% end %>
+<% unless @past_events.empty? %>
+  <hr/>
+  <div class="row">
+    <p>
+      <button class="btn btn-default toggle-past-events">
+        <span>
+          <%= t("events.index.show_past_24_pull_requests_events") %>
+        </span>
+      </button>
+    </p>
+  </div>
+  <div class="row past-events hidden">
+    <h4>
+      <%= t("events.index.past_24_pull_requests_events") %>
+    </h4>
+    <div class="col-md-12">
+      <%= render @past_events %>
+    </div>
+  </div>
+<% end %>

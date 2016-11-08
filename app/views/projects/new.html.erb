@@ -1,0 +1,10 @@
+<h2>
+  <%= t("projects.new.title") %>
+</h2>
+<p>
+  <%= t("projects.new.info") %>
+</p>
+<%= render partial: 'form' %>
+<p>
+  <%= t("projects.new.suggestion", issue_link: link_to(t("projects.new.issue_link_text"), 'https://github.com/24pullrequests/24pullrequests/issues')).html_safe %>
+</p>

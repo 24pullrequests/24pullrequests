@@ -1,0 +1,57 @@
+<div class="alert alert-info">
+  <h3>
+    <%= t("information.title", year: CURRENT_YEAR) %>
+  </h3>
+  <p>
+    <%= t("information.last_year_stats", year: CURRENT_YEAR,
+      developers: contributors_in(CURRENT_YEAR),
+      pull_requests: pull_requests_in(CURRENT_YEAR),
+      projects: projects_in(CURRENT_YEAR)).html_safe %>
+  </p>
+  <p>
+    <%= t("information.get_ready", year: CURRENT_YEAR) %>
+  </p>
+  <hr/>
+  <p>
+    <%= t("information.help_open_source") %>
+  </p>
+  <h4>
+    <%= link_to 'CodeMontage', 'http://codemontage.com/' %>
+  </h4>
+  <p>
+    <%= t("information.codemontage") %>
+  </p>
+  <h4>
+    <%= link_to 'CodeTriage', 'http://www.codetriage.com/' %>
+  </h4>
+  <p>
+    <%= t("information.codetriage") %>
+  </p>
+  <h4>
+    <%= link_to 'DocsDoctor', 'http://www.docsdoctor.org/' %>
+  </h4>
+  <p>
+    <%= t("information.docsdoctor") %>
+  </p>
+  <h4>
+    <%= link_to 'RubyIssues', 'https://rubyissues.ongoodbits.com/' %>
+  </h4>
+  <p>
+    <%= t("information.rubyissues") %>
+  </p>
+  <h4>
+    <%= link_to 'issuehub.io', 'http://issuehub.io/' %>
+  </h4>
+  <p>
+    <%= t("information.issuehubio") %>
+  </p>
+  <h4>
+    <%= link_to 'ContribHub', 'http://contribhub.org/' %>
+  </h4>
+  <p>
+    <%= t("information.contribhub.tagline") %>
+  </p>
+  <p>
+    <%= t("information.contribhub.description") %>
+  </p>
+</div>
