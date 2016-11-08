@@ -1,3 +1,33 @@
-(line 10, column 29):
-unexpected "="
-expecting space, "(" or "["
+{:class =>  }
+
+<ol class="unstyled clearfix calendar-inner">
+  <% 1.upto(calendar.start_padding) do %>
+    <li class="calendar-day calendar-padding"></li>
+  <% end %>
+  <% calendar.each_day do |date, gift| %>
+    <li class="<%= ("gifted" if gift.present?) %> calendar-day">
+      <% if gift.present? && gift.user == current_user %>
+        <div class="remove-gift">
+          <%= link_to raw("&times;"), gift_path(gift), :title => "Remove gift", :method => :delete, "data-confirm" => "Remove this gift?" %>
+        </div>
+      <% end %>
+      <span class="<%= date == Time.zone.today ? 'calendar-mday calendar-mday-today' : 'calendar-mday' %>">
+        <span class="visible-xs-inline">> 12/</span>
+        <%= date.mday %>
+      </span>
+      <% if gift.present? %>
+        <%= link_to gift.pull_request_title, gift.pull_request_issue_url, :target => :_blank %>
+      <% end %>
+    </li>
+  <% end %>
+  <li class="calendar-day calendar-christmas">
+    <div class="calendar-inner">
+      <span class="calendar-mday">
+        <span class="visible-xs-inline">> 12/</span>
+        25
+      </span>
+      <span class="octicon octicon-star festive-star"></span>
+      <%= t("happy_holidays") %>
+    </div>
+  </li>
+</ol>

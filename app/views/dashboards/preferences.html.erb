@@ -1,3 +1,83 @@
-(line 51, column 67):
-unexpected end of input
-expecting new-line
+<div class="title-block">
+  <% if current_user.needs_setup? %>
+    <h1 class="block-title">
+      <%= t("welcome", user: current_user.nickname) %>
+    </h1>
+    <%= t("preferences.setup_help") %>
+  <% else %>
+    <h1 class="block-title">
+      <%= t("preferences.title", user: current_user.nickname) %>
+    </h1>
+  <% end %>
+</div>
+<div class="row">
+  <%= simple_form_for current_user, :url => update_preferences_path, wrapper: :bootstrap3_horizontal, defaults: {right_column_html: {class: "col-md-8"}, label_html: {class: "col-md-4"} }, :html => {:class => 'block form-horizontal', :role => "form"}  do |form| %>
+    <div class="col-md-6 col-md-offset-3">
+      <p>
+        <%= t("preferences.frequency_message") %>
+      </p>
+      <% if current_user.email_frequency.present? %>
+        <small>
+          <%= link_to t("preferences.delete"), delete_dashboard_path, :class => 'pull-right' %>
+        </small>
+      <% end %>
+      <p>
+        <em>
+          <%= t("preferences.information") %>
+        </em>
+      </p>
+      <%= form.input :email_frequency, :label => t("preferences.form.email_frequency"), :collection => [[t("preferences.form.never"), 'none'], [t("preferences.form.daily"), 'daily'], [t("preferences.form.weekly"), 'weekly']], :selected => (form.object.email_frequency || 'daily') %>
+      <% if current_user.email.present? && !current_user.confirmed? %>
+        <%= form.input :email, hint: t("preferences.hint.confirm_email") %>
+      <% else %>
+        <%= form.input :email, :label => t("preferences.form.email") %>
+      <% end %>
+    </div>
+    <div class="col-md-12">
+      <h2 class="text-center">
+        <%= t("preferences.languages") %>
+      </h2>
+      <div class="row">
+        <% Project::LANGUAGES.in_groups(2, false) do |main_col| %>
+          <div class="col-xs-12 col-sm-6">
+            <% main_col.in_groups(3, false) do |col_form| %>
+              <div class="col-xs-12 col-md-4">
+                <%= form.simple_fields_for :skills, col_form.map{|l| Skill.new(:language => l)} do |skill_form| %>
+                  <% language = skill_form.object.language %>
+                  <div class="col-md-12">
+                    <label class="language-checkbox">
+                      <%= skill_form.check_box :language, {:id => language, :checked => current_user.skills.map(&:language).include?(language)}, language %>
+                      <%= language %>
+                    </label>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12 text-center">
+        <% if current_user.needs_setup? %>
+          <%= form.button :submit, t("preferences.save_and_continue") %>
+        <% else %>
+          <%= form.button :submit, t("preferences.save") %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  <div class="col-md-6 col-md-offset-3">
+    <p>
+      <%= t("preferences.coderwall") %>
+    </p>
+    <%= simple_form_for current_user, :url => update_coderwall_path, wrapper: :bootstrap3_horizontal, defaults: { right_column_html: {class: "col-md-8"}, label_html: {class: "col-md-4"} }, :html => {:class => 'form-horizontal', :role => "form"}, :method => 'post'  do |form| %>
+      <%= form.input :coderwall_username, :label => t("preferences.coderwall_username"), :input_html => {:class => "pull-left"} %>
+      <div class="form-group">
+        <div class="col-md-offset-4 col-sm-8">
+          <%= form.button :submit, t('user.coderwall.update_button') %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

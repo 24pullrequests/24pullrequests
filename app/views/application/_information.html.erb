@@ -3,10 +3,10 @@
     <%= t("information.title", year: CURRENT_YEAR) %>
   </h3>
   <p>
-    <%= t("information.last_year_stats", year: CURRENT_YEAR, %>
-    developers: contributors_in(CURRENT_YEAR),
-    pull_requests: pull_requests_in(CURRENT_YEAR),
-    projects: projects_in(CURRENT_YEAR)).html_safe
+    <%= t("information.last_year_stats", year: CURRENT_YEAR,
+      developers: contributors_in(CURRENT_YEAR),
+      pull_requests: pull_requests_in(CURRENT_YEAR),
+      projects: projects_in(CURRENT_YEAR)).html_safe %>
   </p>
   <p>
     <%= t("information.get_ready", year: CURRENT_YEAR) %>

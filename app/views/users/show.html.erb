@@ -1,3 +1,116 @@
-(line 23, column 11):
-unexpected "@"
-expecting "'", "\"", ":", letter or digit, "_" or "}"
+<div class="title-block profile-title-block row">
+  <div class="col-sm-3">
+    <%= image_tag(@user.avatar_url(200), :alt => @user.nickname, :class => "profile-avatar") %>
+  </div>
+  <div class="col-sm-9 profile-details">
+    <% if @user == current_user %>
+      <div class="profile-actions hidden-xs">
+        <%= link_to preferences_path, class: "btn btn-default btn-sm" do %>
+          <span class="octicon octicon-gear"></span>
+          <%= t("navigation.preferences") %>
+        <% end %>
+        <% if current_user.twitter_linked? %>
+          <%= link_to t("preferences.remove"), twitter_remove_path, method: :delete, class: 'btn btn-danger btn-sm' %>
+        <% else %>
+          <%= link_to t('twitter.link_account.text'), '/auth/twitter', :class => 'btn btn-info btn-sm', rel: 'tooltip', title: t('twitter.link_account.tooltip') %>
+        <% end %>
+      </div>
+    <% end %>
+    <h2 class="username">#{@user.nickname}</h2>
+    <div class="profile-item">
+      <%= gratipay_button @user.nickname, "btn btn-xs btn-success" %>
+      <% if @user.twitter_nickname.present? %>
+        <a class="twitter-follow-button" href="https://twitter.com/<%= @user.twitter_nickname %>">
+          <%= t("follow_user", twitter: @user.twitter_nickname) %>
+        </a>
+        <script>
+
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+        </script>
+      <% end %>
+      <%= github_button @user.nickname %>
+    </div>
+    <% if @user.skills.any? %>
+      <div class="profile-item">
+        <span class="tiny-title">
+          <%= t("preferred_languages") %>
+        </span>
+        <% @user.languages.each do |language| %>
+          <span class="<%= language.downcase %>">
+            <div class="label label-info language">
+              <%= link_to language, language_path(language) %>
+            </div>
+          </span>
+        <% end %>
+      </div>
+    <% end %>
+    <% if @user.organisations.any? %>
+      <div class="profile-item">
+        <span class="tiny-title">
+          <%= t('user.organisations') %>
+        </span>
+        <ul class="avatar-list avatar-list-xs">
+          <% @user.organisations.each do |organisation| %>
+            <li class="avatar-cell">
+              <%= link_to organisation_path(organisation.login), class: "avatar-link", rel: "tooltip", title: organisation.login, data: { placement: "bottom" } do %>
+                <%= image_tag(organisation.avatar_url, alt: organisation.login, class: "avatar-img") %>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="profile-pull-request-count">
+      <span class="octicon octicon-gift"></span>
+      <%= t("user.pull_request_count", user: @user.nickname, count: @user.pull_requests.year(current_year).count, year: current_year) %>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <% if @user.gifts.year(current_year).any? or @user.pull_requests.year(current_year).any? %>
+      <ul class="nav nav-tabs" id="presents">
+        <li>
+          <a class="active" data-toggle="tab" href="#gifts">Gifts</a>
+        </li>
+        <li>
+          <a data-toggle="tab" href="#pull_requests">Pull Requests</a>
+        </li>
+        <% for year in ArchivedPullRequest::PAST_YEARS %>
+          <li>
+            <a data-toggle="tab" href="#<%= year %>">
+              <%= year %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane" id="gifts">
+          <%= render :partial => 'calendar', :object => @calendar %>
+        </div>
+        <div class="tab-pane" id="pull_requests">
+          <%= render partial: 'users/pull_request', collection: @user.pull_requests.year(current_year).latest(nil) %>
+        </div>
+        <% for year in ArchivedPullRequest::PAST_YEARS %>
+          <div class="tab-pane" id="<%= year %>">
+            <%= render partial: 'users/pull_request', collection: @user.archived_pull_requests.year(year) %>
+          </div>
+        <% end %>
+      </div>
+    <% elsif !PullRequest.in_date_range? %>
+      <div class="alert alert-info">
+        24 Pull Requests runs from 1st-24th December, come back then to see
+        <%= "#{@user.nickname}'s progress." %>
+      </div>
+    <% else %>
+      <div class="alert alert-warning">
+        <%= t("user.grinchy_message", user: content_tag(:strong, "@" + @user.nickname), year: current_year).html_safe %>
+      </div>
+    <% end %>
+    <h3>
+      <%= t("user.coderwall.title") %>
+    </h3>
+    <div id="coderwall-content" data-nickname="@user.coderwall_username"></div>
+  </div>
+</div>
