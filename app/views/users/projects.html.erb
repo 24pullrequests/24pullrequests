@@ -1,0 +1,16 @@
+<h3>
+  <%= t("suggestions.title") %>
+</h3>
+<hr/>
+<div class="row-fluid" id="projects">
+  <% if @projects.any? %>
+    <%= render partial: 'projects/editable_project', collection:  @projects, as: :project, locals: { admin: false } %>
+  <% else %>
+    <%= t("no_suggestions") %>
+  <% end %>
+  <p>
+    <%= link_to t("suggest_project"), new_project_path %>
+  </p>
+</div>
+<hr/>
+<%= render partial: "projects/claim" %>

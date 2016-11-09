@@ -1,0 +1,14 @@
+<h1>
+  <%= t("delete_account.title") %>
+</h1>
+<p>
+  <%= t("delete_account.are_you_sure") %>
+</p>
+<p>
+  <%= t("delete_account.notification_info", email_preferences_link: link_to(t("email_preferences_link"), preferences_path)).html_safe %>
+</p>
+<p>
+  <%= link_to t("delete_account.confirm"), dashboard_path, :method => :delete, :class => 'btn' %>
+  or
+  <%= link_to t("delete_account.cancel"), dashboard_path %>
+</p>

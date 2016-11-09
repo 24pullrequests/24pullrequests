@@ -1,0 +1,9 @@
+<h2>
+  <% if @language %>
+    <%= t("pull_requests.language.count", count: number_with_delimiter(pull_request_count), language: @language) %>
+  <% else %>
+    <%= t("pull_requests.count", count: number_with_delimiter(pull_request_count)) %>
+  <% end %>
+</h2>
+<%= render @pull_requests %>
+<%= paginate @pull_requests %>

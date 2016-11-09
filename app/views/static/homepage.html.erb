@@ -1,0 +1,188 @@
+<div class="container block intro">
+  <div class="row">
+    <% unless Time.zone.today.between?(Date.new(CURRENT_YEAR, 10, 30), Date.new(CURRENT_YEAR, 12, 24)) %>
+      <%= render :partial => 'finished' %>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="col-md-4 intro-block">
+      <span class="octicon octicon-gift"></span>
+      <h4>
+        <%= t("homepage.greeting") %>
+      </h4>
+      <p>
+        <%= t("homepage.give_to_open_source") %>
+      </p>
+    </div>
+    <div class="col-md-4 intro-block">
+      <span class="octicon octicon-git-pull-request"></span>
+      <h4>
+        <%= t("homepage.involved.title") %>
+      </h4>
+      <p>
+        <%= t("homepage.involved.description") %>
+      </p>
+      <p>
+        <%= t("homepage.involved.special_page", contributing_path: link_to(t("homepage.involved.contributing_path"), contributing_path)).html_safe %>
+        <%= t("homepage.involved.take_a_look") %>
+      </p>
+    </div>
+    <div class="col-md-4 intro-block">
+      <span class="octicon octicon-checklist"></span>
+      <h4>
+        <%= t("homepage.profile.title") %>
+      </h4>
+      <p>
+        <%= t("homepage.profile.description") %>
+      </p>
+      <p>
+        <%= t("homepage.profile.getting_started") %>
+      </p>
+    </div>
+  </div>
+  <% unless logged_in? %>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="cta-block">
+          <%= link_to login_path, :class => 'btn cta' do %>
+            <span class="octicon octicon-mark-github"></span>
+            <strong>
+              <%= t("homepage.login_with_github") %>
+            </strong>
+          <% end %>
+        </div>
+        <%= render :partial => 'shared/social_buttons' %>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class="container tips">
+  <div class="row">
+    <div class="col-md-4 tip-block">
+      <h4 class="subtitle">
+        <span class="octicon octicon-radio-tower"></span>
+        <%= t("homepage.event.title") %>
+      </h4>
+      <p>
+        <%= t("homepage.event.description") %>
+      </p>
+      <%= link_to t("homepage.event.view_events"), events_path, class: "btn btn-primary" %>
+      <%= link_to t("homepage.event.host_an_event"), new_event_path, class: "btn btn-default" %>
+    </div>
+    <div class="col-md-4 tip-block">
+      <h4 class="subtitle">
+        <span class="octicon octicon-checklist"></span>
+        <%= t("homepage.badges.title") %>
+      </h4>
+      <p>
+        <%= t("homepage.badges.description") %>
+      </p>
+      <div class="center">
+        <%= link_to image_tag('24-participant.png', :alt => "Participant Coderwall badge"), 'https://coderwall.com', :rel => 'tooltip', :title => t("homepage.badges.involved_link"), :class => "coderwall-badge-link" %>
+        <%= link_to image_tag('24-continuous-sync.png', :alt => "Continuous Sync Coderwall badge"), 'https://coderwall.com', :rel => 'tooltip', :title => t("homepage.badges.amazing"), :class => "coderwall-badge-link" %>
+      </div>
+    </div>
+    <div class="col-md-4 tip-block">
+      <h4 class="subtitle">
+        <span class="octicon octicon-question"></span>
+        <%= t("homepage.q_n_a") %>
+      </h4>
+      <p>
+        <%= t("homepage.join_the_chat", link_to_chat: link_to('24pullrequests/24pullrequests', 'https://gitter.im/24pullrequests/24pullrequests')).html_safe %>
+      </p>
+    </div>
+  </div>
+</div>
+<% if @featured_projects.any? %>
+  <div class="container featured_projects">
+    <div class="row">
+      <div class="block">
+        <div class="title-block">
+          <span class="mega-octicon octicon-repo"></span>
+          <h3 class="block-title">
+            <%= t("featured_projects") %>
+          </h3>
+        </div>
+        <%= render partial: "projects/project", locals: { show_avatar: true }, collection: @featured_projects %>
+      </div>
+    </div>
+  </div>
+<% end %>
+<div class="container">
+  <div class="row avatar-block">
+    <div class="col-md-6 two-up-split left">
+      <div class="block">
+        <h3 class="block-title">
+          <%= number_with_delimiter User.count %>
+          <%= t("developers_involved") %>
+        </h3>
+        <p>
+          <%= t("developers_involved_desc") %>
+        </p>
+        <%= link_to t("view_all"), users_path, :class => 'btn btn-default btn-sm' %>
+        <ul class="avatar-list avatar-list-lg clearfix">
+          <%= render @users %>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-6 two-up-split right">
+      <div class="block">
+        <h3 class="block-title">
+          <%= t("organisations.title", count: number_with_delimiter(Organisation.count)) %>
+        </h3>
+        <p>
+          <%= t("organisations_involved_desc") %>
+        </p>
+        <%= link_to t("view_all"), organisations_path, :class => 'btn btn-default btn-sm' %>
+        <ul class="avatar-list avatar-list-lg clearfix">
+          <%= render @orgs %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 two-up-split left">
+      <div class="block">
+        <div class="title-block">
+          <span class="mega-octicon octicon-git-pull-request"></span>
+          <h3 class="block-title">
+            <%= t("pull_requests.latest.count", count: number_with_delimiter(PullRequest.year(current_year).count)) %>
+          </h3>
+          <p>
+            <%= t("dashboard.pull_requests") %>
+          </p>
+          <%= link_to t("view_all"), pull_requests_path, :class => 'btn btn-default btn-sm' %>
+        </div>
+        <% if @pull_requests.any? %>
+          <div id="pull_requests">
+            <%= render @pull_requests %>
+          </div>
+        <% else %>
+          <br/>
+          <div class="well">
+            No pull requests at the moment!
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-6 two-up-split right">
+      <div class="block">
+        <div class="title-block">
+          <span class="mega-octicon octicon-repo"></span>
+          <h3 class="block-title">
+            <%= number_with_delimiter Project.active.count %>
+            <%= t("suggested_projects") %>
+          </h3>
+          <p>
+            <%= t("dashboard.help_out") %>
+          </p>
+          <%= link_to t("suggest_project"), new_project_path, :class => 'btn btn-default btn-sm' %>
+          <%= link_to t("view_all"), projects_path, :class => 'btn btn-default btn-sm' %>
+        </div>
+        <%= render @projects %>
+      </div>
+    </div>
+  </div>
+</div>

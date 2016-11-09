@@ -1,0 +1,12 @@
+<div class="row-fluid clearfix" id="projects">
+  <h3>
+    <%= t("language.projects.count", count: number_with_delimiter(project_count_for_language), language: @language) %>
+    <%= link_to t("language.projects.suggest", language: @language), new_project_path(language: @language), :class => 'btn pull-right' %>
+  </h3>
+  <div class="row-fluid clearfix">
+    <div class="span12">
+      <%= render @projects %>
+    </div>
+    <%= paginate @projects %>
+  </div>
+</div>

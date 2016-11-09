@@ -1,0 +1,29 @@
+<h2>
+  <%= t("about.title") %>
+</h2>
+<p>
+  <%= t("about.description") %>
+</p>
+<p>
+  <%= t("about.idea") %>
+</p>
+<p>
+  <%= t("about.more_info") %>
+</p>
+<p>
+  <%= t("about.on_github") %>
+  <%= link_to 'github.com/24pullrequests/24pullrequests', 'https://github.com/24pullrequests/24pullrequests' %>
+</p>
+<p>
+  <%= t("about.on_twitter") %>
+  <%= link_to 'twitter.com/24pullrequests', 'https://twitter.com/24pullrequests' %>
+</p>
+<section>
+  <h3>
+    <%= t("about.sponsors.title") %>
+  </h3>
+  <p>
+    <%= raw("#{t("about.sponsors.details")} #{link_to(t("about.sponsors.thanks"), sponsors_path)}") %>
+  </p>
+</section>
+<%= render 'contributors', users: @contributors %>

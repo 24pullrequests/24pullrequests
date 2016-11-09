@@ -1,0 +1,53 @@
+<footer>
+  <div class="dark">
+    <div class="dark-inner container">
+      <ul class="unstyled pull-right">
+        <li>
+          <%= t("sponsored_by") %>&nbsp;
+          <%= link_to 'DNSimple', 'http://dnsimple.com' %>&#44;&nbsp;
+          <%= link_to 'Heroku Postgres', 'http://postgres.heroku.com/' %>&#44;&nbsp;
+          <%= link_to 'Sidekick', 'https://www.sidekickjs.com/' %>&nbsp;&amp;&nbsp;
+          <%= link_to 'SendGrid', 'http://sendgrid.com' %>
+        </li>
+      </ul>
+      <ul class="unstyled pull-left">
+        <li>
+          <%= link_to t("about_us"), about_path %>
+        </li>
+        <li>
+          <%= link_to t("sponsors"), sponsors_path %>
+        </li>
+        <li>
+          <%= link_to t("how_to_contribute"), contributing_path %>
+        </li>
+        <li>
+          <%= link_to 'API', api_path %>
+        </li>
+        <li>
+          <div class="locale dropup">
+            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="locale" type="button">
+              <%= image_tag "flags/#{I18n.locale}.png", class: "flag", alt: " " %>
+              <%= t("locale.#{I18n.locale}") %>
+              <span class="caret"></span>
+            </button>
+            <ul aria-labelledby="dropdownMenu1" class="dropdown-menu pull-right" role="menu">
+              <% available_locales.each do |locale| %>
+                <li role="presentation">
+                  <%= link_to locale_path(locale), role: "menuitem" do %>
+                    <%= image_tag "flags/#{locale}.png", class: "flag", alt: " " %>
+                    <%= t("locale.#{locale}") %>
+                  <% end %>
+                </li>
+              <% end %>
+              <li class="divider"></li>
+              <li role="presentation">
+                <%= link_to t("locale.translate"), "https://github.com/24pullrequests/24pullrequests/wiki/Adding-a-locale" %>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<%= javascript_include_tag "application" %>

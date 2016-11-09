@@ -1,0 +1,73 @@
+<div class="title-block">
+  <h2 class="block-title">
+    <%= t("welcome_back", user: user.nickname) %>
+  </h2>
+  <%= t("dashboard.christmas_activity") %>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="user-pull-requests">
+      <div class="pull-right">
+        <%= link_to preferences_path, class: "btn btn-default btn-sm" do %>
+          <span class="octicon octicon-gear"></span>
+          <%= t("navigation.preferences") %>
+        <% end %>
+        <%= link_to pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn btn-info btn-sm', :rel => 'tooltip', :title => t('pull_request.download.tooltip') do %>
+          <%= image_tag('spinner.gif', :id => 'spinner', :alt => ' ') %>
+          <%= t('dashboard.synchronize') %>
+        <% end %>
+      </div>
+      <% if pull_requests.any? %>
+        <h3>
+          <%= t("your_pull_requests") %>
+          <% if current_user.pull_requests.year(current_year).any? %>
+            <span class="label label-info" id="pull-requests-count">
+              <%= current_user.pull_requests.year(current_year).count %>
+            </span>
+          <% end %>
+        </h3>
+      <% end %>
+      <div class="clearfix" id="pull-requests">
+        <%= render :partial => 'pull_requests_if_any', :locals => { :pull_requests => pull_requests } %>
+      </div>
+    </div>
+    <div class="pull-right"><
+      <%= link_to t("view_all"), projects_path, :class => 'btn btn-default btn-sm' %>
+      <%= link_to t("suggest_project"), new_project_path, :class => 'btn btn-info btn-sm' %>
+    </div>
+    <h3>
+      <%= t("suggested_projects") %>
+    </h3>
+    <p>
+      <%= t("dashboard.help_out") %>
+    </p>
+    <div id="projects">
+      <%= render projects %>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <% if @events.any? %>
+      <div class="sidebar-block">
+        <h4 class="block-title">
+          <%= t("homepage.events") %>
+        </h4>
+        <% @events.each do |event| %>
+          <div class="event-item">
+            <strong>
+              <%= link_to event.name, event %>
+            </strong>
+            <br/>
+            <small>
+              <span class="octicon octicon-location"></span>
+              <%= event.location %>
+              <br/>
+              <span class="octicon octicon-clock"></span>
+              <%= event.formatted_date %>
+            </small>
+          </div>
+        <% end %>
+        <%= link_to t("view_all"), events_path, :class => 'btn btn-sm btn-default btn-block' %>
+      </div>
+    <% end %>
+  </div>
+</div>

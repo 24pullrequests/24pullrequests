@@ -1,0 +1,37 @@
+<h2>#{@language}</h2>
+<% if @users.any? %>
+  <div class="row clearfix" id="users">
+    <div class="col-md-12">
+      <h3>
+        <%= t("language.developers.count", count: number_with_delimiter(user_count), language: @language) %>
+        <%= link_to t("view_all"), users_language_path(@language.downcase), :class => 'btn btn-default' %>
+        <ul class="avatar-list clearfix">
+          <%= render @users %>
+        </ul>
+      </h3>
+    </div>
+  </div>
+<% end %>
+<% if @pull_requests.any? %>
+  <div class="row clearfix" id="pull_requests">
+    <div class="col-md-12">
+      <h3>
+        <%= t("language.pull_requests.latest.count", count: number_with_delimiter(pull_request_count_for_language), language: @language) %>
+        <%= link_to t("view_all"), pull_requests_language_path(@language.downcase), :class => 'btn btn-default pull-right' %>
+      </h3>
+      <%= render @pull_requests %>
+    </div>
+  </div>
+<% end %>
+<% if @projects.any? %>
+  <div class="row clearfix" id="projects">
+    <div class="col-md-12">
+      <h3>
+        <%= t("language.projects_count", count: number_with_delimiter(project_count_for_language), language: @language) %>
+        <%= link_to t("language.projects.suggest", language: @language), new_project_path(language: @language.downcase), :class => 'btn btn-default pull-right' %>
+        <%= link_to t("view_all"), projects_language_path(@language.downcase), :class => 'btn btn-default pull-right' %>
+      </h3>
+      <%= render @projects %>
+    </div>
+  </div>
+<% end %>

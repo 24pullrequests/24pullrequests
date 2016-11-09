@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-10">
+    <h2>#{@organisation.login}</h2>
+    <%= link_to "#{@organisation.login} on GitHub", "https://github.com/#{@organisation.login}", class: 'btn btn-default' %>
+  </div>
+  <div class="col-md-2">
+    <div class="avatar">
+      <%= image_tag(@organisation.avatar_url(160), :width => 80, :height => 80, :alt => @organisation.login) %>
+    </div>
+  </div>
+</div>
+<div class="row clearfix" id="users">
+  <div class="col-md-12">
+    <h3>
+      <%= t("organisations.members", count: @organisation.users.count) %>
+    </h3>
+    <div class="users">
+      <ul class="avatar-list clearfix">
+        <%= render @organisation.users.order('pull_requests_count desc') %>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="pull_requests">
+  <h3>
+    <%= t("organisations.pull_requests", count: @organisation.pull_requests.length) %>
+  </h3>
+  <%= render @organisation.pull_requests %>
+</div>

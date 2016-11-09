@@ -1,0 +1,35 @@
+<div class="project <%= "#{parameterize_language(project.main_language)} #{class_for_inactive(project)}" %>" data-id="<%= project.id %>">
+  <div class="title clearfix">
+    <h4>
+      <%= project.name %>
+      <% if project.inactive? %>
+        <small>
+          <%= inactive?(project) %>
+        </small>
+        <%= link_to t("delete"), path_for_project(project, admin),
+          method: :delete,
+          data: { confirm: 'Are you sure you want to delete this project?' },
+          class: 'btn btn-danger pull-right' %>
+      <% else %>
+        <%= link_to t("deactivate"), path_for_project(project, admin),
+          method: :delete,
+          data: { confirm: "Are you sure you want to deactivate this project?" },
+          class: 'btn btn-danger pull-right'%>
+        <%= link_to t("edit"), edit_path_for_project(project, admin), class: 'btn pull-right' %>
+      <% end %>
+    </h4>
+    <%= link_to project.github_repository, project.github_url, :target => '_blank' %>
+  </div>
+  <p class="js-emoji">
+    <%= truncate project.description, :length => 200 %>
+  </p>
+  <div class="language label label-info">
+    <%= link_to project.main_language, language_path(project.main_language.downcase) %>
+  </div>
+  <% project.labels.each do |label| %>
+    <div class="project-label">
+      <span class="octicon octicon-tag"></span>
+      <%= label.name %>
+    </div>
+  <% end %>
+</div>
