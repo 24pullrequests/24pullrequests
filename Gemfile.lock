@@ -160,7 +160,7 @@ GEM
       tilt
     launchy (2.4.3)
       addressable (~> 2.3)
-    lodash-rails (4.16.4)
+    lodash-rails (4.16.6)
       railties (>= 3.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -224,7 +224,7 @@ GEM
       railties (>= 3.1, < 5.0)
     rabl (0.13.1)
       activesupport (>= 2.3.14)
-    rack (1.6.4)
+    rack (1.6.5)
     rack-canonical-host (0.2.2)
       addressable (> 0, < 3)
       rack (>= 1.0.0, < 3)
