@@ -1,4 +1,4 @@
-<p>Hi #{@user.nickname},</p>
+<p>Hi <%= @user.nickname %>,</p>
 <p>
   You entered this email address as your contact address for 24pullrequests.com. Please confirm this by clicking the link below:
   <% confirm_link = "http://24pullrequests.com/confirm/#{@user.confirmation_token}" %>
