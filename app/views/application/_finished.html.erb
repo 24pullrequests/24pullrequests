@@ -4,7 +4,7 @@
     <%= CURRENT_YEAR %>
   </h2>
   <p>
-    In <%= @CURRENT_YEAR %>, over 24 days,
+    In <%= CURRENT_YEAR %>, over 24 days,
     <b>
       <%= number_with_delimiter contributors_in(CURRENT_YEAR) %>
     </b>
@@ -70,6 +70,6 @@
   <p>Find open source pull requests that need a reviewer before merging.</p>
   <hr/>
   See you on
-  <strong>December 1st, <%= @CURRENT_YEAR+1 %></strong>,
+  <strong>December 1st, <%= CURRENT_YEAR+1 %></strong>,
   Happy Hacking!
 </div>

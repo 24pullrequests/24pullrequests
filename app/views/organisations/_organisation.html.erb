@@ -1,10 +1,10 @@
 <li class="avatar-cell">
-  <%= link_to organisation_path(@organisation.login), class: "avatar-link" do %>
-    <%= image_tag(@organisation.avatar_url(160), alt: @organisation.login, class: "avatar-img") %>
-    <div class="username">@<%= @organisation.login %></div>
+  <%= link_to organisation_path(organisation.login), class: "avatar-link" do %>
+    <%= image_tag(organisation.avatar_url(160), alt: organisation.login, class: "avatar-img") %>
+    <div class="username">@#{organisation.login}</div>
     <span class="pr-badge">
       <span class="octicon octicon-git-pull-request"></span>
-      <%= @organisation.pull_request_count %>
+      <%= organisation.pull_request_count %>
     </span>
   <% end %>
 </li>
