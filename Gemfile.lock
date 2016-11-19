@@ -314,9 +314,9 @@ GEM
       sprockets (> 2.11)
       sprockets-rails
       tilt
-    sawyer (0.8.0)
+    sawyer (0.8.1)
       addressable (>= 2.3.5, < 2.6)
-      faraday (~> 0.8, < 0.10)
+      faraday (~> 0.8, < 1.0)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
     simple_form (3.3.1)
