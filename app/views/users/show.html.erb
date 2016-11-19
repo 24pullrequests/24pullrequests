@@ -16,7 +16,7 @@
         <% end %>
       </div>
     <% end %>
-    <h2 class="username">#{@user.nickname}</h2>
+    <h2 class="username"><%= @user.nickname %></h2>
     <div class="profile-item">
       <%= gratipay_button @user.nickname, "btn btn-xs btn-success" %>
       <% if @user.twitter_nickname.present? %>
@@ -111,6 +111,6 @@
     <h3>
       <%= t("user.coderwall.title") %>
     </h3>
-    <div id="coderwall-content" data-nickname="@user.coderwall_username"></div>
+    <div id="coderwall-content" data-nickname="<%= @user.coderwall_username %>"></div>
   </div>
 </div>
