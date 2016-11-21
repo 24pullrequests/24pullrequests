@@ -28,6 +28,7 @@ gem 'typhoeus'
 gem 'sassc-rails'
 gem 'puma'
 gem 'multi_fetch_fragments'
+gem 'rack-attack'
 
 group :development do
   gem 'spring'

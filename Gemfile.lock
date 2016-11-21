@@ -226,6 +226,8 @@ GEM
     rabl (0.13.1)
       activesupport (>= 2.3.14)
     rack (1.6.5)
+    rack-attack (5.0.1)
+      rack
     rack-canonical-host (0.2.2)
       addressable (> 0, < 3)
       rack (>= 1.0.0, < 3)
@@ -432,6 +434,7 @@ DEPENDENCIES
   puma
   quiet_assets
   rabl
+  rack-attack
   rack-canonical-host
   rack-google-analytics
   rails (= 4.2.7.1)
