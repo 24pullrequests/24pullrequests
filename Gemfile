@@ -27,6 +27,7 @@ gem 'lodash-rails'
 gem 'typhoeus'
 gem 'sassc-rails'
 gem 'puma'
+gem 'multi_fetch_fragments'
 
 group :development do
   gem 'spring'

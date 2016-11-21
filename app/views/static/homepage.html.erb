@@ -157,7 +157,7 @@
         </div>
         <% if @pull_requests.any? %>
           <div id="pull_requests">
-            <%= render @pull_requests %>
+            <%= render @pull_requests, cache: true %>
           </div>
         <% else %>
           <br/>
