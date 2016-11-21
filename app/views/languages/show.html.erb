@@ -19,7 +19,7 @@
         <%= t("language.pull_requests.latest.count", count: number_with_delimiter(pull_request_count_for_language), language: @language) %>
         <%= link_to t("view_all"), pull_requests_language_path(@language.downcase), :class => 'btn btn-default pull-right' %>
       </h3>
-      <%= render @pull_requests %>
+      <%= render @pull_requests, cache: true %>
     </div>
   </div>
 <% end %>
