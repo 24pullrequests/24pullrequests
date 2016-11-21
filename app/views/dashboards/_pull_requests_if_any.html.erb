@@ -1,5 +1,5 @@
 <% if current_user.pull_requests.year(current_year).any? %>
-  <%= render :partial => 'pull_requests/pull_request', :collection => pull_requests %>
+  <%= render :partial => 'pull_requests/pull_request', :collection => pull_requests, cache: true %>
 <% elsif DateTime.new(current_year, 12, 1) > DateTime.now %>
   <p>
     <%= t('dashboard.not_december') %>

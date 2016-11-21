@@ -5,5 +5,5 @@
     <%= t("pull_requests.count", count: number_with_delimiter(pull_request_count)) %>
   <% end %>
 </h2>
-<%= render @pull_requests_decorator.paginated %>
+<%= render @pull_requests_decorator.paginated, cache: true %>
 <%= paginate @pull_requests_decorator.paginated %>

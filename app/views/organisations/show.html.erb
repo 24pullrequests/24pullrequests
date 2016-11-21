@@ -25,5 +25,5 @@
   <h3>
     <%= t("organisations.pull_requests", count: @organisation.pull_requests.length) %>
   </h3>
-  <%= render @organisation.pull_requests %>
+  <%= render @organisation.pull_requests, cache: true %>
 </div>

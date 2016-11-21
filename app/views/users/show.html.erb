@@ -90,11 +90,11 @@
           <%= render :partial => 'calendar', :object => @calendar %>
         </div>
         <div class="tab-pane" id="pull_requests">
-          <%= render partial: 'users/pull_request', collection: @user.pull_requests.year(current_year).latest(nil) %>
+          <%= render partial: 'users/pull_request', collection: @user.pull_requests.year(current_year).latest(nil), cache: true %>
         </div>
         <% for year in ArchivedPullRequest::PAST_YEARS %>
           <div class="tab-pane" id="<%= year %>">
-            <%= render partial: 'users/pull_request', collection: @user.archived_pull_requests.year(year) %>
+            <%= render partial: 'users/pull_request', collection: @user.archived_pull_requests.year(year), cache: true %>
           </div>
         <% end %>
       </div>

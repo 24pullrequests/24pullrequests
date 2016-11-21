@@ -61,6 +61,9 @@ module Tfpullrequests
 
     config.assets.initialize_on_precompile = false
 
+    # Rate limiting, see config/initializers/rack_attack.rb for config
+    config.middleware.use Rack::Attack
+
     config.exceptions_app = routes
 
     I18n.config.enforce_available_locales = false
