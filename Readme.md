@@ -106,12 +106,12 @@ New to Ruby? No worries! You can follow these instructions to install a local se
 
 #### Installing a Local Server
 
-First things first, you'll need to install Ruby 2.3.1. I recommend using the excellent [rbenv](https://github.com/rbenv/rbenv),
+First things first, you'll need to install Ruby 2.3.3. I recommend using the excellent [rbenv](https://github.com/rbenv/rbenv),
 and [ruby-build](https://github.com/rbenv/ruby-build)
 
 ```bash
-rbenv install 2.3.1
-rbenv global 2.3.1
+rbenv install 2.3.3
+rbenv global 2.3.3
 ```
 
 Next, you'll need to make sure that you have PostgreSQL installed. This can be
