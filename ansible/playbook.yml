@@ -12,10 +12,20 @@
       - libreadline-dev
       - libcurl4-openssl-dev
       - libpq-dev
+      - git
   vars_files:
     - vars/pgsql.yml
   roles:
     - init
-    - ruby
+    - { role: rvm_io.ruby,
+        tags: ruby,
+        become: yes,
+        rvm1_user: 'root',
+        rvm1_rubies: ["ruby-2.3.2"],
+        rvm1_bundler_install: true,
+        rvm1_install_flags: '--auto-dotfiles',
+        rvm1_install_path: '/usr/local/rvm',
+        rvm1_gpg_key_server: "hkp://pgp.mit.edu" # Fixes https://github.com/rvm/rvm1-ansible/issues/31
+      }
     - pgsql
     - app
