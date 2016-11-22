@@ -1,7 +1,7 @@
 <li class="avatar-cell">
   <%= link_to user_path(user.nickname), class: "avatar-link" do %>
     <%= image_tag(user.avatar_url(200), alt: user.nickname, class: "avatar-img") %>
-    <div class="username">@#{user.nickname}</div>
+    <div class="username"><%= user.nickname %></div>
     <span class="pr-badge">
       <span class="octicon octicon-git-pull-request"></span>
       <%= user.pull_requests_count %>
