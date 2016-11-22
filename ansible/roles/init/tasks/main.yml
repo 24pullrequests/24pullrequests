@@ -1,17 +1,17 @@
 ---
 - name: Update apt
-  sudo: yes
+  become: yes
   apt: update_cache=yes
 
 - name: Install sys Packages
-  sudo: yes
+  become: yes
   apt: pkg={{ item }} state=latest
   with_items: sys_packages
 
 - name: Configure the timezone
-  sudo: yes
+  become: yes
   template: src=timezone.tpl dest=/etc/timezone
 
 - name: More Configure the timezone
-  sudo: yes
+  become: yes
   file: src=/usr/share/zoneinfo/{{timezone}} dest=/etc/localtime state=link force=yes backup=yes
