@@ -6,7 +6,7 @@
 - name: Install sys Packages
   become: yes
   apt: pkg={{ item }} state=latest
-  with_items: sys_packages
+  with_items: "{{ sys_packages }}"
 
 - name: Configure the timezone
   become: yes
