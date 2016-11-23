@@ -26,3 +26,6 @@ Thumbs.db
 
 # Ignore application configuration
 /config/application.yml
+
+# Ignore ansible-galaxy RVM playbook
+/ansible/roles/rvm_io.ruby/
