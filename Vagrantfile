@@ -16,19 +16,20 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.box = "ubuntu/trusty64"
-    
+
   config.vm.network :private_network, ip: "192.168.12.34"
   config.ssh.forward_agent = true
 
   if which('ansible-playbook')
     config.vm.provision "ansible" do |ansible|
       ansible.playbook = "ansible/playbook.yml"
+      ansible.galaxy_role_file = "ansible/requirements.yml"
       ansible.inventory_path = "ansible/inventories/dev"
       ansible.limit = 'all'
     end
   else
     config.vm.provision :shell, path: "ansible/windows.sh"
   end
-    
+
   config.vm.synced_folder "./", "/vagrant", type: "nfs"
 end
