@@ -92,7 +92,7 @@ class User < ActiveRecord::Base
   end
 
   def estimate_skills
-    return if ENV['GITHUB_KEY'].empty?
+    return if ENV['GITHUB_KEY'].blank?
     (Project::LANGUAGES & repo_languages).each do |language|
       skills.create(language: language)
     end
