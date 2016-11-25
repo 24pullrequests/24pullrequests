@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.2'
 
-gem 'rails', '4.2.7.1'
+gem 'rails', '5.0.0.1'
 
 gem 'jquery-rails'
 gem 'pg'
@@ -17,7 +17,7 @@ gem 'jquery-datetimepicker-rails'
 gem 'simple_form'
 gem 'coffee-rails'
 gem 'uglifier'
-gem 'octicons-rails'
+# gem 'octicons-rails'
 gem 'rack-canonical-host'
 gem 'draper'
 gem 'responders'
@@ -36,8 +36,8 @@ group :development do
   gem 'rubocop', require: false
   gem 'web-console'
   gem 'figaro'
-  gem 'meta_request'
-  gem 'quiet_assets'
+  # gem 'meta_request'
+  # gem 'quiet_assets'
 end
 
 group :development, :test, :cucumber do
@@ -62,7 +62,7 @@ group :development, :test, :cucumber do
   gem 'christmas_tree_formatter'
 
   # Javascript
-  gem 'konacha'
+  # gem 'konacha'
   gem 'chai-jquery-rails'
   gem 'sinon-chai-rails'
   gem 'sinon-rails'
