@@ -29,6 +29,11 @@ GEM
       globalid (>= 0.3.6)
     activemodel (5.0.0.1)
       activesupport (= 5.0.0.1)
+    activemodel-serializers-xml (1.0.1)
+      activemodel (> 5.x)
+      activerecord (> 5.x)
+      activesupport (> 5.x)
+      builder (~> 3.1)
     activerecord (5.0.0.1)
       activemodel (= 5.0.0.1)
       activesupport (= 5.0.0.1)
@@ -84,10 +89,11 @@ GEM
     docile (1.1.5)
     domain_name (0.5.20161021)
       unf (>= 0.0.5, < 1.0.0)
-    draper (2.1.0)
-      actionpack (>= 3.0)
-      activemodel (>= 3.0)
-      activesupport (>= 3.0)
+    draper (3.0.0.pre1)
+      actionpack (~> 5.0)
+      activemodel (~> 5.0)
+      activemodel-serializers-xml (~> 1.0)
+      activesupport (~> 5.0)
       request_store (~> 1.0)
     easy_translate (0.5.0)
       json
@@ -386,6 +392,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activemodel-serializers-xml
   bootstrap-sass
   brakeman
   bugsnag
@@ -395,7 +402,7 @@ DEPENDENCIES
   coffee-rails
   dalli
   database_cleaner
-  draper
+  draper (~> 3.0.0.pre1)
   ejs
   factory_girl_rails
   faker

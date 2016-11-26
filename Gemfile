@@ -19,7 +19,7 @@ gem 'coffee-rails'
 gem 'uglifier'
 # gem 'octicons-rails'
 gem 'rack-canonical-host'
-gem 'draper'
+gem 'draper', '~> 3.0.0.pre1' # pre version has rails5 support
 gem 'responders'
 gem 'gmaps4rails'
 gem 'geocoder'
@@ -29,6 +29,7 @@ gem 'sassc-rails'
 gem 'puma'
 gem 'multi_fetch_fragments'
 gem 'rack-attack'
+gem 'activemodel-serializers-xml' # ensures draper will run
 
 group :development do
   gem 'spring'
