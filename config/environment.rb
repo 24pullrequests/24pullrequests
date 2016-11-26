@@ -2,4 +2,4 @@
 require_relative 'application'
 
 # Initialize the rails application
-Tfpullrequests::Application.initialize!
+Rails.application.initialize!
