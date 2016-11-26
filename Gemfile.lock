@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/torbjon/octicons-rails.git
+  revision: cdf8f706f11886cb494e667118170fdef5902896
+  specs:
+    octicons-rails (3.5.0)
+      railties (>= 3.2, < 5.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -423,6 +430,7 @@ DEPENDENCIES
   meta_request
   multi_fetch_fragments
   newrelic_rpm
+  octicons-rails!
   octokit
   omniauth
   omniauth-github
