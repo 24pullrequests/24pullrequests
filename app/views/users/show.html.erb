@@ -6,7 +6,7 @@
     <% if @user == current_user %>
       <div class="profile-actions hidden-xs">
         <%= link_to preferences_path, class: "btn btn-default btn-sm" do %>
-          <span class="octicon octicon-gear"></span>
+          <%= octicon "gear" %>
           <%= t("navigation.preferences") %>
         <% end %>
         <% if current_user.twitter_linked? %>
@@ -62,7 +62,7 @@
       </div>
     <% end %>
     <div class="profile-pull-request-count">
-      <span class="octicon octicon-gift"></span>
+      <%= octicon "gift" %>
       <%= t("user.pull_request_count", user: @user.nickname, count: @user.pull_requests.year(current_year).count, year: current_year) %>
     </div>
   </div>

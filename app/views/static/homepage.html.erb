@@ -6,7 +6,7 @@
   </div>
   <div class="row">
     <div class="col-md-4 intro-block">
-      <span class="octicon octicon-gift"></span>
+      <%= octicon "gift" %>
       <h4>
         <%= t("homepage.greeting") %>
       </h4>
@@ -15,7 +15,7 @@
       </p>
     </div>
     <div class="col-md-4 intro-block">
-      <span class="octicon octicon-git-pull-request"></span>
+      <%= octicon "git-pull-request" %>
       <h4>
         <%= t("homepage.involved.title") %>
       </h4>
@@ -28,7 +28,8 @@
       </p>
     </div>
     <div class="col-md-4 intro-block">
-      <span class="octicon octicon-checklist"></span>
+      <%= octicon "checklist" %>
+
       <h4>
         <%= t("homepage.profile.title") %>
       </h4>
@@ -45,7 +46,7 @@
       <div class="col-md-12">
         <div class="cta-block">
           <%= link_to login_path, :class => 'btn cta' do %>
-            <span class="octicon octicon-mark-github"></span>
+            <%= octicon "mark-github" %>
             <strong>
               <%= t("homepage.login_with_github") %>
             </strong>
@@ -60,7 +61,7 @@
   <div class="row">
     <div class="col-md-4 tip-block">
       <h4 class="subtitle">
-        <span class="octicon octicon-radio-tower"></span>
+        <%= octicon "radio-tower" %>
         <%= t("homepage.event.title") %>
       </h4>
       <p>
@@ -71,7 +72,7 @@
     </div>
     <div class="col-md-4 tip-block">
       <h4 class="subtitle">
-        <span class="octicon octicon-checklist"></span>
+        <%= octicon "checklist" %>
         <%= t("homepage.badges.title") %>
       </h4>
       <p>
@@ -84,7 +85,7 @@
     </div>
     <div class="col-md-4 tip-block">
       <h4 class="subtitle">
-        <span class="octicon octicon-question"></span>
+        <%= octicon "question" %>
         <%= t("homepage.q_n_a") %>
       </h4>
       <p>
@@ -98,7 +99,7 @@
     <div class="row">
       <div class="block">
         <div class="title-block">
-          <span class="mega-octicon octicon-repo"></span>
+          <%= octicon "repo", :class => "mega-octicon" %>
           <h3 class="block-title">
             <%= t("featured_projects") %>
           </h3>
@@ -146,7 +147,7 @@
     <div class="col-md-6 two-up-split left">
       <div class="block">
         <div class="title-block">
-          <span class="mega-octicon octicon-git-pull-request"></span>
+          <%= octicon "git-pull-request", :class => "mega-octicon" %>
           <h3 class="block-title">
             <%= t("pull_requests.latest.count", count: number_with_delimiter(PullRequest.year(current_year).count)) %>
           </h3>
@@ -170,7 +171,7 @@
     <div class="col-md-6 two-up-split right">
       <div class="block">
         <div class="title-block">
-          <span class="mega-octicon octicon-repo"></span>
+          <%= octicon "repo", :class => "mega-octicon" %>
           <h3 class="block-title">
             <%= number_with_delimiter Project.active.count %>
             <%= t("suggested_projects") %>

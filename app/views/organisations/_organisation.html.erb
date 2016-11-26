@@ -3,7 +3,7 @@
     <%= image_tag(organisation.avatar_url(160), alt: organisation.login, class: "avatar-img") %>
     <div class="username">@<%= organisation.login %></div>
     <span class="pr-badge">
-      <span class="octicon octicon-git-pull-request"></span>
+      <%= octicon "git-pull-request" %>
       <%= organisation.pull_request_count %>
     </span>
   <% end %>
