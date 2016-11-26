@@ -38,6 +38,7 @@ group :development do
   gem 'web-console'
   gem 'figaro'
   gem 'meta_request'
+  gem 'rails-controller-testing'
 end
 
 group :development, :test, :cucumber do
