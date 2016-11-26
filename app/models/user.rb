@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   include Concerns::Coderwall
   include Concerns::Twitter
 

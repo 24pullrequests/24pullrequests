@@ -1,4 +1,4 @@
-class ArchivedPullRequest < ActiveRecord::Base
+class ArchivedPullRequest < ApplicationRecord
   PAST_YEARS = [2014, 2013, 2012]
 
   belongs_to :user
