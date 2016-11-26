@@ -38,7 +38,6 @@ group :development do
   gem 'web-console'
   gem 'figaro'
   gem 'meta_request'
-  gem 'rails-controller-testing'
 end
 
 group :development, :test, :cucumber do
@@ -46,6 +45,7 @@ group :development, :test, :cucumber do
   gem 'rspec-rails'
   gem 'simplecov', require: false
   gem 'codeclimate-test-reporter', require: false
+  gem 'rails-controller-testing'
 
   gem 'rspec-its', require: false
   gem 'rspec-collection_matchers', require: false
