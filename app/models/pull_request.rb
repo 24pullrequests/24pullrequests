@@ -47,7 +47,7 @@ class PullRequest < ActiveRecord::Base
   end
 
   def check_state
-    issue = GithubClient.new(user.nickname, user.token).issue(repo_name, id)
+    issue = GithubClient.new(user.nickname, user.token).issue(repo_name, github_id)
     update_attributes(state: issue.state, comments_count: issue.comments)
   end
 
@@ -72,5 +72,11 @@ class PullRequest < ActiveRecord::Base
 
   def autogift
     user.new_gift(pull_request: self).save if body && body.scan(/24 ?pull ?request/i).any?
+  end
+
+  private
+
+  def github_id
+    issue_url.split('/').last
   end
 end
