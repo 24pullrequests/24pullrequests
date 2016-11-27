@@ -15,7 +15,7 @@
   <% end %>
   <% project.labels.each do |label| %>
     <div class="project-label">
-      <span class="octicon octicon-tag"></span>
+      <%= octicon "tag", :height => 10 %>
       <%= label.name %>
     </div>
   <% end %>

@@ -17,7 +17,7 @@ gem 'jquery-datetimepicker-rails'
 gem 'simple_form'
 gem 'coffee-rails'
 gem 'uglifier'
-gem 'octicons-rails', git: 'https://github.com/torbjon/octicons-rails.git'
+gem 'octicons_helper'
 gem 'rack-canonical-host'
 gem 'draper', '~> 3.0.0.pre1' # pre version has rails5 support
 gem 'responders'

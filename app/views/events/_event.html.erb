@@ -3,10 +3,10 @@
     <%= link_to event.name, event %>
   </h2>
   <small>
-    <span class="octicon octicon-location"></span>
+    <%= octicon "location" %>
     <%= event.location %>
     <br/>
-    <span class="octicon octicon-clock"></span>
+    <%= octicon "clock" %>
     <%= event.formatted_date %>
   </small>
 </div>
