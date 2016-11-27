@@ -24,7 +24,7 @@ describe ProjectsController, type: :controller do
 
       it 'from params' do
         allow(ProjectSearch).to receive(:new).with(languages: %w(Ruby), labels: [], page: nil).and_call_original
-        get :index, project: { languages: %w(Ruby) }
+        get :index, params: {project: { languages: %w(Ruby) }}
         expect(assigns(:projects)).to match_array(ruby)
         expect(assigns(:has_more_projects)).to eq(false)
         expect(assigns(:languages)).to eq(%w(Ruby))
@@ -56,7 +56,7 @@ describe ProjectsController, type: :controller do
 
       it 'searches all rpojects with empty arrays' do
         allow(ProjectSearch).to receive(:new).with({ languages: [], labels: [], page: nil }).and_call_original
-        get :index, project: { languages: [], labels: [] }
+        get :index, params: {project: { languages: [], labels: [] }}
         expect(assigns(:projects).length).to eq(10)
         expect(assigns(:has_more_projects)).to eq(false)
         expect(assigns(:languages)).to eq([])
@@ -66,7 +66,7 @@ describe ProjectsController, type: :controller do
 
       it 'label is passed to search' do
         allow(ProjectSearch).to receive(:new).with({ languages: [], labels: %w(foo), page: nil }).and_call_original
-        get :index, project: { languages: [], labels: %w(foo) }
+        get :index, params: {project: { languages: [], labels: %w(foo) }}
         expect(assigns(:labels)).to eq(%w(foo))
         expect(session[:filter_options]).to eq({ languages: [], labels: %w(foo) })
       end
@@ -106,7 +106,7 @@ describe ProjectsController, type: :controller do
 
     describe 'successful claim' do
       it 'should successfully claim ownership of an unclaimed project' do
-        post :claim,  project: { github_url: unclaimed_project.github_url }
+        post :claim, params: {project: { github_url: unclaimed_project.github_url }}
         expect(flash[:notice]).not_to be_nil
         expect(flash[:notice]).to eq "You have successfully claimed <b>#{unclaimed_project.github_url}</b>"
       end
@@ -114,7 +114,7 @@ describe ProjectsController, type: :controller do
 
     describe 'failed claim' do
       it 'should fail when claiming an already claimed project' do
-        post :claim,  project: { github_url: claimed_project.github_url }
+        post :claim, params: {project: { github_url: claimed_project.github_url }}
         expect(flash[:notice]).not_to be_nil
         expect(flash[:notice]).to eq "This repository doesn't exist or belongs to someone else"
       end
@@ -140,7 +140,7 @@ describe ProjectsController, type: :controller do
             status: 200
           })
 
-        get :autofill, repo: '24pullrequests/24pullrequests'
+        get :autofill, params: {repo: '24pullrequests/24pullrequests'}
 
         expect(response.status).to eq(200)
 
@@ -152,7 +152,7 @@ describe ProjectsController, type: :controller do
     end
 
     it 'Logged out' do
-      get :autofill, repo: '24pullrequests/24pullrequests'
+      get :autofill, params: {repo: '24pullrequests/24pullrequests'}
       expect(response).to redirect_to(login_path)
     end
   end
