@@ -3,32 +3,32 @@
     <ul class="nav nav-pills">
       <li class="logout">
         <%= link_to logout_path, :title => t("navigation.logout") do %>
-          <span class="octicon octicon-sign-out"></span>
+          <%= octicon "sign-out", :height => 16 %>
           <%= t("navigation.logout") %>
         <% end %>
       </li>
       <li>
         <%= link_to dashboard_path do %>
-          <span class="octicon octicon-dashboard"></span>
+          <%= octicon "dashboard", :height => 16 %>
           <%= t("navigation.dashboard") %>
         <% end %>
       </li>
       <li>
         <%= link_to user_path(current_user) do %>
-          <span class="octicon octicon-person"></span>
+          <%= octicon "person", :height => 16 %>
           <%= t("navigation.profile") %>
         <% end %>
       </li>
       <li>
         <%= link_to my_suggestions_path do %>
-          <span class="octicon octicon-repo"></span>
+          <%= octicon "repo", :height => 16 %>
           <%= t("navigation.my_suggestions") %>
         <% end %>
       </li>
       <% if admin? %>
         <li>
           <%= link_to admin_projects_path do %>
-            <span class="octicon octicon-tools"></span>
+            <%= octicon "tools", :height => 16 %>
             <%= t("navigation.manage_projects") %>
           <% end %>
         </li>

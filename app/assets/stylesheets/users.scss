@@ -30,6 +30,12 @@
   .btn {
     margin-left: 8px;
   }
+
+  .octicon {
+    transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+  }
 }
 
 .profile-avatar {
@@ -80,6 +86,13 @@
   &:after {
     border-right-color: transparent;
     right: -20px;
+  }
+
+  .octicon {
+    fill: #fff;
+    transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
   }
 }
 
@@ -215,7 +228,12 @@
     background: #222;
     line-height: 1;
 
-    .octicon { font-size: 9px; }
+    .octicon {
+      fill: #fff;
+      transform: translateY(1px);
+      -moz-transform: translateY(1px);
+      -webkit-transform: translateY(1px);
+    }
   }
 
   .username {
@@ -260,7 +278,9 @@
   margin: 0 -30px;
   padding: 10px 30px;
   .octicon {
-    font-size: inherit;
+    transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
     width: 12px;
     text-align: center;
   }
