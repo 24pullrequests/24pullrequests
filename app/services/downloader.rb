@@ -24,11 +24,12 @@ class Downloader
     user_downloader.pull_requests.each do |pr|
       if pull_request = pull_request_exists?(pr)
         pull_request.update(
-          title:    pr['payload']['pull_request']['title'],
-          body:     pr['payload']['pull_request']['body'],
-          state:    pr['payload']['pull_request']['state'],
-          merged:   pr['payload']['pull_request']['merged'],
-          language: pr['repo']['language']
+          title:        pr['payload']['pull_request']['title'],
+          body:         pr['payload']['pull_request']['body'],
+          state:        pr['payload']['pull_request']['state'],
+          merged:       pr['payload']['pull_request']['merged'],
+          merged_by_id: pr['payload']['pull_request']['merged_by'].fetch("id", nil),
+          language:     pr['repo']['language']
         )
       else
         user.pull_requests.create_from_github(pr)
