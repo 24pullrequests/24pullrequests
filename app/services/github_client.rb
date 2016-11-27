@@ -16,7 +16,7 @@ class GithubClient
     client.organizations(@nickname)
   end
 
-  delegate :issue, to: :client
+  delegate :issue, :pull_request, to: :client
 
   def repository(repository)
     client.repo(repository)
