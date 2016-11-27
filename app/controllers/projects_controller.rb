@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
       @project.deactivate!
       flash[:notice] = "#{@project.name} has been deactivated."
     end
-    redirect_to :back
+    redirect_back(fallback_location: projects_path)
   end
 
   def update
@@ -63,7 +63,7 @@ class ProjectsController < ApplicationController
       message = "This repository doesn't exist or belongs to someone else"
     end
 
-    redirect_to :back, notice: message
+    redirect_back(fallback_location: project_path(project), notice: message)
   end
 
   def autofill
