@@ -9,7 +9,7 @@
     <div class="user-pull-requests">
       <div class="pull-right">
         <%= link_to preferences_path, class: "btn btn-default btn-sm" do %>
-          <%= octicon "gear", :class => "octicon", %>
+          <%= octicon "gear", :height => 16 %>
           <%= t("navigation.preferences") %>
         <% end %>
         <%= link_to pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn btn-info btn-sm', :rel => 'tooltip', :title => t('pull_request.download.tooltip') do %>
@@ -58,10 +58,10 @@
             </strong>
             <br/>
             <small>
-              <%= octicon "location" %>
+              <%= octicon "location", :height => 12 %>
               <%= event.location %>
               <br/>
-              <%= octicon "clock" %>
+              <%= octicon "clock", :height => 12 %>
               <%= event.formatted_date %>
             </small>
           </div>

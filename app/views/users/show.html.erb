@@ -6,7 +6,7 @@
     <% if @user == current_user %>
       <div class="profile-actions hidden-xs">
         <%= link_to preferences_path, class: "btn btn-default btn-sm" do %>
-          <%= octicon "gear" %>
+          <%= octicon "gear", :height => 16 %>
           <%= t("navigation.preferences") %>
         <% end %>
         <% if current_user.twitter_linked? %>

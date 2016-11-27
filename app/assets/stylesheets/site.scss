@@ -41,8 +41,7 @@ h1, h2, h3, h4, .page-title {
   padding: 0 30px;
 
   .octicon {
-    color: $header-background;
-    font-size: 60px;
+    fill: $header-background;
     opacity: 0.1;
   }
 
@@ -91,20 +90,21 @@ h1, h2, h3, h4, .page-title {
   .subtitle {
     margin-bottom: 15px;
 
-    .octicon {
+    .octicon-circle {
       background: #353535;
-      color: #fff;
       display: block;
-      height: 60px;
-      width: 60px;
       border-radius: 50px;
-      font-size: 20px;
       margin: 0 auto 30px;
-      line-height: 60px;
+      width: 60px;
+      padding: 20px;
 
       @media (min-width: $screen-md-min) {
-	       margin-top: -70px;
+         margin-top: -70px;
       }
+    }
+
+    .octicon {
+      fill: #fff;
     }
   }
 }
@@ -138,6 +138,10 @@ h1, h2, h3, h4, .page-title {
 
   .octicon {
     margin-right: 10px;
+    transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    fill: #fff;
   }
 
   &:hover {
@@ -343,7 +347,11 @@ nav {
   }
 
   .octicon {
-    width: 15px;
+    transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+    margin-right: 3px;
+    fill: #DFC1C1;
   }
 
   .logout {
@@ -503,10 +511,15 @@ footer {
     display: inline-block;
     text-transform: uppercase;
     font-weight: bold;
+    color: #666;
+    font-size: 10px;
 
     &, .octicon {
-      color: #666;
-      font-size: 10px;
+      fill: #666;
+      transform: translateY(2px);
+      -moz-transform: translateY(2px);
+      -webkit-transform: translateY(2px);
+      margin-right: 2px;
     }
   }
   .language + .project-label {
@@ -624,8 +637,7 @@ hr {
   text-align: center;
 
   .mega-octicon {
-    font-size: 40px;
-    color: #d0d0d0;
+    fill: #d0d0d0;
     margin-bottom: 20px;
   }
 
@@ -663,4 +675,10 @@ hr {
   margin: 40px 0 30px;
   border-bottom: 1px dashed #E3E3E3;
   padding-bottom: 20px;
+
+  .octicon {
+    transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+  }
 }
