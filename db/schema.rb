@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151223170543) do
+ActiveRecord::Schema.define(version: 20161127203934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -127,6 +127,7 @@ ActiveRecord::Schema.define(version: 20151223170543) do
     t.integer  "user_id"
     t.string   "language"
     t.integer  "comments_count", default: 0
+    t.integer  "merged_by_id"
     t.index ["user_id"], name: "index_pull_requests_on_user_id", using: :btree
   end
 
@@ -159,9 +160,9 @@ ActiveRecord::Schema.define(version: 20151223170543) do
     t.string   "name"
     t.string   "blog"
     t.string   "location"
-    t.boolean  "thank_you_email_sent",                         default: false
     t.decimal  "lat",                  precision: 8, scale: 6
     t.decimal  "lng",                  precision: 9, scale: 6
+    t.boolean  "thank_you_email_sent",                         default: false
     t.index ["nickname"], name: "index_users_on_nickname", unique: true, using: :btree
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
   end

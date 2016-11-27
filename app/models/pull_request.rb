@@ -47,8 +47,8 @@ class PullRequest < ApplicationRecord
   end
 
   def check_state
-    issue = GithubClient.new(user.nickname, user.token).issue(repo_name, id)
-    update_attributes(state: issue.state, comments_count: issue.comments)
+    issue = GithubClient.new(user.nickname, user.token).pull_request(repo_name, github_id)
+    update_attributes(state: issue.state, comments_count: issue.comments, merged: issue.merged)
   end
 
   def post_to_firehose
@@ -72,5 +72,11 @@ class PullRequest < ApplicationRecord
 
   def autogift
     user.new_gift(pull_request: self).save if body && body.scan(/24 ?pull ?request/i).any?
+  end
+
+  private
+
+  def github_id
+    issue_url.split('/').last
   end
 end
