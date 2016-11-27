@@ -90,7 +90,7 @@ describe ProjectsController, type: :controller do
         admin: 1
       }
       parameters = ActionController::Parameters.new(raw)
-      expect { create :project, parameters }.to raise_error NoMethodError
+      expect { create :project, parameters }.to raise_error ArgumentError
     end
   end
 
