@@ -24,6 +24,30 @@ task check_for_inactive_projects: :environment do
   puts "#{count} projects have been deactivated!"
 end
 
+desc 'Recheck inactive projects'
+task reactivate_inactive_projects: :environment do
+  count = 0
+  Project.where(inactive: true).each do |project|
+    begin
+      user = User.load_user
+      score = project.score(user.nickname, user.token)
+    rescue Octokit::NotFound
+      score = 0
+    rescue Octokit::Unauthorized
+      score = 99
+    end
+
+    puts "#{project.name} - #{score}"
+
+    if score > 5
+      project.update_attribute(:inactive, false)
+      count += 1
+    end
+  end
+
+  puts "#{count} projects have been reactivated!"
+end
+
 task map_labels_from_github_issues: :environment do
   ACTIVE_LABELS = Label.all.map(&:name)
 
