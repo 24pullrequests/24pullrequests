@@ -213,17 +213,6 @@ en:
     codetriage: Give back to open source, one issue at a time, with CodeTriage. You’ll
       get one issue from your favorite repo per day to help you dig deeper, learn
       more, and stay involved with the code you rely on.
-    docsdoctor: Sign up to receive documented method or class in your inbox every
-      day from your favorite GitHub repos. If you're really pro, receive un-documented
-      methods or classes and super charge your commit history.
-    rubyissues: A guided tour of significant, compelling, bizarre, tricky
-      and all together worthwhile issues within open source Ruby projects.
-      Issue(s) are issued bi-monthly and you can subscribe if you wish.
-    contribhub:
-      description: ContribHub is a GitHub based application that makes it
-        easy to find projects to contribute and grow the community around it.
-      tagline: "You know you have a neighbor who needs some help with a project
-        really good? With ContribHub you find out!"
     issuehubio: Contribute to Open Source. Search issue labels to find
       the right project for you!
     get_ready: Get ready for 24 Pull Requests %{year} when we do it all again!
