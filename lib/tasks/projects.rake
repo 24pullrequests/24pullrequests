@@ -7,7 +7,7 @@ task check_for_inactive_projects: :environment do
     begin
       user = User.load_user
       score = project.score(user.nickname, user.token)
-    rescue Octokit::NotFound
+    rescue Octokit::NotFound, Octokit::InvalidRepository
       score = 0
     rescue Octokit::Unauthorized
       score = 99
@@ -31,7 +31,7 @@ task reactivate_inactive_projects: :environment do
     begin
       user = User.load_user
       score = project.score(user.nickname, user.token)
-    rescue Octokit::NotFound
+    rescue Octokit::NotFound, Octokit::InvalidRepository
       score = 0
     rescue Octokit::Unauthorized
       score = 99
