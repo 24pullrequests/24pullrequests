@@ -32,6 +32,6 @@ class Organisation < ActiveRecord::Base
   end
 
   def update_pull_request_count
-    update_attribute(:pull_request_count, pull_requests.count)
+    update_attribute(:pull_request_count, pull_requests.year(CURRENT_YEAR).count)
   end
 end
