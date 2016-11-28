@@ -138,11 +138,6 @@ fi:
     codetriage: Anna takaisin avoimelle lähdekoodille, yksi issue kerralla CodeTriagella.
       Saat yhden issuen lempi repostasi päivässä auttaen sinua kaivamaan syvemmälle,
       oppimaan uutta ja pitämään sinut mukana koodissa josta olet riippuvainen.
-    contribhub:
-      description: ContribHub on GitHub-pohjainen sovellus joka tekee projektien löytämisestä
-        helpompaa.
-      tagline: Onko sinulla naapuri joka tarvitsee apua todella siistin projektin
-        kanssa? ContriHubilla tiedät!
     get_ready: Valmistaudu 24 Pull Requests %{year} jolloin teemme tämän kaiken uudestaan!
     help_open_source: 'Haluatko auttaa avoimen lähdekoodin projekteja sillä välin?
       Katso myös nämä muut loistava aloitteet:'

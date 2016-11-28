@@ -29,28 +29,28 @@ uk:
               required_for_confirmation: "%{attribute} необхідній для підтвердження"
   api:
     callback:
-      details: 
-      title: 
-    description: 
+      details:
+      title:
+    description:
     organisations:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
     pagination:
-      details: 
-      title: 
+      details:
+      title:
     projects:
-      details: 
-      title: 
+      details:
+      title:
     pull_requests:
-      details: 
-      meta_details: 
-      title: 
-    title: 
+      details:
+      meta_details:
+      title:
+    title:
     users:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
   cancel: "Відмініти"
   change: "Змінити"
   claim: "Заявити"
@@ -59,7 +59,7 @@ uk:
   dashboard:
     christmas_activity: "Тут ви можете побачити всю діяльність, яку ми зібрали для
       вас напередодні Різдва."
-    gift_it: 
+    gift_it:
     give_a_gift: "Схоже ви ще не подарували нікому код сьогодні. Ви б хотіли зробити
       подарунок?"
     help_out: "Не знаєте якому проекту допомогти? Ми зібрали список популярних проектів"
@@ -71,7 +71,7 @@ uk:
       будь-які запропоновані проекти залишаться."
     cancel: "Я змінив свою думку і хотів би повернутися!"
     confirm: "Підтвердити видалення"
-    email_preferences_link: 
+    email_preferences_link:
     notification_info: "Якщо ви бажаєте припинити отримувати повідомлення ви можете
       змінити ваш %{email_preferences_link}."
     title: "Видалити ваш акаунт"
@@ -79,17 +79,17 @@ uk:
   developers_using_language: "Розробники, які використовують %{language}"
   edit: "Редагувати"
   everything: "Все"
-  exempli_gratia: 
+  exempli_gratia:
   follow_user: "Читати @%{twitter}"
   gifts:
-    calendar_link: 
+    calendar_link:
     description: Тут ви можете керувати вашими пул реквестами та курирувати власний
       набір "24 Пул Реквестів".
     form:
-      date: 
-      gift_it: 
-      pull_request: 
-      tweet: 
+      date:
+      gift_it:
+      pull_request:
+      tweet:
     give: "Подаруйте щось значуще проекту, який вам подобається"
     none: "Подарунків немає."
     title: "Подарунковий код"
@@ -116,7 +116,7 @@ uk:
       пул-реквестом!"
     greeting: "Цього сезону"
     involved:
-      contributing_path: 
+      contributing_path:
       description: "Наразі є багато способів допомогти open source проекту: покращіть
         документацію, пофіксіть актуальні баги, покращіть код та тести, або додайте
         нову фічу."
@@ -137,11 +137,6 @@ uk:
   information:
     codetriage: "Віддячте open source проектам разом з CodeTriage. Отримайте одне
       завдання на день, з ваших улюбленних репозиторіїв, та набувайте досвіду."
-    contribhub:
-      description: ContribHub це застосунок на базі GitHub, що допомагае в пошуку
-        проектів, та створенню спільноти ціх проектів.
-      tagline: "Чи ви знаете, що ваш сусід чекає на допомогу з крутим проектом? ContribHub
-        допоможе вам зблизитись!"
     get_ready: "Готуймося до 24 Пулл Реквеста %{year}, покажем на що ми здатні!"
     help_open_source: "Готовий допомогти проекту? Ця інформація стенется в нагоді:"
     last_year_stats: "В %{year}, за 24 дні, <b>%{developers}</b> розробників надіслалі
@@ -170,21 +165,21 @@ uk:
     profile: "Профіль"
   no_suggestions: "Ви не маєте жодних рекомендацій"
   open_source_yey: Open Source FTW!
-  or: 
+  or:
   organisations:
     members:
-      one: 
-      other: 
+      one:
+      other:
   preferences:
-    coderwall: 
-    coderwall_username: 
+    coderwall:
+    coderwall_username:
     delete: "Бажаєте видалити ваш акаунт?"
     form:
-      daily: 
-      email: 
-      email_frequency: 
-      never: 
-      weekly: 
+      daily:
+      email:
+      email_frequency:
+      never:
+      weekly:
     frequency_message: "За частотою, яку ви обрали, ми будемо висилати листи електронною
       поштою з запропонованими проектами від тепер та поки проект не закінчиться.
       В якості додаткового бонусу, ми візьмемо на себе сміливість персоналізації нашої
@@ -213,11 +208,11 @@ uk:
       з відкритим кодом, які чекають на ваше сприяння та пул реквести."
     new:
       form:
-        github_url: 
-        main_language: 
-        project_name: 
-        submit_project: 
-        summary: 
+        github_url:
+        main_language:
+        project_name:
+        submit_project:
+        summary:
       info: "Один із способів заохочувати до участі у сприянні проектам з відкритим
         вихідним кодом, це надавати можливість користувачам знати, що популярні проекти
         можуть бути вартими сприянню. Ми зібрали наші улюбленні проекти, але ми завжди
@@ -251,7 +246,7 @@ uk:
   suggest_project: "Запропонувати Проект"
   suggested_projects: "Запропонованих Проектів"
   suggestions:
-    title: 
+    title:
   twitter:
     account_linked: "Ми прив'язали ваш твіттер акаунт! Тепер ми будемо твітити кожен
       раз, як ви відкриєте пул реквест."
@@ -262,14 +257,14 @@ uk:
         кожен раз, як ви відкріваєте пул реквест!"
   user:
     coderwall:
-      achieved_by: 
-      error_github_not_connected: 
-      error_no_user: 
-      success: 
-      title: 
-      update_button: 
+      achieved_by:
+      error_github_not_connected:
+      error_no_user:
+      success:
+      title:
+      update_button:
     grinchy_message: "%{user} не надіслав жодного пул реквеста в %{year} році. Прикро!"
-    organisations: 
+    organisations:
     pull_request_count: "%{user} надіслав %{count} пул реквестів в %{year} році."
   view_all: "Подивится"
   welcome_back: "Алоха, %{user}"

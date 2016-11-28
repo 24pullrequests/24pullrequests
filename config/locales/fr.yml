@@ -29,28 +29,28 @@ fr:
               required_for_confirmation: "%{attribute} est requis pour confirmation"
   api:
     callback:
-      details: 
-      title: 
-    description: 
+      details:
+      title:
+    description:
     organisations:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
     pagination:
-      details: 
-      title: 
+      details:
+      title:
     projects:
-      details: 
-      title: 
+      details:
+      title:
     pull_requests:
-      details: 
-      meta_details: 
-      title: 
-    title: 
+      details:
+      meta_details:
+      title:
+    title:
     users:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
   cancel: Annuler
   change: Changer
   claim: Réclamer
@@ -87,10 +87,10 @@ fr:
     description: Vous pouvez gérer ici vos pull requests et sélectionner vos dons
       de "24 Pull Requests".
     form:
-      date: 
+      date:
       gift_it: Offrez lui un cadeau !
-      pull_requests: 
-      tweet: 
+      pull_requests:
+      tweet:
     give: Faîtes un cadeau à un projet que vous aimez
     none: Aucun cadeau pour le moment.
     title: Code offert
@@ -118,7 +118,7 @@ fr:
       mon petit doigt me dit qu'ils adorent recevoir des pull requests!
     greeting: C'est la saison
     involved:
-      contributing_path: 
+      contributing_path:
       description: Il y a de nombreuses manières de s'impliquer dans un projet open
         source, améliorer la documentation, aider à corriger des bugs, améliorer la
         qualité du code et des tests, ou ajouter de nouvelles fonctionnalités.
@@ -141,11 +141,6 @@ fr:
     codetriage: Redonner à l'open source, un problème à la fois, avec CodeTriage.
       Vous recevrez un problème de vos dépôts favoris par jour pour vous aider à apprendre
       et rester impliqué dans le code que vous utilisez.
-    contribhub:
-      description: ContribHub est une application basée sur GitHub qui rend facile
-        les contributions et la création de communauté autour de projets.
-      tagline: Savez-vous que vous avez un voisin ayant besoin d'aide sur un projet
-        open source vraiment cool ? Avec ContribHub vous le saurez !
     get_ready: Préparez vous pour 24 Pull Requests %{year} quand nous recommencerons!
     help_open_source: 'Vous voulez aider d''autre projets open source en attendant
       ? Regardez ces autres initiatives:'
