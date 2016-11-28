@@ -94,7 +94,7 @@ class ProjectsController < ApplicationController
   end
 
   def languages
-    params.fetch(:project, {}).fetch(:languages, [])
+    Array(params.fetch(:project, {}).fetch(:languages, session.fetch(:filter_options, {}).fetch(:languages, (current_user.try(:languages) || []))))
   end
 
   def labels
