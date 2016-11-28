@@ -81,7 +81,7 @@ describe ProjectsController, type: :controller do
         name:          'something',
         main_language: 'Ruby'
       }
-      parameters = ActionController::Parameters.new(raw)
+      parameters = ActionController::Parameters.new(raw).permit!.to_h
       expect { create :project, parameters }.not_to raise_error
     end
 
