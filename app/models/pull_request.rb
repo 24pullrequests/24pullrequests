@@ -47,8 +47,11 @@ class PullRequest < ActiveRecord::Base
   end
 
   def check_state
-    issue = GithubClient.new(user.nickname, user.token).pull_request(repo_name, github_id)
-    update_attributes(state: issue.state, comments_count: issue.comments, merged: issue.merged)
+    pr = GithubClient.new(user.nickname, user.token).pull_request(repo_name, github_id)
+    update_attributes(state: pr.state,
+                      comments_count: pr.comments,
+                      merged: pr.merged,
+                      merged_by_id: pr.merged_by.try(:id))
   end
 
   def post_to_firehose
