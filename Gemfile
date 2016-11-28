@@ -63,7 +63,7 @@ group :development, :test, :cucumber do
   gem 'christmas_tree_formatter'
 
   # Javascript
-  # gem 'konacha'
+  gem 'konacha', git: 'https://github.com/tarebyte/konacha', branch: 'tarebyte/rails-5'
   gem 'chai-jquery-rails'
   gem 'sinon-chai-rails'
   gem 'sinon-rails'

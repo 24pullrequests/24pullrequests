@@ -1,3 +1,17 @@
+GIT
+  remote: https://github.com/tarebyte/konacha
+  revision: e607ddab05ec592882191c753fdb99762da9ab63
+  branch: tarebyte/rails-5
+  specs:
+    konacha (4.0.0)
+      actionpack (>= 4.1, < 6)
+      capybara
+      colorize
+      railties (>= 4.1, < 6)
+      sprockets (>= 2, < 4)
+      sprockets-rails (>= 2, < 4)
+      tilt
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -79,6 +93,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.11.1)
+    colorize (0.8.1)
     concurrent-ruby (1.0.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
@@ -423,6 +438,7 @@ DEPENDENCIES
   jquery-datetimepicker-rails
   jquery-rails
   kaminari
+  konacha!
   launchy
   lodash-rails
   meta_request
