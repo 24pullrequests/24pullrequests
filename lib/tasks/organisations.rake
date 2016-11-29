@@ -2,7 +2,7 @@ namespace :organisations do
   desc 'Update organisations pull_request_count'
   task update_pull_request_count: :environment do
     next unless PullRequest.in_date_range?
-    Organisation.all.each(&:update_pull_request_count)
+    Organisation.all.find_each(&:update_pull_request_count)
   end
 end
 
