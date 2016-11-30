@@ -15,8 +15,8 @@
           method: :delete,
           data: { confirm: "Are you sure you want to deactivate this project?" },
           class: 'btn btn-danger pull-right'%>
-        <%= link_to t("edit"), edit_path_for_project(project, admin), class: 'btn pull-right' %>
       <% end %>
+      <%= link_to t("edit"), edit_path_for_project(project, admin), class: 'btn pull-right' %>
     </h4>
     <%= link_to project.github_repository, project.github_url, :target => '_blank' %>
   </div>
