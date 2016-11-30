@@ -84,6 +84,6 @@ class Project < ActiveRecord::Base
   end
 
   def contribulator_url
-    "https://contribulator.herokuapp.com/#{github_repository}"
+    "https://contribulator.24pullrequests.com/#{github_repository}"
   end
 end
