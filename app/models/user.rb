@@ -200,7 +200,7 @@ class User < ActiveRecord::Base
   end
 
   def update_pull_request_count
-    update_attribute(:pull_requests_count, pull_requests.for_aggregation.count)
+    update_attribute(:pull_requests_count, pull_requests.year(CURRENT_YEAR).for_aggregation.count)
   end
 
   def lat_lng

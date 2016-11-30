@@ -3,7 +3,7 @@ require_relative '../json_api'
 desc 'Mark inactive projects'
 task check_for_inactive_projects: :environment do
   count = 0
-  Project.active.all.each do |project|
+  Project.active.all.find_each do |project|
     begin
       user = User.load_user
       score = project.score(user.nickname, user.token)
@@ -27,7 +27,7 @@ end
 desc 'Recheck inactive projects'
 task reactivate_inactive_projects: :environment do
   count = 0
-  Project.where(inactive: true).each do |project|
+  Project.where(inactive: true).find_each do |project|
     begin
       user = User.load_user
       score = project.score(user.nickname, user.token)

@@ -23,7 +23,7 @@
 </div>
 <div id="pull_requests">
   <h3>
-    <%= t("organisations.pull_requests", count: @organisation.pull_requests.length) %>
+    <%= t("organisations.pull_requests", count: @organisation.pull_requests.year(current_year).length) %>
   </h3>
-  <%= render @organisation.pull_requests, cache: true %>
+  <%= render @organisation.pull_requests.year(current_year), cache: true %>
 </div>
