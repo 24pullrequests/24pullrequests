@@ -70,7 +70,7 @@ namespace :projects do
     next unless PullRequest.in_date_range?
 
     api = JsonApi::PaginatedCollection.new(
-      domain: 'https://contribulator.herokuapp.com',
+      domain: 'https://contribulator.24pullrequests.com',
       path:   '/api/projects'
     )
 
