@@ -1,7 +1,9 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe ReminderMailer, type: :mailer do
   let(:user) do
+    allow(Project).to receive_message_chain(:order, :limit).and_return(Project.where(nil))
+
     mock_model(User,
     {
       nickname: 'David',
@@ -9,7 +11,7 @@ describe ReminderMailer, type: :mailer do
       languages: ['Ruby'],
       skills: [],
       pull_requests: double(:pull_request, year: []),
-      suggested_projects: [],
+      suggested_projects: Project.all,
     })
   end
 
