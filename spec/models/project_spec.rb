@@ -113,6 +113,6 @@ describe Project, type: :model do
 
   it 'contribulator url' do
     project = FactoryGirl.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests')
-    expect(project.contribulator_url).to eq('https://contribulator.herokuapp.com/24pullrequests/24pullrequests')
+    expect(project.contribulator_url).to eq('https://contribulator.24pullrequests.com/24pullrequests/24pullrequests')
   end
 end
