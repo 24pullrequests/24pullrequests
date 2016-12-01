@@ -3,7 +3,7 @@ class Project < ApplicationRecord
                'Arduino', 'ASP', 'Assembly', 'Augeas', 'AutoHotkey', 'Awk', 'Bluespec',
                'Boo', 'Bro', 'C', 'C#', 'C++', 'Ceylon', 'Chisel', 'CLIPS', 'Clojure',
                'COBOL', 'CoffeeScript', 'ColdFusion', 'Common Lisp', 'Coq',
-               'CSS', 'Crystal', 'D', 'Dart', 'DCPU-16 ASM', 'DOT', 'Dylan', 'eC', 'Ecl',
+               'CSS', 'Crystal', 'D', 'Dart', 'DCPU-16 ASM', 'Delphi', 'DOT', 'Dylan', 'eC', 'Ecl',
                'Eiffel', 'Elixir', 'Elm', 'Emacs Lisp', 'Erlang', 'F#',
                'Factor', 'Fancy', 'Fantom', 'Forth', 'FORTRAN', 'Go', 'Gosu',
                'Groovy', 'Haskell', 'Haxe', 'HTML', 'Io', 'Ioke', 'J', 'Java',
