@@ -13,79 +13,6 @@
 This is the site to help promote the project, highlighting why, how and where to send your pull requests.
 
 
-
-# Backers
-
-Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/24pullrequests#backer)]
-
-<a href="https://opencollective.com/24pullrequests/backer/0/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/0/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/1/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/1/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/2/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/2/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/3/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/3/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/4/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/4/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/5/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/5/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/6/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/6/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/7/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/7/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/8/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/8/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/9/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/9/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/10/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/10/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/11/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/11/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/12/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/12/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/13/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/13/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/14/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/14/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/15/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/15/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/16/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/16/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/17/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/17/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/18/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/18/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/19/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/19/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/20/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/20/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/21/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/21/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/22/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/22/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/23/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/23/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/24/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/24/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/25/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/25/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/26/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/26/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/27/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/27/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/28/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/28/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/backer/29/website" target="_blank"><img src="https://opencollective.com/24pullrequests/backer/29/avatar.svg"></a>
-
-
-# Sponsors
-
-Become a sponsor and get your logo on our README on Github with a link to your site. [[Become a sponsor](https://opencollective.com/24pullrequests#sponsor)]
-
-<a href="https://opencollective.com/24pullrequests/sponsor/0/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/0/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/1/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/1/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/2/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/2/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/3/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/3/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/4/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/4/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/5/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/5/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/6/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/6/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/7/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/7/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/8/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/8/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/9/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/9/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/10/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/10/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/11/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/11/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/12/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/12/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/13/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/13/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/14/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/14/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/15/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/15/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/16/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/16/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/17/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/17/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/18/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/18/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/19/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/19/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/20/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/20/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/21/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/21/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/22/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/22/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/23/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/23/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/24/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/24/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/25/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/25/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/26/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/26/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/27/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/27/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/28/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/28/avatar.svg"></a>
-<a href="https://opencollective.com/24pullrequests/sponsor/29/website" target="_blank"><img src="https://opencollective.com/24pullrequests/sponsor/29/avatar.svg"></a>
-
-
 ## Get started
 
 * [Explore projects to help](http://24pullrequests.com/projects)
@@ -93,7 +20,7 @@ Become a sponsor and get your logo on our README on Github with a link to your s
 
 ## Contributors
 
-Over 150 different people have contributed to the project, you can see them all here: https://github.com/24pullrequests/24pullrequests/graphs/contributors
+Over 180 different people have contributed to the project, you can see them all here: https://github.com/24pullrequests/24pullrequests/graphs/contributors
 
 ## Development
 
