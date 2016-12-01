@@ -149,6 +149,30 @@ describe ProjectsController, type: :controller do
           "labels" => ['foo', 'bar']
         })
       end
+
+      it "Removes trailing slashes" do
+        allow(controller).to receive(:repo_with_labels)
+          .with('24pullrequests/24pullrequests')
+          .and_return({
+            data: {
+              repository: { html_url: "/foo" },
+              labels: ['foo', 'bar']
+            },
+            status: 200
+          })
+
+        get :autofill, repo: '24pullrequests/24pullrequests/'
+
+        expect(response.status).to eq(200)
+
+        expect(JSON.parse(response.body)).to eq({
+          "repository" => { "html_url" => "/foo" },
+          "labels" => ['foo', 'bar']
+        })
+
+
+      end
+
     end
 
     it 'Logged out' do

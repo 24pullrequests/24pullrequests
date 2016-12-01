@@ -67,7 +67,8 @@ class ProjectsController < ApplicationController
   end
 
   def autofill
-    request = repo_with_labels(params[:repo])
+    url = params[:repo].gsub(/\/$/, '')
+    request = repo_with_labels(url)
     render json: request[:data], status: request[:status]
   end
 
