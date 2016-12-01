@@ -182,7 +182,7 @@ class User < ActiveRecord::Base
 
   def unspent_pull_requests
     gifted_pull_requests = gifts.map(&:pull_request)
-    pull_requests.reject { |pr| gifted_pull_requests.include?(pr) }
+    pull_requests.year(CURRENT_YEAR).reject { |pr| gifted_pull_requests.include?(pr) }
   end
 
   def needs_setup?
