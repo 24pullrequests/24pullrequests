@@ -7,6 +7,6 @@ class TwitterController < ApplicationController
 
   def remove
     current_user.remove_twitter!
-    redirect_to :back, notice: I18n.t('twitter.account_removed')
+    redirect_back(fallback_location: root_path, notice: I18n.t('twitter.account_removed'))
   end
 end

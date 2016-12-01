@@ -1,4 +1,4 @@
-class Event < ActiveRecord::Base
+class Event < ApplicationRecord
   belongs_to :user
   validates :name, :location, :url, :start_time, :description, presence: true
   validates :url, format: URI.regexp(%w(http https))

@@ -16,6 +16,6 @@ class CoderwallController < ApplicationController
 
     flash[:notice] = I18n.t 'user.coderwall.success' if flash[:alert].nil?
 
-    redirect_to :back
+    redirect_back(fallback_location: root_path)
   end
 end

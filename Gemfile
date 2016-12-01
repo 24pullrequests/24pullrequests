@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.3'
 
-gem 'rails', '4.2.7.1'
+gem 'rails', '5.0.0.1'
 
 gem 'jquery-rails'
 gem 'pg'
@@ -19,7 +19,7 @@ gem 'coffee-rails'
 gem 'uglifier'
 gem 'octicons_helper'
 gem 'rack-canonical-host'
-gem 'draper'
+gem 'draper', '~> 3.0.0.pre1' # pre version has rails5 support
 gem 'responders'
 gem 'gmaps4rails'
 gem 'geocoder'
@@ -29,6 +29,7 @@ gem 'sassc-rails'
 gem 'puma'
 gem 'multi_fetch_fragments'
 gem 'rack-attack'
+gem 'activemodel-serializers-xml' # ensures draper will run
 
 group :development do
   gem 'spring'
@@ -37,7 +38,6 @@ group :development do
   gem 'web-console'
   gem 'figaro'
   gem 'meta_request'
-  gem 'quiet_assets'
 end
 
 group :development, :test, :cucumber do
@@ -45,6 +45,7 @@ group :development, :test, :cucumber do
   gem 'rspec-rails'
   gem 'simplecov', require: false
   gem 'codeclimate-test-reporter', require: false
+  gem 'rails-controller-testing'
 
   gem 'rspec-its', require: false
   gem 'rspec-collection_matchers', require: false

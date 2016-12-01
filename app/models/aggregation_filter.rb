@@ -1,4 +1,4 @@
-class AggregationFilter < ActiveRecord::Base
+class AggregationFilter < ApplicationRecord
   belongs_to :user
 
   def self.pull_request_filter

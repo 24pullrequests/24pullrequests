@@ -1,4 +1,4 @@
-class Project < ActiveRecord::Base
+class Project < ApplicationRecord
   LANGUAGES = ['ABAP', 'ActionScript', 'Ada', 'Apex', 'AppleScript', 'Arc',
                'Arduino', 'ASP', 'Assembly', 'Augeas', 'AutoHotkey', 'Awk', 'Bluespec',
                'Boo', 'Bro', 'C', 'C#', 'C++', 'Ceylon', 'Chisel', 'CLIPS', 'Clojure',

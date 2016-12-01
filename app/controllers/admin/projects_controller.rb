@@ -27,7 +27,7 @@ module Admin
     def destroy
       @project.deactivate!
 
-      redirect_to :back, notice: "#{@project.name} has been deactivated."
+      redirect_back(fallback_location: admin_projects_path, notice: "#{@project.name} has been deactivated.")
     end
 
     protected

@@ -12,7 +12,7 @@ describe GiftsController, type: :controller do
 
   describe 'DELETE destroy' do
     it 'removes the gift' do
-      delete :destroy, id: gift.date
+      delete :destroy, params: {id: gift.date}
 
       expect(Gift.find_by(id: gift.id)).to be_nil
     end
@@ -23,7 +23,7 @@ describe GiftsController, type: :controller do
 
     it 'should pre-fill the date when one is passed' do
       date = "#{CURRENT_YEAR}-12-03"
-      get :new, date: date
+      get :new, params: {date: date}
       expect(response.body).to match(/<option selected="selected" value="#{date}">/)
     end
   end
