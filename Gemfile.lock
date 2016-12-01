@@ -1,17 +1,3 @@
-GIT
-  remote: https://github.com/tarebyte/konacha
-  revision: e607ddab05ec592882191c753fdb99762da9ab63
-  branch: tarebyte/rails-5
-  specs:
-    konacha (4.0.0)
-      actionpack (>= 4.1, < 6)
-      capybara
-      colorize
-      railties (>= 4.1, < 6)
-      sprockets (>= 2, < 4)
-      sprockets-rails (>= 2, < 4)
-      tilt
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -71,16 +57,13 @@ GEM
     bugsnag (5.0.1)
     builder (3.2.2)
     callsite (0.0.11)
-    capybara (2.10.1)
+    capybara (2.10.2)
       addressable
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    chai-jquery-rails (2.0.0)
-      railties (>= 3.1)
-      sprockets
     christmas_tree_formatter (0.1.0)
       rspec-core (~> 3.0)
     cliver (0.3.2)
@@ -93,7 +76,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.11.1)
-    colorize (0.8.1)
     concurrent-ruby (1.0.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
@@ -102,7 +84,7 @@ GEM
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
     docile (1.1.5)
-    domain_name (0.5.20161021)
+    domain_name (0.5.20161129)
       unf (>= 0.0.5, < 1.0.0)
     draper (3.0.0.pre1)
       actionpack (~> 5.0)
@@ -114,7 +96,6 @@ GEM
       json
       thread
       thread_safe
-    ejs (1.1.1)
     equalizer (0.0.10)
     erubis (2.7.0)
     ethon (0.9.1)
@@ -190,7 +171,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
-    minitest (5.9.1)
+    minitest (5.10.0)
     multi_fetch_fragments (0.0.17)
     multi_json (1.12.1)
     multi_xml (0.5.5)
@@ -229,7 +210,7 @@ GEM
     omniauth-twitter (1.2.1)
       json (~> 1.3)
       omniauth-oauth (~> 1.1)
-    parser (2.3.2.0)
+    parser (2.3.3.0)
       ast (~> 2.2)
     pg (0.19.0)
     poltergeist (1.11.0)
@@ -317,7 +298,7 @@ GEM
       rspec-mocks (~> 3.5.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
-    rubocop (0.45.0)
+    rubocop (0.46.0)
       parser (>= 2.3.1.1, < 3.0)
       powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
@@ -351,10 +332,6 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
-    sinon-chai-rails (1.2.0)
-      railties (>= 3.1)
-    sinon-rails (1.15.0)
-      railties (>= 3.1)
     spring (2.0.0)
       activesupport (>= 4.2)
     spring-commands-rspec (1.0.4)
@@ -370,7 +347,7 @@ GEM
       tins (~> 1.0)
     terminal-table (1.7.3)
       unicode-display_width (~> 1.1.1)
-    thor (0.19.3)
+    thor (0.19.4)
     thread (0.2.2)
     thread_safe (0.3.5)
     tilt (2.0.5)
@@ -391,7 +368,7 @@ GEM
       ethon (>= 0.9.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.0.3)
+    uglifier (3.0.4)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
@@ -420,14 +397,12 @@ DEPENDENCIES
   bootstrap-sass
   brakeman
   bugsnag
-  chai-jquery-rails
   christmas_tree_formatter
   codeclimate-test-reporter
   coffee-rails
   dalli
   database_cleaner
   draper (~> 3.0.0.pre1)
-  ejs
   factory_girl_rails
   faker
   figaro
@@ -438,7 +413,6 @@ DEPENDENCIES
   jquery-datetimepicker-rails
   jquery-rails
   kaminari
-  konacha!
   launchy
   lodash-rails
   meta_request
@@ -469,8 +443,6 @@ DEPENDENCIES
   shoulda-matchers
   simple_form
   simplecov
-  sinon-chai-rails
-  sinon-rails
   spring
   spring-commands-rspec
   timecop
@@ -481,7 +453,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 2.3.2p217
+   ruby 2.3.3p222
 
 BUNDLED WITH
    1.13.6

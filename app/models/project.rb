@@ -3,7 +3,7 @@ class Project < ApplicationRecord
                'Arduino', 'ASP', 'Assembly', 'Augeas', 'AutoHotkey', 'Awk', 'Bluespec',
                'Boo', 'Bro', 'C', 'C#', 'C++', 'Ceylon', 'Chisel', 'CLIPS', 'Clojure',
                'COBOL', 'CoffeeScript', 'ColdFusion', 'Common Lisp', 'Coq',
-               'CSS', 'D', 'Dart', 'DCPU-16 ASM', 'DOT', 'Dylan', 'eC', 'Ecl',
+               'CSS', 'Crystal', 'D', 'Dart', 'DCPU-16 ASM', 'DOT', 'Dylan', 'eC', 'Ecl',
                'Eiffel', 'Elixir', 'Elm', 'Emacs Lisp', 'Erlang', 'F#',
                'Factor', 'Fancy', 'Fantom', 'Forth', 'FORTRAN', 'Go', 'Gosu',
                'Groovy', 'Haskell', 'Haxe', 'HTML', 'Io', 'Ioke', 'J', 'Java',
@@ -36,7 +36,7 @@ class Project < ApplicationRecord
   scope :by_languages, ->(languages) { where('lower(main_language) IN (?)', languages) }
   scope :by_labels, ->(labels) { joins(:labels).where('labels.name  IN (?)', labels).select('distinct(projects.id), projects.*') }
   scope :active, -> { where(inactive: [false, nil]) }
-  scope :featured, -> { where(featured: true) }
+  scope :featured, -> { active.where(featured: true) }
   accepts_nested_attributes_for :labels, reject_if: proc { |attributes| attributes['id'].blank? }
 
   paginates_per 20
@@ -84,6 +84,6 @@ class Project < ApplicationRecord
   end
 
   def contribulator_url
-    "https://contribulator.herokuapp.com/#{github_repository}"
+    "https://contribulator.24pullrequests.com/#{github_repository}"
   end
 end

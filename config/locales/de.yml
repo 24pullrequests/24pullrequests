@@ -30,28 +30,28 @@ de:
               required_for_confirmation: "%{attribute} ist zur Bestätigung notwendig"
   api:
     callback:
-      details: 
-      title: 
-    description: 
+      details:
+      title:
+    description:
     organisations:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
     pagination:
-      details: 
-      title: 
+      details:
+      title:
     projects:
-      details: 
-      title: 
+      details:
+      title:
     pull_requests:
-      details: 
-      meta_details: 
-      title: 
-    title: 
+      details:
+      meta_details:
+      title:
+    title:
     users:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
   cancel: Abbrechen
   change: "Ändern"
   claim: Anspruch erheben
@@ -60,7 +60,7 @@ de:
   dashboard:
     christmas_activity: Hier kannst Du all Deine Aktivitäten sehen, die wir für Dich
       in der Adventszeit festgehalten haben.
-    gift_it: 
+    gift_it:
     give_a_gift: Scheinbar hast Du heute noch keinen Code verschenkt. Möchtest Du
       diesen Pull Request verschenken?
     help_out: 'Dir fällt kein Projekt ein, dem Du helfen könntest? Hier ist eine Liste
@@ -73,7 +73,7 @@ de:
       Vorgeschlagene Projekte bleiben allerdings bestehen.
     cancel: Ich hab's mir anders überlegt!
     confirm: Löschen bestätigen
-    email_preferences_link: 
+    email_preferences_link:
     notification_info: Falls Du keine Benachrichtigungen mehr erhalten möchtest, ändere
       einfach Deine %{email_preferences_link}.
     title: Konto löschen
@@ -81,17 +81,17 @@ de:
   developers_using_language: Entwickler, die %{language} verwenden
   edit: Bearbeiten
   everything: Alles
-  exempli_gratia: 
+  exempli_gratia:
   follow_user: Folge @%{twitter}
   gifts:
-    calendar_link: 
+    calendar_link:
     description: Hier kannst Du Deine Pull Requests verwalten und Deine eigenen "24
       Pull Requests" ausgewählen.
     form:
-      date: 
-      gift_it: 
-      pull_request: 
-      tweet: 
+      date:
+      gift_it:
+      pull_request:
+      tweet:
     give: Verschenke etwas Bedeutsames an ein Projekt das Du liebst
     none: Noch nichts verschenkt.
     title: Geschenkter Code
@@ -119,7 +119,7 @@ de:
       lieben!
     greeting: Es ist die Zeit
     involved:
-      contributing_path: 
+      contributing_path:
       description: 'Es gibt viele Wege, sich an einem Open Source-Projekt zu beteiligen:
         Du kannst die Dokumentation verbessern, vorhandene Problemberichte bearbeiten,
         die Code-Qualität oder Testabdeckung verbessern oder auch neue Funktionen
@@ -143,11 +143,6 @@ de:
       dem anderen &mdash; mit CodeTriage. Du bekommst jeden Tag einen Problembericht
       von Deinem Lieblingsprojekt, damit Du Dich vertiefen kannst, mehr lernst und
       einbezogen wirst.
-    contribhub:
-      description: ContribHub ist eine GitHub-basierte Anwendung, die es einfach macht
-        Projekte zu finden, die Deine Hilfe gebrauchen können.
-      tagline: Kennst Du einen Nachbarn, sehr ein bisschen Hilfe mit einem wirklich
-        coolen Projekt gebrauchen könnte? Mit ContribHub wirst Du einen kennen!
     get_ready: Bereite Dich vor auf 24 Pull Requests %{year}, dann geht alles wieder
       von vorne los!
     help_open_source: 'Möchtest Du in der Zwischenzeit weiterhin Open Source-Projekte
@@ -177,21 +172,21 @@ de:
     profile: Profil
   no_suggestions: Du hast bisher keine vorgeschlagenen Projekte
   open_source_yey: Open Source FTW!
-  or: 
+  or:
   organisations:
     members:
-      one: 
-      other: 
+      one:
+      other:
   preferences:
-    coderwall: 
-    coderwall_username: 
+    coderwall:
+    coderwall_username:
     delete: Möchtest Du Dein Konto löschen?
     form:
-      daily: 
-      email: 
-      email_frequency: 
-      never: 
-      weekly: 
+      daily:
+      email:
+      email_frequency:
+      never:
+      weekly:
     frequency_message: Je nach Deinen Einstellungen senden wir Dir regelmässig hilfreiche
       Emails bis das Projekt vorüber ist. Dabei schlagen wir Dir Projekte vor, zu
       denen Du vielleicht etwas beitragen magst. Zusätzlich sind wir so frei und personalisieren
@@ -222,11 +217,11 @@ de:
       grossartiger Open Source-Projekte, die einen Pull Request von Dir lieben würden.
     new:
       form:
-        github_url: 
-        main_language: 
-        project_name: 
-        submit_project: 
-        summary: 
+        github_url:
+        main_language:
+        project_name:
+        submit_project:
+        summary:
       info: Lass uns wissen, welche beliebten Projekte Hilfe benötigen. Wir haben
         unsere Favoriten ausgewählt, sind aber immer für Vorschläge offen. Hast Du
         ein paar Ideen? Sag uns bescheid!
@@ -258,7 +253,7 @@ de:
   suggest_project: Ein Projekt vorschlagen
   suggested_projects: Vorgeschlagene Projekte
   suggestions:
-    title: 
+    title:
   twitter:
     account_linked: Dein Twitter-Konto wurde verbunden! Wir werden für Dich twittern
       wann immer Du einen Pull Request eröffnest.
@@ -269,12 +264,12 @@ de:
         wann immer Du einen Pull Request eröffnest!
   user:
     coderwall:
-      achieved_by: 
-      error_github_not_connected: 
-      error_no_user: 
-      success: 
-      title: 
-      update_button: 
+      achieved_by:
+      error_github_not_connected:
+      error_no_user:
+      success:
+      title:
+      update_button:
     grinchy_message: "%{user} ist %{year} ein Grinch &mdash; keine Pull Requests.
       Bah humbug!"
     organisations: Mitglied von...

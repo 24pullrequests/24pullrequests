@@ -26,7 +26,7 @@ class ReminderMailer < ActionMailer::Base
   private
 
   def mail_suggested_projects(user, frequency)
-    @suggested_projects = user.suggested_projects.sample(8).sort_by(&:name)
+    @suggested_projects = user.suggested_projects.order("RANDOM()").limit(8).sort_by(&:name)
     mail :to         => user.email,
          :subject    => %([24 Pull Requests] #{frequency} Reminder),
          'X-SMTPAPI' => %({"category": "#{frequency} Reminder"})

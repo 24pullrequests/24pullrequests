@@ -155,12 +155,6 @@ es:
     codetriage: Devuélvale al código abierto, con un aporte a la vez, con CodeTriage.
       Obtendrá un issue de su repositorio favorito por día para ayudarle a involucrarse,
       aprender más y seguir participando en el proyecto.
-    contribhub:
-      description: ContribHub es una aplicación basada en GitHub que hace que sea
-        más fácil encontrar proyectos para contribuir y hacer crecer la comunidad
-        que lo rodea.
-      tagline: "¿Sabes que tienes un vecino que necesita un poco de ayuda con un proyecto
-        realmente bueno? ¡Con ContribHub lo sabrás!"
     get_ready: "¡Prepárate para 24 Pull Requests %{year} cuando lo haremos todo denuevo!"
     help_open_source: "¿Quieres ayudar con proyectos de código abierto mientras tanto?
       Échale un vistazo a estas otras grandes iniciativas:"

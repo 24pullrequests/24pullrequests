@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.3.2'
+ruby '2.3.3'
 
 gem 'rails', '5.0.0.1'
 
@@ -61,13 +61,6 @@ group :development, :test, :cucumber do
   gem 'webmock', require: false
   gem 'timecop'
   gem 'christmas_tree_formatter'
-
-  # Javascript
-  gem 'konacha', git: 'https://github.com/tarebyte/konacha', branch: 'tarebyte/rails-5'
-  gem 'chai-jquery-rails'
-  gem 'sinon-chai-rails'
-  gem 'sinon-rails'
-  gem 'ejs'
 end
 
 group :production do

@@ -25,28 +25,28 @@ th:
               required_for_confirmation: "%{attribute} ต้องการๆยืนยัน"
   api:
     callback:
-      details: 
-      title: 
-    description: 
+      details:
+      title:
+    description:
     organisations:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
     pagination:
-      details: 
-      title: 
+      details:
+      title:
     projects:
-      details: 
-      title: 
+      details:
+      title:
     pull_requests:
-      details: 
-      meta_details: 
-      title: 
-    title: 
+      details:
+      meta_details:
+      title:
+    title:
     users:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
   cancel: "ยกเลิก"
   change: "แก้ไข"
   claim: "อ้างสิทธิ์"
@@ -54,7 +54,7 @@ th:
     title: "ผู้มีส่วนร่วม"
   dashboard:
     christmas_activity: "นี่คือกิจกรรมทั้งหมดของคุณก่อนถึงวันคริสต์มาส"
-    gift_it: 
+    gift_it:
     give_a_gift: "คุณยังไม่ได้มอบโค้ดเป็นขอขวัญเลยวันนี้ ส่งของขวัญให้"
     help_out: "นึกโครงการที่อยากช่วยไม่ออก? เราได้รวบรวมโครงการที่น่าสนใจมาให้:"
     no_pull_requests: "คุณยังไม่ได้ส่ง pull request อีกเหรอ? จะรอช้าอยู่ทำไม"
@@ -63,23 +63,23 @@ th:
     are_you_sure: "คุณแน่ใจหรือไม่ที่จะลบบัญชีและ pull request ต่างๆ แต่โครการที่ถูกแยะยำจะไม่ถูกลบ"
     cancel: "ฉันเปลี่ยนใจแล้ว พาฉันกลับไป"
     confirm: "ยืนยันการลบ"
-    email_preferences_link: 
+    email_preferences_link:
     notification_info: "ถ้าคุณต้องการตั้งค่าอีเมลแจ้งเตือน  %{email_preferences_link}."
     title: "ลบบัญชี"
   developers_involved: "คนที่ได้มีส่วนร่วม"
   developers_using_language: "นักพัฒนาใช้ภาษา %{language}"
   edit: "แก้ไข"
   everything: "ทั้งหมด"
-  exempli_gratia: 
+  exempli_gratia:
   follow_user: "ติดตาม @%{twitter}"
   gifts:
-    calendar_link: 
+    calendar_link:
     description: คุณสามารถจัดการ pull request หรือเลือก &amp; "24 Pull Requests" ของคุณเอง
     form:
-      date: 
-      gift_it: 
-      pull_request: 
-      tweet: 
+      date:
+      gift_it:
+      pull_request:
+      tweet:
     give: "ให้สิ่งที่มีความหมายกับโครงการที่คุณชื่นชอบ"
     none: "ยังไม่ได้ให้อะไร"
     title: "ของขวัญที่มอบให้"
@@ -100,7 +100,7 @@ th:
       และนกน้อยบอกว่าพวกมันชอบ pull request!"
     greeting: "ฤดูกาลนี้"
     involved:
-      contributing_path: 
+      contributing_path:
       description: "คุณสามารถช่วยเหลือโครงการโอเพ่นซอร์สได้หลายวิธี อาทิเช่น การปรับปรุงข้อมูล
         แก้ไขบัค และเพิ่มลูกเล่นใหม่"
       special_page: "เราได้เตรียม %{contributing_path} ไว้ให้คุณสามารถหาข้อมูลเกี่ยวกับการทำงานในโครงการโอเพ่นซอร์ส"
@@ -117,9 +117,6 @@ th:
   information:
     codetriage: "ตอบแทนโครงการโอเพ่นซอร์สด้วย CodeTriage คุณจะได้รับการแจ้งปัญหาจากโครงการที่คุณชื่นชอบวันล่ะครั้ง
       มันจะช่วยให้คุณเรียนรู้ได้มากขึ้น"
-    contribhub:
-      description: ContribHub เป็นโปรแกรมที่ใช้หาโครงการที่น่าสนใจบน GitHub
-      tagline: "คุณรู็จักคนที่มีโครงการที่น่าสนใจมั้ย? ถ้าไม่มีลอง ContribHub!"
     get_ready: "เตรียมพร้อมสำหรับ 24 Pull Requests %{year} เมื่อมันเริ่มต้นอีกครั้ง"
     help_open_source: "ถ้าคุณต้องการมีส่วนร่วมในการช่วยเหลือโครงการโอเพ่นซอร์สตอนนี้
       นี่คือโครงการที่น่าสนใจ"
@@ -148,21 +145,21 @@ th:
     profile: "ประวัติ"
   no_suggestions: "คุณยังไม่เคยแนะนำโครงการ"
   open_source_yey: "โอเพ่นซอร์ส จงเจริญ!"
-  or: 
+  or:
   organisations:
     members:
-      one: 
-      other: 
+      one:
+      other:
   preferences:
-    coderwall: 
-    coderwall_username: 
+    coderwall:
+    coderwall_username:
     delete: "ต้องการลบบัญชี?"
     form:
-      daily: 
-      email: 
-      email_frequency: 
-      never: 
-      weekly: 
+      daily:
+      email:
+      email_frequency:
+      never:
+      weekly:
     frequency_message: "เราต้องการส่งอีเมลแนะนำโครงการต่างๆไปให้คุณโดยคุณสามารถเลือกระยะเวลาในการส่งอีเมลหรือเพิ่มสิ่งที่คุณสนใจ
       เราจะแนะนำโครงการตามภาษาที่อยู่ในโปรไฟล์ GitHub ของคุณหรือคุณสามารถเลือกจากภาษาด้านล่าง"
     hint:
@@ -187,11 +184,11 @@ th:
       pull request"
     new:
       form:
-        github_url: 
-        main_language: 
-        project_name: 
-        submit_project: 
-        summary: 
+        github_url:
+        main_language:
+        project_name:
+        submit_project:
+        summary:
       info: "เราสนับสนุนโดยการแสดงรายชื่อโครงการที่ได้รับความนิยมและน่าสนใจ เราเลือกโครงการที่เราชอบแต่คุณสามารถแบ่งปันข้อคิดเห็นได้ด้านล่าง"
       issue_link_text: "ปัญหา"
       suggestion: "ต้องการแนะนำโครงการหรือแนะนำปัญหา? %{issue_link}"
@@ -217,7 +214,7 @@ th:
   suggest_project: "แนะนำโครงการ"
   suggested_projects: "โครงการที่เคยแนะนำ"
   suggestions:
-    title: 
+    title:
   twitter:
     account_linked: "เชื่อมต่อกับบัญชีทวิตเตอร์ของคุณแล้ว เราจะโพสทุกครั้งที่มีการส่ง
       pull request"
@@ -227,12 +224,12 @@ th:
       tooltip: "ถ้าคุณเชื่อมต่อบัญชีทวิตเตอร์เราจะโพสทุกครั้งที่คุณส่ง pull request"
   user:
     coderwall:
-      achieved_by: 
-      error_github_not_connected: 
-      error_no_user: 
-      success: 
-      title: 
-      update_button: 
+      achieved_by:
+      error_github_not_connected:
+      error_no_user:
+      success:
+      title:
+      update_button:
     grinchy_message: "%{user} เป็นคนขี้้เหนียวในปี %{year} โดยไม่ได้ส่ง pull request
       เลย!"
     organisations: "สมาชิกของ..."

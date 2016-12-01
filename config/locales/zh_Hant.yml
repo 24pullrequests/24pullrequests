@@ -164,9 +164,6 @@ zh_Hant:
   how_to_contribute: "如何貢獻？"
   information:
     codetriage: "感恩回饋開源，一次一個議題（issue），CodeTriage 與你同行。你會每天從你喜歡的專案那分配到一個議題（issue），並引導你越學越多，參與撰寫大家日常所依賴的程式碼裡。"
-    contribhub:
-      description: ContribHub 是一個依賴 GitHub 的社群網站，讓你可以更容易找到專案並貢獻一臂之力，圍繞這個專案孕育出友善的社群。
-      tagline: "你知道你身邊就有個專案需要你的幫助嗎？ContribHub 來告訴你！"
     get_ready: "摩拳擦掌開始預備 24 Pull Requests %{year} 吧！"
     happy_holidays_see_you: "聖誕節快樂，我們明年見！"
     help_open_source: "在那之前，想要繼續幫助其他開源專案嗎？去看看這幾個開源專案活動吧："

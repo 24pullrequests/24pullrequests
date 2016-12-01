@@ -11,4 +11,5 @@
 <hr/>
 <div id="projects">
   <%= render partial: 'projects/editable_project', collection:  @projects, as: :project, locals: { admin: true } %>
+  <%= paginate @projects %>
 </div>

@@ -1,13 +1,13 @@
 language: ruby
 
 rvm:
-  - 2.3.2
+  - 2.3.3
 
 env:
   - DB=postgresql
 
 script:
-  - RAILS_ENV=test POLTERGEIST=true bundle exec rake --trace db:migrate spec konacha:run && bundle exec codeclimate-test-reporter
+  - RAILS_ENV=test POLTERGEIST=true bundle exec rake --trace db:migrate spec && bundle exec codeclimate-test-reporter
 
 before_script:
   - psql -c 'create database tfpullrequests_test' -U postgres

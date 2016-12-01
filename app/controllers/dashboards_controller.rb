@@ -4,7 +4,7 @@ class DashboardsController < ApplicationController
 
   def show
     pull_requests = current_user.pull_requests.year(current_year).order('created_at desc')
-    projects      = current_user.suggested_projects.limit(100).sample(12).sort_by(&:name)
+    projects      = current_user.suggested_projects.order("RANDOM()").limit(12).sort_by(&:name)
     gifted_today  = current_user.gift_for(today)
     @events = Event.where(['start_time >= ?', Time.zone.today]).order('start_time').first(5)
 

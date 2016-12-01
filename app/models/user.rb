@@ -182,7 +182,7 @@ class User < ApplicationRecord
 
   def unspent_pull_requests
     gifted_pull_requests = gifts.map(&:pull_request)
-    pull_requests.reject { |pr| gifted_pull_requests.include?(pr) }
+    pull_requests.year(CURRENT_YEAR).reject { |pr| gifted_pull_requests.include?(pr) }
   end
 
   def needs_setup?
@@ -200,7 +200,7 @@ class User < ApplicationRecord
   end
 
   def update_pull_request_count
-    update_attribute(:pull_requests_count, pull_requests.for_aggregation.count)
+    update_attribute(:pull_requests_count, pull_requests.year(CURRENT_YEAR).for_aggregation.count)
   end
 
   def lat_lng

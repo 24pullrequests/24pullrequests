@@ -146,11 +146,6 @@ nb:
     codetriage: Gi tilbake til open-source, ett issue om gangen, med CodeTriage. Du
       vil motta ett issue fra dine favoritt-repos per dag for å hjelpe deg med å grave
       dypere, lære mer, og holde deg involvert med koden du er avhengig av.
-    contribhub:
-      description: ContribHub er en GitHub-basert applikasjon som gjør det enklere
-        å finne prosjekter å bidra til og gro et samfunn rundt.
-      tagline: Visste du at du har en nabo som trenger hjelp med et skikkelig kult
-        prosjekt? Med ContribHub vil du!
     get_ready: Gjør deg klar til 24 Pull Requests %{year} når vi gjør det hele om
       igjen!
     happy_holidays_see_you: God høytid, og vi sees igjen neste år når vi gjør det
