@@ -682,3 +682,10 @@ hr {
     -webkit-transform: translateY(3px);
   }
 }
+
+//490 is where it starts to look bad on the dashboard
+@media only screen and (max-device-width : 490px) {
+  .mobile-no-float {
+    float: none !important;
+  }
+}
