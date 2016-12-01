@@ -93,7 +93,7 @@ Become a sponsor and get your logo on our README on Github with a link to your s
 
 ## Contributors
 
-Over 150 different people have contributed to the project, you can see them all here: https://github.com/24pullrequests/24pullrequests/graphs/contributors
+Over 180 different people have contributed to the project, you can see them all here: https://github.com/24pullrequests/24pullrequests/graphs/contributors
 
 ## Development
 
