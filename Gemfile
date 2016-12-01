@@ -60,13 +60,6 @@ group :development, :test, :cucumber do
   gem 'webmock', require: false
   gem 'timecop'
   gem 'christmas_tree_formatter'
-
-  # Javascript
-  gem 'konacha'
-  gem 'chai-jquery-rails'
-  gem 'sinon-chai-rails'
-  gem 'sinon-rails'
-  gem 'ejs'
 end
 
 group :production do
