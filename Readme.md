@@ -6,7 +6,7 @@
 [![Code Climate](https://img.shields.io/codeclimate/github/24pullrequests/24pullrequests.svg?style=flat)](https://codeclimate.com/github/24pullrequests/24pullrequests)
 [![Test Coverage](https://img.shields.io/codeclimate/coverage/github/24pullrequests/24pullrequests.svg?style=flat)](https://codeclimate.com/github/24pullrequests/24pullrequests)
 
-> **Giving back little gifts of code**
+> **Giving back little gifts of code** &#127873;
 
 24 Pull Requests is a yearly initiative to encourage developers around the world to send 24 pull requests between December 1st and December 24th.
 
