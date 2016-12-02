@@ -161,7 +161,7 @@ describe ProjectsController, type: :controller do
             status: 200
           })
 
-        get :autofill, repo: '24pullrequests/24pullrequests/'
+        get :autofill, params: { repo: '24pullrequests/24pullrequests/' }
 
         expect(response.status).to eq(200)
 
