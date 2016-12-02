@@ -7,7 +7,7 @@ describe ProjectsController, type: :controller do
     context 'as json' do
       before do
         create :project
-        get :index, format: :json
+        get :index, params: {format: :json}
       end
 
       it { expect(response.header['Content-Type']).to include 'application/json' }
@@ -161,7 +161,7 @@ describe ProjectsController, type: :controller do
             status: 200
           })
 
-        get :autofill, repo: '24pullrequests/24pullrequests/'
+        get :autofill, params: {repo: '24pullrequests/24pullrequests/'}
 
         expect(response.status).to eq(200)
 
