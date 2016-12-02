@@ -60,17 +60,36 @@ describe 'Dashboard', type: :request do
   describe 'ignored organisations' do
     before do
       user.ignored_organisations = %w{baz qux}
+      user.email_frequency = 'daily'
       user.save!
       visit preferences_path
     end
 
-    it { is_expected.to have_field 'Ignored Organisations', with: 'baz, qux' }
+    describe 'field' do
+      before do
+        visit preferences_path
+      end
 
-    it 'allows the user to set their preferences' do
-      fill_in 'Ignored Organisations', with: 'foo, bar'
-      click_on 'Save and Continue'
-      user.reload
-      expect(user.ignored_organisations.sort).to eq %w{bar foo}
+      it { is_expected.to have_field 'Ignored Organisations', with: 'baz, qux' }
+
+      it 'allows the user to set their preferences' do
+        fill_in 'Ignored Organisations', with: 'foo, bar'
+        click_on 'Save'
+        user.reload
+        expect(user.ignored_organisations.sort).to eq %w{bar foo}
+      end
+    end
+
+    describe 'dashboard' do
+      before do
+        create(:pull_request, user: user, repo_name: 'foo/bar')
+        create(:pull_request, user: user, repo_name: 'baz/bar')
+        visit dashboard_path
+      end
+
+      it { is_expected.to have_content 'foo/bar' }
+      it { is_expected.to_not have_content 'baz/bar' }
+      it { is_expected.to have_css '#pull-requests-count', text: 1 }
     end
   end
 end

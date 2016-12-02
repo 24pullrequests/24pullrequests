@@ -20,9 +20,9 @@
       <% if pull_requests.any? %>
         <h3>
           <%= t("your_pull_requests") %>
-          <% if current_user.pull_requests.year(current_year).any? %>
+          <% if pull_requests.any? %>
             <span class="label label-info" id="pull-requests-count">
-              <%= current_user.pull_requests.year(current_year).count %>
+              <%= pull_requests.count %>
             </span>
           <% end %>
         </h3>
