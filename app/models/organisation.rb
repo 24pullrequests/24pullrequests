@@ -1,4 +1,4 @@
-class Organisation < ActiveRecord::Base
+class Organisation < ApplicationRecord
   has_and_belongs_to_many :users
   has_many :pull_requests, -> { order('created_at desc').for_aggregation }, through: :users
 

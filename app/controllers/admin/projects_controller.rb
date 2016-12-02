@@ -8,7 +8,7 @@ module Admin
     respond_to :js, only: :index
 
     def index
-      @projects = Project.order('inactive desc').order(:name).filter_by_repository(repository)
+      @projects = Project.order('inactive desc').order(:name).filter_by_repository(repository).page params[:page]
 
       respond_with @projects
     end
@@ -27,7 +27,7 @@ module Admin
     def destroy
       @project.deactivate!
 
-      redirect_to :back, notice: "#{@project.name} has been deactivated."
+      redirect_back(fallback_location: admin_projects_path, notice: "#{@project.name} has been deactivated.")
     end
 
     protected

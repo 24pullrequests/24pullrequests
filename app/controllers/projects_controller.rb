@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
       @project.deactivate!
       flash[:notice] = "#{@project.name} has been deactivated."
     end
-    redirect_to :back
+    redirect_back(fallback_location: projects_path)
   end
 
   def update
@@ -63,11 +63,12 @@ class ProjectsController < ApplicationController
       message = "This repository doesn't exist or belongs to someone else"
     end
 
-    redirect_to :back, notice: message
+    redirect_back(fallback_location: project_path(project), notice: message)
   end
 
   def autofill
-    request = repo_with_labels(params[:repo])
+    url = params[:repo].gsub(/\/$/, '')
+    request = repo_with_labels(url)
     render json: request[:data], status: request[:status]
   end
 
@@ -93,18 +94,12 @@ class ProjectsController < ApplicationController
     params[:language]
   end
 
-  def filters
-    ProjectFilters::Chain.new(params[:project],
-                              session[:filter_options],
-                              current_user)
-  end
-
   def languages
-    filters.array(:languages)
+    Array(params.fetch(:project, {}).fetch(:languages, session.fetch(:filter_options, {}).fetch(:languages, (current_user.try(:languages) || []))))
   end
 
   def labels
-    filters.array(:labels)
+    params.fetch(:project, {}).fetch(:labels, [])
   end
 
   def github_url

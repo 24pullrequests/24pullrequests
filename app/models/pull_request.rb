@@ -1,4 +1,4 @@
-class PullRequest < ActiveRecord::Base
+class PullRequest < ApplicationRecord
   belongs_to :user
   after_save { if user then user.update_pull_request_count end }
   after_destroy { if user then user.update_pull_request_count end }

@@ -29,7 +29,7 @@ describe UsersController, type: :controller do
     context 'as html' do
       context 'when the case matches' do
         before do
-          get :show, id: user.nickname
+          get :show, params: {id: user.nickname}
         end
 
         it { is_expected.to respond_with(200) }
@@ -37,7 +37,7 @@ describe UsersController, type: :controller do
 
       context 'when the case does not match' do
         before do
-          get :show, id: user.nickname.upcase
+          get :show, params: {id: user.nickname.upcase}
         end
 
         it { is_expected.to respond_with(200) }
@@ -46,7 +46,7 @@ describe UsersController, type: :controller do
 
     context 'as json' do
       before do
-        get :show, id: user.nickname, format: :json
+        get :show, params: {id: user.nickname}, format: :json
       end
 
       it { expect(response.header['Content-Type']).to include 'application/json' }

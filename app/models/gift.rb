@@ -1,4 +1,4 @@
-class Gift < ActiveRecord::Base
+class Gift < ApplicationRecord
   class << self
     attr_writer :default_date
   end
