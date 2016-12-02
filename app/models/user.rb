@@ -17,6 +17,8 @@ class User < ApplicationRecord
   has_many :archived_pull_requests
 
   scope :by_language, ->(language) { joins(:skills).where('lower(language) = ?', language.downcase) }
+  scope :with_any_pull_requests, -> { where('users.pull_requests_count > 0') }
+  scope :random, -> { order("RANDOM()") }
 
   paginates_per 99
 
