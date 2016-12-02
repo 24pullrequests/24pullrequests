@@ -15,6 +15,9 @@ class PullRequest < ApplicationRecord
   scope :for_aggregation, -> {
     where(AggregationFilter.pull_request_filter)
   }
+  scope :excluding_organisations, -> (excluded_organisations) {
+    where.not("repo_name ~* ?", %{^(#{excluded_organisations.join("|")})/})
+  }
 
   EARLIEST_PULL_DATE = Date.parse("01/12/#{CURRENT_YEAR}").midnight
   LATEST_PULL_DATE   = Date.parse("25/12/#{CURRENT_YEAR}").midnight

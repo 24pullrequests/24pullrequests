@@ -116,5 +116,16 @@ describe PullRequest, type: :model do
         expect(PullRequest.active_users(CURRENT_YEAR)).to eq([])
       end
     end
+
+    describe '.excluding_organisations' do
+      let!(:foo) { create :pull_request, repo_name: "fooinc/foo" }
+      let!(:bar) { create :pull_request, repo_name: "barinc/bar" }
+      let!(:baz) { create :pull_request, repo_name: "bazinc/baz" }
+      let!(:qux) { create :pull_request, repo_name: "quxinc/qux" }
+
+      it 'excludes ignored organisations' do
+        expect(PullRequest.excluding_organisations(%w{fooinc quxinc})).to eq [bar, baz]
+      end
+    end
   end
 end
