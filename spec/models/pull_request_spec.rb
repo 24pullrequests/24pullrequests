@@ -81,28 +81,31 @@ describe PullRequest, type: :model do
   end
 
   context '#scopes' do
-    let(:user) do
-      create :user, nickname: 'foo'
-    end
+    describe '.by_language' do
+      let!(:pull_requests) { create_list(:pull_request, 4, language: 'Haskell') }
 
-    let!(:pull_requests) do
-      4.times.map  do |n|
-        create(:pull_request, language:   'Haskell',
-                              created_at: DateTime.now + n.minutes,
-                              user: user)
+      it 'returns only pull requests for the requested language' do
+        expect(PullRequest.by_language('Haskell').to_set).to eq pull_requests.to_set
       end
     end
 
-    it 'by_language' do
-      expect(PullRequest.by_language('Haskell').order('created_at asc')).to eq pull_requests
+    describe '.latest' do
+      let!(:pull_requests) do
+        4.times.map do |n|
+          create(:pull_request, created_at: DateTime.now + n.minutes)
+        end
+      end
+
+      it 'returns the requested number of pull requests in order' do
+        expect(PullRequest.latest(3)).to eq(pull_requests.reverse.take(3))
+      end
     end
 
-    it 'latest' do
-      expect(PullRequest.latest(3)).to eq(pull_requests.reverse.take(3))
-    end
-
-    describe '#active_users' do
+    describe '.active_users' do
       it 'finds users' do
+        user = create :user, nickname: 'foo'
+        create(:pull_request, user: user)
+
         expect(PullRequest.active_users(CURRENT_YEAR).map(&:nickname)).to eq(%w(foo))
       end
 
