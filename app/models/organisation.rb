@@ -2,6 +2,8 @@ class Organisation < ApplicationRecord
   has_and_belongs_to_many :users
   has_many :pull_requests, -> { order('created_at desc').for_aggregation }, through: :users
 
+  scope :with_any_pull_requests, -> { where('organisations.pull_request_count > 0') }
+  scope :random, -> { order("RANDOM()") }
   scope :order_by_pull_requests, -> do
     order('organisations.pull_request_count desc, organisations.login asc')
   end
