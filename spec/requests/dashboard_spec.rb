@@ -45,7 +45,7 @@ describe 'Dashboard', type: :request do
     end
   end
 
-  describe 'email preferences' do
+  describe 'language preferences' do
     before do
       visit preferences_path
     end
@@ -54,6 +54,23 @@ describe 'Dashboard', type: :request do
       check 'Ruby'
       click_on 'Save and Continue'
       expect(user.languages).to eq ['Ruby']
+    end
+  end
+
+  describe 'ignored organisations' do
+    before do
+      user.ignored_organisations = %w{baz qux}
+      user.save!
+      visit preferences_path
+    end
+
+    it { is_expected.to have_field 'Ignored Organisations', with: 'baz, qux' }
+
+    it 'allows the user to set their preferences' do
+      fill_in 'Ignored Organisations', with: 'foo, bar'
+      click_on 'Save and Continue'
+      user.reload
+      expect(user.ignored_organisations.sort).to eq %w{bar foo}
     end
   end
 end

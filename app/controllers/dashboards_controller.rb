@@ -79,7 +79,7 @@ class DashboardsController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:uid, :provider, :nickname, :email, :gravatar_id, :token, :email_frequency, :twitter_token, skills_attributes: [:language])
+    params.require(:user).permit(:uid, :provider, :nickname, :email, :gravatar_id, :token, :email_frequency, :twitter_token, :ignored_organisations_string, skills_attributes: [:language])
   end
 
   def set_locale_to_cookie(locale)
