@@ -16,6 +16,7 @@ class PullRequest < ApplicationRecord
     where(AggregationFilter.pull_request_filter)
   }
   scope :excluding_organisations, -> (excluded_organisations) {
+    excluded_organisations = Array(excluded_organisations)
     where.not("repo_name ~* ?", %{^(#{excluded_organisations.join("|")})/})
   }
 
