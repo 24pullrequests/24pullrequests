@@ -171,7 +171,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
-    minitest (5.10.0)
+    minitest (5.10.1)
     multi_fetch_fragments (0.0.17)
     multi_json (1.12.1)
     multi_xml (0.5.5)
