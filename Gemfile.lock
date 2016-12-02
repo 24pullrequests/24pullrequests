@@ -393,7 +393,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activemodel-serializers-xml
   bootstrap-sass
   brakeman
   bugsnag

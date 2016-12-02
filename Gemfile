@@ -29,7 +29,6 @@ gem 'sassc-rails'
 gem 'puma'
 gem 'multi_fetch_fragments'
 gem 'rack-attack'
-gem 'activemodel-serializers-xml' # ensures draper will run
 
 group :development do
   gem 'spring'
