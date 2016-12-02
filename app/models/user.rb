@@ -209,6 +209,17 @@ class User < ApplicationRecord
     lat && lng
   end
 
+  def ignored_organisations_string
+    (ignored_organisations || []).join(", ")
+  end
+
+  def ignored_organisations_string= organisations_string
+    self.ignored_organisations = (organisations_string || "")
+      .split(",")
+      .collect(&:strip)
+      .compact
+  end
+
   private
 
   def repo_languages

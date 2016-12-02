@@ -343,6 +343,22 @@ describe User, type: :model do
     end
   end
 
+  describe '#ignored_organisations_string' do
+    before { user.ignored_organisations = %w{foo bar} }
+
+    it "converts the organisations to a string" do
+      expect(user.ignored_organisations_string).to eq("foo, bar")
+    end
+  end
+
+  describe '#ignored_organisations_string=' do
+    before { user.ignored_organisations_string = "foo,bar, moo,     oink," }
+
+    it "converts the string of organisations to set of tags" do
+      expect(user.ignored_organisations.to_set).to eq(%w{foo bar moo oink}.to_set)
+    end
+  end
+
   context '#scopes' do
     let!(:haskell_users) { 2.times.map { create(:skill, language: 'Haskell').user } }
 
@@ -351,5 +367,4 @@ describe User, type: :model do
       expect(User.by_language('ruby')).to eq([])
     end
   end
-
 end
