@@ -3,7 +3,12 @@ class DashboardsController < ApplicationController
   before_action :set_email_preferences, except: [:preferences, :update_preferences, :confirm_email, :locale]
 
   def show
-    pull_requests = current_user.pull_requests.year(current_year).order('created_at desc')
+    pull_requests = current_user
+      .pull_requests_ignoring_organisations
+      .year(current_year)
+      .order('created_at desc')
+      .to_a
+
     projects      = current_user.suggested_projects.order("RANDOM()").limit(12).sort_by(&:name)
     gifted_today  = current_user.gift_for(today)
     @events = Event.where(['start_time >= ?', Time.zone.today]).order('start_time').first(5)
@@ -79,7 +84,7 @@ class DashboardsController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:uid, :provider, :nickname, :email, :gravatar_id, :token, :email_frequency, :twitter_token, skills_attributes: [:language])
+    params.require(:user).permit(:uid, :provider, :nickname, :email, :gravatar_id, :token, :email_frequency, :twitter_token, :ignored_organisations_string, skills_attributes: [:language])
   end
 
   def set_locale_to_cookie(locale)

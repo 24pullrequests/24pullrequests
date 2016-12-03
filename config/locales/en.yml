@@ -306,6 +306,11 @@ en:
       form.
     title: Set your personal preferences
     twitter: Twitter Account
+    ignore_organisations: >
+      If you regularly contribute to public repositories that you don't want to track
+      on this site, add the organisation name here. You can add multiple organisations
+      separated by commas. This can be useful if you code in the open at work, or
+      maintain an open source repository yourself. Example: "24pullrequests, alphagov"
   preferred_languages: Preferred Languages
   projects:
     admin:

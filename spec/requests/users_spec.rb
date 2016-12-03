@@ -34,7 +34,12 @@ describe 'Users', type: :request do
       end
 
       describe 'when the user has gifted code or issued pull requests' do
-        let!(:pull_requests) { 2.times.map { create :pull_request, user: user } }
+        let!(:pull_requests) do
+          [
+            create(:pull_request, user: user, repo_name: 'foo/bar', title: "Moar foos"),
+            create(:pull_request, user: user, repo_name: 'baz/qux', title: "Hi baz")
+          ]
+        end
         let!(:gift) { create(:gift, user: user, pull_request: pull_requests.first) }
 
         it 'has pull requests' do
@@ -47,6 +52,25 @@ describe 'Users', type: :request do
 
           click_on 'Pull Requests'
           is_expected.to have_content pull_requests.last.title
+        end
+
+        context 'with ignored organisations' do
+          before { user.update_attribute(:ignored_organisations, %w{foo}) }
+
+          it 'filters out repos for ignored organisations but still allows gifts' do
+            click_on 'Profile'
+            save_and_open_page
+
+            is_expected.to have_content 'akira has made 1 total pull requests ' \
+              "so far in Christmas #{Time.zone.now.year}"
+
+            is_expected.to have_link "Moar foos"
+            is_expected.to have_link "Hi baz"
+
+            click_on 'Pull Requests'
+            is_expected.to_not have_link "foo/bar"
+            is_expected.to have_link "baz/qux"
+          end
         end
       end
 
