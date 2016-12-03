@@ -4,13 +4,13 @@ You want to contribute to 24PullRequests? That's great! Here are a couple of gui
 
 #### Overview
 
-[Contribution workflow](#contribution-workflow)
-[Setup instructions](#setup-instructions)
-[Setup using Vagrant](#setup-using-vagrant)
-[Reporting a bug](#reporting-a-bug)
-[Contributing to an existing issue](#contributing-to-an-existing-issue)
-[Our labels](#our-labels)
-[Additional info](#additional-info)
+* [Contribution workflow](#contribution-workflow)  
+* [Setup instructions](#setup-instructions)  
+* [Setup using Vagrant](#setup-using-vagrant)  
+* [Reporting a bug](#reporting-a-bug)  
+* [Contributing to an existing issue](#contributing-to-an-existing-issue)  
+* [Our labels](#our-labels)  
+* [Additional info](#additional-info)  
 
 ## Contribution workflow
 
