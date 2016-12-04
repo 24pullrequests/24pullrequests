@@ -77,7 +77,7 @@
         <li>
           <a data-toggle="tab" href="#pull_requests">Pull Requests</a>
         </li>
-        <% for year in ArchivedPullRequest::PAST_YEARS %>
+        <% PAST_YEAR.downto(LAUNCH_YEAR) do |year| %>
           <li>
             <a data-toggle="tab" href="#<%= year %>">
               <%= year %>
@@ -92,7 +92,7 @@
         <div class="tab-pane" id="pull_requests">
           <%= render partial: 'users/pull_request', collection: @user.pull_requests_ignoring_organisations.year(current_year).latest(nil), cache: true %>
         </div>
-        <% for year in ArchivedPullRequest::PAST_YEARS %>
+        <% PAST_YEAR.downto(LAUNCH_YEAR) do |year| %>
           <div class="tab-pane" id="<%= year %>">
             <%= render partial: 'users/pull_request', collection: @user.archived_pull_requests.year(year), cache: true %>
           </div>
