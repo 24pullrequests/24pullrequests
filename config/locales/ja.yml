@@ -93,8 +93,8 @@ ja:
       title: イベントを編集する
     index:
       host_an_event: イベントを主催する
-      show_past_24_pull_requests_events: 過去の 24 Pull Requests イベントを見る
-      past_24_pull_requests_events: 過去の 24 Pull Requests イベント
+      show_past_24_pull_requests_events: 過去に開催された 24 Pull Requests のイベントを見る
+      past_24_pull_requests_events: 過去に開催された 24 Pull Requests のイベント
     new:
       form:
         description: 説明
@@ -148,7 +148,7 @@ ja:
     badges:
       amazing: Continuous Sync - You're an open source machine, send 24 pull requests
         during December, before Christmas
-      description: 私たちは Coderwall と提携して、24 Pull Requestsに参加するといくつかの最高なバッジをアンロックされるようにしました。
+      description: 私たちは Coderwall と提携して、24 Pull Requests に参加するといくつかの最高なバッジをアンロックされるようにしました。
       involved_link: Participant - Get involved, send at least one pull request before
         Christmas
       title: Coderwall バッジをもらおう
@@ -225,7 +225,7 @@ ja:
   organisations_involved_desc: Invite more people from your organisation to participate.
   preferences:
     coderwall: あなたが既に獲得しているバッジをプロフィールページに表示するためにあなたの Coderwall アカウントとリンクします。
-    coderwall_username: Coderwall ユーザー名
+    coderwall_username: Coderwall のユーザ名
     delete: あなたのアカウントを削除したいですか?
     form:
       daily: 日次
@@ -249,7 +249,7 @@ ja:
     admin:
       search: Search by GitHub repository
       title: Manage Projects
-    claim: 一覧に載っていないオススメのプロジェクトがありますか? 主張してください！
+    claim: 一覧に載っていないオススメのプロジェクトがありますか? 主張してください!
     edit:
       title: Edit Suggestion
     filter_by_language: 'Filter by Language:'
@@ -307,9 +307,9 @@ ja:
       achieved_by: Badges achieved by
       error_github_not_connected: The user %{username} has not the same GitHub account
         connected with Coderwall as the one you connected to 24 Pull Requests with.
-      error_no_user: この名前ではユーザーは見つかりません。
-      success: Coderwall ユーザー名の更新に成功しました!
-      title: Coderwall バッジ
+      error_no_user: この名前ではユーザは見つかりません。
+      success: Coderwall のユーザ名の更新に成功しました!
+      title: Coderwall のバッジ
       update_button: 更新
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests.
       Bah humbug!"
@@ -318,4 +318,4 @@ ja:
   view_all: すべてを見る
   welcome: ようこそ、%{user}さん!
   welcome_back: お帰りなさい、%{user}さん
-  your_pull_requests: あなたの Pull Requests
+  your_pull_requests: あなたの Pull Request
