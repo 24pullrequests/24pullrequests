@@ -1,6 +1,6 @@
 # Contributing to 24 Pull Requests
 
-Want to contribute to 24 Pull Requests? That's great! Here is a couple of guidelines that will help you contribute. Before we get started: Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+Want to contribute to 24 Pull Requests? That's great! Here is a couple of guidelines that will help you contribute. Before we get started: Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md), to ensure that this project is a welcoming place for **everyone** to contibute to. By participating in this project you agree to abide by its terms.
 
 #### Overview
 
