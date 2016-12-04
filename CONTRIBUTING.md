@@ -33,15 +33,13 @@ The project comes with a Vagrant setup that you can use to quickly get the app u
 
 Download and install the appropriate packages for your Operating System.
 
-_Windows Users: Ansible does not support Windows as controller machine, but there's a little hack in the Vagrantfile that will allow you to run the provision using a local
-SSH connection Guest-Guest. Just install Vagrant and VirtualBox, and you should be able to get it running._
+_Windows Users: Ansible does not support Windows as controller machine, but there's a little hack in the Vagrantfile that will allow you to run the provision using a local SSH connection Guest-Guest. Just install Vagrant and VirtualBox, and you should be able to get it running._
 
 Once you have the dependencies installed, go to the project directory via console and run:
 
     $ vagrant up
 
-The first time you run _vagrant_, the process will take several minutes, as it will download the base box and run all the tasks necessary to set up the VM server.
-Once the process is completed, you need to log in, by running:
+The first time you run _vagrant_, the process will take several minutes, as it will download the base box and run all the tasks necessary to set up the VM server. Once the process is completed, you need to log in, by running:
 
     $ vagrant ssh
 
@@ -65,8 +63,7 @@ And the VM will be suspended. Whenever you want to get back to it, the state wil
 
     $ vagrant resume
 
-To get the VM running again, in the state you left it. Remember that if you turn off the VM or if you restart your main OS, you will need to run `vagrant up` again, but this time
-it will be much faster because the VM is already provisioned.
+To get the VM running again, in the state you left it. Remember that if you turn off the VM or if you restart your main OS, you will need to run `vagrant up` again, but this time it will be much faster because the VM is already provisioned.
 
 For more instructions on how to use Vagrant, have a look at their official documentation: [https://docs.vagrantup.com/v2/getting-started/](https://docs.vagrantup.com/v2/getting-started/).
 
@@ -78,7 +75,8 @@ So you've found a bug, and want to help us fix it? Before filing a bug report, p
 * How can the error be reproduced?
 * If possible, please also provide an error message or a screenshot to illustrate the problem
 
-If you want to be really thorough, there is a great overview on stack overflow of [what you should consider when reporting a bug](http://stackoverflow.com/questions/240323/how-to-report-bugs-the-smart-way).  
+If you want to be really thorough, there is a great overview on stack overflow of [what you should consider when reporting a bug](http://stackoverflow.com/questions/240323/how-to-report-bugs-the-smart-way).
+
 It goes without saying that you're welcome to help investigate further and/or finding a fix for the bug. If you want to do so, just mention it in your bug report and offer your help!  
 
 ## Contributing to an existing issue
@@ -86,8 +84,11 @@ It goes without saying that you're welcome to help investigate further and/or fi
 ### Finding an issue to work on 
 
 We've got a few open issues and are always glad to get help on that front. You can view the list of issues [here](https://github.com/24pullrequests/24pullrequests/issues). Most of the issues are labelled, so you can use the labels to get an idea of which issue could be a good fit for you. (Here's [a good article](https://medium.freecodecamp.com/finding-your-first-open-source-project-or-bug-to-work-on-1712f651e5ba) on how to find your first bug to fix).
-Before getting to work, take a look at the issue and at the conversation around it. Has someone already offered to work on the issue? Has someone been assigned to the issue? If so, you might want to check with them to see whether they're still actively working on it.  
-If the issue is a few months old, it might be a good idea to write a short comment to double-check that the issue or feature is still a valid one to jump on.  
+
+Before getting to work, take a look at the issue and at the conversation around it. Has someone already offered to work on the issue? Has someone been assigned to the issue? If so, you might want to check with them to see whether they're still actively working on it.
+
+If the issue is a few months old, it might be a good idea to write a short comment to double-check that the issue or feature is still a valid one to jump on.
+
 Feel free to ask for more detail on what is expected: are there any more details or specifications you need to know? 
 And if at any point you get stuck: don't hesitate to ask for help.  
 
