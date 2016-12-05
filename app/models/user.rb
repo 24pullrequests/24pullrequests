@@ -184,7 +184,7 @@ class User < ApplicationRecord
 
   def unspent_pull_requests
     gifted_pull_requests = gifts.map(&:pull_request)
-    pull_requests.year(CURRENT_YEAR).reject { |pr| gifted_pull_requests.include?(pr) }
+    pull_requests_ignoring_organisations.year(CURRENT_YEAR).reject { |pr| gifted_pull_requests.include?(pr) }
   end
 
   def needs_setup?
@@ -207,6 +207,21 @@ class User < ApplicationRecord
 
   def lat_lng
     lat && lng
+  end
+
+  def ignored_organisations_string
+    (ignored_organisations || []).join(", ")
+  end
+
+  def ignored_organisations_string= organisations_string
+    self.ignored_organisations = (organisations_string || "")
+      .split(",")
+      .collect(&:strip)
+      .compact
+  end
+
+  def pull_requests_ignoring_organisations
+    pull_requests.excluding_organisations(ignored_organisations)
   end
 
   private

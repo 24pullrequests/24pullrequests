@@ -32,6 +32,10 @@
       <% else %>
         <%= form.input :email, :label => t("preferences.form.email") %>
       <% end %>
+      <p>
+        <%= t("preferences.ignore_organisations") %>
+      </p>
+      <%= form.input :ignored_organisations_string, label: t("preferences.ignored_organisations"), input_html: {class: "pull-left"} %>
     </div>
     <div class="col-md-12">
       <h2 class="text-center">

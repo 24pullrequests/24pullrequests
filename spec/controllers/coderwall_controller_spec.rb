@@ -5,7 +5,7 @@ describe CoderwallController, type: :controller do
     let(:username) { 'testuser' }
     let(:github_username) { username }
     let(:coderwall_response) do
-      { users: { accounts: { github: github_username } } }.to_json
+      { user: { accounts: { github: github_username } } }.to_json
     end
     let(:coderwall_url) { "https://coderwall.com/#{username}.json" }
     let(:error_no_user) { 'No user found with this name.' }

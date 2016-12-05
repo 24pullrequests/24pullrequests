@@ -34,7 +34,7 @@
       self = this;
       self.teamFetcher = function(coder, count) {
         return $.jsonp({
-          url: 'http://coderwall.com/' + coder + '.json?callback=?',
+          url: 'https://coderwall.com/' + coder + '.json?callback=?',
           cache: true,
           success: function(coder, resp) {
             return self.storeTeamBadges(coder, resp);
@@ -93,7 +93,7 @@
       }
       teamBadgesList += '</ul>';
       compileCoderList = function(coder) {
-        return '<a href="http://coderwall.com/' + coder + '" target="_blank">' + coder + '</a>';
+        return '<a href="https://coderwall.com/' + coder + '" target="_blank">' + coder + '</a>';
       };
       // teamBadgesList += '<div class="team-coders"><strong>' + I18n.user.coderwall.achieved_by + ':&nbsp;</strong>';
       teamBadgesList += '<div class="team-coders"><strong> Badges achieved by:&nbsp;</strong>';

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161127203934) do
+ActiveRecord::Schema.define(version: 20161202190959) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -140,16 +140,16 @@ ActiveRecord::Schema.define(version: 20161127203934) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "uid",                                                          null: false
-    t.string   "provider",                                                     null: false
-    t.string   "nickname",                                                     null: false
+    t.string   "uid",                                                           null: false
+    t.string   "provider",                                                      null: false
+    t.string   "nickname",                                                      null: false
     t.string   "email"
-    t.datetime "created_at",                                                   null: false
-    t.datetime "updated_at",                                                   null: false
+    t.datetime "created_at",                                                    null: false
+    t.datetime "updated_at",                                                    null: false
     t.string   "gravatar_id"
     t.string   "token"
     t.string   "email_frequency"
-    t.integer  "pull_requests_count",                          default: 0
+    t.integer  "pull_requests_count",                           default: 0
     t.datetime "last_sent_at"
     t.string   "twitter_token"
     t.string   "twitter_secret"
@@ -160,9 +160,10 @@ ActiveRecord::Schema.define(version: 20161127203934) do
     t.string   "name"
     t.string   "blog"
     t.string   "location"
-    t.decimal  "lat",                  precision: 8, scale: 6
-    t.decimal  "lng",                  precision: 9, scale: 6
-    t.boolean  "thank_you_email_sent",                         default: false
+    t.boolean  "thank_you_email_sent",                          default: false
+    t.decimal  "lat",                   precision: 8, scale: 6
+    t.decimal  "lng",                   precision: 9, scale: 6
+    t.string   "ignored_organisations",                         default: [],                 array: true
     t.index ["nickname"], name: "index_users_on_nickname", unique: true, using: :btree
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
   end
