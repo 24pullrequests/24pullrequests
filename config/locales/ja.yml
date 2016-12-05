@@ -8,10 +8,9 @@ ja:
     on_twitter: 'Twitter アカウントもあります:'
     sponsors:
       details: 24 Pull Requests はスポンサーのご支援、ご寄付によって成り立っています。
-      get_in_touch: 'If you''d like to get in touch about sponsorship or anything
-        else, drop us an email:'
-      thanks: "ありがとうございます。"
-      title: "スポンサー"
+      get_in_touch: 'あなたがスポンサーシップや何か他のことについて連絡を取りたい場合は、私たちにメールを送ってください:'
+      thanks: ありがとうございます。
+      title: スポンサー
     title: 24 Pull Requests とは
   about_us: "このサイトについて"
   activerecord:
