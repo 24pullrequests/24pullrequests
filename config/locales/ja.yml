@@ -30,26 +30,26 @@ ja:
     callback:
       details: "?callback パラメータを指定することで、GET で取得できるいずれの API も、結果を JSON 関数でラップして受け取れます。これはブラウザがクロスドメインの問題を避けてウェブページの埋め込みコンテンツを表示するのに、一般的に使われる方法です。レスポンスに含まれるデータは通常の API 呼び出し結果と同じです。"
       title: JSON-P Callbacks
-    description: "あなたはこのことを知らないかもしれませんが、24 Pull Requests には JSON API があります。それぞれのエンドポイントの詳細は以下に記載します。"
+    description: あなたはこのことを知らないかもしれませんが、24 Pull Requests には JSON API があります。それぞれのエンドポイントの詳細は以下の通りです。
     organisations:
-      details: "このサイトにサインアップしている全ての組織を返します。組織ごとにユーザ情報も含まれます。"
-      specific: "特定の組織を指定して返します。"
-      title: Organisations
+      details: このサイトにサインアップしている全ての組織を返します。組織ごとにユーザ情報も含まれます。
+      specific: 特定の組織を指定して返します。
+      title: Organisation
     pagination:
-      details: "複数アイテムを返すリクエストはデフォルトで1ページ99個ずつに分けられます。他のページを見るには ?page パラメータを指定してください。"
+      details: 複数アイテムを返すリクエストはデフォルトで1ページ99個ずつに分けられます。他のページを見るには ?page パラメータを指定してください。
       title: Pagination
     projects:
-      details: "このサイトにある全てのお勧めプロジェクトをアルファベット順に返します。"
-      title: Projects
+      details: このサイトにある全てのオススメプロジェクトをアルファベット順に返します。
+      title: プロジェクト
     pull_requests:
-      details: "このサイトのユーザによる12月中の全ての pull request を新しいもの順に返します。pull request を作成したユーザ情報も含まれます。"
-      meta_details: "今年行った pull request 情報を取得します。"
-      title: Pull Requests
+      details: このサイトのユーザによる12月中の全ての pull request を新しいもの順に返します。pull request を作成したユーザ情報も含まれます。
+      meta_details: 今年行われた pull request 情報を取得します。
+      title: Pull Request
     title: JSON API
     users:
-      details: "このサイトにサインアップしている全てのユーザを、12月中の pull request が多い順に返します。組織情報、pull request 情報も含まれます。"
-      specific: "特定ユーザの情報を返します。"
-      title: Users
+      details: このサイトにサインアップしている全てのユーザを、12月中の pull request が多い順に返します。組織情報、pull request 情報も含まれます。
+      specific: 特定ユーザの情報を返します。
+      title: ユーザ
   cancel: "キャンセル"
   change: Change
   claim: 主張
