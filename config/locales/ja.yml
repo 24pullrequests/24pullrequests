@@ -283,11 +283,11 @@ ja:
     twitter_message: 'I just gifted a pull request for http://24pullrequests.com,
       check it out: %{issue_url}'
   pull_requests:
-    count: "%{count} Pull Requests already made!"
+    count: "%{count} の Pull Request が既に作成されました!"
     language:
-      count: "%{count} pull requests already made in %{language}!"
+      count: "%{language} で %{count} の Pull Requests が既に作成されました!"
     latest:
-      count: Latest Pull Requests (%{count} total)
+      count: 最新の Pull Request (合計 %{count})
   search: "検索"
   sponsored_by: Sponsored by
   sponsors: "スポンサー"
