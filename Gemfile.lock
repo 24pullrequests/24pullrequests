@@ -174,7 +174,7 @@ GEM
     minitest (5.10.1)
     multi_fetch_fragments (0.0.17)
     multi_json (1.12.1)
-    multi_xml (0.5.5)
+    multi_xml (0.6.0)
     multipart-post (2.0.0)
     naught (1.1.0)
     newrelic_rpm (3.17.1.326)
