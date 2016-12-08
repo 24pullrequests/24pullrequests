@@ -104,14 +104,6 @@ fr:
       comment et où ouvrir vos pull requests.</p><p>Connectez vous avec votre compte
       GitHub et nous suivrons et mettrons en avant vos pull requests et suggérerons
       des projets sur lesquels travailler.</p>"
-    badges:
-      amazing: Continuous Sync - Vous êtes une machine à open source, envoyez 24 pull
-        requests en Décembre
-      description: Nous nous sommes associé avec coderwall et avons créé des badges
-        que vous pouvez obtenir en participant.
-      involved_link: Participant - Participez, envoyez au moins une pull request avant
-        Noël
-      title: Gagnez des badges Coderwall
     description: Faire des petits cadeaux de code pour Noël
     give_to_open_source: Vous avez bénéficié de projets open source toute l'année,
       maintenant il est l'heure de remercier les contributeurs de ces projets, et
@@ -179,9 +171,6 @@ fr:
     pull_requests: "%{count} pull requests soumises par les membres"
     title: "%{count} organisations impliquées"
   preferences:
-    coderwall: Liez votre compte coderwall pour afficher les badges que vous avez
-      déjà gagnés sur votre page de profil.
-    coderwall_username: Nom d'utilisateur Coderwall
     delete_account: Vous souhaitez supprimer votre compte ?
     form:
       daily: Quotidiennement
@@ -267,14 +256,6 @@ fr:
       tooltip: Si vous liez votre compte Twitter, nous posterons un tweet à chaque
         pull request que vous ouvrirez!
   user:
-    coderwall:
-      achieved_by: Badges obtenus par
-      error_github_not_connected: L'utilisateur %{username} n'a pas le même compte
-        GitHub connecté avec Coderwall et celui connecté avec le site 24 Pull Requests.
-      error_no_user: Aucun utilisateur trouvé avec ce nom.
-      success: Nom d'utilisateur correctement mis à jour !
-      title: Badges Coderwall
-      update_button: Mettre à jour
     grinchy_message: "%{user} devient un radin  pour %{year} et n'a ouvert aucune
       pull requests. Escroc!"
     organisations: Membre de...

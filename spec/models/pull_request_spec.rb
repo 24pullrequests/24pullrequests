@@ -124,7 +124,7 @@ describe PullRequest, type: :model do
       let!(:qux) { create :pull_request, repo_name: "quxinc/qux" }
 
       it 'excludes ignored organisations' do
-        expect(PullRequest.excluding_organisations(%w{fooinc quxinc})).to eq [bar, baz]
+        expect(PullRequest.excluding_organisations(%w{fooinc quxinc})).to contain_exactly(bar, baz)
       end
     end
   end

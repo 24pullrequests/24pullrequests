@@ -104,14 +104,6 @@ de:
       zeigt, wie und wohin Du Deine Pull Requests schicken kannst.</p><p>Melde Dich
       mit Deinem GitHub-Konto an. Wir verfolgen dann all Deine Pull Requests nach,
       heben sie hervor und schlagen Dir Projekte vor, an denen Du arbeiten könntest.</p>"
-    badges:
-      amazing: Continuous Sync (Kontinuierliche Synchronisation) - Du bist eine Open
-        Source-Maschine, versende 24 Pull Requests im Dezember
-      description: Zusammen mit Coderwall verteilen wir ein paar tolle Badges, die
-        Du durchs Mitmachen verdienen kannst (freigeschaltet am 24. Dezember).
-      involved_link: Participant (Teilnehmer) - Mach mit, versende mindestens einen
-        Pull Request vor Weihnachten
-      title: Coderwall Badges verdienen
     description: Kleine Code-Geschenke zu Weihnachten verschenken
     give_to_open_source: Du hast das ganze Jahr über von anderen Open Source-Projekten
       profitiert. Jetzt ist es an der Zeit, den Maintainern dieser Projekte danke
@@ -178,8 +170,6 @@ de:
       one:
       other:
   preferences:
-    coderwall:
-    coderwall_username:
     delete: Möchtest Du Dein Konto löschen?
     form:
       daily:
@@ -263,13 +253,6 @@ de:
       tooltip: Wenn Du Dein Twitter-Konto verbindest, werden wir für Dich twittern
         wann immer Du einen Pull Request eröffnest!
   user:
-    coderwall:
-      achieved_by:
-      error_github_not_connected:
-      error_no_user:
-      success:
-      title:
-      update_button:
     grinchy_message: "%{user} ist %{year} ein Grinch &mdash; keine Pull Requests.
       Bah humbug!"
     organisations: Mitglied von...

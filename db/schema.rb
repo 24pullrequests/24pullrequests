@@ -156,7 +156,6 @@ ActiveRecord::Schema.define(version: 20161202190959) do
     t.string   "twitter_nickname"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
-    t.string   "coderwall_user_name"
     t.string   "name"
     t.string   "blog"
     t.string   "location"

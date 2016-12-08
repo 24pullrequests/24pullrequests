@@ -88,11 +88,6 @@ zh_Hans:
     about_text: "<p>24 Pull Requests 是每年这个时候的一个倡议， 鼓励开发人员在世界各地的十二月每天发出合并请求(pull request)</p>
       <p>这个网站是为了宣传这个项目，它的意义，以及如何发出合并请求(pull request)s。</p><p>用你的GitHub帐号登录，我们就可以记录你的合并请求(pull
       request)。还可以推荐你感兴趣的项目。</p>"
-    badges:
-      amazing: "连续同步 - 你真是一个开源机器，你在十二月份提出 24 份合并请求(pull request)"
-      description: "我们已经与 Coderwall 联手创造了一些十分酷的徽章，以便大家参与解锁。"
-      involved_link: "参与者 - 积极参与活动，在圣诞节前发送至少一个合并请求(pull request)"
-      title: "赢取 Coderwall 徽章"
     description: "用代码作圣诞礼物"
     give_to_open_source: "你在一整年中一直受益于开源项目。现在是时候对那些项目的维护者表达感谢，有一只小小鸟告诉我，他们喜欢接受你的合并请求(pull
       request)！"
@@ -152,8 +147,6 @@ zh_Hans:
     pull_requests: "%{count} 次合并请求(pull request)由成员发起"
     title: "%{count} 个组织参与"
   preferences:
-    coderwall: "与您的coderwall帐号绑定，在您的coderwall帐号上显示徽章"
-    coderwall_username: Coderwall用户名
     delete: "想要删除您的帐号？"
     form:
       daily: "每天"
@@ -221,14 +214,6 @@ zh_Hans:
       text: "与你的推特帐号绑定"
       tooltip: "如果你绑定你的推特帐号，我们会在你发起合并请求(pull request)时自动发一条信息！"
   user:
-    coderwall:
-      achieved_by: "赢取的徽章"
-      error_github_not_connected: "账户 %{username} 在 Coderwall 和 24 Pull Requests 绑定的
-        GitHub 帐号不同"
-      error_no_user: "没有找到与这个用户名关联的帐号。"
-      success: "成功更新了 Coderwall 的用户名！"
-      title: Coderwall徽章
-      update_button: "更新"
     grinchy_message: "在 %{year} 年，%{user} 是一个圣诞怪杰。他发起了〇个合并请求(pull request)。 鸭蛋！"
     organisations: "一名成员"
     pull_request_count: "在 %{year} 年，%{user} 一共发起了 %{count} 次合并请求(pull request)。"

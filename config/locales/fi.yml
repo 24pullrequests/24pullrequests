@@ -102,14 +102,6 @@ fi:
       asti.</p> <p>Tämä sivu auttaa sinua mainostamaan projektiasi, korostamaan miksi,
       miten ja missä lähetetään vetopyyntöjä.</p><p>Kirjaudu sisään GitHub tililläsi
       ja me seuraamme ja korostamme vetopyyntöjäsi ja ehdotamme projekteja mitä työskennellä.</p>"
-    badges:
-      amazing: jatkuva synkronointi - Olet avoin lähdekoodi kone, lähetä 24 vetopyyntöä
-        Joulukuun aikana
-      description: Me olemme yhdistäneet voimamme Coderwallin kanssa ja tehneet muutamia
-        mahtavia merkkejä, joita voit avata osallistumalla.
-      involved_link: Osallistuja - Liity mukaan, lähetä vähintään yksi vetopyyntö
-        ennen joulua
-      title: Ansaitse Coderwall merkkejä
     description: Antaa pieniä lahjoja koodia jouluksi
     give_to_open_source: Olet koko vuoden ajan hyötynyt avoimen lähdekoodin projekteista.
       Nyt on aika sanoa kiitos niiden projektien ylläpitäjille, ja pikkulinnut kertovat
@@ -173,8 +165,6 @@ fi:
       one:
       other:
   preferences:
-    coderwall:
-    coderwall_username:
     delete: Haluatko poistaa tilisi?
     form:
       daily:
@@ -254,13 +244,6 @@ fi:
       text: Yhdistä Twitter tilisi
       tooltip: Jos yhdistät twitter tilisi, lähetämme tweetin aina kun avaat vetopyynnön!
   user:
-    coderwall:
-      achieved_by:
-      error_github_not_connected:
-      error_no_user:
-      success:
-      title:
-      update_button:
     grinchy_message: "%{user} on grinch %{year} vuonna lahjoittamatta yhtään vetopyyntöä.
       Bah humbug!"
     organisations:

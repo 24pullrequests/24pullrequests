@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  include Concerns::Coderwall
   include Concerns::Twitter
 
   attr_writer :gift_factory
