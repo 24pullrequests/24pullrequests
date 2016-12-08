@@ -4,7 +4,7 @@ class StaticController < ApplicationController
     @featured_projects = Project.includes(:labels).featured.order("RANDOM()").limit(6)
     @users = User.with_any_pull_requests.random.limit(24)
     @orgs = Organisation.with_any_pull_requests.random.limit(24)
-    @pull_requests = PullRequest.year(current_year).order('created_at desc').limit(5)
+    @pull_requests = PullRequest.year(current_year).order('created_at desc').limit(6)
   end
 
   def about
