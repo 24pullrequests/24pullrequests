@@ -71,17 +71,4 @@
       </div>
     </div>
   <% end %>
-  <div class="col-md-6 col-md-offset-3">
-    <p>
-      <%= t("preferences.coderwall") %>
-    </p>
-    <%= simple_form_for current_user, :url => update_coderwall_path, wrapper: :bootstrap3_horizontal, defaults: { right_column_html: {class: "col-md-8"}, label_html: {class: "col-md-4"} }, :html => {:class => 'form-horizontal', :role => "form"}, :method => 'post'  do |form| %>
-      <%= form.input :coderwall_username, :label => t("preferences.coderwall_username"), :input_html => {:class => "pull-left"} %>
-      <div class="form-group">
-        <div class="col-md-offset-4 col-sm-8">
-          <%= form.button :submit, t('user.coderwall.update_button') %>
-        </div>
-      </div>
-    <% end %>
-  </div>
 </div>

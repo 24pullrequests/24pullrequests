@@ -133,11 +133,6 @@ zh_Hant:
     about_text: "<p>24 Pull Requests 是發生在每年十二月的一個活動，目的在鼓勵世界各地的開發者於十二月中、聖誕節之前的每一天發出至少一個
       Pull Request</p><p>這個網站是為了宣傳這個活動，以及如何發出 Pull Requests</p><p>用你的 GitHub 帳號登錄，我們就回開始記錄你曾發出的
       Pull Requests，並且推薦你可能感興趣的專案。</p>"
-    badges:
-      amazing: "連續同步 - 好厲害！你在聖誕節前送出了 24 個 Pull Requests，簡直是個開源機器人！"
-      description: "我們與 Coderwall 合作設計了幾個好酷的徽章，快來參與破關拿徽章吧！"
-      involved_link: "參與者 - 積極參與活動，在聖誕節前送出至少一個 Pull Request"
-      title: Coderwall 徽章
     description: "拿程式碼作為聖誕禮物"
     event:
       description: "今年我們開始鼓勵大家在世界各地舉辦 24 Pull Requests 的黑客松。找場黑客松，和大家一起寫程式吧！"
@@ -202,8 +197,6 @@ zh_Hant:
     title: "%{count} 個組織參與"
   organisations_involved_desc: "邀請你公司或組織的朋友、同事們一起加入。"
   preferences:
-    coderwall: "與你的 Coderwall 帳號連結，在你的 Coderwall 帳號上顯示徽章"
-    coderwall_username: Coderwall 用戶名
     delete: "想要刪除你的帳號？"
     form:
       daily: "每天"
@@ -275,14 +268,6 @@ zh_Hant:
       text: "連結你的 Twitter 帳號"
       tooltip: "如果你選擇連結你的 Twitter 帳號，我們會在你送出 Pull Request 時自動發一則推文！"
   user:
-    coderwall:
-      achieved_by: "贏取的徽章"
-      error_github_not_connected: "帳號 %{username} 在 Coderwall 和 24 Pull Requests 綁定的
-        GitHub 帳號不同"
-      error_no_user: "沒有找到與這個使用者名稱關聯的帳號。"
-      success: "成功更新了 Coderwall 的使用者名稱！"
-      title: Coderwall 徽章
-      update_button: "更新"
     grinchy_message: "在 %{year} 年，%{user} 是一個聖誕怪傑，他發起了〇個 Pull Request，鴨蛋！"
     organisations: "組織"
     pull_request_count: "在 %{year} 年， %{user} 一共送出了 %{count} 個 Pull Requests"

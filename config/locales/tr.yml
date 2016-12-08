@@ -107,14 +107,6 @@ tr:
       pull request'lerinizin neden, nasıl ve nereye göndereceliğine yardımcı olur.
       </p><p>GitHub hesabınız ile giriş yapın ve sizlerin bütün pull request'lerinizi
       izleyelim ve sizler için üzerinde çalışabileceğeniz projeler önerelim.</p>"
-    badges:
-      amazing: Continuous Sync - You're an open source machine, send 24 pull requests
-        during December
-      description: Coderwall ile bir ekip oluşturduk ve katılımcıların kazanabilmeleri
-        için mükemmel rozetler yarattık.
-      involved_link: Katılımcı - Dahil olmalı, Noel den önce en az bir tane pull request
-        göndermeli!
-      title: Coderwall Rozetleri Kazan
     description: Noel için küçük kod parçaları hediye etmek.
     give_to_open_source: Bütün yıl açık kaynak kodlu projeleri kullanmaktan faydalanabilirsiniz.
       Şimdi bu projelerin destekcilerine teşekkür etme zamanı ve küçük bir kuşun bana
@@ -186,9 +178,6 @@ tr:
     pull_requests: Kullanıcılar tarafından %{count} pull request yapıldı
     title: "%{count} organizasyon katıldı."
   preferences:
-    coderwall: Kazandığınız rozetlerin profilinizde gösterilmesi için Coderwall hesabınızı
-      bağlanıyız.
-    coderwall_username: Coderwall Kullanıcı Adı
     delete: Hesabınızı silmek istiyor musunuz?
     form:
       daily: Günlük
@@ -269,14 +258,6 @@ tr:
       tooltip: Eğer Twitter hesabınızı bağlarsanız, Bir pull request yapıtığız zaman
         bir tweet atacağız!
   user:
-    coderwall:
-      achieved_by: Rozetler tarafından kazanıldı
-      error_github_not_connected: "%{username} adlı kullanıcı 24 Pull Request ile
-        aynı olan Coderwall hesabına bağlanan GitHub hesabı ile aynı isime sahip değil."
-      error_no_user: Bu isim ile kullancı bulunamadı.
-      success: Coderwall hesap adınız başarılı bir şekilde güncellendi.
-      title: Coderwall Rozetleri
-      update_button: Güncelle
     grinchy_message: "%{user} kullanıcısı %{year} yılında hiç pull request olmadığı
       için can sıkıyor. Bah humbug!"
     organisations: "... üyesi"

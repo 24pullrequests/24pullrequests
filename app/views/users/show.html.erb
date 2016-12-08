@@ -108,9 +108,5 @@
         <%= t("user.grinchy_message", user: content_tag(:strong, "@" + @user.nickname), year: current_year).html_safe %>
       </div>
     <% end %>
-    <h3>
-      <%= t("user.coderwall.title") %>
-    </h3>
-    <div id="coderwall-content" data-nickname="<%= @user.coderwall_username %>"></div>
   </div>
 </div>
