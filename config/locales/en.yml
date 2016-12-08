@@ -169,13 +169,6 @@ en:
       <p>This is the site to help promote the project, highlighting why, how and where
       to send your pull requests.</p><p>Log in with your GitHub account and we’ll
       track and highlight all your pull requests and suggest projects to work on.</p>"
-    badges:
-      amazing: Continuous Sync - Send 24 pull requests before Christmas
-      description: We’ve teamed up with Coderwall and created some kickass badges
-        to unlock for participating (awarded December 24th).
-      involved_link: Participant - Get involved and send at least one pull request
-        before Christmas
-      title: Earn Coderwall badges
     description: Giving back little gifts of code for Christmas
     event:
       description: This year we are encouraging organisers around the world to hold
@@ -280,9 +273,6 @@ en:
     title: "%{count} Organisations involved"
   organisations_involved_desc: Invite more people from your organisation to participate.
   preferences:
-    coderwall: Link your Coderwall account to display the badges you have already
-      earned on your profile page.
-    coderwall_username: Coderwall username
     delete: Want to delete your account?
     form:
       daily: Daily
@@ -372,14 +362,6 @@ en:
       tooltip: If you link your Twitter account, we’ll post a tweet whenever you open
         a pull request!
   user:
-    coderwall:
-      achieved_by: Badges achieved by
-      error_github_not_connected: Please link your Coderwall account to your GitHub
-        account and try again.
-      error_no_user: No user found with this name.
-      success: Successfully updated your Coderwall username!
-      title: Coderwall Badges
-      update_button: Update
     grinchy_message: "%{user} is being a grinch for Christmas %{year} with no gifted
       pull requests. Bah humbug!"
     organisations: Member of...

@@ -144,13 +144,6 @@ ja:
       <p>This is the site to help promote the project, highlighting why, how and where
       to send your pull requests.</p><p>Log in with your GitHub account and we'll
       track and highlight all your pull requests and suggest projects to work on.</p>"
-    badges:
-      amazing: Continuous Sync - You're an open source machine, send 24 pull requests
-        during December, before Christmas
-      description: 私たちは Coderwall と提携して、24 Pull Requests に参加するといくつかの最高なバッジをアンロックされるようにしました。
-      involved_link: Participant - Get involved, send at least one pull request before
-        Christmas
-      title: Coderwall バッジをもらおう
     description: Giving back little gifts of code for Christmas
     event:
       description: 今年は世界中で 24 Pull Requests ハックイベントを主催することを推奨しています。このクリスマスに参加してください。
@@ -223,8 +216,6 @@ ja:
     title: "%{count} organisations involved"
   organisations_involved_desc: Invite more people from your organisation to participate.
   preferences:
-    coderwall: あなたが既に獲得しているバッジをプロフィールページに表示するためにあなたの Coderwall アカウントとリンクします。
-    coderwall_username: Coderwall のユーザ名
     delete: あなたのアカウントを削除したいですか?
     form:
       daily: 日次
@@ -302,14 +293,6 @@ ja:
       text: あなたの Twitter アカウントとリンクしましょう
       tooltip: あなたの Twitter アカウントとリンクすると、あなたがOSSへの pull request をする度に私たちはツイートします!
   user:
-    coderwall:
-      achieved_by: Badges achieved by
-      error_github_not_connected: The user %{username} has not the same GitHub account
-        connected with Coderwall as the one you connected to 24 Pull Requests with.
-      error_no_user: この名前ではユーザは見つかりません。
-      success: Coderwall のユーザ名の更新に成功しました!
-      title: Coderwall のバッジ
-      update_button: 更新
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests.
       Bah humbug!"
     organisations: Member of...

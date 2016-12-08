@@ -111,13 +111,6 @@ nb:
       fokus på hvorfor, hvordan og hvor du bør sende dine pull requests.</p><p>Logg
       inn med din GitHub-konto, så vil vi holde styr på og fremheve dine pull requests
       og foreslå prosjekter å jobbe med.</p>"
-    badges:
-      amazing: Continuous Sync - Du er en open-source maskin, send 24 pull requests
-        i løpet av desember
-      description: Vi har samarbeidet med Coderwall om å lage noen fantastiske badges
-        som du kan låse opp ved å delta.
-      involved_link: Participant - Vær involvert, send minst én pull request før jul
-      title: Tjen Coderwall-badges
     description: Gi små kodegaver til jul
     give_to_open_source: Du har hatt nytte av open-source prosjekter i hele år. Nå
       er tiden inne for å si takk til de som vedlikeholder disse prosjektene, og en
@@ -187,9 +180,6 @@ nb:
     pull_requests: "%{count} pull requests sendt inn av medlemmer"
     title: "%{count} organisasjoner involvert"
   preferences:
-    coderwall: Koble til din Coderwall-konto for å vise badges du allerede har tjent
-      på din profilside.
-    coderwall_username: Brukernavn på Coderwall
     delete: "Ønsker du å slette din konto?"
     form:
       daily: Daglig
@@ -272,14 +262,6 @@ nb:
       tooltip: Om du linker opp Twitter-kontoen din så legger vi et en tweet når du
         åpner en pull request!
   user:
-    coderwall:
-      achieved_by: Badges oppnådd av
-      error_github_not_connected: Brukeren %{username} har ikke den samme GitHub-konto
-        koblet til Coderwall som du logget inn på 24pullrequests med.
-      error_no_user: Ingen bruker funnet med dette navnet.
-      success: Oppdaterte ditt Coderwall-brukernavn
-      title: Coderwall badges
-      update_button: Oppdatér
     grinchy_message: "%{user} er en grinch i %{year} med ingen pull requests. Humbug!"
     organisations: Medlem av...
     pull_request_count: "%{user} har laget %{count} pull requests totalt så langt

@@ -126,13 +126,6 @@ cs:
       pull requesty.</p><p>Přihlašte se svým GitHub účtem and my budeme sledovat a
       zvýraznovat všechny vaše pull requesty a doporučovat projekty, na kterých můžete
       pracovat.</p>"
-    badges:
-      amazing: Continuous Sync - Pošlete 24 pull requestů před Vánoci
-      description: Spojili jsme se s coderwall a vytvořili jsme některé dechberoucí
-        badge, které můžete odemknout participací (udělování 24. prosince).
-      involved_link: Participant - Zapojte se a pošlete alespoň jeden pull request
-        před Vánoci
-      title: Získejte Coderwall badge
     description: Darujte na Vánoce malé dárečky kódu
     event:
       description: Tento rok jsme požádali organizátory po celém světě a vy se před
@@ -202,8 +195,6 @@ cs:
     title: "%{count} organizací se zapojilo"
   organisations_involved_desc: Pozvěte další vývojáře ze své společnosti.
   preferences:
-    coderwall: Připojte svůj coderwall účet pro zobrazení všech badges, které již
-      máte.
     delete: Chcete odstranit svůj účet?
     form:
       daily: Každý den
@@ -284,14 +275,6 @@ cs:
       text: Připojte Váš Twitter účet
       tooltip: Když připojíte Váš Twitter účet, tak budeme tweetovat vaše pull requesty!
   user:
-    coderwall:
-      achieved_by: Badges dosažen
-      error_github_not_connected: Uživatel %{username} nemá propojený svůj GitHub
-        účet s Coderwall profilem.
-      error_no_user: Nebyl nalezen žádný uživatel s tímto jménem.
-      success: "Úspěšně aktualizováno tvůj coderwall username!"
-      title: Coderwall Badges
-      update_button: Aktualizovat
     grinchy_message: "%{user} je o Vánocích %{year} grinch! Žádné darované pull requesty!"
     organisations: "Člen"
     pull_request_count: "%{user} poslal o Vánocích %{year} celkem %{count} pull requestů"

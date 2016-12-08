@@ -157,14 +157,6 @@ pt_br:
       o natal.</p> <p> Este site ajuda a promover esse projeto, destacando porque,
       como e onde enviar seu pull requests.</p><p>Entre com sua conta do GitHub e
       nós vamos monitorar e destacar todos os seus pull requests e seus projetos sugeridos.</p>"
-    badges:
-      amazing: Continous Sync - Você é uma maquina de pull request, enviou 24 pull
-        requests durante o mês de dezembro
-      description: Nós nos juntamos com a Coderwall e criamos algumas medalhas bem
-        fodonas para os participates!
-      involved_link: Participante - Se envolva, envie pelo menos um pull request antes
-        do natal
-      title: Ganhe medalhas da Coderwall
     description: Devolvendo pequenos códigos de presente para o Natal
     event:
       description: Este ano nós encorajamos organizadores pelo mundo a fazer hacks
@@ -241,9 +233,6 @@ pt_br:
     title: "%{count} organizações envolvidas"
   organisations_involved_desc: Convide mais pessoas da sua organização para participar.
   preferences:
-    coderwall: Conecte para a sua conta do Codewall para mostrar, no seu perfil, as
-      suas medalhas.
-    coderwall_username: Usuário no Coderwall
     delete: Você que apagar sua conta?
     form:
       daily: Diariamente
@@ -330,14 +319,6 @@ pt_br:
       tooltip: Se você integrar sua conta do Twitter, nós iramos tweetar sempre que
         você fizer em pull request!
   user:
-    coderwall:
-      achieved_by: Medalha conquistada por
-      error_github_not_connected: O usuário %{username} não utliza a mesma conta de
-        GitHub para conectar com o 24 Pull Requests e com Coderwall.
-      error_no_user: Nenhum usuário encontrado com este nome.
-      success: Seu usuário no Coderwall foi atualizado com sucesso!
-      title: Medalhas Coderwall
-      update_button: Atualizar
     grinchy_message: "%{user} você está parecendo um grinch em %{year}, não fez nenhum
       pull requests de presente. Bah humbug!"
     organisations: Membro de...

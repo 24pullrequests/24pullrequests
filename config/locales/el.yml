@@ -135,13 +135,6 @@ el:
       τονίζοντας το γιατί, πως και που να στείλετε τα pull requests σας.</p><p>Συνδεθείτε
       με το λογαριασμό GitHub σας για να παρακολουθήσουμε και να δείξουμε όλα τα pull
       requests σου και να εισηγηθούμε projects στα οποία μπορείς να δουλέψεις.</p>"
-    badges:
-      amazing: Continuous sync συγχρονισμός - Είσαι μιά μηχανή ανοικτού κώδικα, στείλε
-        24 pull requests κατά τη διάρκεια του Δεκέμβρη
-      description: "Σε συνεργασία με το Coderwall δημιουργήσαμε καταπληκτικές κονκάρδες
-        που μπορούν να ξεκλειδώσουν όσοι λάβουν μέρος."
-      involved_link: Participant - Στείλε τουλάχιστον ένα pull request πριν τα Χριστούγεννα
-      title: "Κερδισε κονκαρδες Coderwall"
     description: "Δινοντας πισω δωρακια κωδικα για τα Χριστουγεννα"
     give_to_open_source: "Επωφελείσε από τη χρήση project ανοικτού κώδικα όλο το χρόνο,
       τώρα είναι η ώρα να ευχαριστήσεις αυτούς που τα διατηρούν. Ένα μικρό πουλάκι
@@ -210,8 +203,6 @@ el:
       one:
       other:
   preferences:
-    coderwall:
-    coderwall_username:
     delete: "Θέλεις να διαγράψεις το λογαριασμό σου;"
     form:
       daily:
@@ -290,13 +281,6 @@ el:
       tooltip: "Αν συνδέσεις το λογαριασμό του twitter σου, θα στέλνουμε ένα tweet
         κάθε φορά που ανοίγεις ένα καινούριο pull request"
   user:
-    coderwall:
-      achieved_by:
-      error_github_not_connected:
-      error_no_user:
-      success:
-      title:
-      update_button:
     grinchy_message: "η/ο %{user} ειναι ενας καλικάντζαρος. Δεν έχει δωρίσει κανένα
       pull request για το %{year}!"
     organisations:

@@ -116,14 +116,6 @@ it:
       <p>Questo sito sostiene il progetto e spiega perché, come e dove inviare una
       pull request.</p><p>Effettua il Login con il tuo account GitHub, terremo traccia
       delle tue pull request e ti suggeriremo progetti su cui lavorare.</p>"
-    badges:
-      amazing: Sync Continuo - Sei una macchina dell'open source, manda 24 pull request
-        a dicembre
-      description: Abbiamo fatto team con Coderwall e creato delle medaglie stupende
-        da sbloccare.
-      involved_link: Partecipante - Hai partecipato mandando almeno una pull request
-        prima di Natale
-      title: Guadagna badge su CoderWall
     description: Regala dei piccoli codici per Natale
     give_to_open_source: I progetti open source ti hanno aiutato tutto l'anno. Ora
       è tempo di ringraziare i gestori di tali progetti e un uccellino ci ha detto
@@ -190,9 +182,6 @@ it:
     pull_requests: "%{count} pull request inviate dai membri"
     title: "%{count} organizationi coinvolte"
   preferences:
-    coderwall: Collega il tuo account Coderwall per mettere in mostra le badge che
-      hai guadagnato sul tuo profilo.
-    coderwall_username: Nome utente Coderwall
     delete: Vuoi eliminare il tuo account?
     form:
       daily: Giornalmente
@@ -276,14 +265,6 @@ it:
       tooltip: Se colleghi il tuo account Twitter, posteremo ogni volta che aprirai
         una pull request!
   user:
-    coderwall:
-      achieved_by: Badge ottenuti da
-      error_github_not_connected: L'account GitHub legato a Coderwall dell'utente
-        %{username} non è lo stesso con cui ti sei autenticato a 24pullrequests.
-      error_no_user: Nome utente non trovato.
-      success: Abbiamo aggiornato il tuo nome utente Coderwall!
-      title: Badge Coderwall
-      update_button: Aggiorna
     grinchy_message: "%{user} è diventato un Grinch per il  %{year} perché non ha
       regalato nessuna pull request. Bah, impostore!"
     organisations: Membro di...

@@ -110,14 +110,6 @@ es:
       destacando el por qué, cómo y dónde enviar sus pull requests.</p><p>Inicie sesión
       con su cuenta de GitHub. Vamos a dar seguimiento, destacar todos sus pull requests
       y proyectos sugeridos para trabajar.</p>"
-    badges:
-      amazing: Continuous Sync - Eres una máquina de código abierto, envia 24 pull
-        requests durante Diciembre
-      description: Nos hemos asociado con Coderwall y creamos algunas medallas por
-        desbloquear por participar.
-      involved_link: Participante - Involúcrese, envíe al menos un pull request antes
-        de Navidad
-      title: Gana medallas de Coderwall
     description: Retribuyendo regalitos de código en Navidad
     event:
       description: Este año estamos alentando a organizadores de todo el mundo a que
@@ -193,8 +185,6 @@ es:
     title: "%{count} organizaciones involucradas"
   organisations_involved_desc: Invite a más personas de su organización a participar.
   preferences:
-    coderwall:
-    coderwall_username:
     delete_account: "¿Quieres eliminar su cuenta?"
     form:
       daily:
@@ -280,13 +270,6 @@ es:
       tooltip: Si su cuenta de Twitter es vinculada, publicaremos un tweet cada vez
         que envíes un pull request.
   user:
-    coderwall:
-      achieved_by:
-      error_github_not_connected:
-      error_no_user:
-      success:
-      title:
-      update_button:
     grinchy_message: "%{user} es un gruñón para el año de %{year} porque no ha regalado
       ningún pull request. ¡Bah, paparruchas!"
     organisations: Miembro de ...

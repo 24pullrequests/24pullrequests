@@ -89,12 +89,6 @@ th:
     about_text: "<p>24 Pull Requests เป็นโปรเจคที่สนับสนุนให้นักพัฒนาทั่วโลกให้ส่ง
       pull request เป็นประจำทุกวันในเดือนธันวาคมจนถึงวันคริสต์มาส</p> <p>นี่คือเว็บไซน์ที่ช่วยโปรโมทโครงการรวมถึงแนะนำวิธีมีส่วนร่วมในโครการต่างๆ</p><p>ลงชื่อเข้าใช้ด้วยบัญชี
       GitHub และเราจะติดตาม pull request ของคุณ รวมถึงแนะนำโครงการสำหรับคุณ</p>"
-    badges:
-      amazing: "เชื่อมต่อ - คุณคือหุ่นยนต์โอเพ่นซอร์สที่สามารถส่ง 24 pull request
-        ในเดือนธันวาคมนี้"
-      description: "เราร่วมมือกับ Coderwall โดยคุณจะได้รับตราเมื่อเข้าร่วมกิจกรรม"
-      involved_link: "ผู้เข้าร่วม - คุณจะมีส่วนร่วมและส่ง pull request สักครั้งก่อนคริสต์มาสนี้"
-      title: "รับตราจาก Coderwall"
     description: "ให้โค้ดเป็นของขวัญสำหรับคริสต์มาสนี้"
     give_to_open_source: "คุณได้รับประโยชน์จากโครงการโอเพ่นซอร์สมาตลอดทั้งปี มันถึงเวลาแล้วที่พวกเราจะตอบแทนผู้ที่มีส่วนร่วมและโครงการเหล่านั้น
       และนกน้อยบอกว่าพวกมันชอบ pull request!"
@@ -151,8 +145,6 @@ th:
       one:
       other:
   preferences:
-    coderwall:
-    coderwall_username:
     delete: "ต้องการลบบัญชี?"
     form:
       daily:
@@ -223,13 +215,6 @@ th:
       text: "เชื่อมต่อกับบัญชีทวิตเตอร์"
       tooltip: "ถ้าคุณเชื่อมต่อบัญชีทวิตเตอร์เราจะโพสทุกครั้งที่คุณส่ง pull request"
   user:
-    coderwall:
-      achieved_by:
-      error_github_not_connected:
-      error_no_user:
-      success:
-      title:
-      update_button:
     grinchy_message: "%{user} เป็นคนขี้้เหนียวในปี %{year} โดยไม่ได้ส่ง pull request
       เลย!"
     organisations: "สมาชิกของ..."
