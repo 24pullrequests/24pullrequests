@@ -11,6 +11,7 @@ if Rails.env.development?
 
   User.delete_all
   PullRequest.delete_all
+  Gift.delete_all
   Event.delete_all
   Project.delete_all
   Label.delete_all
@@ -46,6 +47,7 @@ if Rails.env.development?
       date = Faker::Time.between(DECEMBER_FIRST, DECEMBER_FIRST + 23.days, :day)
       create :pull_request, user: user, created_at: date
     end
+    user.gift_unspent_pull_requests!
     users << user
   end
 
