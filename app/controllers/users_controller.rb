@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   end
 
   def mergers
-    @users = User.mergers(current_year).page params[:page]
+    @users = User.mergers(current_year).order("merged_pull_requests_count DESC").page params[:page]
     respond_with @users
   end
 end

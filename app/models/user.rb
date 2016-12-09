@@ -46,8 +46,7 @@ class User < ApplicationRecord
     joins(:merged_pull_requests).
       where('EXTRACT(year FROM pull_requests.created_at) = ?', year).
       group('users.id').
-      select("users.*, count(pull_requests.id) AS merged_pull_requests_count").
-      order("merged_pull_requests_count DESC")
+      select("users.*, count(pull_requests.id) AS merged_pull_requests_count")
   end
 
   def assign_from_auth_hash(hash)
