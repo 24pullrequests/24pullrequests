@@ -59,7 +59,6 @@ describe 'Users', type: :request do
 
           it 'filters out repos for ignored organisations but still allows gifts' do
             click_on 'Profile'
-            save_and_open_page
 
             is_expected.to have_content 'akira has made 1 total pull requests ' \
               "so far in Christmas #{Time.zone.now.year}"

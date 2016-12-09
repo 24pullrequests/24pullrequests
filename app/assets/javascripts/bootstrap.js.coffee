@@ -7,6 +7,8 @@ window.languageAutocomplete = ->
     name: $(this).attr "name"
     local: projectLanguages
 
+jQuery.timeago.settings.allowFuture = true;
+
 jQuery ->
   $("a[rel=popover]").popover()
   $(".tooltip").tooltip()
