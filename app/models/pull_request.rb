@@ -1,5 +1,6 @@
 class PullRequest < ApplicationRecord
   belongs_to :user
+  belongs_to :merger, class_name: 'User', foreign_key: :merged_by_id, primary_key: :uid
   after_save { if user then user.update_pull_request_count end }
   after_destroy { if user then user.update_pull_request_count end }
 

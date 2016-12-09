@@ -15,6 +15,8 @@ class User < ApplicationRecord
 
   has_many :archived_pull_requests
 
+  has_many :merged_pull_requests, class_name: 'PullRequest', foreign_key: :merged_by_id, primary_key: :uid
+
   scope :by_language, ->(language) { joins(:skills).where('lower(language) = ?', language.downcase) }
   scope :with_any_pull_requests, -> { where('users.pull_requests_count > 0') }
   scope :random, -> { order("RANDOM()") }
