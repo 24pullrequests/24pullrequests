@@ -1,0 +1,14 @@
+<div class="row clearfix fullwidth-panel">
+  <div class="col-md-12">
+    <h3>
+      <%= number_with_delimiter @users.total_count %>
+      Maintainers who've merged pull requests in <%= current_year %>
+    </h3>
+    <div class="js-user-pagination">
+      <ul class="clearfix avatar-list avatar-list-lg js-user-list">
+        <%= render partial: 'merger', collection: @users, as: :user %>
+      </ul>
+      <%= link_to_next_page @users, t("more"), remote: true, class: 'btn btn-success more' %>
+    </div>
+  </div>
+</div>

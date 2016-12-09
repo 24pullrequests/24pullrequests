@@ -1,0 +1,10 @@
+<li class="avatar-cell">
+  <%= link_to user_path(user.nickname), class: "avatar-link" do %>
+    <%= image_tag(user.avatar_url(200), alt: user.nickname, class: "avatar-img") %>
+    <div class="username"><%= user.nickname %></div>
+    <span class="pr-badge">
+      <%= octicon "git-pull-request", :height => 9 %>
+      <%= user.merged_pull_requests_count %>
+    </span>
+  <% end %>
+</li>

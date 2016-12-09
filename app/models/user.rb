@@ -42,6 +42,13 @@ class User < ApplicationRecord
     create!(AuthHash.new(hash).user_info)
   end
 
+  def self.mergers(year = CURRENT_YEAR)
+    joins(:merged_pull_requests).
+      where('EXTRACT(year FROM pull_requests.created_at) = ?', year).
+      group('users.id').
+      select("users.*, count(pull_requests.id) AS merged_pull_requests_count")
+  end
+
   def assign_from_auth_hash(hash)
     # do not update the email address in case the user has updated their
     # email prefs and used a new email

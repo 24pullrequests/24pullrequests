@@ -1,0 +1,14 @@
+(function($users) {
+  var $new = $("<%= escape_javascript(render(partial: 'merger', collection: @users, as: :user)) %>").find("a[rel=tooltip]").tooltip().end();
+
+  $users.find('.js-user-list')
+        .append($new)
+
+  $users.find(".more")
+        .replaceWith(
+          "<%= escape_javascript(link_to_next_page @users,
+                                                 t('more'),
+                                                 remote: true,
+                                                 class: 'btn btn-success more') %>"
+        );
+})($(".js-user-pagination"));
