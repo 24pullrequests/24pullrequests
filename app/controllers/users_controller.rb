@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :ensure_logged_in, only: [:projects]
 
   respond_to :html, :json
-  respond_to :js, only: :index
+  respond_to :js, only: [:index, :mergers]
 
   def index
     @users = User.order('pull_requests_count desc, nickname asc').page params[:page]
@@ -18,5 +18,10 @@ class UsersController < ApplicationController
 
   def projects
     @projects = current_user.projects.order('inactive desc')
+  end
+
+  def mergers
+    @users = User.mergers.page params[:page]
+    respond_with @users
   end
 end
