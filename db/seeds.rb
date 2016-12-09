@@ -11,6 +11,7 @@ if Rails.env.development?
 
   User.delete_all
   PullRequest.delete_all
+  Gift.delete_all
   Event.delete_all
   Project.delete_all
   Label.delete_all
@@ -27,9 +28,9 @@ if Rails.env.development?
   USERS = 50
   PULL_REQUESTS = (3..20)
   PROJECTS = 50
+  DECEMBER_FIRST = Time.parse("1/12/#{CURRENT_YEAR}")
 
   EVENTS = ['PullRequest-a-thon', '24 Pull Requests Hack event', 'Open Source Hackday', 'Christmas Bugmash']
-
 
   Rails.logger.info 'Inserting some test data'
 
@@ -43,8 +44,10 @@ if Rails.env.development?
 
     user.save!
     PULL_REQUESTS.to_a.sample.times do |i|
-      create :pull_request, user: user, created_at: DateTime.now - i.day
+      date = Faker::Time.between(DECEMBER_FIRST, DECEMBER_FIRST + 23.days, :day)
+      create :pull_request, user: user, created_at: date
     end
+    user.gift_unspent_pull_requests!
     users << user
   end
 
@@ -58,12 +61,10 @@ if Rails.env.development?
   end
 
   EVENTS.each do |event_name|
-    december_first = Time.parse("1/12/#{CURRENT_YEAR}")
-
     Event.create name: event_name,
                  location: "#{Faker::Address.city}, #{Faker::Address.country}",
                  url: Faker::Internet.url,
-                 start_time:  Faker::Time.between(december_first, december_first + 23.days, :day),
+                 start_time:  Faker::Time.between(DECEMBER_FIRST, DECEMBER_FIRST + 23.days, :day),
                  latitude: Faker::Address.latitude,
                  longitude: Faker::Address.longitude,
                  description: Faker::Lorem.sentence(3),
