@@ -8,9 +8,6 @@
       <p class="text-muted">
         <%= t("contributors.location_privacy") %>
       </p>
-      <div class="hidden" id="maps-data">
-        <%= raw @map_markers.to_json %>
-      </div>
       <hr/>
     </div>
   </div>
@@ -32,7 +29,7 @@
       </ul>
     <% end %>
   </div>
-  <%= javascript_include_tag "//maps.google.com/maps/api/js?v=3.18&sensor=false&client=&key=&libraries=geometry&language=&hl=&region=" %>
-  <%= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js" %>
-  <%= javascript_include_tag 'maps.js' %>
+
+  <script>var locations = <%= raw @map_markers.to_json %>;</script>
+  <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?key=AIzaSyCyeGsG7Xqt7iyOUm8JHXxl0Lcv_vYrpI4&callback=createMap" %>
 </section>

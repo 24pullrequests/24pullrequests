@@ -21,7 +21,6 @@
 //= require emoji
 //= require jquery.icheck
 //= require lodash
-//= require gmaps/google
 //= require_tree .
-//= stub maps
+//= stub contrib-maps
 //
