@@ -37,6 +37,7 @@ class PullRequestDownloader
   def download_user_organisations
     github_client.user_organizations.reject do |o|
       Rails.logger.info "Updating organisation: #{o.login}"
+      o.login.match(/^coderwall-/)
     end
   rescue => e
     Rails.logger.error "Organisation error: likely a GitHub API error occurred:\n"\
