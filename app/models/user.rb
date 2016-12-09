@@ -42,9 +42,9 @@ class User < ApplicationRecord
     create!(AuthHash.new(hash).user_info)
   end
 
-  def self.mergers
+  def self.mergers(year = CURRENT_YEAR)
     joins(:merged_pull_requests).
-      where('EXTRACT(year FROM pull_requests.created_at) = ?', CURRENT_YEAR).
+      where('EXTRACT(year FROM pull_requests.created_at) = ?', year).
       group('users.id').
       select("users.*, count(pull_requests.id) AS merged_pull_requests_count").
       order("merged_pull_requests_count DESC")
