@@ -24,7 +24,7 @@ FactoryGirl.define do
   end
 
   factory :user do
-    uid { SecureRandom.hex }
+    sequence(:uid)
     provider 'github'
     nickname { Faker::Name.name.parameterize }
     email
