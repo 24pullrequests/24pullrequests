@@ -34,21 +34,15 @@ if Rails.env.development?
 
   Rails.logger.info 'Inserting some test data'
 
-  users = []
   USERS.times do
     user = create :user, provider: 'developer2', gravatar_id: GRAVATARS.sample
-    user.uid = user.nickname # For developer2 omniauth
     2.times { user.organisations << create(:organisation, avatar_url: "https://1.gravatar.com/avatar/#{ORGGRAVATARS.sample}") rescue nil }
 
-    user.location = Faker::Address.country
-
-    user.save!
     PULL_REQUESTS.to_a.sample.times do |i|
       date = Faker::Time.between(DECEMBER_FIRST, DECEMBER_FIRST + 23.days, :day)
       create :pull_request, user: user, created_at: date
     end
     user.gift_unspent_pull_requests!
-    users << user
   end
 
   labels = LABELS.map do |name|
@@ -68,7 +62,7 @@ if Rails.env.development?
                  latitude: Faker::Address.latitude,
                  longitude: Faker::Address.longitude,
                  description: Faker::Lorem.sentence(3),
-                 user_id: users.take(1).first.id
+                 user_id: User.take(1).first.id
   end
 
 end
