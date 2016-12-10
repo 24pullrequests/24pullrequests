@@ -82,7 +82,7 @@
           <a data-toggle="tab" href="#merged_pull_requests">Merges</a>
         </li>
         <% end %>
-        <% PAST_YEAR.downto(LAUNCH_YEAR) do |year| %>
+        <% ((Tfpullrequests::Application.current_year) -1).downto(LAUNCH_YEAR) do |year| %>
           <li>
             <a data-toggle="tab" href="#<%= year %>">
               <%= year %>
@@ -100,7 +100,7 @@
         <div class="tab-pane" id="merged_pull_requests">
           <%= render @merged_pull_requests, cache: true %>
         </div>
-        <% PAST_YEAR.downto(LAUNCH_YEAR) do |year| %>
+        <% ((Tfpullrequests::Application.current_year) -1).downto(LAUNCH_YEAR) do |year| %>
           <div class="tab-pane" id="<%= year %>">
             <%= render partial: 'users/pull_request', collection: @user.archived_pull_requests.year(year), cache: true %>
           </div>

@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_year
-    @year ||= (params[:year].try(:to_i) || CURRENT_YEAR)
+    @year ||= (params[:year].try(:to_i) || Tfpullrequests::Application.current_year)
   end
 
   def current_user

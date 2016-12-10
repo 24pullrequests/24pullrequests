@@ -21,8 +21,8 @@ class PullRequest < ApplicationRecord
     where.not("repo_name ~* ?", %{^(#{excluded_organisations.join("|")})/})
   }
 
-  EARLIEST_PULL_DATE = Date.parse("01/12/#{CURRENT_YEAR}").midnight
-  LATEST_PULL_DATE   = Date.parse("25/12/#{CURRENT_YEAR}").midnight
+  EARLIEST_PULL_DATE = Date.parse("01/12/#{Tfpullrequests::Application.current_year}").midnight
+  LATEST_PULL_DATE   = Date.parse("25/12/#{Tfpullrequests::Application.current_year}").midnight
 
   class << self
     def active_users(year)

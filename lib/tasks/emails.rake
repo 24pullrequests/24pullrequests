@@ -16,11 +16,11 @@ end
 
 desc 'Find all users who sent 24 pull requests'
 task continuous_sync_users: :environment do
-  users = PullRequest.year(CURRENT_YEAR)
+  users = PullRequest.year(Tfpullrequests::Application.current_year)
                      .includes(:user)
                      .map(&:user)
                      .uniq.compact.sort_by(&:id)
-                     .select { |u| u.pull_requests.year(CURRENT_YEAR).length > 23 }
+                     .select { |u| u.pull_requests.year(Tfpullrequests::Application.current_year).length > 23 }
   puts "#{users.length} users"
   users.each do |user|
     puts "#{user.nickname} - #{user.email}"
