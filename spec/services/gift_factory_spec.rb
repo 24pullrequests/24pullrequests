@@ -27,7 +27,7 @@ describe GiftFactory do
         user.gifts.create!({
           user: user,
           pull_request: pull_request,
-          date: Date.new(CURRENT_YEAR, 12, 5)
+          date: Date.new(Tfpullrequests::Application.current_year, 12, 5)
         })
       end
 

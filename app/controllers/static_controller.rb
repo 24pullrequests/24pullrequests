@@ -5,6 +5,7 @@ class StaticController < ApplicationController
     @users = User.with_any_pull_requests.random.limit(24)
     @orgs = Organisation.with_any_pull_requests.random.limit(24)
     @pull_requests = PullRequest.year(current_year).order('created_at desc').limit(6)
+    @mergers = User.mergers(current_year).random.page(1).per(24)
   end
 
   def about

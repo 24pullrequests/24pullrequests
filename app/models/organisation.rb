@@ -34,6 +34,6 @@ class Organisation < ApplicationRecord
   end
 
   def update_pull_request_count
-    update_attribute(:pull_request_count, pull_requests.year(CURRENT_YEAR).count)
+    update_attribute(:pull_request_count, pull_requests.year(Tfpullrequests::Application.current_year).count)
   end
 end

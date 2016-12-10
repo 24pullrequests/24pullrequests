@@ -21,7 +21,7 @@ class Gift < ApplicationRecord
   delegate :title, :issue_url, to: :pull_request_with_archive, prefix: :pull_request
 
   def pull_request_with_archive
-    date.year == CURRENT_YEAR ? pull_request : archived_pull_request
+    date.year == Tfpullrequests::Application.current_year ? pull_request : archived_pull_request
   end
 
   scope :year, -> (year) { where('EXTRACT(year FROM "created_at") = ?', year) }
@@ -34,7 +34,7 @@ class Gift < ApplicationRecord
     where(user_id: user_id, date: date).first
   end
 
-  def self.giftable_dates(year = CURRENT_YEAR)
+  def self.giftable_dates(year = Tfpullrequests::Application.current_year)
     1.upto(24).map { |day| Date.new(year, 12, day) }
   end
 

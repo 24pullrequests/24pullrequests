@@ -76,7 +76,7 @@ class DashboardsController < ApplicationController
   end
 
   def giftable_range?
-    today > Date.new(CURRENT_YEAR, 12, 1) && today < Date.new(CURRENT_YEAR, 12, 24)
+    today > Date.new(Tfpullrequests::Application.current_year, 12, 1) && today < Date.new(Tfpullrequests::Application.current_year, 12, 24)
   end
 
   def set_email_preferences

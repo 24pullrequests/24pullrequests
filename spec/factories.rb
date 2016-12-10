@@ -30,7 +30,7 @@ FactoryGirl.define do
     email
     gravatar_id { Faker::Internet.email }
     token { SecureRandom.hex }
-    location { Faker::Address.country unless [0,1,2].sample == 0 }
+    location { Faker::Address.country }
   end
 
   factory :skill do
@@ -76,7 +76,7 @@ FactoryGirl.define do
     name { 'BristolJS' }
     location { 'BristolUK' }
     url { 'http://google.com' }
-    start_time { Time.parse("1st December #{CURRENT_YEAR}") }
+    start_time { Time.parse("1st December #{Tfpullrequests::Application.current_year}") }
     latitude { 51.4 }
     longitude { -2.6 }
     description { Faker::Lorem.paragraphs.first[0..199] }

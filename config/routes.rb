@@ -9,6 +9,7 @@ Tfpullrequests::Application.routes.draw do
 
   resources :organisations, only: [:show, :index]
 
+  get '/mergers', to: 'users#mergers', as: :mergers
   get '/users/:id', to: 'users#show'
 
   resources :events

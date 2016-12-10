@@ -1,15 +1,15 @@
 <div class="alert alert-info">
   <h3>
-    <%= t("information.title", year: CURRENT_YEAR) %>
+    <%= t("information.title", year: Tfpullrequests::Application.current_year) %>
   </h3>
   <p>
-    <%= t("information.last_year_stats", year: CURRENT_YEAR,
-      developers: contributors_in(CURRENT_YEAR),
-      pull_requests: pull_requests_in(CURRENT_YEAR),
-      projects: projects_in(CURRENT_YEAR)).html_safe %>
+    <%= t("information.last_year_stats", year: Tfpullrequests::Application.current_year,
+      developers: contributors_in(Tfpullrequests::Application.current_year),
+      pull_requests: pull_requests_in(Tfpullrequests::Application.current_year),
+      projects: projects_in(Tfpullrequests::Application.current_year)).html_safe %>
   </p>
   <p>
-    <%= t("information.get_ready", year: CURRENT_YEAR) %>
+    <%= t("information.get_ready", year: Tfpullrequests::Application.current_year) %>
   </p>
   <hr/>
   <p>

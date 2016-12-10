@@ -42,6 +42,13 @@ class User < ApplicationRecord
     create!(AuthHash.new(hash).user_info)
   end
 
+  def self.mergers(year = Tfpullrequests::Application.current_year)
+    joins(:merged_pull_requests).
+      where('EXTRACT(year FROM pull_requests.created_at) = ?', year).
+      group('users.id').
+      select("users.*, count(pull_requests.id) AS merged_pull_requests_count")
+  end
+
   def assign_from_auth_hash(hash)
     # do not update the email address in case the user has updated their
     # email prefs and used a new email
@@ -185,7 +192,7 @@ class User < ApplicationRecord
 
   def unspent_pull_requests
     gifted_pull_requests = gifts.map(&:pull_request)
-    pull_requests_ignoring_organisations.year(CURRENT_YEAR).reject { |pr| gifted_pull_requests.include?(pr) }
+    pull_requests_ignoring_organisations.year(Tfpullrequests::Application.current_year).reject { |pr| gifted_pull_requests.include?(pr) }
   end
 
   def needs_setup?
@@ -203,7 +210,7 @@ class User < ApplicationRecord
   end
 
   def update_pull_request_count
-    update_attribute(:pull_requests_count, pull_requests.year(CURRENT_YEAR).for_aggregation.count)
+    update_attribute(:pull_requests_count, pull_requests.year(Tfpullrequests::Application.current_year).for_aggregation.count)
   end
 
   def lat_lng

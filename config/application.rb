@@ -61,5 +61,9 @@ module Tfpullrequests
     config.exceptions_app = routes
 
     I18n.config.enforce_available_locales = false
+
+    def current_year
+      Time.current.year
+    end
   end
 end
