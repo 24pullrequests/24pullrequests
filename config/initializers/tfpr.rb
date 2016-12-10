@@ -1,3 +1,1 @@
-CURRENT_YEAR = Time.zone.today.year
-PAST_YEAR = CURRENT_YEAR - 1
 LAUNCH_YEAR = 2012

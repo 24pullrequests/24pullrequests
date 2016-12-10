@@ -28,7 +28,7 @@ if Rails.env.development?
   USERS = 50
   PULL_REQUESTS = (3..20)
   PROJECTS = 50
-  DECEMBER_FIRST = Time.parse("1/12/#{CURRENT_YEAR}")
+  DECEMBER_FIRST = Time.parse("1/12/#{Tfpullrequests::Application.current_year}")
 
   EVENTS = ['PullRequest-a-thon', '24 Pull Requests Hack event', 'Open Source Hackday', 'Christmas Bugmash']
 

@@ -3,19 +3,19 @@ require 'date'
 
 describe Calendar, type: :model do
   it 'returns an enumerator for the giftable_dates' do
-    giftable_dates = 1.upto(24).map { |day| Date.new(CURRENT_YEAR, 12, day) }
+    giftable_dates = 1.upto(24).map { |day| Date.new(Tfpullrequests::Application.current_year, 12, day) }
 
     sorted_gifts = Calendar.new(giftable_dates, [])
     expect(sorted_gifts.count).to eq(24)
   end
 
   it 'yields the right gift for the right day' do
-    the_first  = double('gift', date: Date.parse("#{CURRENT_YEAR}-12-1"))
-    the_fourth = double('gift', date: Date.parse("#{CURRENT_YEAR}-12-4"))
-    the_end    = double('gift', date: Date.parse("#{CURRENT_YEAR}-12-24"))
+    the_first  = double('gift', date: Date.parse("#{Tfpullrequests::Application.current_year}-12-1"))
+    the_fourth = double('gift', date: Date.parse("#{Tfpullrequests::Application.current_year}-12-4"))
+    the_end    = double('gift', date: Date.parse("#{Tfpullrequests::Application.current_year}-12-24"))
 
     gifts          = [the_end, the_fourth, the_first]
-    giftable_dates = 1.upto(24).map { |day| Date.new(CURRENT_YEAR, 12, day) }
+    giftable_dates = 1.upto(24).map { |day| Date.new(Tfpullrequests::Application.current_year, 12, day) }
 
     sorted_gifts = Calendar.new(giftable_dates, gifts)
     sorted_gifts = sorted_gifts.map { |_day, gift| gift }
@@ -28,7 +28,7 @@ describe Calendar, type: :model do
   end
 
   it 'knows the week day padding for the first date in the sequence' do
-    giftable_dates = [Date.new(CURRENT_YEAR, 12, 1)]
+    giftable_dates = [Date.new(Tfpullrequests::Application.current_year, 12, 1)]
 
     calendar = Calendar.new(giftable_dates, [])
     expect(calendar.start_padding).to eq(3)

@@ -4,7 +4,7 @@ module CountHelper
   end
 
   def pull_request_count_for_language
-    PullRequest.year(CURRENT_YEAR).by_language(@language).count
+    PullRequest.year(Tfpullrequests::Application.current_year).by_language(@language).count
   end
 
   def user_count_for_language
@@ -13,7 +13,7 @@ module CountHelper
 
   def pull_request_count
     return pull_request_count_for_language if @language
-    PullRequest.year(CURRENT_YEAR).count
+    PullRequest.year(Tfpullrequests::Application.current_year).count
   end
 
   def user_count

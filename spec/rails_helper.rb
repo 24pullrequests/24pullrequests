@@ -89,7 +89,7 @@ RSpec.configure do |config|
 
   config.before do
     allow_any_instance_of(User).to receive(:estimate_skills).and_return(nil)
-    Timecop.travel(Date.parse("12/12/#{CURRENT_YEAR}"))
+    Timecop.travel(Date.parse("12/12/#{Tfpullrequests::Application.current_year}"))
   end
 
   config.after do

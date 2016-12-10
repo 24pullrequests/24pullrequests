@@ -35,13 +35,13 @@ describe 'Static pages', type: :request do
   describe 'homepage in different dates' do
     context "during December" do
       it "doesnt show the finished partial on the first day" do
-        Timecop.travel(Date.new(CURRENT_YEAR, 12, 1))
+        Timecop.travel(Date.new(Tfpullrequests::Application.current_year, 12, 1))
         visit root_path
         is_expected.to_not have_content('24 Pull Requests is finished for')
       end
 
       it "doesnt show the finished partial on the last day" do
-        Timecop.travel(Date.new(CURRENT_YEAR, 12, 24))
+        Timecop.travel(Date.new(Tfpullrequests::Application.current_year, 12, 24))
         visit root_path
         is_expected.to_not have_content('24 Pull Requests is finished for')
       end
@@ -49,7 +49,7 @@ describe 'Static pages', type: :request do
 
     context "not in December or November" do
       it "shows the finished partial" do
-        Timecop.travel(Date.new(CURRENT_YEAR, 10, 29))
+        Timecop.travel(Date.new(Tfpullrequests::Application.current_year, 10, 29))
         visit root_path
         is_expected.to have_content('24 Pull Requests is finished for')
       end
