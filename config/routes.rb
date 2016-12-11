@@ -51,7 +51,7 @@ Tfpullrequests::Application.routes.draw do
   delete '/twitter/remove',         to: 'twitter#remove'
 
   match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
-  post '/auth/failure',             to: 'sessions#failure'
+  get '/auth/failure',             to: 'sessions#failure'
 
 
   get 'about', to: 'static#about'
