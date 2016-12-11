@@ -86,4 +86,8 @@ class Project < ApplicationRecord
   def contribulator_url
     "https://contribulator.24pullrequests.com/#{github_repository}"
   end
+
+  def url
+    homepage.presence || github_url
+  end
 end

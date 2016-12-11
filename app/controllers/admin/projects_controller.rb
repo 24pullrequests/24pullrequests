@@ -33,7 +33,7 @@ module Admin
     protected
 
     def editable_project_params
-      params.require(:project).permit(:description, :name, :main_language, :github_url, :featured)
+      params.require(:project).permit(:description, :name, :main_language, :github_url, :homepage, :featured)
     end
 
     def set_project

@@ -54,7 +54,7 @@ describe ProjectsController, type: :controller do
         expect(session[:filter_options]).to eq({ languages: %w(Ruby), labels: [] })
       end
 
-      it 'searches all rpojects with empty arrays' do
+      it 'searches all projects with empty arrays' do
         allow(ProjectSearch).to receive(:new).with({ languages: [], labels: [], page: nil }).and_call_original
         get :index, params: {project: { languages: [], labels: [] }}
         expect(assigns(:projects).length).to eq(10)
@@ -78,6 +78,7 @@ describe ProjectsController, type: :controller do
       raw = {
         description:   'something or other waffling a bit to hit 20 characters or more',
         github_url:    'http://github.com/somebody/something',
+        homepage:      'http://homepage.github.com',
         name:          'something',
         main_language: 'Ruby'
       }
