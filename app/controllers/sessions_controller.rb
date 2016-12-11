@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
   end
 
   def failure
-    redirect_to params[:origin], notice: "Authorisation with Twitter has failed."
+    redirect_to params[:origin], notice: I18n.t('twitter.auth_failed')
   end
 
   private
