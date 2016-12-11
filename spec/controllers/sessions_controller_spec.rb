@@ -35,12 +35,13 @@ describe SessionsController, type: :controller do
   end
 
   describe 'GET failure' do
+    origin_url = 'http://24pullrequests.com'
+
     before do
-      get :failure, params: {message: 'foobar'}
+      get :failure, params: { origin: origin_url }
     end
 
-    it { is_expected.to set_flash[:notice].to('foobar') }
-    it { is_expected.to redirect_to(root_path) }
+    it { is_expected.to redirect_to(origin_url) }
   end
 end
 

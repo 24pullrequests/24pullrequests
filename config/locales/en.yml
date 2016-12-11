@@ -357,6 +357,7 @@ en:
     account_linked: Your Twitter account has been linked! We’ll post a tweet whenever
       you open a pull request.
     account_removed: Your Twitter account has been removed.
+    auth_failed: Authorisation with Twitter has failed.
     link_account:
       text: Link Your Twitter Account
       tooltip: If you link your Twitter account, we’ll post a tweet whenever you open
