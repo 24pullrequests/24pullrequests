@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
   end
 
   def failure
-    redirect_to root_path, notice: params[:message]
+    redirect_to params[:origin], notice: "Authorisation with Twitter has failed."
   end
 
   private
