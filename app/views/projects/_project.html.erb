@@ -5,7 +5,7 @@
   <div class="language label label-info pull-right">
     <%= link_to project.main_language, language_path(project.main_language.downcase) %>
   </div>
-  <%= link_to project.github_url, :target => "_blank", :title => project.github_repository, :class => "project-link" do %>
+  <%= link_to project.url, :target => "_blank", :title => project.github_repository, :class => "project-link" do %>
     <span class="project-title">
       <%= project.name %>
     </span>

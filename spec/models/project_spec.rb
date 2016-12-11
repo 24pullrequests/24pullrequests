@@ -10,6 +10,7 @@ describe Project, type: :model do
   it { is_expected.to validate_length_of(:description).is_at_least(20).is_at_most(200) }
 
   it { is_expected.to have_db_column(:contribulator).of_type(:integer) }
+  it { is_expected.to have_db_column(:homepage).of_type(:string) }
 
   context 'validations' do
     let(:project) { FactoryGirl.build(:project) }
@@ -114,5 +115,17 @@ describe Project, type: :model do
   it 'contribulator url' do
     project = FactoryGirl.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests')
     expect(project.contribulator_url).to eq('https://contribulator.24pullrequests.com/24pullrequests/24pullrequests')
+  end
+
+  context '#url' do
+    it 'returns the homepage url when one is set' do
+      project = FactoryGirl.create(:project, homepage: 'https://homepage.24pullrequests.com')
+      expect(project.url).to eq('https://homepage.24pullrequests.com')
+    end
+
+    it 'returns the github url when a homepage is not set' do
+      project = FactoryGirl.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests')
+      expect(project.url).to eq('https://github.com/24pullrequests/24pullrequests')
+    end
   end
 end
