@@ -127,5 +127,10 @@ describe Project, type: :model do
       project = FactoryGirl.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests')
       expect(project.url).to eq('https://github.com/24pullrequests/24pullrequests')
     end
+
+    it 'returns the github url when a homepage is an empty string' do
+      project = FactoryGirl.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests', homepage: '')
+      expect(project.url).to eq('https://github.com/24pullrequests/24pullrequests')
+    end
   end
 end

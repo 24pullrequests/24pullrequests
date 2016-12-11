@@ -88,6 +88,6 @@ class Project < ApplicationRecord
   end
 
   def url
-    homepage || github_url
+    homepage.presence || github_url
   end
 end
