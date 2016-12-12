@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161209105217) do
+ActiveRecord::Schema.define(version: 20161210210606) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(version: 20161209105217) do
     t.boolean  "featured",      default: false
     t.string   "avatar_url"
     t.integer  "contribulator"
+    t.string   "homepage"
   end
 
   create_table "pull_request_archives", force: :cascade do |t|
@@ -149,7 +150,7 @@ ActiveRecord::Schema.define(version: 20161209105217) do
     t.string   "token"
     t.string   "email_frequency"
     t.integer  "pull_requests_count",                           default: 0
-    t.integer  "uid",                                                                       null: false
+    t.integer  "uid",                                                           null: false
     t.datetime "last_sent_at"
     t.string   "twitter_token"
     t.string   "twitter_secret"
