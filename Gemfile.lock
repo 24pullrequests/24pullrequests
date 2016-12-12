@@ -172,7 +172,6 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
-    multi_fetch_fragments (0.0.17)
     multi_json (1.12.1)
     multipart-post (2.0.0)
     naught (1.1.0)
@@ -411,7 +410,6 @@ DEPENDENCIES
   launchy
   lodash-rails
   meta_request
-  multi_fetch_fragments
   newrelic_rpm
   octicons_helper
   octokit
