@@ -7,7 +7,6 @@ class Gift < ApplicationRecord
 
   belongs_to :user
   belongs_to :pull_request
-  belongs_to :archived_pull_request, foreign_key: :pull_request_id
 
   validates :user, presence: true
   validates :pull_request, presence: true
@@ -18,11 +17,7 @@ class Gift < ApplicationRecord
                    inclusion:  { in:      proc { Gift.giftable_dates },
                                  message: 'your gift should be for the month of December.' }
 
-  delegate :title, :issue_url, to: :pull_request_with_archive, prefix: :pull_request
-
-  def pull_request_with_archive
-    date.year == Tfpullrequests::Application.current_year ? pull_request : archived_pull_request
-  end
+  delegate :title, :issue_url, to: :pull_request, prefix: :pull_request
 
   scope :year, -> (year) { where('EXTRACT(year FROM "created_at") = ?', year) }
 
