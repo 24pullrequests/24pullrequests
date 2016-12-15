@@ -47,7 +47,7 @@ GEM
       public_suffix (~> 2.0, >= 2.0.2)
     arel (7.1.4)
     ast (2.3.0)
-    autoprefixer-rails (6.5.3.1)
+    autoprefixer-rails (6.5.4)
       execjs
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -175,7 +175,7 @@ GEM
     multi_json (1.12.1)
     multipart-post (2.0.0)
     naught (1.1.0)
-    newrelic_rpm (3.17.1.326)
+    newrelic_rpm (3.17.2.327)
     nio4r (1.2.1)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
