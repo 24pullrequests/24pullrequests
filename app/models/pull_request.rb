@@ -61,6 +61,7 @@ class PullRequest < ApplicationRecord
 
   def post_to_firehose
     return unless Rails.env.production?
+    return unless created_at.year == Tfpullrequests::Application.current_year
     Typhoeus::Request.new(ENV['FIREHOSE_URL'],
       method: :post,
       body: self.to_json(include: { user: { only: [:uid, :nickname, :name, :blog, :location] } }),
@@ -68,6 +69,7 @@ class PullRequest < ApplicationRecord
   end
 
   def post_tweet
+    return unless created_at.year == Tfpullrequests::Application.current_year
     user.twitter.update(I18n.t 'pull_request.twitter_message', issue_url: issue_url) if user && user.twitter_linked?
   rescue => e
     Rails.logger.error "likely a Twitter API error occurred:\n"\
@@ -79,6 +81,7 @@ class PullRequest < ApplicationRecord
   end
 
   def autogift
+    return unless created_at.year == Tfpullrequests::Application.current_year
     user.new_gift(pull_request: self).save if body && body.scan(/24 ?pull ?request/i).any?
   end
 
