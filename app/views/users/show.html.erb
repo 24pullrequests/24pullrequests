@@ -102,7 +102,7 @@
         </div>
         <% ((Tfpullrequests::Application.current_year) -1).downto(LAUNCH_YEAR) do |year| %>
           <div class="tab-pane" id="<%= year %>">
-            <%= render partial: 'users/pull_request', collection: @user.archived_pull_requests.year(year), cache: true %>
+            <%= render partial: 'users/pull_request', collection: @user.pull_requests.year(year), cache: true %>
           </div>
         <% end %>
       </div>
