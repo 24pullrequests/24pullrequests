@@ -69,14 +69,18 @@
 </div>
 <div class="row">
   <div class="col-sm-12">
-    <% if @user.gifts.year(current_year).any? or @user.pull_requests_ignoring_organisations.year(current_year).any? %>
+    <% if @user.gifts.year(current_year).any? or @user.pull_requests_ignoring_organisations.year(current_year).any? or @merged_pull_requests.any? %>
       <ul class="nav nav-tabs" id="presents">
+        <% if @user.gifts.year(current_year).any? %>
         <li>
           <a class="active" data-toggle="tab" href="#gifts">Gifts</a>
         </li>
+        <% end %>
+        <% if @user.pull_requests_ignoring_organisations.year(current_year).any? %>
         <li>
           <a data-toggle="tab" href="#pull_requests">Pull Requests</a>
         </li>
+        <% end %>
         <% if @merged_pull_requests.any? %>
         <li>
           <a data-toggle="tab" href="#merged_pull_requests">Merges</a>
