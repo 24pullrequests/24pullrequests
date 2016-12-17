@@ -26,7 +26,7 @@ class PullRequest < ApplicationRecord
 
   class << self
     def active_users(year)
-      User.find(PullRequest.year(year).map(&:user_id).compact.uniq)
+      User.where(id: PullRequest.year(year).map(&:user_id).compact.uniq)
     end
 
     def create_from_github(json)
