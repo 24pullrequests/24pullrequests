@@ -34,7 +34,7 @@ ja:
     organisations:
       details: このサイトにサインアップしている全ての組織を返します。組織ごとにユーザ情報も含まれます。
       specific: 特定の組織を指定して返します。
-      title: Organisation
+      title: 組織
     pagination:
       details: 複数アイテムを返すリクエストはデフォルトで1ページ99個ずつに分けられます。他のページを見るには ?page パラメータを指定してください。
       title: Pagination
@@ -51,9 +51,9 @@ ja:
       specific: 特定ユーザの情報を返します。
       title: ユーザ
   cancel: "キャンセル"
-  change: Change
+  change: 編集
   claim: 主張
-  clear: Clear
+  clear: 削除
   contributors:
     title: "貢献者"
   dashboard:
@@ -249,10 +249,10 @@ ja:
     new:
       form:
         github_url: GitHub URL
-        main_language: Main language
-        project_name: Project Name
-        submit_project: Submit Project
-        summary: Summary
+        main_language: 主要言語
+        project_name: プロジェクト名
+        submit_project: 送信
+        summary: 概要
       info: One of the ways we encourage participation in the open source community
         is by letting users know what popular projects might be worth contributing
         to. We've selected our favorites, but we're always open to suggestions. Have
@@ -295,7 +295,7 @@ ja:
   user:
     grinchy_message: "%{user} is being a grinch for %{year} with no gifted pull requests.
       Bah humbug!"
-    organisations: Member of...
+    organisations: 組織
     pull_request_count: "%{user}さんは%{year}の12月の間に合計%{count}個の pull request をしました"
   view_all: すべてを見る
   welcome: ようこそ、%{user}さん!
