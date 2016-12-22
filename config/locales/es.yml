@@ -16,7 +16,7 @@ es:
       details: 24 Pull Requests es posible gracias a la ayuda y donaciones de nuestros
         grandes patrocinadores.
       get_in_touch: 'Si deseas estar en contacto con nosotros, acerca de patrocinio
-        u otro tema, envíenos un email a:'
+        u otro tema, envíanos un email a:'
       thanks: Muchas gracias a...
       title: Patrocinadores
     title: Sobre 24 Pull Requests
@@ -24,6 +24,11 @@ es:
   activerecord:
     errors:
       models:
+        event:
+          attributes:
+            start_time:
+              in_past: Los eventos no pueden ser creados con anterioridad
+              not_in_range: Los eventos tan sólo pueden ser creados entre el 1 y el 24 de Diciembre
         user:
           attributes:
             email:
