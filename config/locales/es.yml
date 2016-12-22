@@ -93,14 +93,14 @@ es:
       past_24_pull_requests_events: 'Past 24 Pull Requests Events'
     new:
       form:
-        description: Descripción
+        description: 'Descripción'
         description_placeholder: 'Proporciona una pequeña descripción del grupo y el evento'
         location: 'Localización'
         location_placeholder: 'Por ejemplo: Vigo, SP'
         map: 'Marcador de localización'
         name: 'Nombre del evento'
-        name_placeholder: 'Python Vigo Hack-A-Ton 24PR's'
-        start_time: 'Cuando'
+        name_placeholder: "Python Vigo Hack-A-Ton 24PR's"
+        start_time: Cuando
         url: 'URL'
         url_placeholder: 'Tu página del evento / registro'
       title: 'Acoge un evento 24 Pull Requests'
@@ -147,7 +147,7 @@ es:
       title: 'Eventos'
       view_events: 'Ver eventos'
     give_to_open_source: 'Te has estado beneficiando del uso de proyectos de código abierto durante todo el año. Es el momento de dar las gracias a los administradores de esos proyectos, ¡y un pajarillo nos ha contado que les encanta recibir Pull Requests!'
-    greeting: "Es la temporada"
+    greeting: '¡Es la temporada!'
     involved:
       contributing_path: 'página especial'
       description: 'Hay un muchas formas de participar en un proyecto de código abierto:
