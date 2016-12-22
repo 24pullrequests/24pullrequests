@@ -3,7 +3,7 @@ es:
   about:
     description: '24 Pull Requests es un pequeño proyecto para promover la colaboración de código abierto durante el mes de diciembre.'
     idea: 'La idea es, básicamente, enviar un pull request cada día en Diciembre antes de la Navidad, alentando a los desarrolladores ha que puedan contribuir a proyectos de código abierto con pequeños obsequios de código a lo largo de diciembre.'
-    more_info:' El sitio también ofrece una sugerencia de proyectos que necesitan nuestr ayuda, como guías para contribuir y además destacamos los mejores pull requests enviados cada día.'
+    more_info: 'El sitio también ofrece una sugerencia de proyectos que necesitan nuestra ayuda, como guías para contribuir y además destacamos los mejores pull requests enviados cada día.'
     on_github: 'El desarrollo de este sitio es de código abierto, y está disponible
       en GitHub:'
     on_twitter: 'También estamos en Twitter:'
