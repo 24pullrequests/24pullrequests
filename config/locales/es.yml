@@ -1,280 +1,310 @@
 ---
 es:
   about:
-    description: 24 Pull Requests es un pequeño proyecto para promover la colaboración
-      de código abierto durante el mes de diciembre.
-    idea: La idea es, básicamente, enviar un pull request cada día en Diciembre antes
-      de la Navidad, alentando a los desarrolladores ha que puedan contribuir a proyectos
-      de código abierto con pequeños obsequios de código a lo largo de diciembre.
-    more_info: El sitio también ofrece una sugerencia de proyectos que necesitan nuestra
-      ayuda, como guías para contribuir y además destacamos los mejores pull requests
-      enviados cada día.
+    description: '24 Pull Requests es un pequeño proyecto para promover la colaboración de código abierto durante el mes de diciembre.'
+    idea: 'La idea es, básicamente, enviar un pull request cada día en Diciembre antes de la Navidad, alentando a los desarrolladores ha que puedan contribuir a proyectos de código abierto con pequeños obsequios de código a lo largo de diciembre.'
+    more_info: 'El sitio también ofrece una sugerencia de proyectos que necesitan nuestra ayuda, como guías para contribuir y además destacamos los mejores pull requests enviados cada día.'
     on_github: 'El desarrollo de este sitio es de código abierto, y está disponible
       en GitHub:'
     on_twitter: 'También estamos en Twitter:'
     sponsors:
-      details: 24 Pull Requests es posible gracias a la ayuda y donaciones de nuestros
-        grandes patrocinadores.
+      details: '24 Pull Requests es posible gracias a la ayuda y donaciones de nuestros grandes patrocinadores.'
       get_in_touch: 'Si deseas estar en contacto con nosotros, acerca de patrocinio
-        u otro tema, envíenos un email a:'
-      thanks: Muchas gracias a...
-      title: Patrocinadores
-    title: Sobre 24 Pull Requests
-  about_us: Sobre Nosotros
+        u otro tema, envíanos un email a:'
+      thanks: 'Muchas gracias a...'
+      title: 'Patrocinadores'
+    title: 'Sobre 24 Pull Requests'
+  about_us: 'Sobre Nosotros'
   activerecord:
     errors:
       models:
+        event:
+          attributes:
+            start_time:
+              in_past: 'Los eventos no pueden ser creados con anterioridad'
+              not_in_range: 'Los eventos tan sólo pueden ser creados entre el 1 y el 24 de Diciembre'
         user:
           attributes:
             email:
-              already_confirmed: "%{attribute} ya está confirmado"
-              required_for_confirmation: "%{attribute} es requerido para la confirmación"
+              already_confirmed: '%{attribute} ya está confirmado'
+              required_for_confirmation: '%{attribute} se requiere para la confirmación'
   api:
     callback:
-      details:
-      title:
-    description:
+      details: 'Puedes enviar un parámetro ?callback a cualquier petición GET para obtener los resultados en una función JSON. Se utiliza normalmente cuando los navegadores quieren embeber contenido en páginas web tomándose el tiempo para resolver problemas de cruce de dominios. La respuesta incluye la misma salida de datos que la API.'
+      title: 'JSON-P Callbacks'
+    description: 'No deberías saber esto, pero 24 Pull Requests tiene su propia JSON API. Los detalles de cada ruta se describen a continuación.'
     organisations:
-      details:
-      specific:
-      title:
+      details: 'Carga todas las organizaciones que se han dado de alta en el site, lo que incluye a los usuarios que pertenecen a cada organización.'
+      specific: 'Carga información de una organización específica'
+      title: 'Organizaciones'
     pagination:
-      details:
-      title:
+      details: 'Petición para retornar varios items que será paginado a 99 items por defecto. Puedes especificar la cantidad de páginas con el parámetro ?page.'
+      title: 'Paginación'
     projects:
-      details:
-      title:
+      details: 'Todos los proyectos sugeridos del site, ordenados alfabéticamente.'
+      title: 'Proyectos'
     pull_requests:
-      details:
-      meta_details:
-      title:
-    title:
+      details: 'Carga todos los Pull Requests de los usuarios del site durante Diciembre, ordenados por los más recientes primero, también incluye el usuario que ha realizado el Pull Request.'
+      meta_details: 'Carga información sobre todos los Pull Requests de este año.'
+      title: 'Pull Requests'
+    title: 'JSON API'
     users:
-      details:
-      specific:
-      title:
-  cancel: Cancelar
-  change: Cambiar
-  claim: Reclamar
-  clear: Limpio
+      details: 'Carga todos los usuarios que se han dado de alta en el site, ordenados por la cantidad de Pull Requests que han enviado durante Diciembre, también incluye su(s) organizacion(es) y Pull Requests.'
+      specific: 'Carga información de un usuario específico.'
+      title: 'Usuarios'
+  cancel: 'Cancelar'
+  change: 'Cambiar'
+  claim: 'Reclamar'
+  clear: 'Limpio'
   contributors:
-    title: Contribuidores
+    title: 'Contribuyentes'
+    location_privacy: 'Todos los datos de localización están tomados de los perfiles públicos de Github de los usuarios activos actualmente.'
   dashboard:
-    christmas_activity: Aquí puedes ver todo de la actividad monitorizada antes de
-      la Navidad.
-    gift_it:
-    give_a_gift: Parece que no has regalado ninguno código hoy. Quieres regalar?
-    help_out: No puedes pensar en un proyecto que quieres ayudar? Tenemos una lista
-      de proyectos populares
-    no_pull_requests: No has enviado ninguno 'pull requests'. Qué esperas?!
-    pull_requests: ¿Se pregunta que ha hecho la gente estas vacaciones? Echa un vistazo a
-      estos pull requests, o envia un pull request y verás el tuyo ¡Aquí!
-    synchronize: Sincronizar Pull Requests
-  deactivate: Desactivar
-  delete: Borrar
+    christmas_activity: 'Aquí puedes ver toda la actividad que hemos monitorizado sobre ti durante el recorrido hacia la Navidad.'
+    gift_it: 'Regálalo!'
+    give_a_gift: 'Parece que no has regalado ninguno código hoy. Quieres regalar tus nuevos Pull Requests?'
+    help_out: 'Te cuesta pensar sobre un proyecto al que ayudar? Hemos recopilado un listado de proyectos populares aquí.'
+    no_pull_requests: 'Aún has enviado ningún Pull Request. ¿A qué estás esperando?!'
+    pull_requests: '¿Te preguntas lo que ha estado haciendo la gente durante estas vacaciones? Echa un vistazo a estos Pull Requests, o envia un Pull Request y verás el tuyo aquí.'
+    synchronize: 'Sincronizar Pull Requests'
+  deactivate: 'Desactivar'
+  delete: 'Borrar'
   delete_account:
-    are_you_sure: Queremos estar seguro que quieres eliminar tu cuenta. Este elimnar
-      tu perfil y todos de los 'pull requests' del sitio, pero proyectos sugeridos
-      permanecerán.
-    cancel: Cambié mi mente, regresar!
-    confirm: Confirmar la eliminación
-    email_preferences_link:
-    notification_info: Si solo quieres eliminar los notificaciones por correo electronico,
-      puedes cambiar sus preferencias %{email_preferences_link}.
-    title: Eliminar mi cuenta
+    are_you_sure: 'Queremos estar seguros de que quieres eliminar tu cuenta. Esto elimnará tu perfil y todos los Pull Ruquests del sitio, pero los proyectos sugeridos permanecerán.'
+    cancel: 'He cambiado de idea, ¡volver!'
+    confirm: 'Confirmar la eliminación'
+    email_preferences_link: 'configuración de correo'
+    notification_info: 'Si sólo quieres eliminar las notificaciones por correo electronico, puedes cambiar tus preferencias %{email_preferences_link}.'
+    title: 'Eliminar mi cuenta'
   developers_involved: Desarrolladores trabajando
-  developers_involved_desc: Únete a todos aquí y haz el código abierto mejor.
-  developers_using_language: Desarrolladores usando %{language}
-  edit: Editar
-  everything: Todo
-  exempli_gratia:
-  follow_user: Sigue @%{twitter}
+  developers_involved_desc: '¡Únete y haz mejor el código abierto!'
+  developers_using_language: 'Desarrolladores usando %{language}'
+  edit: 'Editar'
+  events:
+    admin:
+      search: 'Buscar por Repositorio de Github'
+      title: 'Administrar Proyectos'
+    details: '¡No tienes que hackear solo estas Navidades! Inicia un evento 24 Pull Requests en tu compañía, meetup de tecnología, o en tu comunidad local. O puedes unirte a un evento ya formado.'
+    edit:
+      title: 'Editar Evento'
+    index:
+      host_an_event: 'Acoge un evento'
+      show_past_24_pull_requests_events: 'Muestra Eventos 24 Pull Requests Pasados'
+      past_24_pull_requests_events: 'Past 24 Pull Requests Events'
+    new:
+      form:
+        description: 'Descripción'
+        description_placeholder: 'Proporciona una pequeña descripción del grupo y el evento'
+        location: 'Localización'
+        location_placeholder: 'Por ejemplo: Vigo, SP'
+        map: 'Marcador de localización'
+        name: 'Nombre del evento'
+        name_placeholder: "Python Vigo Hack-A-Ton 24PR's"
+        start_time: Cuando
+        url: 'URL'
+        url_placeholder: 'Tu página del evento / registro'
+      title: 'Acoge un evento 24 Pull Requests'
+    notice:
+      destroy_success: '¡Evento eliminado con éxito!'
+      edit_success: '¡Evento actualizado con éxito!'
+      new_success: '¡Evento creado con éxito!'
+      not_authorized: 'Sólo puedes editar eventos que tú has creado'
+      not_logged_in: 'Debes estar idenfiticado para crear o editar eventos'
+    show:
+      confirm_destroy: '¿Estás seguro de que quieres eliminar este evento?'
+      destroy_event: 'Eliminar evento'
+      edit_event: 'Editar evento'
+      view_event_details: 'Ver detalles del evento'
+    save_event: 'Guardar evento'
+    title: 'Eventos'
+  everything: 'Todo'
+  exempli_gratia: 'ej.'
+  follow_user: 'Follow @%{twitter}'
   gifts:
-    calendar_link:
-    description: Aqui puedes manejar 'pull requests' y elegir tu propia colección
-      de '24 Pull Requests'.
+    calendar_link: 'calendario público'
+    description: "Aqui puedes administrar tus Pull Requests y elegir tu propia selección de '24 Pull Requests'."
     form:
-      date:
-      gift_it:
-      pull_request:
-      tweet:
-    give: Da algo importante a un proyecto que te gusta
-    none: No has regalado nada.
-    title: Código obsequiado
-    view_your_gifts: Todos sus regalos se mostrarán en su %{calendar_link}.
+      date: 'Fecha'
+      gift_it: '¡Regálalo!'
+      pull_request: 'Pull Requests'
+      tweet: '¡Tweetea sobre tu regalo!'
+    give: 'Regala algo significante a un proyecto que te encanta'
+    link_twitter: 'Enlazar cuenta de Twitter'
+    link_twitter_desc: '¿Quieres compartir información sobre 24 Pull Requests y tus regalos? %{link_twitter} y regala código a proyectos de código abierto.'
+    no_pull_requests: 'No tienes ningún Pull Request'
+    none: 'Todavía no has regalado nada.'
+    title: 'Código regalado.'
+    view_your_gifts: 'Todos sus regalos se mostrarán en tu %{calendar_link}.'
+  happy_holidays: 'Felices Fiestas'
   homepage:
-    about: "¿De qué se trata?"
+    about: '¿De qué se trata?'
     about_text: "<p>24 Pull Requests es una iniciativa anual para incentivar a los
-      desarrolladores alrededor del mundo contribuyan con un pull request cada día
-      de Diciembre hasta la Navidad.</p><p>En este sitio promovemos la ayuda a proyectos,
-      destacando el por qué, cómo y dónde enviar sus pull requests.</p><p>Inicie sesión
-      con su cuenta de GitHub. Vamos a dar seguimiento, destacar todos sus pull requests
-      y proyectos sugeridos para trabajar.</p>"
-    description: Retribuyendo regalitos de código en Navidad
+      desarrolladores de todo el mundo contribuyan a enviar 24 Pull Requests entre el 1 y el 24 de Diciembre.</p><p>Este site promueve la ayuda a proyectos, destacando el por qué, cómo y dónde debes enviar tus Pull Requests.</p><p>Inicia sesión con tu cuenta de GitHub. Daremos seguimiento y destacaremos todos tus Pull Requests y proyectos sugeridos para trabajar.</p>"
+    description: 'Devolviendo pequeños regalos de código por Navidad'
     event:
-      description: Este año estamos alentando a organizadores de todo el mundo a que
-        planeen eventos de 24 Pull Requests. Participa esta Navidad.
-      host_an_event: Organiza un evento
-      title: Eventos
-      view_events: Ver eventos
-    give_to_open_source: Nos hemos beneficiado por el uso de proyectos de código abierto
-      todo el año. Ahora, es el momento de decir gracias a todos los responsables
-      de esos proyectos. Un pequeño pajarito no has contado, que ¡ha ellos les encantará
-      recibir pull requests!.
-    greeting: Es la temporada
+      description: "Este año estamos alentando a organizadores de todo el mundo a que acojan eventos de hacking '24 Pull Requests'. Participa estas Navidades."
+      host_an_event: 'Acoge un evento'
+      title: 'Eventos'
+      view_events: 'Ver eventos'
+    give_to_open_source: 'Te has estado beneficiando del uso de proyectos de código abierto durante todo el año. Es el momento de dar las gracias a los administradores de esos proyectos, ¡y un pajarillo nos ha contado que les encanta recibir Pull Requests!'
+    greeting: '¡Es la temporada!'
     involved:
-      contributing_path:
+      contributing_path: 'página especial'
       description: 'Hay un muchas formas de participar en un proyecto de código abierto:
-        mejorando la documentación, ayudando a resolver los problemas y errores existentes,
-        mejorar la calidad del código y la cobertura de pruebas, o añadiendo características
-        faltantes.'
-      special_page: Hemos preparado una %{contributing_path}, donde puede encontrar
-        más información de cómo contribuir.
-      take_a_look: Si eres nuevo en el mundo Open Source, por favor, échale un vistazo.
-      title: Involúcrese
+        mejorando la documentación, ayudando a resolver los problemas y bugs existentes, mejorando la calidad del código y la cobertura de pruebas, o añadiendo características faltantes.'
+      special_page: 'Hemos preparado una %{contributing_path}, donde podrás encontrar más información sobre cómo contribuir.'
+      take_a_look: 'Si eres nuevo en el mundo Open Source, por favor, échale un vistazo.'
+      title: '¡Involúcrate!'
     join_the_chat: "Únete al chat en Gitter, %{link_to_chat}."
-    login_with_github: Entra Con GitHub
+    login_with_github: 'Identifícate con GitHub'
     profile:
-      description: Contribuir a proyectos de código abierto es también una gran forma
-        de construir su perfil en la comunidad y mejorar su CV.
-      getting_started: Es muy fácil de empezar. Incluso las pequeñas contribuciones
-        pueden ser muy valiosas para un proyecto.
-      title: Construya su perfil
-    q_n_a: Preguntas y Respuestas
-    title: 24 Pull Requests
-  how_to_contribute: Como contribuir
+      description: 'Contribuir a proyectos de código abierto es también una gran forma de crear tu perfil en la comunidad y mejorar su CV.'
+      getting_started: 'Es muy sencillo comenzar. Incluso aquellas pequeñas contribuciones pueden ser muy valiosas para un proyecto.'
+      title: 'Crea tu perfil'
+    q_n_a: 'Preguntas y Respuestas'
+    title: '24 Pull Requests'
+  how_to_contribute: '¿Como contribuir?'
   information:
-    codetriage: Devuélvale al código abierto, con un aporte a la vez, con CodeTriage.
-      Obtendrá un issue de su repositorio favorito por día para ayudarle a involucrarse,
-      aprender más y seguir participando en el proyecto.
-    get_ready: "¡Prepárate para 24 Pull Requests %{year} cuando lo haremos todo denuevo!"
+    codetriage: 'Devuélvele al código abierto, un aporte cada vez, con CodeTriage. Obtendrás un issue de tu repositorio favorito por día para ayudar a involucrarte, aprender más y seguir participando en el proyecto.'
+    issuehubio: 'Contribuye al Código Abierto. ¡Busca issues por etiquetas para encontrar aquellos proyectos perfectos para ti!'
+    get_ready: '¡Prepárate para 24 Pull Requests %{year} cuando lo volvamos a hacer!'
     help_open_source: "¿Quieres ayudar con proyectos de código abierto mientras tanto?
       Échale un vistazo a estas otras grandes iniciativas:"
-    last_year_stats: En el %{year}, durante 24 días, <b>%{developers}</b> desarrolladores
-      publicaron <b>%{pull_requests}</b> pull requests para <b>%{projects}</b> proyectos
-      diferentes de código abierto.
-    title: "¡24 Pull Requests %{year} ya está aquí!"
+    last_year_stats: "En el %{year}, durante 24 días, <b>%{developers}</b> desarrolladores publicaron <b>%{pull_requests}</b> Pull Requests para <b>%{projects}</b> proyectos diferentes de código abierto."
+    title: '¡24 Pull Requests %{year} ya está aquí!'
   language:
     developers:
       count: "%{count} desarrolladores utilizando %{language}"
     projects:
-      count: Hay %{count} proyectos usando %{language}
-      suggest: Sugerir un proyecto de %{language}
+      count: 'Hay %{count} Proyectos usando %{language}'
+      suggest: 'Sugerir un proyecto de %{language}'
     projects_count: "%{count} %{language} Proyectos"
     pull_requests:
       latest:
-        count: "'Pull Requests' de %{language} más reciente (%{count} en total)"
-  more: Más
+        count: "Pull Requests de %{language} más reciente (%{count} en total)"
+  locale:
+    cs: "Čeština"
+    de: "Deutsch"
+    el: "Ελληνικά"
+    en: "English"
+    es: "Español"
+    fi: "Suomi"
+    fr: "Français"
+    it: "Italiano"
+    ja: "日本語"
+    nb: "Norsk bokmål"
+    pt_br: "Português do Brasil"
+    ru: "Русский"
+    ta: "தமிழ்"
+    th: "ไทย"
+    translate: "Translate into your language!"
+    uk: "Українська"
+    zh_Hans: "简体中文"
+    zh_Hant: "正體中文"
+  more: 'Más'
   navigation:
-    all_projects: Todos los proyectos
-    dashboard: Dashboard
-    gifted_code: Regalos
-    logout: Salir
-    manage_projects: Gestionar proyectos
-    my_suggestions: Mis sugerencias
-    preferences: Preferencias
-    profile: Perfil
-  no_suggestions: No se ha sugerido ningún proyecto.
-  open_source_yey: Código abierto, yah!
-  or:
+    all_projects: 'Todos los proyectos'
+    dashboard: 'Panel de control'
+    gifted_code: 'Código regalado'
+    logout: 'Salir'
+    manage_projects: 'Administrar proyectos'
+    my_suggestions: 'Mis sugerencias'
+    preferences: 'Preferencias'
+    profile: 'Perfil'
+  no_suggestions: 'No has sugerido ningún proyecto todavía.'
+  nov_reminder:
+    how_to_contribute: "para saber cómo contribuir a 24 Pull Requests entre el 1 y el 24 de Diciembre. Tus contribuciones han de ser pequeñas, desde aquellas simples como arreglar alguna fallo tipográfico, a cualquier cosa increible. Dale caña a Rails. Documenta Express. Arregla aquel bug que reportaste hace un par de meses."
+  open_source_yey: 'Código abierto, Hell Yeah!'
+  or: 'o'
   organisations:
+    languages: 'Lenguajes'
     members:
-      one: Un Miembro
+      one: 'Un Miembro'
       other: "%{count} Miembros"
-    pull_requests: "%{count} pull requests submitted by members"
-    title: "%{count} organizaciones involucradas"
-  organisations_involved_desc: Invite a más personas de su organización a participar.
+    pull_requests: "%{count} Pull Requests enviados por miembros"
+    title: "%{count} Organizaciones involucradas"
+  organisations_involved_desc: 'Invita a más personas de tu organización a participar.'
   preferences:
-    delete_account: "¿Quieres eliminar su cuenta?"
+    delete_account: '¿Quieres eliminar tu cuenta?'
     form:
-      daily:
-      email:
-      email_frequency:
-      never:
-      weekly:
-    frequency_message: Con la frecuencia que selecciones, le enviaremos correos electrónicos
-      a partir de ahora hasta que el proyecto esté terminado, destacando algunos proyectos
-      sugeridos que podría interesarle contribuir. Adicionalmente, vamos a personalizar
-      nuestras sugerencias de acuerdo a los lenguajes basados en su perfil de GitHub.
-      Alternativamente, puede elegir los lenguajes de programación a continuación.
+      daily: 'Diario'
+      email: 'Correo'
+      email_frequency: 'Frecuencia de Correo'
+      never: 'Nunca'
+      weekly: 'Semanal'
+    frequency_message: "Con la frecuencia que selecciones, te enviaremos correos electrónicos a partir de ahora hasta que el proyecto esté terminado, destacando algunos proyectos sugeridos a los que podría interesarte contribuir. Adicionalmente, vamos a personalizar nuestras sugerencias de acuerdo a los lenguajes basados en tu perfil de GitHub. Alternativamente, puedes elegir los lenguajes de programación a continuación."
     hint:
-      confirm_email: Por favor, confirmar tu cuenta de correo electrónico con el enlace
-        que te mandamos.
-    information: Siempre puedes cambiar las preferencias de correo electrónico más
-      tarde.
-    languages: "¿Qué lenguajes de programación conoces?"
-    remove: Eliminar tu cuenta
-    save_and_continue: Guardar y continuar
-    title: Preferencias de correo electrónico
-    twitter: Cuenta de Twitter
-  preferred_languages: Lenguajes de programación favoritos
+      confirm_email: 'Por favor, confirmar tu cuenta de correo electrónico con el enlace que te hemos enviado.'
+    information: 'Siempre puedes cambiar las preferencias de correo electrónico más tarde.'
+    languages: '¿Qué lenguajes de programación prefieres?'
+    remove: 'Desenlazar tu cuenta de Twitter'
+    save: 'Guardar'
+    save_and_continue: 'Guardar y Continuar'
+    setup_help: 'Para comenzar con 24 Pull Requests, por favor, rellena el siguiente formulario.'
+    title: 'Establece tus Preferencias Personales'
+    twitter: 'Cuenta de Twitter'
+    ignore_organisations: ">
+      Si contribuyes de forma regular a repositorios públicos que no quieres que sean monitorizados en este site, añade el nombre de la organización aquí. Puedes añadir varias organizaciones separadas por comas. Esto puede ser útil si codeas abiertamente en el trabajo, o mantienes un repositorio de código abierto tú mismo."
+  preferred_languages: 'Lenguajes preferidos'
   projects:
     admin:
-      search: Búsqueda por repositorios GitHub
-      title: Administrar proyectos
-    claim: "¿Hay proyectos que has sugerido y no que están en la lista? Solicitalos!"
+      search: 'Búsqueda por repositorios GitHub'
+      title: 'Administrar proyectos'
+    claim: '¿Hay proyectos que has sugerido y no que están en la lista? ¡Reclama!'
     edit:
-      title: Editar sugerencia
+      title: 'Editar Sugerencia'
     filter_by_language: 'Filtrar por lenguaje:'
-    for_you: Sugerido para ti
-    help_out: "¿No puedes pensar en un proyecto para contribuir? Tenemos recopilado
-      una lista de fantásticos proyectos de código abierto que les gustaría recibir
-      ayuda."
+    for_you: 'Sugerido para ti'
+    help_out: 'Te cuesta pensar sobre un proyecto al que ayudar? Hemos recopilado un listado de brillantes proyectos de código abierto que estarán encantados de recibir tus Pull Requests.'
     new:
       form:
-        github_url:
-        main_language:
-        project_name:
-        submit_project:
-        summary:
-      info: Una de las maneras en que fomentamos la participación en la comunidad
-        de código abierto es informando a nuestros usuarios conozcan en qué proyectos
-        populares pueden contribuir. Seleccionamos nuestros favoritos, pero siempre
-        estamos abiertos a sugerencias. ¿Tiene algunas ideas? ¡Compártanos su idea!
-      issue_link_text: no dude en decirlo
-      suggestion: 'Sugerencias: ¿Tiene alguna para este proyecto? ¡Somos todo oídos!
-        Si hay algo que te gustaría corregir, %{issue_link}.'
-      title: Sugerir un proyecto
-    suggest: No hay ninguno proyecto para este lenguaje. ¿Puedes %{suggest_link}?
-    suggest_link_text: sugerir uno
-    suggest_new: También, puedes sugerir proyectos que deberíamos añadir a la lista,
-      o añae tu proyecto si deseas recibir ayuda.
+        github_url: 'Github URL'
+        main_language: 'Lenguaje principal'
+        project_name: 'Nombre del Proyecto'
+        submit_project: 'Enviar Proyecto'
+        summary: 'Resumen'
+      info: "Una de las maneras en que fomentamos la participación en la comunidad de código abierto es informando a nuestros usuarios conozcan a qué proyectos populares pueden contribuir. Seleccionamos nuestros favoritos, pero siempre estamos abiertos a sugerencias. ¿Tienes alguna idea? ¡Compártela con nosotros!"
+      issue_link_text: 'sugiere un issue'
+      suggestion: "¿Tienes alguna para este proyecto? ¡Somos todo oídos! Si hay algo que te gustaría corregir, siéntete libre de comentarlo %{issue_link}."
+      title: 'Sugerir un Proyecto'
+    suggest: "No hay ninguno proyecto para este lenguaje. ¿Por qué no %{suggest_link}?"
+    suggest_link_text: 'sugerir uno'
+    suggest_new: "También, puedes sugerir proyectos que deberíamos añadir a la lista, o añadir tu proyecto si deseas recibir ayuda."
     suggestion:
-      edit: Editar la sugerencia
-      update: Actualizar proyecto
+      edit: 'Editar la Sugerencia'
+      update: 'Actualizar Proyecto'
   pull_request:
     download:
-      tooltip: Por lo general, comprobamos los pull requests cada hora, pero si lo
-        desea, puede verificarlo ahora mismo.
-    twitter_message: 'Acabo de abrir un pull request para http://24pullrequests.com,
+      tooltip: 'Por lo general, comprobamos los Pull Requests cada hora, pero si lo deseas, puedes verificarlo ahora mismo.'
+    twitter_message: 'Acabo de abrir un Pull Request para http://24pullrequests.com,
       échale un vistazo: %{issue_url}'
   pull_requests:
     count: "¡%{count} Pull Requests ya enviados!"
     language:
-      count: "¡%{count} pull requests ya se han realizados en %{language}!"
+      count: "¡Ya se han realizado %{count} Pull Requests en %{language}!"
     latest:
       count: "Últimos Pull Requests (%{count} total)"
-  search: Buscar
-  sponsors: Patrocinadores
-  sponsored_by: Patrocinado por
-  suggest_project: Sugerir un proyecto
-  suggested_projects: Proyectos sugeridos
+  search: 'Buscar'
+  sponsors: 'Patrocinadores'
+  sponsored_by: 'Patrocinado por'
+  suggest_project: 'Sugerir un proyecto'
+  suggested_projects: 'Proyectos sugeridos'
   suggestions:
-    title:
+    title: 'Mis Sugerencias'
   twitter:
-    account_linked: "¡Su cuenta de Twitter ha sido vinculada! Publicaremos un tweet
-      cada vez que envías un pull request."
-    account_removed: Su cuenta de Twitter ha sido removida.
+    account_linked: "¡Tu cuenta de Twitter ha sido vinculada! Publicaremos un tweet
+      cada vez que envías un Pull Request."
+    account_removed: 'Tu cuenta de Twitter ha sido desenlazada.'
     link_account:
-      text: Vincular mi cuenta de Twitter
-      tooltip: Si su cuenta de Twitter es vinculada, publicaremos un tweet cada vez
-        que envíes un pull request.
+      text: 'Vincular mi cuenta de Twitter'
+      tooltip: 'Si tu cuenta de Twitter está vinculada, publicaremos un tweet cada vez que envíes un Pull Request.'
   user:
-    grinchy_message: "%{user} es un gruñón para el año de %{year} porque no ha regalado
-      ningún pull request. ¡Bah, paparruchas!"
-    organisations: Miembro de ...
-    pull_request_count: "%{user} ha realizado un total de %{count} pull requests para
+    grinchy_message: "%{user} ha sido un poquito malo este %{year} porque no ha regalado
+      ningún Pull Request. ¡No le regaléis nada hasta que lo haga!"
+    organisations: 'Miembro de ...'
+    pull_request_count: "%{user} ha realizado un total de %{count} Pull Requests durante
       el año %{year}"
-  view_all: Ver todo
-  welcome_back: Hola, %{user}
-  your_pull_requests: Tus 'pull requests'
+  view_all: 'Ver todo'
+  welcome: "¡Bienvenida/o, %{user}!"
+  welcome_back: "Hola otra vez, %{user}"
+  your_pull_requests: 'Tus Pull Requests'
