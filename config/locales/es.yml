@@ -93,7 +93,7 @@ es:
       past_24_pull_requests_events: 'Past 24 Pull Requests Events'
     new:
       form:
-        description: 'Descripción'
+        description: Descripción
         description_placeholder: 'Proporciona una pequeña descripción del grupo y el evento'
         location: 'Localización'
         location_placeholder: 'Por ejemplo: Vigo, SP'
