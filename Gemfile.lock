@@ -306,7 +306,7 @@ GEM
     ruby-progressbar (1.8.1)
     safe_yaml (1.0.4)
     sass (3.4.23)
-    sassc (1.11.0)
+    sassc (1.11.1)
       bundler
       ffi (~> 1.9.6)
       sass (>= 3.3.0)
