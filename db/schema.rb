@@ -157,13 +157,12 @@ ActiveRecord::Schema.define(version: 20161210210606) do
     t.string   "twitter_nickname"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
-    t.string   "coderwall_user_name"
     t.string   "name"
     t.string   "blog"
     t.string   "location"
+    t.boolean  "thank_you_email_sent",                          default: false
     t.decimal  "lat",                   precision: 8, scale: 6
     t.decimal  "lng",                   precision: 9, scale: 6
-    t.boolean  "thank_you_email_sent",                          default: false
     t.string   "ignored_organisations",                         default: [],                 array: true
     t.index ["nickname"], name: "index_users_on_nickname", unique: true, using: :btree
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
