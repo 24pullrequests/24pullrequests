@@ -1,0 +1,26 @@
+version: '2'
+services:
+
+  database:
+    image: postgres:9.6
+    environment:
+      - POSTGRES_PASSWORD=development
+
+  app:
+    image: tfpullrequests
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    links:
+      - database:database.service.tfpullrequests.internal
+    environment:
+      - RAILS_ENV=development
+      - GITHUB_KEY=${GITHUB_KEY}
+      - GITHUB_SECRET=${GITHUB_SECRET}
+      - TFPULLREQUESTS_DATABASE_NAME=postgres
+      - TFPULLREQUESTS_DATABASE_USER=postgres
+      - TFPULLREQUESTS_DATABASE_PASSWORD=development
+      - TFPULLREQUESTS_DATABASE_HOST=database.service.tfpullrequests.internal
+    command: bin/docker-start
