@@ -31,6 +31,6 @@ describe Calendar, type: :model do
     giftable_dates = [Date.new(Tfpullrequests::Application.current_year, 12, 1)]
 
     calendar = Calendar.new(giftable_dates, [])
-    expect(calendar.start_padding).to eq(3)
+    expect(calendar.start_padding).to eq(4)
   end
 end
