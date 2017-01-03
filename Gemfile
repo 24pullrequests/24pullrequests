@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.3.3'
+ruby '2.4.0'
 
 gem 'rails', '5.0.1'
 
@@ -7,7 +7,7 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'omniauth'
 gem 'omniauth-github'
-gem 'omniauth-twitter'
+gem 'omniauth-twitter', git: 'https://github.com/SamSaffron/omniauth-twitter'
 gem 'octokit'
 gem 'rabl'
 gem 'kaminari'

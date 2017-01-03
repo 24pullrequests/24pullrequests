@@ -21,7 +21,7 @@
         tags: ruby,
         become: yes,
         rvm1_user: "root",
-        rvm1_rubies: ["ruby-2.3.3"],
+        rvm1_rubies: ["ruby-2.4.0"],
         rvm1_bundler_install: true,
         rvm1_install_flags: "--auto-dotfiles",
         rvm1_install_path: "/usr/local/rvm",
