@@ -47,11 +47,19 @@ describe 'Static pages', type: :request do
       end
     end
 
-    context "not in December or November" do
+    context "before November" do
       it "shows the finished partial" do
         Timecop.travel(Date.new(Tfpullrequests::Application.current_year, 10, 29))
         visit root_path
-        is_expected.to have_content('24 Pull Requests is finished for')
+        is_expected.to have_content("24 Pull Requests is finished for #{Tfpullrequests::Application.current_year - 1 }")
+      end
+    end
+
+    context "after Christmas" do
+      it "shows the finished partial" do
+        Timecop.travel(Date.new(Tfpullrequests::Application.current_year, 12, 25))
+        visit root_path
+        is_expected.to have_content("24 Pull Requests is finished for #{Tfpullrequests::Application.current_year }")
       end
     end
   end
