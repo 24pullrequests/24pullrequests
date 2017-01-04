@@ -65,5 +65,13 @@ module Tfpullrequests
     def current_year
       Time.current.year
     end
+
+    def last_complete_year
+      if Time.current.month == 12 && Time.current.day > 24
+        current_year
+      else
+        current_year - 1
+      end
+    end
   end
 end
