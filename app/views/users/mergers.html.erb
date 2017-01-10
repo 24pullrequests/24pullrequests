@@ -8,7 +8,7 @@
       <ul class="clearfix avatar-list avatar-list-lg js-user-list">
         <%= render partial: 'merger', collection: @users, as: :user %>
       </ul>
-      <%= link_to_next_page @users, t("more"), remote: true, class: 'btn btn-success more' %>
+      <%= link_to_next_page @users, t("more"), params: params.permit(:year), remote: true, class: 'btn btn-success more' %>
     </div>
   </div>
 </div>

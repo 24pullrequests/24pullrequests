@@ -8,6 +8,7 @@
         .replaceWith(
           "<%= escape_javascript(link_to_next_page @organisations,
                                                  t('more'),
+                                                 params: params.permit(:year),
                                                  remote: true,
                                                  class: 'btn btn-success more') %>"
         );
