@@ -55,7 +55,7 @@ GEM
     brakeman (3.4.1)
     buftok (0.2.0)
     bugsnag (5.0.1)
-    builder (3.2.2)
+    builder (3.2.3)
     callsite (0.0.11)
     capybara (2.11.0)
       addressable
@@ -110,7 +110,7 @@ GEM
       i18n (~> 0.5)
     faraday (0.10.1)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.15)
+    ffi (1.9.17)
     figaro (1.1.1)
       thor (~> 0.14)
     foreman (0.82.0)
