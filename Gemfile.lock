@@ -227,7 +227,7 @@ GEM
       websocket-driver (>= 0.2.0)
     powerpack (0.1.1)
     public_suffix (2.0.5)
-    puma (3.6.2)
+    puma (3.7.0)
     rabl (0.13.1)
       activesupport (>= 2.3.14)
     rack (2.0.1)
@@ -461,4 +461,4 @@ RUBY VERSION
    ruby 2.4.0p0
 
 BUNDLED WITH
-   1.13.7
+   1.14.3
