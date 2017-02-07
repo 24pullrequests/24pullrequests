@@ -115,7 +115,7 @@ GEM
       thor (~> 0.14)
     foreman (0.83.0)
       thor (~> 0.19.1)
-    geocoder (1.4.2)
+    geocoder (1.4.3)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     gmaps4rails (2.1.2)
