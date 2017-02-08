@@ -203,7 +203,7 @@ GEM
       rails
     octokit (4.6.2)
       sawyer (~> 0.8.0, >= 0.5.3)
-    omniauth (1.4.0)
+    omniauth (1.4.1)
       hashie (>= 1.2, < 4)
       rack (>= 1.0, < 3)
     omniauth-github (1.2.1)
