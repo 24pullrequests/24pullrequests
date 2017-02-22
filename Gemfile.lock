@@ -47,7 +47,7 @@ GEM
       public_suffix (~> 2.0, >= 2.0.2)
     arel (7.1.4)
     ast (2.3.0)
-    autoprefixer-rails (6.7.4)
+    autoprefixer-rails (6.7.5)
       execjs
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -120,7 +120,7 @@ GEM
       activesupport (>= 4.1.0)
     gmaps4rails (2.1.2)
     hashdiff (0.3.2)
-    hashie (3.5.3)
+    hashie (3.5.4)
     highline (1.7.8)
     http (2.2.1)
       addressable (~> 2.3)
@@ -461,4 +461,4 @@ RUBY VERSION
    ruby 2.4.0p0
 
 BUNDLED WITH
-   1.14.4
+   1.14.5
