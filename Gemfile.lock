@@ -76,7 +76,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.0.4)
+    concurrent-ruby (1.0.5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     dalli (2.7.6)
@@ -120,7 +120,7 @@ GEM
       activesupport (>= 4.1.0)
     gmaps4rails (2.1.2)
     hashdiff (0.3.2)
-    hashie (3.5.4)
+    hashie (3.5.5)
     highline (1.7.8)
     http (2.2.1)
       addressable (~> 2.3)
@@ -461,4 +461,4 @@ RUBY VERSION
    ruby 2.4.0p0
 
 BUNDLED WITH
-   1.14.4
+   1.14.5
