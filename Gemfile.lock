@@ -47,7 +47,7 @@ GEM
       public_suffix (~> 2.0, >= 2.0.2)
     arel (7.1.4)
     ast (2.3.0)
-    autoprefixer-rails (6.7.5)
+    autoprefixer-rails (6.7.6)
       execjs
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -375,7 +375,7 @@ GEM
       ethon (>= 0.9.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.1.1)
+    uglifier (3.1.2)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
