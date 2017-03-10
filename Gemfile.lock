@@ -227,7 +227,7 @@ GEM
       websocket-driver (>= 0.2.0)
     powerpack (0.1.1)
     public_suffix (2.0.5)
-    puma (3.7.1)
+    puma (3.8.0)
     rabl (0.13.1)
       activesupport (>= 2.3.14)
     rack (2.0.1)
@@ -375,7 +375,7 @@ GEM
       ethon (>= 0.9.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.1.5)
+    uglifier (3.1.6)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
