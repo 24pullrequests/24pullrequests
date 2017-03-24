@@ -351,7 +351,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    term-ansicolor (1.4.0)
+    term-ansicolor (1.4.1)
       tins (~> 1.0)
     terminal-table (1.7.3)
       unicode-display_width (~> 1.1.1)
