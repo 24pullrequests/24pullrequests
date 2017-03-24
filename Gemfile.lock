@@ -52,7 +52,7 @@ GEM
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
-    brakeman (3.5.0)
+    brakeman (3.6.0)
     buftok (0.2.0)
     bugsnag (5.2.0)
     builder (3.2.3)
