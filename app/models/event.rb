@@ -1,7 +1,7 @@
 class Event < ApplicationRecord
   belongs_to :user
   validates :name, :location, :url, :start_time, :description, presence: true
-  validates :url, format: URI.regexp(%w(http https))
+  validates :url, format: URI::Parser.new.make_regexp(%w(http https))
   validate :validate_start_time_is_in_range, if: :start_time
   validate :validate_start_time_is_not_in_the_past, if: :start_time
 
