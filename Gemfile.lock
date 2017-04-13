@@ -47,7 +47,7 @@ GEM
       public_suffix (~> 2.0, >= 2.0.2)
     arel (7.1.4)
     ast (2.3.0)
-    autoprefixer-rails (6.7.7.1)
+    autoprefixer-rails (6.7.7.2)
       execjs
     bindex (0.5.0)
     bootstrap-sass (3.3.7)
@@ -185,7 +185,7 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.0.0)
     naught (1.1.0)
-    newrelic_rpm (4.0.0.332)
+    newrelic_rpm (4.1.0.333)
     nio4r (2.0.0)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
@@ -383,7 +383,7 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    webmock (2.3.2)
+    webmock (3.0.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
