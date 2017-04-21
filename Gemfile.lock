@@ -55,7 +55,7 @@ GEM
       sass (>= 3.3.4)
     brakeman (3.6.1)
     buftok (0.2.0)
-    bugsnag (5.3.0)
+    bugsnag (5.3.1)
     builder (3.2.3)
     callsite (0.0.11)
     capybara (2.13.0)
@@ -233,7 +233,7 @@ GEM
     rack (2.0.1)
     rack-attack (5.0.1)
       rack
-    rack-canonical-host (0.2.2)
+    rack-canonical-host (0.2.3)
       addressable (> 0, < 3)
       rack (>= 1.0.0, < 3)
     rack-contrib (1.2.0)
