@@ -279,8 +279,9 @@ GEM
       rake
     rake (12.0.0)
     request_store (1.3.2)
-    responders (2.3.0)
-      railties (>= 4.2.0, < 5.1)
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
     rspec-activemodel-mocks (1.0.3)
       activemodel (>= 3.0)
       activesupport (>= 3.0)
