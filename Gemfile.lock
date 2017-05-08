@@ -230,7 +230,7 @@ GEM
     puma (3.8.2)
     rabl (0.13.1)
       activesupport (>= 2.3.14)
-    rack (2.0.1)
+    rack (2.0.2)
     rack-attack (5.0.1)
       rack
     rack-canonical-host (0.2.3)
