@@ -380,7 +380,7 @@ GEM
       unf_ext
     unf_ext (0.0.7.4)
     unicode-display_width (1.1.3)
-    web-console (3.5.0)
+    web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
