@@ -19,7 +19,7 @@ gem 'coffee-rails'
 gem 'uglifier'
 gem 'octicons_helper'
 gem 'rack-canonical-host'
-gem 'draper', '~> 3.0.0.pre1' # pre version has rails5 support
+gem 'draper'
 gem 'responders'
 gem 'gmaps4rails'
 gem 'geocoder'
