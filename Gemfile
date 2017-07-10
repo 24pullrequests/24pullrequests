@@ -57,7 +57,7 @@ group :development, :test, :cucumber do
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'webmock', require: false
-  gem 'timecop', '~> 0.9.1'
+  gem 'timecop'
   gem 'christmas_tree_formatter'
 end
 
