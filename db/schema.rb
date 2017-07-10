@@ -141,6 +141,7 @@ ActiveRecord::Schema.define(version: 20161210210606) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.integer  "uid",                                                           null: false
     t.string   "provider",                                                      null: false
     t.string   "nickname",                                                      null: false
     t.string   "email"
@@ -150,7 +151,6 @@ ActiveRecord::Schema.define(version: 20161210210606) do
     t.string   "token"
     t.string   "email_frequency"
     t.integer  "pull_requests_count",                           default: 0
-    t.integer  "uid",                                                           null: false
     t.datetime "last_sent_at"
     t.string   "twitter_token"
     t.string   "twitter_secret"
