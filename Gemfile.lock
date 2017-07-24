@@ -367,7 +367,7 @@ GEM
     thor (0.19.4)
     thread (0.2.2)
     thread_safe (0.3.6)
-    tilt (2.0.7)
+    tilt (2.0.8)
     timecop (0.9.1)
     twitter (6.1.0)
       addressable (~> 2.5)
