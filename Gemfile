@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.4.1'
 
-gem 'rails', '5.0.3'
+gem 'rails', '5.0.6'
 
 gem 'jquery-rails'
 gem 'pg'
@@ -57,7 +57,7 @@ group :development, :test, :cucumber do
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'webmock', require: false
-  gem 'timecop', '~> 0.9.1'
+  gem 'timecop'
   gem 'christmas_tree_formatter'
 end
 
