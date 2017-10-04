@@ -22,7 +22,7 @@ describe 'Admin Projects', type: :request do
 
   describe 'managing projects' do
     it 'search for a project', js: true do
-      fill_in '_repository', with: 'apples'
+      fill_in 'repository', with: 'apples'
       click_on 'Search'
 
       sleep(Capybara.default_max_wait_time)
