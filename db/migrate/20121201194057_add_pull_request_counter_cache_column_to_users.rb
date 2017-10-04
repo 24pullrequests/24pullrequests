@@ -1,4 +1,4 @@
-class AddPullRequestCounterCacheColumnToUsers < ActiveRecord::Migration
+class AddPullRequestCounterCacheColumnToUsers < ActiveRecord::Migration[4.2]
   def change
     add_column :users, :pull_requests_count, :integer, default: 0
 

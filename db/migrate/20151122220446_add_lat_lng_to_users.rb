@@ -1,4 +1,4 @@
-class AddLatLngToUsers < ActiveRecord::Migration
+class AddLatLngToUsers < ActiveRecord::Migration[4.2]
   # Adds geolocation lat/lng to users based on their public GH location
   def change
     add_column :users, :lat, :decimal, precision: 8, scale: 6
