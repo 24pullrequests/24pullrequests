@@ -1,4 +1,4 @@
-class CreateProjectLabels < ActiveRecord::Migration
+class CreateProjectLabels < ActiveRecord::Migration[4.2]
   def change
     create_table :project_labels do |t|
       t.references :project, index: true

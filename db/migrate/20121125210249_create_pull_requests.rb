@@ -1,4 +1,4 @@
-class CreatePullRequests < ActiveRecord::Migration
+class CreatePullRequests < ActiveRecord::Migration[4.2]
   def change
     create_table :pull_requests do |t|
       t.string :title
