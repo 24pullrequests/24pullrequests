@@ -38,4 +38,6 @@ Tfpullrequests::Application.configure do
 
   # Allow Vagrant host access to web console
   config.web_console.whitelisted_ips = '192.168.12.1'
+
+  config.assets.quiet = true
 end

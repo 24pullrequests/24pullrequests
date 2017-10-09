@@ -20,7 +20,7 @@ describe PullRequestDownloadsController, type: :controller do
       expect(user).to receive(:send_thank_you_email_on_24)
 
       post 'create'
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   end
 
