@@ -1,4 +1,4 @@
-class CreateGifts < ActiveRecord::Migration
+class CreateGifts < ActiveRecord::Migration[4.2]
   def change
     create_table :gifts do |t|
       t.integer :user_id,         null: false

@@ -1,4 +1,4 @@
-class CreatePullRequestArchive < ActiveRecord::Migration
+class CreatePullRequestArchive < ActiveRecord::Migration[4.2]
   def change
     create_table :pull_request_archives do |t|
       t.string 'title'
