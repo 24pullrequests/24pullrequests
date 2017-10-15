@@ -5,12 +5,12 @@ gem 'rails', '5.1.4'
 
 gem 'jquery-rails'
 gem 'pg'
-gem 'omniauth'
+gem 'omniauth', '~> 1.7.1'
 gem 'omniauth-github'
 gem 'omniauth-twitter'
 gem 'octokit'
 gem 'rabl'
-gem 'kaminari'
+gem 'kaminari', '~> 1.1.0'
 gem 'twitter'
 gem 'bootstrap-sass'
 gem 'jquery-datetimepicker-rails'
@@ -19,7 +19,7 @@ gem 'coffee-rails'
 gem 'uglifier'
 gem 'octicons_helper'
 gem 'rack-canonical-host'
-gem 'draper'
+gem 'draper', '~> 3.0.1'
 gem 'responders'
 gem 'gmaps4rails'
 gem 'geocoder'
@@ -56,7 +56,7 @@ group :development, :test, :cucumber do
 
   gem 'database_cleaner'
   gem 'shoulda-matchers'
-  gem 'webmock', require: false
+  gem 'webmock', '~> 3.1.0', require: false
   gem 'timecop'
   gem 'christmas_tree_formatter'
 end
