@@ -4,7 +4,7 @@ describe PullRequestsDecorator do
 
   before do
     100.times do
-      FactoryGirl.create :pull_request, body: 'happy 24 pull requests!'
+      FactoryBot.create :pull_request, body: 'happy 24 pull requests!'
     end
   end
 

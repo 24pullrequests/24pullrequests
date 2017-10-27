@@ -1,7 +1,7 @@
 require 'securerandom'
 require 'rspec/mocks'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :aggregation_filter do
     user nil
     title_pattern "MyString"

@@ -3,7 +3,7 @@ require 'rails_helper'
 describe PopularityScorer do
   let(:nickname) { 'nickname' }
   let(:token) { 'token' }
-  let(:project) { FactoryGirl.create(:project) }
+  let(:project) { FactoryBot.create(:project) }
   subject(:popularity_scorer) { PopularityScorer.new(nickname, token, project) }
 
   describe '#score' do

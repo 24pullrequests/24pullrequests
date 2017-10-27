@@ -13,7 +13,7 @@ describe Project, type: :model do
   it { is_expected.to have_db_column(:homepage).of_type(:string) }
 
   context 'validations' do
-    let(:project) { FactoryGirl.build(:project) }
+    let(:project) { FactoryBot.build(:project) }
 
     it 'should not pass on wrong programming language' do
       project.main_language = 'English'
@@ -44,12 +44,12 @@ describe Project, type: :model do
 
   context '#scopes' do
     before do
-      %w(Erlang JavaScript).each { |lan| FactoryGirl.create(:project, main_language: lan)  }
-      2.times { FactoryGirl.create(:project, main_language: 'Haskell', inactive: true) }
+      %w(Erlang JavaScript).each { |lan| FactoryBot.create(:project, main_language: lan)  }
+      2.times { FactoryBot.create(:project, main_language: 'Haskell', inactive: true) }
     end
 
     it 'by_language' do
-      project = FactoryGirl.create(:project, main_language: 'Ruby')
+      project = FactoryBot.create(:project, main_language: 'Ruby')
 
       expect(Project.by_language('ruby')).to eq([project])
     end
@@ -68,7 +68,7 @@ describe Project, type: :model do
   end
 
   context '#deactivate' do
-    let(:project) { FactoryGirl.create(:project) }
+    let(:project) { FactoryBot.create(:project) }
 
     it 'sets the project to inactive' do
       project.deactivate!
@@ -78,7 +78,7 @@ describe Project, type: :model do
   end
 
   context '#issues' do
-    let(:project) { FactoryGirl.create(:project) }
+    let(:project) { FactoryBot.create(:project) }
 
     it 'retrieves github issues that have been active in the last 6 months' do
       client = double(:github_client)
@@ -90,7 +90,7 @@ describe Project, type: :model do
   end
 
   context '#commits' do
-    let(:project) { FactoryGirl.create(:project) }
+    let(:project) { FactoryBot.create(:project) }
 
     it 'retrieves GitHub commits for the project' do
       client = double(:github_client)
@@ -102,7 +102,7 @@ describe Project, type: :model do
   end
 
   context '#score' do
-    let(:project) { FactoryGirl.create(:project) }
+    let(:project) { FactoryBot.create(:project) }
 
     it 'scores the project using the scorer' do
       scorer = double(:popularity_scorer, score: 10)
@@ -113,23 +113,23 @@ describe Project, type: :model do
   end
 
   it 'contribulator url' do
-    project = FactoryGirl.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests')
+    project = FactoryBot.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests')
     expect(project.contribulator_url).to eq('https://contribulator.24pullrequests.com/24pullrequests/24pullrequests')
   end
 
   context '#url' do
     it 'returns the homepage url when one is set' do
-      project = FactoryGirl.create(:project, homepage: 'https://homepage.24pullrequests.com')
+      project = FactoryBot.create(:project, homepage: 'https://homepage.24pullrequests.com')
       expect(project.url).to eq('https://homepage.24pullrequests.com')
     end
 
     it 'returns the github url when a homepage is not set' do
-      project = FactoryGirl.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests')
+      project = FactoryBot.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests')
       expect(project.url).to eq('https://github.com/24pullrequests/24pullrequests')
     end
 
     it 'returns the github url when a homepage is an empty string' do
-      project = FactoryGirl.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests', homepage: '')
+      project = FactoryBot.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests', homepage: '')
       expect(project.url).to eq('https://github.com/24pullrequests/24pullrequests')
     end
   end
