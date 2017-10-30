@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 describe GiftFactory do
-  let(:user) { FactoryGirl.create(:user) }
-  let(:pull_request) { FactoryGirl.create(:pull_request) }
+  let(:user) { FactoryBot.create(:user) }
+  let(:pull_request) { FactoryBot.create(:pull_request) }
   let(:gift_factory) { Gift.public_method(:new) }
 
   describe "#create!" do

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Notification do
 
-  subject(:user) { FactoryGirl.create(:user, email_frequency: 'daily') }
+  subject(:user) { FactoryBot.create(:user, email_frequency: 'daily') }
   subject(:notification)  { Notification.new(user) }
 
   describe '#send_email' do

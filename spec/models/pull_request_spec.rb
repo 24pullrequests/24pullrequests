@@ -28,7 +28,7 @@ describe PullRequest, type: :model do
     end
 
     let(:issue_url) { 'http://github.com/my/issue/url' }
-    let(:pull_request) { FactoryGirl.create :pull_request, :user => user, :issue_url => issue_url }
+    let(:pull_request) { FactoryBot.create :pull_request, :user => user, :issue_url => issue_url }
 
     context 'if the user has authed their twitter account' do
       let(:user) { create :user, :twitter_token => 'foo', :twitter_secret => 'bar' }
@@ -52,14 +52,14 @@ describe PullRequest, type: :model do
   describe '#autogift' do
     context 'when PR body contains "24 pull requests"' do
       it 'creates a gift' do
-        pull_request = FactoryGirl.create :pull_request, body: 'happy 24 pull requests!'
+        pull_request = FactoryBot.create :pull_request, body: 'happy 24 pull requests!'
         expect(pull_request.gifts).not_to be_empty
       end
     end
 
     context 'when PR body does not contain "24 pull requests"' do
       it 'does not create a gift' do
-        pull_request = FactoryGirl.create :pull_request, body: '...and a merry christmas!'
+        pull_request = FactoryBot.create :pull_request, body: '...and a merry christmas!'
         expect(pull_request.gifts).to be_empty
       end
     end

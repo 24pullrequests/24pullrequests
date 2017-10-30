@@ -16,9 +16,9 @@ if Rails.env.development?
   Project.delete_all
   Label.delete_all
 
-  require 'factory_girl_rails'
+  require 'factory_bot_rails'
   require 'faker'
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
   LABELS = %w(documentation design tests feature refactoring)
 
   GRAVATARS = %w(67b26730dbb054da2aefd328708c5b0d a36d4f1831b3e2c95fa1e42fc45f82d5 b9ce9848ccbebcf4688494bf86b2a6fe cbd4648e4cd1dd7e8737c8ca91fcda02 57a90b685ef5eb6b17edf33fa91c4ea8 8ddbf811da78bb0daeeb3cacd7cf743f 0f9f17758e76da17ff4ade389e566321 fde332d18b14c52bc41b50f4952f075a 839ad4b6cf103f3ed8e05f07dbd7bccf f3c558eae6312364be3b963075c6ede5)

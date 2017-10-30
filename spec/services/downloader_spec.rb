@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe Downloader do
-  let(:user) { FactoryGirl.create(:user) }
+  let(:user) { FactoryBot.create(:user) }
   let(:downloader) { Downloader.new(user) }
   let(:gifttoday) { user.gift_for(Time.zone.today) }
 

@@ -20,7 +20,7 @@ OmniAuth.config.test_mode = true
 
 WebMock.disable_net_connect! allow_localhost: true
 
-FactoryGirl.allow_class_lookup = false
+FactoryBot.allow_class_lookup = false
 
 require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
@@ -101,7 +101,7 @@ RSpec.configure do |config|
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
 
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
   config.include Capybara::DSL
 
   # 10/1/2015: Needed for shoulda-matchers 3.0.
