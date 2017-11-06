@@ -67,8 +67,8 @@ GEM
     christmas_tree_formatter (0.1.0)
       rspec-core (~> 3.0)
     cliver (0.3.2)
-    codeclimate-test-reporter (1.0.8)
-      simplecov (<= 0.13)
+    codeclimate-test-reporter (1.0.7)
+      simplecov
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -346,7 +346,7 @@ GEM
       actionpack (> 4, < 5.2)
       activemodel (> 4, < 5.2)
     simple_oauth (0.3.1)
-    simplecov (0.13.0)
+    simplecov (0.15.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
@@ -469,4 +469,4 @@ RUBY VERSION
    ruby 2.4.2p198
 
 BUNDLED WITH
-   1.16.0.pre.3
+   1.16.0
