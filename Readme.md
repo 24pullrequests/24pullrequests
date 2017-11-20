@@ -12,6 +12,19 @@
 
 This is the site to help promote the project, highlighting why, how and where to send your pull requests.
 
+## Table of Contents
+
+- [Get started](#get-started)
+- [Contributors](#contributors)
+- [Development](#development)
+  - [Getting Started](#getting-started)
+    - [Installing a Local Server](#installing-a-local-server)
+    - [Using Vagrant](#using-vagrant)
+  - [Tests](#tests)
+  - [Environment variables](#environment-variables)
+  - [Note on Patches/Pull Requests](#note-on-patchespull-requests)
+  - [Code of Conduct](#code-of-conduct)
+- [Copyright](#copyright)
 
 ## Get started
 
