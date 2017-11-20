@@ -66,14 +66,17 @@ class Map
 $ ->
 
   allowTimes =  []
+  currentYear = (new Date()).getFullYear().toString()
+
   for hour in [0..23]
     for quarter in ["00", "15", "30", "45"]
       allowTimes.push "#{hour}:#{quarter}"
 
+  # @TODO:
   $('.js-datetimepicker').datetimepicker(
-    minDate:'2016/12/01'
-    maxDate:'2016/12/24'
-    startDate:'2016/12/01'
+    minDate: currentYear + '/12/01'
+    maxDate: currentYear + '/12/24'
+    startDate: currentYear + '/12/01'
     allowTimes: allowTimes
   )
 
