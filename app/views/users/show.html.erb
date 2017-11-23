@@ -18,7 +18,6 @@
     <% end %>
     <h2 class="username"><%= @user.nickname %></h2>
     <div class="profile-item">
-      <%= gratipay_button @user.nickname, "btn btn-xs btn-success" %>
       <% if @user.twitter_nickname.present? %>
         <a class="twitter-follow-button" href="https://twitter.com/<%= @user.twitter_nickname %>">
           <%= t("follow_user", twitter: @user.twitter_nickname) %>
