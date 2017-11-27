@@ -22,7 +22,7 @@ This is the site to help promote the project, highlighting why, how and where to
     - [Using Vagrant](#using-vagrant)
   - [Tests](#tests)
   - [Environment variables](#environment-variables)
-  - [Note on Patches/Pull Requests](#note-on-patchespull-requests)
+  - [Contributing](#contributing)
   - [Code of Conduct](#code-of-conduct)
 - [Copyright](#copyright)
 
@@ -150,12 +150,9 @@ as it will use it to learn more about the developers and for pull requests.
 
 Or for more information about using figaro, see https://github.com/laserlemon/figaro
 
-### Note on Patches/Pull Requests
+### Contributing
 
- * Fork the project.
- * Make your feature addition or bug fix.
- * Add tests for it. This is important so I don't break it in a future version unintentionally.
- * Send a pull request. Bonus points for topic branches.
+We are always looking for people to contribute! To find out how to help out, have a look at our [Contributing Guide](CONTRIBUTING.md).
 
 ### Code of Conduct
 
