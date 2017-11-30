@@ -16,7 +16,7 @@ class Project < ApplicationRecord
                'Pure Data', 'Python', 'R', 'Racket', 'Ragel in Ruby Host',
                'Rebol', 'Rouge', 'Ruby', 'Rust', 'Scala', 'Scheme', 'Scilab',
                'Self', 'Shell', 'Slash', 'Smalltalk', 'Squirrel',
-               'Standard ML', 'SuperCollider', 'Swift', 'Tcl', 'Turing', 'TXL',
+               'Standard ML', 'SuperCollider', 'Swift', 'Tcl', 'TeX', 'Turing', 'TXL',
                'TypeScript', 'Vala', 'Verilog', 'VHDL', 'VimL', 'Visual Basic',
                'Volt', 'wisp', 'XC', 'XML', 'XProc', 'XQuery', 'XSLT', 'Xtend']
 
