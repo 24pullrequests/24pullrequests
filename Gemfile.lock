@@ -115,7 +115,7 @@ GEM
       thor (~> 0.14)
     foreman (0.84.0)
       thor (~> 0.19.1)
-    geocoder (1.4.4)
+    geocoder (1.4.5)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     gmaps4rails (2.1.2)
@@ -422,7 +422,7 @@ DEPENDENCIES
   faker
   figaro
   foreman
-  geocoder
+  geocoder (~> 1.4.5)
   gmaps4rails
   i18n-tasks
   jquery-datetimepicker-rails
