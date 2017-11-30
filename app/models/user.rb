@@ -29,6 +29,7 @@ class User < ApplicationRecord
 
   validates :email, presence: true, if: :send_regular_emails?
   validates :email, format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, allow_blank: true, on: :update }
+  validates :unsubscribe_token, presence: true, uniqueness: true
 
   geocoded_by :location, latitude: :lat, longitude: :lng
   after_validation :geocode
