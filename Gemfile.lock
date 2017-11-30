@@ -237,8 +237,8 @@ GEM
     rack-canonical-host (0.2.3)
       addressable (> 0, < 3)
       rack (>= 1.0.0, < 3)
-    rack-contrib (1.2.0)
-      rack (>= 0.9.1)
+    rack-contrib (2.0.0)
+      rack (~> 2.0)
     rack-google-analytics (1.2.0)
       actionpack
       activesupport
