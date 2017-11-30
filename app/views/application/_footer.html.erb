@@ -23,6 +23,8 @@
           <%= link_to 'API', api_path %>
         </li>
         <li>
+          <%= link_to t('unsubscribe.unsubscribe'), unsubscribe_path %>
+        <li>
           <div class="locale dropup">
             <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="locale" type="button">
               <%= image_tag "flags/#{I18n.locale}.png", class: "flag", alt: " " %>

@@ -273,3 +273,9 @@ it:
   view_all: Mostra tutto
   welcome_back: Bentornato, %{user}
   your_pull_requests: Le tue pull request
+  unsubscribe:
+    login:
+    title:
+    unsubscribe:
+    success:
+    invalid_token:

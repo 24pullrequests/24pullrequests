@@ -372,3 +372,9 @@ en:
   welcome: Welcome, %{user}!
   welcome_back: Welcome back, %{user}
   your_pull_requests: Your Pull Requests
+  unsubscribe:
+    login: 'Github username or email address'
+    title: 'Unsubscribe From Our Mailing List'
+    unsubscribe: 'Unsubscribe'
+    success: You have successfully unsubscribed from our mailing list.
+    invalid_token: Invalid subscription token

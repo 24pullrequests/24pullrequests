@@ -266,3 +266,9 @@ tr:
   view_all: Hepsini Göster
   welcome_back: Hoşgeldin, %{user}
   your_pull_requests: Pull Requests'lerin
+  unsubscribe:
+    login:
+    title:
+    unsubscribe:
+    success:
+    invalid_token:

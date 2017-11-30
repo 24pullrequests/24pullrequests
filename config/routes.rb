@@ -11,6 +11,7 @@ Tfpullrequests::Application.routes.draw do
 
   get '/mergers', to: 'users#mergers', as: :mergers
   get '/users/:id', to: 'users#show'
+  get '/users/unsubscribe/:token', to: 'users#unsubscribe', as: :user_unsubscribe
 
   resources :events
 
@@ -59,6 +60,9 @@ Tfpullrequests::Application.routes.draw do
   get 'humans', to: 'static#humans'
   get 'api', to: 'static#api'
   get 'contributing', to: 'static#contributing'
+
+  get '/unsubscribe', to: 'unsubscribes#new', as: :unsubscribe
+  post '/unsubscribe', to: 'unsubscribes#create'
 
   resources :languages, only: [:show] do
     member do

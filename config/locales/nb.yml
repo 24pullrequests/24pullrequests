@@ -269,3 +269,9 @@ nb:
   view_all: Se alle
   welcome_back: Velkommen tilbake, %{user}
   your_pull_requests: Dine pull requests
+  unsubscribe:
+    login:
+    title:
+    unsubscribe:
+    success:
+    invalid_token:

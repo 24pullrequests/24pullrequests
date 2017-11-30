@@ -24,4 +24,15 @@ class UsersController < ApplicationController
     @users = User.mergers(current_year).order("merged_pull_requests_count DESC").page params[:page]
     respond_with @users
   end
+
+  def unsubscribe
+    @user = User.find_by_unsubscribe_token(params[:token])
+    if @user
+      @user.unsubscribe!
+      flash[:notice] = t('unsubscribe.success')
+    else
+      flash[:notice] = t('unsubscribe.invalid_token')
+    end
+    redirect_to root_path
+  end
 end

@@ -289,3 +289,9 @@ el:
   view_all: "Ολα"
   welcome_back: "Καλωσήρθες %{user}"
   your_pull_requests: "Τα Pull Requests σου"
+  unsubscribe:
+    login:
+    title:
+    unsubscribe:
+    success:
+    invalid_token:

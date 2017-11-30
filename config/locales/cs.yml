@@ -282,3 +282,9 @@ cs:
   welcome: Vítej, %{user}!
   welcome_back: Vítez zpět, %{user}
   your_pull_requests: Tvé pull requesty
+  unsubscribe:
+    login:
+    title:
+    unsubscribe:
+    success:
+    invalid_token:

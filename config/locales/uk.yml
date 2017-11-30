@@ -252,3 +252,9 @@ uk:
   view_all: "Подивится"
   welcome_back: "Алоха, %{user}"
   your_pull_requests: "Ваші Пулл Реквести"
+  unsubscribe:
+    login:
+    title:
+    unsubscribe:
+    success:
+    invalid_token:

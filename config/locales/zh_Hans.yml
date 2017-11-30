@@ -220,3 +220,9 @@ zh_Hans:
   view_all: "查看全部"
   welcome_back: "欢迎回来， %{user}"
   your_pull_requests: "你的合并请求(pull request)s"
+  unsubscribe:
+    login:
+    title:
+    unsubscribe:
+    success:
+    invalid_token:

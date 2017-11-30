@@ -301,3 +301,9 @@ ja:
   welcome: ようこそ、%{user}さん!
   welcome_back: お帰りなさい、%{user}さん
   your_pull_requests: あなたの Pull Request
+  unsubscribe:
+    login:
+    title:
+    unsubscribe:
+    success:
+    invalid_token:

@@ -252,3 +252,9 @@ fi:
   view_all: Katso kaikki
   welcome_back: Tervetuloa takaisin, %{user}
   your_pull_requests: Sinun vetopyynnöt
+  unsubscribe:
+    login:
+    title:
+    unsubscribe:
+    success:
+    invalid_token:
