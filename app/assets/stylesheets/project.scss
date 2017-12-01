@@ -31,4 +31,7 @@
 
 #filters .checkbox {
   display: inline-block;
+  label {
+    padding: 0;
+  }
 }
