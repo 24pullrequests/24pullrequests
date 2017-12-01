@@ -28,7 +28,7 @@ class Downloader
           body:         pr['payload']['pull_request']['body'],
           state:        pr['payload']['pull_request']['state'],
           merged:       pr['payload']['pull_request']['merged'],
-          merged_by_id: pr['payload']['pull_request']['merged_by'].fetch("id", nil),
+          merged_by_id: pr['payload']['pull_request'].fetch('merged_by', {}).fetch("id", nil),
           language:     pr['repo']['language']
         )
       else
