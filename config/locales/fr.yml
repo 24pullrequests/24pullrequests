@@ -263,3 +263,9 @@ fr:
   view_all: Voir tout
   welcome_back: Bienvenue, %{user}
   your_pull_requests: Vos Pull Requests
+  unsubscribe:
+    login:
+    title:
+    unsubscribe:
+    success:
+    invalid_token:

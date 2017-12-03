@@ -275,3 +275,9 @@ zh_Hant:
   welcome: "歡迎， %{user}"
   welcome_back: "歡迎回來， %{user}"
   your_pull_requests: "你的 Pull Requests"
+  unsubscribe:
+    login:
+    title:
+    unsubscribe:
+    success:
+    invalid_token:

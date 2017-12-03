@@ -327,3 +327,9 @@ pt_br:
   welcome: Bem vindo, %{user}!
   welcome_back: Bem vindo de volta, %{user}
   your_pull_requests: Seus Pull Requests
+  unsubscribe:
+    login:
+    title:
+    unsubscribe:
+    success:
+    invalid_token:

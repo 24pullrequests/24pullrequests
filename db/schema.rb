@@ -164,8 +164,10 @@ ActiveRecord::Schema.define(version: 20161210210606) do
     t.decimal  "lat",                   precision: 8, scale: 6
     t.decimal  "lng",                   precision: 9, scale: 6
     t.string   "ignored_organisations",                         default: [],                 array: true
+    t.string "unsubscribe_token", null: false
     t.index ["nickname"], name: "index_users_on_nickname", unique: true, using: :btree
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
+    t.index ["unsubscribe_token"], name: "index_users_on_unsubscribe_token", unique: true
   end
 
   add_foreign_key "aggregation_filters", "users"

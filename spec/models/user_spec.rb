@@ -49,6 +49,40 @@ describe User, type: :model do
         end
       end
     end
+
+    describe 'before_validation' do
+      describe '.generate_unsubscribe_token' do
+        subject { build :user }
+
+        it 'is called on valid?' do
+          expect(subject).to receive(:generate_unsubscribe_token)
+          subject.valid?
+        end
+
+        context 'unsubscribe_token is blank' do
+          before do
+            subject.unsubscribe_token = nil
+          end
+
+          it 'generates an unsubscribe_token' do
+            subject.valid?
+            expect(subject.unsubscribe_token).not_to be_nil
+          end
+        end
+
+        context 'unsubscribe_token is not blank' do
+          let!(:token) { SecureRandom.uuid }
+          before do
+            subject.unsubscribe_token = token
+          end
+
+          it 'does not override unsubscribe_token' do
+            subject.valid?
+            expect(subject.unsubscribe_token).to eq token
+          end
+        end
+      end
+    end
   end
 
   %w(daily weekly).each do |frequency|
@@ -343,6 +377,23 @@ describe User, type: :model do
     end
   end
 
+  describe '.unsubscribe!' do
+    subject { create(:user) }
+    %w(daily weekly).each do |frequency|
+      context "when user has subscribed to #{frequency} emails" do
+        before do
+          subject.email_frequency = frequency
+          subject.save
+        end
+
+        it 'sets email_frequency to none' do
+          subject.unsubscribe!
+          expect(subject.email_frequency).to eq 'none'
+        end
+      end
+    end
+  end
+
   describe '#ignored_organisations_string' do
     before { user.ignored_organisations = %w{foo bar} }
 
@@ -356,6 +407,34 @@ describe User, type: :model do
 
     it "converts the string of organisations to set of tags" do
       expect(user.ignored_organisations.to_set).to eq(%w{foo bar moo oink}.to_set)
+    end
+  end
+
+  describe '#find_by_login' do
+    let!(:user) { create(:user, email: 'TEST@example.com', nickname: 'TESTUSER') }
+
+    context 'with valid nickname' do
+      it 'finds user by nickname' do
+        expect(User.find_by_login('testuser')).to eq user
+      end
+    end
+
+    context 'with invalid nickname' do
+      it 'does not find a user' do
+        expect(User.find_by_login('foouser')).to be_nil
+      end
+    end
+
+    context 'with valid email' do
+      it 'finds user by email' do
+        expect(User.find_by_login('test@example.com')).to eq user
+      end
+    end
+
+    context 'with invalid email' do
+      it 'does not find a user' do
+        expect(User.find_by_login('foo@example.com')).to be_nil
+      end
     end
   end
 

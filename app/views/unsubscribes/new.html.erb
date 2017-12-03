@@ -1,0 +1,6 @@
+<h3> <%= t("unsubscribe.title") %>
+<hr/>
+<%= simple_form_for :unsubscribe, url: unsubscribe_path do |form| %>
+  <%= form.input :login, as: :string, wrapper_html: { class:  'col-lg-6 col-md-4' }, :label => false, required: true, placeholder: t("unsubscribe.login") %>
+  <%= form.button :submit, t("unsubscribe.unsubscribe") %>
+<% end %>

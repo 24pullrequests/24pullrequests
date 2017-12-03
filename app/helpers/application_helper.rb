@@ -66,6 +66,12 @@ module ApplicationHelper
     link_to url, url
   end
 
+  def user_unsubscribe_url(user, type = 'html')
+    url = "http://24pullrequests.com/users/unsubscribe/#{user.unsubscribe_token}"
+    return url if type == 'text'
+    link_to url, url
+  end
+
   def unconfirmed_email?
     logged_in? && current_user.unconfirmed?
   end

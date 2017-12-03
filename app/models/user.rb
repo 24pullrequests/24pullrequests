@@ -24,16 +24,26 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :skills, reject_if: proc { |attributes| !Project::LANGUAGES.include?(attributes['language']) }
 
   before_save :check_email_changed
+  before_validation :generate_unsubscribe_token
   after_create :download_pull_requests, :estimate_skills, :download_user_organisations
 
   validates :email, presence: true, if: :send_regular_emails?
   validates :email, format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, allow_blank: true, on: :update }
+  validates :unsubscribe_token, presence: true, uniqueness: true
 
   geocoded_by :location, latitude: :lat, longitude: :lng
   after_validation :geocode
 
   def self.find_by_nickname!(nickname)
     where(['lower(nickname) =?', nickname.downcase]).first!
+  end
+
+  def self.find_by_unsubscribe_token(token)
+    where(unsubscribe_token: token).take
+  end
+
+  def self.find_by_login(login)
+    where(['lower(nickname) =? OR lower(email) =?', login.downcase, login.downcase]).take
   end
 
   def self.create_from_auth_hash(hash)
@@ -230,6 +240,11 @@ class User < ApplicationRecord
     pull_requests.excluding_organisations(ignored_organisations)
   end
 
+  def unsubscribe!
+    self.email_frequency = 'none'
+    save
+  end
+
   private
 
   def repo_languages
@@ -243,5 +258,9 @@ class User < ApplicationRecord
     self.confirmed_at = nil
 
     ConfirmationMailer.confirmation(self).deliver_now
+  end
+
+  def generate_unsubscribe_token
+    self.unsubscribe_token ||= SecureRandom.uuid
   end
 end

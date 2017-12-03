@@ -308,3 +308,9 @@ es:
   welcome: "¡Bienvenida/o, %{user}!"
   welcome_back: "Hola otra vez, %{user}"
   your_pull_requests: 'Tus Pull Requests'
+  unsubscribe:
+    login:
+    title:
+    unsubscribe:
+    success:
+    invalid_token:

@@ -293,3 +293,9 @@ ta:
   view_all: "அனைத்தையும் காண்பி"
   welcome_back: "மீண்டும் வரவேற்கிறோம், %{user}"
   your_pull_requests: "உங்கள் Pull Request-கள்"
+  unsubscribe:
+    login:
+    title:
+    unsubscribe:
+    success:
+    invalid_token:
