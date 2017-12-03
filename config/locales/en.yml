@@ -367,9 +367,9 @@ en:
       pull requests or merged pull requests. Bah humbug!"
     organisations: Member of...
     pull_request_count:
-      one: "%{user} has made %{count} total pull request so far in Christmas
+      one: "%{user} has made %{count} pull request so far in Christmas
       %{year}"
-      other: "%{user} has made %{count} total pull requests so far in Christmas
+      other: "%{user} has made %{count} pull requests so far in Christmas
       %{year}"
   view_all: View All
   welcome: Welcome, %{user}!
