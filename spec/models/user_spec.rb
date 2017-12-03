@@ -9,6 +9,8 @@ describe User, type: :model do
 
   it { is_expected.to accept_nested_attributes_for(:skills) }
 
+  it { should respond_to :unsubscribe_token }
+
   describe 'callbacks' do
     describe 'before_save' do
       describe '.check_email_changed' do
