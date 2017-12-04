@@ -284,8 +284,11 @@ el:
     grinchy_message: "η/ο %{user} ειναι ενας καλικάντζαρος. Δεν έχει δωρίσει κανένα
       pull request για το %{year}!"
     organisations:
-    pull_request_count: "%{user} έχει δωρίσει συνολικά %{count} pull requests μέχρι
-      τώρα για το %{year}"
+    pull_request_count:
+      one: "%{user} έχει δωρίσει %{count} pull request μέχρι τώρα για τα Χριστούγεννα
+      %{year}"
+      other: "%{user} έχει δωρίσει %{count} pull requests μέχρι τώρα για τα Χριστούγεννα
+      %{year}"
   view_all: "Ολα"
   welcome_back: "Καλωσήρθες %{user}"
   your_pull_requests: "Τα Pull Requests σου"
