@@ -28,7 +28,7 @@ describe 'Projects', type: :request do
       fill_in 'Name', with: Faker::Lorem.words.first
       fill_in 'GitHub URL', with: 'http://github.com/akira/24pullrequests'
       fill_in 'Summary', with: Faker::Lorem.paragraphs.first[0..199]
-      fill_in 'Main language', with: 'Ruby'
+      find(:css, '#project_main_language').find(:option, 'Ruby').select_option
       click_on 'Submit Project'
 
       click_on 'My Suggestions'
@@ -96,7 +96,7 @@ describe 'Projects', type: :request do
       it 'should be able to edit projects they have suggested' do
         within('.java') { click_on 'Edit' }
 
-        fill_in 'Main language', with: 'Python'
+        find(:css, '#project_main_language').find(:option, 'Python').select_option
         click_on 'Submit Project'
 
         should have_content 'Project updated successfully!'
