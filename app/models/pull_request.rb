@@ -41,6 +41,7 @@ class PullRequest < ApplicationRecord
         state:      json['payload']['pull_request']['state'],
         body:       json['payload']['pull_request']['body'],
         merged:     json['payload']['pull_request']['merged'],
+        merged_by_id: (json['payload']['pull_request']['merged_by'] || {})['id'],
         repo_name:  json['repo']['name'],
         language:   json['repo']['language']
       }
