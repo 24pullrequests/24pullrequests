@@ -46,7 +46,7 @@ describe 'Users', type: :request do
         it 'has pull requests' do
           click_on 'Profile'
 
-          is_expected.to have_content 'akira has made 2 total pull requests ' \
+          is_expected.to have_content 'akira has made 2 pull requests ' \
           "so far in Christmas #{Time.zone.now.year}"
 
           is_expected.to have_link gift.pull_request.title
@@ -61,7 +61,7 @@ describe 'Users', type: :request do
           it 'filters out repos for ignored organisations but still allows gifts' do
             click_on 'Profile'
 
-            is_expected.to have_content 'akira has made 1 total pull requests ' \
+            is_expected.to have_content 'akira has made 1 pull request ' \
               "so far in Christmas #{Time.zone.now.year}"
 
             is_expected.to have_link "Moar foos"

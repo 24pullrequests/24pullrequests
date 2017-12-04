@@ -366,7 +366,10 @@ en:
     grinchy_message: "%{user} is being a grinch for Christmas %{year} with no gifted
       pull requests or merged pull requests. Bah humbug!"
     organisations: Member of...
-    pull_request_count: "%{user} has made %{count} total pull requests so far in Christmas
+    pull_request_count:
+      one: "%{user} has made %{count} pull request so far in Christmas
+      %{year}"
+      other: "%{user} has made %{count} pull requests so far in Christmas
       %{year}"
   view_all: View All
   welcome: Welcome, %{user}!
