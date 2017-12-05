@@ -63,7 +63,7 @@ class ProjectsController < ApplicationController
       message = "This repository doesn't exist or belongs to someone else"
     end
 
-    redirect_to '/my_suggestions', notice: message
+    redirect_to my_suggestions_path, notice: message
   end
 
   def autofill
