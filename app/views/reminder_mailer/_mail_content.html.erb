@@ -11,13 +11,13 @@
 <p>We've got some suggested projects for you to send pull requests to <%= this_time %>.</p>
 <p>
   <% if @user.pull_requests.year(Tfpullrequests::Application.current_year).any? %>
-    You can view the pull requests you've made so far at http://24pullrequests.com/dashboard/.
+    You can view the pull requests you've made so far at <%= Rails.configuration.home_url %>/dashboard/.
   <% else %>
-    You haven't sent any pull requests yet. Once you send a pull request, you can view your progress at http://24pullrequests.com/dashboard/.
+    You haven't sent any pull requests yet. Once you send a pull request, you can view your progress at <%= Rails.configuration.home_url %>/dashboard/.
   <% end %>
 </p>
 <p>
-  You can customise which types of project we suggest by setting your favourite languages in the preferences area here: http://24pullrequests.com/preferences
+  You can customise which types of project we suggest by setting your favourite languages in the preferences area here: <%= Rails.configuration.home_url %>/preferences
 </p>
 <h3>Suggested projects:</h3>
 <ul>
