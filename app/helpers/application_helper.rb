@@ -49,7 +49,7 @@ module ApplicationHelper
   end
 
   def contributing_url(type = 'html')
-    url = 'http://24pullrequests.com/contributing'
+    url = "#{Rails.configuration.home_url}/contributing"
     return url if type == 'text'
     link_to url, url
   end
@@ -61,13 +61,13 @@ module ApplicationHelper
   end
 
   def preferences_url(type = 'html')
-    url = 'http://24pullrequests.com/preferences'
+    url = "#{Rails.configuration.home_url}/preferences"
     return url if type == 'text'
     link_to url, url
   end
 
   def user_unsubscribe_url(user, type = 'html')
-    url = "http://24pullrequests.com/users/unsubscribe/#{user.unsubscribe_token}"
+    url = "#{Rails.configuration.home_url}/users/unsubscribe/#{user.unsubscribe_token}"
     return url if type == 'text'
     link_to url, url
   end

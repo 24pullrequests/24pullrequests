@@ -73,5 +73,7 @@ module Tfpullrequests
         current_year - 1
       end
     end
+
+    config.home_url = 'https://24pullrequests.com'
   end
 end

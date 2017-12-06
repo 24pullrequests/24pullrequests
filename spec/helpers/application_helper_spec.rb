@@ -36,12 +36,12 @@ describe ApplicationHelper, type: :helper do
 
   describe '#contributing_url' do
     it 'returns an anchor tag with a link to the contributing section of 24pullrequests when no type is specified' do
-      resulting_html = '<a href="http://24pullrequests.com/contributing">http://24pullrequests.com/contributing</a>'
+      resulting_html = '<a href="https://24pullrequests.com/contributing">https://24pullrequests.com/contributing</a>'
       expect(helper.contributing_url).to eql(resulting_html)
     end
 
     it 'returns just the url to the contribution section of 24pullrequests when type equals text' do
-      url = 'http://24pullrequests.com/contributing'
+      url = 'https://24pullrequests.com/contributing'
       expect(helper.contributing_url('text')).to eql(url)
     end
   end
@@ -61,12 +61,12 @@ describe ApplicationHelper, type: :helper do
 
   describe '#preferences_url' do
     it 'returns an anchor tag with a link to the preferences section of 24pullrequests when no type is specified' do
-      resulting_html = '<a href="http://24pullrequests.com/preferences">http://24pullrequests.com/preferences</a>'
+      resulting_html = '<a href="https://24pullrequests.com/preferences">https://24pullrequests.com/preferences</a>'
       expect(helper.preferences_url).to eql(resulting_html)
     end
 
     it 'returns just the url to the preferences section of 24pullrequests when type equals text' do
-      url = 'http://24pullrequests.com/preferences'
+      url = 'https://24pullrequests.com/preferences'
       expect(helper.preferences_url('text')).to eql(url)
     end
   end
