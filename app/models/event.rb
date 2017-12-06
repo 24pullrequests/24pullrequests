@@ -15,7 +15,7 @@ class Event < ApplicationRecord
   end
 
   def validate_start_time_is_in_range
-    errors.add(:start_time, :not_in_range) unless (Time.parse('1st December')..Time.parse('24th December')).cover?(start_time)
+    errors.add(:start_time, :not_in_range) unless (Time.parse('1st December')..Time.parse('25th December')).cover?(start_time)
   end
 
   def validate_start_time_is_not_in_the_past

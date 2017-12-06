@@ -75,7 +75,7 @@ $ ->
   # @TODO:
   $('.js-datetimepicker').datetimepicker(
     minDate: currentYear + '/12/01'
-    maxDate: currentYear + '/12/24'
+    maxDate: currentYear + '/12/25'
     startDate: currentYear + '/12/01'
     allowTimes: allowTimes
   )
