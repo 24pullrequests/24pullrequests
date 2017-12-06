@@ -48,28 +48,8 @@ module ApplicationHelper
     @translations[I18n.locale].with_indifferent_access
   end
 
-  def contributing_url(type = 'html')
-    url = 'http://24pullrequests.com/contributing'
-    return url if type == 'text'
-    link_to url, url
-  end
-
-  def twitter_url(type = 'html')
-    url = 'http://twitter.com/24pullrequests'
-    return url if type == 'text'
-    link_to url, url
-  end
-
-  def preferences_url(type = 'html')
-    url = 'http://24pullrequests.com/preferences'
-    return url if type == 'text'
-    link_to url, url
-  end
-
-  def user_unsubscribe_url(user, type = 'html')
-    url = "http://24pullrequests.com/users/unsubscribe/#{user.unsubscribe_token}"
-    return url if type == 'text'
-    link_to url, url
+  def twitter_url
+    'http://twitter.com/24pullrequests'
   end
 
   def unconfirmed_email?

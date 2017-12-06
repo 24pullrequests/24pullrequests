@@ -11,13 +11,13 @@
 <p>We've got some suggested projects for you to send pull requests to <%= this_time %>.</p>
 <p>
   <% if @user.pull_requests.year(Tfpullrequests::Application.current_year).any? %>
-    You can view the pull requests you've made so far at http://24pullrequests.com/dashboard/.
+    You can view the pull requests you've made so far at <%= link_to nil, dashboard_url %>.
   <% else %>
-    You haven't sent any pull requests yet. Once you send a pull request, you can view your progress at http://24pullrequests.com/dashboard/.
+    You haven't sent any pull requests yet. Once you send a pull request, you can view your progress at <%= link_to nil, dashboard_url %>.
   <% end %>
 </p>
 <p>
-  You can customise which types of project we suggest by setting your favourite languages in the preferences area here: http://24pullrequests.com/preferences
+  You can customise which types of project we suggest by setting your favourite languages in the preferences area here: <%= link_to nil, preferences_url %>
 </p>
 <h3>Suggested projects:</h3>
 <ul>
@@ -26,7 +26,7 @@
       <h4>
         <%= project.name %>
         (<%= project.main_language %>)
-        <%= link_to project.github_url, project.github_url %>
+        <%= link_to nil, project.github_url %>
       </h4>
       <p>
         <%= project.description %>
