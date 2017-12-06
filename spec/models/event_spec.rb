@@ -36,6 +36,13 @@ describe Event, type: :model do
       end
     end
 
+    it 'should allow events on December 24th' do
+      Timecop.freeze(Time.parse('15th December 2015 12:00')) do
+        event.start_time = Time.parse('24th December 2015 13:00')
+        expect(event.valid?).to be true
+      end
+    end
+
     context 'after 1st December' do
       it 'should not pass with a start_at within of 1st December - 24th December' do
         Timecop.freeze(Time.parse('1st December 2015')) do
