@@ -72,6 +72,9 @@ tr:
       bütün projelere bakalım:'
     no_pull_requests: Henüz hiç pull request göndermedeniz. Daha ne bekliyorsunuz?
     synchronize: Pull Request'leri senkon et
+    tweet_progress:
+      one:
+      other:
   delete_account:
     are_you_sure: Hesabınızı gerçekten silmek istediğinizden emin olmak istiyoruz.
       Hesabınızı ve pull request'leriniz bu site üzerinden silinecektir.

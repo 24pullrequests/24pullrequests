@@ -67,6 +67,9 @@ de:
       beliebter Projekte:'
     no_pull_requests: Du hast noch keine Pull Requests gesendet, worauf wartest Du!?
     synchronize: Pull Requests synchronisieren
+    tweet_progress:
+      one:
+      other:
   delete_account:
     are_you_sure: Wir möchten sicherstellen, dass Du wirklich Dein Konto löschen möchtest.
       Dadurch werden Dein Profil und all Deine Pull Requests von der Webseite entfernt.

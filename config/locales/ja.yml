@@ -67,6 +67,9 @@ ja:
     pull_requests: Wonder what people up to this holiday? Check out these pull requests,
       or submit a pull request now and find yours here!
     synchronize: Pull Requests を同期
+    tweet_progress:
+      one:
+      other:
   delete_account:
     are_you_sure: We just wanted to make sure you really do wish to delete your account.
       This will remove your profile and all pull requests from the site, although

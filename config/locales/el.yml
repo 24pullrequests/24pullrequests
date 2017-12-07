@@ -65,6 +65,9 @@ el:
       μια λίστα με δημοφιλή projects."
     no_pull_requests: "Δεν έχεις στείλει καθόλου pull requests, τί περιμένεις;!"
     synchronize: "Συγχρόνισε τα Pull Requests σου"
+    tweet_progress:
+      one:
+      other:
   delete_account:
     are_you_sure: "Θέλουμε να σιγουρευτούμε ότι πραγματικά θέλεις να διαγράψεις το
       λογαριασμό σου. Το προφίλ σου και όλες οι pull requests σου θα αφαιρεθούν από

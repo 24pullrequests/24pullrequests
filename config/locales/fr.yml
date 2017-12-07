@@ -66,6 +66,9 @@ fr:
       créé une liste de projets populaires :'
     no_pull_requests: Vous n'avez pas ouvert de pull requests, qu'attendez-vous?!
     synchronize: Synchroniser les Pull Requests
+    tweet_progress:
+      one:
+      other:
   delete_account:
     are_you_sure: Nous voulions simplement vérifier que vous souhaitez réellement
       supprimer votre compte, cela supprimera votre profil et toutes les pull requests
