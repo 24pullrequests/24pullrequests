@@ -59,6 +59,9 @@ th:
     help_out: "นึกโครงการที่อยากช่วยไม่ออก? เราได้รวบรวมโครงการที่น่าสนใจมาให้:"
     no_pull_requests: "คุณยังไม่ได้ส่ง pull request อีกเหรอ? จะรอช้าอยู่ทำไม"
     synchronize: "เชื่อมต่อข้อมูล pull request"
+    tweet_progress:
+      one:
+      other:
   delete_account:
     are_you_sure: "คุณแน่ใจหรือไม่ที่จะลบบัญชีและ pull request ต่างๆ แต่โครการที่ถูกแยะยำจะไม่ถูกลบ"
     cancel: "ฉันเปลี่ยนใจแล้ว พาฉันกลับไป"

@@ -53,6 +53,9 @@ cs:
     pull_requests: Zajímá vás co ostatní dělají tyto Vánoce? Podívejte se na tyhle
       pull requesty a nebo pošlete nějaké vlastní - najdete je pak zde!
     synchronize: Synchronizovat pull requesty
+    tweet_progress:
+      one:
+      other:
   delete_account:
     are_you_sure: Chceme jenom vědět, jestli chcete opravdu odstranit svůj účet. Odstraníme
       Váš profil a všechny vaše pull requesty z těchto stránek. Všechny navrhované

@@ -79,6 +79,9 @@ it:
       più popolari al momento:'
     no_pull_requests: Non hai inviato nessuna pull request, cosa stai aspettando?!
     synchronize: Sincronizza pull request
+    tweet_progress:
+      one:
+      other:
   delete_account:
     are_you_sure: Sei sicuro di voler cancellare il tuo account? Il tuo profilo e
       le tue pull request verranno rimossi dal sito (i progetti segnalati non verranno

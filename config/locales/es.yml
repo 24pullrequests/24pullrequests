@@ -67,6 +67,9 @@ es:
     no_pull_requests: 'Aún has enviado ningún Pull Request. ¿A qué estás esperando?!'
     pull_requests: '¿Te preguntas lo que ha estado haciendo la gente durante estas vacaciones? Echa un vistazo a estos Pull Requests, o envia un Pull Request y verás el tuyo aquí.'
     synchronize: 'Sincronizar Pull Requests'
+    tweet_progress:
+      one:
+      other:
   deactivate: 'Desactivar'
   delete: 'Borrar'
   delete_account:

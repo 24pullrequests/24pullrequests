@@ -85,6 +85,9 @@ pt_br:
     pull_requests: Se perguntando o que a galera anda fazendo neste feriado? Veja
       estes pull requests e envie o seu agora!
     synchronize: Sincronizar Pull Requests
+    tweet_progress:
+      one:
+      other:
   delete_account:
     are_you_sure: Nós só queremos verificar se você realmente quer apagar sua conta,
       isso irá remover seu perfil e todos os seus pull requests deste site, porem

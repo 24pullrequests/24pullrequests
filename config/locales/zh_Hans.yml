@@ -58,6 +58,9 @@ zh_Hans:
     help_out: "想不出你想要参与的项目吗？我们帮您整理好了一些热门的项目："
     no_pull_requests: "您还没有发送任何合并请求(pull request)， 你还等什么呢？！"
     synchronize: "同步合并请求(pull request)"
+    tweet_progress:
+      one:
+      other:
   delete_account:
     are_you_sure: "请确认删除帐号。删除您的帐号会删除您的用户信息，和所有在本站发去的合并请求(pull request)，不过您建议的项目会得到保存。"
     cancel: "我改变主意了"

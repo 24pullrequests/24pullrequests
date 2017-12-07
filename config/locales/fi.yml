@@ -66,6 +66,9 @@ fi:
       listan suosituista projekteista:'
     no_pull_requests: Et ole lähettänyt yhtään vetopyyntöä, mitä oikein odotat?!
     synchronize: Synkronoi vetopyynnöt
+    tweet_progress:
+      one:
+      other:
   delete_account:
     are_you_sure: Haluamme vain varmistaa että todella hauat poistaa tilisi, tämä
       poistaa profiilisi ja kaikki vetopyynnöt sivulta, mutta ehdottamasi projektit
