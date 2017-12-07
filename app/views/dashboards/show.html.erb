@@ -25,9 +25,9 @@
               <%= pull_requests.count %>
             </span>
             <% if pull_requests.count == 1 %>
-              <% tweetstring = "I've sent 1 pull request in December!" %>
+              <% tweetstring = t("dashboard.tweet_progress_singular") %>
             <% else %>
-              <% tweetstring = "I've sent #{pull_requests.count} pull requests in December!" %>
+              <% tweetstring = t("dashboard.tweet_progress_plural", count: pull_requests.count) %>
             <% end %>
             <% user_url = "https://24pullrequests.com/users/#{user.nickname}" %>
             <a class="twitter-share-button" data-url="<%= user_url %>" data-hashtags="24pr" data-text="<%= tweetstring %>" data-via="24pullrequests" href="https://twitter.com/share">Tweet</a>
