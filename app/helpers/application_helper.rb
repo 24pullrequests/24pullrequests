@@ -40,7 +40,7 @@ module ApplicationHelper
   end
 
   def available_locales
-    %w(en es el pt_br fi fr de ru uk th it nb ta tr zh_Hans zh_Hant ja cs)
+    %w(en es el pt_br fi fr de ru uk th it nb ta tr zh_Hans zh_Hant ja cs hi)
   end
 
   def current_translations
