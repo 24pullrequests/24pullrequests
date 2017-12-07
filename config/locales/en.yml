@@ -381,4 +381,4 @@ en:
     title: 'Unsubscribe From Our Mailing List'
     unsubscribe: 'Unsubscribe'
     success: You have successfully unsubscribed from our mailing list.
-invalid_token: Invalid subscription token
+    invalid_token: Invalid subscription token
