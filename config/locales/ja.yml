@@ -77,7 +77,7 @@ ja:
     notification_info: If you simply want to stop receiving email notifications you
       can change your  %{email_preferences_link}.
     title: Delete your account
-  developers_involved: Developers already involved
+  developers_involved: 人の開発者が参加しました
   developers_involved_desc: Join everyone here and make open source better.
   developers_using_language: Developers using %{language}
   edit: "編集"
