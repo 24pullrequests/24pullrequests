@@ -22,12 +22,8 @@ describe User, type: :model do
         end
 
         context 'email is present' do
-          it 'generates a confirmation token' do
-            expect(subject).to receive(:generate_confirmation_token)
-            subject.save
-          end
-
           it 'sends a confirmation email' do
+            expect(subject).to receive(:generate_confirmation_token)
             expect(ConfirmationMailer).to receive(:confirmation).and_return double('ConfirmationMailer', deliver_now: true)
             subject.save
           end

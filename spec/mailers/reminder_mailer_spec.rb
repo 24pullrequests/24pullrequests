@@ -12,6 +12,7 @@ describe ReminderMailer, type: :mailer do
       skills: [],
       pull_requests: double(:pull_request, year: []),
       suggested_projects: Project.all,
+      unsubscribe_token: 'unsubscribe-token'
     })
   end
 
