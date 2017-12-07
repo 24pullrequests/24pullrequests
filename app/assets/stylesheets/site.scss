@@ -679,6 +679,11 @@ abbr[title] {
   }
 }
 
+.twitter-share-button {
+  margin-left: 10px;
+  margin-bottom: -5px;
+}
+
 //490 is where it starts to look bad on the dashboard
 @media only screen and (max-device-width : 490px) {
   .mobile-no-float {
