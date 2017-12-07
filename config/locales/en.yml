@@ -85,8 +85,9 @@ en:
     pull_requests: Wonder what people are up to this holiday? Check out these pull requests,
       or submit a pull request now and find yours here!
     synchronize: Synchronize Pull Requests
-    tweet_progress_singular: I’ve sent 1 pull request in December! Join me in giving back to open source with @24pullrequests.
-    tweet_progress_plural: I’ve sent %{count} pull requests in December! Join me in giving back to open source with @24pullrequests.
+    tweet_progress:
+      one: I’ve sent 1 pull request in December! Join me in giving back to open source with @24pullrequests.
+      other: I’ve sent %{count} pull requests in December! Join me in giving back to open source with @24pullrequests.
   deactivate: Deactivate
   delete: Delete
   delete_account:

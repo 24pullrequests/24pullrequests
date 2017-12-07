@@ -24,13 +24,7 @@
             <span class="label label-info" id="pull-requests-count">
               <%= pull_requests.count %>
             </span>
-            <% if pull_requests.count == 1 %>
-              <% tweetstring = t("dashboard.tweet_progress_singular") %>
-            <% else %>
-              <% tweetstring = t("dashboard.tweet_progress_plural", count: pull_requests.count) %>
-            <% end %>
-            <% user_url = "https://24pullrequests.com/users/#{user.nickname}" %>
-            <a class="twitter-share-button" data-url="<%= user_url %>" data-hashtags="24pr" data-text="<%= tweetstring %>" data-via="24pullrequests" href="https://twitter.com/share">Tweet</a>
+            <a class="twitter-share-button" data-url="<%= user_url(user) %>" data-hashtags="24pr" data-text="<%= t("dashboard.tweet_progress", count: pull_requests.count) %>" data-via="24pullrequests" href="https://twitter.com/share">Tweet</a>
             <script>
         
               !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
