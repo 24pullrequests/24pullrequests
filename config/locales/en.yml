@@ -367,8 +367,7 @@ en:
       tooltip: If you link your Twitter account, we’ll post a tweet whenever you open
         a pull request!
   user:
-    grinchy_message: "%{user} is being a grinch for Christmas %{year} with no gifted
-      pull requests or merged pull requests. Bah humbug!"
+    no_current_pr_message: "%{user} has gifted no pull requests or merged pull requests this year."
     organisations: Member of...
     pull_request_count:
       one: "%{user} has made %{count} pull request so far in Christmas

@@ -217,7 +217,7 @@ zh_Hans:
       text: "与你的推特帐号绑定"
       tooltip: "如果你绑定你的推特帐号，我们会在你发起合并请求(pull request)时自动发一条信息！"
   user:
-    grinchy_message: "在 %{year} 年，%{user} 是一个圣诞怪杰。他发起了〇个合并请求(pull request)。 鸭蛋！"
+    no_current_pr_message: "在 %{year} 年，%{user} 是一个圣诞怪杰。他发起了〇个合并请求(pull request)。 鸭蛋！"
     organisations: "一名成员"
     pull_request_count: "在 %{year} 年，%{user} 一共发起了 %{count} 次合并请求(pull request)。"
   view_all: "查看全部"

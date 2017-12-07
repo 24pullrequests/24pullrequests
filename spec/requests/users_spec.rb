@@ -28,9 +28,7 @@ describe 'Users', type: :request do
         it 'should display the grinchy message' do
           click_on 'Profile'
 
-          is_expected.to have_content "akira is being a grinch for Christmas " \
-          "#{Time.zone.now.year} with no gifted pull requests " \
-          "or merged pull requests. Bah humbug!"
+          is_expected.to have_content "akira has gifted no pull requests or merged pull requests this year."
         end
       end
 

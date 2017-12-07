@@ -288,7 +288,7 @@ ta:
       tooltip: "உங்கள் ட்விட்டர் கணக்கை இணைத்தால், நீங்கள் ஒவ்வொரு 'pull request'
         கொடுக்கும்போது ட்வீட் செய்வோம்"
   user:
-    grinchy_message: "%{year}-ல் ஒரு pull request கூட பரிசளிக்காமல் மிக சுயநலவாதியாக
+    no_current_pr_message: "%{year}-ல் ஒரு pull request கூட பரிசளிக்காமல் மிக சுயநலவாதியாக
       %{user} இருக்கிறார்!"
     organisations: Member of...
     pull_request_count: "%{year}-ல் %{user} இதுவரைக்கும் %{count} pull request-கள்

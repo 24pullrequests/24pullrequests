@@ -322,7 +322,7 @@ pt_br:
       tooltip: Se você integrar sua conta do Twitter, nós iramos tweetar sempre que
         você fizer em pull request!
   user:
-    grinchy_message: "%{user} você está parecendo um grinch em %{year}, não fez nenhum
+    no_current_pr_message: "%{user} você está parecendo um grinch em %{year}, não fez nenhum
       pull requests de presente. Bah humbug!"
     organisations: Membro de...
     pull_request_count: "%{user} fez %{count} pull requests até agora, em %{year}"

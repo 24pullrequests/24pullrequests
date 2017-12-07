@@ -278,7 +278,7 @@ cs:
       text: Připojte Váš Twitter účet
       tooltip: Když připojíte Váš Twitter účet, tak budeme tweetovat vaše pull requesty!
   user:
-    grinchy_message: "%{user} je o Vánocích %{year} grinch! Žádné darované pull requesty!"
+    no_current_pr_message: "%{user} je o Vánocích %{year} grinch! Žádné darované pull requesty!"
     organisations: "Člen"
     pull_request_count: "%{user} poslal o Vánocích %{year} celkem %{count} pull requestů"
   view_all: Zobrazit vše

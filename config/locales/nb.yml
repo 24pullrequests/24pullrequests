@@ -265,7 +265,7 @@ nb:
       tooltip: Om du linker opp Twitter-kontoen din så legger vi et en tweet når du
         åpner en pull request!
   user:
-    grinchy_message: "%{user} er en grinch i %{year} med ingen pull requests. Humbug!"
+    no_current_pr_message: "%{user} er en grinch i %{year} med ingen pull requests. Humbug!"
     organisations: Medlem av...
     pull_request_count: "%{user} har laget %{count} pull requests totalt så langt
       i %{year}"

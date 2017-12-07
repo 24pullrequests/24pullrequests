@@ -263,7 +263,7 @@ de:
       tooltip: Wenn Du Dein Twitter-Konto verbindest, werden wir für Dich twittern
         wann immer Du einen Pull Request eröffnest!
   user:
-    grinchy_message: "%{user} ist %{year} ein Grinch &mdash; keine Pull Requests.
+    no_current_pr_message: "%{user} ist %{year} ein Grinch &mdash; keine Pull Requests.
       Bah humbug!"
     organisations: Mitglied von...
     pull_request_count: "%{user} hat %{year} bisher %{count} Pull Requests gesendet"

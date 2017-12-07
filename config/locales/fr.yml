@@ -259,7 +259,7 @@ fr:
       tooltip: Si vous liez votre compte Twitter, nous posterons un tweet à chaque
         pull request que vous ouvrirez!
   user:
-    grinchy_message: "%{user} devient un radin  pour %{year} et n'a ouvert aucune
+    no_current_pr_message: "%{user} devient un radin  pour %{year} et n'a ouvert aucune
       pull requests. Escroc!"
     organisations: Membre de...
     pull_request_count: "%{user} a ouvert au total %{count} pull requests jusque %{year}"
