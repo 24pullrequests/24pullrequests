@@ -55,7 +55,8 @@ ja:
   claim: 主張
   clear: 削除
   contributors:
-    title: "貢献者"
+    title: 貢献者
+    location_privacy: すべての位置データは、現在アクティブなユーザのパブリックなGitHubプロファイルから取得されます。
   dashboard:
     christmas_activity: ここではクリスマスまでにあなたが行い、トレースされたすべての活動を見ることができます。
     gift_it: Gift it!
