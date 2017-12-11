@@ -56,6 +56,7 @@ el:
   clear: "Αφαίρεση"
   contributors:
     title: Contributors
+    location_privacy:
   dashboard:
     christmas_activity: "Εδώ μπορείς να δεις τη δραστηριότητα σου για τις μέρες μέχρι
       τα Χριστούγεννα."
@@ -225,6 +226,7 @@ el:
     save_and_continue: "Αποθήκευση επιλογων"
     title: "Προτιμήσεις ηλεκτρονικου ταχυδρομείου"
     twitter: "Λογαριασμός Twitter"
+    ignore_organisations:
   preferred_languages: "Προτιμωμενες γλωσσες"
   projects:
     admin:

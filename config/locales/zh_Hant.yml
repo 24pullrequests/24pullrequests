@@ -56,6 +56,7 @@ zh_Hant:
   clear: "取消"
   contributors:
     title: "主要貢獻者"
+    location_privacy:
   dashboard:
     christmas_activity: "在這裡你可以看到你在聖誕節前的所有動態。"
     gift_it: "送出！"
@@ -218,6 +219,7 @@ zh_Hant:
     setup_help: "在開始參與 24 Pull Requests 之前，請先設定個人偏好。"
     title: "設定你的個人喜好"
     twitter: "Twitter 帳號"
+    ignore_organisations:
   preferred_languages: "語言偏好"
   projects:
     admin:

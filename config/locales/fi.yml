@@ -56,6 +56,7 @@ fi:
   claim: Lunasta
   contributors:
     title: Ydintoimittajat
+    location_privacy:
   dashboard:
     christmas_activity: Täältä näet kaikki tapahtumat mitä olemme jäljittäneet sinulle
       tämän Joulun juoksusta.
@@ -188,6 +189,7 @@ fi:
     save_and_continue: Tallenna ja Jatka
     title: Aseta sähköposti asetukset
     twitter: Twitter Tili
+    ignore_organisations:
   preferred_languages: Toivotut kielet
   projects:
     admin:

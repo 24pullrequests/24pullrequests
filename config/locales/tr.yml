@@ -62,6 +62,7 @@ tr:
   clear: Sil
   contributors:
     title: "Çekirdek Kadro"
+    location_privacy:
   dashboard:
     christmas_activity: Burası Noel'e kadar sizin için takip ettiğimiz bütün aktiviteleri
       görebileceğiniz yer.
@@ -200,6 +201,7 @@ tr:
     save_and_continue: Kaydet ve Devam Et
     title: Kişisel Özelliklerini Ayarla
     twitter: Twitter Hesabı
+    ignore_organisations:
   preferred_languages: Tercih edilen programlama dilleri
   projects:
     admin:

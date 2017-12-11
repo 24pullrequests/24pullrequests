@@ -56,6 +56,7 @@ uk:
   claim: "Заявити"
   contributors:
     title: "Основні автори"
+    location_privacy:
   dashboard:
     christmas_activity: "Тут ви можете побачити всю діяльність, яку ми зібрали для
       вас напередодні Різдва."
@@ -187,6 +188,7 @@ uk:
     save_and_continue: "Зберегти та продовжити"
     title: "Налаштувати електронну пошти"
     twitter: "Твіттер акаунт"
+    ignore_organisations:
   preferred_languages: "Мови, що вам подобаються"
   projects:
     admin:

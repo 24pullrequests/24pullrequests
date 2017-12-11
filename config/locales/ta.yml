@@ -66,6 +66,7 @@ ta:
   clear: "அழி"
   contributors:
     title: "கோர் பங்களிப்பாளர்கள்"
+    location_privacy:
   dashboard:
     christmas_activity: "இங்குதான் இந்த கிறிஸ்துமஸ்வரை நாங்கள் கண்காணித்த உங்கள் நடவடிக்கைகளைக்
       காணலாம்."
@@ -227,6 +228,7 @@ ta:
     save_and_continue: "சேமிக்கவும் மற்றும் தொடரவும்"
     title: "உங்கள் தனிப்பட்ட விருப்பங்களை அமைக்கவும்"
     twitter: "ட்விட்டர் கணக்கு"
+    ignore_organisations:
   preferred_languages: "விருப்பப்பட்ட மொழிகள்"
   projects:
     admin:

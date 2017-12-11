@@ -60,6 +60,7 @@ ru:
   clear: "Очистить"
   contributors:
     title: "Основные авторы"
+    location_privacy:
   dashboard:
     christmas_activity: "Здесь вы сможете увидеть всю вашу активность в преддверии
       Рождества."
@@ -246,6 +247,7 @@ ru:
     setup_help: "Для того, что бы начать 24 Пулл-реквеста, пожалуйста, сначала заполните следующую форму"
     title: "Настройки рассылки"
     twitter: Twitter
+    ignore_organisations:
   preferred_languages: "Предпочитаемые языки"
   projects:
     admin:

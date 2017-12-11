@@ -41,6 +41,7 @@ cs:
   clear: Vyčistit
   contributors:
     title: Přispěvatelé
+    location_privacy:
   dashboard:
     christmas_activity: Zde pro vás trackujeme všechnu vaši aktivitu v průběhu prosince
     gift_it: Daruj!
@@ -220,6 +221,7 @@ cs:
     setup_help: Než začnete, prosím vyplňte tento formulář
     title: Nastavte si své osobní preference
     twitter: Twitter účet
+    ignore_organisations:
   preferred_languages: Preferované jazyky
   projects:
     admin:

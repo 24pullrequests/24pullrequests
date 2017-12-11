@@ -69,6 +69,7 @@ it:
   clear: Pulisci
   contributors:
     title: Collaboratori principali
+    location_privacy:
   dashboard:
     christmas_activity: Qui troverai un resoconto della tua attività sul sito nella
       corsa fino a Natale.
@@ -207,6 +208,7 @@ it:
     save_and_continue: Salva e continua
     title: Imposta le notifiche
     twitter: Profilo Twitter
+    ignore_organisations:
   preferred_languages: Lingue preferite
   projects:
     admin:

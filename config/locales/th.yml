@@ -52,6 +52,7 @@ th:
   claim: "อ้างสิทธิ์"
   contributors:
     title: "ผู้มีส่วนร่วม"
+    location_privacy:
   dashboard:
     christmas_activity: "นี่คือกิจกรรมทั้งหมดของคุณก่อนถึงวันคริสต์มาส"
     gift_it:
@@ -165,6 +166,7 @@ th:
     save_and_continue: "บันทึก"
     title: "ตั้งค่าอีเมล"
     twitter: "บัญชีทวิตเตอร์"
+    ignore_organisations:
   preferred_languages: "ภาาาที่เลือก"
   projects:
     admin:

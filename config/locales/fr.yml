@@ -56,6 +56,7 @@ fr:
   claim: Réclamer
   contributors:
     title: Contributeurs
+    location_privacy:
   dashboard:
     christmas_activity: C'est là que vous pouvez voir toute l'activité que nous avons
       enregistré pour vous jusqu'à Noël.
@@ -195,6 +196,7 @@ fr:
     save_and_continue: Enregistrer et Continuer
     title: Préférences de courriel
     twitter: Compte Twitter
+    ignore_organisations:
   preferred_languages: Langages préférés
   projects:
     admin:

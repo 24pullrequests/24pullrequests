@@ -57,6 +57,7 @@ de:
   claim: Anspruch erheben
   contributors:
     title: Contributors
+    location_privacy:
   dashboard:
     christmas_activity: Hier kannst Du all Deine Aktivitäten sehen, die wir für Dich
       in der Adventszeit festgehalten haben.
@@ -202,6 +203,7 @@ de:
     save_and_continue: Speichern und weiter
     title: Email-Einstellungen
     twitter: Twitter-Konto
+    ignore_organisations:
   preferred_languages: Bevorzugte Sprachen
   projects:
     admin:

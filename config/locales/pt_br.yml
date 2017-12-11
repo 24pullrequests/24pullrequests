@@ -73,6 +73,7 @@ pt_br:
   clear: Limpar
   contributors:
     title: Contribuidores
+    location_privacy:
   dashboard:
     christmas_activity: Aqui é onde você pode ver todas as atividades que nós estamos
       monitorando para você na corrida até o Natal.
@@ -260,6 +261,7 @@ pt_br:
       o formulário abaixo.
     title: Configure suas preferências de email
     twitter: Twitter
+    ignore_organisations:
   preferred_languages: Linguagens de preferência
   projects:
     admin:

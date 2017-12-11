@@ -65,6 +65,7 @@ nb:
   clear: Tøm
   contributors:
     title: Hoved-bidragsytere
+    location_privacy:
   dashboard:
     christmas_activity: Dette er hvor du kan se all aktiviteten vi har sett fra deg
       opp mot jul.
@@ -204,6 +205,7 @@ nb:
     save_and_continue: Lagre og fortsett
     title: Velg dine preferanser
     twitter: Twitter-konto
+    ignore_organisations:
   preferred_languages: Foretrukkede språk
   projects:
     admin:
