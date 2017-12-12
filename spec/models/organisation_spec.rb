@@ -86,17 +86,17 @@ describe Organisation, type: :model do
 
     context 'with valid login' do
       it 'finds organization if capitalization same' do
-        expect(Organisation.find_by_login('TestOrg')).to eq organisation
+        expect(Organisation.find_by_login!('TestOrg')).to eq organisation
       end
 
       it 'finds organization if capitalization differs' do
-        expect(Organisation.find_by_login('TESTorg')).to eq organisation
+        expect(Organisation.find_by_login!('TESTorg')).to eq organisation
       end
     end
 
     context 'with invalid login' do
       it 'does not find an organization' do
-        expect(Organisation.find_by_login('fooOrg')).to be_nil
+        expect { Organisation.find_by_login!('fooOrg') }.to raise_error(ActiveRecord::RecordNotFound)
       end
     end
   end

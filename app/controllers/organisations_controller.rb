@@ -8,7 +8,7 @@ class OrganisationsController < ApplicationController
   end
 
   def show
-    @organisation = Organisation.find_by_login(params[:id])
+    @organisation = Organisation.find_by_login!(params[:id])
     respond_with @organisation
   end
 end

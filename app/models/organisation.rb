@@ -20,8 +20,8 @@ class Organisation < ApplicationRecord
       where(login: response.login).first_or_create(params)
     end
 
-    def find_by_login(login)
-      where(['lower(login) =?', login.downcase]).take
+    def find_by_login!(login)
+      where(['lower(login) =?', login.downcase]).first!
     end
   end
 
