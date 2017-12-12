@@ -19,6 +19,10 @@ class Organisation < ApplicationRecord
 
       where(login: response.login).first_or_create(params)
     end
+
+    def find_by_login(login)
+      where(['lower(login) =?', login.downcase]).take
+    end
   end
 
   def active_languages
