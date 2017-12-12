@@ -80,6 +80,27 @@ describe Organisation, type: :model do
     end
   end
 
+
+  describe '#find_by_login' do
+    let!(:organisation) { create(:organisation, login: 'TestOrg') }
+
+    context 'with valid login' do
+      it 'finds organization if capitalization same' do
+        expect(Organisation.find_by_login!('TestOrg')).to eq organisation
+      end
+
+      it 'finds organization if capitalization differs' do
+        expect(Organisation.find_by_login!('TESTorg')).to eq organisation
+      end
+    end
+
+    context 'with invalid login' do
+      it 'does not find an organization' do
+        expect { Organisation.find_by_login!('fooOrg') }.to raise_error(ActiveRecord::RecordNotFound)
+      end
+    end
+  end
+
   def update_pull_request_counts
     Tfpullrequests::Application.load_tasks
     Rake::Task['refresh_pull_request_counts'].execute
