@@ -345,7 +345,7 @@ hi:
       text: अपने ट्विटर अकाउंट लिंक करें
       tooltip: यदि आप अपने ट्विटर अकाउंट से लिंक करते हैं, तो जब भी आप एक Pull Requests खोलते हैं हम एक ट्वीट पोस्ट करेंगे!
   user:
-    grinchy_message: "%{user} क्रिसमस %{year} के लिए कोई भेंट वाले Pull Requests या मर्ज किए गए पुल अनुरोधों के लिए झंझट नहीं रहा है।"
+    no_current_pr_message:
     organisations: ...का सदस्य
     pull_request_count:
       one: "%{user} ने %{count} को क्रिसमस %{year} में अब तक Pull Request किया है"

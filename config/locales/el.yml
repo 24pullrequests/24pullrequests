@@ -284,8 +284,7 @@ el:
       tooltip: "Αν συνδέσεις το λογαριασμό του twitter σου, θα στέλνουμε ένα tweet
         κάθε φορά που ανοίγεις ένα καινούριο pull request"
   user:
-    grinchy_message: "η/ο %{user} ειναι ενας καλικάντζαρος. Δεν έχει δωρίσει κανένα
-      pull request για το %{year}!"
+    no_current_pr_message:
     organisations:
     pull_request_count:
       one: "%{user} έχει δωρίσει %{count} pull request μέχρι τώρα για τα Χριστούγεννα

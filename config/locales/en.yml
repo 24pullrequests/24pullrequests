@@ -237,7 +237,7 @@ en:
     en: English
     es: Español
     fi: Suomi
-    fr: Français 
+    fr: Français
     hi: "हिंदी"
     it: Italiano
     ja: "日本語"
@@ -367,8 +367,7 @@ en:
       tooltip: If you link your Twitter account, we’ll post a tweet whenever you open
         a pull request!
   user:
-    grinchy_message: "%{user} is being a grinch for Christmas %{year} with no gifted
-      pull requests or merged pull requests. Bah humbug!"
+    no_current_pr_message: "%{user} has gifted no pull requests or merged pull requests this year. <a href='https://github.com/24pullrequests/24pullrequests/blob/master/CONTRIBUTING.md'>Can we help you get started?</a>"
     organisations: Member of...
     pull_request_count:
       one: "%{user} has made %{count} pull request so far in Christmas

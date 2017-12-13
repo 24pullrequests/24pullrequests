@@ -247,8 +247,7 @@ fi:
       text: Yhdistä Twitter tilisi
       tooltip: Jos yhdistät twitter tilisi, lähetämme tweetin aina kun avaat vetopyynnön!
   user:
-    grinchy_message: "%{user} on grinch %{year} vuonna lahjoittamatta yhtään vetopyyntöä.
-      Bah humbug!"
+    no_current_pr_message:
     organisations:
     pull_request_count: "%{user} on tehnyt %{count} vetopyyntöä tähän mennessä vuonna
       %{year}"

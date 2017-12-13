@@ -308,8 +308,7 @@ ru:
       tooltip: "Если вы привяжете вашу учетную запись в твиттере, то мы сможем твитить
         про ваши пулл-реквесты!"
   user:
-    grinchy_message: "%{user} в %{year} году не пошлет ни одного пулл-реквеста?! Не
-      верим!"
+    no_current_pr_message:
     organisations: "Организации"
     pull_request_count: "%{user} в %{year} году послал пулл-реквестов: %{count}"
   view_all: "Посмотреть все"
