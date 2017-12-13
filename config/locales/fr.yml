@@ -58,31 +58,31 @@ fr:
               already_confirmed: "%{attribute} est déjà confirmé"
               required_for_confirmation: "%{attribute} est requis pour confirmation"
   api:
-    description: 
-    title: 
+    description:
+    title:
     callback:
-      details: 
-      title: 
+      details:
+      title:
     organisations:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
     pagination:
-      details: 
-      title: 
+      details:
+      title:
     projects:
-      details: 
-      title: 
+      details:
+      title:
     pull_requests:
-      details: 
-      meta_details: 
-      title: 
+      details:
+      meta_details:
+      title:
     users:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
   contributors:
-    location_privacy: 
+    location_privacy:
     title: Contributeurs
   dashboard:
     christmas_activity: C'est là que vous pouvez voir toute l'activité que nous avons enregistré pour vous jusqu'à Noël.
@@ -94,8 +94,8 @@ fr:
     pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: Synchroniser les Pull Requests
     tweet_progress:
-      one: 
-      other: 
+      one:
+      other:
   delete_account:
     are_you_sure: Nous voulions simplement vérifier que vous souhaitez réellement supprimer votre compte, cela supprimera votre profil et toutes les pull requests du site, mais les projets suggérés resteront.
     cancel: J'ai changé d'avis, reprenez moi!
@@ -151,10 +151,10 @@ fr:
     title: Code offert
     view_your_gifts: Tous vos cadeaux apparaîtront sur votre %{calendar_link}.
     form:
-      date: 
+      date:
       gift_it: Offrez lui un cadeau !
-      pull_requests: 
-      tweet: 
+      pull_requests:
+      tweet:
   homepage:
     about: Qu'est-ce que c'est?
     about_text: "<p>24 Pull Requests est une initiative annuelle pour encourager les développeurs du monde entier à ouvrir une pull request chaque jour en Décembre jusqu'à Noël.</p> <p>Ce site aide à promouvoir le projet, mettre en avant pourquoi, comment et où ouvrir vos pull requests.</p><p>Connectez vous avec votre compte GitHub et nous suivrons et mettrons en avant vos pull requests et suggérerons des projets sur lesquels travailler.</p>"
@@ -171,7 +171,7 @@ fr:
       title: Events
       view_events: View events
     involved:
-      contributing_path: 
+      contributing_path:
       description: Il y a de nombreuses manières de s'impliquer dans un projet open source, améliorer la documentation, aider à corriger des bugs, améliorer la qualité du code et des tests, ou ajouter de nouvelles fonctionnalités.
       special_page: Nous avons préparé un %{contributing_path}, où vous pouvez trouver des informations sur comment contribuer.
       take_a_look: Si l'open source est nouveau pour vous, vous pouvez y jeter un oeil.
@@ -240,7 +240,7 @@ fr:
   preferences:
     delete: Vous souhaitez supprimer votre compte ?
     frequency_message: À la fréquence que vous choisissez, nous vous enverrons des emails à partir de maintenant jusqu'à la fin du projet, mettant en avant des projets auxquels vous pourriez contribuer. Comme bonus, nous personnaliserons les suggestions aux langages que vous connaissez, basées sur les repos de votre profil GitHub. Vous pouvez également sélectionner vos langages en dessous.
-    ignore_organisations: 
+    ignore_organisations:
     information: Vous pourrez modifier vos préférences plus tard.
     languages: Quels langages connaissez-vous?
     remove: Supprimer votre compte
@@ -304,13 +304,13 @@ fr:
       text: Lier votre compte Twitter
       tooltip: Si vous liez votre compte Twitter, nous posterons un tweet à chaque pull request que vous ouvrirez!
   unsubscribe:
-    invalid_token: 
-    login: 
-    success: 
-    title: 
-    unsubscribe: 
+    invalid_token:
+    login:
+    success:
+    title:
+    unsubscribe:
   user:
-    no_current_pr_message: 
+    no_current_pr_message:
     organisations: Membre de...
     pull_request_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"

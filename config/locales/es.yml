@@ -94,8 +94,8 @@ es:
     pull_requests: "¿Te preguntas lo que ha estado haciendo la gente durante estas vacaciones? Echa un vistazo a estos Pull Requests, o envia un Pull Request y verás el tuyo aquí."
     synchronize: Sincronizar Pull Requests
     tweet_progress:
-      one: 
-      other: 
+      one:
+      other:
   delete_account:
     are_you_sure: Queremos estar seguros de que quieres eliminar tu cuenta. Esto elimnará tu perfil y todos los Pull Ruquests del sitio, pero los proyectos sugeridos permanecerán.
     cancel: He cambiado de idea, ¡volver!
@@ -304,13 +304,13 @@ es:
       text: Vincular mi cuenta de Twitter
       tooltip: Si tu cuenta de Twitter está vinculada, publicaremos un tweet cada vez que envíes un Pull Request.
   unsubscribe:
-    invalid_token: 
-    login: 
-    success: 
-    title: 
-    unsubscribe: 
+    invalid_token:
+    login:
+    success:
+    title:
+    unsubscribe:
   user:
-    no_current_pr_message: 
+    no_current_pr_message:
     organisations: Miembro de ...
     pull_request_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"

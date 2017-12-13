@@ -12,7 +12,7 @@ fi:
   developers_using_language: Kehittäjää käyttää %{language}
   edit: Muokkaa
   everything: Kaikki
-  exempli_gratia: 
+  exempli_gratia:
   featured_projects: Featured Projects
   follow_user: Seuraa @%{twitter}
   happy_holidays: Happy Holidays
@@ -20,7 +20,7 @@ fi:
   more: Lisää
   no_suggestions: Et ole vielä suositellut yhtään projektia.
   open_source_yey: Avoin lähdekoodi FTW!
-  or: 
+  or:
   organisations_involved_desc: Invite more people from your organisation to participate.
   preferred_languages: Toivotut kielet
   search: Hae
@@ -58,35 +58,35 @@ fi:
               already_confirmed: "%{attribute} on jo vahvistettu"
               required_for_confirmation: "%{attribute} tarvitaan vahvistukseen"
   api:
-    description: 
-    title: 
+    description:
+    title:
     callback:
-      details: 
-      title: 
+      details:
+      title:
     organisations:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
     pagination:
-      details: 
-      title: 
+      details:
+      title:
     projects:
-      details: 
-      title: 
+      details:
+      title:
     pull_requests:
-      details: 
-      meta_details: 
-      title: 
+      details:
+      meta_details:
+      title:
     users:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
   contributors:
-    location_privacy: 
+    location_privacy:
     title: Ydintoimittajat
   dashboard:
     christmas_activity: Täältä näet kaikki tapahtumat mitä olemme jäljittäneet sinulle tämän Joulun juoksusta.
-    gift_it: 
+    gift_it:
     give_a_gift: Näyttää siltä että et ole lahjoittanut yhtään koodia tänään. Haluaisitko lahjoittaa
     help_out: 'Etkö keksi projektia mitä haluaisit auttaa? Me olemme laittaneet yhteen listan suosituista projekteista:'
     no_pull_requests: Et ole lähettänyt yhtään vetopyyntöä, mitä oikein odotat?!
@@ -94,13 +94,13 @@ fi:
     pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: Synkronoi vetopyynnöt
     tweet_progress:
-      one: 
-      other: 
+      one:
+      other:
   delete_account:
     are_you_sure: Haluamme vain varmistaa että todella hauat poistaa tilisi, tämä poistaa profiilisi ja kaikki vetopyynnöt sivulta, mutta ehdottamasi projektit jäävät.
     cancel: Muutin mieleni, vie minut takaisin!
     confirm: Vahvista poisto
-    email_preferences_link: 
+    email_preferences_link:
     notification_info: jos haluat lopettaa pelkästään sähköpostien vastaan ottamiset voit vaihtaa sinun  %{email_preferences_link}.
     title: Poista tili
   events:
@@ -141,7 +141,7 @@ fi:
       edit_event: Edit event
       view_event_details: View event details
   gifts:
-    calendar_link: 
+    calendar_link:
     description: Täällä voit hallita vetopyyntöjäsi ja valita &amp; curate your own set of "24 Pull Requests".
     give: Lahjoita jotain merkittävää rakastamaasi projektiin
     link_twitter: Link Twitter account
@@ -151,10 +151,10 @@ fi:
     title: Lahjoitettu koodi
     view_your_gifts: Kaikki lahjasi tulevat näkyviin sinun %{calendar_link}.
     form:
-      date: 
-      gift_it: 
+      date:
+      gift_it:
       pull_requests: Pull Requests
-      tweet: 
+      tweet:
   homepage:
     about: Mistä tästä kaikesta on kyse?
     about_text: "<p>24 Pull Requests on vuosittainen aloite kannustamaan kehittäjiä ympäri maailmaa lähettämään vetopyyntöjä joka päivä Joulukuussa Jouluaattoon asti.</p> <p>Tämä sivu auttaa sinua mainostamaan projektiasi, korostamaan miksi, miten ja missä lähetetään vetopyyntöjä.</p><p>Kirjaudu sisään GitHub tililläsi ja me seuraamme ja korostamme vetopyyntöjäsi ja ehdotamme projekteja mitä työskennellä.</p>"
@@ -171,7 +171,7 @@ fi:
       title: Events
       view_events: View events
     involved:
-      contributing_path: 
+      contributing_path:
       description: On olemassa tuhansia tapoja osallistua avoimen lähdekoodin projekteihin, paranna dokumentointia, auta korjaamaan olemassa olevia ongelmia ja bugeja, paranna koodin laatua ja testaa kattavuus, tai lisää puuttuvia ominaisuuksia.
       special_page: Olemme valmistaneet %{contributing_path}, josta löydät tietoa avustamisesta.
       take_a_look: Jos olet uusi avoimelle lähdekoodille, katso tämä.
@@ -235,12 +235,12 @@ fi:
     pull_requests: "%{count} pull requests submitted by members"
     title: "%{count} Organisations involved"
     members:
-      one: 
-      other: 
+      one:
+      other:
   preferences:
     delete: Haluatko poistaa tilisi?
     frequency_message: Valitsemallasi nopeudella, lähetämme hyödyllisiä sähköposteja tästä lähtien siihen asti kunnes projekti on ohi, korostaen suositeltuja projekteja joita saatat olla kiinnostunut auttamaan. Bonuksena, Otamme vapauden yksilöidä ehdotuksemme kielitaitosi mukaan perustuen GitHub profiilisi repoihin. Vaihtoehtoisesti voit valita kielet alhaalta.
-    ignore_organisations: 
+    ignore_organisations:
     information: Voit aina vaihtaa sähköpostisi asetuksia.
     languages: Mitä kieliä tiedät?
     remove: Poista tili
@@ -250,11 +250,11 @@ fi:
     title: Aseta sähköposti asetukset
     twitter: Twitter Tili
     form:
-      daily: 
-      email: 
-      email_frequency: 
-      never: 
-      weekly: 
+      daily:
+      email:
+      email_frequency:
+      never:
+      weekly:
     hint:
       confirm_email: Vahvista sähköpostiosoitteeri linkistä minkä lähetimme sinulle.
   projects:
@@ -276,11 +276,11 @@ fi:
       suggestion: Onko sinulla ehdotus tähän projektiin? Olemme pelkkinä korvina! Jos siellä on jotain mitä haluaisit korjatuksi, jätä rohkeasti %{issue_link}.
       title: Ehdota projektia
       form:
-        github_url: 
-        main_language: 
-        project_name: 
-        submit_project: 
-        summary: 
+        github_url:
+        main_language:
+        project_name:
+        submit_project:
+        summary:
     suggestion:
       edit: Muokkaa ehdotuksia
       update: Päivitä projektia
@@ -295,7 +295,7 @@ fi:
     latest:
       count: Uusimmat vetopyynnöt (%{count} total)
   suggestions:
-    title: 
+    title:
   twitter:
     account_linked: Twitter tilisi on yhdistetty! Lähetämme tweetin aina kun avaat vetopyynnön.
     account_removed: Twitter tilisi on poistettu.
@@ -304,14 +304,14 @@ fi:
       text: Yhdistä Twitter tilisi
       tooltip: Jos yhdistät twitter tilisi, lähetämme tweetin aina kun avaat vetopyynnön!
   unsubscribe:
-    invalid_token: 
-    login: 
-    success: 
-    title: 
-    unsubscribe: 
+    invalid_token:
+    login:
+    success:
+    title:
+    unsubscribe:
   user:
-    no_current_pr_message: 
-    organisations: 
+    no_current_pr_message:
+    organisations:
     pull_request_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

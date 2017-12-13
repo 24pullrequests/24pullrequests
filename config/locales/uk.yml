@@ -12,7 +12,7 @@ uk:
   developers_using_language: Розробники, які використовують %{language}
   edit: Редагувати
   everything: Все
-  exempli_gratia: 
+  exempli_gratia:
   featured_projects: Featured Projects
   follow_user: Читати @%{twitter}
   happy_holidays: Happy Holidays
@@ -20,7 +20,7 @@ uk:
   more: Більше
   no_suggestions: Ви не маєте жодних рекомендацій
   open_source_yey: Open Source FTW!
-  or: 
+  or:
   organisations_involved_desc: Invite more people from your organisation to participate.
   preferred_languages: Мови, що вам подобаються
   search: Пошук
@@ -58,35 +58,35 @@ uk:
               already_confirmed: "%{attribute} вже підтверджено"
               required_for_confirmation: "%{attribute} необхідній для підтвердження"
   api:
-    description: 
-    title: 
+    description:
+    title:
     callback:
-      details: 
-      title: 
+      details:
+      title:
     organisations:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
     pagination:
-      details: 
-      title: 
+      details:
+      title:
     projects:
-      details: 
-      title: 
+      details:
+      title:
     pull_requests:
-      details: 
-      meta_details: 
-      title: 
+      details:
+      meta_details:
+      title:
     users:
-      details: 
-      specific: 
-      title: 
+      details:
+      specific:
+      title:
   contributors:
     location_privacy: All location data is sourced from public GitHub profiles of currently active users.
     title: Основні автори
   dashboard:
     christmas_activity: Тут ви можете побачити всю діяльність, яку ми зібрали для вас напередодні Різдва.
-    gift_it: 
+    gift_it:
     give_a_gift: Схоже ви ще не подарували нікому код сьогодні. Ви б хотіли зробити подарунок?
     help_out: Не знаєте якому проекту допомогти? Ми зібрали список популярних проектів
     no_pull_requests: Ви не послали жодного пул реквесту, що ж ви чекаєте?!
@@ -94,13 +94,13 @@ uk:
     pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: Синхронізація пул реквестів
     tweet_progress:
-      one: 
-      other: 
+      one:
+      other:
   delete_account:
     are_you_sure: Ми просто хотіли переконатися, що ви дійсно хочете видалити свій акаунт. Це дозволить видалити свій профіль і всі пул реквести з сайту, хоча будь-які запропоновані проекти залишаться.
     cancel: Я змінив свою думку і хотів би повернутися!
     confirm: Підтвердити видалення
-    email_preferences_link: 
+    email_preferences_link:
     notification_info: Якщо ви бажаєте припинити отримувати повідомлення ви можете змінити ваш %{email_preferences_link}.
     title: Видалити ваш акаунт
   events:
@@ -141,7 +141,7 @@ uk:
       edit_event: Edit event
       view_event_details: View event details
   gifts:
-    calendar_link: 
+    calendar_link:
     description: Тут ви можете керувати вашими пул реквестами та курирувати власний набір "24 Пул Реквестів".
     give: Подаруйте щось значуще проекту, який вам подобається
     link_twitter: Link Twitter account
@@ -151,10 +151,10 @@ uk:
     title: Подарунковий код
     view_your_gifts: Всі ваші подарунки будуть показані тут - %{calendar_link}.
     form:
-      date: 
-      gift_it: 
+      date:
+      gift_it:
       pull_requests: Pull Requests
-      tweet: 
+      tweet:
   homepage:
     about: Що це взагалі таке?
     about_text: "<p>24 Пулл-реквести, це акція, що проходить кожен рік, напередодні Різдва. Метою акції є заохочення розробників, зі всьго світу, допомогати один одному, надсилаючі пул реквести кожного дня, впродовж грудня.</p> <p>Ми зробили цей сайт, щоб допомогти проектам з відкритим кодом!</p><p>Заходьте зі свого Гітхаб акаунту і ми будемо відслідковувати ваш прогрес, а також пропонувати проекти, до якіх вам буде цікаво долучитися.</p>"
@@ -171,7 +171,7 @@ uk:
       title: Events
       view_events: View events
     involved:
-      contributing_path: 
+      contributing_path:
       description: 'Наразі є багато способів допомогти open source проекту: покращіть документацію, пофіксіть актуальні баги, покращіть код та тести, або додайте нову фічу.'
       special_page: Ми підготували %{contributing_path}, де ви знайдете необхідну інформацію.
       take_a_look: Якщо ви новачок в open source, переглянте це.
@@ -235,12 +235,12 @@ uk:
     pull_requests: "%{count} pull requests submitted by members"
     title: "%{count} Organisations involved"
     members:
-      one: 
-      other: 
+      one:
+      other:
   preferences:
     delete: Бажаєте видалити ваш акаунт?
     frequency_message: За частотою, яку ви обрали, ми будемо висилати листи електронною поштою з запропонованими проектами від тепер та поки проект не закінчиться. В якості додаткового бонусу, ми візьмемо на себе сміливість персоналізації нашої пропозиції до вашої мови програмування на основі профілю у Ґітхаб. Крім того, ви можете вибрати свою мову нижче.
-    ignore_organisations: 
+    ignore_organisations:
     information: Ви завжди можете змінити налаштування електронної пошти пізніше.
     languages: Якими мовами програмування ви володієте?
     remove: Видалити акаунт
@@ -250,11 +250,11 @@ uk:
     title: Налаштувати електронну пошти
     twitter: Твіттер акаунт
     form:
-      daily: 
-      email: 
-      email_frequency: 
-      never: 
-      weekly: 
+      daily:
+      email:
+      email_frequency:
+      never:
+      weekly:
     hint:
       confirm_email: Будь ласка зробіть підтвердження вашої електроної адреси за допомою посилання, яке ми вже вислали.
   projects:
@@ -276,11 +276,11 @@ uk:
       suggestion: Є пропозиція для цього проекту? Ми дуже уважно прислухаэмось до вас! Якщо є щось, що вам не подобається, то не соромтеся %{issue_link}.
       title: Запропонувати проект
       form:
-        github_url: 
-        main_language: 
-        project_name: 
-        submit_project: 
-        summary: 
+        github_url:
+        main_language:
+        project_name:
+        submit_project:
+        summary:
     suggestion:
       edit: Редаґувати пропозицію
       update: Обновити проект
@@ -295,7 +295,7 @@ uk:
     latest:
       count: Останні пул реквести (%{count} всього)
   suggestions:
-    title: 
+    title:
   twitter:
     account_linked: Ми прив'язали ваш твіттер акаунт! Тепер ми будемо твітити кожен раз, як ви відкриєте пул реквест.
     account_removed: Ми відв'язали ваш твіттер акаунт.
@@ -304,14 +304,14 @@ uk:
       text: Добавте ваш твіттер акаунт
       tooltip: Якщо ваш твіттер акаунт буде прив'язано, ми зможемо постити в твіттер, кожен раз, як ви відкріваєте пул реквест!
   unsubscribe:
-    invalid_token: 
-    login: 
-    success: 
-    title: 
-    unsubscribe: 
+    invalid_token:
+    login:
+    success:
+    title:
+    unsubscribe:
   user:
-    no_current_pr_message: 
-    organisations: 
+    no_current_pr_message:
+    organisations:
     pull_request_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

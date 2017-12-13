@@ -94,8 +94,8 @@ ta:
     pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: Pull Request-களை ஒத்தியக்கம் செய்
     tweet_progress:
-      one: 
-      other: 
+      one:
+      other:
   delete_account:
     are_you_sure: உண்மையில் நீங்கள் உங்கள் கணக்கை நீக்க விரும்புகிறீர்கள். இந்த தளத்தில் இருந்து உங்கள் சுயவிவரம் மற்றும் அனைத்து மிகுதி கோரிக்கைகளை நீக்கும், என்றாலும் ஆலோசனை திட்டங்கள் இருக்கும்.
     cancel: என் மனதை நான் மாற்றிக்கொண்டேன். என்னை மீண்டும் எடுத்துகொள்!
@@ -240,7 +240,7 @@ ta:
   preferences:
     delete: உங்கள் கணக்கை நீக்க வேண்டுமா?
     frequency_message: நீங்கள் தேர்வு  செய்த அதிர்வெண், project முடியும் வரை நாங்கள் இப்பொழுதில் இருந்து உங்களுக்கு பயனுள்ள மின்னஞ்சல்களை  அனுப்புவொம்,  உங்கள் பங்களிப்பை கருத்தில்  கொண்டு சில ஆலோசனை project-களை காண்பிப்பார. ஒரு சேர்க்கப்பட்ட போனஸ், நாங்கள் உங்கள் github சுயவிவரத்தில் repo அடிப்படையில் உங்கள் மொழி திறமைக்கு எங்கள் பரிந்துரைகள் தனிப்பயனாக்க சுதந்திரம் எடுக்க வேண்டும். மாற்றாக, நீங்கள் கீழே உங்கள் மொழிகள் தேர்வு செய்யலாம்.
-    ignore_organisations: 
+    ignore_organisations:
     information: நீங்கள் எப்போது வேண்டுமானாலும் உங்கள் மின்னஞ்சல் விருப்பங்களை மாற்ற முடியும்.
     languages: எந்த மொழிகள் உங்களுக்கு தெரியும்?
     remove: கணக்கை நீக்குக
@@ -304,13 +304,13 @@ ta:
       text: ட்விட்டர் கணக்கை இணைத்திடுங்க
       tooltip: உங்கள் ட்விட்டர் கணக்கை இணைத்தால், நீங்கள் ஒவ்வொரு 'pull request' கொடுக்கும்போது ட்வீட் செய்வோம்
   unsubscribe:
-    invalid_token: 
-    login: 
-    success: 
-    title: 
-    unsubscribe: 
+    invalid_token:
+    login:
+    success:
+    title:
+    unsubscribe:
   user:
-    no_current_pr_message: 
+    no_current_pr_message:
     organisations: Member of...
     pull_request_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"

@@ -312,7 +312,7 @@ hi:
     title: हमारी मेलिंग सूची से सदस्यता रद्द करें
     unsubscribe: सदस्यता रद्द करें
   user:
-    no_current_pr_message: 
+    no_current_pr_message:
     organisations: "...का सदस्य"
     pull_request_count:
       one: "%{user} ने %{count} को क्रिसमस %{year} में अब तक Pull Request किया है"

@@ -82,7 +82,7 @@ nb:
       specific: Hent informasjon for en spesifikk bruker.
       title: Brukere
   contributors:
-    location_privacy: 
+    location_privacy:
     title: Hoved-bidragsytere
   dashboard:
     christmas_activity: Dette er hvor du kan se all aktiviteten vi har sett fra deg opp mot jul.
@@ -94,8 +94,8 @@ nb:
     pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: Synkronisér pull requests
     tweet_progress:
-      one: 
-      other: 
+      one:
+      other:
   delete_account:
     are_you_sure: Vi ville bare forsikre oss om at du faktisk ønsker å slette din konto. Dette vil fjerne din profil og alle pull requests fra siden, men foreslåtte prosjekter vil bli igjen.
     cancel: Jeg har ombestemt meg, ta meg tilbake!
@@ -240,7 +240,7 @@ nb:
   preferences:
     delete: Ønsker du å slette din konto?
     frequency_message: Vi sender deg — i den hyppigheten du ønsker — hjelpsomme eposter fra nå til prosjektet er over med foreslåtte prosjekter som du kanskje vil vurdere å bidra til. Som en liten bonus vil vi gi våre forslag basert på dine språk etter på repoene på din GitHub-profil. Alternativt kan du også velge dine språk under.
-    ignore_organisations: 
+    ignore_organisations:
     information: Du kan alltid endre dine epost-preferanser senere.
     languages: Hvilke språk kan du?
     remove: Fjern konto
@@ -304,13 +304,13 @@ nb:
       text: Link opp din Twitter-konto
       tooltip: Om du linker opp Twitter-kontoen din så legger vi et en tweet når du åpner en pull request!
   unsubscribe:
-    invalid_token: 
-    login: 
-    success: 
-    title: 
-    unsubscribe: 
+    invalid_token:
+    login:
+    success:
+    title:
+    unsubscribe:
   user:
-    no_current_pr_message: 
+    no_current_pr_message:
     organisations: Medlem av...
     pull_request_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"

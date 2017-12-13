@@ -94,8 +94,8 @@ zh_Hans:
     pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: 同步合并请求(pull request)
     tweet_progress:
-      one: 
-      other: 
+      one:
+      other:
   delete_account:
     are_you_sure: 请确认删除帐号。删除您的帐号会删除您的用户信息，和所有在本站发去的合并请求(pull request)，不过您建议的项目会得到保存。
     cancel: 我改变主意了
@@ -240,7 +240,7 @@ zh_Hans:
   preferences:
     delete: 想要删除您的帐号？
     frequency_message: 在项目结束前，我们会根据您所选择的频率，给您发送邮件，推荐一些您可能感兴趣的项目。如果您允许，我们已经根据您在GitHub的代码库得出您喜好的语言（您可以在下面修改）。
-    ignore_organisations: 
+    ignore_organisations:
     information: 你可以在之后修改您接收邮件的偏好设置
     languages: 您知道哪些编程语言？
     remove: 删除帐号
@@ -304,13 +304,13 @@ zh_Hans:
       text: 与你的推特帐号绑定
       tooltip: 如果你绑定你的推特帐号，我们会在你发起合并请求(pull request)时自动发一条信息！
   unsubscribe:
-    invalid_token: 
-    login: 
-    success: 
-    title: 
-    unsubscribe: 
+    invalid_token:
+    login:
+    success:
+    title:
+    unsubscribe:
   user:
-    no_current_pr_message: 
+    no_current_pr_message:
     organisations: 一名成员
     pull_request_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"

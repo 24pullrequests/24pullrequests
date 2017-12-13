@@ -82,7 +82,7 @@ cs:
       specific: Load information for a specific user.
       title: Users
   contributors:
-    location_privacy: 
+    location_privacy:
     title: Přispěvatelé
   dashboard:
     christmas_activity: Zde pro vás trackujeme všechnu vaši aktivitu v průběhu prosince
@@ -94,8 +94,8 @@ cs:
     pull_requests: Zajímá vás co ostatní dělají tyto Vánoce? Podívejte se na tyhle pull requesty a nebo pošlete nějaké vlastní - najdete je pak zde!
     synchronize: Synchronizovat pull requesty
     tweet_progress:
-      one: 
-      other: 
+      one:
+      other:
   delete_account:
     are_you_sure: Chceme jenom vědět, jestli chcete opravdu odstranit svůj účet. Odstraníme Váš profil a všechny vaše pull requesty z těchto stránek. Všechny navrhované projekty nicméně zústanou.
     cancel: Změnil jsem se nároz, beru zpět.
@@ -304,13 +304,13 @@ cs:
       text: Připojte Váš Twitter účet
       tooltip: Když připojíte Váš Twitter účet, tak budeme tweetovat vaše pull requesty!
   unsubscribe:
-    invalid_token: 
-    login: 
-    success: 
-    title: 
-    unsubscribe: 
+    invalid_token:
+    login:
+    success:
+    title:
+    unsubscribe:
   user:
-    no_current_pr_message: 
+    no_current_pr_message:
     organisations: Člen
     pull_request_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
