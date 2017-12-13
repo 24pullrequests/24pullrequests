@@ -82,7 +82,7 @@ cs:
       specific: Load information for a specific user.
       title: Users
   contributors:
-    location_privacy: All location data is sourced from public GitHub profiles of currently active users.
+    location_privacy: 
     title: Přispěvatelé
   dashboard:
     christmas_activity: Zde pro vás trackujeme všechnu vaši aktivitu v průběhu prosince

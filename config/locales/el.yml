@@ -12,7 +12,7 @@ el:
   developers_using_language: Προγραμματιστες χρησιμοποιουν %{language}
   edit: Τροποποιηση
   everything: Ολα
-  exempli_gratia:
+  exempli_gratia: 
   featured_projects: Featured Projects
   follow_user: Ακολούθησε τον χρήστη @%{twitter}
   happy_holidays: Καλές Γιορτές
@@ -20,7 +20,7 @@ el:
   more: Περισσότερα
   no_suggestions: Δεν έχεις εισηγηθεί projects ακόμη
   open_source_yey: Ανοικτός Κώδικας; Για τη νίκη!
-  or:
+  or: 
   organisations_involved_desc: Invite more people from your organisation to participate.
   preferred_languages: Προτιμωμενες γλωσσες
   search: Αναζήτηση
@@ -58,31 +58,31 @@ el:
               already_confirmed: "%{attribute} έχει ήδη επιβεβαιωθεί"
               required_for_confirmation: "%{attribute} χρειάζεται για επιβεβαίωση"
   api:
-    description:
-    title:
+    description: 
+    title: 
     callback:
-      details:
-      title:
+      details: 
+      title: 
     organisations:
-      details:
-      specific:
-      title:
+      details: 
+      specific: 
+      title: 
     pagination:
-      details:
-      title:
+      details: 
+      title: 
     projects:
-      details:
-      title:
+      details: 
+      title: 
     pull_requests:
-      details:
-      meta_details:
-      title:
+      details: 
+      meta_details: 
+      title: 
     users:
-      details:
-      specific:
-      title:
+      details: 
+      specific: 
+      title: 
   contributors:
-    location_privacy: All location data is sourced from public GitHub profiles of currently active users.
+    location_privacy: 
     title: Contributors
   dashboard:
     christmas_activity: Εδώ μπορείς να δεις τη δραστηριότητα σου για τις μέρες μέχρι τα Χριστούγεννα.
@@ -94,13 +94,13 @@ el:
     pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: Συγχρόνισε τα Pull Requests σου
     tweet_progress:
-      one:
-      other:
+      one: 
+      other: 
   delete_account:
     are_you_sure: Θέλουμε να σιγουρευτούμε ότι πραγματικά θέλεις να διαγράψεις το λογαριασμό σου. Το προφίλ σου και όλες οι pull requests σου θα αφαιρεθούν από τη σελίδα, αλλά τα projects που έχεις εισηγηθεί θα μείνουν.
     cancel: Άλλαξα γνώμη, πάρε με πίσω!
     confirm: Επιβεβαίωση διαγραφής
-    email_preferences_link:
+    email_preferences_link: 
     notification_info: Αν θέλεις απλά να σταματήσεις να λαμβάνεις ειδοποιήσεις με email μπορείς να αλλάξεις τις %{email_preferences_link}.
     title: Διαγραφη λογαριασμου
   events:
@@ -141,7 +141,7 @@ el:
       edit_event: Ενημέρωση
       view_event_details: View event details
   gifts:
-    calendar_link:
+    calendar_link: 
     description: Εδώ μπορείς να διαχειριστείς τα pull requests σου και να διαρρυθμίσεις τη δική σου συλλογή των "24 Pull Requests".
     give: Δωρισε κατι ουσιαστικο σε ενα project που αγαπας
     link_twitter: Link Twitter account
@@ -152,9 +152,9 @@ el:
     view_your_gifts: Όλα τα δώρα σου θα φαίνονται στο %{calendar_link}.
     form:
       date: Date
-      gift_it:
+      gift_it: 
       pull_requests: Pull Requests
-      tweet:
+      tweet: 
   homepage:
     about: Τι ειναι ολα αυτα;
     about_text: "<p>24 Pull Requests είναι μια ετήσια πρωτοβουλία για να ενθαρρύνει προγραμματιστές από όλο τον κόσμο να στείλουν pull requests κάθε μέρα του Δεκέμβρη μέχρι τα Χριστούγεννα.</p> <p>Αυτή η σελίδα βοηθά στην προώθηση του project, τονίζοντας το γιατί, πως και που να στείλετε τα pull requests σας.</p><p>Συνδεθείτε με το λογαριασμό GitHub σας για να παρακολουθήσουμε και να δείξουμε όλα τα pull requests σου και να εισηγηθούμε projects στα οποία μπορείς να δουλέψεις.</p>"
@@ -171,7 +171,7 @@ el:
       title: Events
       view_events: View events
     involved:
-      contributing_path:
+      contributing_path: 
       description: Υπάρχουν πολλοί τρόποι που μπορείτε να βοηθήσετε ένα project ανοικτού κώδικα, βελτιώνοντας τις οδηγίες χρήσης, διορθώνοντας υπάρχοντα προβλήματα, βελτιώνοντας την ποιότητα του κώδικα και προσθέτοντας tests ή καινούργιες λειτουργίες.
       special_page: Ετοιμάσαμε μια %{contributing_path}, όπου μπορείς να βρεις πληροφορίες για το πως να συνεισφέρεις.
       take_a_look: Αν τώρα ξεκινάς με τον ανοικτό κώδικα, ρίξε μια ματιά.
@@ -235,12 +235,12 @@ el:
     pull_requests: "%{count} pull requests submitted by members"
     title: "%{count} Organisations involved"
     members:
-      one:
-      other:
+      one: 
+      other: 
   preferences:
     delete: Θέλεις να διαγράψεις το λογαριασμό σου;
     frequency_message: Θα σου στέλνουμε e-mail με τη συχνότητα που θα επιλέξεις από τώρα μέχρι το τέλος του project, με κάποιες εισηγήσεις project στα οποία μπορεί να θέλεις να βοηθήσεις βάσει των επιλογών σου.
-    ignore_organisations: If you regularly contribute to public repositories that you don't want to track on this site, add the organisation name here. You can add multiple organisations separated by commas. This can be useful if you code in the open at work, or maintain an open source repository yourself.
+    ignore_organisations: 
     information: Mπορείς να αλλάξεις τη συχνότητα που θα λαμβάνεις το email αργότερα
     languages: Ποιες γλώσσες σε ενδιαφέρουν;
     remove: Remove Account
@@ -250,11 +250,11 @@ el:
     title: Προτιμήσεις ηλεκτρονικου ταχυδρομείου
     twitter: Λογαριασμός Twitter
     form:
-      daily:
-      email:
-      email_frequency:
-      never:
-      weekly:
+      daily: 
+      email: 
+      email_frequency: 
+      never: 
+      weekly: 
     hint:
       confirm_email: Επιβεβαίωσε την ηλεκτρονική σου διεύθυνση χρησιμοποιώντας το σύνδεσμο που σου έχουμε στείλει.
   projects:
@@ -276,11 +276,11 @@ el:
       suggestion: Έχεις κάποια εισήγηση για το 24pullrequests; Είμαστε όλο αυτιά! Αν πρόσεξες κάτι που χρειάζεται διόρθωση, υπόβαλε %{issue_link}.
       title: Εισηγησου ενα Project
       form:
-        github_url:
-        main_language:
-        project_name:
-        submit_project:
-        summary:
+        github_url: 
+        main_language: 
+        project_name: 
+        submit_project: 
+        summary: 
     suggestion:
       edit: Edit Suggestion
       update: Ενημέρωση
@@ -304,14 +304,14 @@ el:
       text: Σύνδεσε το twitter σου
       tooltip: Αν συνδέσεις το λογαριασμό του twitter σου, θα στέλνουμε ένα tweet κάθε φορά που ανοίγεις ένα καινούριο pull request
   unsubscribe:
-    invalid_token:
-    login:
-    success:
-    title:
-    unsubscribe:
+    invalid_token: 
+    login: 
+    success: 
+    title: 
+    unsubscribe: 
   user:
-    no_current_pr_message:
-    organisations:
+    no_current_pr_message: 
+    organisations: 
     pull_request_count:
       one: "%{user} έχει δωρίσει %{count} pull request μέχρι τώρα για τα Χριστούγεννα %{year}"
       other: "%{user} έχει δωρίσει %{count} pull requests μέχρι τώρα για τα Χριστούγεννα %{year}"

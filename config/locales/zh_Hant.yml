@@ -82,7 +82,7 @@ zh_Hant:
       specific: 某一個指定使用者的資訊。
       title: 使用者
   contributors:
-    location_privacy: All location data is sourced from public GitHub profiles of currently active users.
+    location_privacy: 所有的位置資訊都是從使用者的公開 GitHub 頁面中取得
     title: 主要貢獻者
   dashboard:
     christmas_activity: 在這裡你可以看到你在聖誕節前的所有動態。
@@ -240,7 +240,7 @@ zh_Hant:
   preferences:
     delete: 想要刪除你的帳號？
     frequency_message: 在活動結束前，我們會根據你所選擇的頻率寄送電子報。電子報會推薦一些你可能感興趣的專案。我們已經根據你在 GitHub 上的資料分析出了你喜好的語言（你可以在下面修改）。
-    ignore_organisations: If you regularly contribute to public repositories that you don't want to track on this site, add the organisation name here. You can add multiple organisations separated by commas. This can be useful if you code in the open at work, or maintain an open source repository yourself.
+    ignore_organisations: 如果您有您有一些公開的貢獻不想被我們追蹤，請在此提供該 Repository 所屬的 GitHub 組織名稱，您可以使用逗點間隔並輸入多個組織名稱。這個功能對於開源專案的維護者或是把工作內容公開放在 GitHub 上的人來說可能會很有幫助。
     information: 你之後也隨時可以再修改這些設定
     languages: 你知道哪些程式語言？
     remove: 刪除帳號

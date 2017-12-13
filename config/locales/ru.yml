@@ -58,29 +58,29 @@ ru:
               already_confirmed: "%{attribute} уже подтвержден"
               required_for_confirmation: введите %{attribute}
   api:
-    description:
-    title:
+    description: 
+    title: 
     callback:
-      details:
-      title:
+      details: 
+      title: 
     organisations:
-      details:
-      specific:
-      title:
+      details: 
+      specific: 
+      title: 
     pagination:
-      details:
-      title:
+      details: 
+      title: 
     projects:
-      details:
-      title:
+      details: 
+      title: 
     pull_requests:
-      details:
-      meta_details:
-      title:
+      details: 
+      meta_details: 
+      title: 
     users:
-      details:
-      specific:
-      title:
+      details: 
+      specific: 
+      title: 
   contributors:
     location_privacy: All location data is sourced from public GitHub profiles of currently active users.
     title: Основные авторы
@@ -94,13 +94,13 @@ ru:
     pull_requests: Интересно чем заняты люди в эти праздники? Проверьте эти пулл-реквесты, или пришлите ваш пулл-реквест и найдите здесь себя!
     synchronize: Синхронизировать
     tweet_progress:
-      one:
-      other:
+      one: 
+      other: 
   delete_account:
     are_you_sure: Мы хотим быть уверены, что вы дйствительно хотите удалить вашу учетную запись. Мы удалим не только профиль, но и всю информацию о ваших пулл-реквестах. Но ваши рекомендации очень важны для нас, и их мы удалять не будем.
     cancel: Я передумал!
     confirm: Да, удаляйте меня полностью
-    email_preferences_link:
+    email_preferences_link: 
     notification_info: 'Может вы просто хотите изменить настройки почтовый рассылки? Нет ничего проще: %{email_preferences_link}.'
     title: Удалить учетную запись
   events:
@@ -171,7 +171,7 @@ ru:
       title: Events
       view_events: View events
     involved:
-      contributing_path:
+      contributing_path: 
       description: 'Есть множество способов помочь проектам с открытым исходным кодом: совершенствование документации, помощь в исправлении существующих проблем и ошибок, улучшение качества кода и покрытия тестами или добавление новых возможностей.'
       special_page: Мы подготовили %{contributing_path}, где вы можете найти некоторую информацию об участии в проектах.
       take_a_look: Если вы новичок в open source, то это продлится недолго.
@@ -240,7 +240,7 @@ ru:
   preferences:
     delete: Хотите удалить вашу учетную запись?
     frequency_message: В течение всего проекта с выбранной периодичностью мы будем посылать вам письма с полезной информацией. Мы будем предлагать проекты, которые могут вас заинтересовать. В качестве дополнительного бонуса, мы возьмем на себя смелость предложить проекты на языках, которые указаны в вашем GitHub профиле. Кроме того, вы можете выбрать ваши любимые языки ниже.
-    ignore_organisations: If you regularly contribute to public repositories that you don't want to track on this site, add the organisation name here. You can add multiple organisations separated by commas. This can be useful if you code in the open at work, or maintain an open source repository yourself.
+    ignore_organisations: 
     information: Вы в любой момент сможете изменить настройки почтовой рассылки.
     languages: Какие языки вы предпочитаете?
     remove: Удалить учетную запись
@@ -251,7 +251,7 @@ ru:
     twitter: Twitter
     form:
       daily: Ежедневно
-      email:
+      email: 
       email_frequency: Получать рассылку
       never: Никогда
       weekly: Еженедельно
@@ -276,11 +276,11 @@ ru:
       suggestion: Помогите разработчикам выбрать задание. %{issue_link}.
       title: Рекомендовать проект
       form:
-        github_url:
-        main_language:
-        project_name:
-        submit_project:
-        summary:
+        github_url: 
+        main_language: 
+        project_name: 
+        submit_project: 
+        summary: 
     suggestion:
       edit: Редактировать рекомендацию
       update: Обновить проект
@@ -304,13 +304,13 @@ ru:
       text: Привязать ваш твиттер
       tooltip: Если вы привяжете вашу учетную запись в твиттере, то мы сможем твитить про ваши пулл-реквесты!
   unsubscribe:
-    invalid_token:
-    login:
-    success:
-    title:
-    unsubscribe:
+    invalid_token: 
+    login: 
+    success: 
+    title: 
+    unsubscribe: 
   user:
-    no_current_pr_message:
+    no_current_pr_message: 
     organisations: Организации
     pull_request_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"

@@ -12,7 +12,7 @@ th:
   developers_using_language: นักพัฒนาใช้ภาษา %{language}
   edit: แก้ไข
   everything: ทั้งหมด
-  exempli_gratia:
+  exempli_gratia: 
   featured_projects: Featured Projects
   follow_user: ติดตาม @%{twitter}
   happy_holidays: Happy Holidays
@@ -20,7 +20,7 @@ th:
   more: เพิ่มเติม
   no_suggestions: คุณยังไม่เคยแนะนำโครงการ
   open_source_yey: โอเพ่นซอร์ส จงเจริญ!
-  or:
+  or: 
   organisations_involved_desc: Invite more people from your organisation to participate.
   preferred_languages: ภาาาที่เลือก
   search: ค้นหา
@@ -58,35 +58,35 @@ th:
               already_confirmed: "%{attribute} ถูกยืนยันเรียบร้อยแล้ว"
               required_for_confirmation: "%{attribute} ต้องการๆยืนยัน"
   api:
-    description:
-    title:
+    description: 
+    title: 
     callback:
-      details:
-      title:
+      details: 
+      title: 
     organisations:
-      details:
-      specific:
-      title:
+      details: 
+      specific: 
+      title: 
     pagination:
-      details:
-      title:
+      details: 
+      title: 
     projects:
-      details:
-      title:
+      details: 
+      title: 
     pull_requests:
-      details:
-      meta_details:
-      title:
+      details: 
+      meta_details: 
+      title: 
     users:
-      details:
-      specific:
-      title:
+      details: 
+      specific: 
+      title: 
   contributors:
     location_privacy: All location data is sourced from public GitHub profiles of currently active users.
     title: ผู้มีส่วนร่วม
   dashboard:
     christmas_activity: นี่คือกิจกรรมทั้งหมดของคุณก่อนถึงวันคริสต์มาส
-    gift_it:
+    gift_it: 
     give_a_gift: คุณยังไม่ได้มอบโค้ดเป็นขอขวัญเลยวันนี้ ส่งของขวัญให้
     help_out: 'นึกโครงการที่อยากช่วยไม่ออก? เราได้รวบรวมโครงการที่น่าสนใจมาให้:'
     no_pull_requests: คุณยังไม่ได้ส่ง pull request อีกเหรอ? จะรอช้าอยู่ทำไม
@@ -94,13 +94,13 @@ th:
     pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: เชื่อมต่อข้อมูล pull request
     tweet_progress:
-      one:
-      other:
+      one: 
+      other: 
   delete_account:
     are_you_sure: คุณแน่ใจหรือไม่ที่จะลบบัญชีและ pull request ต่างๆ แต่โครการที่ถูกแยะยำจะไม่ถูกลบ
     cancel: ฉันเปลี่ยนใจแล้ว พาฉันกลับไป
     confirm: ยืนยันการลบ
-    email_preferences_link:
+    email_preferences_link: 
     notification_info: ถ้าคุณต้องการตั้งค่าอีเมลแจ้งเตือน  %{email_preferences_link}.
     title: ลบบัญชี
   events:
@@ -141,7 +141,7 @@ th:
       edit_event: Edit event
       view_event_details: View event details
   gifts:
-    calendar_link:
+    calendar_link: 
     description: คุณสามารถจัดการ pull request หรือเลือก &amp; "24 Pull Requests" ของคุณเอง
     give: ให้สิ่งที่มีความหมายกับโครงการที่คุณชื่นชอบ
     link_twitter: Link Twitter account
@@ -151,10 +151,10 @@ th:
     title: ของขวัญที่มอบให้
     view_your_gifts: ของขวัญที่คุณเคยให้สามารถดูได้จาก %{calendar_link}
     form:
-      date:
-      gift_it:
+      date: 
+      gift_it: 
       pull_requests: Pull Requests
-      tweet:
+      tweet: 
   homepage:
     about: มันคืออะไร?
     about_text: "<p>24 Pull Requests เป็นโปรเจคที่สนับสนุนให้นักพัฒนาทั่วโลกให้ส่ง pull request เป็นประจำทุกวันในเดือนธันวาคมจนถึงวันคริสต์มาส</p> <p>นี่คือเว็บไซน์ที่ช่วยโปรโมทโครงการรวมถึงแนะนำวิธีมีส่วนร่วมในโครการต่างๆ</p><p>ลงชื่อเข้าใช้ด้วยบัญชี GitHub และเราจะติดตาม pull request ของคุณ รวมถึงแนะนำโครงการสำหรับคุณ</p>"
@@ -171,7 +171,7 @@ th:
       title: Events
       view_events: View events
     involved:
-      contributing_path:
+      contributing_path: 
       description: คุณสามารถช่วยเหลือโครงการโอเพ่นซอร์สได้หลายวิธี อาทิเช่น การปรับปรุงข้อมูล แก้ไขบัค และเพิ่มลูกเล่นใหม่
       special_page: เราได้เตรียม %{contributing_path} ไว้ให้คุณสามารถหาข้อมูลเกี่ยวกับการทำงานในโครงการโอเพ่นซอร์ส
       take_a_look: ถ้าคุณไม่มีประสบการณ์ในโครงการโอเพ่นซอร์สคุณสามารถศึกษาข้อมูลได้จากลิ้งค์ข้างต้น
@@ -235,12 +235,12 @@ th:
     pull_requests: "%{count} pull requests submitted by members"
     title: "%{count} Organisations involved"
     members:
-      one:
-      other:
+      one: 
+      other: 
   preferences:
     delete: ต้องการลบบัญชี?
     frequency_message: เราต้องการส่งอีเมลแนะนำโครงการต่างๆไปให้คุณโดยคุณสามารถเลือกระยะเวลาในการส่งอีเมลหรือเพิ่มสิ่งที่คุณสนใจ เราจะแนะนำโครงการตามภาษาที่อยู่ในโปรไฟล์ GitHub ของคุณหรือคุณสามารถเลือกจากภาษาด้านล่าง
-    ignore_organisations: If you regularly contribute to public repositories that you don't want to track on this site, add the organisation name here. You can add multiple organisations separated by commas. This can be useful if you code in the open at work, or maintain an open source repository yourself.
+    ignore_organisations: 
     information: คุณสามารถแก้ไขการตั้งค่าอีเมลได้ในภายหลัง
     languages: คุณรู้ภาษาไหนบ้าง?
     remove: ลบบัญชี
@@ -250,11 +250,11 @@ th:
     title: ตั้งค่าอีเมล
     twitter: บัญชีทวิตเตอร์
     form:
-      daily:
-      email:
-      email_frequency:
-      never:
-      weekly:
+      daily: 
+      email: 
+      email_frequency: 
+      never: 
+      weekly: 
     hint:
       confirm_email: กรุณายืนยันอีเมลผ่านลื้งค์ที่เราส่งไป
   projects:
@@ -276,11 +276,11 @@ th:
       suggestion: ต้องการแนะนำโครงการหรือแนะนำปัญหา? %{issue_link}
       title: แนะนำโครงการ
       form:
-        github_url:
-        main_language:
-        project_name:
-        submit_project:
-        summary:
+        github_url: 
+        main_language: 
+        project_name: 
+        submit_project: 
+        summary: 
     suggestion:
       edit: แก้ไขคำแนะนำ
       update: อัพเดทโครงการ
@@ -295,7 +295,7 @@ th:
     latest:
       count: pull request ล่าสุด (ทั้งหมด %{count})
   suggestions:
-    title:
+    title: 
   twitter:
     account_linked: เชื่อมต่อกับบัญชีทวิตเตอร์ของคุณแล้ว เราจะโพสทุกครั้งที่มีการส่ง pull request
     account_removed: ยกเลิกการเชื่อมต่อบัญชีทวิตเตอร์ของคุณแล้ว
@@ -304,13 +304,13 @@ th:
       text: เชื่อมต่อกับบัญชีทวิตเตอร์
       tooltip: ถ้าคุณเชื่อมต่อบัญชีทวิตเตอร์เราจะโพสทุกครั้งที่คุณส่ง pull request
   unsubscribe:
-    invalid_token:
-    login:
-    success:
-    title:
-    unsubscribe:
+    invalid_token: 
+    login: 
+    success: 
+    title: 
+    unsubscribe: 
   user:
-    no_current_pr_message:
+    no_current_pr_message: 
     organisations: สมาชิกของ...
     pull_request_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"

@@ -82,7 +82,7 @@ tr:
       specific: Belirli bir kişi için bilgilerin alınması.
       title: Kullanıclar
   contributors:
-    location_privacy: All location data is sourced from public GitHub profiles of currently active users.
+    location_privacy:
     title: Çekirdek Kadro
   dashboard:
     christmas_activity: Burası Noel'e kadar sizin için takip ettiğimiz bütün aktiviteleri görebileceğiniz yer.
@@ -240,7 +240,7 @@ tr:
   preferences:
     delete: Hesabınızı silmek istiyor musunuz?
     frequency_message: Seçtiğiniz sıklıkta proje bitene kadar sizlere projeleri göndereceğiz ve geliştirilmesi düşünülen projeler önereceğiz. Kişisel ayarlarınızı değişterebilir, GitHub hesabınızı değiştirebilirsiniz. Aynı zamanda bildiğiniz programlama dillerinizi işaretleyip, projeleri takip edebilirsiniz.
-    ignore_organisations: If you regularly contribute to public repositories that you don't want to track on this site, add the organisation name here. You can add multiple organisations separated by commas. This can be useful if you code in the open at work, or maintain an open source repository yourself.
+    ignore_organisations:
     information: Daha sonra email ayarlarınızı değiştirebilirsiniz.
     languages: Hangi programlama dillerini biliyorsunuz?
     remove: Hesabı Kaldır

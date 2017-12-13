@@ -82,7 +82,7 @@ it:
       specific: Carica le informazioni per un utente specifico.
       title: Utenti
   contributors:
-    location_privacy: All location data is sourced from public GitHub profiles of currently active users.
+    location_privacy: 
     title: Collaboratori principali
   dashboard:
     christmas_activity: Qui troverai un resoconto della tua attività sul sito nella corsa fino a Natale.
@@ -94,8 +94,8 @@ it:
     pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: Sincronizza pull request
     tweet_progress:
-      one:
-      other:
+      one: 
+      other: 
   delete_account:
     are_you_sure: Sei sicuro di voler cancellare il tuo account? Il tuo profilo e le tue pull request verranno rimossi dal sito (i progetti segnalati non verranno cancellati).
     cancel: Ho cambiato idea, rivoglio il mio account!
@@ -240,7 +240,7 @@ it:
   preferences:
     delete: Vuoi eliminare il tuo account?
     frequency_message: Fino a quando il progetto non sarà concluso, ti invieremo email costruttive alla frequenza che desideri, mettendo in evidenza i progetti ai quali farebbe comodo un contributo. Come bonus, ci prendiamo la libertà di personalizzare i nostri suggerimenti in base alle tue conoscenze linguistiche, dopo aver analizzato le tue repository su GitHub. In alternativa, puoi sempre scegliere i linguaggi qui sotto.
-    ignore_organisations: If you regularly contribute to public repositories that you don't want to track on this site, add the organisation name here. You can add multiple organisations separated by commas. This can be useful if you code in the open at work, or maintain an open source repository yourself.
+    ignore_organisations: 
     information: Puoi sempre modificare le tue preferenze email più tardi.
     languages: Che linguaggi conosci?
     remove: Rimuovi profilo
@@ -304,13 +304,13 @@ it:
       text: Collega il tuo account Twitter
       tooltip: Se colleghi il tuo account Twitter, posteremo ogni volta che aprirai una pull request!
   unsubscribe:
-    invalid_token:
-    login:
-    success:
-    title:
-    unsubscribe:
+    invalid_token: 
+    login: 
+    success: 
+    title: 
+    unsubscribe: 
   user:
-    no_current_pr_message:
+    no_current_pr_message: 
     organisations: Membro di...
     pull_request_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"

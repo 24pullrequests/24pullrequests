@@ -94,8 +94,8 @@ ja:
     pull_requests: Wonder what people up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: Pull Requests を同期
     tweet_progress:
-      one:
-      other:
+      one: 
+      other: 
   delete_account:
     are_you_sure: We just wanted to make sure you really do wish to delete your account. This will remove your profile and all pull requests from the site, although any suggested projects will remain.
     cancel: I changed my mind, take me back!
@@ -304,13 +304,13 @@ ja:
       text: あなたの Twitter アカウントとリンクしましょう
       tooltip: あなたの Twitter アカウントとリンクすると、あなたがOSSへの pull request をする度に私たちはツイートします!
   unsubscribe:
-    invalid_token:
-    login:
-    success:
-    title:
-    unsubscribe:
+    invalid_token: 
+    login: 
+    success: 
+    title: 
+    unsubscribe: 
   user:
-    no_current_pr_message:
+    no_current_pr_message: 
     organisations: 組織
     pull_request_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"

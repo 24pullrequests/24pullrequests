@@ -240,7 +240,7 @@ ta:
   preferences:
     delete: உங்கள் கணக்கை நீக்க வேண்டுமா?
     frequency_message: நீங்கள் தேர்வு  செய்த அதிர்வெண், project முடியும் வரை நாங்கள் இப்பொழுதில் இருந்து உங்களுக்கு பயனுள்ள மின்னஞ்சல்களை  அனுப்புவொம்,  உங்கள் பங்களிப்பை கருத்தில்  கொண்டு சில ஆலோசனை project-களை காண்பிப்பார. ஒரு சேர்க்கப்பட்ட போனஸ், நாங்கள் உங்கள் github சுயவிவரத்தில் repo அடிப்படையில் உங்கள் மொழி திறமைக்கு எங்கள் பரிந்துரைகள் தனிப்பயனாக்க சுதந்திரம் எடுக்க வேண்டும். மாற்றாக, நீங்கள் கீழே உங்கள் மொழிகள் தேர்வு செய்யலாம்.
-    ignore_organisations: If you regularly contribute to public repositories that you don't want to track on this site, add the organisation name here. You can add multiple organisations separated by commas. This can be useful if you code in the open at work, or maintain an open source repository yourself.
+    ignore_organisations: 
     information: நீங்கள் எப்போது வேண்டுமானாலும் உங்கள் மின்னஞ்சல் விருப்பங்களை மாற்ற முடியும்.
     languages: எந்த மொழிகள் உங்களுக்கு தெரியும்?
     remove: கணக்கை நீக்குக
