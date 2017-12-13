@@ -299,8 +299,7 @@ ja:
       text: あなたの Twitter アカウントとリンクしましょう
       tooltip: あなたの Twitter アカウントとリンクすると、あなたがOSSへの pull request をする度に私たちはツイートします!
   user:
-    no_current_pr_message: "%{user} is being a grinch for %{year} with no gifted pull requests.
-      Bah humbug!"
+    no_current_pr_message:
     organisations: 組織
     pull_request_count: "%{user}さんは%{year}の12月の間に合計%{count}個の pull request をしました"
   view_all: すべてを見る

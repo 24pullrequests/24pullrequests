@@ -268,8 +268,7 @@ it:
       tooltip: Se colleghi il tuo account Twitter, posteremo ogni volta che aprirai
         una pull request!
   user:
-    no_current_pr_message: "%{user} è diventato un Grinch per il  %{year} perché non ha
-      regalato nessuna pull request. Bah, impostore!"
+    no_current_pr_message:
     organisations: Membro di...
     pull_request_count: "%{user} ha totalizzato %{count} pull request durante l'anno
       %{year}"

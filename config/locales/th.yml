@@ -218,8 +218,7 @@ th:
       text: "เชื่อมต่อกับบัญชีทวิตเตอร์"
       tooltip: "ถ้าคุณเชื่อมต่อบัญชีทวิตเตอร์เราจะโพสทุกครั้งที่คุณส่ง pull request"
   user:
-    no_current_pr_message: "%{user} เป็นคนขี้้เหนียวในปี %{year} โดยไม่ได้ส่ง pull request
-      เลย!"
+    no_current_pr_message:
     organisations: "สมาชิกของ..."
     pull_request_count: "%{user} ได้ส่ง %{count} pull request ในปี%{year}"
   view_all: "ดูทั้งหมด"

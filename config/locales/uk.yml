@@ -249,7 +249,7 @@ uk:
       tooltip: "Якщо ваш твіттер акаунт буде прив'язано, ми зможемо постити в твіттер,
         кожен раз, як ви відкріваєте пул реквест!"
   user:
-    no_current_pr_message: "%{user} не надіслав жодного пул реквеста в %{year} році. Прикро!"
+    no_current_pr_message:
     organisations:
     pull_request_count: "%{user} надіслав %{count} пул реквестів в %{year} році."
   view_all: "Подивится"
