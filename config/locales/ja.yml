@@ -238,6 +238,8 @@ ja:
     setup_help: 24 Pull Requests を始めるにあたり、まず最初に以下のフォームに記入してください。
     title: アカウントを設定してください
     twitter: Twitter アカウント
+    ignore_organisations: もし、このサイトで追跡したくない公開リポジトリに対して定期的に貢献している場合は、ここに組織名を追加してください。コンマで区切って複数の組織を追加できます。オープンソースのリポジトリのコードを職場で書いたり、自分で管理している場合に役立ちます。
+    ignored_organisations: 無視する組織
   preferred_languages: 好きな言語
   projects:
     admin:
