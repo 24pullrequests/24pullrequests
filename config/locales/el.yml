@@ -286,7 +286,7 @@ el:
       tooltip: "Αν συνδέσεις το λογαριασμό του twitter σου, θα στέλνουμε ένα tweet
         κάθε φορά που ανοίγεις ένα καινούριο pull request"
   user:
-    no_current_pr_message:
+    no_current_pr_message: "%{user} δεν έχει δωρίσει ή συγχωνεύσει κανένα pull request αυτόν τον χρόνο. <a href='https://github.com/24pullrequests/24pullrequests/blob/master/CONTRIBUTING.md'> Μπορούμε να σας βοηθήσουμε να ξεκινήσετε;</a>"
     organisations:
     pull_request_count:
       one: "%{user} έχει δωρίσει %{count} pull request μέχρι τώρα για τα Χριστούγεννα
