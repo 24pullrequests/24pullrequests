@@ -1,18 +1,49 @@
 ---
 ja:
+  about_us: このサイトについて
+  cancel: キャンセル
+  change: 編集
+  claim: 主張
+  clear: 削除
+  deactivate: Deactivate
+  delete: Delete
+  developers_involved: 人の開発者が参加しました
+  developers_involved_desc: Join everyone here and make open source better.
+  developers_using_language: Developers using %{language}
+  edit: 編集
+  everything: Everything
+  exempli_gratia: e.g.
+  featured_projects: Featured Projects
+  follow_user: Follow @%{twitter}
+  happy_holidays: Happy Holidays
+  how_to_contribute: 貢献するには？
+  more: More
+  no_suggestions: あなたはまだプロジェクトをオススメをしていません。
+  open_source_yey: Open Source FTW!
+  or: or
+  organisations_involved_desc: Invite more people from your organisation to participate.
+  preferred_languages: 好きな言語
+  search: 検索
+  sponsored_by: Sponsored by
+  sponsors: スポンサー
+  suggest_project: プロジェクトをオススメする
+  suggested_projects: オススメのプロジェクト
+  view_all: すべてを見る
+  welcome: ようこそ、%{user}さん!
+  welcome_back: お帰りなさい、%{user}さん
+  your_pull_requests: あなたの Pull Request
   about:
     description: 24 Pull Requests は12月にオープンソースのコラボレーションを促進する小さなプロジェクトです。
     idea: '"12月の始まりからクリスマスまで毎日 pull request を送る"ことが基本的なアイデアです。12月を通して開発者達がオープンソースへ、小さなコードの贈り物をお返しすることを促します。'
-    more_info: "またこのサイトは、支援するプロジェクトの提案、貢献するためのガイド、毎日投稿される pull request の紹介も提供します。"
-    on_github: "このサイトは GitHub 上でオープンソースとして開発されています:"
+    more_info: またこのサイトは、支援するプロジェクトの提案、貢献するためのガイド、毎日投稿される pull request の紹介も提供します。
+    on_github: 'このサイトは GitHub 上でオープンソースとして開発されています:'
     on_twitter: 'Twitter アカウントもあります:'
+    title: 24 Pull Requests とは
     sponsors:
       details: 24 Pull Requests はスポンサーのご支援、ご寄付によって成り立っています。
       get_in_touch: 'あなたがスポンサーシップや何か他のことについて連絡を取りたい場合は、私たちにメールを送ってください:'
       thanks: ありがとうございます。
       title: スポンサー
-    title: 24 Pull Requests とは
-  about_us: "このサイトについて"
   activerecord:
     errors:
       models:
@@ -27,10 +58,11 @@ ja:
               already_confirmed: "%{attribute} is already confirmed"
               required_for_confirmation: "%{attribute} is required for confirmation"
   api:
+    description: あなたはこのことを知らないかもしれませんが、24 Pull Requests には JSON API があります。それぞれのエンドポイントの詳細は以下の通りです。
+    title: JSON API
     callback:
       details: "?callback パラメータを指定することで、GET で取得できるいずれの API も、結果を JSON 関数でラップして受け取れます。これはブラウザがクロスドメインの問題を避けてウェブページの埋め込みコンテンツを表示するのに、一般的に使われる方法です。レスポンスに含まれるデータは通常の API 呼び出し結果と同じです。"
       title: JSON-P Callbacks
-    description: あなたはこのことを知らないかもしれませんが、24 Pull Requests には JSON API があります。それぞれのエンドポイントの詳細は以下の通りです。
     organisations:
       details: このサイトにサインアップしている全ての組織を返します。組織ごとにユーザ情報も含まれます。
       specific: 特定の組織を指定して返します。
@@ -45,60 +77,47 @@ ja:
       details: このサイトのユーザによる12月中の全ての pull request を新しいもの順に返します。pull request を作成したユーザ情報も含まれます。
       meta_details: 今年行われた pull request 情報を取得します。
       title: Pull Request
-    title: JSON API
     users:
       details: このサイトにサインアップしている全てのユーザを、12月中の pull request が多い順に返します。組織情報、pull request 情報も含まれます。
       specific: 特定ユーザの情報を返します。
       title: ユーザ
-  cancel: "キャンセル"
-  change: 編集
-  claim: 主張
-  clear: 削除
   contributors:
-    title: 貢献者
     location_privacy: すべての位置データは、現在アクティブなユーザのパブリックなGitHubプロファイルから取得されます。
+    title: 貢献者
   dashboard:
     christmas_activity: ここではクリスマスまでにあなたが行い、トレースされたすべての活動を見ることができます。
     gift_it: Gift it!
-    give_a_gift: Looks like you haven't gifted any code today. Would you like to gift
-      your new pull requests?
+    give_a_gift: Looks like you haven't gifted any code today. Would you like to gift your new pull requests?
     help_out: 貢献したいプロジェクトが思いつきませんか? ここにポピュラーなプロジェクトを集めたので、参考にしてください。
     no_pull_requests: あなたはまだ pull request を送信していません、何を待っているのですか!?
     not_december: 24 Pull Requests runs from 1st-24th December, come back then!
-    pull_requests: Wonder what people up to this holiday? Check out these pull requests,
-      or submit a pull request now and find yours here!
+    pull_requests: Wonder what people up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: Pull Requests を同期
     tweet_progress:
       one:
       other:
   delete_account:
-    are_you_sure: We just wanted to make sure you really do wish to delete your account.
-      This will remove your profile and all pull requests from the site, although
-      any suggested projects will remain.
+    are_you_sure: We just wanted to make sure you really do wish to delete your account. This will remove your profile and all pull requests from the site, although any suggested projects will remain.
     cancel: I changed my mind, take me back!
     confirm: Confirm Deletion
     email_preferences_link: email preferences
-    notification_info: If you simply want to stop receiving email notifications you
-      can change your  %{email_preferences_link}.
+    notification_info: If you simply want to stop receiving email notifications you can change your  %{email_preferences_link}.
     title: Delete your account
-  developers_involved: 人の開発者が参加しました
-  developers_involved_desc: Join everyone here and make open source better.
-  developers_using_language: Developers using %{language}
-  edit: "編集"
   events:
+    details: You don't have to hack alone this Christmas! Host a 24 Pull Requests hack event at your company, technology meetup, or in your local community. Or you can join a hack event and code together.
+    save_event: 保存
+    title: イベント
     admin:
       search: Search by GitHub repository
       title: Manage Projects
-    details: You don't have to hack alone this Christmas! Host a 24 Pull Requests
-      hack event at your company, technology meetup, or in your local community. Or
-      you can join a hack event and code together.
     edit:
       title: イベントを編集する
     index:
       host_an_event: イベントを主催する
-      show_past_24_pull_requests_events: 過去に開催された 24 Pull Requests のイベントを見る
       past_24_pull_requests_events: 過去に開催された 24 Pull Requests のイベント
+      show_past_24_pull_requests_events: 過去に開催された 24 Pull Requests のイベントを見る
     new:
+      title: 24 Pull Requests のイベントを主催する
       form:
         description: 説明
         description_placeholder: イベントグループの説明を記載してください
@@ -110,7 +129,6 @@ ja:
         start_time: 開始日時
         url: URL
         url_placeholder: あなたのイベントページ / 登録
-      title: 24 Pull Requests のイベントを主催する
     notice:
       destroy_success: イベントを削除しました!
       edit_success: イベントを更新しました!
@@ -122,114 +140,107 @@ ja:
       destroy_event: イベントを削除する
       edit_event: イベントを編集する
       view_event_details: イベントの詳細を見る
-    save_event: 保存
-    title: イベント
-  everything: Everything
-  exempli_gratia: e.g.
-  follow_user: Follow @%{twitter}
   gifts:
     calendar_link: public calendar
-    description: Here you can manage your pull requests and select &amp; curate your
-      own set of "24 Pull Requests".
+    description: Here you can manage your pull requests and select &amp; curate your own set of "24 Pull Requests".
+    give: Gift something meaningful to a project you love
+    link_twitter: Link Twitter account
+    link_twitter_desc: Want to share information about 24 Pull Requests and your gifts? %{link_twitter} and gift some code to open-source projects.
+    no_pull_requests: You don’t have any pull-requests
+    none: Nothing gifted yet.
+    title: Gifted Code
+    view_your_gifts: All your gifts will be shown on your %{calendar_link}.
     form:
       date: Date
       gift_it: Gift it!
       pull_requests: Pull Requests
       tweet: Tweet about your gift!
-    give: Gift something meaningful to a project you love
-    none: Nothing gifted yet.
-    title: Gifted Code
-    view_your_gifts: All your gifts will be shown on your %{calendar_link}.
-  happy_holidays: Happy Holidays
   homepage:
     about: What's it all about?
-    about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers
-      around the world to send 24 pull requests between December 1st and December 24th.</p>
-      <p>This is the site to help promote the project, highlighting why, how and where
-      to send your pull requests.</p><p>Log in with your GitHub account and we'll
-      track and highlight all your pull requests and suggest projects to work on.</p>"
+    about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers around the world to send 24 pull requests between December 1st and December 24th.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your pull requests.</p><p>Log in with your GitHub account and we'll track and highlight all your pull requests and suggest projects to work on.</p>"
     description: Giving back little gifts of code for Christmas
+    give_to_open_source: あなたはオープンソースプロジェクトから通年にわたって恩恵を得られています。今こそ多くのオープンソースプロジェクトとそれをメンテナンスしてくれている人たちに感謝の言葉を伝えましょう。そしてPull Requestsを送られることは彼らはとても嬉しいことなのです。
+    greeting: クリスマスがきた
+    join_the_chat: Gitter に参加してください（英語）, %{link_to_chat}.
+    login_with_github: Log in with GitHub
+    q_n_a: 質問と回答
+    title: 24 Pull Requests
     event:
       description: 今年は世界中で 24 Pull Requests ハックイベントを主催することを推奨しています。このクリスマスに参加してください。
       host_an_event: イベントを主催する
-      title: "イベント"
+      title: イベント
       view_events: イベントを見る
-    give_to_open_source: あなたはオープンソースプロジェクトから通年にわたって恩恵を得られています。今こそ多くのオープンソースプロジェクトとそれをメンテナンスしてくれている人たちに感謝の言葉を伝えましょう。そしてPull Requestsを送られることは彼らはとても嬉しいことなのです。
-    greeting: "クリスマスがきた"
     involved:
       contributing_path: 特別なページ
-      description: 'オープンソースプロジェクトに貢献する方法はたくさんあります。例えば、ドキュメントを向上させる、バグや問題の解決を手助けする、コード品質を向上させたり、テストカバレッジを上げる、不足している機能を追加するなど様々です。'
+      description: オープンソースプロジェクトに貢献する方法はたくさんあります。例えば、ドキュメントを向上させる、バグや問題の解決を手助けする、コード品質を向上させたり、テストカバレッジを上げる、不足している機能を追加するなど様々です。
       special_page: 私たちは、あなたがプロジェクトに貢献するための情報を見つけるために%{contributing_path}を用意しました。
       take_a_look: もし、新しいオープンソースを探しているようであれば、ぜひ覗いてみてください。
-      title: "参加しよう"
-    join_the_chat: Gitter に参加してください（英語）, %{link_to_chat}.
+      title: 参加しよう
     profile:
       description: オープンソースプロジェクトに貢献することは、コミュニティでのあなたのプロフィールを構築し、あなたの履歴書の価値を高めるはずです。
       getting_started: このような貢献は簡単に始めることができます。たとえ小さな貢献でも、プロジェクトにはとても価値のあることなのです。
-      title: "プロフィールを作ろう"
-    q_n_a: 質問と回答
-    title: 24 Pull Requests
-  how_to_contribute: "貢献するには？"
+      title: プロフィールを作ろう
   information:
-    codetriage: Give back to open source, one issue at a time, with CodeTriage. You'll
-      get one issue from your favorite repo per day to help you dig deeper, learn
-      more, and stay involved with the code you rely on.
+    codemontage: Give forward by contributing to open source, social good projects that benefit organizations making a difference in the world.
+    codetriage: Give back to open source, one issue at a time, with CodeTriage. You'll get one issue from your favorite repo per day to help you dig deeper, learn more, and stay involved with the code you rely on.
     get_ready: Get ready for 24 Pull Requests %{year} when we do it all again!
-    happy_holidays_see_you: Happy Holidays and see you all next year when we do it
-      all again!
-    help_open_source: 'Want to help out with open source projects in the meantime?
-      Check out these other great initiatives:'
-    last_year_stats: In %{year}, over 24 days, <b>%{developers}</b> developers submitted
-      <b>%{pull_requests}</b> pull requests to <b>%{projects}</b> different open source
-      projects.
+    happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
+    help_open_source: 'Want to help out with open source projects in the meantime? Check out these other great initiatives:'
+    issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
+    last_year_stats: In %{year}, over 24 days, <b>%{developers}</b> developers submitted <b>%{pull_requests}</b> pull requests to <b>%{projects}</b> different open source projects.
     title: 24 Pull Requests %{year} is upon us
   language:
+    projects_count: "%{count} %{language} Projects"
     developers:
       count: "%{count} Developers using %{language}"
     projects:
       count: "%{count} Projects are using %{language}"
       suggest: Suggest a %{language} project
-    projects_count: "%{count} %{language} Projects"
     pull_requests:
       latest:
         count: Latest %{language} Pull Requests (%{count} total)
-  more: More
+  locale:
+    cs: Čeština
+    de: Deutsch
+    el: Ελληνικά
+    en: English
+    es: Español
+    fi: Suomi
+    fr: Français
+    hi: हिंदी
+    it: Italiano
+    ja: 日本語
+    nb: Norsk bokmål
+    pt_br: Português do Brasil
+    ru: Русский
+    ta: தமிழ்
+    th: ไทย
+    translate: Translate into your language!
+    uk: Українська
+    zh_Hans: 简体中文
+    zh_Hant: 正體中文
   navigation:
-    all_projects: "全てのプロジェクト"
-    dashboard: "ダッシュボード"
-    gifted_code: "ギフトコード"
-    logout: "ログアウト"
-    manage_projects: "プロジェクト管理"
-    my_suggestions: "私のオススメ"
-    preferences: "設定"
-    profile: "プロフィール"
-  no_suggestions: あなたはまだプロジェクトをオススメをしていません。
+    all_projects: 全てのプロジェクト
+    dashboard: ダッシュボード
+    gifted_code: ギフトコード
+    logout: ログアウト
+    manage_projects: プロジェクト管理
+    my_suggestions: 私のオススメ
+    preferences: 設定
+    profile: プロフィール
   nov_reminder:
-    how_to_contribute:
-      to find out how to contribute 24 pull requests between December 1st and December 24th.
-      Your contributions can be tiny, as simple as fixing a typo, to something incredible.
-      Speed up Rails. Document Express. Fix a bug that you reported.
-  open_source_yey: Open Source FTW!
-  or: or
+    how_to_contribute: to find out how to contribute 24 pull requests between December 1st and December 24th. Your contributions can be tiny, as simple as fixing a typo, to something incredible. Speed up Rails. Document Express. Fix a bug that you reported.
   organisations:
     languages: Languages
+    pull_requests: "%{count} pull requests submitted by members"
+    title: "%{count} organisations involved"
     members:
       one: 1 Member
       other: "%{count} Members"
-    pull_requests: "%{count} pull requests submitted by members"
-    title: "%{count} organisations involved"
-  organisations_involved_desc: Invite more people from your organisation to participate.
   preferences:
     delete: あなたのアカウントを削除したいですか?
-    form:
-      daily: 日次
-      email: Email アドレス
-      email_frequency: メールの送信頻度
-      never: 送信しない
-      weekly: 週次
     frequency_message: 今からプロジェクトが終了するまで、あなたが選択した頻度で、あなたが貢献を検討する可能性のあるプロジェクトを提案するメールを送信します。加えて、あなたのGitHubのプロフィールに記載の開発言語のリポジトリに基づいて、私たちは提案します。また、あなたは以下に記載の開発言語を選択することができます。
-    hint:
-      confirm_email: 私たちがあなたに送ったメールのリンクで、あなたのメールアドレスを確認してください。
+    ignore_organisations: もし、このサイトで追跡したくない公開リポジトリに対して定期的に貢献している場合は、ここに組織名を追加してください。コンマで区切って複数の組織を追加できます。オープンソースのリポジトリのコードを職場で書いたり、自分で管理している場合に役立ちます。
     information: 後からいつでもメールの設定を変更することができます。
     languages: あなたはどの言語を知っていますか?
     remove: アカウントを削除する
@@ -238,77 +249,69 @@ ja:
     setup_help: 24 Pull Requests を始めるにあたり、まず最初に以下のフォームに記入してください。
     title: アカウントを設定してください
     twitter: Twitter アカウント
-    ignore_organisations: もし、このサイトで追跡したくない公開リポジトリに対して定期的に貢献している場合は、ここに組織名を追加してください。コンマで区切って複数の組織を追加できます。オープンソースのリポジトリのコードを職場で書いたり、自分で管理している場合に役立ちます。
-    ignored_organisations: 無視する組織
-  preferred_languages: 好きな言語
+    form:
+      daily: 日次
+      email: Email アドレス
+      email_frequency: メールの送信頻度
+      never: 送信しない
+      weekly: 週次
+    hint:
+      confirm_email: 私たちがあなたに送ったメールのリンクで、あなたのメールアドレスを確認してください。
   projects:
+    claim: 一覧に載っていないオススメのプロジェクトがありますか? 主張してください!
+    filter_by_language: 'Filter by Language:'
+    for_you: Suggested for you
+    help_out: Can't think of a project to contribute to? We've collected a list of brilliant open source projects who would love your pull requests.
+    suggest: There are no projects for that language yet, why not %{suggest_link}?
+    suggest_link_text: suggest one
+    suggest_new: You can also suggest projects that should be added to the list, or add your own project if you would like some help with it.
     admin:
       search: Search by GitHub repository
       title: Manage Projects
-    claim: 一覧に載っていないオススメのプロジェクトがありますか? 主張してください!
     edit:
       title: Edit Suggestion
-    filter_by_language: 'Filter by Language:'
-    for_you: Suggested for you
-    help_out: Can't think of a project to contribute to? We've collected a list of
-      brilliant open source projects who would love your pull requests.
     new:
+      info: One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We've selected our favorites, but we're always open to suggestions. Have some ideas? Share them below!
+      issue_link_text: suggest an issue
+      suggestion: Have a suggestion for this project? We're all ears! If there's something you'd like fixed, feel free to %{issue_link}.
+      title: Suggest a Project
       form:
         github_url: GitHub URL
         main_language: 主要言語
         project_name: プロジェクト名
         submit_project: 送信
         summary: 概要
-      info: One of the ways we encourage participation in the open source community
-        is by letting users know what popular projects might be worth contributing
-        to. We've selected our favorites, but we're always open to suggestions. Have
-        some ideas? Share them below!
-      issue_link_text: suggest an issue
-      suggestion: Have a suggestion for this project? We're all ears! If there's something
-        you'd like fixed, feel free to %{issue_link}.
-      title: Suggest a Project
-    suggest: There are no projects for that language yet, why not %{suggest_link}?
-    suggest_link_text: suggest one
-    suggest_new: You can also suggest projects that should be added to the list, or
-      add your own project if you would like some help with it.
     suggestion:
       edit: Edit Suggestion
       update: Update Project
   pull_request:
+    twitter_message: 'I just gifted a pull request for http://24pullrequests.com, check it out: %{issue_url}'
     download:
       tooltip: 通常、私たちは pull request を毎時チェックしますが、もし望むのであれば、今すぐ確認することができます。
-    twitter_message: 'I just gifted a pull request for http://24pullrequests.com,
-      check it out: %{issue_url}'
   pull_requests:
     count: "%{count} の Pull Request が既に作成されました!"
     language:
       count: "%{language} で %{count} の Pull Requests が既に作成されました!"
     latest:
       count: 最新の Pull Request (合計 %{count})
-  search: "検索"
-  sponsored_by: Sponsored by
-  sponsors: "スポンサー"
-  suggest_project: プロジェクトをオススメする
-  suggested_projects: オススメのプロジェクト
   suggestions:
     title: 私のオススメ
   twitter:
     account_linked: あなたの Twitter アカウントとは既にリンクしています! あなたがOSSへの pull request をする度に私たちはツイートします。
     account_removed: あなたの Twitter アカウントとのリンクを削除しました。
+    auth_failed: Authorization with Twitter has failed.
     link_account:
       text: あなたの Twitter アカウントとリンクしましょう
       tooltip: あなたの Twitter アカウントとリンクすると、あなたがOSSへの pull request をする度に私たちはツイートします!
+  unsubscribe:
+    invalid_token:
+    login:
+    success:
+    title:
+    unsubscribe:
   user:
     no_current_pr_message:
     organisations: 組織
-    pull_request_count: "%{user}さんは%{year}の12月の間に合計%{count}個の pull request をしました"
-  view_all: すべてを見る
-  welcome: ようこそ、%{user}さん!
-  welcome_back: お帰りなさい、%{user}さん
-  your_pull_requests: あなたの Pull Request
-  unsubscribe:
-    login:
-    title:
-    unsubscribe:
-    success:
-    invalid_token:
+    pull_request_count:
+      one: "%{user} has made %{count} pull request so far in Christmas %{year}"
+      other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

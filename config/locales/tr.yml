@@ -1,278 +1,317 @@
 ---
 tr:
+  about_us: Hakkında
+  cancel: İptal et
+  change: Değiştir
+  claim: Talep et
+  clear: Sil
+  deactivate: Deactivate
+  delete: Delete
+  developers_involved: Henüz Katılan geliştiriciler
+  developers_involved_desc: Join everyone here and make open source better.
+  developers_using_language: Geliştiriciler %{language} kullanıyor.
+  edit: Düzenle
+  everything: Herşey
+  exempli_gratia: örn.
+  featured_projects: Featured Projects
+  follow_user: "@%{twitter} hesabını takip edin."
+  happy_holidays: Happy Holidays
+  how_to_contribute: Nasıl katılım olabilir?
+  more: Daha Fazla
+  no_suggestions: Henüz bir proje önermediniz.
+  open_source_yey: Açık Kaynak FTW!
+  or: yada
+  organisations_involved_desc: Invite more people from your organisation to participate.
+  preferred_languages: Tercih edilen programlama dilleri
+  search: Ara
+  sponsored_by: Sponsorluk
+  sponsors: Sponsors
+  suggest_project: Proje Öner
+  suggested_projects: Önerilen Projeler
+  view_all: Hepsini Göster
+  welcome: Welcome, %{user}!
+  welcome_back: Hoşgeldin, %{user}
+  your_pull_requests: Pull Requests'lerin
   about:
-    description: 24 Pull Requests Aralık ayı boyunca açık kaynak kodlu projeleri destekleyen
-      küçük bir projedir.
-    idea: Temel fikir Aralıktan Noel'e kadar her gün bir pull request yollanması ve
-      Aralık ayı boyunca küçük hediyeler ile geliştircilerin cesaretlendirilmesidir.
-    more_info: Bu site ilgili projeleri de destekler ve her gün gönderilen pull request'ler
-      ile onlar destek ve rehber olur.
+    description: 24 Pull Requests Aralık ayı boyunca açık kaynak kodlu projeleri destekleyen küçük bir projedir.
+    idea: Temel fikir Aralıktan Noel'e kadar her gün bir pull request yollanması ve Aralık ayı boyunca küçük hediyeler ile geliştircilerin cesaretlendirilmesidir.
+    more_info: Bu site ilgili projeleri de destekler ve her gün gönderilen pull request'ler ile onlar destek ve rehber olur.
     on_github: 'Bu sitenin geliştirilmesi GitHub üzerindedir:'
     on_twitter: 'Twitter''da da varız:'
+    title: 24 Pull Requests Hakkında
     sponsors:
       details: 24 Pull Requests sponsorlar ve bağış yapanlara teşekkürlerini sunar.
-      get_in_touch: 'Eğer sponsorluk hakkında bizim ile iletişime geçmek istiyorsanız
-        email adresimiz:'
-      thanks: "Çok teşekkür ederiz..."
+      get_in_touch: 'Eğer sponsorluk hakkında bizim ile iletişime geçmek istiyorsanız email adresimiz:'
+      thanks: Çok teşekkür ederiz...
       title: Sponsonlar
-    title: 24 Pull Requests Hakkında
-  about_us: Hakkında
   activerecord:
     errors:
       models:
+        event:
+          attributes:
+            start_time:
+              in_past: Events cannot be created in the past
+              not_in_range: Events can only be created between December 1st and 24th
         user:
           attributes:
             email:
               already_confirmed: "%{attribute} daha önce doğrulanmış"
               required_for_confirmation: "%{attribute} alanı doğrulama için gerekli"
   api:
+    description: Bunu bilmiyor olabilirsiniz, fakat 24 Pull Requests kendi JSON API ya sahip. Detayları aşağıda bulabilirsiniz.
+    title: JSON API
     callback:
-      details: You can send a ?callback parameter to any GET call to have the results
-        wrapped in a JSON function. This is typically used when browsers want to embed
-        content in web pages by getting around cross domain issues. The response includes
-        the same data output as the regular API.
+      details: You can send a ?callback parameter to any GET call to have the results wrapped in a JSON function. This is typically used when browsers want to embed content in web pages by getting around cross domain issues. The response includes the same data output as the regular API.
       title: JSON-P Callbacks
-    description: Bunu bilmiyor olabilirsiniz, fakat 24 Pull Requests kendi JSON API
-      ya sahip. Detayları aşağıda bulabilirsiniz.
     organisations:
       details: Siteye kayıtlı bütün organizasyonlar kullanıcıları ile birlikte bulunur.
       specific: Belirli bir organizasyon için bilgilerin alınması.
       title: Organizasyonlar
     pagination:
-      details: Requests that return multiple items will be paginated to 99 items by
-        default. You can specify further pages with the ?page parameter.
+      details: Requests that return multiple items will be paginated to 99 items by default. You can specify further pages with the ?page parameter.
       title: Sayfalandırma
     projects:
       details: Bütün önerilen projeler sayfada alfabetik olarak sıralanır.
       title: Projeler
     pull_requests:
-      details: Kullanıcının kendi yaptığı pull request'ler dahil olmak üzere tüm pull
-        requestler Aralık ayındankiler olmak üzere yeniden eskiye doğru sıralanır.
+      details: Kullanıcının kendi yaptığı pull request'ler dahil olmak üzere tüm pull requestler Aralık ayındankiler olmak üzere yeniden eskiye doğru sıralanır.
       meta_details: Bu yıl tüm çekme istekleri hakkında bilgi yükleyin.
       title: Pull Requests
-    title: JSON API
     users:
-      details: Siteye kayıtlı tüm kullanıcılar Aralık ayı boyunca kendi ve organizasyonları
-        üzerinden yaptıkları pull requestler'i görürler.
+      details: Siteye kayıtlı tüm kullanıcılar Aralık ayı boyunca kendi ve organizasyonları üzerinden yaptıkları pull requestler'i görürler.
       specific: Belirli bir kişi için bilgilerin alınması.
       title: Kullanıclar
-  cancel: "İptal et"
-  change: Değiştir
-  claim: Talep et
-  clear: Sil
   contributors:
-    title: "Çekirdek Kadro"
     location_privacy:
+    title: Çekirdek Kadro
   dashboard:
-    christmas_activity: Burası Noel'e kadar sizin için takip ettiğimiz bütün aktiviteleri
-      görebileceğiniz yer.
+    christmas_activity: Burası Noel'e kadar sizin için takip ettiğimiz bütün aktiviteleri görebileceğiniz yer.
     gift_it: Hediye et!
-    give_a_gift: Bugün hiç kod hediye etmemiş görülüyorsunuz? Bir tane pull request
-      yapmaya ne dersiniz?
-    help_out: 'Bir projeye katkı yapabileceğinizi düşünmüyor musunuz? O zaman popüler
-      bütün projelere bakalım:'
+    give_a_gift: Bugün hiç kod hediye etmemiş görülüyorsunuz? Bir tane pull request yapmaya ne dersiniz?
+    help_out: 'Bir projeye katkı yapabileceğinizi düşünmüyor musunuz? O zaman popüler bütün projelere bakalım:'
     no_pull_requests: Henüz hiç pull request göndermedeniz. Daha ne bekliyorsunuz?
+    not_december: 24 Pull Requests runs from 1st-24th December, come back then!
+    pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: Pull Request'leri senkon et
     tweet_progress:
       one:
       other:
   delete_account:
-    are_you_sure: Hesabınızı gerçekten silmek istediğinizden emin olmak istiyoruz.
-      Hesabınızı ve pull request'leriniz bu site üzerinden silinecektir.
+    are_you_sure: Hesabınızı gerçekten silmek istediğinizden emin olmak istiyoruz. Hesabınızı ve pull request'leriniz bu site üzerinden silinecektir.
     cancel: Fikrimi değiştirdim, beni geri al!
     confirm: Silimi onayla
     email_preferences_link: email özellikleri
-    notification_info: email bildirimlerini almak istemiyorsanız  %{email_preferences_link}
-      den email ayarlarını değiştiriniz.
+    notification_info: email bildirimlerini almak istemiyorsanız  %{email_preferences_link} den email ayarlarını değiştiriniz.
     title: Hesabı sil
-  developers_involved: Henüz Katılan geliştiriciler
-  developers_using_language: Geliştiriciler %{language} kullanıyor.
-  edit: Düzenle
-  everything: Herşey
-  exempli_gratia: "örn."
-  follow_user: "@%{twitter} hesabını takip edin."
+  events:
+    details: You don’t have to hack alone this Christmas! Host a 24 Pull Requests hack event at your company, technology meetup, or in your local community. Or you can join a hack event and code together.
+    save_event: Save event
+    title: Events
+    admin:
+      search: Search by GitHub repository
+      title: Manage Projects
+    edit:
+      title: Edit Event
+    index:
+      host_an_event: Host an event
+      past_24_pull_requests_events: Past 24 Pull Requests Events
+      show_past_24_pull_requests_events: Show Past 24 Pull Requests Events
+    new:
+      title: Host a 24 Pull Requests event
+      form:
+        description: Description
+        description_placeholder: Give a little description of the group and event
+        location: Location
+        location_placeholder: e.g. Bristol, UK
+        map: Location marker
+        name: Event name
+        name_placeholder: Bristol Ruby Group Pull-request-a-thon
+        start_time: When
+        url: URL
+        url_placeholder: Your event page / registration
+    notice:
+      destroy_success: Event removed successfully!
+      edit_success: Event updated successfully!
+      new_success: Event created successfully!
+      not_authorized: You can only edit events that you have created
+      not_logged_in: You must be logged in to create or edit events
+    show:
+      confirm_destroy: Are you sure you want to remove this event?
+      destroy_event: Remove event
+      edit_event: Edit event
+      view_event_details: View event details
   gifts:
     calendar_link: Genel takvim
-    description: Buradan pull request'lerini yönetebilir ve seçebilirsin &amp; "24
-      Pull Requests".
+    description: Buradan pull request'lerini yönetebilir ve seçebilirsin &amp; "24 Pull Requests".
+    give: Sevdiğin bir proje hakkında hediye gönder.
+    link_twitter: Link Twitter account
+    link_twitter_desc: Want to share information about 24 Pull Requests and your gifts? %{link_twitter} and gift some code to open-source projects.
+    no_pull_requests: You don’t have any pull-requests
+    none: Henüz bir hediye gönderilmedi.
+    title: Hediye Edilmiş Kod
+    view_your_gifts: Bütün hedilerin bu takvimde görülecek %{calendar_link}.
     form:
       date: Tarih
       gift_it: Hediye et!
       pull_requests: Pull Requests
       tweet: Hediyen hakkında Tweet at!
-    give: Sevdiğin bir proje hakkında hediye gönder.
-    none: Henüz bir hediye gönderilmedi.
-    title: Hediye Edilmiş Kod
-    view_your_gifts: Bütün hedilerin bu takvimde görülecek %{calendar_link}.
   homepage:
     about: Bütün bunlar ne için?
-    about_text: "<p>24 Pull Requests, dünyadaki bütün geliştiricileri Aralık ayından
-      Noel'e teşvik etmek için oluşmuş yıllık bir girişimdir.</p> <p>Bu site projelere
-      pull request'lerinizin neden, nasıl ve nereye göndereceliğine yardımcı olur.
-      </p><p>GitHub hesabınız ile giriş yapın ve sizlerin bütün pull request'lerinizi
-      izleyelim ve sizler için üzerinde çalışabileceğeniz projeler önerelim.</p>"
+    about_text: "<p>24 Pull Requests, dünyadaki bütün geliştiricileri Aralık ayından Noel'e teşvik etmek için oluşmuş yıllık bir girişimdir.</p> <p>Bu site projelere pull request'lerinizin neden, nasıl ve nereye göndereceliğine yardımcı olur. </p><p>GitHub hesabınız ile giriş yapın ve sizlerin bütün pull request'lerinizi izleyelim ve sizler için üzerinde çalışabileceğeniz projeler önerelim.</p>"
     description: Noel için küçük kod parçaları hediye etmek.
-    give_to_open_source: Bütün yıl açık kaynak kodlu projeleri kullanmaktan faydalanabilirsiniz.
-      Şimdi bu projelerin destekcilerine teşekkür etme zamanı ve küçük bir kuşun bana
-      dediğine göre onlar pull request'leri kabul etmekten mutluluk duyacaklar!
+    give_to_open_source: Bütün yıl açık kaynak kodlu projeleri kullanmaktan faydalanabilirsiniz. Şimdi bu projelerin destekcilerine teşekkür etme zamanı ve küçük bir kuşun bana dediğine göre onlar pull request'leri kabul etmekten mutluluk duyacaklar!
     greeting: Bu sezon
-    involved:
-      contributing_path: "özel sayfa"
-      description: 'Açık kaynak bir porjeye dahil olmanın bir çok yolu vardır: dökümantasyon
-        içeriklerini geliştirmek, mevcut sorun ve bugları düzeltmek, kod kalitesini
-        ve testlerin kapmasımını arttırmak ya da olmayan bir özellik eklemek.'
-      special_page: Katılım hakkında bilgiler bulabileceğiniz %{contributing_path}
-        hazırladık.
-      take_a_look: Eğer açık kaynak kodda yeniyseniz, bir göz atın.
-      title: Dahil olmak
     join_the_chat: Gitter de konuşmalara dahil olun %{link_to_chat}
-    profile:
-      description: Açık kaynak projelere katılmak, topluluk içinde profilinizin oluşması
-        ve CVnizi geliştirmeniz için iyi bir yoldur.
-      getting_started: Küçük katılımlar bir projeyi değerli yapabilir. Projelere katılım
-        başlatmak gerçekten kolaydır.
-      title: Profilinizi Oluşturun
+    login_with_github: Log in with GitHub
     q_n_a: Sorular & Cevaplar
     title: 24 Pull Requests
-  how_to_contribute: Nasıl katılım olabilir?
+    event:
+      description: This year we are encouraging organisers around the world to hold 24 Pull Requests hack events. Get involved this Christmas.
+      host_an_event: Host an event
+      title: Events
+      view_events: View events
+    involved:
+      contributing_path: özel sayfa
+      description: 'Açık kaynak bir porjeye dahil olmanın bir çok yolu vardır: dökümantasyon içeriklerini geliştirmek, mevcut sorun ve bugları düzeltmek, kod kalitesini ve testlerin kapmasımını arttırmak ya da olmayan bir özellik eklemek.'
+      special_page: Katılım hakkında bilgiler bulabileceğiniz %{contributing_path} hazırladık.
+      take_a_look: Eğer açık kaynak kodda yeniyseniz, bir göz atın.
+      title: Dahil olmak
+    profile:
+      description: Açık kaynak projelere katılmak, topluluk içinde profilinizin oluşması ve CVnizi geliştirmeniz için iyi bir yoldur.
+      getting_started: Küçük katılımlar bir projeyi değerli yapabilir. Projelere katılım başlatmak gerçekten kolaydır.
+      title: Profilinizi Oluşturun
   information:
-    codetriage: CodeTriage ile bir açık kaynak önerin. Daha derine inmek için favori
-      kod deponuzdan günlük olarak bir konuya yardımcı olun, bağlı olduğunuz kodu
-      daha fazla öğrenin.
-    contribhub:
-      description: ContribHub GitHub-based tabanlı bir uygulama olup etrafınızdaki
-        açık kaynak kodları bulmanıza ve onlara yardım etmenize yarar.
-      tagline: Süper bir projede yardıma ihtiyacı olan bir komşunuz olduğunu biliyor
-        musunuz? ContribHub ile ona yardım edin!
+    codemontage: Give forward by contributing to open source, social good projects that benefit organizations making a difference in the world.
+    codetriage: CodeTriage ile bir açık kaynak önerin. Daha derine inmek için favori kod deponuzdan günlük olarak bir konuya yardımcı olun, bağlı olduğunuz kodu daha fazla öğrenin.
     get_ready: "%{year} yılında tekrar yaptığımızda 24 Pull Requests için hazır olun!"
-    help_open_source: Bu arada bir projeye dahil olmak ister misiniz? Diğer başarılı
-      girişimleri kontrol edin!
-    last_year_stats: "%{year} yılında 24 günün üzerinde, <b>%{developers}</b> geliştirici
-      kayıt oldu. <b>%{projects}</b> farklı açık kaynak projesine <b>%{pull_requests}</b>
-      pull requests yapıldı."
+    happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
+    help_open_source: Bu arada bir projeye dahil olmak ister misiniz? Diğer başarılı girişimleri kontrol edin!
+    issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
+    last_year_stats: "%{year} yılında 24 günün üzerinde, <b>%{developers}</b> geliştirici kayıt oldu. <b>%{projects}</b> farklı açık kaynak projesine <b>%{pull_requests}</b> pull requests yapıldı."
     title: 24 Pull Requests %{year} yılında üzerimizde
   language:
+    projects_count: "%{language} %{count} tane Proje"
     developers:
       count: "%{count} tane geliştici %{language} kullanıyor."
     projects:
       count: "%{count} tane proje %{language} kullanıyor."
       suggest: "%{language} projesi öner."
-    projects_count: "%{language} %{count} tane Proje"
     pull_requests:
       latest:
         count: En son %{language} Pull Requests (toplamda %{count})
-  more: Daha Fazla
+  locale:
+    cs: Čeština
+    de: Deutsch
+    el: Ελληνικά
+    en: English
+    es: Español
+    fi: Suomi
+    fr: Français
+    hi: हिंदी
+    it: Italiano
+    ja: 日本語
+    nb: Norsk bokmål
+    pt_br: Português do Brasil
+    ru: Русский
+    ta: தமிழ்
+    th: ไทย
+    translate: Translate into your language!
+    uk: Українська
+    zh_Hans: 简体中文
+    zh_Hant: 正體中文
   navigation:
     all_projects: Bütün Projeler
     dashboard: Kontrol Paneli
     gifted_code: Gifted Code
-    logout: "Çıkış"
+    logout: Çıkış
     manage_projects: Projeleri Yönet
-    my_suggestions: "Önerilerim"
-    preferences: "Özellikler"
+    my_suggestions: Önerilerim
+    preferences: Özellikler
     profile: Profil
-  no_suggestions: Henüz bir proje önermediniz.
-  open_source_yey: Açık Kaynak FTW!
-  or: yada
+  nov_reminder:
+    how_to_contribute: to find out how to contribute 24 pull requests between December 1st and December 24th. Your contributions can be tiny, as simple as fixing a typo, to something incredible. Speed up Rails. Document Express. Fix a bug that you reported.
   organisations:
     languages: Diller
+    pull_requests: Kullanıcılar tarafından %{count} pull request yapıldı
+    title: "%{count} organizasyon katıldı."
     members:
       one: 1 Üye
       other: "%{count} Üyeler"
-    pull_requests: Kullanıcılar tarafından %{count} pull request yapıldı
-    title: "%{count} organizasyon katıldı."
   preferences:
     delete: Hesabınızı silmek istiyor musunuz?
+    frequency_message: Seçtiğiniz sıklıkta proje bitene kadar sizlere projeleri göndereceğiz ve geliştirilmesi düşünülen projeler önereceğiz. Kişisel ayarlarınızı değişterebilir, GitHub hesabınızı değiştirebilirsiniz. Aynı zamanda bildiğiniz programlama dillerinizi işaretleyip, projeleri takip edebilirsiniz.
+    ignore_organisations:
+    information: Daha sonra email ayarlarınızı değiştirebilirsiniz.
+    languages: Hangi programlama dillerini biliyorsunuz?
+    remove: Hesabı Kaldır
+    save: Save
+    save_and_continue: Kaydet ve Devam Et
+    setup_help: To get started with 24 Pull Requests, please first fill up the following form.
+    title: Kişisel Özelliklerini Ayarla
+    twitter: Twitter Hesabı
     form:
       daily: Günlük
       email: Email
       email_frequency: Email Sıklığı
       never: Hiç bir zaman
       weekly: Haftalık
-    frequency_message: Seçtiğiniz sıklıkta proje bitene kadar sizlere projeleri göndereceğiz
-      ve geliştirilmesi düşünülen projeler önereceğiz. Kişisel ayarlarınızı değişterebilir,
-      GitHub hesabınızı değiştirebilirsiniz. Aynı zamanda bildiğiniz programlama dillerinizi
-      işaretleyip, projeleri takip edebilirsiniz.
     hint:
       confirm_email: Size email olarak gönderilen linki onaylayınız.
-    information: Daha sonra email ayarlarınızı değiştirebilirsiniz.
-    languages: Hangi programlama dillerini biliyorsunuz?
-    remove: Hesabı Kaldır
-    save_and_continue: Kaydet ve Devam Et
-    title: Kişisel Özelliklerini Ayarla
-    twitter: Twitter Hesabı
-    ignore_organisations:
-  preferred_languages: Tercih edilen programlama dilleri
   projects:
+    claim: Önerdiğiniz projeler listede yok mu? Yayınlanmasını talep edin!
+    filter_by_language: 'Dile göre filtrele:'
+    for_you: Senin için önerilenler
+    help_out: Bir projeye katkı yapabileceğinizi düşünmüyor musunuz? Sizin için süper projeler sunalım.
+    suggest: Bu dilde henüz bir proje yok, acaba neden %{suggest_link}?
+    suggest_link_text: Bir tane öner
+    suggest_new: Proje önerebilir ya da listeye ekleyebilirsin. Kendi projen varsa yardım almak için öneri yapabilirsin.
     admin:
       search: GitHub deposunda ara.
       title: Projeleri Yönelt
-    claim: "Önerdiğiniz projeler listede yok mu? Yayınlanmasını talep edin!"
     edit:
-      title: "Öneri Düzenle"
-    filter_by_language: 'Dile göre filtrele:'
-    for_you: Senin için önerilenler
-    help_out: Bir projeye katkı yapabileceğinizi düşünmüyor musunuz? Sizin için süper
-      projeler sunalım.
+      title: Öneri Düzenle
     new:
+      info: One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We've selected our favorites, but we're always open to suggestions. Have some ideas? Share them below!
+      issue_link_text: Bir konu öner
+      suggestion: Have a suggestion for this project? We're all ears! If there's something you'd like fixed, feel free to %{issue_link}.
+      title: Bir proje öner
       form:
         github_url: GitHub Linki
         main_language: Temel Dil
         project_name: Proje Adı
         submit_project: Proje yükle
-        summary: "Özet"
-      info: One of the ways we encourage participation in the open source community
-        is by letting users know what popular projects might be worth contributing
-        to. We've selected our favorites, but we're always open to suggestions. Have
-        some ideas? Share them below!
-      issue_link_text: Bir konu öner
-      suggestion: Have a suggestion for this project? We're all ears! If there's something
-        you'd like fixed, feel free to %{issue_link}.
-      title: Bir proje öner
-    suggest: Bu dilde henüz bir proje yok, acaba neden %{suggest_link}?
-    suggest_link_text: Bir tane öner
-    suggest_new: Proje önerebilir ya da listeye ekleyebilirsin. Kendi projen varsa
-      yardım almak için öneri yapabilirsin.
+        summary: Özet
     suggestion:
-      edit: "Önerileri Düzenle"
+      edit: Önerileri Düzenle
       update: Projeyi Güncelle
   pull_request:
+    twitter_message: 'Az önce http://24pullrequests.com ''a pull request gönderdim, buradan bakabilirsin: %{issue_url}'
     download:
-      tooltip: Pull request'leri genellikle her saat kontrol ederiz, fakat çok istiyorsan
-        şimdi kontrol edebilirsiniz.
-    twitter_message: 'Az önce http://24pullrequests.com ''a pull request gönderdim,
-      buradan bakabilirsin: %{issue_url}'
+      tooltip: Pull request'leri genellikle her saat kontrol ederiz, fakat çok istiyorsan şimdi kontrol edebilirsiniz.
   pull_requests:
     count: "%{count} tane Pull Request yapıldı!"
     language:
       count: "%{count} tane %{language} dilinde Pull Request yapıldı!"
     latest:
       count: Latest Pull Requests (%{count} total)
-  search: Ara
-  sponsored_by: Sponsorluk
-  suggest_project: Proje Öner
-  suggested_projects: "Önerilen Projeler"
   suggestions:
-    title: "Önerilerim"
+    title: Önerilerim
   twitter:
-    account_linked: Twitter hesabınız bağlandı! Bir pull request yapıtığız zaman bir
-      tweet atacağız.
+    account_linked: Twitter hesabınız bağlandı! Bir pull request yapıtığız zaman bir tweet atacağız.
     account_removed: Twitter hesabınız kaldırıldı.
+    auth_failed: Authorization with Twitter has failed.
     link_account:
       text: Twitter hesabınızı bağlayın.
-      tooltip: Eğer Twitter hesabınızı bağlarsanız, Bir pull request yapıtığız zaman
-        bir tweet atacağız!
+      tooltip: Eğer Twitter hesabınızı bağlarsanız, Bir pull request yapıtığız zaman bir tweet atacağız!
+  unsubscribe:
+    invalid_token:
+    login:
+    success:
+    title:
+    unsubscribe:
   user:
     no_current_pr_message:
     organisations: "... üyesi"
-    pull_request_count: "%{user} kullancısı %{year} yılınca %{count} pull request
-      yaptı."
-  view_all: Hepsini Göster
-  welcome_back: Hoşgeldin, %{user}
-  your_pull_requests: Pull Requests'lerin
-  unsubscribe:
-    login:
-    title:
-    unsubscribe:
-    success:
-    invalid_token:
+    pull_request_count:
+      one: "%{user} has made %{count} pull request so far in Christmas %{year}"
+      other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

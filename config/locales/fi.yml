@@ -1,37 +1,68 @@
 ---
 fi:
+  about_us: Tietoa
+  cancel: Peruuta
+  change: Vaihda
+  claim: Lunasta
+  clear: Clear
+  deactivate: Deactivate
+  delete: Delete
+  developers_involved: Kehittäjää jo mukana
+  developers_involved_desc: Join everyone here and make open source better.
+  developers_using_language: Kehittäjää käyttää %{language}
+  edit: Muokkaa
+  everything: Kaikki
+  exempli_gratia:
+  featured_projects: Featured Projects
+  follow_user: Seuraa @%{twitter}
+  happy_holidays: Happy Holidays
+  how_to_contribute: Miten auttaa?
+  more: Lisää
+  no_suggestions: Et ole vielä suositellut yhtään projektia.
+  open_source_yey: Avoin lähdekoodi FTW!
+  or:
+  organisations_involved_desc: Invite more people from your organisation to participate.
+  preferred_languages: Toivotut kielet
+  search: Hae
+  sponsored_by: Sponsorit
+  sponsors: Sponsors
+  suggest_project: Suosittele projektia
+  suggested_projects: Suositellut Projektit
+  view_all: Katso kaikki
+  welcome: Welcome, %{user}!
+  welcome_back: Tervetuloa takaisin, %{user}
+  your_pull_requests: Sinun vetopyynnöt
   about:
-    description: 24 Pull Requests on pieni projekti mainostamaan avoimen lähdekoodin
-      yhteistyötä Joulukuun aikana.
-    idea: Perus ideana on "Lähetä vetopyyntö joka päivä Joulukuussa Jouluaattoon asti",
-      kannustaen kehittäjiä antamaan takaisin avoimelle lähdekoodille pieninä lahjoina
-      koodia läpi Joulun.
-    more_info: Sivusto tarjoaa myös suositeltuja projekteja joita auttaa, ohjeita
-      miten avustaa ja korostaa hyviä vetopyyntökä päivittäin.
+    description: 24 Pull Requests on pieni projekti mainostamaan avoimen lähdekoodin yhteistyötä Joulukuun aikana.
+    idea: Perus ideana on "Lähetä vetopyyntö joka päivä Joulukuussa Jouluaattoon asti", kannustaen kehittäjiä antamaan takaisin avoimelle lähdekoodille pieninä lahjoina koodia läpi Joulun.
+    more_info: Sivusto tarjoaa myös suositeltuja projekteja joita auttaa, ohjeita miten avustaa ja korostaa hyviä vetopyyntökä päivittäin.
     on_github: 'Löydät tämän sivuston lähdekoodin GitHubista:'
     on_twitter: 'Löydät meidät myös Twitteristä:'
+    title: Tietoa 24 Pull Requestista
     sponsors:
-      details: 24 Pull Requestin teki mahdolliseksi avustukset ja lahjoitukset mahtavilta
-        sponsoreilta.
-      get_in_touch: 'Jos haluat olla yhteydessä sponsoroinnista tai mistä tahansa,
-        lähetä meille sähköpostia:'
+      details: 24 Pull Requestin teki mahdolliseksi avustukset ja lahjoitukset mahtavilta sponsoreilta.
+      get_in_touch: 'Jos haluat olla yhteydessä sponsoroinnista tai mistä tahansa, lähetä meille sähköpostia:'
       thanks: Suurkiitokset...
       title: Sponsorit
-    title: Tietoa 24 Pull Requestista
-  about_us: Tietoa
   activerecord:
     errors:
       models:
+        event:
+          attributes:
+            start_time:
+              in_past: Events cannot be created in the past
+              not_in_range: Events can only be created between December 1st and 24th
         user:
           attributes:
             email:
               already_confirmed: "%{attribute} on jo vahvistettu"
               required_for_confirmation: "%{attribute} tarvitaan vahvistukseen"
   api:
+    description:
+    title:
     callback:
       details:
       title:
-    description:
     organisations:
       details:
       specific:
@@ -46,112 +77,148 @@ fi:
       details:
       meta_details:
       title:
-    title:
     users:
       details:
       specific:
       title:
-  cancel: Peruuta
-  change: Vaihda
-  claim: Lunasta
   contributors:
-    title: Ydintoimittajat
     location_privacy:
+    title: Ydintoimittajat
   dashboard:
-    christmas_activity: Täältä näet kaikki tapahtumat mitä olemme jäljittäneet sinulle
-      tämän Joulun juoksusta.
+    christmas_activity: Täältä näet kaikki tapahtumat mitä olemme jäljittäneet sinulle tämän Joulun juoksusta.
     gift_it:
-    give_a_gift: Näyttää siltä että et ole lahjoittanut yhtään koodia tänään. Haluaisitko
-      lahjoittaa
-    help_out: 'Etkö keksi projektia mitä haluaisit auttaa? Me olemme laittaneet yhteen
-      listan suosituista projekteista:'
+    give_a_gift: Näyttää siltä että et ole lahjoittanut yhtään koodia tänään. Haluaisitko lahjoittaa
+    help_out: 'Etkö keksi projektia mitä haluaisit auttaa? Me olemme laittaneet yhteen listan suosituista projekteista:'
     no_pull_requests: Et ole lähettänyt yhtään vetopyyntöä, mitä oikein odotat?!
+    not_december: 24 Pull Requests runs from 1st-24th December, come back then!
+    pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: Synkronoi vetopyynnöt
     tweet_progress:
       one:
       other:
   delete_account:
-    are_you_sure: Haluamme vain varmistaa että todella hauat poistaa tilisi, tämä
-      poistaa profiilisi ja kaikki vetopyynnöt sivulta, mutta ehdottamasi projektit
-      jäävät.
+    are_you_sure: Haluamme vain varmistaa että todella hauat poistaa tilisi, tämä poistaa profiilisi ja kaikki vetopyynnöt sivulta, mutta ehdottamasi projektit jäävät.
     cancel: Muutin mieleni, vie minut takaisin!
     confirm: Vahvista poisto
     email_preferences_link:
-    notification_info: jos haluat lopettaa pelkästään sähköpostien vastaan ottamiset
-      voit vaihtaa sinun  %{email_preferences_link}.
+    notification_info: jos haluat lopettaa pelkästään sähköpostien vastaan ottamiset voit vaihtaa sinun  %{email_preferences_link}.
     title: Poista tili
-  developers_involved: Kehittäjää jo mukana
-  developers_using_language: Kehittäjää käyttää %{language}
-  edit: Muokkaa
-  everything: Kaikki
-  exempli_gratia:
-  follow_user: Seuraa @%{twitter}
+  events:
+    details: You don’t have to hack alone this Christmas! Host a 24 Pull Requests hack event at your company, technology meetup, or in your local community. Or you can join a hack event and code together.
+    save_event: Save event
+    title: Events
+    admin:
+      search: Search by GitHub repository
+      title: Manage Projects
+    edit:
+      title: Edit Event
+    index:
+      host_an_event: Host an event
+      past_24_pull_requests_events: Past 24 Pull Requests Events
+      show_past_24_pull_requests_events: Show Past 24 Pull Requests Events
+    new:
+      title: Host a 24 Pull Requests event
+      form:
+        description: Description
+        description_placeholder: Give a little description of the group and event
+        location: Location
+        location_placeholder: e.g. Bristol, UK
+        map: Location marker
+        name: Event name
+        name_placeholder: Bristol Ruby Group Pull-request-a-thon
+        start_time: When
+        url: URL
+        url_placeholder: Your event page / registration
+    notice:
+      destroy_success: Event removed successfully!
+      edit_success: Event updated successfully!
+      new_success: Event created successfully!
+      not_authorized: You can only edit events that you have created
+      not_logged_in: You must be logged in to create or edit events
+    show:
+      confirm_destroy: Are you sure you want to remove this event?
+      destroy_event: Remove event
+      edit_event: Edit event
+      view_event_details: View event details
   gifts:
     calendar_link:
-    description: Täällä voit hallita vetopyyntöjäsi ja valita &amp; curate your own
-      set of "24 Pull Requests".
-    form:
-      date:
-      gift_it:
-      pull_request:
-      tweet:
+    description: Täällä voit hallita vetopyyntöjäsi ja valita &amp; curate your own set of "24 Pull Requests".
     give: Lahjoita jotain merkittävää rakastamaasi projektiin
+    link_twitter: Link Twitter account
+    link_twitter_desc: Want to share information about 24 Pull Requests and your gifts? %{link_twitter} and gift some code to open-source projects.
+    no_pull_requests: You don’t have any pull-requests
     none: Mitään ei ole vielä lahjoitettu.
     title: Lahjoitettu koodi
     view_your_gifts: Kaikki lahjasi tulevat näkyviin sinun %{calendar_link}.
+    form:
+      date:
+      gift_it:
+      pull_requests: Pull Requests
+      tweet:
   homepage:
     about: Mistä tästä kaikesta on kyse?
-    about_text: "<p>24 Pull Requests on vuosittainen aloite kannustamaan kehittäjiä
-      ympäri maailmaa lähettämään vetopyyntöjä joka päivä Joulukuussa Jouluaattoon
-      asti.</p> <p>Tämä sivu auttaa sinua mainostamaan projektiasi, korostamaan miksi,
-      miten ja missä lähetetään vetopyyntöjä.</p><p>Kirjaudu sisään GitHub tililläsi
-      ja me seuraamme ja korostamme vetopyyntöjäsi ja ehdotamme projekteja mitä työskennellä.</p>"
+    about_text: "<p>24 Pull Requests on vuosittainen aloite kannustamaan kehittäjiä ympäri maailmaa lähettämään vetopyyntöjä joka päivä Joulukuussa Jouluaattoon asti.</p> <p>Tämä sivu auttaa sinua mainostamaan projektiasi, korostamaan miksi, miten ja missä lähetetään vetopyyntöjä.</p><p>Kirjaudu sisään GitHub tililläsi ja me seuraamme ja korostamme vetopyyntöjäsi ja ehdotamme projekteja mitä työskennellä.</p>"
     description: Antaa pieniä lahjoja koodia jouluksi
-    give_to_open_source: Olet koko vuoden ajan hyötynyt avoimen lähdekoodin projekteista.
-      Nyt on aika sanoa kiitos niiden projektien ylläpitäjille, ja pikkulinnut kertovat
-      että he rakastavat vastaan ottaa vetopyyntöjä!
+    give_to_open_source: Olet koko vuoden ajan hyötynyt avoimen lähdekoodin projekteista. Nyt on aika sanoa kiitos niiden projektien ylläpitäjille, ja pikkulinnut kertovat että he rakastavat vastaan ottaa vetopyyntöjä!
     greeting: "'Tis the season"
-    involved:
-      contributing_path:
-      description: On olemassa tuhansia tapoja osallistua avoimen lähdekoodin projekteihin,
-        paranna dokumentointia, auta korjaamaan olemassa olevia ongelmia ja bugeja,
-        paranna koodin laatua ja testaa kattavuus, tai lisää puuttuvia ominaisuuksia.
-      special_page: Olemme valmistaneet %{contributing_path}, josta löydät tietoa
-        avustamisesta.
-      take_a_look: Jos olet uusi avoimelle lähdekoodille, katso tämä.
-      title: Osallistu
     join_the_chat: 'Liity keskusteluun Gitter: %{link_to_chat}.'
-    profile:
-      description: Avoimen lähdekoodin projektien auttaminen on mahtava keino rakentaa
-        profiiliasi yhteisössä ja parantaa CV:täsi.
-      getting_started: Se on todella helppoa päästä alkuun. Jopa pienet avustukset
-        voivat olla todella arvokkaita projektille.
-      title: Luo profiilisi
+    login_with_github: Log in with GitHub
     q_n_a: Kysymyksiä & Vastauksia
     title: 24 Pull Requests
-  how_to_contribute: Miten auttaa?
+    event:
+      description: This year we are encouraging organisers around the world to hold 24 Pull Requests hack events. Get involved this Christmas.
+      host_an_event: Host an event
+      title: Events
+      view_events: View events
+    involved:
+      contributing_path:
+      description: On olemassa tuhansia tapoja osallistua avoimen lähdekoodin projekteihin, paranna dokumentointia, auta korjaamaan olemassa olevia ongelmia ja bugeja, paranna koodin laatua ja testaa kattavuus, tai lisää puuttuvia ominaisuuksia.
+      special_page: Olemme valmistaneet %{contributing_path}, josta löydät tietoa avustamisesta.
+      take_a_look: Jos olet uusi avoimelle lähdekoodille, katso tämä.
+      title: Osallistu
+    profile:
+      description: Avoimen lähdekoodin projektien auttaminen on mahtava keino rakentaa profiiliasi yhteisössä ja parantaa CV:täsi.
+      getting_started: Se on todella helppoa päästä alkuun. Jopa pienet avustukset voivat olla todella arvokkaita projektille.
+      title: Luo profiilisi
   information:
-    codetriage: Anna takaisin avoimelle lähdekoodille, yksi issue kerralla CodeTriagella.
-      Saat yhden issuen lempi repostasi päivässä auttaen sinua kaivamaan syvemmälle,
-      oppimaan uutta ja pitämään sinut mukana koodissa josta olet riippuvainen.
+    codemontage: Give forward by contributing to open source, social good projects that benefit organizations making a difference in the world.
+    codetriage: Anna takaisin avoimelle lähdekoodille, yksi issue kerralla CodeTriagella. Saat yhden issuen lempi repostasi päivässä auttaen sinua kaivamaan syvemmälle, oppimaan uutta ja pitämään sinut mukana koodissa josta olet riippuvainen.
     get_ready: Valmistaudu 24 Pull Requests %{year} jolloin teemme tämän kaiken uudestaan!
-    help_open_source: 'Haluatko auttaa avoimen lähdekoodin projekteja sillä välin?
-      Katso myös nämä muut loistava aloitteet:'
-    last_year_stats: Vuonna %{year}, yli 24 päivää, <b>%{developers}</b> kehittäjää
-      lähetti <b>%{pull_requests}</b> vetopyyntöä <b>%{projects}</b> eriin avoimen
-      lähdekoodin projektiin.
+    happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
+    help_open_source: 'Haluatko auttaa avoimen lähdekoodin projekteja sillä välin? Katso myös nämä muut loistava aloitteet:'
+    issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
+    last_year_stats: Vuonna %{year}, yli 24 päivää, <b>%{developers}</b> kehittäjää lähetti <b>%{pull_requests}</b> vetopyyntöä <b>%{projects}</b> eriin avoimen lähdekoodin projektiin.
     title: 24 Pull Requests %{year} on jo ovella
   language:
+    projects_count: "%{count} %{language} Projektia"
     developers:
       count: "%{count} Kehittäjää käyttää %{language}"
     projects:
       count: "%{count} Projektia käyttää %{language}"
       suggest: Ehdota %{language} projektia
-    projects_count: "%{count} %{language} Projektia"
     pull_requests:
       latest:
         count: Uusin %{language} Vetopyyntö (%{count} total)
-  more: Lisää
+  locale:
+    cs: Čeština
+    de: Deutsch
+    el: Ελληνικά
+    en: English
+    es: Español
+    fi: Suomi
+    fr: Français
+    hi: हिंदी
+    it: Italiano
+    ja: 日本語
+    nb: Norsk bokmål
+    pt_br: Português do Brasil
+    ru: Русский
+    ta: தமிழ்
+    th: ไทย
+    translate: Translate into your language!
+    uk: Українська
+    zh_Hans: 简体中文
+    zh_Hant: 正體中文
   navigation:
     all_projects: Kaikki Projektit
     dashboard: Ohjausnäkymä
@@ -161,104 +228,90 @@ fi:
     my_suggestions: Ehdotukseni
     preferences: Asetukset
     profile: Profiili
-  no_suggestions: Et ole vielä suositellut yhtään projektia.
-  open_source_yey: Avoin lähdekoodi FTW!
-  or:
+  nov_reminder:
+    how_to_contribute: to find out how to contribute 24 pull requests between December 1st and December 24th. Your contributions can be tiny, as simple as fixing a typo, to something incredible. Speed up Rails. Document Express. Fix a bug that you reported.
   organisations:
+    languages: Languages
+    pull_requests: "%{count} pull requests submitted by members"
+    title: "%{count} Organisations involved"
     members:
       one:
       other:
   preferences:
     delete: Haluatko poistaa tilisi?
+    frequency_message: Valitsemallasi nopeudella, lähetämme hyödyllisiä sähköposteja tästä lähtien siihen asti kunnes projekti on ohi, korostaen suositeltuja projekteja joita saatat olla kiinnostunut auttamaan. Bonuksena, Otamme vapauden yksilöidä ehdotuksemme kielitaitosi mukaan perustuen GitHub profiilisi repoihin. Vaihtoehtoisesti voit valita kielet alhaalta.
+    ignore_organisations:
+    information: Voit aina vaihtaa sähköpostisi asetuksia.
+    languages: Mitä kieliä tiedät?
+    remove: Poista tili
+    save: Save
+    save_and_continue: Tallenna ja Jatka
+    setup_help: To get started with 24 Pull Requests, please first fill up the following form.
+    title: Aseta sähköposti asetukset
+    twitter: Twitter Tili
     form:
       daily:
       email:
       email_frequency:
       never:
       weekly:
-    frequency_message: Valitsemallasi nopeudella, lähetämme hyödyllisiä sähköposteja
-      tästä lähtien siihen asti kunnes projekti on ohi, korostaen suositeltuja projekteja
-      joita saatat olla kiinnostunut auttamaan. Bonuksena, Otamme vapauden yksilöidä
-      ehdotuksemme kielitaitosi mukaan perustuen GitHub profiilisi repoihin. Vaihtoehtoisesti
-      voit valita kielet alhaalta.
     hint:
       confirm_email: Vahvista sähköpostiosoitteeri linkistä minkä lähetimme sinulle.
-    information: Voit aina vaihtaa sähköpostisi asetuksia.
-    languages: Mitä kieliä tiedät?
-    remove: Poista tili
-    save_and_continue: Tallenna ja Jatka
-    title: Aseta sähköposti asetukset
-    twitter: Twitter Tili
-    ignore_organisations:
-  preferred_languages: Toivotut kielet
   projects:
+    claim: Onko yhtään ehdottamistasi projekteista listaamatta? Lunasta ne!
+    filter_by_language: 'Suodata kielen mukaan:'
+    for_you: Sinulle ehdotettuja
+    help_out: Etkö keksi projektia mitä auttaa? Me olemme keränneet listan mahtavista avoimen lähdekoodin projekteista jotka tykkäisivät vetopyynnöistäsi.
+    suggest: Tuolle kielelle ei ole vielä projekteja, Miksi ei %{suggest_link}
+    suggest_link_text: suggest one
+    suggest_new: Voit myös ehdottaa projektia joka pitäisi lisätä listaan, tai lisää oma projektisi jos haluaisit saada apua sen kanssa.
     admin:
       search: Hae GitHub repon mukaan
       title: Hallitse projekteja
-    claim: Onko yhtään ehdottamistasi projekteista listaamatta? Lunasta ne!
     edit:
       title: Muokkaa Ehdotusta
-    filter_by_language: 'Suodata kielen mukaan:'
-    for_you: Sinulle ehdotettuja
-    help_out: Etkö keksi projektia mitä auttaa? Me olemme keränneet listan mahtavista
-      avoimen lähdekoodin projekteista jotka tykkäisivät vetopyynnöistäsi.
     new:
+      info: Yksi tapa millä kannustamme osallistujia avoimen lähdekoodin yhteisöön on että annamme käyttäjän tietää suosituista projekteista joita voisi olla hyötyä auttaa. Me valitsemme meidän suosikit, mutta olemme aina avoimia ehdotuksille. Onko sinulla jokin idea? Jaa se alapuolella!
+      issue_link_text: issue
+      suggestion: Onko sinulla ehdotus tähän projektiin? Olemme pelkkinä korvina! Jos siellä on jotain mitä haluaisit korjatuksi, jätä rohkeasti %{issue_link}.
+      title: Ehdota projektia
       form:
         github_url:
         main_language:
         project_name:
         submit_project:
         summary:
-      info: Yksi tapa millä kannustamme osallistujia avoimen lähdekoodin yhteisöön
-        on että annamme käyttäjän tietää suosituista projekteista joita voisi olla
-        hyötyä auttaa. Me valitsemme meidän suosikit, mutta olemme aina avoimia ehdotuksille.
-        Onko sinulla jokin idea? Jaa se alapuolella!
-      issue_link_text: issue
-      suggestion: Onko sinulla ehdotus tähän projektiin? Olemme pelkkinä korvina!
-        Jos siellä on jotain mitä haluaisit korjatuksi, jätä rohkeasti %{issue_link}.
-      title: Ehdota projektia
-    suggest: Tuolle kielelle ei ole vielä projekteja, Miksi ei %{suggest_link}
-    suggest_new: Voit myös ehdottaa projektia joka pitäisi lisätä listaan, tai lisää
-      oma projektisi jos haluaisit saada apua sen kanssa.
     suggestion:
       edit: Muokkaa ehdotuksia
       update: Päivitä projektia
   pull_request:
+    twitter_message: 'Avasin juuri vetopyynnön http://24pullrequests.com, check it out: %{issue_url}'
     download:
-      tooltip: Yleensä katsomme vetopyynnöt tunnin välein, mutta voit tarkistaa sen
-        nyt jos todella haluat.
-    twitter_message: 'Avasin juuri vetopyynnön http://24pullrequests.com, check it
-      out: %{issue_url}'
+      tooltip: Yleensä katsomme vetopyynnöt tunnin välein, mutta voit tarkistaa sen nyt jos todella haluat.
   pull_requests:
     count: "%{count} Vetopyyntöä jo tehty!"
     language:
       count: "%{count} vetopyyntöä jo tehty %{language} kielellä!"
     latest:
       count: Uusimmat vetopyynnöt (%{count} total)
-  search: Hae
-  sponsored_by: Sponsorit
-  suggest_project: Suosittele projektia
-  suggested_projects: Suositellut Projektit
   suggestions:
     title:
   twitter:
-    account_linked: Twitter tilisi on yhdistetty! Lähetämme tweetin aina kun avaat
-      vetopyynnön.
+    account_linked: Twitter tilisi on yhdistetty! Lähetämme tweetin aina kun avaat vetopyynnön.
     account_removed: Twitter tilisi on poistettu.
+    auth_failed: Authorization with Twitter has failed.
     link_account:
       text: Yhdistä Twitter tilisi
       tooltip: Jos yhdistät twitter tilisi, lähetämme tweetin aina kun avaat vetopyynnön!
+  unsubscribe:
+    invalid_token:
+    login:
+    success:
+    title:
+    unsubscribe:
   user:
     no_current_pr_message:
     organisations:
-    pull_request_count: "%{user} on tehnyt %{count} vetopyyntöä tähän mennessä vuonna
-      %{year}"
-  view_all: Katso kaikki
-  welcome_back: Tervetuloa takaisin, %{user}
-  your_pull_requests: Sinun vetopyynnöt
-  unsubscribe:
-    login:
-    title:
-    unsubscribe:
-    success:
-    invalid_token:
+    pull_request_count:
+      one: "%{user} has made %{count} pull request so far in Christmas %{year}"
+      other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

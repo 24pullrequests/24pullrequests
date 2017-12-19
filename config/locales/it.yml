@@ -1,171 +1,224 @@
 ---
 it:
+  about_us: Chi siamo
+  cancel: Cancella
+  change: Cambia
+  claim: Rivendica
+  clear: Pulisci
+  deactivate: Deactivate
+  delete: Delete
+  developers_involved: Sviluppatori già coinvolti
+  developers_involved_desc: Join everyone here and make open source better.
+  developers_using_language: Sviluppatori che usano %{language}
+  edit: Modifica
+  everything: Tutto
+  exempli_gratia: p.e.
+  featured_projects: Featured Projects
+  follow_user: Segui @%{twitter}
+  happy_holidays: Buone Feste
+  how_to_contribute: Come contribuire?
+  more: Ancora
+  no_suggestions: Non hai consigliato nessun progetto.
+  open_source_yey: Open Source FTW!
+  or: oppure
+  organisations_involved_desc: Invite more people from your organisation to participate.
+  preferred_languages: Lingue preferite
+  search: Cerca
+  sponsored_by: Sponsorizzato da
+  sponsors: Sponsors
+  suggest_project: Consiglia un progetto
+  suggested_projects: Progetti consigliati
+  view_all: Mostra tutto
+  welcome: Welcome, %{user}!
+  welcome_back: Bentornato, %{user}
+  your_pull_requests: Le tue pull request
   about:
-    description: 24 Pull Requests è un umile progetto nato per promuovere la collaborazione
-      open source nel mese di dicembre.
-    idea: L'idea di base è "Invia delle pull request ogni giorno a dicembre fino a
-      Natale", così incoraggiando gli sviluppatori a donare qualcosa al mondo open
-      source con piccoli codici in regalo.
-    more_info: Il sito segnala progetti sui quali lavorare, guide per contribuire
-      e mette in rilievo ogni giorno le pull request più interessanti.
+    description: 24 Pull Requests è un umile progetto nato per promuovere la collaborazione open source nel mese di dicembre.
+    idea: L'idea di base è "Invia delle pull request ogni giorno a dicembre fino a Natale", così incoraggiando gli sviluppatori a donare qualcosa al mondo open source con piccoli codici in regalo.
+    more_info: Il sito segnala progetti sui quali lavorare, guide per contribuire e mette in rilievo ogni giorno le pull request più interessanti.
     on_github: 'Lo sviluppo di questo sito web è open source e disponibile su GitHub:'
     on_twitter: 'Siamo anche su Twitter:'
+    title: '24 Pull Requests: chi siamo'
     sponsors:
-      details: 24 Pull Requests è reso possibile grazie al generoso aiuto e alle donazioni
-        dei nostri sponsor.
-      get_in_touch: 'Se vuoi diventare nostro sponsor o per qualsiasi altro inviaci
-        una email:'
+      details: 24 Pull Requests è reso possibile grazie al generoso aiuto e alle donazioni dei nostri sponsor.
+      get_in_touch: 'Se vuoi diventare nostro sponsor o per qualsiasi altro inviaci una email:'
       thanks: Grazie mille a...
       title: Sponsor
-    title: '24 Pull Requests: chi siamo'
-  about_us: Chi siamo
   activerecord:
     errors:
       models:
+        event:
+          attributes:
+            start_time:
+              in_past: Events cannot be created in the past
+              not_in_range: Events can only be created between December 1st and 24th
         user:
           attributes:
             email:
               already_confirmed: "%{attribute} è già stato confermato"
               required_for_confirmation: "%{attribute} è richiesto per la conferma"
   api:
+    description: Potresti non esserne a conoscenza, ma 24 Pull Requests ha le proprie API JSON. I dettagli per ogni endpoint sono descritti sotto.
+    title: API JSON
     callback:
-      details: Puoi inviare un paramentro ?callback a qualsiasi chiamata GET per ottenere
-        i risultati inclusi in una funzione JSON. Questo è utilizzato in genere quando
-        i browser vogliono includere dei contenuti nelle pagine web evitando problematiche
-        legate a cross domain. La risposta presenta gli stessi dati della API regolare.
+      details: Puoi inviare un paramentro ?callback a qualsiasi chiamata GET per ottenere i risultati inclusi in una funzione JSON. Questo è utilizzato in genere quando i browser vogliono includere dei contenuti nelle pagine web evitando problematiche legate a cross domain. La risposta presenta gli stessi dati della API regolare.
       title: Callback JSON-P
-    description: Potresti non esserne a conoscenza, ma 24 Pull Requests ha le proprie
-      API JSON. I dettagli per ogni endpoint sono descritti sotto.
     organisations:
-      details: Carica tutte le organizzazioni che si sono iscritte al sito, comprendendo
-        anche gli utenti che appartengono a ciascuna organizzazione.
+      details: Carica tutte le organizzazioni che si sono iscritte al sito, comprendendo anche gli utenti che appartengono a ciascuna organizzazione.
       specific: Carica le informazioni per una organizzazione specifica.
       title: Organizzazioni
     pagination:
-      details: Le richieste che restituiscono risultati multipli saranno paginate
-        in 99 risultati per impostazione predefinita. Puoi richiedere altre pagine
-        specifiche utilizzando il parametro ?page.
+      details: Le richieste che restituiscono risultati multipli saranno paginate in 99 risultati per impostazione predefinita. Puoi richiedere altre pagine specifiche utilizzando il parametro ?page.
       title: Paginazione
     projects:
       details: Tutti i progetti suggeriti presenti nel sito, ordinati alfabeticamente.
       title: Progetti
     pull_requests:
-      details: Carica tutte le pull request degli utenti del sito inviate in dicembre,
-        elencando per prime quelle più nuove, includendo anche l'utente che ha inviato
-        la pull request
-      meta_details: Caricare le informazioni su tutte le richieste di trazione di
-        quest'anno.
+      details: Carica tutte le pull request degli utenti del sito inviate in dicembre, elencando per prime quelle più nuove, includendo anche l'utente che ha inviato la pull request
+      meta_details: Caricare le informazioni su tutte le richieste di trazione di quest'anno.
       title: Pull Request
-    title: API JSON
     users:
-      details: Carica tutti gli utenti che si sono iscritti al sito, ordinati per
-        la quantità di pull request che hanno inviato in dicembre, includendo le loro
-        organizzazioni e le pull request
+      details: Carica tutti gli utenti che si sono iscritti al sito, ordinati per la quantità di pull request che hanno inviato in dicembre, includendo le loro organizzazioni e le pull request
       specific: Carica le informazioni per un utente specifico.
       title: Utenti
-  cancel: Cancella
-  change: Cambia
-  claim: Rivendica
-  clear: Pulisci
   contributors:
-    title: Collaboratori principali
     location_privacy:
+    title: Collaboratori principali
   dashboard:
-    christmas_activity: Qui troverai un resoconto della tua attività sul sito nella
-      corsa fino a Natale.
+    christmas_activity: Qui troverai un resoconto della tua attività sul sito nella corsa fino a Natale.
     gift_it: Regalalo!
-    give_a_gift: Sembra che tu non abbia regalato nessun codice oggi. Vuoi fare un
-      regalo?
-    help_out: 'Non ti viene in mente un progetto a cui contribuire? Ecco i progetti
-      più popolari al momento:'
+    give_a_gift: Sembra che tu non abbia regalato nessun codice oggi. Vuoi fare un regalo?
+    help_out: 'Non ti viene in mente un progetto a cui contribuire? Ecco i progetti più popolari al momento:'
     no_pull_requests: Non hai inviato nessuna pull request, cosa stai aspettando?!
+    not_december: 24 Pull Requests runs from 1st-24th December, come back then!
+    pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: Sincronizza pull request
     tweet_progress:
       one:
       other:
   delete_account:
-    are_you_sure: Sei sicuro di voler cancellare il tuo account? Il tuo profilo e
-      le tue pull request verranno rimossi dal sito (i progetti segnalati non verranno
-      cancellati).
+    are_you_sure: Sei sicuro di voler cancellare il tuo account? Il tuo profilo e le tue pull request verranno rimossi dal sito (i progetti segnalati non verranno cancellati).
     cancel: Ho cambiato idea, rivoglio il mio account!
     confirm: Conferma cancellazione
     email_preferences_link: preferenze email
-    notification_info: Se vuoi smettere di ricevere notifiche via email, cambiare
-      le impostazioni è facile %{email_preferences_link}.
+    notification_info: Se vuoi smettere di ricevere notifiche via email, cambiare le impostazioni è facile %{email_preferences_link}.
     title: Cancella account
-  developers_involved: Sviluppatori già coinvolti
-  developers_using_language: Sviluppatori che usano %{language}
-  edit: Modifica
-  everything: Tutto
-  exempli_gratia: p.e.
-  follow_user: Segui @%{twitter}
+  events:
+    details: You don’t have to hack alone this Christmas! Host a 24 Pull Requests hack event at your company, technology meetup, or in your local community. Or you can join a hack event and code together.
+    save_event: Save event
+    title: Events
+    admin:
+      search: Search by GitHub repository
+      title: Manage Projects
+    edit:
+      title: Edit Event
+    index:
+      host_an_event: Host an event
+      past_24_pull_requests_events: Past 24 Pull Requests Events
+      show_past_24_pull_requests_events: Show Past 24 Pull Requests Events
+    new:
+      title: Host a 24 Pull Requests event
+      form:
+        description: Description
+        description_placeholder: Give a little description of the group and event
+        location: Location
+        location_placeholder: e.g. Bristol, UK
+        map: Location marker
+        name: Event name
+        name_placeholder: Bristol Ruby Group Pull-request-a-thon
+        start_time: When
+        url: URL
+        url_placeholder: Your event page / registration
+    notice:
+      destroy_success: Event removed successfully!
+      edit_success: Event updated successfully!
+      new_success: Event created successfully!
+      not_authorized: You can only edit events that you have created
+      not_logged_in: You must be logged in to create or edit events
+    show:
+      confirm_destroy: Are you sure you want to remove this event?
+      destroy_event: Remove event
+      edit_event: Edit event
+      view_event_details: View event details
   gifts:
     calendar_link: calendario pubblico
-    description: Da qui puoi gestire le tue pull request e curare il tuo set di  "24
-      Pull Requests".
+    description: Da qui puoi gestire le tue pull request e curare il tuo set di  "24 Pull Requests".
+    give: Regala qualcosa di importante ai progetti che ami
+    link_twitter: Link Twitter account
+    link_twitter_desc: Want to share information about 24 Pull Requests and your gifts? %{link_twitter} and gift some code to open-source projects.
+    no_pull_requests: You don’t have any pull-requests
+    none: Nessun regalo fatto.
+    title: Codici regalati
+    view_your_gifts: Tutti i tuoi regali sono visibili sul tuo  %{calendar_link}.
     form:
       date: Data
       gift_it: Regalalo!
       pull_requests: Pull Request
       tweet: Twitta a proposito del tuo regalo!
-    give: Regala qualcosa di importante ai progetti che ami
-    none: Nessun regalo fatto.
-    title: Codici regalati
-    view_your_gifts: Tutti i tuoi regali sono visibili sul tuo  %{calendar_link}.
-  happy_holidays: Buone Feste
   homepage:
     about: Di cosa si tratta?
-    about_text: "<p>24 Pull Requests è un iniziativa annuale che incoraggia gli sviluppatori
-      di tutto il mondo ad inviare pull request ogni giorno a dicembre, fino a Natale.</p>
-      <p>Questo sito sostiene il progetto e spiega perché, come e dove inviare una
-      pull request.</p><p>Effettua il Login con il tuo account GitHub, terremo traccia
-      delle tue pull request e ti suggeriremo progetti su cui lavorare.</p>"
+    about_text: "<p>24 Pull Requests è un iniziativa annuale che incoraggia gli sviluppatori di tutto il mondo ad inviare pull request ogni giorno a dicembre, fino a Natale.</p> <p>Questo sito sostiene il progetto e spiega perché, come e dove inviare una pull request.</p><p>Effettua il Login con il tuo account GitHub, terremo traccia delle tue pull request e ti suggeriremo progetti su cui lavorare.</p>"
     description: Regala dei piccoli codici per Natale
-    give_to_open_source: I progetti open source ti hanno aiutato tutto l'anno. Ora
-      è tempo di ringraziare i gestori di tali progetti e un uccellino ci ha detto
-      che gli sviluppatori adorano ricevere pull request!
+    give_to_open_source: I progetti open source ti hanno aiutato tutto l'anno. Ora è tempo di ringraziare i gestori di tali progetti e un uccellino ci ha detto che gli sviluppatori adorano ricevere pull request!
     greeting: Inizia la stagione...
-    involved:
-      contributing_path: pagina speciale
-      description: 'Ci sono un sacco di modi per contribuire ai progetti open source:
-        migliorare la documentazione, sistemare problemi e bugs, migliorare la qualità
-        del codice e dei test o aggiungendo nuove funzionalità.'
-      special_page: Abbiamo preparato una %{contributing_path}, dove potrai trovare
-        tutte le informazioni su come contribuire.
-      take_a_look: Se sei nuovo nel mondo dell'open source, inizia da qui.
-      title: Partecipa
     join_the_chat: Raggiungici sulla chat Gitter, %{link_to_chat}.
-    profile:
-      description: Contribuire a progetti open source è un ottimo modo per migliorare
-        il CV e costruirsi un'immagine nella comunità.
-      getting_started: Iniziare è davvero facile e anche il più piccolo contributo
-        è prezioso.
-      title: Costruisci il tuo profilo
+    login_with_github: Log in with GitHub
     q_n_a: Domande e Risposte
     title: 24 Pull Requests
-  how_to_contribute: Come contribuire?
+    event:
+      description: This year we are encouraging organisers around the world to hold 24 Pull Requests hack events. Get involved this Christmas.
+      host_an_event: Host an event
+      title: Events
+      view_events: View events
+    involved:
+      contributing_path: pagina speciale
+      description: 'Ci sono un sacco di modi per contribuire ai progetti open source: migliorare la documentazione, sistemare problemi e bugs, migliorare la qualità del codice e dei test o aggiungendo nuove funzionalità.'
+      special_page: Abbiamo preparato una %{contributing_path}, dove potrai trovare tutte le informazioni su come contribuire.
+      take_a_look: Se sei nuovo nel mondo dell'open source, inizia da qui.
+      title: Partecipa
+    profile:
+      description: Contribuire a progetti open source è un ottimo modo per migliorare il CV e costruirsi un'immagine nella comunità.
+      getting_started: Iniziare è davvero facile e anche il più piccolo contributo è prezioso.
+      title: Costruisci il tuo profilo
   information:
-    codetriage: Restituisci qualcosa al mondo open source, un issue alla volta, con
-      CodeTriage. Riceverai un issue ogni giorno dalla tua repository preferita per
-      aiutarti ad approfondire, imparare e coinvolgerti con il software che ami.
+    codemontage: Give forward by contributing to open source, social good projects that benefit organizations making a difference in the world.
+    codetriage: Restituisci qualcosa al mondo open source, un issue alla volta, con CodeTriage. Riceverai un issue ogni giorno dalla tua repository preferita per aiutarti ad approfondire, imparare e coinvolgerti con il software che ami.
     get_ready: Preparati per 24 Pull Requests %{year} che lo faremo ancora!
-    help_open_source: 'Vuoi contribuire all''open source nel frattempo? Dai un''occhiata
-      a queste ottime iniziative:'
-    last_year_stats: Nel %{year}, nel giro di 24 giorni, <b>%{developers}</b> sviluppatori
-      hanno inviato <b>%{pull_requests}</b> pull request a <b>%{projects}</b> diversi
-      progetti open source.
+    happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
+    help_open_source: 'Vuoi contribuire all''open source nel frattempo? Dai un''occhiata a queste ottime iniziative:'
+    issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
+    last_year_stats: Nel %{year}, nel giro di 24 giorni, <b>%{developers}</b> sviluppatori hanno inviato <b>%{pull_requests}</b> pull request a <b>%{projects}</b> diversi progetti open source.
     title: 24 Pull Requests %{year} è alle porte
   language:
+    projects_count: "%{count} Progetti %{language}"
     developers:
       count: "%{count} sviluppatori stanno usando %{language}"
     projects:
       count: "%{count} progetti stanno usando %{language}"
       suggest: Suggerisci un progetto basato su %{language}
-    projects_count: "%{count} Progetti %{language}"
     pull_requests:
       latest:
         count: Ultime pull request per %{language} (%{count} in totale)
-  more: Ancora
+  locale:
+    cs: Čeština
+    de: Deutsch
+    el: Ελληνικά
+    en: English
+    es: Español
+    fi: Suomi
+    fr: Français
+    hi: हिंदी
+    it: Italiano
+    ja: 日本語
+    nb: Norsk bokmål
+    pt_br: Português do Brasil
+    ru: Русский
+    ta: தமிழ்
+    th: ไทย
+    translate: Translate into your language!
+    uk: Українська
+    zh_Hans: 简体中文
+    zh_Hant: 正體中文
   navigation:
     all_projects: Tutti i progetti
     dashboard: Pannello di controllo
@@ -175,111 +228,90 @@ it:
     my_suggestions: I miei suggerimenti
     preferences: Preferenze
     profile: Profilo
-  no_suggestions: Non hai consigliato nessun progetto.
-  open_source_yey: Open Source FTW!
-  or: oppure
+  nov_reminder:
+    how_to_contribute: to find out how to contribute 24 pull requests between December 1st and December 24th. Your contributions can be tiny, as simple as fixing a typo, to something incredible. Speed up Rails. Document Express. Fix a bug that you reported.
   organisations:
     languages: Linguaggi
+    pull_requests: "%{count} pull request inviate dai membri"
+    title: "%{count} organizationi coinvolte"
     members:
       one: 1 Membro
       other: "%{count} Membri"
-    pull_requests: "%{count} pull request inviate dai membri"
-    title: "%{count} organizationi coinvolte"
   preferences:
     delete: Vuoi eliminare il tuo account?
+    frequency_message: Fino a quando il progetto non sarà concluso, ti invieremo email costruttive alla frequenza che desideri, mettendo in evidenza i progetti ai quali farebbe comodo un contributo. Come bonus, ci prendiamo la libertà di personalizzare i nostri suggerimenti in base alle tue conoscenze linguistiche, dopo aver analizzato le tue repository su GitHub. In alternativa, puoi sempre scegliere i linguaggi qui sotto.
+    ignore_organisations:
+    information: Puoi sempre modificare le tue preferenze email più tardi.
+    languages: Che linguaggi conosci?
+    remove: Rimuovi profilo
+    save: Save
+    save_and_continue: Salva e continua
+    setup_help: To get started with 24 Pull Requests, please first fill up the following form.
+    title: Imposta le notifiche
+    twitter: Profilo Twitter
     form:
       daily: Giornalmente
       email: Email
       email_frequency: Frequenza di invio email
       never: Mai
       weekly: Settimanalmente
-    frequency_message: Fino a quando il progetto non sarà concluso, ti invieremo email
-      costruttive alla frequenza che desideri, mettendo in evidenza i progetti ai
-      quali farebbe comodo un contributo. Come bonus, ci prendiamo la libertà di personalizzare
-      i nostri suggerimenti in base alle tue conoscenze linguistiche, dopo aver analizzato
-      le tue repository su GitHub. In alternativa, puoi sempre scegliere i linguaggi
-      qui sotto.
     hint:
-      confirm_email: Conferma il tuo indirizzo email tramite il link che ti abbiamo
-        inviato.
-    information: Puoi sempre modificare le tue preferenze email più tardi.
-    languages: Che linguaggi conosci?
-    remove: Rimuovi profilo
-    save_and_continue: Salva e continua
-    title: Imposta le notifiche
-    twitter: Profilo Twitter
-    ignore_organisations:
-  preferred_languages: Lingue preferite
+      confirm_email: Conferma il tuo indirizzo email tramite il link che ti abbiamo inviato.
   projects:
+    claim: Nessuno dei progetti da te suggeriti è nell'elenco? Richiedili ora!
+    filter_by_language: 'Filtra in base al linguaggio:'
+    for_you: Suggeriti per te
+    help_out: Non sai a quale progetto contribuire? Ecco un ottimo elenco di progetti open source che hanno bisogno di pull request.
+    suggest: Non ci sono progetti per questo linguaggio, perché non %{suggest_link}?
+    suggest_link_text: suggerisci un progetto
+    suggest_new: Puoi anche segnalare progetti che non sono in elenco o aggiungere un tuo progetto se hai bisogno di una mano.
     admin:
       search: Cerca nei Repo di GitHub
       title: Gestisci i progetti
-    claim: Nessuno dei progetti da te suggeriti è nell'elenco? Richiedili ora!
     edit:
       title: Modifica suggerimenti
-    filter_by_language: 'Filtra in base al linguaggio:'
-    for_you: Suggeriti per te
-    help_out: Non sai a quale progetto contribuire? Ecco un ottimo elenco di progetti
-      open source che hanno bisogno di pull request.
     new:
+      info: Uno dei tanti modi per incoraggiare la partecipazione nella comunità open source è far sapere agli utenti a quali progetti conviene contribuire. Abbiamo selezionato i nostri preferiti ma siamo sempre aperti a suggerimenti. Condividi le tue idee qui sotto!
+      issue_link_text: suggerisci una issue
+      suggestion: Hai dei suggerimenti per questo progetto? Siamo tutto orecchie! Se c'è qualcosa che vuoi sistemare, sentiti libero di inviare un %{issue_link}
+      title: Segnala un progetto
       form:
         github_url: URL GitHub
         main_language: Linguaggio principale
         project_name: Nome Progetto
         submit_project: Invia progetto
         summary: Riassunto
-      info: Uno dei tanti modi per incoraggiare la partecipazione nella comunità open
-        source è far sapere agli utenti a quali progetti conviene contribuire. Abbiamo
-        selezionato i nostri preferiti ma siamo sempre aperti a suggerimenti. Condividi
-        le tue idee qui sotto!
-      issue_link_text: suggerisci una issue
-      suggestion: Hai dei suggerimenti per questo progetto? Siamo tutto orecchie!
-        Se c'è qualcosa che vuoi sistemare, sentiti libero di inviare un %{issue_link}
-      title: Segnala un progetto
-    suggest: Non ci sono progetti per questo linguaggio, perché non %{suggest_link}?
-    suggest_link_text: suggerisci un progetto
-    suggest_new: Puoi anche segnalare progetti che non sono in elenco o aggiungere
-      un tuo progetto se hai bisogno di una mano.
     suggestion:
       edit: Modifica i suggerimenti
       update: Aggiorna il progetto
   pull_request:
+    twitter_message: 'Ho appena regalato una pull request per http://24pullrequests.com, dai un''occhiata: %{issue_url}'
     download:
-      tooltip: Di solito controlliamo le pull request ogni ora, ma puoi controllare
-        ora se proprio vuoi.
-    twitter_message: 'Ho appena regalato una pull request per http://24pullrequests.com,
-      dai un''occhiata: %{issue_url}'
+      tooltip: Di solito controlliamo le pull request ogni ora, ma puoi controllare ora se proprio vuoi.
   pull_requests:
     count: Sono state fatte %{count} pull request!
     language:
       count: Sono state fatte %{count} pull request per %{language}!
     latest:
       count: Ultime pull requests (%{count} in totale)
-  search: Cerca
-  sponsored_by: Sponsorizzato da
-  suggest_project: Consiglia un progetto
-  suggested_projects: Progetti consigliati
   suggestions:
     title: I miei suggerimenti
   twitter:
-    account_linked: Il tuo account Twitter è stato collegato! Posteremo un tweet ogni
-      volta che apri una pull request.
+    account_linked: Il tuo account Twitter è stato collegato! Posteremo un tweet ogni volta che apri una pull request.
     account_removed: Il tuo account Twitter è stato rimosso.
+    auth_failed: Authorization with Twitter has failed.
     link_account:
       text: Collega il tuo account Twitter
-      tooltip: Se colleghi il tuo account Twitter, posteremo ogni volta che aprirai
-        una pull request!
+      tooltip: Se colleghi il tuo account Twitter, posteremo ogni volta che aprirai una pull request!
+  unsubscribe:
+    invalid_token:
+    login:
+    success:
+    title:
+    unsubscribe:
   user:
     no_current_pr_message:
     organisations: Membro di...
-    pull_request_count: "%{user} ha totalizzato %{count} pull request durante l'anno
-      %{year}"
-  view_all: Mostra tutto
-  welcome_back: Bentornato, %{user}
-  your_pull_requests: Le tue pull request
-  unsubscribe:
-    login:
-    title:
-    unsubscribe:
-    success:
-    invalid_token:
+    pull_request_count:
+      one: "%{user} has made %{count} pull request so far in Christmas %{year}"
+      other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

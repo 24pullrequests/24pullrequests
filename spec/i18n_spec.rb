@@ -1,19 +1,45 @@
-require 'i18n/tasks'
+require "yaml"
 
 RSpec.describe 'I18n' do
-  let(:i18n) { I18n::Tasks::BaseTask.new }
-  let(:missing_keys) { i18n.missing_keys }
-  let(:unused_keys) { i18n.unused_keys }
 
-  it 'does not have missing keys' do
-    skip
-    expect(missing_keys).to be_empty,
-      "Missing #{missing_keys.leaves.count} i18n keys, run `i18n-tasks missing' to show them"
+  it "has consistent locale files" do
+    test_translations
   end
 
-  it 'does not have unused keys' do
-    skip
-    expect(unused_keys).to be_empty,
-      "#{unused_keys.leaves.count} unused i18n keys, run `i18n-tasks unused' to show them"
+  def collect_combined_keys(hash, ns = nil)
+    hash.collect do |k, v|
+      keys = []
+      keys << collect_combined_keys(v, "#{ns}.#{k}") if v.is_a?(Hash)
+      keys << "#{ns}.#{k}"
+    end.flatten
   end
+
+  def test_translations
+    locales_path = File.expand_path("../../config/locales", __FILE__)
+    locales = Dir.glob("#{locales_path}/*.yml").collect do |file_path|
+      File.basename(file_path, ".yml")
+    end
+
+    locales.reject!{|l| l == "simple_form.en"}
+
+    # collecting all locales
+    locale_keys = {}
+    locales.sort.each do |locale|
+      translations = YAML.load_file("#{locales_path}/#{locale}.yml")
+      locale_keys[locale] = collect_combined_keys(translations[locale])
+    end
+
+    # Using en as reference
+    reference = locale_keys[locales.delete("en")]
+    expect(reference).not_to be_empty
+
+    locale_keys.each do |locale, keys|
+      missing = reference - keys
+
+      expect(missing).to be_empty, "#{locale} locale is missing: #{missing.join(', ')}"
+      extra = keys - reference
+      expect(extra).to be_empty, "#{locale} locale has extra: #{extra.join(', ')}"
+    end
+  end
+
 end
