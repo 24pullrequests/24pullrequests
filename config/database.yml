@@ -12,7 +12,10 @@ development:
 
 test:
   <<: *default
-  database: tfpullrequests_test
+  database: <%= ENV.fetch('TFPULLREQUESTS_DATABASE_NAME') { 'tfpullrequests_test' } %>
+  username: <%= ENV.fetch('TFPULLREQUESTS_DATABASE_USER') { '' } %>
+  password: <%= ENV.fetch('TFPULLREQUESTS_DATABASE_PASSWORD') { '' } %>
+  host: <%= ENV.fetch('TFPULLREQUESTS_DATABASE_HOST') { 'localhost' } %>
 
 production:
   url: <%= ENV['DATABASE_URL'] %>
