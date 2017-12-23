@@ -82,7 +82,7 @@ ru:
       specific:
       title:
   contributors:
-    location_privacy: All location data is sourced from public GitHub profiles of currently active users.
+    location_privacy: Все данные о местоположении берутся из открытых GitHub-профилей активных в данный момент пользователей.
     title: Основные авторы
   dashboard:
     christmas_activity: Здесь вы сможете увидеть всю вашу активность в преддверии Рождества.
@@ -113,9 +113,9 @@ ru:
     edit:
       title: Редактировать предложение
     index:
-      host_an_event: Host an event
-      past_24_pull_requests_events: Past 24 Pull Requests Events
-      show_past_24_pull_requests_events: Show Past 24 Pull Requests Events
+      host_an_event: Организовать мероприятие
+      past_24_pull_requests_events: Последние мероприятия
+      show_past_24_pull_requests_events: Показать последние мероприятия
     new:
       title: Создайте событие 24 Pull Requests
       form:
@@ -166,10 +166,10 @@ ru:
     q_n_a: Вопросы и ответы
     title: 24 Пулл-реквеста
     event:
-      description: This year we are encouraging organisers around the world to hold 24 Pull Requests hack events. Get involved this Christmas.
-      host_an_event: Host an event
-      title: Events
-      view_events: View events
+      description: В этом году мы поощряем организаторов по всему миру проводить мероприятия в поддержку 24 Pull Requests. Поучайствуйте в них на это Рождество.
+      host_an_event: Организовать мероприятие
+      title: Мероприятия
+      view_events: Смотреть мероприятия
     involved:
       contributing_path:
       description: 'Есть множество способов помочь проектам с открытым исходным кодом: совершенствование документации, помощь в исправлении существующих проблем и ошибок, улучшение качества кода и покрытия тестами или добавление новых возможностей.'
@@ -181,13 +181,13 @@ ru:
       getting_started: Не бойтесь сделать первый пулл-реквест, это проще простого. Даже самые маленькие изменения полезны для проектов.
       title: Создайте свой профиль
   information:
-    codemontage: Give forward by contributing to open source, social good projects that benefit organizations making a difference in the world.
+    codemontage: Внесите свой вклад в открытый исходный код, хорошие социальные проекты, которые помогают изменять наш мир.
     codetriage: Участвуйте в проектах с открытым исходным кодом с CodeTriage. Получайте одно задание в день, станьте экспертом в ваших любимых проектах.
     get_ready: Будьте готовы к 24 Пулл-реквеста %{year}, мы обязательно повторим это!
-    happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
+    happy_holidays_see_you: С праздником! Увидимся в следующем году, когда мы сделаем это снова!
     help_open_source: 'Хотите помочь проектам с открытым кодом? Вот вам информация для размышления:'
-    issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    last_year_stats: В %{year}, в течении 24 дней, <b>%{developers}</b> разработчиков послали <b>%{pull_requests}</b> пулл-реквестов в <b>%{projects}</b> различных проектов с открытым исходным кодом.
+    issuehubio: Внесите вклад в открытое ПО. Поищите среди проблем по меткам и выберите подходящий Вам проект!
+    last_year_stats: В %{year}, в течение 24 дней, <b>%{developers}</b> разработчиков послали <b>%{pull_requests}</b> пулл-реквестов в <b>%{projects}</b> различных проектов с открытым исходным кодом.
     title: 24 Пулл-реквеста %{year} не за горами
   language:
     projects_count: "%{count} %{language} проектов"
@@ -215,7 +215,7 @@ ru:
     ru: Русский
     ta: தமிழ்
     th: ไทย
-    translate: Translate into your language!
+    translate: Переведи на свой родной язык!
     uk: Українська
     zh_Hans: 简体中文
     zh_Hant: 正體中文
@@ -229,7 +229,7 @@ ru:
     preferences: Настройки
     profile: Профиль
   nov_reminder:
-    how_to_contribute: to find out how to contribute 24 pull requests between December 1st and December 24th. Your contributions can be tiny, as simple as fixing a typo, to something incredible. Speed up Rails. Document Express. Fix a bug that you reported.
+    how_to_contribute: "узнай как внести свой вклад в виде 24 пулл-реквестов с 1-го по 24-ое декабря. Ваша помощь может помощь может быть разной: от исправления опечатки до чего-то невообразимого. Ускорить Rails. Document Express. Исправление ошибки, о которой Вы сообщили."
   organisations:
     languages: Languages
     pull_requests: "%{count} пулл-реквестов отправленных участниками"
@@ -299,7 +299,7 @@ ru:
   twitter:
     account_linked: Мы привязали вашу учетную запись в твиттере! Теперь мы будем автоматически твитить, как только вы сделаете пулл-реквест.
     account_removed: Мы забыли про вашу учетную запись в твиттере.
-    auth_failed: Authorization with Twitter has failed.
+    auth_failed: Авторизация с Twitter не удалась.
     link_account:
       text: Привязать ваш твиттер
       tooltip: Если вы привяжете вашу учетную запись в твиттере, то мы сможем твитить про ваши пулл-реквесты!
@@ -313,5 +313,5 @@ ru:
     no_current_pr_message:
     organisations: Организации
     pull_request_count:
-      one: "%{user} has made %{count} pull request so far in Christmas %{year}"
-      other: "%{user} has made %{count} pull requests so far in Christmas %{year}"
+      one: "%{user} сделал %{count} пулл-реквест к Рождеству %{year}"
+      other: "%{user} сделал %{count} пулл-реквестов к Рождеству %{year}"
