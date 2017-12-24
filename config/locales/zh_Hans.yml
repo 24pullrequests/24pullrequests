@@ -5,8 +5,8 @@ zh_Hans:
   change: 编辑
   claim: 领取
   clear: 清除
-  deactivate: Deactivate
-  delete: Delete
+  deactivate: 失效
+  delete: 删除
   developers_involved: 开发者已经参与进来
   developers_involved_desc: 加入进来，让开源更美好。
   developers_using_language: 开发者使用 %{language}
@@ -21,7 +21,7 @@ zh_Hans:
   no_suggestions: 你还没有推荐过呢
   open_source_yey: 开源万岁！
   or: 或
-  organisations_involved_desc: Invite more people from your organisation to participate.
+  organisations_involved_desc: 邀请你的组织里更多人来参加。
   preferred_languages: 首选语言
   search: 搜索
   sponsored_by: 赞助单位
@@ -36,13 +36,13 @@ zh_Hans:
     description: 24 Pull Requests 是一个在12月份促进开源合作的小小项目。
     idea: 想法很简单， "在12月到圣诞节之前的每一天发出合并请求(pull request)"， 鼓励开发者在这段时间回馈开源社区。
     more_info: 这个小站也提供一些值得参与的项目，一些指南，并且展示每天哪些出色的合并请求(pull request)。
-    on_github: 这个小站的开发也是开源的寄存在GitHub上：
+    on_github: 这个小站的开发也是开源的，寄存在GitHub上：
     on_twitter: 我们也在推特上：
     title: 关于 24 Pull Requests
     sponsors:
       details: 24 Pull Requests 接受了他们的支持和帮助。
       get_in_touch: 咨询赞助事宜，请邮件联系：
-      thanks: 特别感谢。。。
+      thanks: 特别感谢。
       title: 支持和帮助
   activerecord:
     errors:
@@ -58,7 +58,7 @@ zh_Hans:
               already_confirmed: "%{attribute}已经完成验证"
               required_for_confirmation: "%{attribute}为必填项"
   api:
-    description: 你可能不知到，24 Pull Requests有JSON API，描述如下。
+    description: 你可能不知道，24 Pull Requests有自己的JSON API，描述如下。
     title: JSON API
     callback:
       details: 您可以发送一个带有 ?callback 参数的发给任何 GET 请求，得到包装在函数里的结果。这主要用来解决跨域名的问题。（返回与平时相同）
@@ -90,7 +90,7 @@ zh_Hans:
     give_a_gift: 看起来你今天还没有赠送任何代码。你想现在去赠出一份代码吗？
     help_out: 想不出你想要参与的项目吗？我们帮您整理好了一些热门的项目：
     no_pull_requests: 您还没有发送任何合并请求(pull request)， 你还等什么呢？！
-    not_december: 24 Pull Requests runs from 1st-24th December, come back then!
+    not_december: 24 Pull Requests 只在12月1日和24t日之间运行, 那时候再回来吧！
     pull_requests: 下面列出了开发者们最新提交的 Pull Request。赶紧去提交 Pull Request 吧，就可以在这找到你自己了！
     synchronize: 同步合并请求(pull request)
     tweet_progress:
@@ -108,8 +108,8 @@ zh_Hans:
     save_event: Save event
     title: Events
     admin:
-      search: Search by GitHub repository
-      title: Manage Projects
+      search: 用GitHub repository搜索
+      title: 管理项目
     edit:
       title: Edit Event
     index:
@@ -144,9 +144,9 @@ zh_Hans:
     calendar_link: 公共日历
     description: 在这里管理您的合并请求(pull request)并且选择&amp;描述你的"24 Pull Requests"。
     give: 献给你爱的项目一点东西…代码
-    link_twitter: Link Twitter account
+    link_twitter: 关联 Twitter 账号
     link_twitter_desc: Want to share information about 24 Pull Requests and your gifts? %{link_twitter} and gift some code to open-source projects.
-    no_pull_requests: You don’t have any pull-requests
+    no_pull_requests: 你没有任何 pull requests
     none: 没有赠出什么东西…
     title: 赠出的代码
     view_your_gifts: 你所有赠出的代码都会显示在您的%{calendar_link}。
@@ -313,5 +313,5 @@ zh_Hans:
     no_current_pr_message:
     organisations: 一名成员
     pull_request_count:
-      one: "%{user} has made %{count} pull request so far in Christmas %{year}"
-      other: "%{user} has made %{count} pull requests so far in Christmas %{year}"
+      one: "%{user} 在%{year}年的圣诞已经发出了 %{count} 个 pull request"
+      other: "%{user} 在%{year}年的圣诞已经发出了 %{count} 个pull requests"
