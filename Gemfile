@@ -4,7 +4,7 @@ ruby '2.5.0'
 gem 'rails', '5.1.4'
 
 gem 'jquery-rails'
-gem 'pg'
+gem 'pg', '~> 0.18'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'omniauth-twitter'
