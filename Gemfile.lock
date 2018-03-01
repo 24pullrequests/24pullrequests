@@ -115,7 +115,7 @@ GEM
       thor (~> 0.14)
     foreman (0.84.0)
       thor (~> 0.19.1)
-    geocoder (1.4.5)
+    geocoder (1.4.6)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     gmaps4rails (2.1.2)
@@ -242,7 +242,7 @@ GEM
     rack-google-analytics (1.2.0)
       actionpack
       activesupport
-    rack-test (0.8.2)
+    rack-test (0.8.3)
       rack (>= 1.0, < 3)
     rails (5.1.4)
       actioncable (= 5.1.4)
