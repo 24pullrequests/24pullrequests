@@ -61,7 +61,7 @@ class User < ApplicationRecord
     # do not update the email address in case the user has updated their
     # email prefs and used a new email
     ignored_fields = %i(email name blog)
-    update_attributes(AuthHash.new(hash).user_info.except(*ignored_fields))
+    update(AuthHash.new(hash).user_info.except(*ignored_fields))
   end
 
   def self.find_by_auth_hash(hash)
@@ -134,8 +134,8 @@ class User < ApplicationRecord
 
   def confirm!
     if email.present? && !confirmed?
-      return update_attributes(confirmation_token: nil,
-                               confirmed_at:       Time.zone.now.utc)
+      return update(confirmation_token: nil,
+                    confirmed_at:       Time.zone.now.utc)
     elsif confirmed?
       errors.add(:email, :already_confirmed)
     else

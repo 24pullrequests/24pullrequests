@@ -46,7 +46,7 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    if @project.update_attributes(editable_project_params)
+    if @project.update(editable_project_params)
       redirect_to projects_path(user: current_user), notice: 'Project updated successfully!'
     else
       render :edit

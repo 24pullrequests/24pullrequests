@@ -54,10 +54,10 @@ class PullRequest < ApplicationRecord
 
   def check_state
     pr = GithubClient.new(user.nickname, user.token).pull_request(repo_name, github_id)
-    update_attributes(state: pr.state,
-                      comments_count: pr.comments,
-                      merged: pr.merged,
-                      merged_by_id: pr.merged_by.try(:id))
+    update(state: pr.state,
+           comments_count: pr.comments,
+           merged: pr.merged,
+           merged_by_id: pr.merged_by.try(:id))
   end
 
   def post_to_firehose

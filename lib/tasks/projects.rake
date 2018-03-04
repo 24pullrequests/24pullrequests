@@ -78,7 +78,7 @@ namespace :projects do
       github_url = "https://github.com/#{item['attributes']['name_with_owner']}"
 
       if p = Project.find_by_github_repo(github_url)
-        p.update_attributes(contribulator: item['attributes']['score'].to_i)
+        p.update(contribulator: item['attributes']['score'].to_i)
         puts "Updated #{p.name} contribulator #{p.contribulator}"
       end
     end
