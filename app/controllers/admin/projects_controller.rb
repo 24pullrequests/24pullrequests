@@ -17,7 +17,7 @@ module Admin
     end
 
     def update
-      if @project.update_attributes(editable_project_params)
+      if @project.update(editable_project_params)
         redirect_to admin_projects_path, notice: 'Project updated successfully!'
       else
         render :edit

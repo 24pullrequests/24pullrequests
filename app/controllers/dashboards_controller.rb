@@ -30,7 +30,7 @@ class DashboardsController < ApplicationController
 
   def update_preferences
     current_user.skills.delete_all
-    if current_user.update_attributes(user_params)
+    if current_user.update(user_params)
       redirect_to(session[:preferences_referrer] || dashboard_path, notice: 'Your preferences were successfully saved')
       session.delete(:preferences_referrer)
     else

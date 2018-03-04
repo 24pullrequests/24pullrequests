@@ -35,7 +35,7 @@ class GiftsController < ApplicationController
   end
 
   def update
-    if gift.update_attributes(gift_params)
+    if gift.update(gift_params)
       gift_given
     else
       gift_failed(gift)
