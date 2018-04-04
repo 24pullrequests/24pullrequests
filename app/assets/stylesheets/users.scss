@@ -12,7 +12,9 @@
   }
 
   .language {
-    margin-right: 8px;
+    display: inline-block;
+    padding: .35em .7em .5em;
+    margin-right: 7px;
   }
 
   .username {
@@ -29,6 +31,7 @@
 
   .btn {
     margin-left: 8px;
+    margin-bottom: 10px;
   }
 
   .octicon {

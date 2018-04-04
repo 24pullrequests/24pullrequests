@@ -5,15 +5,23 @@
   <div class="col-sm-9 profile-details">
     <% if @user == current_user %>
       <div class="profile-actions hidden-xs">
-        <%= link_to preferences_path, class: "btn btn-default btn-sm" do %>
-          <%= octicon "gear", :height => 16 %>
-          <%= t("navigation.preferences") %>
-        <% end %>
-        <% if current_user.twitter_linked? %>
-          <%= link_to t("preferences.remove"), twitter_remove_path, method: :delete, class: 'btn btn-danger btn-sm' %>
-        <% else %>
-          <%= link_to t('twitter.link_account.text'), '/auth/twitter', :class => 'btn btn-info btn-sm', rel: 'tooltip', title: t('twitter.link_account.tooltip') %>
-        <% end %>
+        <div class="row">
+          <%= link_to preferences_path, class: "btn btn-default btn-sm" do %>
+            <%= octicon "gear", :height => 16 %>
+            <%= t("navigation.preferences") %>
+          <% end %>
+          <%= link_to pull_request_download_path, :id => 'fetch-pull-requests', :class => 'btn btn-info btn-sm', :rel => 'tooltip', :title => t('pull_request.download.tooltip') do %>
+            <%= image_tag('spinner.gif', :id => 'spinner', :alt => ' ') %>
+            <%= t('dashboard.synchronize') %>
+          <% end %>
+        </div>
+        <div class="row pull-right">
+          <% if current_user.twitter_linked? %>
+            <%= link_to t("preferences.remove"), twitter_remove_path, method: :delete, class: 'btn btn-danger btn-sm' %>
+          <% else %>
+            <%= link_to t('twitter.link_account.text'), '/auth/twitter', :class => 'btn btn-info btn-sm', rel: 'tooltip', title: t('twitter.link_account.tooltip') %>
+          <% end %>
+        </div>
       </div>
     <% end %>
     <h2 class="username"><%= @user.nickname %></h2>
