@@ -37,17 +37,21 @@ Over 180 different people have contributed to the project, you can see them all 
 
 ## Development
 
-Source hosted at [GitHub](https://github.com/24pullrequests/24pullrequests).
-Report issues/feature requests on [GitHub Issues](https://github.com/24pullrequests/24pullrequests/issues). Follow us on Twitter [@24pullrequests](https://twitter.com/24pullrequests). We also hangout on [Gitter](https://gitter.im/24pullrequests/24pullrequests).
+The source is hosted at [GitHub](https://github.com/24pullrequests/24pullrequests).
+You can report issues/feature requests on [GitHub Issues](https://github.com/24pullrequests/24pullrequests/issues). Follow the project on Twitter [@24pullrequests](https://twitter.com/24pullrequests). People from this community also often hangout on [Gitter](https://gitter.im/24pullrequests/24pullrequests).
+
+These instructions are for working on the the [24pullrequests.com](https://24pullrequests.com) website. If you just want to be a developer who contributes PRs during the holidays, you don't need to follow these instructions! Go to https://24pullrequests.com and get involved there.
 
 ### Getting Started
+
+Want to hack on the website? Awesome!
 
 New to Ruby? No worries! You can follow these instructions to install a local server, or you can use the included Vagrant setup.
 
 #### Installing a Local Server
 
 First things first, you'll need to install Ruby 2.5.0. I recommend using the excellent [rbenv](https://github.com/rbenv/rbenv),
-and [ruby-build](https://github.com/rbenv/ruby-build)
+and [ruby-build](https://github.com/rbenv/ruby-build).
 
 ```bash
 rbenv install 2.5.0
