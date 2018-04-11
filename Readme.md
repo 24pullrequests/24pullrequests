@@ -140,7 +140,7 @@ Standard RSpec/Capybara tests are used for testing the application. The tests ca
 
 You can set up the test environment with `bundle exec rake db:test:prepare`, which will create the test DB and populate its schema automatically. You don't need to do this for every test run, but it will let you easily keep up with migrations. If you find a large number of tests are failing you should probably run this.
 
-If you are using the omniauth environment variables
+If you are using the [omniauth](https://github.com/omniauth/omniauth) environment variables
 (GITHUB_KEY, GITHUB_SECRET, TWITTER_KEY, TWITTER_SECRET)
 for **another** project, you will need to either
  * unset them before running your tests or
