@@ -3,8 +3,8 @@ require 'rspec/mocks'
 
 FactoryBot.define do
   factory :aggregation_filter do
-    user nil
-    title_pattern "MyString"
+    user { nil }
+    title_pattern { "MyString" }
   end
 
   sequence :email do |n|
@@ -25,7 +25,7 @@ FactoryBot.define do
 
   factory :user do
     sequence(:uid)
-    provider 'github'
+    provider { 'github' }
     nickname { Faker::Name.name.parameterize }
     email
     gravatar_id { Faker::Internet.email }
@@ -44,8 +44,8 @@ FactoryBot.define do
     title { Faker::Lorem.words.first }
     issue_url { Faker::Internet.url }
     body { Faker::Lorem.paragraphs.join('\n') }
-    state 'open'
-    merged false
+    state { 'open' }
+    merged { false }
     created_at { DateTime.now.to_s }
     repo_name { Faker::Lorem.words.first }
     language { Project::LANGUAGES.sample }
