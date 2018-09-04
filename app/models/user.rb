@@ -17,7 +17,7 @@ class User < ApplicationRecord
 
   scope :by_language, ->(language) { joins(:skills).where('lower(language) = ?', language.downcase) }
   scope :with_any_pull_requests, -> { where('users.pull_requests_count > 0') }
-  scope :random, -> { order("RANDOM()") }
+  scope :random, -> { order(Arel.sql("RANDOM()")) }
 
   paginates_per 99
 

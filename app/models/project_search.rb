@@ -38,7 +38,7 @@ class ProjectSearch
   private
 
   def projects
-    @projects ||= Project.active.order('random()').page(page).per(per_page)
+    @projects ||= Project.active.order(Arel.sql('random()')).page(page).per(per_page)
   end
 
   def by_languages
