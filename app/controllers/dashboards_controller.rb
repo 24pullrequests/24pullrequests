@@ -9,7 +9,7 @@ class DashboardsController < ApplicationController
       .order('created_at desc')
       .to_a
 
-    projects      = current_user.suggested_projects.order("RANDOM()").limit(12).sort_by(&:name)
+    projects      = current_user.suggested_projects.order(Arel.sql("RANDOM()")).limit(12).sort_by(&:name)
     gifted_today  = current_user.gift_for(today)
     @events = Event.where(['start_time >= ?', Time.zone.today]).order('start_time').first(5)
 

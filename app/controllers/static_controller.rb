@@ -1,7 +1,7 @@
 class StaticController < ApplicationController
   def homepage
-    @projects = Project.includes(:labels).active.order("RANDOM()").limit(6)
-    @featured_projects = Project.includes(:labels).featured.order("RANDOM()").limit(6)
+    @projects = Project.includes(:labels).active.order(Arel.sql("RANDOM()")).limit(6)
+    @featured_projects = Project.includes(:labels).featured.order(Arel.sql("RANDOM()")).limit(6)
     @users = User.with_any_pull_requests.random.limit(24)
     @orgs = Organisation.with_any_pull_requests.random.limit(24)
     @pull_requests = PullRequest.year(current_year).order('created_at desc').limit(6)
