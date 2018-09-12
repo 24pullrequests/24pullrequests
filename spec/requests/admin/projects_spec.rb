@@ -32,7 +32,7 @@ describe 'Admin Projects', type: :request do
     end
 
     it 'editing a project', js: true do
-      first(:link, 'Edit').click
+      first(:link, 'Edit').trigger('click')
 
       fill_in 'Name', with: 'Pugalicious'
       click_on 'Update Project'
