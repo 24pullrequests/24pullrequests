@@ -23,7 +23,7 @@ This is the site to help promote the project, highlighting why, how and where to
   - [Code of Conduct](#code-of-conduct)
 - [Copyright](#copyright)
 
-## Get started
+## Getting started
 
 * [Explore projects to help](http://24pullrequests.com/projects)
 * [Submit your project to get help](http://24pullrequests.com/projects/new)
