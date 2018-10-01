@@ -6,3 +6,4 @@ task geocode_existing_users: :environment do
     end
   end
 end
+"always have a smiling face"
