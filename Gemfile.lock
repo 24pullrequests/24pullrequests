@@ -136,7 +136,7 @@ GEM
     http_parser.rb (0.6.0)
     i18n (1.1.1)
       concurrent-ruby (~> 1.0)
-    i18n-tasks (0.9.26)
+    i18n-tasks (0.9.27)
       activesupport (>= 4.0.2)
       ast (>= 2.1.0)
       erubi
@@ -311,7 +311,7 @@ GEM
     rspec-mocks (3.8.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
-    rspec-rails (3.8.0)
+    rspec-rails (3.8.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
