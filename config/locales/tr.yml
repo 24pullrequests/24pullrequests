@@ -181,7 +181,6 @@ tr:
       getting_started: Küçük katılımlar bir projeyi değerli yapabilir. Projelere katılım başlatmak gerçekten kolaydır.
       title: Profilinizi Oluşturun
   information:
-    codemontage: Give forward by contributing to open source, social good projects that benefit organizations making a difference in the world.
     codetriage: CodeTriage ile bir açık kaynak önerin. Daha derine inmek için favori kod deponuzdan günlük olarak bir konuya yardımcı olun, bağlı olduğunuz kodu daha fazla öğrenin.
     get_ready: "%{year} yılında tekrar yaptığımızda 24 Pull Requests için hazır olun!"
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!

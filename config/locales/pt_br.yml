@@ -181,7 +181,6 @@ pt_br:
       getting_started: É realmente muito fácil começar, até mesmo pequenas contribuições podem ter muito valor para um projeto
       title: Faça seu nome
   information:
-    codemontage: Give forward by contributing to open source, social good projects that benefit organizations making a difference in the world.
     codetriage: Ajude os projetos open sources, um issue de cada vez, com CodeTriage. Você pegará um issue do seu repositório favorito por dia para ajudar a ir mais fundo, aprenda mais, se envolva mais com o código de você usa.
     get_ready: Se prepare para 24 Pull Requests %{year} quando faremos tudo novamente!
     happy_holidays_see_you: Boas festas e vejo vocês no próximo ano, quando faremos tudo novamente!

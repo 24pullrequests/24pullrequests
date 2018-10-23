@@ -181,7 +181,6 @@ en:
       getting_started: It’s really easy to get started. Even small contributions can be really valuable to a project.
       title: Build your profile
   information:
-    codemontage: Give forward by contributing to open source, social good projects that benefit organizations making a difference in the world.
     codetriage: Give back to open source, one issue at a time, with CodeTriage. You’ll get one issue from your favorite repo per day to help you dig deeper, learn more, and stay involved with the code you rely on.
     get_ready: Get ready for 24 Pull Requests %{year} when we do it all again!
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
