@@ -181,7 +181,6 @@ zh_Hant:
       getting_started: 開源其實很容易上手，不論多小的貢獻都有很大的價值。
       title: 建立作品集
   information:
-    codemontage: Give forward by contributing to open source, social good projects that benefit organizations making a difference in the world.
     codetriage: 感恩回饋開源，一次一個議題（issue），CodeTriage 與你同行。你會每天從你喜歡的專案那分配到一個議題（issue），並引導你越學越多，參與撰寫大家日常所依賴的程式碼裡。
     get_ready: 摩拳擦掌開始預備 24 Pull Requests %{year} 吧！
     happy_holidays_see_you: 聖誕節快樂，我們明年見！

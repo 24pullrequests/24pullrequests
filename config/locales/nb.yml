@@ -181,7 +181,6 @@ nb:
       getting_started: Det er veldig enkelt å komme i gang. Små forbedringer kan også være veldig verdifulle for et prosjekt.
       title: Bygg din profil
   information:
-    codemontage: Give forward by contributing to open source, social good projects that benefit organizations making a difference in the world.
     codetriage: Gi tilbake til open-source, ett issue om gangen, med CodeTriage. Du vil motta ett issue fra dine favoritt-repos per dag for å hjelpe deg med å grave dypere, lære mer, og holde deg involvert med koden du er avhengig av.
     get_ready: Gjør deg klar til 24 Pull Requests %{year} når vi gjør det hele om igjen!
     happy_holidays_see_you: God høytid, og vi sees igjen neste år når vi gjør det hele om igjen!

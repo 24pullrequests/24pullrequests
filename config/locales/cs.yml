@@ -181,7 +181,6 @@ cs:
       getting_started: Je opravdu jednoduché začít. I malá pomoc může být pro projekt opravdu cenná.
       title: Vytvořte si profil
   information:
-    codemontage: Give forward by contributing to open source, social good projects that benefit organizations making a difference in the world.
     codetriage: Give back to open source, one issue at a time, with CodeTriage. You’ll get one issue from your favorite repo per day to help you dig deeper, learn more, and stay involved with the code you rely on.
     get_ready: Připravte se na 24 Pull Requests %{year}, kdy to celé zopakujeme.
     happy_holidays_see_you: Veselé svátky a uvidíme se znovu za rok!

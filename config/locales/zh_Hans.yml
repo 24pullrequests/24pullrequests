@@ -181,7 +181,6 @@ zh_Hans:
       getting_started: 这真的很容易上手，即使是很小的贡献对项目也有很大的价值。
       title: 构建您的个人资料
   information:
-    codemontage: Give forward by contributing to open source, social good projects that benefit organizations making a difference in the world.
     codetriage: 感恩回馈开源，一次一个问题(issue)，CodeTriage与你同行。你会每天从你喜欢的项目那分配到一个问题（issue），并引导你越学越多，参与撰写大家日常所依赖的代码里。
     get_ready: 准备好，24 Pull Requests %{year}！ 让我们再次做到这一切！
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!

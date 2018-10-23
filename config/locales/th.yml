@@ -181,7 +181,6 @@ th:
       getting_started: สามารถเริ่มต้นได้ง่ายๆเพียงแค่การมีส่วนร่วมเล็กๆก็สามารถสร้างคุณค่าที่ยิ่งใหญ่ให้แก่โครงการได้
       title: สร้างโปรไฟล์
   information:
-    codemontage: Give forward by contributing to open source, social good projects that benefit organizations making a difference in the world.
     codetriage: ตอบแทนโครงการโอเพ่นซอร์สด้วย CodeTriage คุณจะได้รับการแจ้งปัญหาจากโครงการที่คุณชื่นชอบวันล่ะครั้ง มันจะช่วยให้คุณเรียนรู้ได้มากขึ้น
     get_ready: เตรียมพร้อมสำหรับ 24 Pull Requests %{year} เมื่อมันเริ่มต้นอีกครั้ง
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
