@@ -170,7 +170,7 @@ GEM
       addressable (~> 2.3)
     lodash-rails (4.17.10)
       railties (>= 3.1)
-    loofah (2.2.2)
+    loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
