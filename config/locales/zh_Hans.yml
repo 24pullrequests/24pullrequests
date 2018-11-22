@@ -82,7 +82,6 @@ zh_Hans:
       specific: 一个指定用户的信息。
       title: Users
   contributors:
-    location_privacy: All location data is sourced from public GitHub profiles of currently active users.
     title: 主要贡献者
   dashboard:
     christmas_activity: 在这里，您可以看到直至圣诞节前您所有被记录的活动。

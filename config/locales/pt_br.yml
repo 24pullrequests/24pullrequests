@@ -82,7 +82,6 @@ pt_br:
       specific: Retorna informações de um usuário em específico.
       title: Usuários
   contributors:
-    location_privacy:
     title: Contribuidores
   dashboard:
     christmas_activity: Aqui é onde você pode ver todas as atividades que nós estamos monitorando para você na corrida até o Natal.

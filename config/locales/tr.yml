@@ -82,7 +82,6 @@ tr:
       specific: Belirli bir kişi için bilgilerin alınması.
       title: Kullanıclar
   contributors:
-    location_privacy:
     title: Çekirdek Kadro
   dashboard:
     christmas_activity: Burası Noel'e kadar sizin için takip ettiğimiz bütün aktiviteleri görebileceğiniz yer.

@@ -82,7 +82,6 @@ ta:
       specific: Load information for a specific user.
       title: Users
   contributors:
-    location_privacy: All location data is sourced from public GitHub profiles of currently active users.
     title: கோர் பங்களிப்பாளர்கள்
   dashboard:
     christmas_activity: இங்குதான் இந்த கிறிஸ்துமஸ்வரை நாங்கள் கண்காணித்த உங்கள் நடவடிக்கைகளைக் காணலாம்.

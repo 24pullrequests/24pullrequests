@@ -10,18 +10,6 @@ class StaticController < ApplicationController
 
   def about
     @contributors = User.contributors
-
-    # a user's location is pulled from public GitHub data
-    # available on their profile when authenticating with the site
-    @map_markers = Rails.cache.fetch 'contributors-map-markers', expires_in: 24.hours do
-      [].tap do |markers|
-        active_users.each do |user, marker|
-          next unless user.lat_lng
-
-          markers << { lat: user.lat, lng: user.lng }
-        end
-      end
-    end
   end
 
   def sponsors

@@ -82,7 +82,6 @@ zh_Hant:
       specific: 某一個指定使用者的資訊。
       title: 使用者
   contributors:
-    location_privacy: 所有的位置資訊都是從使用者的公開 GitHub 頁面中取得
     title: 主要貢獻者
   dashboard:
     christmas_activity: 在這裡你可以看到你在聖誕節前的所有動態。

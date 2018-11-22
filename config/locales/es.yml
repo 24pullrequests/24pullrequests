@@ -82,7 +82,6 @@ es:
       specific: Carga información de un usuario específico.
       title: Usuarios
   contributors:
-    location_privacy: Todos los datos de localización están tomados de los perfiles públicos de Github de los usuarios activos actualmente.
     title: Contribuyentes
   dashboard:
     christmas_activity: Aquí puedes ver toda la actividad que hemos monitorizado sobre ti durante el recorrido hacia la Navidad.

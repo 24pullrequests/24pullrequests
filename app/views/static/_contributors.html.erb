@@ -3,18 +3,6 @@
     <%= t("contributors.title") %>
   </h3>
   <div class="row">
-    <div class="col-md-12">
-      <div id="map" style="width: 100%; height: 300px;"></div>
-      <p class="text-muted">
-        <%= t("contributors.location_privacy") %>
-      </p>
-      <div class="hidden" id="maps-data">
-        <%= raw @map_markers.to_json %>
-      </div>
-      <hr/>
-    </div>
-  </div>
-  <div class="row">
     <% users.each_slice(6) do |row| %>
       <ul class="thumbnails clearfix">
         <% row.each do |user| %>
@@ -32,7 +20,4 @@
       </ul>
     <% end %>
   </div>
-  <%= javascript_include_tag "//developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js" %>
-  <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_MAPS_API_KEY"]}" %>
-  <%= javascript_include_tag 'maps.js' %>
 </section>

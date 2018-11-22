@@ -82,7 +82,6 @@ ru:
       specific:
       title:
   contributors:
-    location_privacy: Все данные о местоположении берутся из открытых GitHub-профилей активных в данный момент пользователей.
     title: Основные авторы
   dashboard:
     christmas_activity: Здесь вы сможете увидеть всю вашу активность в преддверии Рождества.
