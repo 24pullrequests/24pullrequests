@@ -12,7 +12,7 @@ describe 'Static pages', type: :request do
     end
 
     it { is_expected.to have_link('Log in with GitHub', href: login_path) }
-    it { is_expected.to have_content('7 Developers already involved') }
+    it { is_expected.to have_content('7 Contributors already involved') }
     it { is_expected.to have_content('2 Suggested Projects') }
     it { is_expected.to have_link('View All', href: users_path) }
     it { is_expected.to have_link('View All', href: projects_path) }

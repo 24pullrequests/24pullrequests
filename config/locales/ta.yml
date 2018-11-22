@@ -7,9 +7,9 @@ ta:
   clear: அழி
   deactivate: Deactivate
   delete: Delete
-  developers_involved: ஈடுபாடான நிரலர்கள்
-  developers_involved_desc: Join everyone here and make open source better.
-  developers_using_language: "%{language} பயன்படுத்தும் நிரலர்கள்"
+  contributors_involved: ஈடுபாடான நிரலர்கள்
+  contributors_involved_desc: Join everyone here and make open source better.
+  contributors_using_language: "%{language} பயன்படுத்தும் நிரலர்கள்"
   edit: திருத்து
   everything: எல்லாம்
   exempli_gratia: எ.கா.
@@ -34,7 +34,7 @@ ta:
   your_pull_requests: உங்கள் Pull Request-கள்
   about:
     description: 24 Pull Requests ஒரு சிறிய திட்டம்.  இது டிசம்பர் காலத்தில்  open source collaboration-ஐ  ஊக்குவிக்கிறது.
-    idea: அடிப்படையில் இந்த யோசனை,  டிசம்பரிலிருந்து  கிறிஸ்துமஸ் வரை  ஒவ்வொரு நாளும் ஒரு  pull request-ஐ  அனுப்ப developers-ஐ  டிசம்பர் முழுவதும் பரிசு கொடுத்து ஊக்குவிக்கிறது.
+    idea: அடிப்படையில் இந்த யோசனை,  டிசம்பரிலிருந்து  கிறிஸ்துமஸ் வரை  ஒவ்வொரு நாளும் ஒரு  pull request-ஐ  அனுப்ப contributors-ஐ  டிசம்பர் முழுவதும் பரிசு கொடுத்து ஊக்குவிக்கிறது.
     more_info: மேலும், இந்த  தளம் உதவி ஆலோசனை திட்டங்கள் வழங்குகிறது பங்களிப்பு வழிகாட்டிகள் மற்றும் ஒவ்வொரு நாளும் சமர்ப்பிக்கப்பட்ட நல்ல pull requests-களை உயர்த்தி காட்டுகிறது.
     on_github: 'இந்த  தளம் வளர்ச்சி GitHub-ல் open source-ஆக  இருக்கிறது:'
     on_twitter: 'மேலும், நாம் ட்விட்டர்-ல்  இருக்கிறோம்:'
@@ -185,11 +185,11 @@ ta:
     happy_holidays_see_you: விடுமுறை வாழ்த்துக்கள். நாம் அடுத்த ஆண்டு இது போன்று சந்திப்போம்!
     help_open_source: 'ஒபன்சோர்ஸ் பிரஜக்ட்களுக்கு உதவ வேண்டுமா? இந்த மற்ற பெரிய முயற்சிகளைப் பாருங்கள்:'
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    last_year_stats: "%{year}-ல் 24 நாட்களில் <b>%{developers}</b> நிரலர்கள் <b>%{pull_requests}</b> pull request-களை <b>%{projects}</b> ஒபன்சோர்ஸ் பிராஜக்ட்களுக்கு கொடுத்தனர்."
+    last_year_stats: "%{year}-ல் 24 நாட்களில் <b>%{contributors}</b> நிரலர்கள் <b>%{pull_requests}</b> pull request-களை <b>%{projects}</b> ஒபன்சோர்ஸ் பிராஜக்ட்களுக்கு கொடுத்தனர்."
     title: 24 Pull Requests %{year} வந்துவிட்டது
   language:
     projects_count: "%{count} %{language} பிரஜக்ட்கள்"
-    developers:
+    contributors:
       count: "%{count} நிரலர்கள் %{language}-ஐ பயன்படுத்துகின்றார்கள்"
     projects:
       count: "%{count} பிரஜக்ட்கள் %{language}-ஐ பயன்படுத்துகின்றன"

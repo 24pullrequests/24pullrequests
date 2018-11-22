@@ -7,9 +7,9 @@ ru:
   clear: Очистить
   deactivate: Выключить
   delete: Удалить
-  developers_involved: "— нас уже много"
-  developers_involved_desc: Люди, делающие open-source проекты лучше.
-  developers_using_language: Разработчики, использующие %{language}
+  contributors_involved: "— нас уже много"
+  contributors_involved_desc: Люди, делающие open-source проекты лучше.
+  contributors_using_language: Разработчики, использующие %{language}
   edit: Редактировать
   everything: Всё
   exempli_gratia: например
@@ -185,11 +185,11 @@ ru:
     happy_holidays_see_you: С праздником! Увидимся в следующем году, когда мы сделаем это снова!
     help_open_source: 'Хотите помочь проектам с открытым кодом? Вот вам информация для размышления:'
     issuehubio: Внесите вклад в открытое ПО. Поищите среди проблем по меткам и выберите подходящий Вам проект!
-    last_year_stats: В %{year}, в течение 24 дней, <b>%{developers}</b> разработчиков послали <b>%{pull_requests}</b> пулл-реквестов в <b>%{projects}</b> различных проектов с открытым исходным кодом.
+    last_year_stats: В %{year}, в течение 24 дней, <b>%{contributors}</b> разработчиков послали <b>%{pull_requests}</b> пулл-реквестов в <b>%{projects}</b> различных проектов с открытым исходным кодом.
     title: 24 Пулл-реквеста %{year} не за горами
   language:
     projects_count: "%{count} %{language} проектов"
-    developers:
+    contributors:
       count: "%{count} разработчиков используют %{language}"
     projects:
       count: "%{count} проектов на %{language}"

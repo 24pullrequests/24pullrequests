@@ -5,7 +5,7 @@
 
 > &#127876; Giving back little gifts of code
 
-24 Pull Requests is a yearly initiative to encourage developers around the world to send 24 pull requests between December 1st and December 24th.
+24 Pull Requests is a yearly initiative to encourage contributors around the world to send 24 pull requests between December 1st and December 24th.
 
 This is the site to help promote the project, highlighting why, how and where to send your pull requests.
 
@@ -143,7 +143,7 @@ for **another** project, you will need to either
  * unset them before running your tests or
  * reset the omniauth environment variables after creating a GitHub (omniauth) application for this project
 
-as it will use it to learn more about the developers and for pull requests.
+as it will use it to learn more about the contributors and for pull requests.
 
 ### Environment variables
 

@@ -7,9 +7,9 @@ ja:
   clear: 削除
   deactivate: Deactivate
   delete: Delete
-  developers_involved: 人の開発者が参加しました
-  developers_involved_desc: Join everyone here and make open source better.
-  developers_using_language: Developers using %{language}
+  contributors_involved: 人の開発者が参加しました
+  contributors_involved_desc: Join everyone here and make open source better.
+  contributors_using_language: Contributors using %{language}
   edit: 編集
   everything: Everything
   exempli_gratia: e.g.
@@ -156,7 +156,7 @@ ja:
       tweet: Tweet about your gift!
   homepage:
     about: What's it all about?
-    about_text: "<p>24 Pull Requests is a yearly initiative to encourage developers around the world to send 24 pull requests between December 1st and December 24th.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your pull requests.</p><p>Log in with your GitHub account and we'll track and highlight all your pull requests and suggest projects to work on.</p>"
+    about_text: "<p>24 Pull Requests is a yearly initiative to encourage contributors around the world to send 24 pull requests between December 1st and December 24th.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your pull requests.</p><p>Log in with your GitHub account and we'll track and highlight all your pull requests and suggest projects to work on.</p>"
     description: Giving back little gifts of code for Christmas
     give_to_open_source: あなたはオープンソースプロジェクトから通年にわたって恩恵を得られています。今こそ多くのオープンソースプロジェクトとそれをメンテナンスしてくれている人たちに感謝の言葉を伝えましょう。そしてPull Requestsを送られることは彼らはとても嬉しいことなのです。
     greeting: クリスマスがきた
@@ -185,12 +185,12 @@ ja:
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
     help_open_source: 'Want to help out with open source projects in the meantime? Check out these other great initiatives:'
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    last_year_stats: In %{year}, over 24 days, <b>%{developers}</b> developers submitted <b>%{pull_requests}</b> pull requests to <b>%{projects}</b> different open source projects.
+    last_year_stats: In %{year}, over 24 days, <b>%{contributors}</b> contributors submitted <b>%{pull_requests}</b> pull requests to <b>%{projects}</b> different open source projects.
     title: 24 Pull Requests %{year} is upon us
   language:
     projects_count: "%{count} %{language} Projects"
-    developers:
-      count: "%{count} Developers using %{language}"
+    contributors:
+      count: "%{count} Contributors using %{language}"
     projects:
       count: "%{count} Projects are using %{language}"
       suggest: Suggest a %{language} project

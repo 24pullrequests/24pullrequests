@@ -7,9 +7,9 @@ zh_Hans:
   clear: 清除
   deactivate: 失效
   delete: 删除
-  developers_involved: 开发者已经参与进来
-  developers_involved_desc: 加入进来，让开源更美好。
-  developers_using_language: 开发者使用 %{language}
+  contributors_involved: 开发者已经参与进来
+  contributors_involved_desc: 加入进来，让开源更美好。
+  contributors_using_language: 开发者使用 %{language}
   edit: 编辑
   everything: 所有一切
   exempli_gratia: 比如：
@@ -185,11 +185,11 @@ zh_Hans:
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
     help_open_source: 还想要同时帮助其他开源项目吗？去看看这几个开源项目倡议吧：
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    last_year_stats: 在 %{year}年， 的24天里， <b>%{developers}</b> 名开发者提交了 <b>%{pull_requests}</b> 次合并请求(pull request) 提供给 <b>%{projects}</b> 个不同的开源项目。
+    last_year_stats: 在 %{year}年， 的24天里， <b>%{contributors}</b> 名开发者提交了 <b>%{pull_requests}</b> 次合并请求(pull request) 提供给 <b>%{projects}</b> 个不同的开源项目。
     title: 24 Pull Requests %{year} is upon us
   language:
     projects_count: "%{count} %{language} 项目"
-    developers:
+    contributors:
       count: "%{count} 名开发者使用 %{language}"
     projects:
       count: "%{count} 个项目使用 %{language}"

@@ -7,9 +7,9 @@ zh_Hant:
   clear: 取消
   deactivate: 取消
   delete: Delete
-  developers_involved: 位開發者已經加入
-  developers_involved_desc: 加入大家一起讓開源軟體更蓬勃。
-  developers_using_language: 位開發者使用 %{language}
+  contributors_involved: 位開發者已經加入
+  contributors_involved_desc: 加入大家一起讓開源軟體更蓬勃。
+  contributors_using_language: 位開發者使用 %{language}
   edit: 編輯
   everything: 所有一切
   exempli_gratia: 比如：
@@ -185,11 +185,11 @@ zh_Hant:
     happy_holidays_see_you: 聖誕節快樂，我們明年見！
     help_open_source: 在那之前，想要繼續幫助其他開源專案嗎？去看看這幾個開源專案活動吧：
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    last_year_stats: 在 %{year} 年最後的 24 天裡，<b>%{developers}</b> 名開發者送出了<b>%{pull_requests}</b> 個 Pull Requests 給 <b>%{projects}</b> 個不同的開源專案。
+    last_year_stats: 在 %{year} 年最後的 24 天裡，<b>%{contributors}</b> 名開發者送出了<b>%{pull_requests}</b> 個 Pull Requests 給 <b>%{projects}</b> 個不同的開源專案。
     title: 24 Pull Requests %{year} 就要開始了
   language:
     projects_count: "%{count} %{language} 專案"
-    developers:
+    contributors:
       count: "%{count} 名開發者使用 %{language}"
     projects:
       count: "%{count} 個專案使用 %{language}"

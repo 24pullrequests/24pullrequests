@@ -7,9 +7,9 @@ cs:
   clear: Vyčistit
   deactivate: Deactivate
   delete: Delete
-  developers_involved: vývojářů se již účastní.
-  developers_involved_desc: Přihlašte se a udělejte open source lepší.
-  developers_using_language: vývojářů používá %{language}
+  contributors_involved: vývojářů se již účastní.
+  contributors_involved_desc: Přihlašte se a udělejte open source lepší.
+  contributors_using_language: vývojářů používá %{language}
   edit: Upravit
   everything: Vše
   exempli_gratia: e.g.
@@ -185,11 +185,11 @@ cs:
     happy_holidays_see_you: Veselé svátky a uvidíme se znovu za rok!
     help_open_source: 'Chceš mezitím pomoci open source projektům? Sleduj ostatní skvělé akce:'
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    last_year_stats: V roce %{year}, v průběhu dvaceti čtyř dnů, <b>%{developers}</b> vývojářů poslalo <b>%{pull_requests}</b> pull requestů do <b>%{projects}</b> různých open source projektů.
+    last_year_stats: V roce %{year}, v průběhu dvaceti čtyř dnů, <b>%{contributors}</b> vývojářů poslalo <b>%{pull_requests}</b> pull requestů do <b>%{projects}</b> různých open source projektů.
     title: 24 Pull Requests %{year} je tu
   language:
     projects_count: "%{count} %{language} projektů"
-    developers:
+    contributors:
       count: "%{count} vývojářů používá %{language}"
     projects:
       count: "%{count} projektů používá %{language}"
