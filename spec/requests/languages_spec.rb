@@ -34,7 +34,7 @@ describe 'LanguagesRequests', type: :request do
       it '#pull_requests' do
         within('#pull_requests') { click_on 'View All' }
 
-        is_expected.to have_content '9 pull requests already made in Haskell!'
+        is_expected.to have_content '9 contributions already made in Haskell!'
       end
     end
   end

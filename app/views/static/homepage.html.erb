@@ -139,7 +139,7 @@
           <%= number_with_delimiter @mergers.total_count %>
           Maintainers have merged pull requests in <%= current_year %>
         </h3>
-        <p>These are the people who review and accept your pull requests.</p>
+        <p>These are the people who review and accept your contributions.</p>
         <%= link_to t("view_all"), mergers_path, :class => 'btn btn-default btn-sm' %>
         <ul class="avatar-list avatar-list-lg clearfix">
           <%= render partial: 'users/merger', collection: @mergers, as: :user %>
@@ -169,7 +169,7 @@
         <% else %>
           <br/>
           <div class="well">
-            No pull requests at the moment!
+            No contributions yet this year!
           </div>
         <% end %>
       </div>

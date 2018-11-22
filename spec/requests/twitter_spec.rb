@@ -18,7 +18,7 @@ describe 'Twitter', type: :request do
        it 'allows the user to link their twitter account' do
          mock_twitter_auth
          click_on 'Link Your Twitter Account'
-         expect(page).to have_content("Your Twitter account has been linked! We’ll post a tweet whenever you open a pull request.")
+         expect(page).to have_content("Your Twitter account has been linked! We’ll post a tweet whenever you make a contribution.")
          user.reload
          expect(user).to be_twitter_linked
        end
