@@ -82,7 +82,6 @@ th:
       specific:
       title:
   contributors:
-    location_privacy: All location data is sourced from public GitHub profiles of currently active users.
     title: ผู้มีส่วนร่วม
   dashboard:
     christmas_activity: นี่คือกิจกรรมทั้งหมดของคุณก่อนถึงวันคริสต์มาส

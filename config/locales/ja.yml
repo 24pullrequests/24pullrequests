@@ -82,7 +82,6 @@ ja:
       specific: 特定ユーザの情報を返します。
       title: ユーザ
   contributors:
-    location_privacy: すべての位置データは、現在アクティブなユーザのパブリックなGitHubプロファイルから取得されます。
     title: 貢献者
   dashboard:
     christmas_activity: ここではクリスマスまでにあなたが行い、トレースされたすべての活動を見ることができます。

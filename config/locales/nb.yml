@@ -82,7 +82,6 @@ nb:
       specific: Hent informasjon for en spesifikk bruker.
       title: Brukere
   contributors:
-    location_privacy:
     title: Hoved-bidragsytere
   dashboard:
     christmas_activity: Dette er hvor du kan se all aktiviteten vi har sett fra deg opp mot jul.
