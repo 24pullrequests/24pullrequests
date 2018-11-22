@@ -7,9 +7,9 @@ nb:
   clear: Tøm
   deactivate: Deactivate
   delete: Delete
-  developers_involved: Utviklere allerede involvert
-  developers_involved_desc: Join everyone here and make open source better.
-  developers_using_language: Utviklere som bruker %{language}
+  contributors_involved: Utviklere allerede involvert
+  contributors_involved_desc: Join everyone here and make open source better.
+  contributors_using_language: Utviklere som bruker %{language}
   edit: Redigér
   everything: Alt
   exempli_gratia: f.eks.
@@ -185,11 +185,11 @@ nb:
     happy_holidays_see_you: God høytid, og vi sees igjen neste år når vi gjør det hele om igjen!
     help_open_source: 'Ønsker du å bidra til open-source prosjekter i mellomtiden? Sjekk ut disse andre flotte initiativene:'
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    last_year_stats: In %{year}, over 24 dager, gav <b>%{developers}</b> utviklere <b>%{pull_requests}</b> pull requests til <b>%{projects}</b> forskjellige open-source prosjekter.
+    last_year_stats: In %{year}, over 24 dager, gav <b>%{contributors}</b> utviklere <b>%{pull_requests}</b> pull requests til <b>%{projects}</b> forskjellige open-source prosjekter.
     title: 24 Pull Requests %{year} er nær
   language:
     projects_count: "%{count} %{language} prosjekter"
-    developers:
+    contributors:
       count: "%{count} utviklere bruker %{language}"
     projects:
       count: "%{count} prosjekter bruker %{language}"

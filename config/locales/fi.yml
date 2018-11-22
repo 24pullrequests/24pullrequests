@@ -7,9 +7,9 @@ fi:
   clear: Clear
   deactivate: Deactivate
   delete: Delete
-  developers_involved: Kehittäjää jo mukana
-  developers_involved_desc: Join everyone here and make open source better.
-  developers_using_language: Kehittäjää käyttää %{language}
+  contributors_involved: Kehittäjää jo mukana
+  contributors_involved_desc: Join everyone here and make open source better.
+  contributors_using_language: Kehittäjää käyttää %{language}
   edit: Muokkaa
   everything: Kaikki
   exempli_gratia:
@@ -185,11 +185,11 @@ fi:
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
     help_open_source: 'Haluatko auttaa avoimen lähdekoodin projekteja sillä välin? Katso myös nämä muut loistava aloitteet:'
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    last_year_stats: Vuonna %{year}, yli 24 päivää, <b>%{developers}</b> kehittäjää lähetti <b>%{pull_requests}</b> vetopyyntöä <b>%{projects}</b> eriin avoimen lähdekoodin projektiin.
+    last_year_stats: Vuonna %{year}, yli 24 päivää, <b>%{contributors}</b> kehittäjää lähetti <b>%{pull_requests}</b> vetopyyntöä <b>%{projects}</b> eriin avoimen lähdekoodin projektiin.
     title: 24 Pull Requests %{year} on jo ovella
   language:
     projects_count: "%{count} %{language} Projektia"
-    developers:
+    contributors:
       count: "%{count} Kehittäjää käyttää %{language}"
     projects:
       count: "%{count} Projektia käyttää %{language}"

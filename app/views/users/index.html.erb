@@ -3,9 +3,9 @@
     <h3>
       <%= number_with_delimiter user_count %>
       <% if @language %>
-        <%= t("developers_using_language", language: @language) %>
+        <%= t("contributors_using_language", language: @language) %>
       <% else %>
-        <%= t("developers_involved") %>
+        <%= t("contributors_involved") %>
       <% end %>
     </h3>
     <div class="js-user-pagination">

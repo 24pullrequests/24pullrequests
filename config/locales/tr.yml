@@ -7,9 +7,9 @@ tr:
   clear: Sil
   deactivate: Deactivate
   delete: Delete
-  developers_involved: Henüz Katılan geliştiriciler
-  developers_involved_desc: Join everyone here and make open source better.
-  developers_using_language: Geliştiriciler %{language} kullanıyor.
+  contributors_involved: Henüz Katılan geliştiriciler
+  contributors_involved_desc: Join everyone here and make open source better.
+  contributors_using_language: Geliştiriciler %{language} kullanıyor.
   edit: Düzenle
   everything: Herşey
   exempli_gratia: örn.
@@ -185,11 +185,11 @@ tr:
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
     help_open_source: Bu arada bir projeye dahil olmak ister misiniz? Diğer başarılı girişimleri kontrol edin!
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    last_year_stats: "%{year} yılında 24 günün üzerinde, <b>%{developers}</b> geliştirici kayıt oldu. <b>%{projects}</b> farklı açık kaynak projesine <b>%{pull_requests}</b> pull requests yapıldı."
+    last_year_stats: "%{year} yılında 24 günün üzerinde, <b>%{contributors}</b> geliştirici kayıt oldu. <b>%{projects}</b> farklı açık kaynak projesine <b>%{pull_requests}</b> pull requests yapıldı."
     title: 24 Pull Requests %{year} yılında üzerimizde
   language:
     projects_count: "%{language} %{count} tane Proje"
-    developers:
+    contributors:
       count: "%{count} tane geliştici %{language} kullanıyor."
     projects:
       count: "%{count} tane proje %{language} kullanıyor."

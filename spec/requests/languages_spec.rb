@@ -14,7 +14,7 @@ describe 'LanguagesRequests', type: :request do
       visit language_path('haskell')
     end
 
-    it { is_expected.to have_content '3 Developers' }
+    it { is_expected.to have_content '3 Contributors' }
     it { is_expected.to have_content '6 Haskell Projects' }
     it { is_expected.to have_content 'Latest Haskell Pull Requests (9 total)' }
 
@@ -28,7 +28,7 @@ describe 'LanguagesRequests', type: :request do
       it '#users' do
         within('#users') { click_on 'View All' }
 
-        is_expected.to have_content '3 Developers using Haskell'
+        is_expected.to have_content '3 Contributors using Haskell'
       end
 
       it '#pull_requests' do

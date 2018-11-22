@@ -14,7 +14,7 @@ describe 'Users', type: :request do
       visit users_path
     end
 
-    it { is_expected.to have_content '5 Developers already involved' }
+    it { is_expected.to have_content '5 Contributors already involved' }
   end
 
   describe 'authenticated user navigation' do

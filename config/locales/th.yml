@@ -7,9 +7,9 @@ th:
   clear: Clear
   deactivate: Deactivate
   delete: Delete
-  developers_involved: คนที่ได้มีส่วนร่วม
-  developers_involved_desc: Join everyone here and make open source better.
-  developers_using_language: นักพัฒนาใช้ภาษา %{language}
+  contributors_involved: คนที่ได้มีส่วนร่วม
+  contributors_involved_desc: Join everyone here and make open source better.
+  contributors_using_language: นักพัฒนาใช้ภาษา %{language}
   edit: แก้ไข
   everything: ทั้งหมด
   exempli_gratia:
@@ -185,11 +185,11 @@ th:
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
     help_open_source: ถ้าคุณต้องการมีส่วนร่วมในการช่วยเหลือโครงการโอเพ่นซอร์สตอนนี้ นี่คือโครงการที่น่าสนใจ
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    last_year_stats: ในปี %{year} กว่า 24 วัน <b>%{developers}</b> นักพัฒนาต่างส่ง <b>%{pull_requests}</b> pull request <b>%{projects}</b> ไปที่โครงการต่างๆ
+    last_year_stats: ในปี %{year} กว่า 24 วัน <b>%{contributors}</b> นักพัฒนาต่างส่ง <b>%{pull_requests}</b> pull request <b>%{projects}</b> ไปที่โครงการต่างๆ
     title: 24 Pull Requests %{year} ขึ้นอยู่กับเรา
   language:
     projects_count: "%{count} %{language} โครงการ"
-    developers:
+    contributors:
       count: นักพัฒนา %{count} คน ใช้ภาษา %{language}
     projects:
       count: โครงการ %{count} โครงการ ใช้ภาษา %{language}

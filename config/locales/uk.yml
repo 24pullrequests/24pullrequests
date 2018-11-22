@@ -7,9 +7,9 @@ uk:
   clear: Clear
   deactivate: Deactivate
   delete: Delete
-  developers_involved: Розробників вже беруть участь
-  developers_involved_desc: Join everyone here and make open source better.
-  developers_using_language: Розробники, які використовують %{language}
+  contributors_involved: Розробників вже беруть участь
+  contributors_involved_desc: Join everyone here and make open source better.
+  contributors_using_language: Розробники, які використовують %{language}
   edit: Редагувати
   everything: Все
   exempli_gratia:
@@ -185,11 +185,11 @@ uk:
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
     help_open_source: 'Готовий допомогти проекту? Ця інформація стенется в нагоді:'
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    last_year_stats: В %{year}, за 24 дні, <b>%{developers}</b> розробників надіслалі <b>%{pull_requests}</b> пул рекстів до <b>%{projects}</b> різноманітних open source проектів.
+    last_year_stats: В %{year}, за 24 дні, <b>%{contributors}</b> розробників надіслалі <b>%{pull_requests}</b> пул рекстів до <b>%{projects}</b> різноманітних open source проектів.
     title: 24 Пулл Реквеста %{year} вже близько
   language:
     projects_count: "%{count} %{language} проектів"
-    developers:
+    contributors:
       count: "%{count} розробників використовує %{language}"
     projects:
       count: "%{count} проектів використовує %{language}"

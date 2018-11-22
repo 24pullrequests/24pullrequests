@@ -7,9 +7,9 @@ pt_br:
   clear: Limpar
   deactivate: Deactivate
   delete: Delete
-  developers_involved: Desenvolvedores participantes
-  developers_involved_desc: Participe junto com todos e faça o open source melhor.
-  developers_using_language: Desenvolvedores usando %{language}
+  contributors_involved: Desenvolvedores participantes
+  contributors_involved_desc: Participe junto com todos e faça o open source melhor.
+  contributors_using_language: Desenvolvedores usando %{language}
   edit: Editar
   everything: Tudo
   exempli_gratia: 'Ex.:'
@@ -185,11 +185,11 @@ pt_br:
     happy_holidays_see_you: Boas festas e vejo vocês no próximo ano, quando faremos tudo novamente!
     help_open_source: 'Quer ajudar projetos open source enquanto isso? Dê uma olhada nessas ótimas iniciativas:'
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    last_year_stats: Em %{year}, durante 24 dias, <b>%{developers}</b> desenvolvedores fizeram <b>%{pull_requests}</b> pull requests para <b>%{projects}</b> diferentes projetos open source.
+    last_year_stats: Em %{year}, durante 24 dias, <b>%{contributors}</b> desenvolvedores fizeram <b>%{pull_requests}</b> pull requests para <b>%{projects}</b> diferentes projetos open source.
     title: 24 Pull Requests %{year} está entre nós
   language:
     projects_count: "%{count} %{language} projetos"
-    developers:
+    contributors:
       count: "%{count} desenvolvedores usando %{language}"
     projects:
       count: "%{count} projetos estão usando %{language}"

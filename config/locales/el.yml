@@ -7,9 +7,9 @@ el:
   clear: Αφαίρεση
   deactivate: Deactivate
   delete: Delete
-  developers_involved: Προγραμματιστες συμμετεχουν ηδη
-  developers_involved_desc: Join everyone here and make open source better.
-  developers_using_language: Προγραμματιστες χρησιμοποιουν %{language}
+  contributors_involved: Προγραμματιστες συμμετεχουν ηδη
+  contributors_involved_desc: Join everyone here and make open source better.
+  contributors_using_language: Προγραμματιστες χρησιμοποιουν %{language}
   edit: Τροποποιηση
   everything: Ολα
   exempli_gratia:
@@ -185,11 +185,11 @@ el:
     happy_holidays_see_you: Καλές Γιορτές και θα τα ξαναπούμε του χρόνου!
     help_open_source: 'Θέλεις να βοηθήσεις με projects ανοικτού κώδικα μέχρι τότε? Κοίταξε σε αυτές τις άλλες μεγάλες πρωτοβουλίες:'
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    last_year_stats: Το %{year}, σε 24 days, <b>%{developers}</b> προγραμματιστές υπόβαλαν <b>%{pull_requests}</b> pull requests σε <b>%{projects}</b> διαφορετικά projects ανοικτού κώδικα.
+    last_year_stats: Το %{year}, σε 24 days, <b>%{contributors}</b> προγραμματιστές υπόβαλαν <b>%{pull_requests}</b> pull requests σε <b>%{projects}</b> διαφορετικά projects ανοικτού κώδικα.
     title: 24 Pull Requests %{year} εχει φτασει!
   language:
     projects_count: "%{count} %{language} Projects"
-    developers:
+    contributors:
       count: "%{count} Προγραμματιστες χρησιμοποιουν %{language}"
     projects:
       count: "%{count} Projects χρησιμοποιούν %{language}"

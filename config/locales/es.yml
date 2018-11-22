@@ -7,9 +7,9 @@ es:
   clear: Limpio
   deactivate: Desactivar
   delete: Borrar
-  developers_involved: Desarrolladores trabajando
-  developers_involved_desc: "¡Únete y haz mejor el código abierto!"
-  developers_using_language: Desarrolladores usando %{language}
+  contributors_involved: Desarrolladores trabajando
+  contributors_involved_desc: "¡Únete y haz mejor el código abierto!"
+  contributors_using_language: Desarrolladores usando %{language}
   edit: Editar
   everything: Todo
   exempli_gratia: ej.
@@ -185,11 +185,11 @@ es:
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
     help_open_source: "¿Quieres ayudar con proyectos de código abierto mientras tanto? Échale un vistazo a estas otras grandes iniciativas:"
     issuehubio: Contribuye al Código Abierto. ¡Busca issues por etiquetas para encontrar aquellos proyectos perfectos para ti!
-    last_year_stats: En el %{year}, durante 24 días, <b>%{developers}</b> desarrolladores publicaron <b>%{pull_requests}</b> Pull Requests para <b>%{projects}</b> proyectos diferentes de código abierto.
+    last_year_stats: En el %{year}, durante 24 días, <b>%{contributors}</b> desarrolladores publicaron <b>%{pull_requests}</b> Pull Requests para <b>%{projects}</b> proyectos diferentes de código abierto.
     title: "¡24 Pull Requests %{year} ya está aquí!"
   language:
     projects_count: "%{count} %{language} Proyectos"
-    developers:
+    contributors:
       count: "%{count} desarrolladores utilizando %{language}"
     projects:
       count: Hay %{count} Proyectos usando %{language}

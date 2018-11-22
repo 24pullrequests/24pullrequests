@@ -7,9 +7,9 @@ de:
   clear: Clear
   deactivate: Deactivate
   delete: Delete
-  developers_involved: Entwickler machen mit
-  developers_involved_desc: Join everyone here and make open source better.
-  developers_using_language: Entwickler, die %{language} verwenden
+  contributors_involved: Entwickler machen mit
+  contributors_involved_desc: Join everyone here and make open source better.
+  contributors_using_language: Entwickler, die %{language} verwenden
   edit: Bearbeiten
   everything: Alles
   exempli_gratia:
@@ -185,11 +185,11 @@ de:
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
     help_open_source: 'Möchtest Du in der Zwischenzeit weiterhin Open Source-Projekte unterstützen? Schau Dir diese grossartigen Initiativen an:'
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    last_year_stats: "%{year} haben über 24 Tage <b>%{developers}</b> Entwickler <b>%{pull_requests}</b> Pull Requests an <b>%{projects}</b> verschiedene Open Source-Projekte versendet."
+    last_year_stats: "%{year} haben über 24 Tage <b>%{contributors}</b> Entwickler <b>%{pull_requests}</b> Pull Requests an <b>%{projects}</b> verschiedene Open Source-Projekte versendet."
     title: 24 Pull Requests %{year} ist da
   language:
     projects_count: "%{count} %{language}-Projekte"
-    developers:
+    contributors:
       count: "%{count} Entwickler, die %{language} verwenden"
     projects:
       count: "%{count} Projekte verwenden %{language}"
