@@ -4,6 +4,11 @@ namespace :organisations do
     next unless PullRequest.in_date_range?
     Organisation.all.find_each(&:update_pull_request_count)
   end
+
+  desc 'Reset organisations pull_request_count'
+  task reset_pull_request_count: :environment do
+    Organisation.all.update_all(pull_request_count: 0)
+  end
 end
 
 desc 'Download user organisations'
