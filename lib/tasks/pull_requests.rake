@@ -1,3 +1,10 @@
+namespace :users do
+  desc 'Reset user pull request counts'
+  task reset_pull_request_count: :environment do
+    User.all.update_all(pull_requests_count: 0)
+  end
+end
+
 desc 'Refresh pull request counts'
 task refresh_pull_request_counts: :environment do
   User.reset_column_information
