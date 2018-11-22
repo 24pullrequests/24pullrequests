@@ -25,7 +25,7 @@ describe Gift, type: :model do
   it "raises a validation error if the pull request has already been gifted" do
     expect do
       user.gifts.create!(pull_request: pull_request, date: date + 1.day)
-    end.to raise_error ActiveRecord::RecordInvalid, 'Validation failed: Pull request you can only gift each pull request once!'
+    end.to raise_error ActiveRecord::RecordInvalid, 'Validation failed: Pull request you can only gift each contribution once!'
   end
 
   describe '.date' do

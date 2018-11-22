@@ -33,7 +33,7 @@ describe 'Dashboard', type: :request do
         visit dashboard_path
       end
 
-      it { is_expected.to have_content "You’ve not sent any pull requests, what are you waiting for?!" }
+      it { is_expected.to have_content "You’ve not made any contributions, what are you waiting for?!" }
     end
 
     context 'when the user does not have any unspent pull requests' do

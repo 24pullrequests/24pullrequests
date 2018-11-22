@@ -35,7 +35,7 @@ en:
   about:
     description: 24 Pull Requests is a little project to promote open source collaboration during December.
     idea: The idea is basically "Send 24 pull requests between December 1st and December 24th", encouraging contributors to give back to open source with little gifts of code throughout December.
-    more_info: The site also provides suggested projects to help with, guides for contributing and highlights good pull requests submitted each day.
+    more_info: The site also provides suggested projects to help with, guides for contributing and highlights good contributions submitted each day.
     on_github: 'Our code is located on GitHub:'
     on_twitter: 'We are also on Twitter:'
     title: About 24 Pull Requests
@@ -74,11 +74,11 @@ en:
       details: All suggested projects on the site, ordered alphabetically.
       title: Projects
     pull_requests:
-      details: Load all pull requests by users of the site during December, ordered by newest first, also includes the user who made the pull request.
-      meta_details: Load information about all the pull requests this year.
+      details: Load all contributions by users of the site during December, ordered by newest first, also includes the user who made the contribution.
+      meta_details: Load information about all the contributions this year.
       title: Pull Requests
     users:
-      details: Load all users who have signed up to the site, ordered by how many pull requests they have sent so far in December, also includes their organisation(s) and pull requests.
+      details: Load all users who have signed up to the site, ordered by how many contributions they have sent so far in December, also includes their organisation(s) and contributions.
       specific: Load information for a specific user.
       title: Users
   contributors:
@@ -86,17 +86,17 @@ en:
   dashboard:
     christmas_activity: This is where you can see all the activity we’ve tracked for you in the run up to Christmas.
     gift_it: Gift it!
-    give_a_gift: Looks like you haven’t gifted any code today. Would you like to gift your new pull requests?
+    give_a_gift: Looks like you haven’t gifted any code today. Would you like to gift your new contributions?
     help_out: Can’t think of a project you’d like to help contribute to? We’ve put together a list of popular projects here.
-    no_pull_requests: You’ve not sent any pull requests, what are you waiting for?!
+    no_pull_requests: You’ve not made any contributions, what are you waiting for?!
     not_december: 24 Pull Requests runs from 1st-24th December, come back then!
-    pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
+    pull_requests: Wonder what people are up to this holiday? Check out these contributions, or make a contribution now and find yours here!
     synchronize: Synchronize Pull Requests
     tweet_progress:
-      one: I’ve sent 1 pull request in December! Join me in giving back to open source with @24pullrequests.
-      other: I’ve sent %{count} pull requests in December! Join me in giving back to open source with @24pullrequests.
+      one: I’ve made 1 contribution in December! Join me in giving back to open source with @24pullrequests.
+      other: I’ve made %{count} contributions in December! Join me in giving back to open source with @24pullrequests.
   delete_account:
-    are_you_sure: We just wanted to make sure you really do wish to delete your account. This will remove your profile and all pull requests from the site, although any suggested projects will remain.
+    are_you_sure: We just wanted to make sure you really do wish to delete your account. This will remove your profile and all contributions from the site, although any suggested projects will remain.
     cancel: I changed my mind, take me back!
     confirm: Confirm Deletion
     email_preferences_link: email preferences
@@ -141,7 +141,7 @@ en:
       view_event_details: View event details
   gifts:
     calendar_link: public calendar
-    description: Here you can manage your pull requests and select &amp; curate your own set of “24 Pull Requests”.
+    description: Here you can manage your contributions and select &amp; curate your own set of “24 Pull Requests”.
     give: Gift something meaningful to a project you love
     link_twitter: Link Twitter account
     link_twitter_desc: Want to share information about 24 Pull Requests and your gifts? %{link_twitter} and gift some code to open-source projects.
@@ -156,9 +156,9 @@ en:
       tweet: Tweet about your gift!
   homepage:
     about: What’s it all about?
-    about_text: "<p>24 Pull Requests is a yearly initiative to encourage contributors around the world to send 24 pull requests between December 1st and December 24th.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your pull requests.</p><p>Log in with your GitHub account and we’ll track and highlight all your pull requests and suggest projects to work on.</p>"
+    about_text: "<p>24 Pull Requests is a yearly initiative to encourage contributors around the world to send 24 pull requests between December 1st and December 24th.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your contributions.</p><p>Log in with your GitHub account and we’ll track and highlight all your contributions and suggest projects to work on.</p>"
     description: Giving back little gifts of code for Christmas
-    give_to_open_source: You’ve been benefiting from the use of open source projects all year. Now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving pull requests!
+    give_to_open_source: You’ve been benefiting from the use of open source projects all year. Now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving contributions!
     greeting: "’Tis the season"
     join_the_chat: Join the chat on Gitter, %{link_to_chat}.
     login_with_github: Log in with GitHub
@@ -185,7 +185,7 @@ en:
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
     help_open_source: 'Want to help out with open source projects in the meantime? Check out these other great initiatives:'
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    last_year_stats: In %{year}, over 24 days, <b>%{contributors}</b> contributors submitted <b>%{pull_requests}</b> pull requests to <b>%{projects}</b> different open source projects.
+    last_year_stats: In %{year}, over 24 days, <b>%{contributors}</b> contributors made <b>%{pull_requests}</b> contributions to <b>%{projects}</b> different open source projects.
     title: 24 Pull Requests %{year} is upon us
   language:
     projects_count: "%{count} %{language} Projects"
@@ -230,7 +230,7 @@ en:
     how_to_contribute: to find out how to contribute 24 pull requests between December 1st and December 24th. Your contributions can be tiny, as simple as fixing a typo, to something incredible. Speed up Rails. Document Express. Fix a bug that you reported.
   organisations:
     languages: Languages
-    pull_requests: "%{count} pull requests submitted by members"
+    pull_requests: "%{count} contributions made by members"
     title: "%{count} Organisations involved"
     members:
       one: 1 Member
@@ -259,7 +259,7 @@ en:
     claim: Are any of the projects you suggested not listed? Claim them!
     filter_by_language: 'Filter by Language:'
     for_you: Suggested for you
-    help_out: Can’t think of a project to contribute to? We’ve collected a list of brilliant open source projects who would love your pull requests.
+    help_out: Can’t think of a project to contribute to? We’ve collected a list of brilliant open source projects who would love your contributions.
     suggest: There are no projects for that language yet, why not %{suggest_link}?
     suggest_link_text: suggest one
     suggest_new: You can also suggest projects that should be added to the list, or add your own project if you would like some help with it.
@@ -283,24 +283,24 @@ en:
       edit: Edit Suggestion
       update: Update Project
   pull_request:
-    twitter_message: 'I just gifted a pull request for http://24pullrequests.com, check it out: %{issue_url}'
+    twitter_message: 'I just gifted an open source contribution for http://24pullrequests.com, check it out: %{issue_url}'
     download:
       tooltip: We usually check for pull requests every hour, but you can check now.
   pull_requests:
     count: "%{count} Pull Requests already made!"
     language:
-      count: "%{count} pull requests already made in %{language}!"
+      count: "%{count} contributions already made in %{language}!"
     latest:
       count: Latest Pull Requests (%{count} total)
   suggestions:
     title: My Suggestions
   twitter:
-    account_linked: Your Twitter account has been linked! We’ll post a tweet whenever you open a pull request.
+    account_linked: Your Twitter account has been linked! We’ll post a tweet whenever you make a contribution.
     account_removed: Your Twitter account has been removed.
     auth_failed: Authorization with Twitter has failed.
     link_account:
       text: Link Your Twitter Account
-      tooltip: If you link your Twitter account, we’ll post a tweet whenever you open a pull request!
+      tooltip: If you link your Twitter account, we’ll post a tweet whenever you make a contribution!
   unsubscribe:
     invalid_token: Invalid subscription token
     login: Github username or email address
@@ -308,8 +308,8 @@ en:
     title: Unsubscribe From Our Mailing List
     unsubscribe: Unsubscribe
   user:
-    no_current_pr_message: "%{user} has gifted no pull requests or merged pull requests this year. <a href='https://github.com/24pullrequests/24pullrequests/blob/master/CONTRIBUTING.md'>Can we help you get started?</a>"
+    no_current_pr_message: "%{user} has gifted no contributions this year. <a href='https://github.com/24pullrequests/24pullrequests/blob/master/CONTRIBUTING.md'>Can we help you get started?</a>"
     organisations: Member of...
     pull_request_count:
-      one: "%{user} has made %{count} pull request so far in Christmas %{year}"
-      other: "%{user} has made %{count} pull requests so far in Christmas %{year}"
+      one: "%{user} has made %{count} contribution so far in Christmas %{year}"
+      other: "%{user} has made %{count} contributions so far in Christmas %{year}"
