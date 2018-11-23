@@ -36,6 +36,10 @@ pt_br:
     description: 24 Pull Requests é um pequeno projeto para promover contribuições em projetos open source durante o mês de dezembro.
     idea: A ideia é basicamente "Envie um pull request todos os dias de dezembro até o natal", encorajando desenvolvedores a colaborar com a comunidade open source com pequenos códigos de presente durante dezembro.
     more_info: O site também fornece sugestões de projetos para ajudar, guias para contribuição e destaca ótimos pull requests enviados todos os dias.
+    idea_title: 
+    idea_subtitle:
+    where_to_find_us: 
+    on_gitter: 
     on_github: 'O desenvolvimento deste site é open source no GitHub:'
     on_twitter: 'Também estamos no Twitter:'
     title: Sobre 24 Pull Requests
