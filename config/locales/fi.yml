@@ -36,6 +36,10 @@ fi:
     description: 24 Pull Requests on pieni projekti mainostamaan avoimen lähdekoodin yhteistyötä Joulukuun aikana.
     idea: Perus ideana on "Lähetä vetopyyntö joka päivä Joulukuussa Jouluaattoon asti", kannustaen kehittäjiä antamaan takaisin avoimelle lähdekoodille pieninä lahjoina koodia läpi Joulun.
     more_info: Sivusto tarjoaa myös suositeltuja projekteja joita auttaa, ohjeita miten avustaa ja korostaa hyviä vetopyyntökä päivittäin.
+    idea_title: 
+    idea_subtitle:
+    where_to_find_us: 
+    on_gitter: 
     on_github: 'Löydät tämän sivuston lähdekoodin GitHubista:'
     on_twitter: 'Löydät meidät myös Twitteristä:'
     title: Tietoa 24 Pull Requestista

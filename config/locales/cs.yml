@@ -36,6 +36,10 @@ cs:
     description: 24 Pull Requests je malý projekt sloužící k propagaci open source spolupráce během prosince.
     idea: Nápad je jednoduše "poslat pull request každý prosincový den před Vánoci", čímž mohou vývojáři darovat malé dárečky ostatním vývojářům.
     more_info: Tyto stránky také nabízejí seznam projektů, kterým je možné pomoci, příručky jak pomoci a vybrané pull requesty každý den.
+    idea_title: 
+    idea_subtitle:
+    where_to_find_us: 
+    on_gitter: 
     on_github: 'Náš kód je na GitHubu:'
     on_twitter: 'Jsme také na Twitteru:'
     title: O 24 Pull Requests
