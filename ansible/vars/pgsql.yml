@@ -1,4 +1,0 @@
-database:
-    db: tfpullrequests_development
-    user: vagrant
-    pass:

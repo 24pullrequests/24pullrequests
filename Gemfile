@@ -21,7 +21,6 @@ gem 'octicons_helper'
 gem 'rack-canonical-host'
 gem 'draper'
 gem 'responders'
-gem 'lodash-rails'
 gem 'typhoeus'
 gem 'sassc-rails'
 gem 'puma'
@@ -33,15 +32,12 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'rubocop', require: false
   gem 'web-console'
-  gem 'figaro'
-  gem 'meta_request'
 end
 
 group :development, :test, :cucumber do
   gem 'i18n-tasks'
   gem 'rspec-rails'
   gem 'simplecov', require: false
-  gem 'codeclimate-test-reporter', require: false
   gem 'rails-controller-testing'
 
   gem 'rspec-its', require: false
@@ -51,7 +47,6 @@ group :development, :test, :cucumber do
   gem 'faker'
   gem 'brakeman'
   gem 'poltergeist'
-  gem 'launchy'
 
   gem 'database_cleaner'
   gem 'shoulda-matchers'
@@ -63,7 +58,6 @@ end
 group :production do
   gem 'foreman'
   gem 'dalli'
-  gem 'rails_12factor'
   gem 'newrelic_rpm'
   gem 'bugsnag'
   gem 'rack-google-analytics'

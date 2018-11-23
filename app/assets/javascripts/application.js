@@ -19,5 +19,4 @@
 //= require emojione
 //= require emoji
 //= require jquery.icheck
-//= require lodash
 //= require_tree .
