@@ -10,7 +10,7 @@ env:
   - DB=postgresql
 
 script:
-  - RAILS_ENV=test POLTERGEIST=true bundle exec rake --trace db:migrate spec && bundle exec codeclimate-test-reporter
+  - RAILS_ENV=test POLTERGEIST=true bundle exec rake --trace db:migrate spec
 
 before_script:
   - psql -c 'create database tfpullrequests_test' -U postgres
@@ -18,10 +18,6 @@ before_script:
 bundler_args: --without development production --deployment --jobs=3 --retry=3
 
 cache: bundler
-
-addons:
-  code_climate:
-    repo_token: 2a5e192f091c667d87fbebdf75386384f0676f13cf3011b9cd4a006de7d1edfa
 
 notifications:
   webhooks:
