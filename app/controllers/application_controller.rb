@@ -14,7 +14,9 @@ class ApplicationController < ActionController::Base
   def ensure_logged_in
     return true if logged_in?
     session[:pre_login_destination] = "http://#{request.host_with_port}#{request.path}"
-    redirect_to login_path, notice: 'You must be logged in to view this content.'
+    redirect_to login_path,
+                notice: t('.notice.not_logged_in',
+                          default: 'You must be logged in to view this content.')
   end
 
   def current_year
