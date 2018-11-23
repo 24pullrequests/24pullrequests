@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :validate_current_user_exists, only: [:edit, :new]
+  before_action :ensure_logged_in, only: [:edit, :new]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -41,10 +41,6 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:name, :location, :url, :start_time, :description, :latitude, :longitude)
-  end
-
-  def validate_current_user_exists
-    redirect_to events_path, notice: t('events.notice.not_logged_in') unless current_user.present?
   end
 
   def set_event
