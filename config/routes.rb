@@ -56,7 +56,7 @@ Tfpullrequests::Application.routes.draw do
 
 
   get 'about', to: 'static#about'
-  get 'sponsors', to: 'static#sponsors'
+  get 'sponsors' => redirect('/about') # old sponsors url
   get 'humans', to: 'static#humans'
   get 'api', to: 'static#api'
   get 'contributing', to: 'static#contributing'

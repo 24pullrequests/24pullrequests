@@ -33,11 +33,15 @@ en:
   welcome_back: Welcome back, %{user}
   your_pull_requests: Your Pull Requests
   about:
-    description: 24 Pull Requests is a little project to promote open source collaboration during December.
-    idea: The idea is basically "Send 24 pull requests between December 1st and December 24th", encouraging contributors to give back to open source with little gifts of code throughout December.
-    more_info: The site also provides suggested projects to help with, guides for contributing and highlights good contributions submitted each day.
+    description: 24 Pull Requests' goal is to encourage contribution to open source projects during December.
+    more_info: The site suggests open projects, highlights tickets that are good for new contributors, provides <a href='/contributing'>guides for contributing</a> and promotes good contributions submitted each day.
+    idea_title: Giving back to open source.
+    idea_subtitle: Open source software has probably made you more productive this year. Let's give something back.
+    idea: "The idea is simple: 'Send 24 pull requests between December 1st and December 24th', encouraging contributors to give back to open source projects with little gifts of code throughout December."
+    where_to_find_us: "Where to find us"
     on_github: 'Our code is located on GitHub:'
     on_twitter: 'We are also on Twitter:'
+    on_gitter: 'Chat with the community on Gitter:'
     title: About 24 Pull Requests
     sponsors:
       details: 24 Pull Requests was made possible thanks to the help and donations of some great sponsors.
