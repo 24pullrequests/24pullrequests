@@ -23,55 +23,11 @@ Want to contribute to 24 Pull Requests? That's great! Here are a couple of guide
 
 You can find in-depth instructions to install the correct Ruby version, Postgres, and to set up the database in our [README](https://github.com/24pullrequests/24pullrequests/blob/master/Readme.md#development).
 
-## Setup using Vagrant
-
-The project comes with a Vagrant setup that you can use to quickly get the app up and running. You'll need:
-
- * [Vagrant](https://www.vagrantup.com/downloads.html)
- * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
- * [Ansible](http://docs.ansible.com/intro_installation.html)
-
-Download and install the appropriate packages for your Operating System.
-
-_Windows Users: Ansible does not support Windows as a control machine, but there's a little hack in the Vagrantfile that will allow you to run the provision using a local SSH connection, Guest-Guest. Just install Vagrant and VirtualBox, and you should be able to get it running._
-
-Once you have the dependencies installed, go to the project directory via console and run:
-
-    $ vagrant up
-
-The first time you run _vagrant_, the process will take several minutes, as it will download the base box and run all the tasks necessary to set up the VM server. Once the process is completed, you need to log in by running:
-
-    $ vagrant ssh
-
-There's no need to provide a login or password. Now go to the project directory inside the VM in order to run the Rails server:
-
-    $ cd /vagrant
-    $ bundle exec rails s -b 0.0.0.0
-
-This will initialize the development Rails server.
-Now you can go to your regular browser, in the Host machine (your main OS), and access the application through the address `http://192.168.12.34:3000`.
-
-Any changes that you make to the app files will be reflected inside the VM server. You can use your regular workflow for development as if the server was local.
-
-You can run the tests with `bundle exec rake spec` (or spec:models, etc) from inside the VM too. As outside, you may need to run `bundle exec rake db:test:prepare` occasionally to bring the DB up to date with recent changes.
-
-When you want to pause or finish working, you can run:
-
-    $ vagrant suspend
-
-and the VM will be suspended. Whenever you want to get back to it, you just need to run:
-
-    $ vagrant resume
-
-to get the VM running again in the state you left it. Remember that if you turn off the VM or if you restart your main OS, you will need to run `vagrant up` again, but this time it will be much faster because the VM is already provisioned.
-
-For more instructions on how to use Vagrant, have a look at their official documentation: [https://docs.vagrantup.com/v2/getting-started/](https://docs.vagrantup.com/v2/getting-started/).
-
 ## Reporting a bug
 
 So you've found a bug, and want to help us fix it? Before filing a bug report, please double-check the bug hasn't already been reported. You can do so [on our issue tracker](https://github.com/24pullrequests/24pullrequests/issues?q=is%3Aissue+is%3Aopen+label%3Abug). If something hasn't been raised, you can go ahead and create a new issue with the following information:
 
-* On which page did the error happen? 
+* On which page did the error happen?
 * How can the error be reproduced?
 * If possible, please also provide an error message or a screenshot to illustrate the problem
 
@@ -81,7 +37,7 @@ It goes without saying that you're welcome to help investigate further and/or fi
 
 ## Contributing to an existing issue
 
-### Finding an issue to work on 
+### Finding an issue to work on
 
 We've got a few open issues and are always glad to get help on that front. You can view the list of issues [here](https://github.com/24pullrequests/24pullrequests/issues). Most of the issues are labelled, so you can use the labels to get an idea of which issue could be a good fit for you. (Here's [a good article](https://medium.freecodecamp.com/finding-your-first-open-source-project-or-bug-to-work-on-1712f651e5ba) on how to find your first bug to fix).
 
@@ -89,7 +45,7 @@ Before getting to work, take a look at the issue and at the conversation around 
 
 If the issue is a few months old, it might be a good idea to write a short comment to double-check that the issue or feature is still a valid one to jump on.
 
-Feel free to ask for more detail on what is expected: are there any more details or specifications you need to know? 
+Feel free to ask for more detail on what is expected: are there any more details or specifications you need to know?
 And if at any point you get stuck: don't hesitate to ask for help.  
 
 ### Making your contribution  
@@ -110,7 +66,7 @@ We've outlined the contribution workflow [here](#contribution-workflow). If you'
 - **i18n**: Issues related to localisation or translation are marked with these labels. They can range from missing translations for a specific language to grammatical issues and cultural differences. These will usually require a specialist in a non-English language to close.
 - **invalid**: These are rare, and normally have been submitted in error.
 - **needs rebase**: You will find this label normally attached to pull requests, and means that the maintainers would like to you squash commits or rebase existing commits from master into your branch before we can merge your pull request. A maintainer will clarify this in the comment thread.
-- **question**: Issues can be marked with this label by anybody who would like other contributors or maintainers to answer a specific question before an issue can be closed. These normally do not assume any skill level (although may sometimes require maintainers to have the final say on them) and are great opportunities for all members of our community to steer the direction of the project. 
+- **question**: Issues can be marked with this label by anybody who would like other contributors or maintainers to answer a specific question before an issue can be closed. These normally do not assume any skill level (although may sometimes require maintainers to have the final say on them) and are great opportunities for all members of our community to steer the direction of the project.
 - **refactoring**: If an issue requires code to be refactored before a particular change can be made, or if you spot inelegant patterns or implementations in code that you feel could be better, then feel free to add this label to an issue. If the issue is the latter type, please be careful about the language you use in these threads. For example, things like "this code sucks!" or "you must be an idiot!" are unacceptable!. Programmers have feelings too and there are ways to suggest code changes without insulting people!
 - **security**: If you spot an issue related to security issues (e.g. invalid SSL certs, potential CSRF issues), mark it with this label. Don't forget to be a good OSS citizen and always report zero-day issues through a private channel to minimise impact to your fellow users!
 - **UX**: These issues relate to how the site works, or more holistically, how the site _feels_ to the end user, and will normally be related to the front-end of the website. These issues might typically relate to confusion stemming from navigation, form elements, input validation, or breaks in user flows.

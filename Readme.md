@@ -106,31 +106,6 @@ our browser to <http://localhost:3000>
 ```bash
 bundle exec rails s
 ```
-#### Using Vagrant
-
-The included Vagrant setup uses Ansible as provisioner. First, you'll need to install the dependencies:
-
- * [Vagrant](https://www.vagrantup.com/downloads.html)
- * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
- * [Ansible](http://docs.ansible.com/intro_installation.html)
-
-_Windows Users: Ansible does not support Windows as controller machine, but there's a little hack in the Vagrantfile that will allow you to run the provision using a local
-SSH connection Guest-Guest. Just install Vagrant and VirtualBox, and you should be able to get it running._
-
-Once you have everything installed, go to the project directory via console and run:
-
-    $ vagrant up
-
-The first time you run `vagrant up`, the process will take several minutes, since it will download a box and run all necessary tasks to get the server ready. When the process
-is finished, log in to run the rails dev server:
-
-    $ vagrant ssh
-    $ cd /vagrant
-    $ bundle exec rails s -b 0.0.0.0
-
-Then you should be able to access the application through your regular browser at http://192.168.12.34:3000.
-
-Simply edit the files in the project directory using your favorite editor on your host machine and the changes will be automatically reflected in the `/vagrant` directory inside the guest virtual machine and so you can see the changes on your browser.
 
 ### Tests
 
@@ -145,12 +120,6 @@ for **another** project, you will need to either
  * reset the omniauth environment variables after creating a GitHub (omniauth) application for this project
 
 as it will use it to learn more about the contributors and for pull requests.
-
-### Environment variables
-
-`bundle exec figaro install`
-
-Or for more information about using figaro, see https://github.com/laserlemon/figaro
 
 ### Contributing
 

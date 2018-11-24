@@ -10,7 +10,6 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require polyfills
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
@@ -20,8 +19,4 @@
 //= require emojione
 //= require emoji
 //= require jquery.icheck
-//= require lodash
-//= require gmaps/google
 //= require_tree .
-//= stub maps
-//

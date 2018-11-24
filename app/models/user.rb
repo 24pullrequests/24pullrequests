@@ -31,9 +31,6 @@ class User < ApplicationRecord
   validates :email, format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, allow_blank: true, on: :update }
   validates :unsubscribe_token, presence: true, uniqueness: true
 
-  geocoded_by :location, latitude: :lat, longitude: :lng
-  after_validation :geocode
-
   def self.find_by_nickname!(nickname)
     where(['lower(nickname) =?', nickname.downcase]).first!
   end
@@ -219,10 +216,6 @@ class User < ApplicationRecord
 
   def update_pull_request_count
     update_attribute(:pull_requests_count, pull_requests.year(Tfpullrequests::Application.current_year).for_aggregation.count)
-  end
-
-  def lat_lng
-    lat && lng
   end
 
   def ignored_organisations_string
