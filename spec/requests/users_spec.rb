@@ -45,7 +45,7 @@ describe 'Users', type: :request do
           click_on 'Profile'
 
           is_expected.to have_content 'akira has made 2 contributions ' \
-          "so far in Christmas #{Time.zone.now.year}"
+          "so far during the #{Time.zone.now.year} holidays"
 
           is_expected.to have_link gift.pull_request.title
 
@@ -60,7 +60,7 @@ describe 'Users', type: :request do
             click_on 'Profile'
 
             is_expected.to have_content 'akira has made 1 contribution ' \
-              "so far in Christmas #{Time.zone.now.year}"
+              "so far during the #{Time.zone.now.year} holidays"
 
             is_expected.to have_link "Moar foos"
             is_expected.to have_link "Hi baz"
