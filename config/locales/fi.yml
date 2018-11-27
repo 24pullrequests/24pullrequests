@@ -287,7 +287,7 @@ fi:
       edit: Muokkaa ehdotuksia
       update: Päivitä projektia
   pull_request:
-    twitter_message: 'Avasin juuri vetopyynnön http://24pullrequests.com, check it out: %{issue_url}'
+    twitter_message: 'Avasin juuri vetopyynnön https://24pullrequests.com, check it out: %{issue_url}'
     download:
       tooltip: Yleensä katsomme vetopyynnöt tunnin välein, mutta voit tarkistaa sen nyt jos todella haluat.
   pull_requests:

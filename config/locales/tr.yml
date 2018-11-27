@@ -287,7 +287,7 @@ tr:
       edit: Önerileri Düzenle
       update: Projeyi Güncelle
   pull_request:
-    twitter_message: 'Az önce http://24pullrequests.com ''a pull request gönderdim, buradan bakabilirsin: %{issue_url}'
+    twitter_message: 'Az önce https://24pullrequests.com ''a pull request gönderdim, buradan bakabilirsin: %{issue_url}'
     download:
       tooltip: Pull request'leri genellikle her saat kontrol ederiz, fakat çok istiyorsan şimdi kontrol edebilirsiniz.
   pull_requests:

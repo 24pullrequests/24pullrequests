@@ -287,7 +287,7 @@ es:
       edit: Editar la Sugerencia
       update: Actualizar Proyecto
   pull_request:
-    twitter_message: 'Acabo de abrir un Pull Request para http://24pullrequests.com, échale un vistazo: %{issue_url}'
+    twitter_message: 'Acabo de abrir un Pull Request para https://24pullrequests.com, échale un vistazo: %{issue_url}'
     download:
       tooltip: Por lo general, comprobamos los Pull Requests cada hora, pero si lo deseas, puedes verificarlo ahora mismo.
   pull_requests:

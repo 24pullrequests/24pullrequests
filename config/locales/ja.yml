@@ -287,7 +287,7 @@ ja:
       edit: Edit Suggestion
       update: Update Project
   pull_request:
-    twitter_message: 'I just gifted a pull request for http://24pullrequests.com, check it out: %{issue_url}'
+    twitter_message: 'I just gifted a pull request for https://24pullrequests.com, check it out: %{issue_url}'
     download:
       tooltip: 通常、私たちは pull request を毎時チェックしますが、もし望むのであれば、今すぐ確認することができます。
   pull_requests:

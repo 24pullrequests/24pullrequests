@@ -11,7 +11,7 @@
   <%= t("api.pagination.details") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/users.json?page=2
+  $ curl https://24pullrequests.com/users.json?page=2
 </pre>
 <h3>
   <%= t("api.callback.title") %>
@@ -20,7 +20,7 @@
   <%= t("api.callback.details") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/users.json?callback=foo
+  $ curl https://24pullrequests.com/users.json?callback=foo
 
   foo([
          {
@@ -83,7 +83,7 @@
   <%= t("api.projects.details") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/projects.json
+  $ curl https://24pullrequests.com/projects.json
 
   [
     {
@@ -100,7 +100,7 @@
   <%= t("api.pull_requests.details") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/pull_requests.json
+  $ curl https://24pullrequests.com/pull_requests.json
 
   [
     {
@@ -115,7 +115,7 @@
         "github_profile":"https://github.com/christophermanning",
         "twitter_profile":null,
         "pull_requests_count":12,
-        "link":"http://24pullrequests.com/users/christophermanning"
+        "link":"https://24pullrequests.com/users/christophermanning"
       }
     }
   ]
@@ -124,7 +124,7 @@
   <%= t("api.pull_requests.meta_details") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/pull_requests/meta.json
+  $ curl https://24pullrequests.com/pull_requests/meta.json
 
   {
     "count": 500,
@@ -138,7 +138,7 @@
   <%= t("api.users.details") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/users.json
+  $ curl https://24pullrequests.com/users.json
 
   [
      {
@@ -226,7 +226,7 @@
   <%= t("api.users.specific") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/users/andrew.json
+  $ curl https://24pullrequests.com/users/andrew.json
 
   {
      id:183,
@@ -299,12 +299,12 @@
   <%= t("api.organisations.details") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/organisations.json
+  $ curl https://24pullrequests.com/organisations.json
   [
      {
         login:"Rio-Perl-Mongers",
         avatar_url:"https://1.gravatar.com/avatar/....",
-        link:"http://24pullrequests.com/organisations/1",
+        link:"https://24pullrequests.com/organisations/1",
         users:[
            {
               id:4912,
@@ -313,12 +313,12 @@
               github_profile:"https://github.com/lorn",
               twitter_profile:null,
               pull_requests_count:1,
-              link:"http://24pullrequests.com/users/lorn",
+              link:"https://24pullrequests.com/users/lorn",
               organisations:[
                  {
                     login:"Rio-Perl-Mongers",
                     avatar_url:"https://1.gravatar.com/avatar/....",
-                    link:"http://24pullrequests.com/organisations/1"
+                    link:"https://24pullrequests.com/organisations/1"
                  }
               ]
            }
@@ -327,7 +327,7 @@
      {
         login:"enspiral",
         avatar_url:"https://1.gravatar.com/avatar/....",
-        link:"http://24pullrequests.com/organisations/2",
+        link:"https://24pullrequests.com/organisations/2",
         users:[
            {
               id:4913,
@@ -336,12 +336,12 @@
               github_profile:"https://github.com/fourseven",
               twitter_profile:null,
               pull_requests_count:0,
-              link:"http://24pullrequests.com/users/fourseven",
+              link:"https://24pullrequests.com/users/fourseven",
               organisations:[
                  {
                     login:"enspiral",
                     avatar_url:"https://1.gravatar.com/avatar/....",
-                    link:"http://24pullrequests.com/organisations/2"
+                    link:"https://24pullrequests.com/organisations/2"
                  }
               ]
            },
@@ -352,12 +352,12 @@
               github_profile:"https://github.com/MdreW",
               twitter_profile:null,
               pull_requests_count:0,
-              link:"http://24pullrequests.com/users/MdreW",
+              link:"https://24pullrequests.com/users/MdreW",
               organisations:[
                  {
                     login:"enspiral",
                     avatar_url:"https://1.gravatar.com/avatar/....",
-                    link:"http://24pullrequests.com/organisations/2"
+                    link:"https://24pullrequests.com/organisations/2"
                  }
               ]
            },
@@ -368,22 +368,22 @@
               github_profile:"https://github.com/infertux",
               twitter_profile:null,
               pull_requests_count:0,
-              link:"http://24pullrequests.com/users/infertux",
+              link:"https://24pullrequests.com/users/infertux",
               organisations:[
                  {
                     login:"enspiral",
                     avatar_url:"https://1.gravatar.com/avatar/....",
-                    link:"http://24pullrequests.com/organisations/2"
+                    link:"https://24pullrequests.com/organisations/2"
                  },
                  {
                     login:"Ung-UTT",
                     avatar_url:"https://2.gravatar.com/avatar/....",
-                    link:"http://24pullrequests.com/organisations/1824"
+                    link:"https://24pullrequests.com/organisations/1824"
                  },
                  {
                     login:"buckybox",
                     avatar_url:"https://0.gravatar.com/avatar/....",
-                    link:"http://24pullrequests.com/organisations/1825"
+                    link:"https://24pullrequests.com/organisations/1825"
                  }
               ]
            }
@@ -395,12 +395,12 @@
   <%= t("api.organisations.specific") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/organisations/uswitch.json
+  $ curl https://24pullrequests.com/organisations/uswitch.json
 
   {
    login:"uswitch",
    avatar_url:"https://1.gravatar.com/avatar/....",
-   link:"http://24pullrequests.com/organisations/1945",
+   link:"https://24pullrequests.com/organisations/1945",
    users:[
       {
          id:2969,
@@ -409,17 +409,17 @@
          github_profile:"https://github.com/jasonneylon",
          twitter_profile:null,
          pull_requests_count:0,
-         link:"http://24pullrequests.com/users/jasonneylon",
+         link:"https://24pullrequests.com/users/jasonneylon",
          organisations:[
             {
                login:"cleanweb-uk",
                avatar_url:"https://1.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/1916"
+               link:"https://24pullrequests.com/organisations/1916"
             },
             {
                login:"uswitch",
                avatar_url:"https://1.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/1945"
+               link:"https://24pullrequests.com/organisations/1945"
             }
          ]
       },
@@ -430,17 +430,17 @@
          github_profile:"https://github.com/Quantisan",
          twitter_profile:null,
          pull_requests_count:0,
-         link:"http://24pullrequests.com/users/Quantisan",
+         link:"https://24pullrequests.com/users/Quantisan",
          organisations:[
             {
                login:"Cascading",
                avatar_url:"https://2.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/2236"
+               link:"https://24pullrequests.com/organisations/2236"
             },
             {
                login:"uswitch",
                avatar_url:"https://1.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/1945"
+               link:"https://24pullrequests.com/organisations/1945"
             }
          ]
       },
@@ -451,12 +451,12 @@
          github_profile:"https://github.com/barisbalic",
          twitter_profile:"https://twitter.com/BarisBalic",
          pull_requests_count:7,
-         link:"http://24pullrequests.com/users/barisbalic",
+         link:"https://24pullrequests.com/users/barisbalic",
          organisations:[
             {
                login:"uswitch",
                avatar_url:"https://1.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/1945"
+               link:"https://24pullrequests.com/organisations/1945"
             }
          ]
       },
@@ -467,12 +467,12 @@
          github_profile:"https://github.com/annez",
          twitter_profile:null,
          pull_requests_count:0,
-         link:"http://24pullrequests.com/users/annez",
+         link:"https://24pullrequests.com/users/annez",
          organisations:[
             {
                login:"uswitch",
                avatar_url:"https://1.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/1945"
+               link:"https://24pullrequests.com/organisations/1945"
             }
          ]
       },
@@ -483,12 +483,12 @@
          github_profile:"https://github.com/christianblunden",
          twitter_profile:null,
          pull_requests_count:0,
-         link:"http://24pullrequests.com/users/christianblunden",
+         link:"https://24pullrequests.com/users/christianblunden",
          organisations:[
             {
                login:"uswitch",
                avatar_url:"https://1.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/1945"
+               link:"https://24pullrequests.com/organisations/1945"
             }
          ]
       },
@@ -499,12 +499,12 @@
          github_profile:"https://github.com/randomvariable",
          twitter_profile:"https://twitter.com/randomvariable",
          pull_requests_count:0,
-         link:"http://24pullrequests.com/users/randomvariable",
+         link:"https://24pullrequests.com/users/randomvariable",
          organisations:[
             {
                login:"uswitch",
                avatar_url:"https://1.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/1945"
+               link:"https://24pullrequests.com/organisations/1945"
             }
          ]
       },
@@ -515,12 +515,12 @@
          github_profile:"https://github.com/tgk",
          twitter_profile:null,
          pull_requests_count:0,
-         link:"http://24pullrequests.com/users/tgk",
+         link:"https://24pullrequests.com/users/tgk",
          organisations:[
             {
                login:"uswitch",
                avatar_url:"https://1.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/1945"
+               link:"https://24pullrequests.com/organisations/1945"
             }
          ]
       }

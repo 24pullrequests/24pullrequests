@@ -287,7 +287,7 @@ en:
       edit: Edit Suggestion
       update: Update Project
   pull_request:
-    twitter_message: 'I just gifted an open source contribution for http://24pullrequests.com, check it out: %{issue_url}'
+    twitter_message: 'I just gifted an open source contribution for https://24pullrequests.com, check it out: %{issue_url}'
     download:
       tooltip: We usually check for pull requests every hour, but you can check now.
   pull_requests:

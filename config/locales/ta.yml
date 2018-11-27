@@ -287,7 +287,7 @@ ta:
       edit: தொகுத்து அமைக்க கருத்து
       update: திட்டம் மேம்படுத்தல்
   pull_request:
-    twitter_message: 'நான் ஒரு ''pull request''-ஐ  http://24pullrequests.com-க்கு பரிசளித்துள்ளேன். இங்கு சென்று பாருங்கள்: %{issue_url}'
+    twitter_message: 'நான் ஒரு ''pull request''-ஐ  https://24pullrequests.com-க்கு பரிசளித்துள்ளேன். இங்கு சென்று பாருங்கள்: %{issue_url}'
     download:
       tooltip: பொதுவாக நாங்கள் 'pull request'-களை ஒவ்வொரு மணிதோரும் பார்க்கிறோம். நீங்கள் விரும்பினால் இப்போதே பார்க்கலாம்
   pull_requests:
