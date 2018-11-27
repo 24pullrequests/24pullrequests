@@ -287,7 +287,7 @@ fr:
       edit: Modifier la suggestion
       update: Mettre à jour le projet
   pull_request:
-    twitter_message: 'Je viens de créer une pull request pour http://24pullrequests.com: %{issue_url}'
+    twitter_message: 'Je viens de créer une pull request pour https://24pullrequests.com: %{issue_url}'
     download:
       tooltip: Nous vérifions généralement les pull request chaque heure, mais vous pouvez mettre à jour maintenant si vous le souhaitez vraiment.
   pull_requests:

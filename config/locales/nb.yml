@@ -287,7 +287,7 @@ nb:
       edit: Redigér forslag
       update: Oppdatér prosjekt
   pull_request:
-    twitter_message: 'Jeg gav nettopp en pull request for http://24pullrequests.com, sjekk det ut: %{issue_url}'
+    twitter_message: 'Jeg gav nettopp en pull request for https://24pullrequests.com, sjekk det ut: %{issue_url}'
     download:
       tooltip: Vi ser vanligvis etter pull requests hver time, med du kan sjekke nå om du ønsker.
   pull_requests:
