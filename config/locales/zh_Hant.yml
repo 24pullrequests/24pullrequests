@@ -36,6 +36,10 @@ zh_Hant:
     description: 24 Pull Requests 是一個在 12 月份促進開放原始碼協作的小專案。
     idea: 想法很簡單， 「12 月開始，到聖誕節之前的每一天都送出一個 Pull Request」， 鼓勵開發者在這段時間回饋開源社群。
     more_info: 24 Pull Requests 也提供一些值得參與的專案的建議、一些貢獻指南，並且展示每天使用者們所送出優秀的 Pull Requests。
+    idea_title: 
+    idea_subtitle:
+    where_to_find_us: 
+    on_gitter: 
     on_github: 我們網站的程式碼放在 GitHub 上：
     on_twitter: 還有個 Twitter 帳號：
     title: 關於 24 Pull Requests
@@ -76,7 +80,7 @@ zh_Hant:
     pull_requests:
       details: 在 12 月中所有的 Pull Requests，按照時間排序（包含使用者資訊）
       meta_details: 載入今年所有 Pull Requests 的資訊
-      title: Pull Requests
+      title: Contributions
     users:
       details: 所有註冊使用者，按照他們今年的 Pull Requests 數量排序，同時也包含他們的組織細節和 Pull Request 資料。
       specific: 某一個指定使用者的資訊。
@@ -310,6 +314,6 @@ zh_Hant:
   user:
     no_current_pr_message:
     organisations: 組織
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

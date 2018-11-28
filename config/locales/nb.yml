@@ -36,6 +36,10 @@ nb:
     description: 24 Pull Requests er et lite prosjekt som ønsker å promotere open-source samarbeid i desember.
     idea: Idéen er "Send en pull request hver dag i desember fram mot jul" for å oppmuntre utviklere til å gi tilbake til open-source med små kode-gaver gjennom desember.
     more_info: Siden gir også forslag til prosjekter man kan hjelpe, retningslinjer for å bidra og fremhever gode pull requests som blir gitt hver dag.
+    idea_title: 
+    idea_subtitle:
+    where_to_find_us: 
+    on_gitter: 
     on_github: 'Utviklingen av siden er open-source på GitHub:'
     on_twitter: 'Vi er også på Twitter:'
     title: Om 24 Pull Requests
@@ -76,7 +80,7 @@ nb:
     pull_requests:
       details: Hent alle pull requests fra brukere of siden i desember, sortert med den nyeste først. Inkluderer også brukeren som gjorde pull requesten.
       meta_details: Laste informasjon om alle pull forespørsler i år.
-      title: Pull Requests
+      title: Contributions
     users:
       details: Hent alle brukere som har signet opp på siden, sortert etter hvor mange pull requests de har sendt så langt i desember. Inkluderer også deres organisasjon(er) og pull requests.
       specific: Hent informasjon for en spesifikk bruker.
@@ -152,7 +156,7 @@ nb:
     form:
       date: Dato
       gift_it: Gi!
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet: Tweet om gaven din!
   homepage:
     about: Hva dreier det seg om?
@@ -283,7 +287,7 @@ nb:
       edit: Redigér forslag
       update: Oppdatér prosjekt
   pull_request:
-    twitter_message: 'Jeg gav nettopp en pull request for http://24pullrequests.com, sjekk det ut: %{issue_url}'
+    twitter_message: 'Jeg gav nettopp en pull request for https://24pullrequests.com, sjekk det ut: %{issue_url}'
     download:
       tooltip: Vi ser vanligvis etter pull requests hver time, med du kan sjekke nå om du ønsker.
   pull_requests:
@@ -310,6 +314,6 @@ nb:
   user:
     no_current_pr_message:
     organisations: Medlem av...
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

@@ -4,7 +4,7 @@ require 'ostruct'
 describe User, type: :model do
   let(:user) { create :user }
 
-  it { is_expected.to have_many(:pull_requests) }
+  it { is_expected.to have_many(:contributions) }
   it { is_expected.to have_many(:skills) }
 
   it { is_expected.to accept_nested_attributes_for(:skills) }
@@ -276,21 +276,21 @@ describe User, type: :model do
     end
   end
 
-  describe '.download_pull_requests', wip: true do
+  describe '.download_contributions', wip: true do
     let(:downloader)    { double('downloader', get_organisations: nil) }
-    let(:pull_request)  { mock_pull_request }
+    let(:contribution)  { mock_pull_request }
 
     before(:each) do
       expect(Downloader).to receive(:new).and_return(downloader)
-      expect(downloader).to receive(:get_pull_requests)
+      expect(downloader).to receive(:get_contributions)
 
-      user.download_pull_requests
+      user.download_contributions
     end
 
   end
 
-  describe '.pull_requests_count' do
-    subject { user.pull_requests_count }
+  describe '.contributions_count' do
+    subject { user.contributions_count }
 
     context 'by default' do
       it { is_expected.to eq 0 }
@@ -298,7 +298,7 @@ describe User, type: :model do
 
     context 'when a pull request is added' do
       before do
-        create :pull_request, user: user
+        create :contribution, user: user
         user.reload
       end
 
@@ -308,18 +308,18 @@ describe User, type: :model do
     context 'with some pull requests filtered' do
       before do
         create :aggregation_filter, user: user, title_pattern: '% filtered'
-        create(:pull_request, user: user, title: 'should be included')
-        create(:pull_request, user: user, title: 'should be filtered')
+        create(:contribution, user: user, title: 'should be included')
+        create(:contribution, user: user, title: 'should be filtered')
       end
 
       it "should not include all the user's filtered requests in their aggregated count" do
-        is_expected.to eq(user.pull_requests.all.count - 1)
+        is_expected.to eq(user.contributions.all.count - 1)
       end
     end
   end
 
-  describe '.pull_requests' do
-    subject { user.pull_requests }
+  describe '.contributions' do
+    subject { user.contributions }
 
     context 'with some pull requests filtered' do
       before do
@@ -327,11 +327,11 @@ describe User, type: :model do
       end
 
       let(:included_pr) do
-        create(:pull_request, user: user, title: 'should be included')
+        create(:contribution, user: user, title: 'should be included')
       end
 
       let(:filtered_pr) do
-        create(:pull_request, user: user, title: 'should be filtered')
+        create(:contribution, user: user, title: 'should be filtered')
       end
 
       it 'should always show the full pull request list' do

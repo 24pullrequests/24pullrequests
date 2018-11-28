@@ -11,7 +11,7 @@
   <%= t("api.pagination.details") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/users.json?page=2
+  $ curl https://24pullrequests.com/users.json?page=2
 </pre>
 <h3>
   <%= t("api.callback.title") %>
@@ -20,7 +20,7 @@
   <%= t("api.callback.details") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/users.json?callback=foo
+  $ curl https://24pullrequests.com/users.json?callback=foo
 
   foo([
          {
@@ -29,7 +29,7 @@
             gravatar_id:"fde332d18b14c52bc41b50f4952f075a",
             github_profile:"https://github.com/dr-zion-schaefer",
             twitter_profile:null,
-            pull_requests_count:20,
+            contributions_count:20,
             link:"http://localhost:3000/users/dr-zion-schaefer",
             organisations:[
                {
@@ -83,7 +83,7 @@
   <%= t("api.projects.details") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/projects.json
+  $ curl https://24pullrequests.com/projects.json
 
   [
     {
@@ -100,7 +100,7 @@
   <%= t("api.pull_requests.details") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/pull_requests.json
+  $ curl https://24pullrequests.com/pull_requests.json
 
   [
     {
@@ -114,8 +114,8 @@
         "gravatar_id":"3f9394a7fb1070144a59644462eb4916",
         "github_profile":"https://github.com/christophermanning",
         "twitter_profile":null,
-        "pull_requests_count":12,
-        "link":"http://24pullrequests.com/users/christophermanning"
+        "contributions_count":12,
+        "link":"https://24pullrequests.com/users/christophermanning"
       }
     }
   ]
@@ -124,7 +124,7 @@
   <%= t("api.pull_requests.meta_details") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/pull_requests/meta.json
+  $ curl https://24pullrequests.com/pull_requests/meta.json
 
   {
     "count": 500,
@@ -138,7 +138,7 @@
   <%= t("api.users.details") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/users.json
+  $ curl https://24pullrequests.com/users.json
 
   [
      {
@@ -147,7 +147,7 @@
         gravatar_id:"fde332d18b14c52bc41b50f4952f075a",
         github_profile:"https://github.com/dr-zion-schaefer",
         twitter_profile:null,
-        pull_requests_count:20,
+        contributions_count:20,
         link:"http://localhost:3000/users/dr-zion-schaefer",
         organisations:[
            {
@@ -191,7 +191,7 @@
         gravatar_id:"0f9f17758e76da17ff4ade389e566321",
         github_profile:"https://github.com/kaitlin-walter",
         twitter_profile:null,
-        pull_requests_count:20,
+        contributions_count:20,
         link:"http://localhost:3000/users/kaitlin-walter",
         organisations:[
 
@@ -226,7 +226,7 @@
   <%= t("api.users.specific") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/users/andrew.json
+  $ curl https://24pullrequests.com/users/andrew.json
 
   {
      id:183,
@@ -234,7 +234,7 @@
      gravatar_id:"8ddbf811da78bb0daeeb3cacd7cf743f",
      github_profile:"https://github.com/andrew",
      twitter_profile:null,
-     pull_requests_count:15,
+     contributions_count:15,
      link:"http://localhost:3000/users/andrew",
      organisations:[
         {
@@ -299,12 +299,12 @@
   <%= t("api.organisations.details") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/organisations.json
+  $ curl https://24pullrequests.com/organisations.json
   [
      {
         login:"Rio-Perl-Mongers",
         avatar_url:"https://1.gravatar.com/avatar/....",
-        link:"http://24pullrequests.com/organisations/1",
+        link:"https://24pullrequests.com/organisations/1",
         users:[
            {
               id:4912,
@@ -312,13 +312,13 @@
               gravatar_id:"362b77d943afe986bc6ead2bf11d0e3f",
               github_profile:"https://github.com/lorn",
               twitter_profile:null,
-              pull_requests_count:1,
-              link:"http://24pullrequests.com/users/lorn",
+              contributions_count:1,
+              link:"https://24pullrequests.com/users/lorn",
               organisations:[
                  {
                     login:"Rio-Perl-Mongers",
                     avatar_url:"https://1.gravatar.com/avatar/....",
-                    link:"http://24pullrequests.com/organisations/1"
+                    link:"https://24pullrequests.com/organisations/1"
                  }
               ]
            }
@@ -327,7 +327,7 @@
      {
         login:"enspiral",
         avatar_url:"https://1.gravatar.com/avatar/....",
-        link:"http://24pullrequests.com/organisations/2",
+        link:"https://24pullrequests.com/organisations/2",
         users:[
            {
               id:4913,
@@ -335,13 +335,13 @@
               gravatar_id:"b11f4f822d575034efe1226caf580cc4",
               github_profile:"https://github.com/fourseven",
               twitter_profile:null,
-              pull_requests_count:0,
-              link:"http://24pullrequests.com/users/fourseven",
+              contributions_count:0,
+              link:"https://24pullrequests.com/users/fourseven",
               organisations:[
                  {
                     login:"enspiral",
                     avatar_url:"https://1.gravatar.com/avatar/....",
-                    link:"http://24pullrequests.com/organisations/2"
+                    link:"https://24pullrequests.com/organisations/2"
                  }
               ]
            },
@@ -351,13 +351,13 @@
               gravatar_id:"72a90a9901ec355490d9fd1a4489136a",
               github_profile:"https://github.com/MdreW",
               twitter_profile:null,
-              pull_requests_count:0,
-              link:"http://24pullrequests.com/users/MdreW",
+              contributions_count:0,
+              link:"https://24pullrequests.com/users/MdreW",
               organisations:[
                  {
                     login:"enspiral",
                     avatar_url:"https://1.gravatar.com/avatar/....",
-                    link:"http://24pullrequests.com/organisations/2"
+                    link:"https://24pullrequests.com/organisations/2"
                  }
               ]
            },
@@ -367,23 +367,23 @@
               gravatar_id:"a175f0d74a9505e2dfde61158b2de2ab",
               github_profile:"https://github.com/infertux",
               twitter_profile:null,
-              pull_requests_count:0,
-              link:"http://24pullrequests.com/users/infertux",
+              contributions_count:0,
+              link:"https://24pullrequests.com/users/infertux",
               organisations:[
                  {
                     login:"enspiral",
                     avatar_url:"https://1.gravatar.com/avatar/....",
-                    link:"http://24pullrequests.com/organisations/2"
+                    link:"https://24pullrequests.com/organisations/2"
                  },
                  {
                     login:"Ung-UTT",
                     avatar_url:"https://2.gravatar.com/avatar/....",
-                    link:"http://24pullrequests.com/organisations/1824"
+                    link:"https://24pullrequests.com/organisations/1824"
                  },
                  {
                     login:"buckybox",
                     avatar_url:"https://0.gravatar.com/avatar/....",
-                    link:"http://24pullrequests.com/organisations/1825"
+                    link:"https://24pullrequests.com/organisations/1825"
                  }
               ]
            }
@@ -395,12 +395,12 @@
   <%= t("api.organisations.specific") %>
 </p>
 <pre>
-  $ curl http://24pullrequests.com/organisations/uswitch.json
+  $ curl https://24pullrequests.com/organisations/uswitch.json
 
   {
    login:"uswitch",
    avatar_url:"https://1.gravatar.com/avatar/....",
-   link:"http://24pullrequests.com/organisations/1945",
+   link:"https://24pullrequests.com/organisations/1945",
    users:[
       {
          id:2969,
@@ -408,18 +408,18 @@
          gravatar_id:"81b7f1163094366a9200678bf9c05697",
          github_profile:"https://github.com/jasonneylon",
          twitter_profile:null,
-         pull_requests_count:0,
-         link:"http://24pullrequests.com/users/jasonneylon",
+         contributions_count:0,
+         link:"https://24pullrequests.com/users/jasonneylon",
          organisations:[
             {
                login:"cleanweb-uk",
                avatar_url:"https://1.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/1916"
+               link:"https://24pullrequests.com/organisations/1916"
             },
             {
                login:"uswitch",
                avatar_url:"https://1.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/1945"
+               link:"https://24pullrequests.com/organisations/1945"
             }
          ]
       },
@@ -429,18 +429,18 @@
          gravatar_id:"34ff435e90c3846663c4ade5a4802c25",
          github_profile:"https://github.com/Quantisan",
          twitter_profile:null,
-         pull_requests_count:0,
-         link:"http://24pullrequests.com/users/Quantisan",
+         contributions_count:0,
+         link:"https://24pullrequests.com/users/Quantisan",
          organisations:[
             {
                login:"Cascading",
                avatar_url:"https://2.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/2236"
+               link:"https://24pullrequests.com/organisations/2236"
             },
             {
                login:"uswitch",
                avatar_url:"https://1.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/1945"
+               link:"https://24pullrequests.com/organisations/1945"
             }
          ]
       },
@@ -450,13 +450,13 @@
          gravatar_id:"380ec9b091a6f8d876640230c918c2cc",
          github_profile:"https://github.com/barisbalic",
          twitter_profile:"https://twitter.com/BarisBalic",
-         pull_requests_count:7,
-         link:"http://24pullrequests.com/users/barisbalic",
+         contributions_count:7,
+         link:"https://24pullrequests.com/users/barisbalic",
          organisations:[
             {
                login:"uswitch",
                avatar_url:"https://1.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/1945"
+               link:"https://24pullrequests.com/organisations/1945"
             }
          ]
       },
@@ -466,13 +466,13 @@
          gravatar_id:"ce1098004eeae9c75e29ad9d55ad0528",
          github_profile:"https://github.com/annez",
          twitter_profile:null,
-         pull_requests_count:0,
-         link:"http://24pullrequests.com/users/annez",
+         contributions_count:0,
+         link:"https://24pullrequests.com/users/annez",
          organisations:[
             {
                login:"uswitch",
                avatar_url:"https://1.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/1945"
+               link:"https://24pullrequests.com/organisations/1945"
             }
          ]
       },
@@ -482,13 +482,13 @@
          gravatar_id:"46fb7a1cf08a5ba36aec6ab9bf24d0ff",
          github_profile:"https://github.com/christianblunden",
          twitter_profile:null,
-         pull_requests_count:0,
-         link:"http://24pullrequests.com/users/christianblunden",
+         contributions_count:0,
+         link:"https://24pullrequests.com/users/christianblunden",
          organisations:[
             {
                login:"uswitch",
                avatar_url:"https://1.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/1945"
+               link:"https://24pullrequests.com/organisations/1945"
             }
          ]
       },
@@ -498,13 +498,13 @@
          gravatar_id:"52e9eb9ba38876d84d99a172bfa2e6dd",
          github_profile:"https://github.com/randomvariable",
          twitter_profile:"https://twitter.com/randomvariable",
-         pull_requests_count:0,
-         link:"http://24pullrequests.com/users/randomvariable",
+         contributions_count:0,
+         link:"https://24pullrequests.com/users/randomvariable",
          organisations:[
             {
                login:"uswitch",
                avatar_url:"https://1.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/1945"
+               link:"https://24pullrequests.com/organisations/1945"
             }
          ]
       },
@@ -514,13 +514,13 @@
          gravatar_id:"00f49762dbd87490ec9bf790579f2574",
          github_profile:"https://github.com/tgk",
          twitter_profile:null,
-         pull_requests_count:0,
-         link:"http://24pullrequests.com/users/tgk",
+         contributions_count:0,
+         link:"https://24pullrequests.com/users/tgk",
          organisations:[
             {
                login:"uswitch",
                avatar_url:"https://1.gravatar.com/avatar/....",
-               link:"http://24pullrequests.com/organisations/1945"
+               link:"https://24pullrequests.com/organisations/1945"
             }
          ]
       }

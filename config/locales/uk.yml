@@ -36,6 +36,10 @@ uk:
     description: '"24 Пул Реквести" - це невеликий проект з метою сприяння співробітництву проектів з відкритим вихідним кодом протягом грудня.'
     idea: Основна ідея "Відправляти пул реквест кожен день в грудні до Різдва", заохочуючи розробників відправляти подарункові пул реквести до проектів з відкритим вихідним кодом протягом усього грудня.
     more_info: На сайті також містяться запропоновані проекти, які потребують допомоги, орієнтири для внесків і підкреслює хороші пул реквести, представлені щодня.
+    idea_title:
+    idea_subtitle:
+    where_to_find_us:
+    on_gitter:
     on_github: 'Розробка цього сайту є відкритою на Ґітхабі:'
     on_twitter: 'Ми також є на Твіттері:'
     title: Про "24 Пул Реквести"
@@ -152,7 +156,7 @@ uk:
     form:
       date:
       gift_it:
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet:
   homepage:
     about: Що це взагалі таке?
@@ -283,7 +287,7 @@ uk:
       edit: Редаґувати пропозицію
       update: Обновити проект
   pull_request:
-    twitter_message: 'Я щойно відкрив пул реквест для http://24pullrequests.com, заціни: %{issue_url}'
+    twitter_message: 'Я щойно відкрив пул реквест для https://24pullrequests.com, заціни: %{issue_url}'
     download:
       tooltip: Зазвичай ми перевіряемо пул реквести кожну годину, ви можете перевірити зараз, як ваше бажання.
   pull_requests:
@@ -310,6 +314,6 @@ uk:
   user:
     no_current_pr_message:
     organisations:
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

@@ -22,7 +22,7 @@ Tfpullrequests::Application.routes.draw do
     end
   end
 
-  resources :pull_requests, only: [:index] do
+  resources :pull_requests, only: [:index], controller: 'contributions' do
     collection do
       get :meta
     end
@@ -56,7 +56,7 @@ Tfpullrequests::Application.routes.draw do
 
 
   get 'about', to: 'static#about'
-  get 'sponsors', to: 'static#sponsors'
+  get 'sponsors' => redirect('/about') # old sponsors url
   get 'humans', to: 'static#humans'
   get 'api', to: 'static#api'
   get 'contributing', to: 'static#contributing'

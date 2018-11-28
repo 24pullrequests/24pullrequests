@@ -10,7 +10,7 @@ describe ReminderMailer, type: :mailer do
       email: 'david@example.com',
       languages: ['Ruby'],
       skills: [],
-      pull_requests: double(:pull_request, year: []),
+      contributions: double(:contribution, year: []),
       suggested_projects: Project.all,
       unsubscribe_token: 'unsubscribe-token'
     })

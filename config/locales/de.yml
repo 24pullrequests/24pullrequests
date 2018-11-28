@@ -36,6 +36,10 @@ de:
     description: 24 Pull Requests ist ein kleines Projekt, das im Dezember die Zusammenarbeit in Open Source fördert.
     idea: Im Wesentlichen ist die Idee "Sende einen Pull Request an jedem Tag im Dezember bis hin zu Weihnachten." Damit wollen wir Entwickler ermutigen, den ganzen Dezember über mit kleinen Code-Geschenken etwas an Open Source zurück zu geben.
     more_info: Die Webseite bietet auch Vorschläge für bedürftige Projekte an, stellt Richtlinien für die Beteiligung an Open Source bereit, und stellt jeden Tag besonders gute Pull Requests vor.
+    idea_title: 
+    idea_subtitle:
+    where_to_find_us: 
+    on_gitter: 
     on_github: 'Diese Webseiten ist Open Source of GitHub:'
     on_twitter: 'Wir sind auch auf Twitter:'
     title: Über 24 Pull Requests
@@ -152,7 +156,7 @@ de:
     form:
       date:
       gift_it:
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet:
   homepage:
     about: Worum geht's?
@@ -283,7 +287,7 @@ de:
       edit: Vorschlag bearbeiten
       update: Projekt aktualisieren
   pull_request:
-    twitter_message: 'Ich habe gerade einen Pull Request für http://24pullrequests.com eröffnet, schau her: %{issue_url}'
+    twitter_message: 'Ich habe gerade einen Pull Request für https://24pullrequests.com eröffnet, schau her: %{issue_url}'
     download:
       tooltip: Normalerweise suchen wir stündlich nach neuen Pull Requests, aber wenn Du es wirklich willst können wir sofort nachsehen.
   pull_requests:
@@ -310,6 +314,6 @@ de:
   user:
     no_current_pr_message:
     organisations: Mitglied von...
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

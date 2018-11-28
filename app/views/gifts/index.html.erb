@@ -18,7 +18,7 @@
         </td>
         <% if gift %>
           <td>
-            <%= link_to gift.pull_request_title, gift.pull_request_issue_url %>
+            <%= link_to gift.contribution_title, gift.contribution_issue_url %>
           </td>
           <td>
             <%= link_to t("clear"), gift_path(gift), :title => "Remove gift", :method => :delete, "data-confirm" => "Remove this gift?", :class => 'btn btn-default btn-small pull-right' %>

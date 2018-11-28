@@ -25,8 +25,8 @@ class PullRequestDownloader
       event_date = e['created_at']
       e.type == 'PullRequestEvent' &&
         e.payload.action == 'opened' &&
-        event_date >= PullRequest::EARLIEST_PULL_DATE &&
-        event_date <= PullRequest::LATEST_PULL_DATE
+        event_date >= Contribution::EARLIEST_PULL_DATE &&
+        event_date <= Contribution::LATEST_PULL_DATE
     end
   rescue => e
     Rails.logger.error "Pull requests: likely a GitHub API error occurred:\n"\

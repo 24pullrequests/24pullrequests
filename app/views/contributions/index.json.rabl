@@ -1,6 +1,6 @@
 collection @pull_requests
 
-extends 'pull_requests/show'
+extends 'contributions/show'
 child :user do
   extends 'users/_user'
 end

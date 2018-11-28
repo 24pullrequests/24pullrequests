@@ -35,7 +35,7 @@ describe SessionsController, type: :controller do
   end
 
   describe 'GET failure' do
-    origin_url = 'http://24pullrequests.com'
+    origin_url = 'https://24pullrequests.com'
 
     before do
       get :failure, params: { origin: origin_url }

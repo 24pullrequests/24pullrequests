@@ -31,11 +31,15 @@ tr:
   view_all: Hepsini Göster
   welcome: Welcome, %{user}!
   welcome_back: Hoşgeldin, %{user}
-  your_pull_requests: Pull Requests'lerin
+  your_pull_requests: Contributions'lerin
   about:
     description: 24 Pull Requests Aralık ayı boyunca açık kaynak kodlu projeleri destekleyen küçük bir projedir.
     idea: Temel fikir Aralıktan Noel'e kadar her gün bir pull request yollanması ve Aralık ayı boyunca küçük hediyeler ile geliştircilerin cesaretlendirilmesidir.
     more_info: Bu site ilgili projeleri de destekler ve her gün gönderilen pull request'ler ile onlar destek ve rehber olur.
+    idea_title: 
+    idea_subtitle:
+    where_to_find_us: 
+    on_gitter: 
     on_github: 'Bu sitenin geliştirilmesi GitHub üzerindedir:'
     on_twitter: 'Twitter''da da varız:'
     title: 24 Pull Requests Hakkında
@@ -76,7 +80,7 @@ tr:
     pull_requests:
       details: Kullanıcının kendi yaptığı pull request'ler dahil olmak üzere tüm pull requestler Aralık ayındankiler olmak üzere yeniden eskiye doğru sıralanır.
       meta_details: Bu yıl tüm çekme istekleri hakkında bilgi yükleyin.
-      title: Pull Requests
+      title: Contributions
     users:
       details: Siteye kayıtlı tüm kullanıcılar Aralık ayı boyunca kendi ve organizasyonları üzerinden yaptıkları pull requestler'i görürler.
       specific: Belirli bir kişi için bilgilerin alınması.
@@ -152,7 +156,7 @@ tr:
     form:
       date: Tarih
       gift_it: Hediye et!
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet: Hediyen hakkında Tweet at!
   homepage:
     about: Bütün bunlar ne için?
@@ -283,7 +287,7 @@ tr:
       edit: Önerileri Düzenle
       update: Projeyi Güncelle
   pull_request:
-    twitter_message: 'Az önce http://24pullrequests.com ''a pull request gönderdim, buradan bakabilirsin: %{issue_url}'
+    twitter_message: 'Az önce https://24pullrequests.com ''a pull request gönderdim, buradan bakabilirsin: %{issue_url}'
     download:
       tooltip: Pull request'leri genellikle her saat kontrol ederiz, fakat çok istiyorsan şimdi kontrol edebilirsiniz.
   pull_requests:
@@ -310,6 +314,6 @@ tr:
   user:
     no_current_pr_message:
     organisations: "... üyesi"
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

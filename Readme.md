@@ -20,13 +20,14 @@ This is the site to help promote the project, highlighting why, how and where to
   - [Tests](#tests)
   - [Environment variables](#environment-variables)
   - [Contributing](#contributing)
+    - [Translations](#translations)
   - [Code of Conduct](#code-of-conduct)
 - [Copyright](#copyright)
 
 ## Get started
 
-* [Explore projects to help](http://24pullrequests.com/projects)
-* [Submit your project to get help](http://24pullrequests.com/projects/new)
+* [Explore projects to help](https://24pullrequests.com/projects)
+* [Submit your project to get help](https://24pullrequests.com/projects/new)
 
 ## Contributors
 
@@ -123,6 +124,15 @@ as it will use it to learn more about the contributors and for pull requests.
 ### Contributing
 
 We are always looking for people to contribute! To find out how to help out, have a look at our [Contributing Guide](CONTRIBUTING.md).
+
+### Translations
+
+24 Pull Requests is avialable in twenty languages. Translations are [managed on Transifex](https://www.transifex.com/24-pull-requests/24-pull-requests/). Authentication is required to use Transifex. If you prefer to edit the translations directly you can do using the [standard Rails i28n framework](https://guides.rubyonrails.org/i18n.html#organization-of-locale-files). To get started:
+
+* Fork the project
+* create a copy of `config/locales/en.yml` within the locales folder
+* amend the first line with the [correct character set](https://www.w3.org/International/O-charset-lang.html) you'll be translating to
+* Translate the strings and submit a pull request for the new translation.
 
 ### Code of Conduct
 

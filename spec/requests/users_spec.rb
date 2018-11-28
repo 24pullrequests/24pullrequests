@@ -33,24 +33,24 @@ describe 'Users', type: :request do
       end
 
       describe 'when the user has gifted code or issued pull requests' do
-        let!(:pull_requests) do
+        let!(:contributions) do
           [
-            create(:pull_request, user: user, repo_name: 'foo/bar', title: "Moar foos"),
-            create(:pull_request, user: user, repo_name: 'baz/qux', title: "Hi baz")
+            create(:contribution, user: user, repo_name: 'foo/bar', title: "Moar foos"),
+            create(:contribution, user: user, repo_name: 'baz/qux', title: "Hi baz")
           ]
         end
-        let!(:gift) { create(:gift, user: user, pull_request: pull_requests.first) }
+        let!(:gift) { create(:gift, user: user, contribution: contributions.first) }
 
         it 'has pull requests' do
           click_on 'Profile'
 
           is_expected.to have_content 'akira has made 2 contributions ' \
-          "so far in Christmas #{Time.zone.now.year}"
+          "so far during the #{Time.zone.now.year} holidays"
 
-          is_expected.to have_link gift.pull_request.title
+          is_expected.to have_link gift.contribution.title
 
-          click_on 'Pull Requests'
-          is_expected.to have_content pull_requests.last.title
+          click_on 'Contributions'
+          is_expected.to have_content contributions.last.title
         end
 
         context 'with ignored organisations' do
@@ -60,12 +60,12 @@ describe 'Users', type: :request do
             click_on 'Profile'
 
             is_expected.to have_content 'akira has made 1 contribution ' \
-              "so far in Christmas #{Time.zone.now.year}"
+              "so far during the #{Time.zone.now.year} holidays"
 
             is_expected.to have_link "Moar foos"
             is_expected.to have_link "Hi baz"
 
-            click_on 'Pull Requests'
+            click_on 'Contributions'
             is_expected.to_not have_link "foo/bar"
             is_expected.to have_link "baz/qux"
           end

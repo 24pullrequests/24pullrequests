@@ -36,6 +36,10 @@ ta:
     description: 24 Pull Requests ஒரு சிறிய திட்டம்.  இது டிசம்பர் காலத்தில்  open source collaboration-ஐ  ஊக்குவிக்கிறது.
     idea: அடிப்படையில் இந்த யோசனை,  டிசம்பரிலிருந்து  கிறிஸ்துமஸ் வரை  ஒவ்வொரு நாளும் ஒரு  pull request-ஐ  அனுப்ப contributors-ஐ  டிசம்பர் முழுவதும் பரிசு கொடுத்து ஊக்குவிக்கிறது.
     more_info: மேலும், இந்த  தளம் உதவி ஆலோசனை திட்டங்கள் வழங்குகிறது பங்களிப்பு வழிகாட்டிகள் மற்றும் ஒவ்வொரு நாளும் சமர்ப்பிக்கப்பட்ட நல்ல pull requests-களை உயர்த்தி காட்டுகிறது.
+    idea_title: 
+    idea_subtitle:
+    where_to_find_us: 
+    on_gitter: 
     on_github: 'இந்த  தளம் வளர்ச்சி GitHub-ல் open source-ஆக  இருக்கிறது:'
     on_twitter: 'மேலும், நாம் ட்விட்டர்-ல்  இருக்கிறோம்:'
     title: 24 Pull Requests பற்றி
@@ -76,7 +80,7 @@ ta:
     pull_requests:
       details: Load all pull requests by users of the site during December, ordered by newest first, also includes the user who made the pull request.
       meta_details: Load information about all the pull requests this year.
-      title: Pull Requests
+      title: Contributions
     users:
       details: Load all users who have signed up to the site, ordered by how many pull requests they have sent so far in December, also includes their organisation(s) and pull requests.
       specific: Load information for a specific user.
@@ -152,7 +156,7 @@ ta:
     form:
       date: தேதி
       gift_it: பரிசு கொடு!
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet: உங்கள் பரிசு பற்றி ட்வீட்  செய்!
   homepage:
     about: அது என்ன பற்றியது?
@@ -283,7 +287,7 @@ ta:
       edit: தொகுத்து அமைக்க கருத்து
       update: திட்டம் மேம்படுத்தல்
   pull_request:
-    twitter_message: 'நான் ஒரு ''pull request''-ஐ  http://24pullrequests.com-க்கு பரிசளித்துள்ளேன். இங்கு சென்று பாருங்கள்: %{issue_url}'
+    twitter_message: 'நான் ஒரு ''pull request''-ஐ  https://24pullrequests.com-க்கு பரிசளித்துள்ளேன். இங்கு சென்று பாருங்கள்: %{issue_url}'
     download:
       tooltip: பொதுவாக நாங்கள் 'pull request'-களை ஒவ்வொரு மணிதோரும் பார்க்கிறோம். நீங்கள் விரும்பினால் இப்போதே பார்க்கலாம்
   pull_requests:
@@ -310,6 +314,6 @@ ta:
   user:
     no_current_pr_message:
     organisations: Member of...
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

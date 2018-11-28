@@ -2,14 +2,21 @@
   <%= t("about.title") %>
 </h2>
 <p>
-  <%= t("about.description") %>
+  <%= t("about.description") %> <%= t("about.more_info").html_safe %>
+</p>
+<h3>
+  <%= t("about.idea_title") %>
+</h3>
+<p>
+  <%= t("about.idea_subtitle") %>
 </p>
 <p>
   <%= t("about.idea") %>
 </p>
-<p>
-  <%= t("about.more_info") %>
-</p>
+
+<h3>
+  <%= t("about.where_to_find_us") %>
+</h3>
 <p>
   <%= t("about.on_github") %>
   <%= link_to 'github.com/24pullrequests/24pullrequests', 'https://github.com/24pullrequests/24pullrequests' %>
@@ -18,12 +25,27 @@
   <%= t("about.on_twitter") %>
   <%= link_to 'twitter.com/24pullrequests', 'https://twitter.com/24pullrequests' %>
 </p>
-<section>
-  <h3>
-    <%= t("about.sponsors.title") %>
-  </h3>
-  <p>
-    <%= raw("#{t("about.sponsors.details")} #{link_to(t("about.sponsors.thanks"), sponsors_path)}") %>
-  </p>
+<p>
+  <%= t("about.on_gitter") %>
+  <%= link_to 'gitter.im/24pullrequests', 'https://gitter.im/24pullrequests' %>
+</p>
+
+<h3>
+  <%= t("about.sponsors.title") %>
+</h3>
+<p>
+  <%= "#{t("about.sponsors.details")} #{t("about.sponsors.thanks")}" %>
+</p>
+<section class="clearfix">
+  <%= link_to 'https://bugsnag.com/', :class => 'col-md-3' do %>
+    <%= image_tag 'sponsors/bugsnag.png', :class => 'thumbnail', :alt => 'Bugsnag' %>
+  <% end %>
+  <%= link_to 'https://dnsimple.com', :class => 'col-md-3' do %>
+    <%= image_tag 'sponsors/dnsimple.png', :class => 'thumbnail', :alt => 'dnsimple' %>
+  <% end %>
+  <%= link_to 'https://octobox.io', :class => 'col-md-3' do %>
+    <%= image_tag 'sponsors/octobox.png', height: 85, :class => 'thumbnail', :alt => 'Octobox' %>
+  <% end %>
 </section>
+
 <%= render 'contributors', users: @contributors %>

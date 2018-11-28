@@ -82,8 +82,8 @@ describe 'Dashboard', type: :request do
 
     describe 'dashboard' do
       before do
-        create(:pull_request, user: user, repo_name: 'foo/bar')
-        create(:pull_request, user: user, repo_name: 'baz/bar')
+        create(:contribution, user: user, repo_name: 'foo/bar')
+        create(:contribution, user: user, repo_name: 'baz/bar')
         visit dashboard_path
       end
 

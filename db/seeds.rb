@@ -10,7 +10,7 @@
 if Rails.env.development?
 
   User.delete_all
-  PullRequest.delete_all
+  Contribution.delete_all
   Gift.delete_all
   Event.delete_all
   Project.delete_all
@@ -40,9 +40,9 @@ if Rails.env.development?
 
     PULL_REQUESTS.to_a.sample.times do |i|
       date = Faker::Time.between(DECEMBER_FIRST, DECEMBER_FIRST + 23.days, :day)
-      create :pull_request, user: user, created_at: date
+      create :contribution, user: user, created_at: date
     end
-    user.gift_unspent_pull_requests!
+    user.gift_unspent_contributions!
   end
 
   labels = LABELS.map do |name|

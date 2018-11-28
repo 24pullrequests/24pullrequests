@@ -1,8 +1,8 @@
-class PullRequest < ApplicationRecord
+class Contribution < ApplicationRecord
   belongs_to :user
   belongs_to :merger, class_name: 'User', foreign_key: :merged_by_id, primary_key: :uid
-  after_save { if user then user.update_pull_request_count end }
-  after_destroy { if user then user.update_pull_request_count end }
+  after_save { if user then user.update_contribution_count end }
+  after_destroy { if user then user.update_contribution_count end }
 
   validates :issue_url, uniqueness: { scope: :user_id }
 
@@ -10,7 +10,7 @@ class PullRequest < ApplicationRecord
 
   has_many :gifts
 
-  scope :year, -> (year) { where('EXTRACT(year FROM pull_requests.created_at) = ?', year) }
+  scope :year, -> (year) { where('EXTRACT(year FROM contributions.created_at) = ?', year) }
   scope :by_language, -> (language) { where('lower(language) = ?', language.downcase) }
   scope :latest, -> (limit) { order('created_at desc').limit(limit) }
   scope :for_aggregation, -> {
@@ -26,7 +26,7 @@ class PullRequest < ApplicationRecord
 
   class << self
     def active_users(year)
-      User.where(id: PullRequest.year(year).map(&:user_id).compact.uniq)
+      User.where(id: Contribution.year(year).map(&:user_id).compact.uniq)
     end
 
     def create_from_github(json)
@@ -83,7 +83,7 @@ class PullRequest < ApplicationRecord
 
   def autogift
     return unless created_at.year == Tfpullrequests::Application.current_year
-    user.new_gift(pull_request: self).save if body && body.scan(/24 ?pull ?request/i).any?
+    user.new_gift(contribution: self).save if body && body.scan(/24 ?pull ?request/i).any?
   end
 
   private

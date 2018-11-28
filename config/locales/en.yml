@@ -31,11 +31,15 @@ en:
   view_all: View All
   welcome: Welcome, %{user}!
   welcome_back: Welcome back, %{user}
-  your_pull_requests: Your Pull Requests
+  your_pull_requests: Your Contributions
   about:
-    description: 24 Pull Requests is a little project to promote open source collaboration during December.
-    idea: The idea is basically "Send 24 pull requests between December 1st and December 24th", encouraging contributors to give back to open source with little gifts of code throughout December.
-    more_info: The site also provides suggested projects to help with, guides for contributing and highlights good contributions submitted each day.
+    description: 24 Pull Requests' goal is to encourage contribution to open source projects during December.
+    idea: "The idea is simple: 'Send 24 pull requests between December 1st and December 24th', encouraging contributors to give back to open source projects with little gifts of code throughout December."
+    more_info: The site suggests open projects, highlights tickets that are good for new contributors, provides <a href='/contributing'>guides for contributing</a> and promotes good contributions submitted each day.
+    idea_title: Giving back to open source.
+    idea_subtitle: Open source software has probably made you more productive this year. Let's give something back.
+    where_to_find_us: "Where to find us"
+    on_gitter: 'Chat with the community on Gitter:'
     on_github: 'Our code is located on GitHub:'
     on_twitter: 'We are also on Twitter:'
     title: About 24 Pull Requests
@@ -76,7 +80,7 @@ en:
     pull_requests:
       details: Load all contributions by users of the site during December, ordered by newest first, also includes the user who made the contribution.
       meta_details: Load information about all the contributions this year.
-      title: Pull Requests
+      title: Contributions
     users:
       details: Load all users who have signed up to the site, ordered by how many contributions they have sent so far in December, also includes their organisation(s) and contributions.
       specific: Load information for a specific user.
@@ -84,7 +88,7 @@ en:
   contributors:
     title: Contributors
   dashboard:
-    christmas_activity: This is where you can see all the activity we’ve tracked for you in the run up to Christmas.
+    christmas_activity: This is where you can see all the activity we’ve tracked for you in the run up to the holidays.
     gift_it: Gift it!
     give_a_gift: Looks like you haven’t gifted any code today. Would you like to gift your new contributions?
     help_out: Can’t think of a project you’d like to help contribute to? We’ve put together a list of popular projects here.
@@ -103,7 +107,7 @@ en:
     notification_info: If you simply want to stop receiving email notifications you can change your  %{email_preferences_link}.
     title: Delete your account
   events:
-    details: You don’t have to hack alone this Christmas! Host a 24 Pull Requests hack event at your company, technology meetup, or in your local community. Or you can join a hack event and code together.
+    details: You don’t have to hack alone this holiday season! Host a 24 Pull Requests hack event at your company, technology meetup, or in your local community. Or you can join a hack event and code together.
     save_event: Save event
     title: Events
     admin:
@@ -152,12 +156,12 @@ en:
     form:
       date: Date
       gift_it: Gift it!
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet: Tweet about your gift!
   homepage:
     about: What’s it all about?
     about_text: "<p>24 Pull Requests is a yearly initiative to encourage contributors around the world to send 24 pull requests between December 1st and December 24th.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your contributions.</p><p>Log in with your GitHub account and we’ll track and highlight all your contributions and suggest projects to work on.</p>"
-    description: Giving back little gifts of code for Christmas
+    description: Giving back to open source for the holidays
     give_to_open_source: You’ve been benefiting from the use of open source projects all year. Now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving contributions!
     greeting: "’Tis the season"
     join_the_chat: Join the chat on Gitter, %{link_to_chat}.
@@ -165,7 +169,7 @@ en:
     q_n_a: Questions & Answers
     title: 24 Pull Requests
     event:
-      description: This year we are encouraging organisers around the world to hold 24 Pull Requests hack events. Get involved this Christmas.
+      description: This year we are encouraging organisers around the world to hold 24 Pull Requests hack events. Get involved this holiday season.
       host_an_event: Host an event
       title: Events
       view_events: View events
@@ -196,7 +200,7 @@ en:
       suggest: Suggest a %{language} project
     pull_requests:
       latest:
-        count: Latest %{language} Pull Requests (%{count} total)
+        count: Latest %{language} Contributions (%{count} total)
   locale:
     cs: Čeština
     de: Deutsch
@@ -283,15 +287,15 @@ en:
       edit: Edit Suggestion
       update: Update Project
   pull_request:
-    twitter_message: 'I just gifted an open source contribution for http://24pullrequests.com, check it out: %{issue_url}'
+    twitter_message: 'I just gifted an open source contribution for https://24pullrequests.com, check it out: %{issue_url}'
     download:
       tooltip: We usually check for pull requests every hour, but you can check now.
   pull_requests:
-    count: "%{count} Pull Requests already made!"
+    count: "%{count} contributions already made!"
     language:
       count: "%{count} contributions already made in %{language}!"
     latest:
-      count: Latest Pull Requests (%{count} total)
+      count: Latest Contributions (%{count} total)
   suggestions:
     title: My Suggestions
   twitter:
@@ -310,6 +314,6 @@ en:
   user:
     no_current_pr_message: "%{user} has gifted no contributions this year. <a href='https://github.com/24pullrequests/24pullrequests/blob/master/CONTRIBUTING.md'>Can we help you get started?</a>"
     organisations: Member of...
-    pull_request_count:
-      one: "%{user} has made %{count} contribution so far in Christmas %{year}"
-      other: "%{user} has made %{count} contributions so far in Christmas %{year}"
+    contribution_count:
+      one: "%{user} has made %{count} contribution so far during the %{year} holidays"
+      other: "%{user} has made %{count} contributions so far during the %{year} holidays"

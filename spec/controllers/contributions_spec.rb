@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-describe PullRequestsController, type: :controller do
+describe ContributionsController, type: :controller do
   describe 'GET index' do
     context 'as json' do
       before do
-        create :pull_request
+        create :contribution
         get :index, format: :json
       end
 

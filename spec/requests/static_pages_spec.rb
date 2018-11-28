@@ -7,7 +7,7 @@ describe 'Static pages', type: :request do
   describe 'home page' do
     before do
       2.times { create :project }
-      5.times { create :pull_request }
+      5.times { create :contribution }
       visit root_path
     end
 

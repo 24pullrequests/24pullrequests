@@ -9,7 +9,7 @@ class GiftsController < ApplicationController
 
   def new
     gift_form = GiftForm.new(gift:           current_user.new_gift,
-                             pull_requests:  current_user.unspent_pull_requests,
+                             contributions:  current_user.unspent_contributions,
                              giftable_dates: Gift.giftable_dates,
                              date:           params['date'])
 
@@ -20,7 +20,7 @@ class GiftsController < ApplicationController
     gift = current_user.new_gift(gift_params)
 
     if gift.save
-      gift.pull_request.post_tweet if tweet?
+      gift.contribution.post_tweet if tweet?
       gift_given
     else
       gift_failed(gift)
@@ -29,7 +29,7 @@ class GiftsController < ApplicationController
 
   def edit
     gift_form = GiftForm.new(gift:          gift,
-                             pull_requests: current_user.unspent_pull_requests)
+                             contributions: current_user.unspent_contributions)
 
     render :new, locals: { gift_form: gift_form }
   end
@@ -55,8 +55,8 @@ class GiftsController < ApplicationController
   end
 
   def gift_params
-    pull_request = current_user.pull_requests.year(current_year).find_by_id(pull_request_id)
-    post_params.merge(pull_request: pull_request)
+    contribution = current_user.contributions.year(current_year).find_by_id(contribution_id)
+    post_params.merge(contribution: contribution)
   end
 
   def gift_given
@@ -65,14 +65,14 @@ class GiftsController < ApplicationController
 
   def gift_failed(gift)
     gift_form = GiftForm.new(gift:           gift,
-                             pull_requests:  current_user.unspent_pull_requests,
+                             contributions:  current_user.unspent_contributions,
                              giftable_dates: Gift.giftable_dates)
 
     render :new, locals: { gift_form: gift_form }
   end
 
-  def pull_request_id
-    gift_permitted_params[:pull_request_id]
+  def contribution_id
+    gift_permitted_params[:contribution_id]
   end
 
   def post_params
@@ -80,7 +80,7 @@ class GiftsController < ApplicationController
   end
 
   def gift_permitted_params
-    params.require(:gift).permit(:pull_request_id, :date, :tweet)
+    params.require(:gift).permit(:contribution_id, :date, :tweet)
   end
 
   def tweet?

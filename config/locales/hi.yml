@@ -36,6 +36,10 @@ hi:
     description: 24 Pull Requests दिसंबर के दौरान ओपन सोर्स सहयोग को बढ़ावा देने के लिए एक छोटी परियोजना है।
     idea: मूल रूप से इसका विचार "1 दिसंबर से 24 दिसम्बर के बीच 24 Pull Requests भेजना है", डेवलपर्स को पूरे दिसंबर में कोड के छोटे उपहार के साथ स्रोत खोलने के लिए प्रोत्साहित करना है।
     more_info: यह साइट प्रत्येक दिन सबमिट किए गए अच्छे Pull Requests के साथ-साथ सहायता के लिए मार्गदर्शन, मार्गदर्शिका देने और हाइलाइट करने के लिए सुझाए गए परियोजनाओं को भी प्रदान करता है।
+    idea_title: 
+    idea_subtitle:
+    where_to_find_us: 
+    on_gitter: 
     on_github: 'हमारा कोड GitHub पर उपलब्ध है:'
     on_twitter: 'हम ट्विटर पर भी हैं:'
     title: 24 Pull Requests के बारे में
@@ -76,7 +80,7 @@ hi:
     pull_requests:
       details: दिसंबर के दौरान साइट के प्रयोक्ताओं द्वारा सभी Pull Requests को लोड करें, जिन्हें नवीनता के कर्म में लगाएं, जिसमें उस Pull Requests को भी शामिल किया गया।
       meta_details: इस साल सभी Pull Requests के बारे में जानकारी लोड करें
-      title: Pull Requests
+      title: Contributions
     users:
       details: उन सभी उपयोगकर्ताओं को लोड करें, जिन्होंने साइट पर साइन अप किया है, दिसंबर में कितने Pull Requests भेजे हैं, उनके आदेश में, उनके संगठन(ोँ) और अनुरोधों को खींच भी शामिल है
       specific: विशिष्ट उपयोगकर्ता के लिए जानकारी लोड करें
@@ -152,7 +156,7 @@ hi:
     form:
       date: तारीख
       gift_it: इसे उपहार करें!
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet: अपने उपहार के बारे में ट्वीट करें!
   homepage:
     about: यह सब किसके बारे में है?
@@ -285,7 +289,7 @@ hi:
       edit: सुझाव संपादित करें
       update: प्रोजेक्ट अपडेट करें
   pull_request:
-    twitter_message: 'मैं सिर्फ http://24pullrequests.com के लिए एक पुल अनुरोध उपहार में दिया, इसे देखें: %{issue_url}'
+    twitter_message: 'मैं सिर्फ https://24pullrequests.com के लिए एक पुल अनुरोध उपहार में दिया, इसे देखें: %{issue_url}'
     download:
       tooltip: हम आमतौर पर हर घंटे पुल अनुरोधों की जांच करते हैं, लेकिन अब आप जांच सकते हैं
   pull_requests:
@@ -312,6 +316,6 @@ hi:
   user:
     no_current_pr_message:
     organisations: "...का सदस्य"
-    pull_request_count:
+    contribution_count:
       one: "%{user} ने %{count} को क्रिसमस %{year} में अब तक Pull Request किया है"
       other: "%{user} ने %{count} को क्रिसमस %{year} में अभी तक Pull Request किया है"

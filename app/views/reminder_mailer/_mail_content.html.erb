@@ -3,14 +3,14 @@
   Only
   <%= 25 - Time.zone.today.day %>
   <% if (25 - Time.zone.today.day) > 1 %>
-    days left until Christmas!
+    days left until the holiday season!
   <% else %>
-    day left until Christmas!
+    day left until the holiday season!
   <% end %>
 </p>
 <p>We've got some suggested projects for you to contribute to <%= this_time %>.</p>
 <p>
-  <% if @user.pull_requests.year(Tfpullrequests::Application.current_year).any? %>
+  <% if @user.contributions.year(Tfpullrequests::Application.current_year).any? %>
     You can view the contributions you've made so far at <%= link_to nil, dashboard_url %>.
   <% else %>
     You haven't made any contributions yet. Once you make a contribution, you can view your progress at <%= link_to nil, dashboard_url %>.
