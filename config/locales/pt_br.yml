@@ -80,7 +80,7 @@ pt_br:
     pull_requests:
       details: Retorna todos os pull requests dos usuários do site durante dezembro, ordenados por data, mais novos primeiro. também inclui o usuário que fez o pull request.
       meta_details: Coloque informações sobre todos os pedidos de puxar este ano.
-      title: Pull Requests
+      title: Contributions
     users:
       details: Retorna todos os usuários que se increveram no site, ordenado pela quantidade de pull requests enviados durante o mês de dezembro. Também inclui suas organizações de pull requests.
       specific: Retorna informações de um usuário em específico.
@@ -156,7 +156,7 @@ pt_br:
     form:
       date: Data
       gift_it: Presenteie
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet: Tweete este presente!
   homepage:
     about: Sobre o que é isso tudo?
@@ -314,6 +314,6 @@ pt_br:
   user:
     no_current_pr_message:
     organisations: Membro de...
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

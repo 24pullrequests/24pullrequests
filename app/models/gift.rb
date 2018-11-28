@@ -6,18 +6,18 @@ class Gift < ApplicationRecord
   attr_accessor :tweet
 
   belongs_to :user
-  belongs_to :pull_request
+  belongs_to :contribution
 
   validates :user, presence: true
-  validates :pull_request, presence: true
-  validates :pull_request, uniqueness: { message: 'you can only gift each contribution once!' }
+  validates :contribution, presence: true
+  validates :contribution, uniqueness: { message: 'you can only gift each contribution once!' }
   validates :date, presence:   true,
                    uniqueness: { scope:   :user_id,
                                  message: 'you only need one gift per day. Save it for tomorrow!' },
                    inclusion:  { in:      proc { Gift.giftable_dates },
                                  message: 'your gift should be for the month of December.' }
 
-  delegate :title, :issue_url, to: :pull_request, prefix: :pull_request
+  delegate :title, :issue_url, to: :contribution, prefix: :contribution
 
   scope :year, -> (year) { where('EXTRACT(year FROM "created_at") = ?', year) }
 

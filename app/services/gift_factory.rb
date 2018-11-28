@@ -21,6 +21,6 @@ class GiftFactory
   private
 
   def earliest_free_gift_date
-    @user.ungifted_dates.first || PullRequest::EARLIEST_PULL_DATE
+    @user.ungifted_dates.first || Contribution::EARLIEST_PULL_DATE
   end
 end

@@ -1,6 +1,6 @@
 desc 'Send daily emails'
 task send_emails: :environment do
-  next unless PullRequest.in_date_range?
+  next unless Contribution.in_date_range?
 
   User.all.find_each do |user|
     Notification.new(user).send_email # rescue nil

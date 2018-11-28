@@ -1,4 +1,4 @@
-class PullRequestsController < ApplicationController
+class ContributionsController < ApplicationController
   respond_to :html, :json
 
   def index
@@ -14,6 +14,6 @@ class PullRequestsController < ApplicationController
   protected
 
   def pull_requests
-    PullRequest.year(current_year).order('created_at desc').includes(:user)
+    Contribution.year(current_year).order('created_at desc').includes(:user)
   end
 end

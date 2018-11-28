@@ -31,7 +31,7 @@ en:
   view_all: View All
   welcome: Welcome, %{user}!
   welcome_back: Welcome back, %{user}
-  your_pull_requests: Your Pull Requests
+  your_pull_requests: Your Contributions
   about:
     description: 24 Pull Requests' goal is to encourage contribution to open source projects during December.
     idea: "The idea is simple: 'Send 24 pull requests between December 1st and December 24th', encouraging contributors to give back to open source projects with little gifts of code throughout December."
@@ -80,7 +80,7 @@ en:
     pull_requests:
       details: Load all contributions by users of the site during December, ordered by newest first, also includes the user who made the contribution.
       meta_details: Load information about all the contributions this year.
-      title: Pull Requests
+      title: Contributions
     users:
       details: Load all users who have signed up to the site, ordered by how many contributions they have sent so far in December, also includes their organisation(s) and contributions.
       specific: Load information for a specific user.
@@ -156,7 +156,7 @@ en:
     form:
       date: Date
       gift_it: Gift it!
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet: Tweet about your gift!
   homepage:
     about: What’s it all about?
@@ -200,7 +200,7 @@ en:
       suggest: Suggest a %{language} project
     pull_requests:
       latest:
-        count: Latest %{language} Pull Requests (%{count} total)
+        count: Latest %{language} Contributions (%{count} total)
   locale:
     cs: Čeština
     de: Deutsch
@@ -291,11 +291,11 @@ en:
     download:
       tooltip: We usually check for pull requests every hour, but you can check now.
   pull_requests:
-    count: "%{count} Pull Requests already made!"
+    count: "%{count} contributions already made!"
     language:
       count: "%{count} contributions already made in %{language}!"
     latest:
-      count: Latest Pull Requests (%{count} total)
+      count: Latest Contributions (%{count} total)
   suggestions:
     title: My Suggestions
   twitter:
@@ -314,6 +314,6 @@ en:
   user:
     no_current_pr_message: "%{user} has gifted no contributions this year. <a href='https://github.com/24pullrequests/24pullrequests/blob/master/CONTRIBUTING.md'>Can we help you get started?</a>"
     organisations: Member of...
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} contribution so far during the %{year} holidays"
       other: "%{user} has made %{count} contributions so far during the %{year} holidays"

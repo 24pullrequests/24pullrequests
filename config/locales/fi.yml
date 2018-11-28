@@ -156,7 +156,7 @@ fi:
     form:
       date:
       gift_it:
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet:
   homepage:
     about: Mistä tästä kaikesta on kyse?
@@ -314,6 +314,6 @@ fi:
   user:
     no_current_pr_message:
     organisations:
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

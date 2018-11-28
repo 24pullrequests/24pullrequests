@@ -4,11 +4,11 @@ describe PullRequestsDecorator do
 
   before do
     100.times do
-      FactoryBot.create :pull_request, body: 'happy 24 pull requests!'
+      FactoryBot.create :contribution, body: 'happy 24 pull requests!'
     end
   end
 
-  subject { PullRequestsDecorator.new(PullRequest.all) }
+  subject { PullRequestsDecorator.new(Contribution.all) }
 
   describe '#attributes' do
 

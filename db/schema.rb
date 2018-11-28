@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2017_11_30_191208) do
+ActiveRecord::Schema.define(version: 2018_11_23_153926) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,21 @@ ActiveRecord::Schema.define(version: 2017_11_30_191208) do
     t.integer "comments_count", default: 0
   end
 
+  create_table "contributions", id: :serial, force: :cascade do |t|
+    t.string "title"
+    t.string "issue_url"
+    t.text "body"
+    t.string "state"
+    t.boolean "merged"
+    t.datetime "created_at"
+    t.string "repo_name"
+    t.integer "user_id"
+    t.string "language"
+    t.integer "comments_count", default: 0
+    t.integer "merged_by_id"
+    t.index ["user_id"], name: "index_contributions_on_user_id"
+  end
+
   create_table "events", id: :serial, force: :cascade do |t|
     t.string "name"
     t.string "location"
@@ -53,11 +68,11 @@ ActiveRecord::Schema.define(version: 2017_11_30_191208) do
 
   create_table "gifts", id: :serial, force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "pull_request_id", null: false
+    t.integer "contribution_id", null: false
     t.date "date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id", "pull_request_id"], name: "index_gifts_on_user_id_and_pull_request_id", unique: true
+    t.index ["user_id", "contribution_id"], name: "index_gifts_on_user_id_and_contribution_id", unique: true
   end
 
   create_table "labels", id: :serial, force: :cascade do |t|
@@ -72,7 +87,7 @@ ActiveRecord::Schema.define(version: 2017_11_30_191208) do
     t.integer "github_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "pull_request_count", default: 0
+    t.integer "contribution_count", default: 0
     t.index ["login"], name: "index_organisations_on_login", unique: true
   end
 
@@ -118,21 +133,6 @@ ActiveRecord::Schema.define(version: 2017_11_30_191208) do
     t.integer "comments_count", default: 0
   end
 
-  create_table "pull_requests", id: :serial, force: :cascade do |t|
-    t.string "title"
-    t.string "issue_url"
-    t.text "body"
-    t.string "state"
-    t.boolean "merged"
-    t.datetime "created_at"
-    t.string "repo_name"
-    t.integer "user_id"
-    t.string "language"
-    t.integer "comments_count", default: 0
-    t.integer "merged_by_id"
-    t.index ["user_id"], name: "index_pull_requests_on_user_id"
-  end
-
   create_table "skills", id: :serial, force: :cascade do |t|
     t.integer "user_id"
     t.string "language"
@@ -151,7 +151,7 @@ ActiveRecord::Schema.define(version: 2017_11_30_191208) do
     t.string "gravatar_id"
     t.string "token"
     t.string "email_frequency"
-    t.integer "pull_requests_count", default: 0
+    t.integer "contributions_count", default: 0
     t.datetime "last_sent_at"
     t.string "twitter_token"
     t.string "twitter_secret"

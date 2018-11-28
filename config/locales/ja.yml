@@ -156,7 +156,7 @@ ja:
     form:
       date: Date
       gift_it: Gift it!
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet: Tweet about your gift!
   homepage:
     about: What's it all about?
@@ -314,6 +314,6 @@ ja:
   user:
     no_current_pr_message:
     organisations: 組織
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

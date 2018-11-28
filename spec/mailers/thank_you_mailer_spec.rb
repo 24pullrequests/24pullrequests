@@ -6,7 +6,7 @@ describe ThankYouMailer, type: :mailer do
     let(:user) do
       mock_model(User, nickname:            'David',
                        email:               'david@example.com',
-                       pull_requests_count: 24,
+                       contributions_count: 24,
                        confirmation_token:  token)
     end
     let(:mail) { ThankYouMailer.thank_you(user) }

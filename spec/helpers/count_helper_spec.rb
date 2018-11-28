@@ -15,12 +15,12 @@ describe CountHelper, type: :helper do
       end
     end
 
-    describe '#pull_request_count_for_language' do
+    describe '#contribution_count_for_language' do
       it 'returns the number of pull requests using the given language' do
-        5.times { create :pull_request, language: 'Erlang' }
-        3.times { create :pull_request, language: 'Erlang', created_at: Time.zone.today - 1.year }
+        5.times { create :contribution, language: 'Erlang' }
+        3.times { create :contribution, language: 'Erlang', created_at: Time.zone.today - 1.year }
 
-        expect(helper.pull_request_count_for_language).to eql(5)
+        expect(helper.contribution_count_for_language).to eql(5)
       end
     end
 
@@ -33,21 +33,21 @@ describe CountHelper, type: :helper do
     end
   end
 
-  describe '#pull_request_count' do
+  describe '#contribution_count' do
     before do
-      1.times { create :pull_request, language: 'HTML' }
-      2.times { create :pull_request, language: 'Ruby' }
-      4.times { create :pull_request, created_at: DateTime.now - 1.year }
+      1.times { create :contribution, language: 'HTML' }
+      2.times { create :contribution, language: 'Ruby' }
+      4.times { create :contribution, created_at: DateTime.now - 1.year }
     end
 
     it 'returns the number of pull requests in the current year' do
-      expect(helper.pull_request_count).to eql(3)
+      expect(helper.contribution_count).to eql(3)
     end
 
     it 'returns the number of all pull requests in a given language' do
       @language = 'ruby'
 
-      expect(helper.pull_request_count).to eql(2)
+      expect(helper.contribution_count).to eql(2)
     end
   end
 

@@ -67,7 +67,7 @@ end
 namespace :projects do
   desc 'Fetch contribulator scores'
   task :contribulator => :environment do
-    next unless PullRequest.in_date_range?
+    next unless Contribution.in_date_range?
 
     api = JsonApi::PaginatedCollection.new(
       domain: 'https://contribulator.24pullrequests.com',

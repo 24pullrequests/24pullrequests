@@ -108,4 +108,6 @@ RSpec.configure do |config|
       with.library :rails
     end
   end
+
+  Capybara.server = :puma, { Silent: true }
 end

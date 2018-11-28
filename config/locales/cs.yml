@@ -36,10 +36,10 @@ cs:
     description: 24 Pull Requests je malý projekt sloužící k propagaci open source spolupráce během prosince.
     idea: Nápad je jednoduše "poslat pull request každý prosincový den před Vánoci", čímž mohou vývojáři darovat malé dárečky ostatním vývojářům.
     more_info: Tyto stránky také nabízejí seznam projektů, kterým je možné pomoci, příručky jak pomoci a vybrané pull requesty každý den.
-    idea_title: 
+    idea_title:
     idea_subtitle:
-    where_to_find_us: 
-    on_gitter: 
+    where_to_find_us:
+    on_gitter:
     on_github: 'Náš kód je na GitHubu:'
     on_twitter: 'Jsme také na Twitteru:'
     title: O 24 Pull Requests
@@ -80,7 +80,7 @@ cs:
     pull_requests:
       details: Load all pull requests by users of the site during December, ordered by newest first, also includes the user who made the pull request.
       meta_details: Load information about all the pull requests this year.
-      title: Pull Requests
+      title: Contributions
     users:
       details: Load all users who have signed up to the site, ordered by how many pull requests they have sent so far in December, also includes their organisation(s) and pull requests.
       specific: Load information for a specific user.
@@ -314,6 +314,6 @@ cs:
   user:
     no_current_pr_message:
     organisations: Člen
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

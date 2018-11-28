@@ -9,14 +9,14 @@ describe 'LanguagesRequests', type: :request do
       6.times { create :project, main_language: 'Haskell' }
       1.times { create :project, inactive: true, main_language: 'Haskell' }
       3.times { create :skill, language: 'Haskell' }
-      9.times { create :pull_request, language: 'Haskell' }
+      9.times { create :contribution, language: 'Haskell' }
 
       visit language_path('haskell')
     end
 
     it { is_expected.to have_content '3 Contributors' }
     it { is_expected.to have_content '6 Haskell Projects' }
-    it { is_expected.to have_content 'Latest Haskell Pull Requests (9 total)' }
+    it { is_expected.to have_content 'Latest Haskell Contributions (9 total)' }
 
     describe 'view all' do
       it '#projects' do
@@ -31,8 +31,8 @@ describe 'LanguagesRequests', type: :request do
         is_expected.to have_content '3 Contributors using Haskell'
       end
 
-      it '#pull_requests' do
-        within('#pull_requests') { click_on 'View All' }
+      it '#contributions' do
+        within('#contributions') { click_on 'View All' }
 
         is_expected.to have_content '9 contributions already made in Haskell!'
       end
