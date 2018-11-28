@@ -2,13 +2,13 @@ require 'rails_helper'
 
 describe GiftFactory do
   let(:user) { FactoryBot.create(:user) }
-  let(:pull_request) { FactoryBot.create(:pull_request) }
+  let(:contribution) { FactoryBot.create(:contribution) }
   let(:gift_factory) { Gift.public_method(:new) }
 
   describe "#create!" do
     it "generates a new gift for the user" do
-      gift = GiftFactory.create!(user, gift_factory, pull_request_id: pull_request.id)
-      expect(gift.pull_request).to eq(pull_request)
+      gift = GiftFactory.create!(user, gift_factory, contribution_id: contribution.id)
+      expect(gift.contribution).to eq(contribution)
     end
   end
 
@@ -17,7 +17,7 @@ describe GiftFactory do
       factory = GiftFactory.new(user, gift_factory)
       gift = factory.create_from_attrs({})
 
-      expect(gift.date).to eq(PullRequest::EARLIEST_PULL_DATE)
+      expect(gift.date).to eq(Contribution::EARLIEST_PULL_DATE)
     end
   end
 
@@ -26,7 +26,7 @@ describe GiftFactory do
       before do
         user.gifts.create!({
           user: user,
-          pull_request: pull_request,
+          contribution: contribution,
           date: Date.new(Tfpullrequests::Application.current_year, 12, 5)
         })
       end
@@ -35,7 +35,7 @@ describe GiftFactory do
         factory = GiftFactory.new(user, gift_factory)
         gift = factory.create_from_attrs({})
 
-        expect(gift.date).to eq(PullRequest::EARLIEST_PULL_DATE)
+        expect(gift.date).to eq(Contribution::EARLIEST_PULL_DATE)
       end
     end
   end

@@ -29,20 +29,20 @@ describe Downloader do
     it "creates a copy of all the user's pull requests" do
       downloader.get_pull_requests
 
-      expect(user.pull_requests.first.title).to eq(pull_request['payload']['pull_request']['title'])
+      expect(user.contributions.first.title).to eq(pull_request['payload']['pull_request']['title'])
     end
 
     it 'when the pull request does not already exist it creates it' do
       downloader.get_pull_requests
 
-      expect(user.pull_requests.length).to eq(1)
+      expect(user.contributions.length).to eq(1)
     end
 
     it "when the pull request already exists it doesn't recreate it" do
       double(:user_downloader, pull_requests: [pull_request, pull_request])
       downloader.get_pull_requests
 
-      expect(user.pull_requests.length).to eq(1)
+      expect(user.contributions.length).to eq(1)
     end
 
     it "when the pull request already exists it updates it" do
@@ -55,9 +55,9 @@ describe Downloader do
       double(:user_downlaoder, pull_requests: [pull_request, updated_pull_request])
       downloader.get_pull_requests
 
-      expect(user.pull_requests.length).to eq(1)
-      expect(user.pull_requests.first.title).to eq(old_title + 'updated')
-      expect(user.pull_requests.first.body).to eq(old_body + 'updated')
+      expect(user.contributions.length).to eq(1)
+      expect(user.contributions.first.title).to eq(old_title + 'updated')
+      expect(user.contributions.first.body).to eq(old_body + 'updated')
     end
 
     it "when there are no gifts for today it gifts a pull request" do

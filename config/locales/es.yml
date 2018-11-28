@@ -80,7 +80,7 @@ es:
     pull_requests:
       details: Carga todos los Pull Requests de los usuarios del site durante Diciembre, ordenados por los más recientes primero, también incluye el usuario que ha realizado el Pull Request.
       meta_details: Carga información sobre todos los Pull Requests de este año.
-      title: Pull Requests
+      title: Contributions
     users:
       details: Carga todos los usuarios que se han dado de alta en el site, ordenados por la cantidad de Pull Requests que han enviado durante Diciembre, también incluye su(s) organizacion(es) y Pull Requests.
       specific: Carga información de un usuario específico.
@@ -156,7 +156,7 @@ es:
     form:
       date: Fecha
       gift_it: "¡Regálalo!"
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet: "¡Tweetea sobre tu regalo!"
   homepage:
     about: "¿De qué se trata?"
@@ -314,6 +314,6 @@ es:
   user:
     no_current_pr_message:
     organisations: Miembro de ...
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

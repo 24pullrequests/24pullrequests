@@ -1,11 +1,11 @@
 class Organisation < ApplicationRecord
   has_and_belongs_to_many :users
-  has_many :pull_requests, -> { order('created_at desc').for_aggregation }, through: :users
+  has_many :contributions, -> { order('created_at desc').for_aggregation }, through: :users
 
-  scope :with_any_pull_requests, -> { where('organisations.pull_request_count > 0') }
+  scope :with_any_contributions, -> { where('organisations.contribution_count > 0') }
   scope :random, -> { order(Arel.sql("RANDOM()")) }
-  scope :order_by_pull_requests, -> do
-    order('organisations.pull_request_count desc, organisations.login asc')
+  scope :order_by_contributions, -> do
+    order('organisations.contribution_count desc, organisations.login asc')
   end
 
   paginates_per 99
@@ -26,7 +26,7 @@ class Organisation < ApplicationRecord
   end
 
   def active_languages
-    pull_requests.map(&:language).uniq!
+    contributions.map(&:language).uniq!
   end
 
   def to_param
@@ -37,7 +37,7 @@ class Organisation < ApplicationRecord
     "https://avatars.githubusercontent.com/u/#{github_id}?size=#{size}"
   end
 
-  def update_pull_request_count
-    update_attribute(:pull_request_count, pull_requests.year(Tfpullrequests::Application.current_year).count)
+  def update_contribution_count
+    update_attribute(:contribution_count, contributions.year(Tfpullrequests::Application.current_year).count)
   end
 end

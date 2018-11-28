@@ -314,6 +314,6 @@ ru:
   user:
     no_current_pr_message:
     organisations: Организации
-    pull_request_count:
+    contribution_count:
       one: "%{user} сделал %{count} пулл-реквест к Рождеству %{year}"
       other: "%{user} сделал %{count} пулл-реквестов к Рождеству %{year}"

@@ -80,7 +80,7 @@ hi:
     pull_requests:
       details: दिसंबर के दौरान साइट के प्रयोक्ताओं द्वारा सभी Pull Requests को लोड करें, जिन्हें नवीनता के कर्म में लगाएं, जिसमें उस Pull Requests को भी शामिल किया गया।
       meta_details: इस साल सभी Pull Requests के बारे में जानकारी लोड करें
-      title: Pull Requests
+      title: Contributions
     users:
       details: उन सभी उपयोगकर्ताओं को लोड करें, जिन्होंने साइट पर साइन अप किया है, दिसंबर में कितने Pull Requests भेजे हैं, उनके आदेश में, उनके संगठन(ोँ) और अनुरोधों को खींच भी शामिल है
       specific: विशिष्ट उपयोगकर्ता के लिए जानकारी लोड करें
@@ -156,7 +156,7 @@ hi:
     form:
       date: तारीख
       gift_it: इसे उपहार करें!
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet: अपने उपहार के बारे में ट्वीट करें!
   homepage:
     about: यह सब किसके बारे में है?
@@ -316,6 +316,6 @@ hi:
   user:
     no_current_pr_message:
     organisations: "...का सदस्य"
-    pull_request_count:
+    contribution_count:
       one: "%{user} ने %{count} को क्रिसमस %{year} में अब तक Pull Request किया है"
       other: "%{user} ने %{count} को क्रिसमस %{year} में अभी तक Pull Request किया है"

@@ -3,17 +3,17 @@ module CountHelper
     Project.active.by_language(@language).count
   end
 
-  def pull_request_count_for_language
-    PullRequest.year(Tfpullrequests::Application.current_year).by_language(@language).count
+  def contribution_count_for_language
+    Contribution.year(Tfpullrequests::Application.current_year).by_language(@language).count
   end
 
   def user_count_for_language
     User.by_language(@language).count
   end
 
-  def pull_request_count
-    return pull_request_count_for_language if @language
-    PullRequest.year(Tfpullrequests::Application.current_year).count
+  def contribution_count
+    return contribution_count_for_language if @language
+    Contribution.year(Tfpullrequests::Application.current_year).count
   end
 
   def user_count

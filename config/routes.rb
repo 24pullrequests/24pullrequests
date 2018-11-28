@@ -22,7 +22,7 @@ Tfpullrequests::Application.routes.draw do
     end
   end
 
-  resources :pull_requests, only: [:index] do
+  resources :pull_requests, only: [:index], controller: 'contributions' do
     collection do
       get :meta
     end

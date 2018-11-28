@@ -80,7 +80,7 @@ zh_Hant:
     pull_requests:
       details: 在 12 月中所有的 Pull Requests，按照時間排序（包含使用者資訊）
       meta_details: 載入今年所有 Pull Requests 的資訊
-      title: Pull Requests
+      title: Contributions
     users:
       details: 所有註冊使用者，按照他們今年的 Pull Requests 數量排序，同時也包含他們的組織細節和 Pull Request 資料。
       specific: 某一個指定使用者的資訊。
@@ -314,6 +314,6 @@ zh_Hant:
   user:
     no_current_pr_message:
     organisations: 組織
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

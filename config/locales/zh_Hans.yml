@@ -80,7 +80,7 @@ zh_Hans:
     pull_requests:
       details: 在12月份当之所有的合并请求(pull request)，按照时间排序（包含用户）
       meta_details: 加载所有拉请求的信息，今年。
-      title: Pull Requests
+      title: Contributions
     users:
       details: 所有注册用户，按照他们今年合并请求(pull request)数量排序， 同时包含他们的组织信息和合并请求(pull request)信息。
       specific: 一个指定用户的信息。
@@ -314,6 +314,6 @@ zh_Hans:
   user:
     no_current_pr_message:
     organisations: 一名成员
-    pull_request_count:
+    contribution_count:
       one: "%{user} 在%{year}年的圣诞已经发出了 %{count} 个 pull request"
       other: "%{user} 在%{year}年的圣诞已经发出了 %{count} 个pull requests"

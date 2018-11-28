@@ -31,7 +31,7 @@ tr:
   view_all: Hepsini Göster
   welcome: Welcome, %{user}!
   welcome_back: Hoşgeldin, %{user}
-  your_pull_requests: Pull Requests'lerin
+  your_pull_requests: Contributions'lerin
   about:
     description: 24 Pull Requests Aralık ayı boyunca açık kaynak kodlu projeleri destekleyen küçük bir projedir.
     idea: Temel fikir Aralıktan Noel'e kadar her gün bir pull request yollanması ve Aralık ayı boyunca küçük hediyeler ile geliştircilerin cesaretlendirilmesidir.
@@ -80,7 +80,7 @@ tr:
     pull_requests:
       details: Kullanıcının kendi yaptığı pull request'ler dahil olmak üzere tüm pull requestler Aralık ayındankiler olmak üzere yeniden eskiye doğru sıralanır.
       meta_details: Bu yıl tüm çekme istekleri hakkında bilgi yükleyin.
-      title: Pull Requests
+      title: Contributions
     users:
       details: Siteye kayıtlı tüm kullanıcılar Aralık ayı boyunca kendi ve organizasyonları üzerinden yaptıkları pull requestler'i görürler.
       specific: Belirli bir kişi için bilgilerin alınması.
@@ -156,7 +156,7 @@ tr:
     form:
       date: Tarih
       gift_it: Hediye et!
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet: Hediyen hakkında Tweet at!
   homepage:
     about: Bütün bunlar ne için?
@@ -314,6 +314,6 @@ tr:
   user:
     no_current_pr_message:
     organisations: "... üyesi"
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

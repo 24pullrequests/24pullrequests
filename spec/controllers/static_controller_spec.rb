@@ -4,7 +4,7 @@ describe StaticController, type: :controller do
   describe 'GET about' do
     before do
       20.times do
-        create(:pull_request)
+        create(:contribution)
       end
 
       allow_any_instance_of(User).to receive(:high_rate_limit?).and_return(true)

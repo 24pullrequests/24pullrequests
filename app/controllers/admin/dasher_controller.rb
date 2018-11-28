@@ -6,7 +6,7 @@ module Admin
 
     def new_pull_request
       user = User.find_by_nickname(params['actor']['login'])
-      user.pull_requests.create_from_github(params) if user
+      user.contributions.create_from_github(params) if user
       head :ok
     end
 

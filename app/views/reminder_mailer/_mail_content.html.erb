@@ -10,7 +10,7 @@
 </p>
 <p>We've got some suggested projects for you to contribute to <%= this_time %>.</p>
 <p>
-  <% if @user.pull_requests.year(Tfpullrequests::Application.current_year).any? %>
+  <% if @user.contributions.year(Tfpullrequests::Application.current_year).any? %>
     You can view the contributions you've made so far at <%= link_to nil, dashboard_url %>.
   <% else %>
     You haven't made any contributions yet. Once you make a contribution, you can view your progress at <%= link_to nil, dashboard_url %>.

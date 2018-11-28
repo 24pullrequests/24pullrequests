@@ -314,6 +314,6 @@ it:
   user:
     no_current_pr_message:
     organisations: Membro di...
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

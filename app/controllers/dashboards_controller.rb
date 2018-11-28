@@ -3,8 +3,8 @@ class DashboardsController < ApplicationController
   before_action :set_email_preferences, except: [:preferences, :update_preferences, :confirm_email, :locale]
 
   def show
-    pull_requests = current_user
-      .pull_requests_ignoring_organisations
+    contributions = current_user
+      .contributions_ignoring_organisations
       .year(current_year)
       .order('created_at desc')
       .to_a
@@ -13,13 +13,13 @@ class DashboardsController < ApplicationController
     gifted_today  = current_user.gift_for(today)
     @events = Event.where(['start_time >= ?', Time.zone.today]).order('start_time').first(5)
 
-    if giftable_range? && current_user.unspent_pull_requests.any? && !gifted_today
+    if giftable_range? && current_user.unspent_contributions.any? && !gifted_today
       gift      = current_user.new_gift
-      gift_form = GiftForm.new(gift: gift, pull_requests: current_user.unspent_pull_requests)
+      gift_form = GiftForm.new(gift: gift, contributions: current_user.unspent_contributions)
     end
 
     render :show, locals: { user:          current_user,
-                            pull_requests: pull_requests,
+                            contributions: contributions,
                             projects:      projects,
                             gift_form:     gift_form }
   end

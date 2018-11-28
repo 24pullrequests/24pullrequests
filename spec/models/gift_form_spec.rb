@@ -2,32 +2,32 @@ require 'rails_helper'
 
 describe GiftForm, type: :model do
   let(:gift)               { create :gift }
-  let(:pull_request)       { create :pull_request }
-  let(:old_pull_request)   { create(:pull_request, created_at: DateTime.new(2012, 12, 2)) }
-  let(:pull_requests)      { [pull_request, old_pull_request] }
+  let(:contribution)       { create :contribution }
+  let(:old_contribution)   { create(:contribution, created_at: DateTime.new(2012, 12, 2)) }
+  let(:contributions)      { [contribution, old_contribution] }
   let(:date)               { Time.zone.now.to_s }
   let(:giftable_dates)     { Gift.giftable_dates }
   let(:gift_form) do
     described_class.new gift:           gift,
                         giftable_dates: giftable_dates,
-                        pull_requests:  pull_requests,
+                        contributions:  contributions,
                         date:           date
   end
 
-  describe '.pull_requests_for_select' do
-    subject { gift_form.pull_requests_for_select }
+  describe '.contributions_for_select' do
+    subject { gift_form.contributions_for_select }
 
     context 'when a pull request has not been gifted' do
-      it { is_expected.to include ["Not gifted: #{pull_request.repo_name} - #{pull_request.title}", pull_request.to_param] }
+      it { is_expected.to include ["Not gifted: #{contribution.repo_name} - #{contribution.title}", contribution.to_param] }
     end
 
     context 'when a pull request has been gifted' do
-      let(:pull_request) { gift.pull_request }
-      it { is_expected.to include ["Gifted: #{pull_request.repo_name} - #{pull_request.title}", pull_request.to_param] }
+      let(:contribution) { gift.contribution }
+      it { is_expected.to include ["Gifted: #{contribution.repo_name} - #{contribution.title}", contribution.to_param] }
     end
 
     context 'when a pull request is old' do
-      it { is_expected.not_to include ["Not gifted: #{old_pull_request.repo_name} - #{old_pull_request.title}", old_pull_request.to_param] }
+      it { is_expected.not_to include ["Not gifted: #{old_contribution.repo_name} - #{old_contribution.title}", old_contribution.to_param] }
     end
   end
 
