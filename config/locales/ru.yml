@@ -36,10 +36,10 @@ ru:
     description: 24 Пулл-реквеста - это маленький проект, целью которого является улучшение сотрудничества в мире open source.
     idea: 'Если по-простому: ''Каждый день, до Рождества, по пулл-реквесту''. Дарить подарки еще приятнее чем их получать, так что не ждите завтра, дарите сейчас.'
     more_info: Мы также порекомендуем проекты, которым вы можете помочь. Рекомендации будут обновляться каждый день, а то и чаще.
-    idea_title: 
+    idea_title:
     idea_subtitle:
-    where_to_find_us: 
-    on_gitter: 
+    where_to_find_us:
+    on_gitter:
     on_github: 'Кстати, этот сайт тоже с открытым исходным кодом:'
     on_twitter: 'Мы в Твиттере:'
     title: Про 24 Пулл-реквеста
@@ -176,7 +176,6 @@ ru:
     involved:
       contributing_path:
       description: 'Есть множество способов помочь проектам с открытым исходным кодом: совершенствование документации, помощь в исправлении существующих проблем и ошибок, улучшение качества кода и покрытия тестами или добавление новых возможностей.'
-      special_page: Мы подготовили %{contributing_path}, где вы можете найти некоторую информацию об участии в проектах.
       take_a_look: Если вы новичок в open source, то это продлится недолго.
       title: Примите участие
     profile:
@@ -296,6 +295,18 @@ ru:
       count: 'Пулл-реквестов на %{language}: %{count}'
     latest:
       count: Недавние пулл-реквесты (%{count})
+  contributions:
+    new:
+      title:
+      form:
+        body:
+        body_placeholder:
+        repo_name:
+        repo_name_placeholder:
+        issue_url:
+        issue_url_placeholder:
+        created_at:
+      save:
   suggestions:
     title: Рекомендации
   twitter:

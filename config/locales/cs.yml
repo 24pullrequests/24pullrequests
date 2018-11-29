@@ -176,7 +176,6 @@ cs:
     involved:
       contributing_path: special page
       description: 'Je tu mnoho cest jak se zapojit do open source projektů: vylepšete dokumentaci, opravujte problémy a bugy, zlepšete kvalitu kódu a vylepšete testy, nebo přidejte chybějící funkci.'
-      special_page: Připravili jsme %{contributing_path}, kde můžete najít nějaké informace o tom, jak se zapojit.
       take_a_look: Pokud jste noví v open source, prosím podívejte se.
       title: Zapojte se
     profile:
@@ -296,6 +295,18 @@ cs:
       count: "%{count} pull requestů v jazyce %{language} již bylo odesláno!"
     latest:
       count: Poslední pull requesty (%{count} celkem)
+  contributions:
+    new:
+      title:
+      form:
+        body:
+        body_placeholder:
+        repo_name:
+        repo_name_placeholder:
+        issue_url:
+        issue_url_placeholder:
+        created_at:
+      save:
   suggestions:
     title: Mé návrhy
   twitter:

@@ -106,14 +106,14 @@
           <%= render :partial => 'calendar', :object => @calendar %>
         </div>
         <div class="tab-pane" id="contributions">
-          <%= render partial: 'users/pull_request', collection: @user.contributions_ignoring_organisations.year(current_year).latest(nil), cache: true %>
+          <%= render partial: 'users/contribution', collection: @user.contributions_ignoring_organisations.year(current_year).latest(nil), cache: true %>
         </div>
         <div class="tab-pane" id="merged_contributions">
           <%= render @merged_contributions, cache: true %>
         </div>
         <% ((Tfpullrequests::Application.current_year) -1).downto(LAUNCH_YEAR) do |year| %>
           <div class="tab-pane" id="<%= year %>">
-            <%= render partial: 'users/pull_request', collection: @user.contributions.year(year), cache: true %>
+            <%= render partial: 'users/contribution', collection: @user.contributions.year(year), cache: true %>
           </div>
         <% end %>
       </div>

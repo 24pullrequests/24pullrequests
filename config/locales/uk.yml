@@ -176,7 +176,6 @@ uk:
     involved:
       contributing_path:
       description: 'Наразі є багато способів допомогти open source проекту: покращіть документацію, пофіксіть актуальні баги, покращіть код та тести, або додайте нову фічу.'
-      special_page: Ми підготували %{contributing_path}, де ви знайдете необхідну інформацію.
       take_a_look: Якщо ви новачок в open source, переглянте це.
       title: Долучайся
     profile:
@@ -296,6 +295,18 @@ uk:
       count: "%{count} пул реквестів вже зроблено у мові %{language}!"
     latest:
       count: Останні пул реквести (%{count} всього)
+  contributions:
+    new:
+      title:
+      form:
+        body:
+        body_placeholder:
+        repo_name:
+        repo_name_placeholder:
+        issue_url:
+        issue_url_placeholder:
+        created_at:
+      save:
   suggestions:
     title:
   twitter:

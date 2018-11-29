@@ -174,10 +174,9 @@ en:
       title: Events
       view_events: View events
     involved:
-      contributing_path: special page
-      description: 'There are lots of ways to get involved in an open source project: improving documentation, fixing issues and bugs, improving code quality and test coverage, or adding missing features.'
-      special_page: We’ve prepared a %{contributing_path}, where you can find some information about contributing.
-      take_a_look: If you are new to open source, please take a look.
+      contributing_path: Here's our primer
+      description: "There are lots of ways to get involved in an open source project: improving doc's, designs or existing code, supporting other users, fixing, replicating or triaging issues and bugs, or adding missing features."
+      take_a_look: New to open source?  %{contributing_path}.
       title: Get involved
     profile:
       description: Contributing to open source projects is also a great way to build your profile in the community and improve your CV.
@@ -296,6 +295,18 @@ en:
       count: "%{count} contributions already made in %{language}!"
     latest:
       count: Latest Contributions (%{count} total)
+  contributions:
+    new:
+      title: How did you contribute to open source today?
+      form:
+        body: Description
+        body_placeholder: Describe the contribution you made to this open source project
+        repo_name: Project
+        repo_name_placeholder: Open source project name
+        issue_url: Project URL
+        issue_url_placeholder: https://oss-project.io
+        created_at: Contribution Date
+      save: Record your contribution
   suggestions:
     title: My Suggestions
   twitter:

@@ -1,0 +1,34 @@
+<div class="<%= parameterize_language(@contribution.language) %> contribution">
+  <% if @contribution.user %>
+    <%= link_to image_tag(@contribution.user.avatar_url, :width => 80, :height => 80, :alt => @contribution.user.nickname), user_path(@contribution.user.nickname), :rel => 'tooltip', :data => { :original_title => @contribution.user.nickname }, :class => 'image' %>
+  <% end %>
+  <% if @contribution.language.present? %>
+    <div class="language label label-info pull-right">
+      <%= link_to @contribution.language, language_path(@contribution.language) %>
+    </div>
+  <% end %>
+  <h1>
+    <% if @contribution.pull_request? %>
+      <%= link_to @contribution.title, @contribution.issue_url, :target => :_blank %>
+    <% else %>
+      Contributed
+    <% end %>
+    <span class="meta">
+      to
+      <% if @contribution.pull_request? %>
+        <%= link_to @contribution.repo_name, "https://github.com/#{@contribution.repo_name}", :target => :_blank %>
+      <% else %>
+        <%= link_to_if @contribution.issue_url.present?, @contribution.repo_name, @contribution.issue_url, :target => :_blank %>
+      <% end %>
+    </span>
+  </h1>
+  <p>
+    <abbr class="timeago" title="<%= @contribution.created_at.iso8601 %>">
+      <%= @contribution.created_at %>
+    </abbr>
+  </p>
+  <br>
+  <p class="js-emoji">
+    <%= simple_format @contribution.body %>
+  </p>
+</div>

@@ -4,7 +4,11 @@ class Contribution < ApplicationRecord
   after_save { if user then user.update_contribution_count end }
   after_destroy { if user then user.update_contribution_count end }
 
-  validates :issue_url, uniqueness: { scope: :user_id }
+  validates :issue_url, uniqueness: { scope: :user_id }, if: :pull_request?
+
+  validates :body, presence: true, unless: :pull_request?
+  validates :repo_name, presence: true, unless: :pull_request?
+  validates :created_at, presence: true, unless: :pull_request?
 
   after_create :autogift, :post_to_firehose
 
@@ -50,6 +54,10 @@ class Contribution < ApplicationRecord
     def in_date_range?
       EARLIEST_PULL_DATE < Time.zone.now && Time.zone.now < LATEST_PULL_DATE
     end
+  end
+
+  def pull_request?
+    state.present?
   end
 
   def check_state
