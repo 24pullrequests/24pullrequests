@@ -12,17 +12,7 @@ class StaticController < ApplicationController
     @contributors = User.contributors
   end
 
-  def sponsors
-  end
-
   def humans
     @contributors = User.contributors
-  end
-
-  protected
-
-  # Currently-active contributors, i.e. users with a pull request this year
-  def active_users
-    Contribution.active_users(current_year)
   end
 end
