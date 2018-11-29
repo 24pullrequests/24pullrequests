@@ -6,6 +6,9 @@
         <small>
           <%= inactive?(project) %>
         </small>
+        <%= link_to t("reactivate"), reactivate_project_path(project, admin),
+          method: :put,
+          class: 'btn btn-info pull-right' %>
         <%= link_to t("delete"), path_for_project(project, admin),
           method: :delete,
           data: { confirm: 'Are you sure you want to delete this project?' },

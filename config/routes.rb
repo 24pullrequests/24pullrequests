@@ -20,6 +20,9 @@ Tfpullrequests::Application.routes.draw do
       get :autofill
       post :claim
     end
+    member do
+      put :reactivate
+    end
   end
 
   resources :contributions do

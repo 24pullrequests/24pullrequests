@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :ensure_logged_in, except: [:index, :filter]
-  before_action :set_project, only: [:edit, :update, :destroy]
+  before_action :set_project, only: [:edit, :update, :destroy, :reactivate]
 
   respond_to :html
   respond_to :json, only: :index
@@ -51,6 +51,12 @@ class ProjectsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def reactivate
+    @project.reactivate!
+    flash[:notice] = "#{@project.name} has been reactivated."
+    redirect_back(fallback_location: projects_path)
   end
 
   def claim
