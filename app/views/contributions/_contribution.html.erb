@@ -9,10 +9,18 @@
       </div>
     <% end %>
     <h4>
-      <%= link_to contribution.title, contribution.issue_url, :target => :_blank %>
+      <% if contribution.pull_request? %>
+        <%= link_to contribution.title, contribution.issue_url, :target => :_blank %>
+      <% else %>
+        <%= link_to 'Contributed', contribution%>
+      <% end %>
       <span class="meta">
-        on
-        <%= link_to contribution.repo_name, "https://github.com/#{contribution.repo_name}", :target => :_blank %>
+        to
+        <% if contribution.pull_request? %>
+          <%= link_to contribution.repo_name, "https://github.com/#{contribution.repo_name}", :target => :_blank %>
+        <% else %>
+          <%= link_to_if contribution.issue_url.present?, contribution.repo_name, contribution.issue_url, :target => :_blank %>
+        <% end %>
         <small>
           <abbr class="timeago" title="<%= contribution.created_at.iso8601 %>">
             <%= contribution.created_at %>

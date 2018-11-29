@@ -1,4 +1,4 @@
-collection @pull_requests
+collection @contributions
 
 extends 'contributions/show'
 child :user do

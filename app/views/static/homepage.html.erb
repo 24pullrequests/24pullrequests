@@ -23,8 +23,7 @@
         <%= t("homepage.involved.description") %>
       </p>
       <p>
-        <%= t("homepage.involved.special_page", contributing_path: link_to(t("homepage.involved.contributing_path"), contributing_path)).html_safe %>
-        <%= t("homepage.involved.take_a_look") %>
+        <%= t("homepage.involved.take_a_look", contributing_path: link_to(t("homepage.involved.contributing_path"), contributing_path)).html_safe %>
       </p>
     </div>
     <div class="col-md-4 intro-block">
@@ -162,9 +161,9 @@
           </p>
           <%= link_to t("view_all"), pull_requests_path, :class => 'btn btn-default btn-sm' %>
         </div>
-        <% if @pull_requests.any? %>
+        <% if @contributions.any? %>
           <div id="contributions">
-            <%= render @pull_requests, cache: true %>
+            <%= render @contributions, cache: true %>
           </div>
         <% else %>
           <br/>

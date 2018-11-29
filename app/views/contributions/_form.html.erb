@@ -1,0 +1,11 @@
+<%= simple_form_for @contribution, wrapper: :bootstrap3_horizontal, defaults: {right_column_html: {class: "col-lg-6 col-md-6"}, label_html: {class: "col-lg-2 col-md-2"} }, :html => {:class => 'form-horizontal', :role => "form"} do |form| %>
+  <%= form.input :repo_name, label: t("contributions.new.form.repo_name"), placeholder: t("contributions.new.form.repo_name_placeholder"), required: true %>
+  <%= form.input :issue_url, label: t("contributions.new.form.issue_url"), placeholder: t("contributions.new.form.issue_url_placeholder") %>
+  <%= form.input :body, label: t("contributions.new.form.body"), placeholder: t("contributions.new.form.body_placeholder"), required: true, input_html: {rows: 5} %>
+  <%= form.input :created_at, label: t("contributions.new.form.created_at"), as: :string, input_html: { class: "js-datetimepicker", value: form.object.created_at || Time.now }, required: true %>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10 col-md-4">
+      <%= form.submit t("contributions.new.save"), class: "btn btn-default" %>
+    </div>
+  </div>
+<% end %>

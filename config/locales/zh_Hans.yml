@@ -36,10 +36,10 @@ zh_Hans:
     description: 24 Pull Requests 是一个在12月份促进开源合作的小小项目。
     idea: 想法很简单， "在12月到圣诞节之前的每一天发出合并请求(pull request)"， 鼓励开发者在这段时间回馈开源社区。
     more_info: 这个小站也提供一些值得参与的项目，一些指南，并且展示每天哪些出色的合并请求(pull request)。
-    idea_title: 
+    idea_title:
     idea_subtitle:
-    where_to_find_us: 
-    on_gitter: 
+    where_to_find_us:
+    on_gitter:
     on_github: 这个小站的开发也是开源的，寄存在GitHub上：
     on_twitter: 我们也在推特上：
     title: 关于 24 Pull Requests
@@ -176,7 +176,6 @@ zh_Hans:
     involved:
       contributing_path: 贡献指南
       description: 有很多参与开源项目的途径：提高文档质量，帮助修复存在的问题(issues)和错误(bugs)，提高代码质量和测试覆盖率，或添加缺失的功能
-      special_page: 我们准备了 %{contributing_path}，在这里您可以找到一些相关信息。
       take_a_look: 如果你是刚刚接触开源，快去看看吧
       title: 开始参与
     profile:
@@ -296,6 +295,18 @@ zh_Hans:
       count: "%{count} 次合并请求(pull request) 使用 %{language}!"
     latest:
       count: 最新的 合并请求(pull request) (总共 %{count} 次)
+  contributions:
+    new:
+      title:
+      form:
+        body:
+        body_placeholder:
+        repo_name:
+        repo_name_placeholder:
+        issue_url:
+        issue_url_placeholder:
+        created_at:
+      save:
   suggestions:
     title: 我的建议
   twitter:

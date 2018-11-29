@@ -36,10 +36,10 @@ hi:
     description: 24 Pull Requests दिसंबर के दौरान ओपन सोर्स सहयोग को बढ़ावा देने के लिए एक छोटी परियोजना है।
     idea: मूल रूप से इसका विचार "1 दिसंबर से 24 दिसम्बर के बीच 24 Pull Requests भेजना है", डेवलपर्स को पूरे दिसंबर में कोड के छोटे उपहार के साथ स्रोत खोलने के लिए प्रोत्साहित करना है।
     more_info: यह साइट प्रत्येक दिन सबमिट किए गए अच्छे Pull Requests के साथ-साथ सहायता के लिए मार्गदर्शन, मार्गदर्शिका देने और हाइलाइट करने के लिए सुझाए गए परियोजनाओं को भी प्रदान करता है।
-    idea_title: 
+    idea_title:
     idea_subtitle:
-    where_to_find_us: 
-    on_gitter: 
+    where_to_find_us:
+    on_gitter:
     on_github: 'हमारा कोड GitHub पर उपलब्ध है:'
     on_twitter: 'हम ट्विटर पर भी हैं:'
     title: 24 Pull Requests के बारे में
@@ -176,7 +176,6 @@ hi:
     involved:
       contributing_path: विशेष पृष्ठ
       description: 'ओपन सोर्स प्रोजेक्ट में शामिल होने के बहुत सारे तरीके हैं: दस्तावेज में सुधार, मुद्दों और बग फिक्सिंग, कोड की गुणवत्ता में सुधार और कवरेज का परीक्षण, या लापता सुविधाओं को जोड़ने के लिए।'
-      special_page: हमने एक %{contributing_path} तैयार किया है, जहां आप योगदान के बारे में कुछ जानकारी पा सकते हैं।
       take_a_look: यदि आप स्रोत खोलने के लिए नए हैं, तो कृपया एक नज़र डालें।
       title: शामिल हो जाएं
     profile:
@@ -298,6 +297,18 @@ hi:
       count: "%{count} पुल पहले से ही %{language} में किए गए अनुरोध खींचें!"
     latest:
       count: नवीनतम पुल अनुरोध (%{count} total)
+  contributions:
+    new:
+      title:
+      form:
+        body:
+        body_placeholder:
+        repo_name:
+        repo_name_placeholder:
+        issue_url:
+        issue_url_placeholder:
+        created_at:
+      save:
   suggestions:
     title: मेरे सुझाव
   twitter:

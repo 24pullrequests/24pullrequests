@@ -4,7 +4,20 @@ describe Contribution, type: :model do
   let(:user) { create :user }
 
   it { is_expected.to belong_to(:user) }
-  it { is_expected.to validate_uniqueness_of(:issue_url).scoped_to(:user_id) }
+
+  describe 'pull request validations' do
+    let(:json) { mock_pull_request }
+    subject { user.contributions.create_from_github(json) }
+    it { is_expected.to validate_uniqueness_of(:issue_url).scoped_to(:user_id) }
+  end
+
+  describe 'non-pull request validations' do
+
+    subject { build(:contribution, state: nil) }
+    it { validate_presence_of(:body) }
+    it { validate_presence_of(:repo_name) }
+    it { validate_presence_of(:created_at) }
+  end
 
   describe '#create_from_github' do
     let(:json) { mock_pull_request }

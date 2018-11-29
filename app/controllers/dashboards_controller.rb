@@ -18,6 +18,8 @@ class DashboardsController < ApplicationController
       gift_form = GiftForm.new(gift: gift, contributions: current_user.unspent_contributions)
     end
 
+    @contribution = current_user.contributions.build
+
     render :show, locals: { user:          current_user,
                             contributions: contributions,
                             projects:      projects,

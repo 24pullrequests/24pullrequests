@@ -4,7 +4,7 @@ class LanguagesController < ApplicationController
   def show
     @projects = Project.active.by_language(@language).limit(20)
     @users = User.order('contributions_count desc').by_language(@language).limit(200).sample(45)
-    @pull_requests = Contribution.by_language(@language).year(current_year).latest(5)
+    @contributions = Contribution.by_language(@language).year(current_year).latest(5)
   end
 
   def projects
@@ -12,7 +12,7 @@ class LanguagesController < ApplicationController
   end
 
   def pull_requests
-    @pull_requests = Contribution.by_language(@language).year(current_year).page(params[:page])
+    @contributions = Contribution.by_language(@language).year(current_year).page(params[:page])
 
     render 'contributions/index'
   end

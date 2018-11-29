@@ -36,10 +36,10 @@ el:
     description: Το 24 Pull Requests είναι ένα μικρό project που προωθεί τη συνεργασία ανοιχτού κώδικα κατά τη διάρκεια του Δεκέμβρη.
     idea: Η ιδέα είναι "Στείλε ένα pull request κάθε μέρα του Δεκέμβρη μέχρι τα Χριστούγεννα", και ενθάρρυνε άλλους προγραμματιστές να δώσουν πίσω  δωράκια κώδικα κατα τη διάρκεια του Δεκέμβρη.
     more_info: Εκτός αυτού, η σελίδα εισηγείται projects τα οποία χρειάζονται βοήθεια, οδηγούς συμβολής και παρουσιάζει pull requests που υποβάλλονται καθημερινά.
-    idea_title: 
+    idea_title:
     idea_subtitle:
-    where_to_find_us: 
-    on_gitter: 
+    where_to_find_us:
+    on_gitter:
     on_github: 'Το κτίσιμο της σελίδας είναι ανοικτό στη GitHub:'
     on_twitter: 'Μπορείτε να μας βρείτε και στο Twitter:'
     title: Σχετικα με το 24 Pull Requests
@@ -176,7 +176,6 @@ el:
     involved:
       contributing_path:
       description: Υπάρχουν πολλοί τρόποι που μπορείτε να βοηθήσετε ένα project ανοικτού κώδικα, βελτιώνοντας τις οδηγίες χρήσης, διορθώνοντας υπάρχοντα προβλήματα, βελτιώνοντας την ποιότητα του κώδικα και προσθέτοντας tests ή καινούργιες λειτουργίες.
-      special_page: Ετοιμάσαμε μια %{contributing_path}, όπου μπορείς να βρεις πληροφορίες για το πως να συνεισφέρεις.
       take_a_look: Αν τώρα ξεκινάς με τον ανοικτό κώδικα, ρίξε μια ματιά.
       title: Βοηθησε!
     profile:
@@ -296,6 +295,18 @@ el:
       count: "%{count} pull requests στη %{language}!"
     latest:
       count: Τελευταια Pull Requests (%{count} συνολικα)
+  contributions:
+    new:
+      title:
+      form:
+        body:
+        body_placeholder:
+        repo_name:
+        repo_name_placeholder:
+        issue_url:
+        issue_url_placeholder:
+        created_at:
+      save:
   suggestions:
     title: Οι εισηγησεις μου
   twitter:
