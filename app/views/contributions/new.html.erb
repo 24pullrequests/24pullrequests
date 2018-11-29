@@ -1,3 +1,11 @@
+<% if !Contribution.in_date_range? %>
+  <div class="row">
+    <div class="alert alert-info">
+      Contributions can only be recorded from 1st December to 24th December each year, come back then and try again.
+    </div>
+  </div>
+<% end %>
+
 <h3>
   <%= t("contributions.new.title") %>
 </h3>
