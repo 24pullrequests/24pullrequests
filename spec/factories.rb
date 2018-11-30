@@ -39,7 +39,7 @@ FactoryBot.define do
     language { Project::LANGUAGES.sample }
   end
 
-  factory :pull_request do
+  factory :contribution do
     user
     title { Faker::Lorem.words.first }
     issue_url { Faker::Internet.url }
@@ -65,7 +65,7 @@ FactoryBot.define do
 
   factory :gift do
     user
-    pull_request
+    contribution
   end
 
   factory :organisation do

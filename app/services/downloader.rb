@@ -32,7 +32,7 @@ class Downloader
           language:     pr['repo']['language']
         )
       else
-        user.pull_requests.create_from_github(pr)
+        user.contributions.create_from_github(pr)
       end
     end
   end
@@ -46,7 +46,7 @@ class Downloader
   end
 
   def pull_request_exists?(pull_request)
-    user.pull_requests.find_by_issue_url(pull_request['payload']['pull_request']['_links']['html']['href'])
+    user.contributions.find_by_issue_url(pull_request['payload']['pull_request']['_links']['html']['href'])
   end
 
   def gifted_any_today?
@@ -54,6 +54,6 @@ class Downloader
   end
 
   def auto_gift_today(pull_request)
-    user.gifts.create(pull_request_id: pull_request.id, date: Time.zone.today)
+    user.gifts.create(contribution_id: pull_request.id, date: Time.zone.today)
   end
 end

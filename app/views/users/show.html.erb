@@ -70,27 +70,27 @@
     <% end %>
     <div class="profile-pull-request-count">
       <%= octicon "gift" %>
-      <%= t("user.pull_request_count", user: @user.nickname, count: @user.pull_requests_ignoring_organisations.year(current_year).count, year: current_year) %>
+      <%= t("user.contribution_count", user: @user.nickname, count: @user.contributions_ignoring_organisations.year(current_year).count, year: current_year) %>
     </div>
   </div>
 </div>
 <div class="row">
   <div class="col-sm-12">
-    <% if @user.gifts.year(current_year).any? or @user.pull_requests_ignoring_organisations.year(current_year).any? or @merged_pull_requests.any? %>
+    <% if @user.gifts.year(current_year).any? or @user.contributions_ignoring_organisations.year(current_year).any? or @merged_contributions.any? %>
       <ul class="nav nav-tabs" id="presents">
         <% if @user.gifts.year(current_year).any? %>
         <li>
           <a class="active" data-toggle="tab" href="#gifts">Gifts</a>
         </li>
         <% end %>
-        <% if @user.pull_requests_ignoring_organisations.year(current_year).any? %>
+        <% if @user.contributions_ignoring_organisations.year(current_year).any? %>
         <li>
-          <a data-toggle="tab" href="#pull_requests">Pull Requests</a>
+          <a data-toggle="tab" href="#contributions">Contributions</a>
         </li>
         <% end %>
-        <% if @merged_pull_requests.any? %>
+        <% if @merged_contributions.any? %>
         <li>
-          <a data-toggle="tab" href="#merged_pull_requests">Merges</a>
+          <a data-toggle="tab" href="#merged_contributions">Merges</a>
         </li>
         <% end %>
         <% ((Tfpullrequests::Application.current_year) -1).downto(LAUNCH_YEAR) do |year| %>
@@ -105,19 +105,19 @@
         <div class="tab-pane" id="gifts">
           <%= render :partial => 'calendar', :object => @calendar %>
         </div>
-        <div class="tab-pane" id="pull_requests">
-          <%= render partial: 'users/pull_request', collection: @user.pull_requests_ignoring_organisations.year(current_year).latest(nil), cache: true %>
+        <div class="tab-pane" id="contributions">
+          <%= render partial: 'users/contribution', collection: @user.contributions_ignoring_organisations.year(current_year).latest(nil), cache: true %>
         </div>
-        <div class="tab-pane" id="merged_pull_requests">
-          <%= render @merged_pull_requests, cache: true %>
+        <div class="tab-pane" id="merged_contributions">
+          <%= render @merged_contributions, cache: true %>
         </div>
         <% ((Tfpullrequests::Application.current_year) -1).downto(LAUNCH_YEAR) do |year| %>
           <div class="tab-pane" id="<%= year %>">
-            <%= render partial: 'users/pull_request', collection: @user.pull_requests.year(year), cache: true %>
+            <%= render partial: 'users/contribution', collection: @user.contributions.year(year), cache: true %>
           </div>
         <% end %>
       </div>
-    <% elsif !PullRequest.in_date_range? %>
+    <% elsif !Contribution.in_date_range? %>
       <div class="alert alert-info">
         24 Pull Requests runs from 1st-24th December, come back then to see
         <%= "#{@user.nickname}'s progress." %>

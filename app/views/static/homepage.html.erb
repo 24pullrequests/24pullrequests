@@ -1,9 +1,17 @@
 <div class="container block intro">
-  <div class="row">
-    <% unless Time.zone.today.between?(Date.new(Tfpullrequests::Application.current_year, 10, 30), Date.new(Tfpullrequests::Application.current_year, 12, 24)) %>
+  <% unless Time.zone.today.between?(Date.new(Tfpullrequests::Application.current_year, 10, 30), Date.new(Tfpullrequests::Application.current_year, 12, 24)) %>
+    <div class="row">
       <%= render :partial => 'finished' %>
-    <% end %>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="alert alert-info">
+      This year we're making 24 Pull Requests more inclusive and open to all kinds of contributions -
+      <%= link_to "Click here to see what's changed", '/2018' %>
+    </div>
   </div>
+
   <div class="row">
     <div class="col-md-4 intro-block">
       <%= octicon "gift", :height => 60 %>
@@ -23,8 +31,7 @@
         <%= t("homepage.involved.description") %>
       </p>
       <p>
-        <%= t("homepage.involved.special_page", contributing_path: link_to(t("homepage.involved.contributing_path"), contributing_path)).html_safe %>
-        <%= t("homepage.involved.take_a_look") %>
+        <%= t("homepage.involved.take_a_look", contributing_path: link_to(t("homepage.involved.contributing_path"), contributing_path)).html_safe %>
       </p>
     </div>
     <div class="col-md-4 intro-block">
@@ -155,16 +162,16 @@
         <div class="title-block">
           <%= octicon "git-pull-request", :class => "mega-octicon", :height => 40 %>
           <h3 class="block-title">
-            <%= t("pull_requests.latest.count", count: number_with_delimiter(PullRequest.year(current_year).count)) %>
+            <%= t("pull_requests.latest.count", count: number_with_delimiter(Contribution.year(current_year).count)) %>
           </h3>
           <p>
             <%= t("dashboard.pull_requests") %>
           </p>
           <%= link_to t("view_all"), pull_requests_path, :class => 'btn btn-default btn-sm' %>
         </div>
-        <% if @pull_requests.any? %>
-          <div id="pull_requests">
-            <%= render @pull_requests, cache: true %>
+        <% if @contributions.any? %>
+          <div id="contributions">
+            <%= render @contributions, cache: true %>
           </div>
         <% else %>
           <br/>

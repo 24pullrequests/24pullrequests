@@ -36,10 +36,10 @@ uk:
     description: '"24 Пул Реквести" - це невеликий проект з метою сприяння співробітництву проектів з відкритим вихідним кодом протягом грудня.'
     idea: Основна ідея "Відправляти пул реквест кожен день в грудні до Різдва", заохочуючи розробників відправляти подарункові пул реквести до проектів з відкритим вихідним кодом протягом усього грудня.
     more_info: На сайті також містяться запропоновані проекти, які потребують допомоги, орієнтири для внесків і підкреслює хороші пул реквести, представлені щодня.
-    idea_title: 
+    idea_title:
     idea_subtitle:
-    where_to_find_us: 
-    on_gitter: 
+    where_to_find_us:
+    on_gitter:
     on_github: 'Розробка цього сайту є відкритою на Ґітхабі:'
     on_twitter: 'Ми також є на Твіттері:'
     title: Про "24 Пул Реквести"
@@ -156,7 +156,7 @@ uk:
     form:
       date:
       gift_it:
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet:
   homepage:
     about: Що це взагалі таке?
@@ -176,7 +176,6 @@ uk:
     involved:
       contributing_path:
       description: 'Наразі є багато способів допомогти open source проекту: покращіть документацію, пофіксіть актуальні баги, покращіть код та тести, або додайте нову фічу.'
-      special_page: Ми підготували %{contributing_path}, де ви знайдете необхідну інформацію.
       take_a_look: Якщо ви новачок в open source, переглянте це.
       title: Долучайся
     profile:
@@ -296,6 +295,18 @@ uk:
       count: "%{count} пул реквестів вже зроблено у мові %{language}!"
     latest:
       count: Останні пул реквести (%{count} всього)
+  contributions:
+    new:
+      title:
+      form:
+        body:
+        body_placeholder:
+        repo_name:
+        repo_name_placeholder:
+        issue_url:
+        issue_url_placeholder:
+        created_at:
+      save:
   suggestions:
     title:
   twitter:
@@ -314,6 +325,6 @@ uk:
   user:
     no_current_pr_message:
     organisations:
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

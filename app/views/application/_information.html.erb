@@ -5,7 +5,7 @@
   <p>
     <%= t("information.last_year_stats", year: Tfpullrequests::Application.current_year,
       contributors: contributors_in(Tfpullrequests::Application.current_year),
-      pull_requests: pull_requests_in(Tfpullrequests::Application.current_year),
+      contributions: contributions_in(Tfpullrequests::Application.current_year),
       projects: projects_in(Tfpullrequests::Application.current_year)).html_safe %>
   </p>
   <p>

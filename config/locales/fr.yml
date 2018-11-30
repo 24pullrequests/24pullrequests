@@ -36,10 +36,10 @@ fr:
     description: 24 Pull Requests est un petit projet pour promouvoir la collaboration open source en Décembre.
     idea: L'idée est simplement de "faire une pull request tous les jours en décembre jusqu'à Noël", encourageant les développeurs à redonner à la communauté open source avec de petits cadeaux de code en décembre.
     more_info: Le site fournit aussi des projets suggérés, des guides pour contribuer et met en avant des pull requests soumises chaque jour.
-    idea_title: 
+    idea_title:
     idea_subtitle:
-    where_to_find_us: 
-    on_gitter: 
+    where_to_find_us:
+    on_gitter:
     on_github: 'Le dévelopement du site est open source sur GitHub:'
     on_twitter: 'Nous sommes aussi sur Twitter:'
     title: À propos de 24 Pull Requests
@@ -176,7 +176,6 @@ fr:
     involved:
       contributing_path:
       description: Il y a de nombreuses manières de s'impliquer dans un projet open source, améliorer la documentation, aider à corriger des bugs, améliorer la qualité du code et des tests, ou ajouter de nouvelles fonctionnalités.
-      special_page: Nous avons préparé un %{contributing_path}, où vous pouvez trouver des informations sur comment contribuer.
       take_a_look: Si l'open source est nouveau pour vous, vous pouvez y jeter un oeil.
       title: Participez
     profile:
@@ -296,6 +295,18 @@ fr:
       count: "%{count} pull requests créées en %{language}!"
     latest:
       count: Dernières Pull Requests (%{count} total)
+  contributions:
+    new:
+      title:
+      form:
+        body:
+        body_placeholder:
+        repo_name:
+        repo_name_placeholder:
+        issue_url:
+        issue_url_placeholder:
+        created_at:
+      save:
   suggestions:
     title: Mes suggestions
   twitter:
@@ -314,6 +325,6 @@ fr:
   user:
     no_current_pr_message:
     organisations: Membre de...
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

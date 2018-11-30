@@ -16,14 +16,14 @@
     </h3>
     <div class="users">
       <ul class="avatar-list clearfix">
-        <%= render @organisation.users.order('pull_requests_count desc') %>
+        <%= render @organisation.users.order('contributions_count desc') %>
       </ul>
     </div>
   </div>
 </div>
-<div id="pull_requests">
+<div id="contributions">
   <h3>
-    <%= t("organisations.pull_requests", count: @organisation.pull_requests.year(current_year).length) %>
+    <%= t("organisations.pull_requests", count: @organisation.contributions.year(current_year).length) %>
   </h3>
-  <%= render @organisation.pull_requests.year(current_year), cache: true %>
+  <%= render @organisation.contributions.year(current_year), cache: true %>
 </div>

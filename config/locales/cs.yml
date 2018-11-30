@@ -36,10 +36,10 @@ cs:
     description: 24 Pull Requests je malý projekt sloužící k propagaci open source spolupráce během prosince.
     idea: Nápad je jednoduše "poslat pull request každý prosincový den před Vánoci", čímž mohou vývojáři darovat malé dárečky ostatním vývojářům.
     more_info: Tyto stránky také nabízejí seznam projektů, kterým je možné pomoci, příručky jak pomoci a vybrané pull requesty každý den.
-    idea_title: 
+    idea_title:
     idea_subtitle:
-    where_to_find_us: 
-    on_gitter: 
+    where_to_find_us:
+    on_gitter:
     on_github: 'Náš kód je na GitHubu:'
     on_twitter: 'Jsme také na Twitteru:'
     title: O 24 Pull Requests
@@ -80,7 +80,7 @@ cs:
     pull_requests:
       details: Load all pull requests by users of the site during December, ordered by newest first, also includes the user who made the pull request.
       meta_details: Load information about all the pull requests this year.
-      title: Pull Requests
+      title: Contributions
     users:
       details: Load all users who have signed up to the site, ordered by how many pull requests they have sent so far in December, also includes their organisation(s) and pull requests.
       specific: Load information for a specific user.
@@ -176,7 +176,6 @@ cs:
     involved:
       contributing_path: special page
       description: 'Je tu mnoho cest jak se zapojit do open source projektů: vylepšete dokumentaci, opravujte problémy a bugy, zlepšete kvalitu kódu a vylepšete testy, nebo přidejte chybějící funkci.'
-      special_page: Připravili jsme %{contributing_path}, kde můžete najít nějaké informace o tom, jak se zapojit.
       take_a_look: Pokud jste noví v open source, prosím podívejte se.
       title: Zapojte se
     profile:
@@ -296,6 +295,18 @@ cs:
       count: "%{count} pull requestů v jazyce %{language} již bylo odesláno!"
     latest:
       count: Poslední pull requesty (%{count} celkem)
+  contributions:
+    new:
+      title:
+      form:
+        body:
+        body_placeholder:
+        repo_name:
+        repo_name_placeholder:
+        issue_url:
+        issue_url_placeholder:
+        created_at:
+      save:
   suggestions:
     title: Mé návrhy
   twitter:
@@ -314,6 +325,6 @@ cs:
   user:
     no_current_pr_message:
     organisations: Člen
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

@@ -36,10 +36,10 @@ ta:
     description: 24 Pull Requests ஒரு சிறிய திட்டம்.  இது டிசம்பர் காலத்தில்  open source collaboration-ஐ  ஊக்குவிக்கிறது.
     idea: அடிப்படையில் இந்த யோசனை,  டிசம்பரிலிருந்து  கிறிஸ்துமஸ் வரை  ஒவ்வொரு நாளும் ஒரு  pull request-ஐ  அனுப்ப contributors-ஐ  டிசம்பர் முழுவதும் பரிசு கொடுத்து ஊக்குவிக்கிறது.
     more_info: மேலும், இந்த  தளம் உதவி ஆலோசனை திட்டங்கள் வழங்குகிறது பங்களிப்பு வழிகாட்டிகள் மற்றும் ஒவ்வொரு நாளும் சமர்ப்பிக்கப்பட்ட நல்ல pull requests-களை உயர்த்தி காட்டுகிறது.
-    idea_title: 
+    idea_title:
     idea_subtitle:
-    where_to_find_us: 
-    on_gitter: 
+    where_to_find_us:
+    on_gitter:
     on_github: 'இந்த  தளம் வளர்ச்சி GitHub-ல் open source-ஆக  இருக்கிறது:'
     on_twitter: 'மேலும், நாம் ட்விட்டர்-ல்  இருக்கிறோம்:'
     title: 24 Pull Requests பற்றி
@@ -80,7 +80,7 @@ ta:
     pull_requests:
       details: Load all pull requests by users of the site during December, ordered by newest first, also includes the user who made the pull request.
       meta_details: Load information about all the pull requests this year.
-      title: Pull Requests
+      title: Contributions
     users:
       details: Load all users who have signed up to the site, ordered by how many pull requests they have sent so far in December, also includes their organisation(s) and pull requests.
       specific: Load information for a specific user.
@@ -156,7 +156,7 @@ ta:
     form:
       date: தேதி
       gift_it: பரிசு கொடு!
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet: உங்கள் பரிசு பற்றி ட்வீட்  செய்!
   homepage:
     about: அது என்ன பற்றியது?
@@ -176,8 +176,7 @@ ta:
     involved:
       contributing_path: சிறப்பு பக்கம்
       description: 'ஒபன்சொர்ஸ் பிராஜக்ட்களின் ஈடுபடுவதற்கு பல வழிகள் உள்ளன: ஆவணங்களை மேம்படுத்துதல், பிரச்சினைகளையும் பிழைகளையும் சரி செய்ய உதவுதல், நிரல்களின் தரத்தையும் சோதனை நிரலர்களின் சதவீதத்தையும் மேம்படுத்துதல், அல்லது இல்லாத அம்சங்களை சேர்த்தல்.'
-      special_page: பங்களிப்பதைப் பற்றிய விவரங்களை நீங்கள் அறிவதற்காக, நாங்கள் %{contributing_path} ஒன்றை தயார் செய்துள்ளோம்.
-      take_a_look: நீங்கள் ஒபன்சோர்ஸ்ஸிற்கு புதியவர் என்றால் இதனைப் பாருங்கள்.
+      take_a_look:
       title: ஈடுபடுங்கள்
     profile:
       description: ஒபன்சோர்ஸ் பிரஜக்ட்களுக்கு பங்களித்தால் சமூகத்தில் உங்கள் பெயரை தெரியப்படுத்துவதற்கும், உங்கள் அனுபவ விவரக் குறிப்பை மேம்படுத்தவும் மிகச் சிறப்பான ஒரு வழி.
@@ -296,6 +295,18 @@ ta:
       count: ஏற்கனவே, %{count} pull requests %{language}-ல்  உருவக்கப்பட்டது!
     latest:
       count: சமீபத்திய  Pull Requests (மொத்தம் %{count})
+  contributions:
+    new:
+      title:
+      form:
+        body:
+        body_placeholder:
+        repo_name:
+        repo_name_placeholder:
+        issue_url:
+        issue_url_placeholder:
+        created_at:
+      save:
   suggestions:
     title: என் பரிந்துரைகள்
   twitter:
@@ -314,6 +325,6 @@ ta:
   user:
     no_current_pr_message:
     organisations: Member of...
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

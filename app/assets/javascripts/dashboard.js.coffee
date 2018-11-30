@@ -10,7 +10,7 @@ $ ->
 
       success: (data) ->
         $('#pull-requests').html(data)
-        $('#pull-requests-count').html $('.pull_request').length
+        $('#pull-requests-count').html $('.contribution').length
         $("#spinner, #search_button").toggle()
         $(document).trigger('page:load')
         $('abbr.timeago').timeago()

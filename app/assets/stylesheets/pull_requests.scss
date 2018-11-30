@@ -1,5 +1,9 @@
-.pull_request {
+.contribution {
   @include clearfix;
+
+  h1 {
+    margin: 0;
+  }
 
   h4 {
     margin: 0;

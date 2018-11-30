@@ -36,10 +36,10 @@ fi:
     description: 24 Pull Requests on pieni projekti mainostamaan avoimen lähdekoodin yhteistyötä Joulukuun aikana.
     idea: Perus ideana on "Lähetä vetopyyntö joka päivä Joulukuussa Jouluaattoon asti", kannustaen kehittäjiä antamaan takaisin avoimelle lähdekoodille pieninä lahjoina koodia läpi Joulun.
     more_info: Sivusto tarjoaa myös suositeltuja projekteja joita auttaa, ohjeita miten avustaa ja korostaa hyviä vetopyyntökä päivittäin.
-    idea_title: 
+    idea_title:
     idea_subtitle:
-    where_to_find_us: 
-    on_gitter: 
+    where_to_find_us:
+    on_gitter:
     on_github: 'Löydät tämän sivuston lähdekoodin GitHubista:'
     on_twitter: 'Löydät meidät myös Twitteristä:'
     title: Tietoa 24 Pull Requestista
@@ -156,7 +156,7 @@ fi:
     form:
       date:
       gift_it:
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet:
   homepage:
     about: Mistä tästä kaikesta on kyse?
@@ -176,7 +176,6 @@ fi:
     involved:
       contributing_path:
       description: On olemassa tuhansia tapoja osallistua avoimen lähdekoodin projekteihin, paranna dokumentointia, auta korjaamaan olemassa olevia ongelmia ja bugeja, paranna koodin laatua ja testaa kattavuus, tai lisää puuttuvia ominaisuuksia.
-      special_page: Olemme valmistaneet %{contributing_path}, josta löydät tietoa avustamisesta.
       take_a_look: Jos olet uusi avoimelle lähdekoodille, katso tämä.
       title: Osallistu
     profile:
@@ -296,6 +295,18 @@ fi:
       count: "%{count} vetopyyntöä jo tehty %{language} kielellä!"
     latest:
       count: Uusimmat vetopyynnöt (%{count} total)
+  contributions:
+    new:
+      title:
+      form:
+        body:
+        body_placeholder:
+        repo_name:
+        repo_name_placeholder:
+        issue_url:
+        issue_url_placeholder:
+        created_at:
+      save:
   suggestions:
     title:
   twitter:
@@ -314,6 +325,6 @@ fi:
   user:
     no_current_pr_message:
     organisations:
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

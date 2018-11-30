@@ -1,0 +1,37 @@
+<%= cache contribution do %>
+  <div class="contribution row-fluid clearfix">
+    <div class="span12">
+      <h4>
+        <% if contribution.pull_request? %>
+          <%= link_to contribution.title, contribution.issue_url, :target => :_blank %>
+        <% else %>
+          <%= link_to 'Contributed', contribution%>
+        <% end %>
+
+        <span class="meta">
+          to
+          <% if contribution.pull_request? %>
+            <%= link_to contribution.repo_name, "https://github.com/#{contribution.repo_name}", :target => :_blank %>
+          <% else %>
+            <%= link_to_if contribution.issue_url.present?, contribution.repo_name, contribution.issue_url, :target => :_blank %>
+          <% end %>
+          <small>
+            <abbr class="timeago" title="<%= contribution.created_at.iso8601 %>">
+              <%= contribution.created_at %>
+            </abbr>
+          </small>
+          <% if contribution.language.present? %>
+            <div class="language label label-info pull-right">
+              <%= link_to contribution.language, language_path(contribution.language) %>
+            </div>
+          <% end %>
+        </span>
+      </h4>
+      <p>
+        <div class="js-emoji">
+          <%= truncate contribution.body, :length => 300 %>
+        </div>
+      </p>
+    </div>
+  </div>
+<% end %>

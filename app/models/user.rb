@@ -3,7 +3,7 @@ class User < ApplicationRecord
 
   attr_writer :gift_factory
 
-  has_many :pull_requests,       dependent: :destroy
+  has_many :contributions,       dependent: :destroy
   has_many :skills,              dependent: :destroy
   has_many :gifts,               dependent: :destroy
   has_many :aggregation_filters, dependent: :destroy
@@ -13,10 +13,10 @@ class User < ApplicationRecord
 
   has_and_belongs_to_many :organisations
 
-  has_many :merged_pull_requests, class_name: 'PullRequest', foreign_key: :merged_by_id, primary_key: :uid
+  has_many :merged_contributions, class_name: 'Contribution', foreign_key: :merged_by_id, primary_key: :uid
 
   scope :by_language, ->(language) { joins(:skills).where('lower(language) = ?', language.downcase) }
-  scope :with_any_pull_requests, -> { where('users.pull_requests_count > 0') }
+  scope :with_any_contributions, -> { where('users.contributions_count > 0') }
   scope :random, -> { order(Arel.sql("RANDOM()")) }
 
   paginates_per 99
@@ -25,7 +25,7 @@ class User < ApplicationRecord
 
   before_save :check_email_changed
   before_validation :generate_unsubscribe_token
-  after_create :download_pull_requests, :estimate_skills, :download_user_organisations
+  after_create :download_contributions, :estimate_skills, :download_user_organisations
 
   validates :email, presence: true, if: :send_regular_emails?
   validates :email, format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, allow_blank: true, on: :update }
@@ -48,10 +48,10 @@ class User < ApplicationRecord
   end
 
   def self.mergers(year = Tfpullrequests::Application.current_year)
-    joins(:merged_pull_requests).
-      where('EXTRACT(year FROM pull_requests.created_at) = ?', year).
+    joins(:merged_contributions).
+      where('EXTRACT(year FROM contributions.created_at) = ?', year).
       group('users.id').
-      select("users.*, count(pull_requests.id) AS merged_pull_requests_count")
+      select("users.*, count(contributions.id) AS merged_contributions_count")
   end
 
   def assign_from_auth_hash(hash)
@@ -170,11 +170,11 @@ class User < ApplicationRecord
     Gift.giftable_dates - gifts.pluck(:date)
   end
 
-  def gift_unspent_pull_requests!
+  def gift_unspent_contributions!
     return if ungifted_dates.empty?
-    pull_requests = unspent_pull_requests.slice(0, ungifted_dates.count)
-    pull_requests.each do |pull_request|
-      new_gift(pull_request: pull_request).save
+    contributions = unspent_contributions.slice(0, ungifted_dates.count)
+    contributions.each do |contribution|
+      new_gift(contribution: contribution).save
     end
   end
 
@@ -188,16 +188,16 @@ class User < ApplicationRecord
 
   def download_user_organisations(access_token = token)
     orgs = Downloader.new(self, access_token).get_organisations
-    orgs.each(&:update_pull_request_count)
+    orgs.each(&:update_contribution_count)
   end
 
-  def download_pull_requests(access_token = token)
+  def download_contributions(access_token = token)
     Downloader.new(self, access_token).get_pull_requests
   end
 
-  def unspent_pull_requests
-    gifted_pull_requests = gifts.map(&:pull_request)
-    pull_requests_ignoring_organisations.year(Tfpullrequests::Application.current_year).reject { |pr| gifted_pull_requests.include?(pr) }
+  def unspent_contributions
+    gifted_contributions = gifts.map(&:contribution)
+    contributions_ignoring_organisations.year(Tfpullrequests::Application.current_year).reject { |pr| gifted_contributions.include?(pr) }
   end
 
   def needs_setup?
@@ -209,13 +209,13 @@ class User < ApplicationRecord
   end
 
   def send_thank_you_email_on_24
-    return unless pull_requests_count >= 24 && !thank_you_email_sent
+    return unless contributions_count >= 24 && !thank_you_email_sent
     ThankYouMailer.thank_you(self).deliver_later
     update_column(:thank_you_email_sent, true)
   end
 
-  def update_pull_request_count
-    update_attribute(:pull_requests_count, pull_requests.year(Tfpullrequests::Application.current_year).for_aggregation.count)
+  def update_contribution_count
+    update_attribute(:contributions_count, contributions.year(Tfpullrequests::Application.current_year).for_aggregation.count)
   end
 
   def ignored_organisations_string
@@ -229,8 +229,8 @@ class User < ApplicationRecord
       .compact
   end
 
-  def pull_requests_ignoring_organisations
-    pull_requests.excluding_organisations(ignored_organisations)
+  def contributions_ignoring_organisations
+    contributions.excluding_organisations(ignored_organisations)
   end
 
   def unsubscribe!

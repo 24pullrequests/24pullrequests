@@ -67,6 +67,10 @@ class Project < ApplicationRecord
     update_attribute(:inactive, true)
   end
 
+  def reactivate!
+    update_attribute(:inactive, false)
+  end
+
   def issues(nickname, token, months_ago = 6, options = {})
     get_github_data('issues', nickname, token, months_ago, options)
   end

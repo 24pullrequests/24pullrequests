@@ -31,15 +31,15 @@ tr:
   view_all: Hepsini Göster
   welcome: Welcome, %{user}!
   welcome_back: Hoşgeldin, %{user}
-  your_pull_requests: Pull Requests'lerin
+  your_pull_requests: Contributions'lerin
   about:
     description: 24 Pull Requests Aralık ayı boyunca açık kaynak kodlu projeleri destekleyen küçük bir projedir.
     idea: Temel fikir Aralıktan Noel'e kadar her gün bir pull request yollanması ve Aralık ayı boyunca küçük hediyeler ile geliştircilerin cesaretlendirilmesidir.
     more_info: Bu site ilgili projeleri de destekler ve her gün gönderilen pull request'ler ile onlar destek ve rehber olur.
-    idea_title: 
+    idea_title:
     idea_subtitle:
-    where_to_find_us: 
-    on_gitter: 
+    where_to_find_us:
+    on_gitter:
     on_github: 'Bu sitenin geliştirilmesi GitHub üzerindedir:'
     on_twitter: 'Twitter''da da varız:'
     title: 24 Pull Requests Hakkında
@@ -80,7 +80,7 @@ tr:
     pull_requests:
       details: Kullanıcının kendi yaptığı pull request'ler dahil olmak üzere tüm pull requestler Aralık ayındankiler olmak üzere yeniden eskiye doğru sıralanır.
       meta_details: Bu yıl tüm çekme istekleri hakkında bilgi yükleyin.
-      title: Pull Requests
+      title: Contributions
     users:
       details: Siteye kayıtlı tüm kullanıcılar Aralık ayı boyunca kendi ve organizasyonları üzerinden yaptıkları pull requestler'i görürler.
       specific: Belirli bir kişi için bilgilerin alınması.
@@ -156,7 +156,7 @@ tr:
     form:
       date: Tarih
       gift_it: Hediye et!
-      pull_requests: Pull Requests
+      pull_requests: Contributions
       tweet: Hediyen hakkında Tweet at!
   homepage:
     about: Bütün bunlar ne için?
@@ -176,7 +176,6 @@ tr:
     involved:
       contributing_path: özel sayfa
       description: 'Açık kaynak bir porjeye dahil olmanın bir çok yolu vardır: dökümantasyon içeriklerini geliştirmek, mevcut sorun ve bugları düzeltmek, kod kalitesini ve testlerin kapmasımını arttırmak ya da olmayan bir özellik eklemek.'
-      special_page: Katılım hakkında bilgiler bulabileceğiniz %{contributing_path} hazırladık.
       take_a_look: Eğer açık kaynak kodda yeniyseniz, bir göz atın.
       title: Dahil olmak
     profile:
@@ -296,6 +295,18 @@ tr:
       count: "%{count} tane %{language} dilinde Pull Request yapıldı!"
     latest:
       count: Latest Pull Requests (%{count} total)
+  contributions:
+    new:
+      title:
+      form:
+        body:
+        body_placeholder:
+        repo_name:
+        repo_name_placeholder:
+        issue_url:
+        issue_url_placeholder:
+        created_at:
+      save:
   suggestions:
     title: Önerilerim
   twitter:
@@ -314,6 +325,6 @@ tr:
   user:
     no_current_pr_message:
     organisations: "... üyesi"
-    pull_request_count:
+    contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"

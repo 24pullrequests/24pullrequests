@@ -4,7 +4,7 @@ Only <%= 25 - Time.zone.today.day %> <% if (25 - Time.zone.today.day) > 1 %>days
 
 We've got some suggested projects for you to contribute to <%= this_time %>
 
-<% if @user.pull_requests.year(Tfpullrequests::Application.current_year).any? %>
+<% if @user.contributions.year(Tfpullrequests::Application.current_year).any? %>
 You can view the contributions you've made so far at <%= dashboard_url %>.
 <% else %>
 You haven't made any contributions yet. Once you make a contribution, you can view your progress at <%= dashboard_url %>.

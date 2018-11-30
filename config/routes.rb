@@ -20,9 +20,18 @@ Tfpullrequests::Application.routes.draw do
       get :autofill
       post :claim
     end
+    member do
+      put :reactivate
+    end
   end
 
-  resources :pull_requests, only: [:index] do
+  resources :contributions do
+    collection do
+      get :meta
+    end
+  end
+
+  resources :pull_requests, only: [:index], controller: 'contributions' do
     collection do
       get :meta
     end
@@ -60,6 +69,7 @@ Tfpullrequests::Application.routes.draw do
   get 'humans', to: 'static#humans'
   get 'api', to: 'static#api'
   get 'contributing', to: 'static#contributing'
+  get '2018', to: 'static#2018'
 
   get '/unsubscribe', to: 'unsubscribes#new', as: :unsubscribe
   post '/unsubscribe', to: 'unsubscribes#create'
