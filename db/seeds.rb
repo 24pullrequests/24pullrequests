@@ -34,7 +34,7 @@ if Rails.env.development? || Rails.env.test?
 
   Rails.logger.info 'Inserting some test data'
 
-  USERS.times do |i|
+  USERS.times do
     user = create :user, provider: 'developer2', gravatar_id: GRAVATARS.sample
     2.times { user.organisations << create(:organisation, avatar_url: "https://1.gravatar.com/avatar/#{ORGGRAVATARS.sample}") rescue nil }
 
