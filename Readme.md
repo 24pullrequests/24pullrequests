@@ -60,7 +60,8 @@ Next, you'll need to make sure that you have PostgreSQL installed. This can be
 done easily on OSX using [Homebrew](http://mxcl.github.io/homebrew/) or by using [http://postgresapp.com](http://postgresapp.com). Please see these [further instructions for installing Postgres via Homebrew](http://www.mikeball.us/blog/setting-up-postgres-with-homebrew/).
 
 ```bash
-brew install postgres phantomjs
+brew install postgres
+brew cask install phantomjs
 ```
 
 On Debian-based Linux distributions you can use apt-get to install Postgres:
@@ -73,6 +74,12 @@ On Windows, you can use the [Chocolatey package manager](http://chocolatey.org/)
 
 ```bash
 choco install postgresql
+```
+
+Clone this repository:
+
+```bash
+git clone git@github.com:24pullrequests/24pullrequests.git
 ```
 
 Now, let's install the gems from the `Gemfile` ("Gems" are synonymous with libraries in other
