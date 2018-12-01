@@ -127,7 +127,7 @@ We are always looking for people to contribute! To find out how to help out, hav
 
 ### Translations
 
-24 Pull Requests is avialable in twenty languages. Translations are [managed on Transifex](https://www.transifex.com/24-pull-requests/24-pull-requests/). Authentication is required to use Transifex. If you prefer to edit the translations directly you can do using the [standard Rails i28n framework](https://guides.rubyonrails.org/i18n.html#organization-of-locale-files). To get started:
+24 Pull Requests is available in twenty languages. Translations are [managed on Transifex](https://www.transifex.com/24-pull-requests/24-pull-requests/). Authentication is required to use Transifex. If you prefer to edit the translations directly you can use the [standard Rails i28n framework](https://guides.rubyonrails.org/i18n.html#organization-of-locale-files). To get started:
 
 * Fork the project
 * create a copy of `config/locales/en.yml` within the locales folder
