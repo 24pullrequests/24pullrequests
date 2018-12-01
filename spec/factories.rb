@@ -30,7 +30,6 @@ FactoryBot.define do
     email
     gravatar_id { Faker::Internet.email }
     token { SecureRandom.hex }
-    location { Faker::Address.country }
     unsubscribe_token { SecureRandom.uuid }
   end
 
