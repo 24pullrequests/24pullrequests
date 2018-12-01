@@ -175,7 +175,7 @@ en:
       view_events: View events
     involved:
       contributing_path: Here's our primer
-      description: "There are lots of ways to get involved in an open source project: improving doc's, designs or existing code, supporting other users, fixing, replicating or triaging issues and bugs, or adding missing features."
+      description: "There are lots of ways to get involved in an open source project: improving docs, designs or existing code, supporting other users, fixing, replicating or triaging issues and bugs, or adding missing features."
       take_a_look: New to open source?  %{contributing_path}.
       title: Get involved
     profile:
