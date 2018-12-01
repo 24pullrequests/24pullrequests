@@ -7,7 +7,7 @@
 #   Mayor.create(:name => 'Emanuel', :city => cities.first)
 
 # Create some test data for development environments.
-if Rails.env.development?
+if Rails.env.development? || Rails.env.test?
 
   User.delete_all
   Contribution.delete_all
@@ -50,7 +50,7 @@ if Rails.env.development?
   end
 
   PROJECTS.times do
-    project = create :project
+    project = create :project, submitted_by: User.take(1).first
     project.labels << labels.sample(2)
   end
 
