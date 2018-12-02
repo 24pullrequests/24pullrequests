@@ -136,9 +136,9 @@ We are always looking for people to contribute! To find out how to help out, hav
 
 24 Pull Requests is available in twenty languages. Translations are [managed on Transifex](https://www.transifex.com/24-pull-requests/24-pull-requests/). Authentication is required to use Transifex. If you prefer to edit the translations directly you can use the [standard Rails i28n framework](https://guides.rubyonrails.org/i18n.html#organization-of-locale-files). To get started:
 
-* Fork the project
-* create a copy of `config/locales/en.yml` within the locales folder
-* amend the first line with the [correct character set](https://www.w3.org/International/O-charset-lang.html) you'll be translating to
+* Fork the project.
+* Create a copy of `config/locales/en.yml` within the locales folder.
+* Amend the first line with the [correct character set](https://www.w3.org/International/O-charset-lang.html) you'll be translating to.
 * Translate the strings and submit a pull request for the new translation.
 
 ### Code of Conduct
