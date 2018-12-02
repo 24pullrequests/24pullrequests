@@ -19,7 +19,7 @@ class User < ApplicationRecord
   scope :with_any_contributions, -> { where('users.contributions_count > 0') }
   scope :random, -> { order(Arel.sql("RANDOM()")) }
 
-  paginates_per 99
+  paginates_per 96
 
   accepts_nested_attributes_for :skills, reject_if: proc { |attributes| !Project::LANGUAGES.include?(attributes['language']) }
 
