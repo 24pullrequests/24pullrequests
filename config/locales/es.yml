@@ -317,10 +317,10 @@ es:
       text: Vincular mi cuenta de Twitter
       tooltip: Si tu cuenta de Twitter está vinculada, publicaremos un tweet cada vez que envíes un Pull Request.
   unsubscribe: 
-    invalid_token: Contraseña invalida
-    login: Inicio de sesion 
-    success: Inicio de sesion correcto
-    title: Cancelar Su Suscripción En Nuestra Lista de Distribución. 
+    invalid_token: Token de suscripción inválido
+    login: Nombre de usuario de GitHub o dirección de correo electrónico
+    success: Su suscripción en nuestra lista de correo ha sido cancelada. 
+    title: Cancelar La Suscripción A Nuestra Lista De Correo 
     unsubscribe: Desuscribirse
   user:
     no_current_pr_message:
