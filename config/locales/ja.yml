@@ -297,16 +297,16 @@ ja:
       count: 最新の Pull Request (合計 %{count})
   contributions:
     new:
-      title:
+      title: あなたは今日どのようにオープンソースに貢献しましたか?
       form:
-        body:
-        body_placeholder:
-        repo_name:
-        repo_name_placeholder:
-        issue_url:
-        issue_url_placeholder:
-        created_at:
-      save:
+        body: 説明
+        body_placeholder: あなたが行ったオープンソースプロジェクトへの貢献を説明してください
+        repo_name: プロジェクト
+        repo_name_placeholder: オープンソースプロジェクト名
+        issue_url: プロジェクトURL
+        issue_url_placeholder: https://oss-project.io
+        created_at: 貢献日時
+      save: あなたの貢献を記録する
   suggestions:
     title: 私のオススメ
   twitter:
