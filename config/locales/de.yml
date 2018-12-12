@@ -4,9 +4,9 @@ de:
   cancel: Abbrechen
   change: Ändern
   claim: Anspruch erheben
-  clear: Clear
-  deactivate: Deactivate
-  delete: Delete
+  clear: Leeren
+  deactivate: Deaktivieren
+  delete: Löschen
   contributors_involved: Entwickler machen mit
   contributors_involved_desc: Join everyone here and make open source better.
   contributors_using_language: Entwickler, die %{language} verwenden
@@ -20,16 +20,16 @@ de:
   more: Mehr
   no_suggestions: Du hast bisher keine vorgeschlagenen Projekte
   open_source_yey: Open Source FTW!
-  or:
+  or: oder
   organisations_involved_desc: Invite more people from your organisation to participate.
   preferred_languages: Bevorzugte Sprachen
   search: Suchen
   sponsored_by: Unterstützt von
-  sponsors: Sponsors
+  sponsors: Sponsoren
   suggest_project: Ein Projekt vorschlagen
   suggested_projects: Vorgeschlagene Projekte
   view_all: Alle ansehen
-  welcome: Welcome, %{user}!
+  welcome: Willkommen, %{user}!
   welcome_back: Willkommen zurück, %{user}
   your_pull_requests: Deine Pull Requests
   about:
@@ -108,13 +108,13 @@ de:
     title: Konto löschen
   events:
     details: You don’t have to hack alone this Christmas! Host a 24 Pull Requests hack event at your company, technology meetup, or in your local community. Or you can join a hack event and code together.
-    save_event: Save event
+    save_event: Event speichern
     title: Events
     admin:
       search: Search by GitHub repository
       title: Manage Projects
     edit:
-      title: Edit Event
+      title: Event bearbeiten
     index:
       host_an_event: Host an event
       past_24_pull_requests_events: Past 24 Pull Requests Events
@@ -122,26 +122,26 @@ de:
     new:
       title: Host a 24 Pull Requests event
       form:
-        description: Description
+        description: Beschreibung
         description_placeholder: Give a little description of the group and event
         location: Location
         location_placeholder: e.g. Bristol, UK
         map: Location marker
-        name: Event name
+        name: Name des Events
         name_placeholder: Bristol Ruby Group Pull-request-a-thon
-        start_time: When
+        start_time: Wann
         url: URL
         url_placeholder: Your event page / registration
     notice:
-      destroy_success: Event removed successfully!
-      edit_success: Event updated successfully!
-      new_success: Event created successfully!
+      destroy_success: Event erfolgreich gelöscht!
+      edit_success: Event erfolgreich aktualisiert!
+      new_success: Event erfolgreich erstellt!
       not_authorized: You can only edit events that you have created
       not_logged_in: You must be logged in to create or edit events
     show:
       confirm_destroy: Are you sure you want to remove this event?
-      destroy_event: Remove event
-      edit_event: Edit event
+      destroy_event: Event löschen
+      edit_event: Event bearbeiten
       view_event_details: View event details
   gifts:
     calendar_link:
