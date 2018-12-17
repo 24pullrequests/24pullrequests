@@ -320,7 +320,7 @@ ja:
     invalid_token:
     login:
     success:
-    title:
+    title: メーリングリストの登録を解除する
     unsubscribe:
   user:
     no_current_pr_message:
