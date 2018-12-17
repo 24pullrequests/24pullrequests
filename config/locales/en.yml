@@ -318,7 +318,7 @@ en:
       tooltip: If you link your Twitter account, we’ll post a tweet whenever you make a contribution!
   unsubscribe:
     invalid_token: Invalid subscription token
-    login: Github username or email address
+    login: GitHub username or email address
     success: You have successfully unsubscribed from our mailing list.
     title: Unsubscribe From Our Mailing List
     unsubscribe: Unsubscribe
