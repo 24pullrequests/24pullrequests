@@ -272,10 +272,10 @@ ja:
     edit:
       title: Edit Suggestion
     new:
-      info: One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We've selected our favorites, but we're always open to suggestions. Have some ideas? Share them below!
+      info: オープンソースコミュニティーへの参加を奨励する方法の 1 つは、寄与する価値のある人気のあるプロジェクトをユーザーに知らせることです。私たちは私たちのオススメを選びましたが、私たちは常に提案を受け入れています。なにかアイデアがありますか？それらを共有してください！
       issue_link_text: suggest an issue
       suggestion: Have a suggestion for this project? We're all ears! If there's something you'd like fixed, feel free to %{issue_link}.
-      title: Suggest a Project
+      title: プロジェクトを提案する
       form:
         github_url: GitHub URL
         main_language: 主要言語
