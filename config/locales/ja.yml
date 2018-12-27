@@ -326,5 +326,5 @@ ja:
     no_current_pr_message:
     organisations: 組織
     contribution_count:
-      one: "%{user} has made %{count} pull request so far in Christmas %{year}"
-      other: "%{user} has made %{count} pull requests so far in Christmas %{year}"
+      one: "%{user} はこれまでのところ %{count} 回の pull request を %{year} のクリスマスに行いました"
+      other: "%{user} はこれまでのところ %{count} 回の pull request を %{year} のクリスマスに行いました"
