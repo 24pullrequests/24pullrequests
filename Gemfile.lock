@@ -140,7 +140,7 @@ GEM
       rails-i18n
       rainbow (>= 2.2.2, < 4.0)
       terminal-table (>= 1.5.1)
-    jaro_winkler (1.5.1)
+    jaro_winkler (1.5.2)
     jquery-datetimepicker-rails (2.4.1.0)
     jquery-rails (4.3.3)
       rails-dom-testing (>= 1, < 3)
