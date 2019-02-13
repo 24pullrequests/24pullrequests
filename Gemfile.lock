@@ -55,7 +55,7 @@ GEM
     bindex (0.5.0)
     bootsnap (1.4.0)
       msgpack (~> 1.0)
-    bootstrap-sass (3.4.0)
+    bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
     brakeman (4.4.0)
