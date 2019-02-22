@@ -312,7 +312,7 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.4.0)
     ruby-progressbar (1.10.0)
-    safe_yaml (1.0.4)
+    safe_yaml (1.0.5)
     sassc (2.0.0)
       ffi (~> 1.9.6)
       rake
