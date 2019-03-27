@@ -53,7 +53,7 @@ GEM
     autoprefixer-rails (9.5.0)
       execjs
     bindex (0.5.0)
-    bootsnap (1.4.1)
+    bootsnap (1.4.2)
       msgpack (~> 1.0)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
@@ -212,7 +212,7 @@ GEM
     omniauth-twitter (1.4.0)
       omniauth-oauth (~> 1.1)
       rack
-    parallel (1.15.0)
+    parallel (1.16.0)
     parser (2.6.2.0)
       ast (~> 2.4.0)
     pg (1.1.4)
