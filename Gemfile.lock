@@ -130,7 +130,7 @@ GEM
     http_parser.rb (0.6.0)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
-    i18n-tasks (0.9.28)
+    i18n-tasks (0.9.29)
       activesupport (>= 4.0.2)
       ast (>= 2.1.0)
       erubi
