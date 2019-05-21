@@ -111,7 +111,7 @@ GEM
       i18n (>= 0.7)
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
-    ffi (1.11.0)
+    ffi (1.11.1)
     foreman (0.85.0)
       thor (~> 0.19.1)
     globalid (0.4.2)
