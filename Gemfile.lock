@@ -221,7 +221,7 @@ GEM
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
     public_suffix (3.1.1)
-    puma (4.0.0)
+    puma (4.0.1)
       nio4r (~> 2.0)
     rabl (0.14.1)
       activesupport (>= 2.3.14)
