@@ -50,7 +50,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     arel (9.0.0)
     ast (2.4.0)
-    autoprefixer-rails (9.6.1.1)
+    autoprefixer-rails (9.6.4)
       execjs
     bindex (0.8.1)
     bootsnap (1.4.5)
