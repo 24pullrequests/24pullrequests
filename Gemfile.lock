@@ -117,7 +117,7 @@ GEM
       activesupport (>= 4.2.0)
     hashdiff (1.0.0)
     hashie (3.6.0)
-    highline (2.0.2)
+    highline (2.0.3)
     http (3.3.0)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
