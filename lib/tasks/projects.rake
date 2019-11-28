@@ -2,6 +2,7 @@ require_relative '../json_api'
 
 desc 'Mark inactive projects'
 task check_for_inactive_projects: :environment do
+  next unless Contribution.in_date_range?
   count = 0
   Project.active.all.find_each do |project|
     begin
@@ -49,6 +50,7 @@ task reactivate_inactive_projects: :environment do
 end
 
 task map_labels_from_github_issues: :environment do
+  next unless Contribution.in_date_range?
   ACTIVE_LABELS = Label.all.map(&:name)
 
   Project.active.all.each do |project|
