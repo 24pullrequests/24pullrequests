@@ -52,6 +52,7 @@ class Contribution < ApplicationRecord
     end
 
     def in_date_range?
+      return false if ENV['DISABLED'].present?
       EARLIEST_PULL_DATE < Time.zone.now && Time.zone.now < LATEST_PULL_DATE
     end
   end
