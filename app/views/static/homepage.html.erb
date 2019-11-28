@@ -1,202 +1,210 @@
-<div class="container block intro">
-  <% if Time.zone.today.between?(Date.new(Tfpullrequests::Application.current_year, 10, 30), Date.new(Tfpullrequests::Application.current_year, 12, 24)) %>
+<% if ENV['DISABLED'].present? %>
+  <div class="container block intro">
     <div class="row">
-      <div class="alert alert-info">
-        This year we're making 24 Pull Requests more inclusive and open to all kinds of contributions -
-        <%= link_to "Click here to see what's changed", '/2018' %>
-      </div>
-    </div>
-  <% else %>
-    <div class="row">
-      <%= render :partial => 'finished' %>
-    </div>
-  <% end %>
-
-  <div class="row">
-    <div class="col-md-4 intro-block">
-      <%= octicon "gift", :height => 60 %>
-      <h4>
-        <%= t("homepage.greeting") %>
-      </h4>
-      <p>
-        <%= t("homepage.give_to_open_source") %>
-      </p>
-    </div>
-    <div class="col-md-4 intro-block">
-      <%= octicon "git-pull-request", :height => 60 %>
-      <h4>
-        <%= t("homepage.involved.title") %>
-      </h4>
-      <p>
-        <%= t("homepage.involved.description") %>
-      </p>
-      <p>
-        <%= t("homepage.involved.take_a_look", contributing_path: link_to(t("homepage.involved.contributing_path"), contributing_path)).html_safe %>
-      </p>
-    </div>
-    <div class="col-md-4 intro-block">
-      <%= octicon "checklist", :height => 60 %>
-
-      <h4>
-        <%= t("homepage.profile.title") %>
-      </h4>
-      <p>
-        <%= t("homepage.profile.description") %>
-      </p>
-      <p>
-        <%= t("homepage.profile.getting_started") %>
-      </p>
+      <%= render :partial => 'disabled' %>
     </div>
   </div>
-  <% unless logged_in? %>
+<% else %>
+  <div class="container block intro">
+    <% if Time.zone.today.between?(Date.new(Tfpullrequests::Application.current_year, 10, 30), Date.new(Tfpullrequests::Application.current_year, 12, 24)) %>
+      <div class="row">
+        <div class="alert alert-info">
+          This year we're making 24 Pull Requests more inclusive and open to all kinds of contributions -
+          <%= link_to "Click here to see what's changed", '/2018' %>
+        </div>
+      </div>
+    <% else %>
+      <div class="row">
+        <%= render :partial => 'finished' %>
+      </div>
+    <% end %>
+
     <div class="row">
-      <div class="col-md-12">
-        <div class="cta-block">
-          <%= link_to login_path, :class => 'btn cta' do %>
-            <%= octicon "mark-github", :height => 16 %>
-            <strong>
-              <%= t("homepage.login_with_github") %>
-            </strong>
+      <div class="col-md-4 intro-block">
+        <%= octicon "gift", :height => 60 %>
+        <h4>
+          <%= t("homepage.greeting") %>
+        </h4>
+        <p>
+          <%= t("homepage.give_to_open_source") %>
+        </p>
+      </div>
+      <div class="col-md-4 intro-block">
+        <%= octicon "git-pull-request", :height => 60 %>
+        <h4>
+          <%= t("homepage.involved.title") %>
+        </h4>
+        <p>
+          <%= t("homepage.involved.description") %>
+        </p>
+        <p>
+          <%= t("homepage.involved.take_a_look", contributing_path: link_to(t("homepage.involved.contributing_path"), contributing_path)).html_safe %>
+        </p>
+      </div>
+      <div class="col-md-4 intro-block">
+        <%= octicon "checklist", :height => 60 %>
+
+        <h4>
+          <%= t("homepage.profile.title") %>
+        </h4>
+        <p>
+          <%= t("homepage.profile.description") %>
+        </p>
+        <p>
+          <%= t("homepage.profile.getting_started") %>
+        </p>
+      </div>
+    </div>
+    <% unless logged_in? %>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="cta-block">
+            <%= link_to login_path, :class => 'btn cta' do %>
+              <%= octicon "mark-github", :height => 16 %>
+              <strong>
+                <%= t("homepage.login_with_github") %>
+              </strong>
+            <% end %>
+          </div>
+          <%= render :partial => 'shared/social_buttons' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="container tips">
+    <div class="row">
+      <div class="col-md-4 tip-block">
+        <h4 class="subtitle">
+          <span class="octicon-circle">
+            <%= octicon "radio-tower", :height => 20 %>
+          </span>
+          <%= t("homepage.event.title") %>
+        </h4>
+        <p>
+          <%= t("homepage.event.description") %>
+        </p>
+        <%= link_to t("homepage.event.view_events"), events_path, class: "btn btn-primary" %>
+        <%= link_to t("homepage.event.host_an_event"), new_event_path, class: "btn btn-default" %>
+      </div>
+      <div class="col-md-4 tip-block">
+        <h4 class="subtitle">
+          <span class="octicon-circle">
+            <%= octicon "question", :height => 20 %>
+          </span>
+          <%= t("homepage.q_n_a") %>
+        </h4>
+        <p>
+          <%= t("homepage.join_the_chat", link_to_chat: link_to('24pullrequests/24pullrequests', 'https://gitter.im/24pullrequests/24pullrequests')).html_safe %>
+        </p>
+      </div>
+    </div>
+  </div>
+  <% if @featured_projects.any? %>
+    <div class="container featured_projects">
+      <div class="row">
+        <div class="block">
+          <div class="title-block">
+            <%= octicon "repo", :class => "mega-octicon", :height => 40 %>
+            <h3 class="block-title">
+              <%= t("featured_projects") %>
+            </h3>
+          </div>
+          <%= render partial: "projects/project", locals: { show_avatar: true }, collection: @featured_projects %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <div class="container">
+    <div class="row avatar-block">
+      <div class="col-md-6 two-up-split left">
+        <div class="block">
+          <h3 class="block-title">
+            <%= number_with_delimiter User.count %>
+            <%= t("contributors_involved") %>
+          </h3>
+          <p>
+            <%= t("contributors_involved_desc") %>
+          </p>
+          <%= link_to t("view_all"), users_path, :class => 'btn btn-default btn-sm' %>
+          <ul class="avatar-list avatar-list-lg clearfix">
+            <%= render @users %>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 two-up-split right">
+        <div class="block">
+          <h3 class="block-title">
+            <%= t("organisations.title", count: number_with_delimiter(Organisation.count)) %>
+          </h3>
+          <p>
+            <%= t("organisations_involved_desc") %>
+          </p>
+          <%= link_to t("view_all"), organisations_path, :class => 'btn btn-default btn-sm' %>
+          <ul class="avatar-list avatar-list-lg clearfix">
+            <%= render @orgs %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <% if @mergers.any? %>
+      <div class="row avatar-block maintainers">
+        <div class="block">
+          <h3 class="block-title">
+            <%= number_with_delimiter @mergers.total_count %>
+            Maintainers have merged pull requests in <%= current_year %>
+          </h3>
+          <p>These are the people who review and accept your contributions.</p>
+          <%= link_to t("view_all"), mergers_path, :class => 'btn btn-default btn-sm' %>
+          <ul class="avatar-list avatar-list-lg clearfix">
+            <%= render partial: 'users/merger', collection: @mergers, as: :user %>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 two-up-split left">
+        <div class="block">
+          <div class="title-block">
+            <%= octicon "git-pull-request", :class => "mega-octicon", :height => 40 %>
+            <h3 class="block-title">
+              <%= t("pull_requests.latest.count", count: number_with_delimiter(Contribution.year(current_year).count)) %>
+            </h3>
+            <p>
+              <%= t("dashboard.pull_requests") %>
+            </p>
+            <%= link_to t("view_all"), pull_requests_path, :class => 'btn btn-default btn-sm' %>
+          </div>
+          <% if @contributions.any? %>
+            <div id="contributions">
+              <%= render @contributions, cache: true %>
+            </div>
+          <% else %>
+            <br/>
+            <div class="well">
+              No contributions yet this year!
+            </div>
           <% end %>
         </div>
-        <%= render :partial => 'shared/social_buttons' %>
       </div>
-    </div>
-  <% end %>
-</div>
-<div class="container tips">
-  <div class="row">
-    <div class="col-md-4 tip-block">
-      <h4 class="subtitle">
-        <span class="octicon-circle">
-          <%= octicon "radio-tower", :height => 20 %>
-        </span>
-        <%= t("homepage.event.title") %>
-      </h4>
-      <p>
-        <%= t("homepage.event.description") %>
-      </p>
-      <%= link_to t("homepage.event.view_events"), events_path, class: "btn btn-primary" %>
-      <%= link_to t("homepage.event.host_an_event"), new_event_path, class: "btn btn-default" %>
-    </div>
-    <div class="col-md-4 tip-block">
-      <h4 class="subtitle">
-        <span class="octicon-circle">
-          <%= octicon "question", :height => 20 %>
-        </span>
-        <%= t("homepage.q_n_a") %>
-      </h4>
-      <p>
-        <%= t("homepage.join_the_chat", link_to_chat: link_to('24pullrequests/24pullrequests', 'https://gitter.im/24pullrequests/24pullrequests')).html_safe %>
-      </p>
-    </div>
-  </div>
-</div>
-<% if @featured_projects.any? %>
-  <div class="container featured_projects">
-    <div class="row">
-      <div class="block">
-        <div class="title-block">
-          <%= octicon "repo", :class => "mega-octicon", :height => 40 %>
-          <h3 class="block-title">
-            <%= t("featured_projects") %>
-          </h3>
+      <div class="col-md-6 two-up-split right">
+        <div class="block">
+          <div class="title-block">
+            <%= octicon "repo", :class => "mega-octicon", :height => 40 %>
+            <h3 class="block-title">
+              <%= number_with_delimiter Project.active.count %>
+              <%= t("suggested_projects") %>
+            </h3>
+            <p>
+              <%= t("dashboard.help_out") %>
+            </p>
+            <%= link_to t("suggest_project"), new_project_path, :class => 'btn btn-default btn-sm' %>
+            <%= link_to t("view_all"), projects_path, :class => 'btn btn-default btn-sm' %>
+          </div>
+          <%= render @projects %>
         </div>
-        <%= render partial: "projects/project", locals: { show_avatar: true }, collection: @featured_projects %>
       </div>
     </div>
   </div>
 <% end %>
-<div class="container">
-  <div class="row avatar-block">
-    <div class="col-md-6 two-up-split left">
-      <div class="block">
-        <h3 class="block-title">
-          <%= number_with_delimiter User.count %>
-          <%= t("contributors_involved") %>
-        </h3>
-        <p>
-          <%= t("contributors_involved_desc") %>
-        </p>
-        <%= link_to t("view_all"), users_path, :class => 'btn btn-default btn-sm' %>
-        <ul class="avatar-list avatar-list-lg clearfix">
-          <%= render @users %>
-        </ul>
-      </div>
-    </div>
-    <div class="col-md-6 two-up-split right">
-      <div class="block">
-        <h3 class="block-title">
-          <%= t("organisations.title", count: number_with_delimiter(Organisation.count)) %>
-        </h3>
-        <p>
-          <%= t("organisations_involved_desc") %>
-        </p>
-        <%= link_to t("view_all"), organisations_path, :class => 'btn btn-default btn-sm' %>
-        <ul class="avatar-list avatar-list-lg clearfix">
-          <%= render @orgs %>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <% if @mergers.any? %>
-    <div class="row avatar-block maintainers">
-      <div class="block">
-        <h3 class="block-title">
-          <%= number_with_delimiter @mergers.total_count %>
-          Maintainers have merged pull requests in <%= current_year %>
-        </h3>
-        <p>These are the people who review and accept your contributions.</p>
-        <%= link_to t("view_all"), mergers_path, :class => 'btn btn-default btn-sm' %>
-        <ul class="avatar-list avatar-list-lg clearfix">
-          <%= render partial: 'users/merger', collection: @mergers, as: :user %>
-        </ul>
-      </div>
-    </div>
-  <% end %>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 two-up-split left">
-      <div class="block">
-        <div class="title-block">
-          <%= octicon "git-pull-request", :class => "mega-octicon", :height => 40 %>
-          <h3 class="block-title">
-            <%= t("pull_requests.latest.count", count: number_with_delimiter(Contribution.year(current_year).count)) %>
-          </h3>
-          <p>
-            <%= t("dashboard.pull_requests") %>
-          </p>
-          <%= link_to t("view_all"), pull_requests_path, :class => 'btn btn-default btn-sm' %>
-        </div>
-        <% if @contributions.any? %>
-          <div id="contributions">
-            <%= render @contributions, cache: true %>
-          </div>
-        <% else %>
-          <br/>
-          <div class="well">
-            No contributions yet this year!
-          </div>
-        <% end %>
-      </div>
-    </div>
-    <div class="col-md-6 two-up-split right">
-      <div class="block">
-        <div class="title-block">
-          <%= octicon "repo", :class => "mega-octicon", :height => 40 %>
-          <h3 class="block-title">
-            <%= number_with_delimiter Project.active.count %>
-            <%= t("suggested_projects") %>
-          </h3>
-          <p>
-            <%= t("dashboard.help_out") %>
-          </p>
-          <%= link_to t("suggest_project"), new_project_path, :class => 'btn btn-default btn-sm' %>
-          <%= link_to t("view_all"), projects_path, :class => 'btn btn-default btn-sm' %>
-        </div>
-        <%= render @projects %>
-      </div>
-    </div>
-  </div>
-</div>
