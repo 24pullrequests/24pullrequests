@@ -126,7 +126,7 @@ for **another** project, you will need to either
  * unset them before running your tests or
  * reset the omniauth environment variables after creating a GitHub (omniauth) application for this project
 
-as it will use it to learn more about the contributors and for pull requests.
+as it will use it to learn more about the contributors and also for pull requests.
 
 ### Contributing
 
