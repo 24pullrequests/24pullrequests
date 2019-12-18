@@ -224,7 +224,7 @@ GEM
       nio4r (~> 2.0)
     rabl (0.14.2)
       activesupport (>= 2.3.14)
-    rack (2.0.7)
+    rack (2.0.8)
     rack-attack (6.2.1)
       rack (>= 1.0, < 3)
     rack-canonical-host (0.2.3)
