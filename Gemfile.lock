@@ -214,7 +214,7 @@ GEM
     parallel (1.19.1)
     parser (2.6.5.0)
       ast (~> 2.4.0)
-    pg (1.1.4)
+    pg (1.2.0)
     poltergeist (1.18.1)
       capybara (>= 2.1, < 4)
       cliver (~> 0.3.1)
@@ -409,7 +409,7 @@ DEPENDENCIES
   omniauth
   omniauth-github
   omniauth-twitter
-  pg (~> 1.1.4)
+  pg (~> 1.2.0)
   poltergeist
   puma
   rabl
