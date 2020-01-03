@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.6.2'
+ruby '2.7.0'
 
-gem 'rails', '5.2.3'
+gem 'rails', '5.2.4.1'
 
 gem 'jquery-rails'
 gem 'pg', '~> 1.2.0'
@@ -26,6 +26,7 @@ gem 'sassc-rails'
 gem 'puma'
 gem 'rack-attack'
 gem 'bootsnap', require: false
+gem 'sprockets', '< 4.0.0'
 
 group :development do
   gem 'spring'
