@@ -84,7 +84,7 @@ GEM
     concurrent-ruby (1.1.5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
-    crass (1.0.5)
+    crass (1.0.6)
     dalli (2.7.10)
     database_cleaner (1.7.0)
     diff-lcs (1.3)
