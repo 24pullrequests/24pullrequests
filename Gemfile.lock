@@ -58,7 +58,7 @@ GEM
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
-    brakeman (4.7.2)
+    brakeman (4.8.0)
     buftok (0.2.0)
     bugsnag (6.13.0)
       concurrent-ruby (~> 1.0)
