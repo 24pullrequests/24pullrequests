@@ -53,7 +53,7 @@ GEM
     autoprefixer-rails (9.7.4)
       execjs
     bindex (0.8.1)
-    bootsnap (1.4.5)
+    bootsnap (1.4.6)
       msgpack (~> 1.0)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
