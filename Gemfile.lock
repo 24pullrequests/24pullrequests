@@ -217,7 +217,7 @@ GEM
       omniauth-oauth (~> 1.1)
       rack
     parallel (1.19.1)
-    parser (2.7.0.5)
+    parser (2.7.1.0)
       ast (~> 2.4.0)
     pg (1.2.3)
     poltergeist (1.18.1)
@@ -402,8 +402,8 @@ DEPENDENCIES
   dalli
   database_cleaner
   draper
-  factory_bot_rails
-  faker
+  factory_bot_rails (= 4.11.1)
+  faker (= 1.9.6)
   foreman
   i18n-tasks
   jquery-datetimepicker-rails
@@ -431,7 +431,7 @@ DEPENDENCIES
   rspec-rails
   rubocop
   sassc-rails
-  shoulda-matchers
+  shoulda-matchers (= 3.1.3)
   simple_form
   simplecov
   spring
@@ -445,7 +445,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 2.7.0p0
+   ruby 2.7.1p83
 
 BUNDLED WITH
-   2.1.3
+   2.1.4
