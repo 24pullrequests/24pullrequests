@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.7.0'
+ruby '2.7.1'
 
 gem 'rails', '5.2.4.2'
 
@@ -44,13 +44,13 @@ group :development, :test, :cucumber do
   gem 'rspec-its', require: false
   gem 'rspec-collection_matchers', require: false
   gem 'rspec-activemodel-mocks', require: false
-  gem 'factory_bot_rails'
-  gem 'faker'
+  gem 'factory_bot_rails', '4.11.1'
+  gem 'faker', '1.9.6'
   gem 'brakeman'
   gem 'poltergeist'
 
   gem 'database_cleaner'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', '3.1.3'
   gem 'webmock', require: false
   gem 'timecop'
   gem 'christmas_tree_formatter'
