@@ -7,21 +7,21 @@ de:
   clear: Leeren
   deactivate: Deaktivieren
   delete: Löschen
-  contributors_involved: Entwickler machen mit
-  contributors_involved_desc: Join everyone here and make open source better.
-  contributors_using_language: Entwickler, die %{language} verwenden
+  contributors_involved: Entwickler*innen machen mit
+  contributors_involved_desc: Schließ Dich uns an und mach Open Source besser.
+  contributors_using_language: Entwickler*innen, die %{language} verwenden
   edit: Bearbeiten
   everything: Alles
   exempli_gratia:
-  featured_projects: Featured Projects
+  featured_projects: Ausgewählte Projekte
   follow_user: Folge @%{twitter}
-  happy_holidays: Happy Holidays
+  happy_holidays: Schöne Feiertage
   how_to_contribute: Wie kann ich mich beteiligen?
   more: Mehr
   no_suggestions: Du hast bisher keine vorgeschlagenen Projekte
   open_source_yey: Open Source FTW!
   or: oder
-  organisations_involved_desc: Invite more people from your organisation to participate.
+  organisations_involved_desc: Lade mehr Personen aus Deiner Organisation zur Teilnahme ein.
   preferred_languages: Bevorzugte Sprachen
   search: Suchen
   sponsored_by: Unterstützt von
@@ -34,13 +34,13 @@ de:
   your_pull_requests: Deine Pull Requests
   about:
     description: 24 Pull Requests ist ein kleines Projekt, das im Dezember die Zusammenarbeit in Open Source fördert.
-    idea: Im Wesentlichen ist die Idee "Sende einen Pull Request an jedem Tag im Dezember bis hin zu Weihnachten." Damit wollen wir Entwickler ermutigen, den ganzen Dezember über mit kleinen Code-Geschenken etwas an Open Source zurück zu geben.
+    idea: Im Wesentlichen ist die Idee "Sende einen Pull Request an jedem Tag im Dezember bis hin zu Weihnachten." Damit wollen wir Entwickler*innen ermutigen, den ganzen Dezember über mit kleinen Code-Geschenken etwas an Open Source zurück zu geben.
     more_info: Die Webseite bietet auch Vorschläge für bedürftige Projekte an, stellt Richtlinien für die Beteiligung an Open Source bereit, und stellt jeden Tag besonders gute Pull Requests vor.
     idea_title:
     idea_subtitle:
     where_to_find_us:
     on_gitter:
-    on_github: 'Diese Webseiten ist Open Source of GitHub:'
+    on_github: 'Diese Webseite ist Open Source of GitHub:'
     on_twitter: 'Wir sind auch auf Twitter:'
     title: Über 24 Pull Requests
     sponsors:
@@ -54,8 +54,8 @@ de:
         event:
           attributes:
             start_time:
-              in_past: Events cannot be created in the past
-              not_in_range: Events can only be created between December 1st and 24th
+              in_past: Events können nicht in der Vergangenheit erstellt werden
+              not_in_range: Events können nur zwischen dem 1. und 24. Dezember erstellt werden
         user:
           attributes:
             email:
@@ -93,8 +93,8 @@ de:
     give_a_gift: Scheinbar hast Du heute noch keinen Code verschenkt. Möchtest Du diesen Pull Request verschenken?
     help_out: 'Dir fällt kein Projekt ein, dem Du helfen könntest? Hier ist eine Liste beliebter Projekte:'
     no_pull_requests: Du hast noch keine Pull Requests gesendet, worauf wartest Du!?
-    not_december: 24 Pull Requests runs from 1st-24th December, come back then!
-    pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
+    not_december: 24 Pull Requests läuft vom 1. bis 24. Dezember, komm dann wieder!
+    pull_requests: Fragst du dich, was die Leute an den Feiertagen vorhaben? Schau dir diese Pull Requests an or reiche einen eigenen ein!
     synchronize: Pull Requests synchronisieren
     tweet_progress:
       one:
@@ -107,70 +107,70 @@ de:
     notification_info: Falls Du keine Benachrichtigungen mehr erhalten möchtest, ändere einfach Deine %{email_preferences_link}.
     title: Konto löschen
   events:
-    details: You don’t have to hack alone this Christmas! Host a 24 Pull Requests hack event at your company, technology meetup, or in your local community. Or you can join a hack event and code together.
+    details: Du musst nicht alleine hacken an Weihnachten! Veranstalte einen eigenen 24 Pull Requests Hack-Event in deiner Firma, Hackspace oder lokalen Community. Oder du kanst einem bestehenden Hack-Event teilnehmen und gemeinsam mit anderen coden.
     save_event: Event speichern
     title: Events
     admin:
-      search: Search by GitHub repository
-      title: Manage Projects
+      search: Suche nach GitHub Repository
+      title: Projekte verwalten
     edit:
       title: Event bearbeiten
     index:
-      host_an_event: Host an event
-      past_24_pull_requests_events: Past 24 Pull Requests Events
-      show_past_24_pull_requests_events: Show Past 24 Pull Requests Events
+      host_an_event: Event veranstalten
+      past_24_pull_requests_events: Vergangene 24 Pull Requests Events
+      show_past_24_pull_requests_events: Zeige Vergangene 24 Pull Requests Events
     new:
-      title: Host a 24 Pull Requests event
+      title: Veranstalte ein 24 Pull Requests Event
       form:
         description: Beschreibung
-        description_placeholder: Give a little description of the group and event
-        location: Location
-        location_placeholder: e.g. Bristol, UK
-        map: Location marker
+        description_placeholder: Beschreibe die Gruppe und die Veranstaltung
+        location: Ort
+        location_placeholder: z.B. Berlin, DE
+        map: Standort-Markierung
         name: Name des Events
-        name_placeholder: Bristol Ruby Group Pull-request-a-thon
+        name_placeholder: Berlins Ruby Pull-request-a-thon
         start_time: Wann
         url: URL
-        url_placeholder: Your event page / registration
+        url_placeholder: Deine Event-Webseite
     notice:
       destroy_success: Event erfolgreich gelöscht!
       edit_success: Event erfolgreich aktualisiert!
       new_success: Event erfolgreich erstellt!
-      not_authorized: You can only edit events that you have created
-      not_logged_in: You must be logged in to create or edit events
+      not_authorized: Du kannst nur Events bearbeiten, die du angelegt hast.
+      not_logged_in: Du musst eingeloggt sein, um Events zu erstellen oder zu editieren
     show:
-      confirm_destroy: Are you sure you want to remove this event?
+      confirm_destroy: Bist du sicher, dass du das Event löschen möchtest?
       destroy_event: Event löschen
       edit_event: Event bearbeiten
-      view_event_details: View event details
+      view_event_details: Zeige Eventdetails
   gifts:
     calendar_link:
     description: Hier kannst Du Deine Pull Requests verwalten und Deine eigenen "24 Pull Requests" ausgewählen.
     give: Verschenke etwas Bedeutsames an ein Projekt das Du liebst
-    link_twitter: Link Twitter account
-    link_twitter_desc: Want to share information about 24 Pull Requests and your gifts? %{link_twitter} and gift some code to open-source projects.
-    no_pull_requests: You don’t have any pull-requests
+    link_twitter: Link Twitter Account
+    link_twitter_desc: Möchtest du Informationen zu 24 Pull Requests und deinen Geschenken teilen? %{link_twitter} und verschenke etwas Code an Open-Source Projekte.
+    no_pull_requests: Du hast keine Pull Requests
     none: Noch nichts verschenkt.
     title: Geschenkter Code
     view_your_gifts: All Deine Geschenke werden in Deinem %{calendar_link} angezeigt.
     form:
       date:
       gift_it:
-      pull_requests: Contributions
+      pull_requests: Beiträge
       tweet:
   homepage:
     about: Worum geht's?
-    about_text: "<p>24 Pull Requests ist eine jährliche Initiative, die Entwickler aus aller Welt ermutigen möchte, jeden Tag im Dezember einen Pull Request zu senden &mdash; bis Weihnachten.</p> <p>Diese Webseite erklärt das Projekt und zeigt, wie und wohin Du Deine Pull Requests schicken kannst.</p><p>Melde Dich mit Deinem GitHub-Konto an. Wir verfolgen dann all Deine Pull Requests nach, heben sie hervor und schlagen Dir Projekte vor, an denen Du arbeiten könntest.</p>"
+    about_text: "<p>24 Pull Requests ist eine jährliche Initiative, die Entwickler*innen aus aller Welt ermutigen möchte, jeden Tag im Dezember einen Pull Request zu senden &mdash; bis Weihnachten.</p> <p>Diese Webseite erklärt das Projekt und zeigt, wie und wohin Du Deine Pull Requests schicken kannst.</p><p>Melde Dich mit Deinem GitHub-Konto an. Wir verfolgen dann all Deine Pull Requests nach, heben sie hervor und schlagen Dir Projekte vor, an denen Du arbeiten könntest.</p>"
     description: Kleine Code-Geschenke zu Weihnachten verschenken
     give_to_open_source: Du hast das ganze Jahr über von anderen Open Source-Projekten profitiert. Jetzt ist es an der Zeit, den Maintainern dieser Projekte danke zu sagen &mdash; und ein kleiner Vogel hat mir geflüstert, dass sie Pull Requests lieben!
     greeting: Es ist die Zeit
     join_the_chat: Komm in den Chat im Gitter, %{link_to_chat}.
-    login_with_github: Log in with GitHub
+    login_with_github: Log dich ein mit GitHub
     q_n_a: Fragen & Antworten
     title: 24 Pull Requests
     event:
-      description: Dieses Jahr regen wir Organisatoren aus aller Welt an, 24 Pull Requests Hack-Events zu halten. Beteilige dich diese Weihnachten mit!
-      host_an_event: Hoste ein Event
+      description: Dieses Jahr regen wir Organisator*innen aus aller Welt an, 24 Pull Requests Hack-Events zu halten. Beteilige dich diese Weihnachten mit!
+      host_an_event: Veranstalte ein Event
       title: Events
       view_events: Events ansehen
     involved:
@@ -179,21 +179,21 @@ de:
       take_a_look: Schau nach, falls Du neu in Open Source bist.
       title: Mach mit
     profile:
-      description: Sich an Open Source-Projekten zu beteiligen ist auch ein grossartiger Weg, sein Profil in der Community aufzubauen und seinen Lebenslauf zu verbessern.
+      description: Sich an Open Source-Projekten zu beteiligen ist auch ein grossartiger Weg, das eigene Profil in der Community aufzubauen und den eigenen Lebenslauf zu verbessern.
       getting_started: Anzufangen ist wirklich sehr einfach. Selbst die kleinsten Beiträge können für ein Projekt sehr wertvoll sein.
       title: Bau Dein Profil auf
   information:
     codetriage: Revanchiere Dich bei Open Source-Projekten, ein Problembericht nach dem anderen &mdash; mit CodeTriage. Du bekommst jeden Tag einen Problembericht von Deinem Lieblingsprojekt, damit Du Dich vertiefen kannst, mehr lernst und einbezogen wirst.
     get_ready: Bereite Dich vor auf 24 Pull Requests %{year}, dann geht alles wieder von vorne los!
-    happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
+    happy_holidays_see_you: Schöne Feiertage und wir sehen uns alle nächstes Jahr wenn wir alles nochmal machen!
     help_open_source: 'Möchtest Du in der Zwischenzeit weiterhin Open Source-Projekte unterstützen? Schau Dir diese grossartigen Initiativen an:'
-    issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    last_year_stats: "%{year} haben über 24 Tage <b>%{contributors}</b> Entwickler <b>%{pull_requests}</b> Pull Requests an <b>%{projects}</b> verschiedene Open Source-Projekte versendet."
+    issuehubio: Zu Open Source beitragen. Durchsuch die Labels, um das richtige Projekt für dich zu finden!
+    last_year_stats: "%{year} haben über 24 Tage <b>%{contributors}</b> Entwickler*innen <b>%{pull_requests}</b> Pull Requests an <b>%{projects}</b> verschiedene Open Source-Projekte versendet."
     title: 24 Pull Requests %{year} ist da
   language:
     projects_count: "%{count} %{language}-Projekte"
     contributors:
-      count: "%{count} Entwickler, die %{language} verwenden"
+      count: "%{count} Entwickler*innen, die %{language} verwenden"
     projects:
       count: "%{count} Projekte verwenden %{language}"
       suggest: Schlage ein %{language}-Projekt vor
