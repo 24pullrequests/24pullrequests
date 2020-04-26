@@ -230,7 +230,7 @@ GEM
     rabl (0.14.3)
       activesupport (>= 2.3.14)
     rack (2.2.2)
-    rack-attack (6.2.2)
+    rack-attack (6.3.0)
       rack (>= 1.0, < 3)
     rack-canonical-host (1.0.0)
       addressable (> 0, < 3)
