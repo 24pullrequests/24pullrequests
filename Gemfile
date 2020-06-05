@@ -26,7 +26,7 @@ gem 'sassc-rails'
 gem 'puma'
 gem 'rack-attack'
 gem 'bootsnap', require: false
-gem 'sprockets', '< 4.0.0'
+gem 'sprockets', '< 5.0.0'
 
 group :development do
   gem 'spring'
