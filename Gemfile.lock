@@ -182,7 +182,7 @@ GEM
     multipart-post (2.1.1)
     naught (1.1.0)
     newrelic_rpm (6.12.0.367)
-    nio4r (2.5.3)
+    nio4r (2.5.4)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     oauth (0.5.4)
