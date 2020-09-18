@@ -82,8 +82,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.7)
-    crack (0.4.3)
-      safe_yaml (~> 1.0.0)
+    crack (0.4.4)
     crass (1.0.6)
     dalli (2.7.10)
     database_cleaner (1.8.5)
@@ -317,7 +316,6 @@ GEM
     rubocop-ast (0.4.1)
       parser (>= 2.7.1.4)
     ruby-progressbar (1.10.1)
-    safe_yaml (1.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
