@@ -130,7 +130,7 @@ as it will use it to learn more about the contributors and for pull requests.
 
 ### Contributing
 
-We are always looking for people to contribute! To find out how to help out, have a look at our [Contributing Guide](CONTRIBUTING.md).
+We are always appreciate and happy when people contribute!Contributions are always WELCOME, have a look at our [Contributing Guide](CONTRIBUTING.md).
 
 ### Translations
 
