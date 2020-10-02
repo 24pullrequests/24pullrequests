@@ -31,7 +31,7 @@ This is the site to help promote the project, highlighting why, how and where to
 
 ## Contributors
 
-Over 180 different people have contributed to the project, you can see them all here: https://github.com/24pullrequests/24pullrequests/graphs/contributors
+We are always thankful to our contributors and also encourage them for more and more contributions.Over 180 different people have contributed to the project, you can see them all here: https://github.com/24pullrequests/24pullrequests/graphs/contributors
 
 ## Development
 
@@ -130,7 +130,7 @@ as it will use it to learn more about the contributors and for pull requests.
 
 ### Contributing
 
-We are always appreciate and happy when people contribute!Contributions are always WELCOME, have a look at our [Contributing Guide](CONTRIBUTING.md).
+We are always looking for people to contribute! To find out how to help out, have a look at our [Contributing Guide](CONTRIBUTING.md).
 
 ### Translations
 
