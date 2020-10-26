@@ -304,7 +304,7 @@ GEM
       rspec-expectations (~> 3.9)
       rspec-mocks (~> 3.9)
       rspec-support (~> 3.9)
-    rspec-support (3.9.3)
+    rspec-support (3.9.4)
     rubocop (0.93.1)
       parallel (~> 1.10)
       parser (>= 2.7.1.5)
