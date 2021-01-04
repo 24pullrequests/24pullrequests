@@ -132,7 +132,7 @@ GEM
     http-parser (1.2.2)
       ffi-compiler
     http_parser.rb (0.6.0)
-    i18n (1.8.5)
+    i18n (1.8.7)
       concurrent-ruby (~> 1.0)
     i18n-tasks (0.9.33)
       activesupport (>= 4.0.2)
