@@ -186,7 +186,7 @@ GEM
     naught (1.1.0)
     newrelic_rpm (6.14.0)
     nio4r (2.5.4)
-    nokogiri (1.11.0)
+    nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     oauth (0.5.4)
