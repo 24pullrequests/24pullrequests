@@ -86,7 +86,7 @@ GEM
       rexml
     crass (1.0.6)
     dalli (2.7.11)
-    database_cleaner (2.0.0)
+    database_cleaner (2.0.1)
       database_cleaner-active_record (~> 2.0.0)
     database_cleaner-active_record (2.0.0)
       activerecord (>= 5.a)
