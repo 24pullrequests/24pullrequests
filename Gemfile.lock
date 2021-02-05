@@ -239,7 +239,7 @@ GEM
       activesupport (>= 2.3.14)
     racc (1.5.2)
     rack (2.2.3)
-    rack-attack (6.3.1)
+    rack-attack (6.4.0)
       rack (>= 1.0, < 3)
     rack-canonical-host (1.0.0)
       addressable (> 0, < 3)
