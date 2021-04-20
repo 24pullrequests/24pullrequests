@@ -5,7 +5,7 @@ gem 'rails', '5.2.4.2'
 
 gem 'jquery-rails'
 gem 'pg', '~> 1.2.3'
-gem 'omniauth'
+gem 'omniauth', '1.9.1'
 gem 'omniauth-github'
 gem 'omniauth-twitter'
 gem 'octokit'
