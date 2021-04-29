@@ -1,0 +1,86 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 99
+  allow:
+  - dependency-type: direct
+  - dependency-type: indirect
+  ignore:
+  - dependency-name: faker
+    versions:
+    - "> 1.9.6"
+  - dependency-name: shoulda-matchers
+    versions:
+    - "> 3.1.3"
+  - dependency-name: rubocop
+    versions:
+    - 1.13.0
+  - dependency-name: jwt
+    versions:
+    - 2.2.3
+  - dependency-name: faraday-net_http_persistent
+    versions:
+    - 1.1.0
+  - dependency-name: faraday-excon
+    versions:
+    - 1.1.0
+  - dependency-name: faraday
+    versions:
+    - 1.3.1
+    - 1.4.1
+  - dependency-name: omniauth
+    versions:
+    - 2.0.1
+    - 2.0.2
+    - 2.0.3
+    - 2.0.4
+  - dependency-name: octicons_helper
+    versions:
+    - 11.3.0
+    - 12.0.0
+    - 12.1.0
+    - 13.0.0
+  - dependency-name: rails
+    versions:
+    - 6.1.2
+    - 6.1.2.1
+    - 6.1.3
+    - 6.1.3.1
+  - dependency-name: mimemagic
+    versions:
+    - 0.3.7
+    - 0.3.8
+    - 0.3.9
+  - dependency-name: oauth2
+    versions:
+    - 1.4.5
+    - 1.4.6
+  - dependency-name: rspec-rails
+    versions:
+    - 4.1.1
+  - dependency-name: nio4r
+    versions:
+    - 2.5.5
+    - 2.5.6
+  - dependency-name: timecop
+    versions:
+    - 0.9.3
+  - dependency-name: msgpack
+    versions:
+    - 1.4.1
+    - 1.4.2
+  - dependency-name: database_cleaner
+    versions:
+    - 1.99.0
+  - dependency-name: omniauth-oauth
+    versions:
+    - 1.2.0
+  - dependency-name: capybara
+    versions:
+    - 3.35.1
+  - dependency-name: regexp_parser
+    versions:
+    - 2.0.3
