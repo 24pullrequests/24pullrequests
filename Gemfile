@@ -44,7 +44,7 @@ group :development, :test, :cucumber do
   gem 'rspec-its', require: false
   gem 'rspec-collection_matchers', require: false
   gem 'rspec-activemodel-mocks', require: false
-  gem 'factory_bot_rails', '4.11.1'
+  gem 'factory_bot_rails', '6.2.0'
   gem 'faker', '1.9.6'
   gem 'brakeman'
   gem 'poltergeist'
