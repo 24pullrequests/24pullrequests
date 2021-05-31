@@ -192,13 +192,18 @@ GEM
       nokogiri (~> 1)
       rake
     mini_mime (1.1.0)
-    mini_portile2 (2.5.1)
+    mini_portile2 (2.5.2)
+      net-ftp (~> 0.1)
     minitest (5.14.4)
     msgpack (1.4.2)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
     naught (1.1.0)
+    net-ftp (0.1.2)
+      net-protocol
+      time
+    net-protocol (0.1.0)
     newrelic_rpm (6.15.0)
     nio4r (2.5.7)
     nokogiri (1.11.5)
@@ -376,6 +381,7 @@ GEM
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
+    time (0.1.0)
     timecop (0.9.4)
     twitter (7.0.0)
       addressable (~> 2.3)
