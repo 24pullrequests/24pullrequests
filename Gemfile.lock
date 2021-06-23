@@ -60,7 +60,7 @@ GEM
       sassc (>= 2.0.0)
     brakeman (5.0.1)
     buftok (0.2.0)
-    bugsnag (6.20.0)
+    bugsnag (6.21.0)
       concurrent-ruby (~> 1.0)
     builder (3.2.4)
     capybara (3.35.3)
@@ -81,7 +81,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.1.8)
+    concurrent-ruby (1.1.9)
     crack (0.4.5)
       rexml
     crass (1.0.6)
