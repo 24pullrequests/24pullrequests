@@ -199,7 +199,7 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.1.1)
     naught (1.1.0)
-    newrelic_rpm (6.15.0)
+    newrelic_rpm (7.2.0)
     nio4r (2.5.7)
     nokogiri (1.11.5)
       mini_portile2 (~> 2.5.0)
