@@ -235,7 +235,7 @@ GEM
       omniauth-oauth (~> 1.1)
       rack
     parallel (1.20.1)
-    parser (3.0.1.1)
+    parser (3.0.2.0)
       ast (~> 2.4.1)
     pg (1.2.3)
     poltergeist (1.18.1)
