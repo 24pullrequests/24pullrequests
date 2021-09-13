@@ -48,6 +48,6 @@ jobs:
           POSTGRES_USER: tfpullrequests
           POSTGRES_PASSWORD: postgres
           TFPULLREQUESTS_DATABASE_PASSWORD: postgres
-          TFPULLREQUESTS_DATABASE_USERNAME: tfpullrequests
+          TFPULLREQUESTS_DATABASE_USER: tfpullrequests
           POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }}
         run: bundle exec rake db:create db:migrate test
