@@ -61,7 +61,7 @@ done easily on OSX using [Homebrew](http://mxcl.github.io/homebrew/) or by using
 
 ```bash
 brew install postgres
-brew cask install phantomjs
+brew install phantomjs
 ```
 
 On Debian-based Linux distributions you can use apt-get to install Postgres:
