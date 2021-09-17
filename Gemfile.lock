@@ -400,7 +400,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8)
-    unicode-display_width (2.0.0)
+    unicode-display_width (2.1.0)
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
