@@ -188,6 +188,7 @@ el:
     happy_holidays_see_you: Καλές Γιορτές και θα τα ξαναπούμε του χρόνου!
     help_open_source: 'Θέλεις να βοηθήσεις με projects ανοικτού κώδικα μέχρι τότε? Κοίταξε σε αυτές τις άλλες μεγάλες πρωτοβουλίες:'
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
+    ovio: Easily filter through issues across 800+ contributor friendly projects and get curated recommendations.
     last_year_stats: Το %{year}, σε 24 days, <b>%{contributors}</b> προγραμματιστές υπόβαλαν <b>%{pull_requests}</b> pull requests σε <b>%{projects}</b> διαφορετικά projects ανοικτού κώδικα.
     title: 24 Pull Requests %{year} εχει φτασει!
   language:

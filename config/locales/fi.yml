@@ -188,6 +188,7 @@ fi:
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
     help_open_source: 'Haluatko auttaa avoimen lähdekoodin projekteja sillä välin? Katso myös nämä muut loistava aloitteet:'
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
+    ovio: Easily filter through issues across 800+ contributor friendly projects and get curated recommendations.
     last_year_stats: Vuonna %{year}, yli 24 päivää, <b>%{contributors}</b> kehittäjää lähetti <b>%{pull_requests}</b> vetopyyntöä <b>%{projects}</b> eriin avoimen lähdekoodin projektiin.
     title: 24 Pull Requests %{year} on jo ovella
   language:
