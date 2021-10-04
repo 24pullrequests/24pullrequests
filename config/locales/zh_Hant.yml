@@ -188,7 +188,6 @@ zh_Hant:
     happy_holidays_see_you: 聖誕節快樂，我們明年見！
     help_open_source: 在那之前，想要繼續幫助其他開源專案嗎？去看看這幾個開源專案活動吧：
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    ovio: Easily filter through issues across 800+ contributor friendly projects and get curated recommendations.
     last_year_stats: 在 %{year} 年最後的 24 天裡，<b>%{contributors}</b> 名開發者送出了<b>%{pull_requests}</b> 個 Pull Requests 給 <b>%{projects}</b> 個不同的開源專案。
     title: 24 Pull Requests %{year} 就要開始了
   language:
