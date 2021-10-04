@@ -188,6 +188,7 @@ fr:
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
     help_open_source: 'Vous voulez aider d''autre projets open source en attendant ? Regardez ces autres initiatives:'
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
+    ovio: Chercher parmi plus de 800 projets accueillant des contributions extérieures et bénéficier de recommandations personnalisées de projes et de tâches.
     last_year_stats: En %{year}, pendant 24 jours, les <b>%{contributors}</b> développeurs ont soumis <b>%{pull_requests}</b> pull requests sur <b>%{projects}</b> projets open source différents.
     title: 24 Pull Requests %{year} arrive
   language:
