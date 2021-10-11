@@ -194,7 +194,7 @@ GEM
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     method_source (1.0.0)
-    mini_mime (1.1.1)
+    mini_mime (1.1.2)
     minitest (5.14.4)
     msgpack (1.4.2)
     multi_json (1.15.0)
