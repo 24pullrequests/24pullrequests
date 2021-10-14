@@ -1,53 +1,22 @@
 ---
 zh_Hans:
-  about_us: 关于
-  cancel: 取消
-  change: 编辑
-  claim: 领取
-  clear: 清除
-  deactivate: 失效
-  delete: 删除
-  contributors_involved: 开发者已经参与进来
-  contributors_involved_desc: 加入进来，让开源更美好。
-  contributors_using_language: 开发者使用 %{language}
-  edit: 编辑
-  everything: 所有一切
-  exempli_gratia: 比如：
-  featured_projects: 特色项目
-  follow_user: 跟随 @%{twitter}
-  happy_holidays: Happy Holidays
-  how_to_contribute: 如何贡献？
-  more: 更多
-  no_suggestions: 你还没有推荐过呢
-  open_source_yey: 开源万岁！
-  or: 或
-  organisations_involved_desc: 邀请你的组织里更多人来参加。
-  preferred_languages: 首选语言
-  search: 搜索
-  sponsored_by: 赞助单位
-  sponsors: 赞助者
-  suggest_project: 推荐一个项目
-  suggested_projects: 推荐项目
-  view_all: 查看全部
-  welcome: Welcome, %{user}!
-  welcome_back: 欢迎回来， %{user}
-  your_pull_requests: 你的合并请求(pull requests)
   about:
     description: 24 Pull Requests 是一个在12月份促进开源合作的小小项目。
     idea: 想法很简单， "在12月到圣诞节之前的每一天发出合并请求(pull request)"， 鼓励开发者在这段时间回馈开源社区。
+    idea_subtitle: Open source software has probably made you more productive this year. Let's give something back.
+    idea_title: Giving back to open source.
     more_info: 这个小站也提供一些值得参与的项目，一些指南，并且展示每天哪些出色的合并请求(pull request)。
-    idea_title:
-    idea_subtitle:
-    where_to_find_us:
-    on_gitter:
     on_github: 这个小站的开发也是开源的，寄存在GitHub上：
+    on_gitter: 'Chat with the community on Gitter:'
     on_twitter: 我们也在推特上：
-    title: 关于 24 Pull Requests
     sponsors:
       details: 24 Pull Requests 接受了他们的支持和帮助。
       get_in_touch: 咨询赞助事宜，请邮件联系：
       thanks: 特别感谢。
       title: 支持和帮助
+    title: 关于 24 Pull Requests
+    where_to_find_us: Where to find us
+  about_us: 关于
   activerecord:
     errors:
       models:
@@ -62,11 +31,10 @@ zh_Hans:
               already_confirmed: "%{attribute}已经完成验证"
               required_for_confirmation: "%{attribute}为必填项"
   api:
-    description: 你可能不知道，24 Pull Requests有自己的JSON API，描述如下。
-    title: JSON API
     callback:
       details: 您可以发送一个带有 ?callback 参数的发给任何 GET 请求，得到包装在函数里的结果。这主要用来解决跨域名的问题。（返回与平时相同）
       title: JSON-P Callbacks
+    description: 你可能不知道，24 Pull Requests有自己的JSON API，描述如下。
     organisations:
       details: 所有注册组织，包括组织的成员。
       specific: 一个指定组织的信息。
@@ -81,12 +49,36 @@ zh_Hans:
       details: 在12月份当之所有的合并请求(pull request)，按照时间排序（包含用户）
       meta_details: 加载所有拉请求的信息，今年。
       title: Contributions
+    title: JSON API
     users:
       details: 所有注册用户，按照他们今年合并请求(pull request)数量排序， 同时包含他们的组织信息和合并请求(pull request)信息。
       specific: 一个指定用户的信息。
       title: Users
+  application:
+    ensure_logged_in:
+      notice:
+        not_logged_in: You must be logged in to view this content.
+  cancel: 取消
+  change: 编辑
+  claim: 领取
+  clear: 清除
+  contributions:
+    new:
+      form:
+        body: Description
+        body_placeholder: Describe the contribution you made to this open source project
+        created_at: Contribution Date
+        issue_url: Project URL
+        issue_url_placeholder: https://oss-project.io
+        repo_name: Project
+        repo_name_placeholder: Open source project name
+      save: Record your contribution
+      title: How did you contribute to open source today?
   contributors:
     title: 主要贡献者
+  contributors_involved: 开发者已经参与进来
+  contributors_involved_desc: 加入进来，让开源更美好。
+  contributors_using_language: 开发者使用 %{language}
   dashboard:
     christmas_activity: 在这里，您可以看到直至圣诞节前您所有被记录的活动。
     gift_it: 赠与！
@@ -99,6 +91,8 @@ zh_Hans:
     tweet_progress:
       one:
       other:
+  deactivate: 失效
+  delete: 删除
   delete_account:
     are_you_sure: 请确认删除帐号。删除您的帐号会删除您的用户信息，和所有在本站发去的合并请求(pull request)，不过您建议的项目会得到保存。
     cancel: 我改变主意了
@@ -106,21 +100,21 @@ zh_Hans:
     email_preferences_link: 邮件偏好
     notification_info: 如果您不想接收到邮件提醒，您可以改变设置： %{email_preferences_link}。
     title: 删除您的帐号
+  edit: 编辑
+  email_preferences_link: Email preferences link
   events:
-    details: You don’t have to hack alone this Christmas! Host a 24 Pull Requests hack event at your company, technology meetup, or in your local community. Or you can join a hack event and code together.
-    save_event: Save event
-    title: Events
     admin:
       search: 用GitHub repository搜索
       title: 管理项目
+    details: You don’t have to hack alone this Christmas! Host a 24 Pull Requests hack event at your company, technology meetup, or in your local community. Or you can join a hack event and code together.
     edit:
       title: Edit Event
     index:
       host_an_event: Host an event
+      no_upcoming_events: No upcoming events
       past_24_pull_requests_events: Past 24 Pull Requests Events
       show_past_24_pull_requests_events: Show Past 24 Pull Requests Events
     new:
-      title: Host a 24 Pull Requests event
       form:
         description: Description
         description_placeholder: Give a little description of the group and event
@@ -132,20 +126,32 @@ zh_Hans:
         start_time: When
         url: URL
         url_placeholder: Your event page / registration
+      title: Host a 24 Pull Requests event
     notice:
       destroy_success: Event removed successfully!
       edit_success: Event updated successfully!
       new_success: Event created successfully!
       not_authorized: You can only edit events that you have created
       not_logged_in: You must be logged in to create or edit events
+    save_event: Save event
     show:
       confirm_destroy: Are you sure you want to remove this event?
       destroy_event: Remove event
       edit_event: Edit event
       view_event_details: View event details
+    title: Events
+  everything: 所有一切
+  exempli_gratia: 比如：
+  featured_projects: 特色项目
+  follow_user: 跟随 @%{twitter}
   gifts:
     calendar_link: 公共日历
     description: 在这里管理您的合并请求(pull request)并且选择&amp;描述你的"24 Pull Requests"。
+    form:
+      date: 日期
+      gift_it: 赠与！
+      pull_requests: 合并请求(pull request)
+      tweet: 发推说说你的合并请求(pull request)
     give: 献给你爱的项目一点东西…代码
     link_twitter: 关联 Twitter 账号
     link_twitter_desc: Want to share information about 24 Pull Requests and your gifts? %{link_twitter} and gift some code to open-source projects.
@@ -153,35 +159,32 @@ zh_Hans:
     none: 没有赠出什么东西…
     title: 赠出的代码
     view_your_gifts: 你所有赠出的代码都会显示在您的%{calendar_link}。
-    form:
-      date: 日期
-      gift_it: 赠与！
-      pull_requests: 合并请求(pull request)
-      tweet: 发推说说你的合并请求(pull request)
+  happy_holidays: Happy Holidays
   homepage:
     about: 它是什么一回事呢？
     about_text: "<p>24 Pull Requests 是每年这个时候的一个倡议， 鼓励开发人员在世界各地的十二月每天发出合并请求(pull request)</p> <p>这个网站是为了宣传这个项目，它的意义，以及如何发出合并请求(pull request)s。</p><p>用你的GitHub帐号登录，我们就可以记录你的合并请求(pull request)。还可以推荐你感兴趣的项目。</p>"
     description: 用代码作圣诞礼物
-    give_to_open_source: 你在过去一整年中一直受益于开源项目。现在是时候对那些项目的维护者表达感谢了，有一只小小鸟告诉我，他们喜欢接受你的合并请求(pull request)！
-    greeting: 圣诞节来啦！
-    join_the_chat: 参与 Gitter 上的聊天 %{link_to_chat} 。
-    login_with_github: 使用 GitHub 登录
-    q_n_a: 问与答
-    title: 24 Pull Requests
     event:
       description: 今年我们正在鼓励全球各地的组织者举办 24 Pull Requests 黑客活动。在这个圣诞节参与进来。
       host_an_event: 举办一个活动
       title: 活动
       view_events: 查看所有活动
+    give_to_open_source: 你在过去一整年中一直受益于开源项目。现在是时候对那些项目的维护者表达感谢了，有一只小小鸟告诉我，他们喜欢接受你的合并请求(pull request)！
+    greeting: 圣诞节来啦！
     involved:
       contributing_path: 贡献指南
       description: 有很多参与开源项目的途径：提高文档质量，帮助修复存在的问题(issues)和错误(bugs)，提高代码质量和测试覆盖率，或添加缺失的功能
       take_a_look: 如果你是刚刚接触开源，快去看看吧
       title: 开始参与
+    join_the_chat: 参与 Gitter 上的聊天 %{link_to_chat} 。
+    login_with_github: 使用 GitHub 登录
     profile:
       description: 参与开源项目，也是一个建立起您在社区的经历，提高您的简历的好方法。
       getting_started: 这真的很容易上手，即使是很小的贡献对项目也有很大的价值。
       title: 构建您的个人资料
+    q_n_a: 问与答
+    title: 24 Pull Requests
+  how_to_contribute: 如何贡献？
   information:
     codetriage: 感恩回馈开源，一次一个问题(issue)，CodeTriage与你同行。你会每天从你喜欢的项目那分配到一个问题（issue），并引导你越学越多，参与撰写大家日常所依赖的代码里。
     get_ready: 准备好，24 Pull Requests %{year}！ 让我们再次做到这一切！
@@ -189,14 +192,15 @@ zh_Hans:
     help_open_source: 还想要同时帮助其他开源项目吗？去看看这几个开源项目倡议吧：
     issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
     last_year_stats: 在 %{year}年， 的24天里， <b>%{contributors}</b> 名开发者提交了 <b>%{pull_requests}</b> 次合并请求(pull request) 提供给 <b>%{projects}</b> 个不同的开源项目。
+    ovio: Easily filter through issues across 800+ contributor friendly projects and get curated recommendations.
     title: 24 Pull Requests %{year} is upon us
   language:
-    projects_count: "%{count} %{language} 项目"
     contributors:
       count: "%{count} 名开发者使用 %{language}"
     projects:
       count: "%{count} 个项目使用 %{language}"
       suggest: 推荐一个 %{language} 的项目
+    projects_count: "%{count} %{language} 项目"
     pull_requests:
       latest:
         count: 最新的 %{language} 合并请求(pull request)有 (%{count} 次)
@@ -220,6 +224,7 @@ zh_Hans:
     uk: Українська
     zh_Hans: 简体中文
     zh_Hant: 繁體中文
+  more: 更多
   navigation:
     all_projects: 所有项目
     dashboard: 仪表盘
@@ -229,19 +234,32 @@ zh_Hans:
     my_suggestions: 我推荐的项目
     preferences: 偏好设置
     profile: 个人信息
+  no_suggestions: 你还没有推荐过呢
   nov_reminder:
     how_to_contribute: to find out how to contribute 24 pull requests between December 1st and December 24th. Your contributions can be tiny, as simple as fixing a typo, to something incredible. Speed up Rails. Document Express. Fix a bug that you reported.
+  open_source_yey: 开源万岁！
+  or: 或
   organisations:
     languages: 编程语言
-    pull_requests: "%{count} 次合并请求(pull request)由成员发起"
-    title: "%{count} 个组织参与"
     members:
       one: 一名成员
       other: "%{count} 名成员"
+    pull_requests: "%{count} 次合并请求(pull request)由成员发起"
+    title: "%{count} 个组织参与"
+  organisations_involved_desc: 邀请你的组织里更多人来参加。
   preferences:
     delete: 想要删除您的帐号？
+    form:
+      daily: 每天
+      email: 邮件
+      email_frequency: 发送频率
+      never: 从不
+      weekly: 每周
     frequency_message: 在项目结束前，我们会根据您所选择的频率，给您发送邮件，推荐一些您可能感兴趣的项目。如果您允许，我们已经根据您在GitHub的代码库得出您喜好的语言（您可以在下面修改）。
-    ignore_organisations:
+    hint:
+      confirm_email: 请用我们发给您邮箱的链接确认邮箱。
+    ignore_organisations: If you regularly contribute to public repositories that you don't want to track on this site, add the organisation name here. You can add multiple organisations separated by commas. This can be useful if you code in the open at work, or maintain an open source repository yourself.
+    ignored_organisations: Ignored organisations
     information: 你可以在之后修改您接收邮件的偏好设置
     languages: 您知道哪些编程语言？
     remove: 删除帐号
@@ -250,63 +268,50 @@ zh_Hans:
     setup_help: To get started with 24 Pull Requests, please first fill up the following form.
     title: 设置您的个人喜好
     twitter: 推特帐号
-    form:
-      daily: 每天
-      email: 邮件
-      email_frequency: 发送频率
-      never: 从不
-      weekly: 每周
-    hint:
-      confirm_email: 请用我们发给您邮箱的链接确认邮箱。
+  preferred_languages: 首选语言
   projects:
-    claim: 有哪些你建立的项目没有列出来？快来认领他们吧！
-    filter_by_language: '按语言分类:'
-    for_you: 给您准备的推荐
-    help_out: 不出你想要参与的项目吗？我们帮您整理好了一些热门的项目等待你的加入！
-    suggest: 还没有这个语言的项目呢，推荐一个 %{suggest_link}?
-    suggest_link_text: 推荐一个
-    suggest_new: 你可以建议你支持的项目，也可以把你自己需要帮助的项目列上去。
     admin:
       search: 搜索GitHub的代码库
       title: 管理项目
+    claim: 有哪些你建立的项目没有列出来？快来认领他们吧！
     edit:
       title: 编辑建议
+    filter_by_language: '按语言分类:'
+    for_you: 给您准备的推荐
+    help_out: 不出你想要参与的项目吗？我们帮您整理好了一些热门的项目等待你的加入！
     new:
-      info: 一个鼓励大家参与开源社区的方法是让大家知道哪些热门项目值得大家一起参与。按照这个标准我们选择一些项目。如果您有想法，和我们一起分享吧！
-      issue_link_text: 建议一个问题(issue)
-      suggestion: 对项目有建议? 我们洗耳恭听! 如果你有想要建议的地方，请提出 %{issue_link}。
-      title: 推荐一个项目
       form:
         github_url: GitHub 链接
         main_language: 主要使用的编程语言
         project_name: 项目名称
         submit_project: 提交
         summary: 简单总结
+      info: 一个鼓励大家参与开源社区的方法是让大家知道哪些热门项目值得大家一起参与。按照这个标准我们选择一些项目。如果您有想法，和我们一起分享吧！
+      issue_link_text: 建议一个问题(issue)
+      suggestion: 对项目有建议? 我们洗耳恭听! 如果你有想要建议的地方，请提出 %{issue_link}。
+      title: 推荐一个项目
+    suggest: 还没有这个语言的项目呢，推荐一个 %{suggest_link}?
+    suggest_link_text: 推荐一个
+    suggest_new: 你可以建议你支持的项目，也可以把你自己需要帮助的项目列上去。
     suggestion:
       edit: 编辑
       update: 更新项目
   pull_request:
-    twitter_message: 我刚发起了一个合并请求(pull request)，来瞧瞧吧！ %{issue_url}
     download:
       tooltip: 我们会每个小时检查一次大家的合并请求(pull request)，你也可以选择现在让我们检查并更新。
+    twitter_message: 我刚发起了一个合并请求(pull request)，来瞧瞧吧！ %{issue_url}
   pull_requests:
     count: "%{count} 次合并请求(pull request) 被发起!"
     language:
       count: "%{count} 次合并请求(pull request) 使用 %{language}!"
     latest:
       count: 最新的 合并请求(pull request) (总共 %{count} 次)
-  contributions:
-    new:
-      title:
-      form:
-        body:
-        body_placeholder:
-        repo_name:
-        repo_name_placeholder:
-        issue_url:
-        issue_url_placeholder:
-        created_at:
-      save:
+  reactivate: Reactivate
+  search: 搜索
+  sponsored_by: 赞助单位
+  sponsors: 赞助者
+  suggest_project: 推荐一个项目
+  suggested_projects: 推荐项目
   suggestions:
     title: 我的建议
   twitter:
@@ -323,8 +328,12 @@ zh_Hans:
     title: 取消订阅我们的邮件列表
     unsubscribe: 取消订阅
   user:
-    no_current_pr_message:
-    organisations: 一名成员
     contribution_count:
       one: "%{user} 在%{year}年的圣诞已经发出了 %{count} 个 pull request"
       other: "%{user} 在%{year}年的圣诞已经发出了 %{count} 个pull requests"
+    no_current_pr_message: "%{user} has gifted no contributions this year. <a href='https://github.com/24pullrequests/24pullrequests/blob/master/CONTRIBUTING.md'>Can we help you get started?</a>"
+    organisations: 一名成员
+  view_all: 查看全部
+  welcome: Welcome, %{user}!
+  welcome_back: 欢迎回来， %{user}
+  your_pull_requests: 你的合并请求(pull requests)

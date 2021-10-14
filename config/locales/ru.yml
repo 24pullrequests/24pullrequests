@@ -1,53 +1,22 @@
 ---
 ru:
-  about_us: Про нас
-  cancel: Отмена
-  change: Изменить
-  claim: Заявка
-  clear: Очистить
-  deactivate: Выключить
-  delete: Удалить
-  contributors_involved: "— нас уже много"
-  contributors_involved_desc: Люди, делающие open-source проекты лучше.
-  contributors_using_language: Разработчики, использующие %{language}
-  edit: Редактировать
-  everything: Всё
-  exempli_gratia: например
-  featured_projects: Featured Projects
-  follow_user: Читать @%{twitter}
-  happy_holidays: Happy Holidays
-  how_to_contribute: Как внести свой вклад?
-  more: Еще
-  no_suggestions: Пока рекомендаций нет, и это печально.
-  open_source_yey: Open Source FTW!
-  or: или
-  organisations_involved_desc: Пригласите больше людей из вашей организации к участию.
-  preferred_languages: Предпочитаемые языки
-  search: Поиск
-  sponsored_by: Спонсируется
-  sponsors: Спонсоры
-  suggest_project: Рекомендовать проект
-  suggested_projects: " — Рекомендованные проекты"
-  view_all: Посмотреть все
-  welcome: Добро пожаловать, %{user}!
-  welcome_back: Привет, %{user}
-  your_pull_requests: Пулл-реквесты
   about:
     description: 24 Пулл-реквеста - это маленький проект, целью которого является улучшение сотрудничества в мире open source.
     idea: 'Если по-простому: ''Каждый день, до Рождества, по пулл-реквесту''. Дарить подарки еще приятнее чем их получать, так что не ждите завтра, дарите сейчас.'
+    idea_subtitle: Open source software has probably made you more productive this year. Let's give something back.
+    idea_title: Giving back to open source.
     more_info: Мы также порекомендуем проекты, которым вы можете помочь. Рекомендации будут обновляться каждый день, а то и чаще.
-    idea_title:
-    idea_subtitle:
-    where_to_find_us:
-    on_gitter:
     on_github: 'Кстати, этот сайт тоже с открытым исходным кодом:'
+    on_gitter: 'Chat with the community on Gitter:'
     on_twitter: 'Мы в Твиттере:'
-    title: Про 24 Пулл-реквеста
     sponsors:
       details: Создание '24 Пулл-реквеста' стало возможным благодаря помощи наших замечательных спонсоров.
       get_in_touch: 'Если у вас есть предложение по спонсорству, просто напишите нам:'
       thanks: Большое спасибо...
       title: Спонсоры
+    title: Про 24 Пулл-реквеста
+    where_to_find_us: Where to find us
+  about_us: Про нас
   activerecord:
     errors:
       models:
@@ -62,31 +31,54 @@ ru:
               already_confirmed: "%{attribute} уже подтвержден"
               required_for_confirmation: введите %{attribute}
   api:
-    description:
-    title:
     callback:
-      details:
-      title:
+      details: You can send a ?callback parameter to any GET call to have the results wrapped in a JSON function. This is typically used when browsers want to embed content in web pages by getting around cross domain issues. The response includes the same data output as the regular API.
+      title: JSON-P Callbacks
+    description: You may not know this, but 24 Pull Requests has its own JSON API. Details of each endpoint are described below.
     organisations:
-      details:
-      specific:
-      title:
+      details: Load all organisations that have signed up to the site, also includes the users that belong to each organisation.
+      specific: Load information for a specific organisation.
+      title: Organisations
     pagination:
-      details:
-      title:
+      details: Requests that return multiple items will be paginated to 99 items by default. You can specify further pages with the ?page parameter.
+      title: Pagination
     projects:
-      details:
-      title:
+      details: All suggested projects on the site, ordered alphabetically.
+      title: Projects
     pull_requests:
-      details:
-      meta_details:
-      title:
+      details: Load all contributions by users of the site during December, ordered by newest first, also includes the user who made the contribution.
+      meta_details: Load information about all the contributions this year.
+      title: Contributions
+    title: JSON API
     users:
-      details:
-      specific:
-      title:
+      details: Load all users who have signed up to the site, ordered by how many contributions they have sent so far in December, also includes their organisation(s) and contributions.
+      specific: Load information for a specific user.
+      title: Users
+  application:
+    ensure_logged_in:
+      notice:
+        not_logged_in: You must be logged in to view this content.
+  cancel: Отмена
+  change: Изменить
+  claim: Заявка
+  clear: Очистить
+  contributions:
+    new:
+      form:
+        body: Description
+        body_placeholder: Describe the contribution you made to this open source project
+        created_at: Contribution Date
+        issue_url: Project URL
+        issue_url_placeholder: https://oss-project.io
+        repo_name: Project
+        repo_name_placeholder: Open source project name
+      save: Record your contribution
+      title: How did you contribute to open source today?
   contributors:
     title: Основные авторы
+  contributors_involved: "— нас уже много"
+  contributors_involved_desc: Люди, делающие open-source проекты лучше.
+  contributors_using_language: Разработчики, использующие %{language}
   dashboard:
     christmas_activity: Здесь вы сможете увидеть всю вашу активность в преддверии Рождества.
     gift_it: Подарить!
@@ -99,28 +91,30 @@ ru:
     tweet_progress:
       one:
       other:
+  deactivate: Выключить
+  delete: Удалить
   delete_account:
     are_you_sure: Мы хотим быть уверены, что вы дйствительно хотите удалить вашу учетную запись. Мы удалим не только профиль, но и всю информацию о ваших пулл-реквестах. Но ваши рекомендации очень важны для нас, и их мы удалять не будем.
     cancel: Я передумал!
     confirm: Да, удаляйте меня полностью
-    email_preferences_link:
+    email_preferences_link: email preferences
     notification_info: 'Может вы просто хотите изменить настройки почтовый рассылки? Нет ничего проще: %{email_preferences_link}.'
     title: Удалить учетную запись
+  edit: Редактировать
+  email_preferences_link: Email preferences link
   events:
-    details: Вы не должны оставаться одни в это Рождество! Проведите 24 Pull Requests событие в вашей компании или в вашей дев-тусе. Или же вы можете присоединиться к событию и кодить вместе.
-    save_event: Save event
-    title: События
     admin:
       search: Поиск по GitHub репозиториям
       title: Управление проектами
+    details: Вы не должны оставаться одни в это Рождество! Проведите 24 Pull Requests событие в вашей компании или в вашей дев-тусе. Или же вы можете присоединиться к событию и кодить вместе.
     edit:
       title: Редактировать предложение
     index:
       host_an_event: Организовать мероприятие
+      no_upcoming_events: No upcoming events
       past_24_pull_requests_events: Последние мероприятия
       show_past_24_pull_requests_events: Показать последние мероприятия
     new:
-      title: Создайте событие 24 Pull Requests
       form:
         description: Описание
         description_placeholder: Напишите небольшое описание вашего события
@@ -132,20 +126,32 @@ ru:
         start_time: Когда
         url: URL
         url_placeholder: Страничка вашего события
+      title: Создайте событие 24 Pull Requests
     notice:
       destroy_success: Событие удалено!
       edit_success: Событие обновлено!
       new_success: Событие создано!
       not_authorized: Вы можете изменять только те события, которые создали вы сами
       not_logged_in: Вы должны авторизоваться для создания или редактирования события
+    save_event: Save event
     show:
       confirm_destroy: Вы действительно хотите удалить это событие?
       destroy_event: Удалить событие
       edit_event: Изменить событие
       view_event_details: Посмотреть детали события
+    title: События
+  everything: Всё
+  exempli_gratia: например
+  featured_projects: Featured Projects
+  follow_user: Читать @%{twitter}
   gifts:
     calendar_link: календаре
     description: Здесь вы можете управлять вашими пулл-реквестами
+    form:
+      date: Дата
+      gift_it: Подарить!
+      pull_requests: Пулл-реквесты
+      tweet: Твитнуть о вашем подарке!
     give: Подарите проекту полезный код.
     link_twitter: Ссылка на твиттер
     link_twitter_desc: Хотите поделиться информацией о 24 Пулл-реквеста и ваших подарках? %{link_twitter} и подарите Ваш код в проекты с открытым кодом.
@@ -153,35 +159,32 @@ ru:
     none: Пока ничего не подарено.
     title: Подаренный код
     view_your_gifts: Все ваши подарки вы можете посмотреть в %{calendar_link}.
-    form:
-      date: Дата
-      gift_it: Подарить!
-      pull_requests: Пулл-реквесты
-      tweet: Твитнуть о вашем подарке!
+  happy_holidays: Happy Holidays
   homepage:
     about: Где я и что здесь происходит?
     about_text: "<p>24 Пулл-реквеста является ежегодной инициативой для поощрения open source разработчиков по всему миру.</p> <p>Мы сделали этот сайт, чтобы помочь в продвижении проектов с открытым исходным кодом.</p><p>Войдите при помощи вашей учетной записи в GitHub, и мы будем следить за вашими новыми пулл-реквестами, а также посоветуем проекты, на которых вы можете быть полезным.</p>"
     description: Ваш код - лучший подарок на Рождество!
-    give_to_open_source: Вы весь год использовали прелести проектов с открытым исходным кодом, пришло время сказать спасибо их авторам! А что может быть лучше хорошего пулл-реквеста?!
-    greeting: Время дарить подарки
-    join_the_chat: Заходите в наш Gitter чат, %{link_to_chat}.
-    login_with_github: Войти через GitHub
-    q_n_a: Вопросы и ответы
-    title: 24 Пулл-реквеста
     event:
       description: В этом году мы поощряем организаторов по всему миру проводить мероприятия в поддержку 24 Pull Requests. Поучайствуйте в них на это Рождество.
       host_an_event: Организовать мероприятие
       title: Мероприятия
       view_events: Смотреть мероприятия
+    give_to_open_source: Вы весь год использовали прелести проектов с открытым исходным кодом, пришло время сказать спасибо их авторам! А что может быть лучше хорошего пулл-реквеста?!
+    greeting: Время дарить подарки
     involved:
-      contributing_path:
+      contributing_path: Here's our primer
       description: 'Есть множество способов помочь проектам с открытым исходным кодом: совершенствование документации, помощь в исправлении существующих проблем и ошибок, улучшение качества кода и покрытия тестами или добавление новых возможностей.'
       take_a_look: Если вы новичок в open source, то это продлится недолго.
       title: Примите участие
+    join_the_chat: Заходите в наш Gitter чат, %{link_to_chat}.
+    login_with_github: Войти через GitHub
     profile:
       description: Участие в проектах с открытым кодом - отличный способ улучшить свое резюме, а также заявить о себе как о гениальном программисте.
       getting_started: Не бойтесь сделать первый пулл-реквест, это проще простого. Даже самые маленькие изменения полезны для проектов.
       title: Создайте свой профиль
+    q_n_a: Вопросы и ответы
+    title: 24 Пулл-реквеста
+  how_to_contribute: Как внести свой вклад?
   information:
     codetriage: Участвуйте в проектах с открытым исходным кодом с CodeTriage. Получайте одно задание в день, станьте экспертом в ваших любимых проектах.
     get_ready: Будьте готовы к 24 Пулл-реквеста %{year}, мы обязательно повторим это!
@@ -189,14 +192,15 @@ ru:
     help_open_source: 'Хотите помочь проектам с открытым кодом? Вот вам информация для размышления:'
     issuehubio: Внесите вклад в открытое ПО. Поищите среди проблем по меткам и выберите подходящий Вам проект!
     last_year_stats: В %{year}, в течение 24 дней, <b>%{contributors}</b> разработчиков послали <b>%{pull_requests}</b> пулл-реквестов в <b>%{projects}</b> различных проектов с открытым исходным кодом.
+    ovio: Easily filter through issues across 800+ contributor friendly projects and get curated recommendations.
     title: 24 Пулл-реквеста %{year} не за горами
   language:
-    projects_count: "%{count} %{language} проектов"
     contributors:
       count: "%{count} разработчиков используют %{language}"
     projects:
       count: "%{count} проектов на %{language}"
       suggest: Порекомендуйте проект на %{language}
+    projects_count: "%{count} %{language} проектов"
     pull_requests:
       latest:
         count: Недавние %{language} пулл-реквесты (%{count})
@@ -220,6 +224,7 @@ ru:
     uk: Українська
     zh_Hans: 简体中文
     zh_Hant: 正體中文
+  more: Еще
   navigation:
     all_projects: Все проекты
     dashboard: Панель управления
@@ -229,19 +234,32 @@ ru:
     my_suggestions: Мои рекомендации
     preferences: Настройки
     profile: Профиль
+  no_suggestions: Пока рекомендаций нет, и это печально.
   nov_reminder:
-    how_to_contribute: "узнай как внести свой вклад в виде 24 пулл-реквестов с 1-го по 24-ое декабря. Ваша помощь может помощь может быть разной: от исправления опечатки до чего-то невообразимого. Ускорить Rails. Document Express. Исправление ошибки, о которой Вы сообщили."
+    how_to_contribute: 'узнай как внести свой вклад в виде 24 пулл-реквестов с 1-го по 24-ое декабря. Ваша помощь может помощь может быть разной: от исправления опечатки до чего-то невообразимого. Ускорить Rails. Document Express. Исправление ошибки, о которой Вы сообщили.'
+  open_source_yey: Open Source FTW!
+  or: или
   organisations:
     languages: Languages
-    pull_requests: "%{count} пулл-реквестов отправленных участниками"
-    title: "%{count} приглашенных организаций"
     members:
       one: 1 Участник
       other: "%{count} Участников"
+    pull_requests: "%{count} пулл-реквестов отправленных участниками"
+    title: "%{count} приглашенных организаций"
+  organisations_involved_desc: Пригласите больше людей из вашей организации к участию.
   preferences:
     delete: Хотите удалить вашу учетную запись?
+    form:
+      daily: Ежедневно
+      email: Email
+      email_frequency: Получать рассылку
+      never: Никогда
+      weekly: Еженедельно
     frequency_message: В течение всего проекта с выбранной периодичностью мы будем посылать вам письма с полезной информацией. Мы будем предлагать проекты, которые могут вас заинтересовать. В качестве дополнительного бонуса, мы возьмем на себя смелость предложить проекты на языках, которые указаны в вашем GitHub профиле. Кроме того, вы можете выбрать ваши любимые языки ниже.
-    ignore_organisations:
+    hint:
+      confirm_email: Мы послали вам письмо для подтверждения вашего адреса.
+    ignore_organisations: If you regularly contribute to public repositories that you don't want to track on this site, add the organisation name here. You can add multiple organisations separated by commas. This can be useful if you code in the open at work, or maintain an open source repository yourself.
+    ignored_organisations: Ignored organisations
     information: Вы в любой момент сможете изменить настройки почтовой рассылки.
     languages: Какие языки вы предпочитаете?
     remove: Удалить учетную запись
@@ -250,63 +268,50 @@ ru:
     setup_help: Для того, что бы начать 24 Пулл-реквеста, пожалуйста, сначала заполните следующую форму
     title: Настройки рассылки
     twitter: Twitter
-    form:
-      daily: Ежедневно
-      email:
-      email_frequency: Получать рассылку
-      never: Никогда
-      weekly: Еженедельно
-    hint:
-      confirm_email: Мы послали вам письмо для подтверждения вашего адреса.
+  preferred_languages: Предпочитаемые языки
   projects:
-    claim: Вы предложили проект, а его нет в списках? Оставьте заявку!
-    filter_by_language: 'Фильтр по языкам:'
-    for_you: Рекомендовано для вас
-    help_out: Не можете найти проект, которому вы бы хотели помочь? Посмотрите список популярных проектов.
-    suggest: У нас пока нет ничего на таком языке, и нам будет приятно, если вы %{suggest_link} такой проект
-    suggest_link_text: порекомендуете
-    suggest_new: Также вы можете предложить проект для этого списка или добавить ваш собственный проект, с которым вам нужна помощь.
     admin:
       search: Поиск на GitHub
       title: Управление проектами
+    claim: Вы предложили проект, а его нет в списках? Оставьте заявку!
     edit:
       title: Редактировать рекомендацию
+    filter_by_language: 'Фильтр по языкам:'
+    for_you: Рекомендовано для вас
+    help_out: Не можете найти проект, которому вы бы хотели помочь? Посмотрите список популярных проектов.
     new:
+      form:
+        github_url: GitHub URL
+        main_language: Main language
+        project_name: Project Name
+        submit_project: Submit Project
+        summary: Summary
       info: Одним из способов поощрения участия в проектах с открытым исходным кодом является возможность рассказать пользователям про популярные проекты, которые нуждаются в помощи. Мы выбираем свои любимые проекты, но вы можете предложить и свои. Уже есть претенденты? Расскажите нам!
       issue_link_text: Список задач для проекта
       suggestion: Помогите разработчикам выбрать задание. %{issue_link}.
       title: Рекомендовать проект
-      form:
-        github_url:
-        main_language:
-        project_name:
-        submit_project:
-        summary:
+    suggest: У нас пока нет ничего на таком языке, и нам будет приятно, если вы %{suggest_link} такой проект
+    suggest_link_text: порекомендуете
+    suggest_new: Также вы можете предложить проект для этого списка или добавить ваш собственный проект, с которым вам нужна помощь.
     suggestion:
       edit: Редактировать рекомендацию
       update: Обновить проект
   pull_request:
-    twitter_message: 'Я только что послал пулл-реквест на https://24pullrequests.com, зацените: %{issue_url}'
     download:
       tooltip: Обычно мы проверяем пулл-реквесты каждый час, но никто не запрещает вам сделать это прямо сейчас.
+    twitter_message: 'Я только что послал пулл-реквест на https://24pullrequests.com, зацените: %{issue_url}'
   pull_requests:
     count: 'Уже сделано пулл-реквестов: %{count}'
     language:
       count: 'Пулл-реквестов на %{language}: %{count}'
     latest:
       count: Недавние пулл-реквесты (%{count})
-  contributions:
-    new:
-      title:
-      form:
-        body:
-        body_placeholder:
-        repo_name:
-        repo_name_placeholder:
-        issue_url:
-        issue_url_placeholder:
-        created_at:
-      save:
+  reactivate: Reactivate
+  search: Поиск
+  sponsored_by: Спонсируется
+  sponsors: Спонсоры
+  suggest_project: Рекомендовать проект
+  suggested_projects: " — Рекомендованные проекты"
   suggestions:
     title: Рекомендации
   twitter:
@@ -317,14 +322,18 @@ ru:
       text: Привязать ваш твиттер
       tooltip: Если вы привяжете вашу учетную запись в твиттере, то мы сможем твитить про ваши пулл-реквесты!
   unsubscribe:
-    invalid_token:
-    login:
-    success:
-    title:
-    unsubscribe:
+    invalid_token: Invalid subscription token
+    login: GitHub username or email address
+    success: You have successfully unsubscribed from our mailing list.
+    title: Unsubscribe From Our Mailing List
+    unsubscribe: Unsubscribe
   user:
-    no_current_pr_message:
-    organisations: Организации
     contribution_count:
       one: "%{user} сделал %{count} пулл-реквест к Рождеству %{year}"
       other: "%{user} сделал %{count} пулл-реквестов к Рождеству %{year}"
+    no_current_pr_message: "%{user} has gifted no contributions this year. <a href='https://github.com/24pullrequests/24pullrequests/blob/master/CONTRIBUTING.md'>Can we help you get started?</a>"
+    organisations: Организации
+  view_all: Посмотреть все
+  welcome: Добро пожаловать, %{user}!
+  welcome_back: Привет, %{user}
+  your_pull_requests: Пулл-реквесты
