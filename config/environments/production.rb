@@ -7,7 +7,7 @@ Tfpullrequests::Application.configure do
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-  config.cache_store = :dalli_store,
+  config.cache_store = :mem_cache_store,
                   (ENV["MEMCACHIER_SERVERS"] || "").split(","),
                   {:username => ENV["MEMCACHIER_USERNAME"],
                    :password => ENV["MEMCACHIER_PASSWORD"],
