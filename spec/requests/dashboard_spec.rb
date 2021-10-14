@@ -70,10 +70,10 @@ describe 'Dashboard', type: :request do
         visit preferences_path
       end
 
-      it { is_expected.to have_field 'Ignored Organisations', with: 'baz, qux' }
+      it { is_expected.to have_field 'Ignored organisations', with: 'baz, qux' }
 
       it 'allows the user to set their preferences' do
-        fill_in 'Ignored Organisations', with: 'foo, bar'
+        fill_in 'Ignored organisations', with: 'foo, bar'
         click_on 'Save'
         user.reload
         expect(user.ignored_organisations.sort).to eq %w{bar foo}
