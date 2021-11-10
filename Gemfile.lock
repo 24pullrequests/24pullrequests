@@ -143,7 +143,7 @@ GEM
     globalid (0.5.2)
       activesupport (>= 5.0)
     hashdiff (1.0.1)
-    hashie (4.1.0)
+    hashie (5.0.0)
     highline (2.0.3)
     http (4.4.1)
       addressable (~> 2.3)
