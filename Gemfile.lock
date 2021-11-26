@@ -140,7 +140,7 @@ GEM
       ffi (>= 1.0.0)
       rake
     foreman (0.87.2)
-    globalid (0.6.0)
+    globalid (1.0.0)
       activesupport (>= 5.0)
     hashdiff (1.0.1)
     hashie (5.0.0)
