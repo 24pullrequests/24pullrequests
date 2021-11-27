@@ -59,7 +59,6 @@ end
 group :production do
   gem 'foreman'
   gem 'dalli'
-  gem 'newrelic_rpm'
   gem 'bugsnag'
   gem 'rack-google-analytics'
 end
