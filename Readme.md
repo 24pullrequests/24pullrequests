@@ -146,4 +146,4 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 
 ## Copyright
 
-Copyright MIT © 2018 Andrew Nesbitt. See [LICENSE](https://github.com/24pullrequests/24pullrequests/blob/master/LICENSE) for details.
+Copyright MIT © 2021 Andrew Nesbitt. See [LICENSE](https://github.com/24pullrequests/24pullrequests/blob/master/LICENSE) for details.
