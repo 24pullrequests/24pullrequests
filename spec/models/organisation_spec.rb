@@ -103,7 +103,7 @@ describe Organisation, type: :model do
 
   def update_contribution_counts
     Tfpullrequests::Application.load_tasks
-    Rake::Task['refresh_contribution_counts'].execute
+    Rake::Task['users:refresh_contribution_counts'].execute
     Rake::Task['organisations:update_contribution_count'].execute
   end
 end
