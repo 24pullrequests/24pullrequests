@@ -35,13 +35,11 @@ describe SessionsController, type: :controller do
   end
 
   describe 'GET failure' do
-    origin_url = 'https://24pullrequests.com'
-
     before do
-      get :failure, params: { origin: origin_url }
+      get :failure
     end
 
-    it { is_expected.to redirect_to(origin_url) }
+    it { is_expected.to redirect_to(root_path) }
   end
 end
 
