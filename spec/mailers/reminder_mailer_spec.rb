@@ -57,4 +57,27 @@ describe ReminderMailer, type: :mailer do
       this_time: 'this week',
       next_time: 'next week'
   end
+
+  describe 'november' do
+    let(:mail) { ReminderMailer.november(user) }
+
+    it 'renders the subject' do
+      expect(mail.subject).to eq('24 Pull Requests is starting again soon')
+    end
+
+    it 'renders the receiver email' do
+      expect(mail.to).to eq([user.email])
+    end
+
+    it 'renders the sender email' do
+      expect(mail['From'].to_s).to eq('24 Pull Requests <info@24pullrequests.com>')
+    end
+
+
+    it 'contains periodicity in body' do
+      expect(mail.body.encoded).to match("and a Parser for a Syntax Tree.")
+      expect(mail.body.encoded).to match("You can unsubscribe to these emails here")
+      expect(mail.body.encoded).to match("unsubscribe-token")
+    end
+  end
 end
