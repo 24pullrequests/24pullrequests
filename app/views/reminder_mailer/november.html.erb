@@ -28,4 +28,4 @@
   <%= link_to 'github.com/24pullrequests/24pullrequests/discussions', 'https://github.com/24pullrequests/24pullrequests/discussions' %>
 </p>
 <p>See you on December 1st!</p>
-<p>You can unsubscribe or change the frequency of these emails here: <%= link_to nil, preferences_url %></p>
+<%= render partial: 'reminder_mailer/sign_off_msg' %>
