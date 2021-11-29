@@ -1,12 +1,12 @@
 # 24 Pull Requests
 
-[![Gitter chat](https://img.shields.io/badge/gitter-24pullrequests-brightgreen.svg?style=flat)](https://gitter.im/24pullrequests/24pullrequests)
-
 > &#127876; Giving back little gifts of code
 
 24 Pull Requests is a yearly initiative to encourage contributors around the world to send 24 pull requests between December 1st and December 24th.
 
 This is the site to help promote the project, highlighting why, how and where to send your pull requests.
+
+![Happy Holidays](https://user-images.githubusercontent.com/1060/143905510-a212439c-b452-4eb8-b87a-67adcc3418e2.png)
 
 ## Table of Contents
 
