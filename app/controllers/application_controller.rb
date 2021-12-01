@@ -4,12 +4,23 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?, :current_year, :admin?
 
   before_action :set_locale
+  before_action :restrict_pages, if: :json_request?
 
   def set_locale
     I18n.locale = cookies[:locale] || I18n.default_locale
   end
 
+  def restrict_pages
+    return if params[:page].to_i <= 100
+
+    render json: [], status: :forbidden
+  end
+
   private
+
+  def json_request?
+    request.format.json?
+  end
 
   def ensure_logged_in
     return true if logged_in?

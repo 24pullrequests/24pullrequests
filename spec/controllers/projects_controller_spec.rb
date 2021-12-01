@@ -11,6 +11,12 @@ describe ProjectsController, type: :controller do
       end
 
       it { expect(response.header['Content-Type']).to include 'application/json' }
+
+      context 'pagination' do
+        before { get :index, params: { format: :json, page: 101 } }
+
+        it { expect(response).to be_forbidden }
+      end
     end
 
     context 'filter' do
