@@ -18,7 +18,7 @@ module ApplicationHelper
   end
 
   def github_button(nickname)
-    %(<iframe src="http://ghbtns.com/github-btn.html?user=#{nickname}&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="300" height="20"></iframe>).html_safe
+    %(<iframe src="https://ghbtns.com/github-btn.html?user=#{nickname}&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="300" height="20"></iframe>).html_safe
   end
 
   def contributors_in(year)
@@ -49,7 +49,7 @@ module ApplicationHelper
   end
 
   def twitter_url
-    'http://twitter.com/24pullrequests'
+    'https://twitter.com/24pullrequests'
   end
 
   def unconfirmed_email?

@@ -10,18 +10,18 @@ This is the site to help promote the project, highlighting why, how and where to
 
 ## Table of Contents
 
-- [Get started](#get-started)
-- [Contributors](#contributors)
-- [Development](#development)
-  - [Getting Started](#getting-started)
-    - [Installing a Local Server](#installing-a-local-server)
-    - [Using Vagrant](#using-vagrant)
-  - [Tests](#tests)
-  - [Environment variables](#environment-variables)
-  - [Contributing](#contributing)
+- [24 Pull Requests](#24-pull-requests)
+  - [Table of Contents](#table-of-contents)
+  - [Get started](#get-started)
+  - [Contributors](#contributors)
+  - [Development](#development)
+    - [Getting Started](#getting-started)
+      - [Installing a Local Server](#installing-a-local-server)
+    - [Tests](#tests)
+    - [Contributing](#contributing)
     - [Translations](#translations)
-  - [Code of Conduct](#code-of-conduct)
-- [Copyright](#copyright)
+    - [Code of Conduct](#code-of-conduct)
+  - [Copyright](#copyright)
 
 ## Get started
 
@@ -35,7 +35,8 @@ Over 180 different people have contributed to the project, you can see them all 
 ## Development
 
 The source is hosted at [GitHub](https://github.com/24pullrequests/24pullrequests).
-You can report issues/feature requests on [GitHub Issues](https://github.com/24pullrequests/24pullrequests/issues). Follow the project on Twitter [@24pullrequests](https://twitter.com/24pullrequests). People from this community also often hangout on [Gitter](https://gitter.im/24pullrequests/24pullrequests).
+
+You can report issues/feature requests on [GitHub Issues](https://github.com/24pullrequests/24pullrequests/issues). You can use [GitHub Discussions](https://github.com/24pullrequests/24pullrequests/discussions) to ask questions, follow announcements, and to propose ideas for the 24pullrequests project. Follow the project on Twitter [@24pullrequests](https://twitter.com/24pullrequests).
 
 These instructions are for working on the the [24pullrequests.com](https://24pullrequests.com) website. If you just want to be a developer who contributes PRs during the holidays, you don't need to follow these instructions! Go to https://24pullrequests.com and get involved there.
 
@@ -55,8 +56,7 @@ rbenv install 2.7.5
 rbenv global 2.7.5
 ```
 
-Next, you'll need to make sure that you have PostgreSQL installed. This can be
-done easily on OSX using [Homebrew](http://mxcl.github.io/homebrew/) or by using [http://postgresapp.com](http://postgresapp.com). Please see these [further instructions for installing Postgres via Homebrew](http://www.mikeball.us/blog/setting-up-postgres-with-homebrew/).
+Next, you'll need to make sure that you have PostgreSQL installed. This can be done easily on macOS using [Homebrew](https://brew.sh) or by using [https://postgresapp.com](https://postgresapp.com). Please see these [further instructions for installing Postgres via Homebrew](http://www.mikeball.us/blog/setting-up-postgres-with-homebrew/).
 
 ```bash
 brew install postgres
@@ -69,7 +69,7 @@ On Debian-based Linux distributions you can use apt-get to install Postgres:
 sudo apt-get install postgresql postgresql-contrib libpq-dev
 ```
 
-On Windows, you can use the [Chocolatey package manager](http://chocolatey.org/) to install Postgres:
+On Windows, you can use the [Chocolatey package manager](https://chocolatey.org/) to install Postgres:
 
 ```bash
 choco install postgresql
@@ -89,8 +89,7 @@ gem install bundler && rbenv rehash
 bundle install
 ```
 
-Once all the gems are installed, we'll need to create the databases and
-tables. Rails makes this easy through the use of "Rake" tasks.
+Once all the gems are installed, we'll need to create the databases and tables. Rails makes this easy through the use of "Rake" tasks.
 
 ```bash
 bundle exec rake db:create:all
@@ -106,8 +105,7 @@ bundle exec rake db:seed
 If you are working on anything related to the email-generation code, you can use [MailCatcher](https://github.com/sj26/mailcatcher).
 Since we use Bundler, please read the [following](https://github.com/sj26/mailcatcher#bundler) before using MailCatcher.
 
-Almost there! Now all we have to do is start up the Rails server and point
-our browser to <http://localhost:3000>
+Almost there! Now all we have to do is start up the Rails server and point our browser to <http://localhost:3000>
 
 ```bash
 bundle exec rails s
@@ -119,9 +117,7 @@ Standard RSpec/Capybara tests are used for testing the application. The tests ca
 
 You can set up the test environment with `bundle exec rake db:test:prepare`, which will create the test DB and populate its schema automatically. You don't need to do this for every test run, but it will let you easily keep up with migrations. If you find a large number of tests are failing you should probably run this.
 
-If you are using the [omniauth](https://github.com/omniauth/omniauth) environment variables
-(GITHUB_KEY, GITHUB_SECRET, TWITTER_KEY, TWITTER_SECRET)
-for **another** project, you will need to either
+If you are using the [omniauth](https://github.com/omniauth/omniauth) environment variables (`GITHUB_KEY`, `GITHUB_SECRET`, `TWITTER_KEY`, `TWITTER_SECRET`) for **another** project, you will need to either
  * unset them before running your tests or
  * reset the omniauth environment variables after creating a GitHub (omniauth) application for this project
 
