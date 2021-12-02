@@ -1,0 +1,23 @@
+name: Documentation
+description: Request an update to invalid/outdated documentation
+title: "[DOC]: "
+labels: ['documentation']
+body:
+  - type: textarea
+    attributes:
+      label: What is incorrect in the documentation?
+      description: Please explain the information that is incorrect in the documentation, and why you think it needs to be updated.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What should that text say?
+      description: Provide the information that the documentation should actually contain instead of the incorrect content.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Additional information
+      description: Is there anything else we should know about this inaccuracy?
+    validations:
+      required: false
