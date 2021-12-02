@@ -36,6 +36,13 @@
         <%= t("preferences.ignore_organisations") %>
       </p>
       <%= form.input :ignored_organisations_string, label: t("preferences.ignored_organisations"), placeholder: "e.g. 24pullrequests, alphagov", input_html: {class: "pull-left"} %>
+      <p>
+        <%= t("preferences.time_zone_message") %>
+      </p>
+      <div class="form-group string optional user_time_zone">
+        <label class="string optional control-label col-md-4" for="user_time_zone"><%= t("preferences.time_zone") %></label>
+        <div class="col-md-8"><%= form.time_zone_select :time_zone %></div>
+      </div>
     </div>
     <div class="col-md-12">
       <h2 class="text-center">

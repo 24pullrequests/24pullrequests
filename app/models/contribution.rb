@@ -34,7 +34,11 @@ class Contribution < ApplicationRecord
     end
 
     def create_from_github(json)
-      create(initialize_from_github(json))
+      @new_contribution = create(initialize_from_github(json))
+      user_time_zone = if @new_contribution.user.time_zone.nil? then 'UTC' else @new_contribution.user.time_zone end
+      @new_contribution.update!(:created_at => @new_contribution.created_at.in_time_zone(user_time_zone).strftime('%Y-%m-%d %H:%M:%S'))
+      @new_contribution.save
+      return @new_contribution
     end
 
     def initialize_from_github(json)

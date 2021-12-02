@@ -33,6 +33,25 @@ describe Contribution, type: :model do
     its(:language)   { should eq json['repo']['language'] }
   end
 
+  describe 'created_at dates in proper time zones' do
+    let(:json) { mock_pull_request }
+
+    context 'if the user has set a time zone' do
+      let(:user) { create :user, :time_zone => 'Eastern Time (US & Canada)' }
+      it 'converts the date to the set time zone' do
+        contibution_json = user.contributions.create_from_github(json)
+        expect(contibution_json[:created_at].strftime('%Y-%m-%d %H:%M:%S')).to eq json['payload']['pull_request']['created_at'].in_time_zone(user.time_zone).strftime('%Y-%m-%d %H:%M:%S')
+      end
+    end
+
+    context 'if the user has not set a time zone' do
+      it 'leaves the date as recieved from github' do
+        contibution_json = user.contributions.create_from_github(json)
+        expect(contibution_json[:created_at]).to eq json['payload']['pull_request']['created_at']
+      end
+    end
+  end
+
   describe ".post_tweet" do
     let(:twitter) { double(Twitter::REST::Client) }
 
