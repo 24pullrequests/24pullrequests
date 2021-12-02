@@ -331,7 +331,7 @@ tr:
     contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
       other: "%{user} has made %{count} pull requests so far in Christmas %{year}"
-    no_current_pr_message: "%{user} has gifted no contributions this year. <a href='https://github.com/24pullrequests/24pullrequests/blob/master/CONTRIBUTING.md'>Can we help you get started?</a>"
+    no_current_pr_message: "%{user} has gifted no contributions this year. <a href='https://github.com/24pullrequests/24pullrequests/blob/main/CONTRIBUTING.md'>Can we help you get started?</a>"
     organisations: "... üyesi"
   view_all: Hepsini Göster
   welcome: Welcome, %{user}!

@@ -331,7 +331,7 @@ en:
     contribution_count:
       one: "%{user} has made %{count} contribution so far during the %{year} holidays"
       other: "%{user} has made %{count} contributions so far during the %{year} holidays"
-    no_current_pr_message: "%{user} has gifted no contributions this year. <a href='https://github.com/24pullrequests/24pullrequests/blob/master/CONTRIBUTING.md'>Can we help you get started?</a>"
+    no_current_pr_message: "%{user} has gifted no contributions this year. <a href='https://github.com/24pullrequests/24pullrequests/blob/main/CONTRIBUTING.md'>Can we help you get started?</a>"
     organisations: Member of...
   view_all: View All
   welcome: Welcome, %{user}!

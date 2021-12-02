@@ -331,7 +331,7 @@ el:
     contribution_count:
       one: "%{user} έχει δωρίσει %{count} pull request μέχρι τώρα για τα Χριστούγεννα %{year}"
       other: "%{user} έχει δωρίσει %{count} pull requests μέχρι τώρα για τα Χριστούγεννα %{year}"
-    no_current_pr_message: "%{user} δεν έχει δωρίσει ή συγχωνεύσει κανένα pull request αυτόν τον χρόνο. <a href='https://github.com/24pullrequests/24pullrequests/blob/master/CONTRIBUTING.md'> Μπορούμε να σας βοηθήσουμε να ξεκινήσετε;</a>"
+    no_current_pr_message: "%{user} δεν έχει δωρίσει ή συγχωνεύσει κανένα pull request αυτόν τον χρόνο. <a href='https://github.com/24pullrequests/24pullrequests/blob/main/CONTRIBUTING.md'> Μπορούμε να σας βοηθήσουμε να ξεκινήσετε;</a>"
     organisations: Member of...
   view_all: Ολα
   welcome: Welcome, %{user}!
