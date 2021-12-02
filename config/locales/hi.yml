@@ -333,7 +333,7 @@ hi:
     contribution_count:
       one: "%{user} ने %{count} को क्रिसमस %{year} में अब तक Pull Request किया है"
       other: "%{user} ने %{count} को क्रिसमस %{year} में अभी तक Pull Request किया है"
-    no_current_pr_message: "%{user} has gifted no contributions this year. <a href='https://github.com/24pullrequests/24pullrequests/blob/master/CONTRIBUTING.md'>Can we help you get started?</a>"
+    no_current_pr_message: "%{user} has gifted no contributions this year. <a href='https://github.com/24pullrequests/24pullrequests/blob/main/CONTRIBUTING.md'>Can we help you get started?</a>"
     organisations: "...का सदस्य"
   view_all: सब देखें
   welcome: अभिनंदन, %{user}!
