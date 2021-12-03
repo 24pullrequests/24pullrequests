@@ -298,42 +298,42 @@ pl:
       update: Aktualizuj projekt
   pull_request:
     download:
-      tooltip: We usually check for pull requests every hour, but you can check now.
-    twitter_message: 'I just gifted an open source contribution for https://24pullrequests.com, check it out: %{issue_url}'
+      tooltip: Zwykle sprawdzamy pull requesty co godzinę, ale możesz to sprawdzić teraz.
+    twitter_message: 'Właśnie podarowałem wkład open source dla https://24pullrequests.com, sprawdź to: %{issue_url}'
   pull_requests:
-    count: "%{count} contributions already made!"
+    count: "%{count} wkładków już wniesionych!"
     language:
-      count: "%{count} contributions already made in %{language}!"
+      count: "%{count} wkładków już wniesionych w %{language}!"
     latest:
-      count: Latest Contributions (%{count} total)
-  reactivate: Reactivate
-  search: Search
-  sponsored_by: Sponsored by
-  sponsors: Sponsors
-  suggest_project: Suggest a project
-  suggested_projects: Suggested Projects
+      count: Najnowsze wkłady (%{count} total)
+  reactivate: Reaktywuj
+  search: Szukaj
+  sponsored_by: Sponsorowane przez
+  sponsors: Sponsorzy
+  suggest_project: Zaproponuj projekt
+  suggested_projects: Sugerowane projekty
   suggestions:
-    title: My Suggestions
+    title: Moje sugestie
   twitter:
-    account_linked: Your Twitter account has been linked! We’ll post a tweet whenever you make a contribution.
-    account_removed: Your Twitter account has been removed.
-    auth_failed: Authorization with Twitter has failed.
+    account_linked: Twoje konto na Twitterze zostało połączone! Opublikujemy tweeta za każdym razem, gdy wniesiesz wkład.
+    account_removed: Twoje konto na Twitterze zostało odłączone.
+    auth_failed: Autoryzacja na Twitterze nie powiodła się.
     link_account:
-      text: Link Your Twitter Account
-      tooltip: If you link your Twitter account, we’ll post a tweet whenever you make a contribution!
+      text: Połącz swoje konto na Twitterze
+      tooltip: Jeśli połączysz swoje konto na Twitterze, za każdym razem, gdy wniesiesz wkład, opublikujemy tweeta!
   unsubscribe:
-    invalid_token: Invalid subscription token
-    login: GitHub username or email address
-    success: You have successfully unsubscribed from our mailing list.
-    title: Unsubscribe From Our Mailing List
-    unsubscribe: Unsubscribe
+    invalid_token: Nieprawidłowy token subskrypcji
+    login: Nazwa użytkownika GitHub lub adres e-mail
+    success: Pomyślnie wypisałeś się z naszej listy mailingowej.
+    title: Wypisz się z naszej listy mailingowej
+    unsubscribe: Anuluj subskrypcję
   user:
     contribution_count:
-      one: "%{user} has made %{count} contribution so far during the %{year} holidays"
-      other: "%{user} has made %{count} contributions so far during the %{year} holidays"
-    no_current_pr_message: "%{user} has gifted no contributions this year. <a href='https://github.com/24pullrequests/24pullrequests/blob/main/CONTRIBUTING.md'>Can we help you get started?</a>"
-    organisations: Member of...
-  view_all: View All
-  welcome: Welcome, %{user}!
-  welcome_back: Welcome back, %{user}
-  your_pull_requests: Your Contributions
+      one: "%{user} zrobił %{count} wkład do tej pory podczas świąt %{year}"
+      other: "%{user} zrobił %{count} wkładów do tej pory podczas świąt %{year}"
+    no_current_pr_message: "%{user} nie przekazał żadnych wkładów w tym roku. <a href='https://github.com/24pullrequests/24pullrequests/blob/main/CONTRIBUTING.md'>Czy możemy pomóc Ci zacząć?</a>"
+    organisations: Członek...
+  view_all: Zobacz wszystko
+  welcome: Witaj, %{user}!
+  welcome_back: Witaj ponownie, %{user}
+  your_pull_requests: Twoje wkłady
