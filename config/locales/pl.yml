@@ -162,29 +162,29 @@ pl:
   happy_holidays: Wesołych Świąt
   homepage:
     about: O czym to jest?
-    about_text: "<p>24 Pull Requests is a yearly initiative to encourage contributors around the world to send 24 pull requests between December 1st and December 24th.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your contributions.</p><p>Log in with your GitHub account and we’ll track and highlight all your contributions and suggest projects to work on.</p>"
-    description: Giving back to open source for the holidays
+    about_text: "<p>24 Pull Requests to coroczna inicjatywa zachęcająca współtwórców z całego świata do wysyłania 24 pull requestów od 1 grudnia do 24 grudnia.</p> <p>To jest strona, która pomaga promować projekt, podkreślając dlaczego, jak i gdzie wysyłać swoje wkłady.</p><p>Zaloguj się na swoje konto GitHub, a my prześledzimy i wyróżnimy wszystkie twoje wkłady i zasugerujemy projekty do pracy.</p>"
+    description: Odwdzięczając się dla open source do świąt
     event:
-      description: This year we are encouraging organisers around the world to hold 24 Pull Requests hack events. Get involved this holiday season.
-      host_an_event: Host an event
-      title: Events
-      view_events: View events
-    give_to_open_source: You’ve been benefiting from the use of open source projects all year. Now is the time to say thanks to the maintainers of those projects, and a little birdy tells me that they love receiving contributions!
-    greeting: "’Tis the season"
+      description: W tym roku zachęcamy organizatorów na całym świecie do zorganizowania wydarzeń 24 Pull Requests. Zaangażuj się podczas tego świątecznego okresu.
+      host_an_event: Zorganizuj wydarzenie
+      title: Wydarzenia
+      view_events: Zobacz wydarzenia
+    give_to_open_source: Korzystasz z projektów open source przez cały rok. Nadszedł czas, aby podziękować opiekunom tych projektów, a mały ptaszek mi wyśpiewał, że uwielbiają otrzymywać wkłady!
+    greeting: "’To jest sezon"
     involved:
-      contributing_path: Here's our primer
-      description: 'There are lots of ways to get involved in an open source project: improving docs, designs or existing code, supporting other users, fixing, replicating or triaging issues and bugs, or adding missing features.'
-      take_a_look: New to open source?  %{contributing_path}.
-      title: Get involved
-    join_the_chat: Join the chat on Gitter, %{link_to_chat}.
-    login_with_github: Log in with GitHub
+      contributing_path: Oto nasz elementarz
+      description: 'Istnieje wiele sposobów na zaangażowanie się w projekt open source: ulepszanie dokumentacji, projektów lub istniejącego kodu, wspieranie innych użytkowników, naprawianie, replikowanie lub usuwanie problemów i błędów lub dodawanie brakujących funkcji.'
+      take_a_look: Nowy w open source?  %{contributing_path}.
+      title: Zaangażuj się
+    join_the_chat: Dołącz do czatu na Gitter, %{link_to_chat}.
+    login_with_github: Zaloguj się przez GitHub
     profile:
-      description: Contributing to open source projects is also a great way to build your profile in the community and improve your CV.
-      getting_started: It’s really easy to get started. Even small contributions can be really valuable to a project.
-      title: Build your profile
-    q_n_a: Questions & Answers
+      description: Wkład w projekty open source to także świetny sposób na budowanie swojego profilu w społeczności i ulepszanie CV.
+      getting_started: Rozpoczęcie jest naprawdę łatwe. Nawet niewielki wkład może być naprawdę cenny dla projektu.
+      title: Zbuduj swój profil
+    q_n_a: Pytania i odpowiedzi
     title: 24 Pull Requests
-  how_to_contribute: How to contribute?
+  how_to_contribute: Jak wnieść swój wkład?
   information:
     codetriage: Give back to open source, one issue at a time, with CodeTriage. You’ll get one issue from your favorite repo per day to help you dig deeper, learn more, and stay involved with the code you rely on.
     get_ready: Get ready for 24 Pull Requests %{year} when we do it all again!
