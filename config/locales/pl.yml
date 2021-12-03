@@ -272,30 +272,30 @@ pl:
   projects:
     admin:
       search: Szukaj według repozytorium GitHub
-      title: Manage Projects
-    claim: Are any of the projects you suggested not listed? Claim them!
+      title: Zarządzaj projektami
+    claim: Czy któryś z sugerowanych przez Ciebie projektów nie znajduje się na liście? Zażądaj ich!
     edit:
-      title: Edit Suggestion
-    filter_by_language: 'Filter by Language:'
-    for_you: Suggested for you
-    help_out: Can’t think of a project to contribute to? We’ve collected a list of brilliant open source projects who would love your contributions.
+      title: Edytuj sugestię
+    filter_by_language: 'Filtruj według języka:'
+    for_you: Sugerowane dla Ciebie
+    help_out: Nie możesz wymyślić projektu, do którego mógłbyś się przyczynić? Zebraliśmy listę genialnych projektów open source, które pokochałyby Twój wkład.
     new:
       form:
         github_url: GitHub URL
-        main_language: Main language
-        project_name: Project Name
-        submit_project: Submit Project
-        summary: Summary
-      info: One of the ways we encourage participation in the open source community is by letting users know what popular projects might be worth contributing to. We’ve selected our favorites, but we’re always open to suggestions. Have some ideas? Share them below!
-      issue_link_text: suggest an issue
-      suggestion: Have a suggestion for this project? We’re all ears! If there’s something you’d like fixed, feel free to %{issue_link}.
-      title: Suggest a Project
-    suggest: There are no projects for that language yet, why not %{suggest_link}?
-    suggest_link_text: suggest one
-    suggest_new: You can also suggest projects that should be added to the list, or add your own project if you would like some help with it.
+        main_language: Główny język
+        project_name: Nazwa projektu
+        submit_project: Prześlij projekt
+        summary: Podsumowanie
+      info: Jednym ze sposobów, w jaki zachęcamy do udziału w społeczności open source, jest informowanie użytkowników, do jakich popularnych projektów warto się przyczynić. Wybraliśmy naszych faworytów, ale zawsze jesteśmy otwarci na sugestie. Masz jakieś pomysły? Podziel się nimi poniżej!
+      issue_link_text: zasugeruj issue
+      suggestion: Masz sugestie dotyczące tego projektu? Wszyscy zamieniamy się w słuch! Jeśli jest coś, co chciałbyś naprawić, nie krępuj się %{issue_link}.
+      title: Zaproponuj projekt
+    suggest: Nie ma jeszcze projektów dla tego języka, dlaczego nie %{suggest_link}?
+    suggest_link_text: zaproponuj jeden
+    suggest_new: Możesz również zasugerować projekty, które warto dodać do listy lub dodać własny projekt, jeśli potrzebujesz pomocy.
     suggestion:
-      edit: Edit Suggestion
-      update: Update Project
+      edit: Edytuj sugestię
+      update: Aktualizuj projekt
   pull_request:
     download:
       tooltip: We usually check for pull requests every hour, but you can check now.
