@@ -63,3 +63,5 @@ group :production do
   gem 'bugsnag'
   gem 'rack-google-analytics'
 end
+
+gem "redcarpet", "~> 3.5"
