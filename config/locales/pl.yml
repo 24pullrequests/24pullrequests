@@ -186,24 +186,24 @@ pl:
     title: 24 Pull Requests
   how_to_contribute: Jak wnieść swój wkład?
   information:
-    codetriage: Give back to open source, one issue at a time, with CodeTriage. You’ll get one issue from your favorite repo per day to help you dig deeper, learn more, and stay involved with the code you rely on.
-    get_ready: Get ready for 24 Pull Requests %{year} when we do it all again!
-    happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
-    help_open_source: 'Want to help out with open source projects in the meantime? Check out these other great initiatives:'
-    issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
-    last_year_stats: In %{year}, over 24 days, <b>%{contributors}</b> contributors made <b>%{pull_requests}</b> contributions to <b>%{projects}</b> different open source projects.
-    ovio: Easily filter through issues across 800+ contributor friendly projects and get curated recommendations.
-    title: 24 Pull Requests %{year} is upon us
+    codetriage: Odwdzięcz się dla open source, jedno issue na raz, z CodeTriage. Będziesz otrzymywać jedno issue ze swojego ulubionego repozytorium dziennie, aby pomóc ci zagłębić się w szczegóły, dowiedzieć się więcej i pozostać zaangażowanym w kod, na którym polegasz.
+    get_ready: Przygotuj się na 24 Pull Requests %{year} kiedy zrobimy to wszystko ponownie!
+    happy_holidays_see_you: Wesołych Świąt i do zobaczenia w przyszłym roku, kiedy zrobimy to wszystko ponownie!
+    help_open_source: 'Chcesz w międzyczasie pomóc w projektach open source? Sprawdź te inne wspaniałe inicjatywy:'
+    issuehubio: Wkład w Open Source. Przeszukuj etykiety issue, aby znaleźć odpowiedni projekt dla siebie!
+    last_year_stats: W %{year}, ponad 24 dni, <b>%{contributors}</b> współtwórcy stworzyli <b>%{pull_requests}</b> wkłady do <b>%{projects}</b> różnych projektów open source.
+    ovio: Łatwo filtruj issue w ponad 800 projektach przyjaznych dla współtwórców i otrzymuj wyselekcjonowane rekomendacje.
+    title: Przed nami 24 Pull Requests %{year}
   language:
     contributors:
-      count: "%{count} Contributors using %{language}"
+      count: "%{count} Współtwórcy używający język %{language}"
     projects:
-      count: "%{count} Projects are using %{language}"
-      suggest: Suggest a %{language} project
-    projects_count: "%{count} %{language} Projects"
+      count: "%{count} Projekty używający %{language}"
+      suggest: Zaproponuj %{language} projekt
+    projects_count: "%{count} %{language} Projekty"
     pull_requests:
       latest:
-        count: Latest %{language} Contributions (%{count} total)
+        count: Ostatnie %{language} Wkłady (%{count} całkowite)
   locale:
     cs: Čeština
     de: Deutsch
@@ -220,27 +220,27 @@ pl:
     ru: Русский
     ta: தமிழ்
     th: ไทย
-    translate: Translate into your language!
+    translate: Przetłumacz na swój język!
     uk: Українська
     zh_Hans: 简体中文
     zh_Hant: 正體中文
-  more: More
+  more: Więcej
   navigation:
-    all_projects: All Projects
-    dashboard: Dashboard
-    gifted_code: Gifted Code
-    logout: Logout
-    manage_projects: Manage Projects
-    my_suggestions: My Suggestions
-    preferences: Preferences
-    profile: Profile
-  no_suggestions: You haven’t suggested any projects yet.
+    all_projects: Wszystkie projekty
+    dashboard: Pulpit
+    gifted_code: Obdarowany kod
+    logout: Wyloguj
+    manage_projects: Zarządzaj projektami
+    my_suggestions: Moje sugestie
+    preferences: Preferencje
+    profile: Profil
+  no_suggestions: Nie zaproponowałeś jeszcze żadnych projektów.
   nov_reminder:
-    how_to_contribute: to find out how to contribute 24 pull requests between December 1st and December 24th. Your contributions can be tiny, as simple as fixing a typo, to something incredible. Speed up Rails. Document Express. Fix a bug that you reported.
+    how_to_contribute: aby dowiedzieć się, jak dołączyć do 24 Pull Requests między 1 grudnia, a 24 grudnia. Twój wkład może być niewielki, tak prosty jak naprawienie literówki, lub też coś niesamowitego. Przyspiesz Rails. Dokumentuj Express. Napraw zgłoszony przez ciebie błąd.
   open_source_yey: Open Source FTW!
-  or: or
+  or: lub
   organisations:
-    languages: Languages
+    languages: Języki
     members:
       one: 1 Member
       other: "%{count} Members"
