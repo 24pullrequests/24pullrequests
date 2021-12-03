@@ -1,119 +1,119 @@
 ---
-en:
+pl:
   about:
-    description: 24 Pull Requests' goal is to encourage contribution to open source projects during December.
-    idea: 'The idea is simple: ''Send 24 pull requests between December 1st and December 24th'', encouraging contributors to give back to open source projects with little gifts of code throughout December.'
-    idea_subtitle: Open source software has probably made you more productive this year. Let's give something back.
-    idea_title: Giving back to open source.
-    more_info: The site suggests open projects, highlights tickets that are good for new contributors, provides <a href='/contributing'>guides for contributing</a> and promotes good contributions submitted each day.
-    on_github: 'Our code is located on GitHub:'
-    on_gitter: 'Chat with the community on Gitter:'
-    on_twitter: 'We are also on Twitter:'
+    description: Celem projektu 24 Pull Requests jest zachęcenie do udziału w projektach open source w grudniu.
+    idea: 'Pomysł jest prosty: ''Wyślij 24 pull requesty pomiędzy 1, a 24 grudnia'', zachęcając współtwórców do odwdzięczenia się projektom open source małymi prezentami w postaci kodu przez cały grudzień.'
+    idea_subtitle: Oprogramowanie open source prawdopodobnie zwiększyło twoją produktywność w tym roku. Dajmy coś w zamian.
+    idea_title: Dając coś od siebie dla open source.
+    more_info: Witryna sugeruje projekty open source, wyróżnia tickety, które są dobre dla nowych współtwórców, zapewnia <a href='/contributing'>przewodniki dotyczące współtworzenia</a> i promuje dobre wkłady wnoszone każdego dnia.
+    on_github: 'Nasz kod znajduje się na GitHub:'
+    on_gitter: 'Czatuj ze społecznością na Gitter:'
+    on_twitter: 'Jesteśmy też na Twitter:'
     sponsors:
-      details: 24 Pull Requests was made possible thanks to the help and donations of some great sponsors.
-      get_in_touch: 'If you’d like to get in touch about sponsorship or anything else, drop us an email:'
-      thanks: Many thanks to...
-      title: Sponsors
-    title: About 24 Pull Requests
-    where_to_find_us: Where to find us
-  about_us: About
+      details: 24 Pull Requests było możliwe dzięki pomocy i darowiznom wspaniałych sponsorów.
+      get_in_touch: 'Jeśli chcesz skontaktować się w sprawie sponsoringu lub czegokolwiek innego, napisz do nas e-mail:'
+      thanks: Wielkie podziękowania dla...
+      title: Sponsorzy
+    title: Na temat 24 Pull Requests
+    where_to_find_us: Gdzie nas znaleźć
+  about_us: Na temat
   activerecord:
     errors:
       models:
         event:
           attributes:
             start_time:
-              in_past: Events cannot be created in the past
-              not_in_range: Events can only be created between December 1st and 24th
+              in_past: Wydarzenia nie mogą być tworzone w przeszłości
+              not_in_range: Wydarzenia można tworzyć tylko między 1, a 24 grudnia
         user:
           attributes:
             email:
-              already_confirmed: "%{attribute} is already confirmed"
-              required_for_confirmation: "%{attribute} is required for confirmation"
+              already_confirmed: "%{attribute} jest już potwierdzone"
+              required_for_confirmation: "%{attribute} jest wymagane do potwierdzenia"
   api:
     callback:
-      details: You can send a ?callback parameter to any GET call to have the results wrapped in a JSON function. This is typically used when browsers want to embed content in web pages by getting around cross domain issues. The response includes the same data output as the regular API.
+      details: Możesz wysłać parametr ?callback do dowolnego wywołania GET, aby wyniki były opakowane w funkcję JSON. Jest to zwykle używane, gdy przeglądarki chcą osadzić zawartość na stronach internetowych, omijając problemy między domenami. Odpowiedź zawiera te same dane wyjściowe, co zwykłe API.
       title: JSON-P Callbacks
-    description: You may not know this, but 24 Pull Requests has its own JSON API. Details of each endpoint are described below.
+    description: Możesz tego nie wiedzieć, ale 24 Pull Requests mają swój własny interfejs JSON API. Szczegóły każdego endpointa opisano poniżej.
     organisations:
-      details: Load all organisations that have signed up to the site, also includes the users that belong to each organisation.
-      specific: Load information for a specific organisation.
-      title: Organisations
+      details: Załaduj wszystkie organizacje, które zarejestrowały się w witrynie, w tym również użytkowników należących do każdej organizacji.
+      specific: Załaduj informacje dla określonej organizacji.
+      title: Organizacje
     pagination:
-      details: Requests that return multiple items will be paginated to 99 items by default. You can specify further pages with the ?page parameter.
-      title: Pagination
+      details: Żądania zwracające wiele pozycji będą domyślnie podzielone na strony do 99 pozycji. Możesz określić kolejne strony za pomocą parametru ?page parameter.
+      title: Paginacja
     projects:
-      details: All suggested projects on the site, ordered alphabetically.
-      title: Projects
+      details: Wszystkie sugerowane projekty na stronie, uporządkowane alfabetycznie.
+      title: Projekty
     pull_requests:
-      details: Load all contributions by users of the site during December, ordered by newest first, also includes the user who made the contribution.
-      meta_details: Load information about all the contributions this year.
-      title: Contributions
+      details: Załaduj wszystkie wkłady użytkowników witryny w grudniu, uporządkowane według najnowszych, obejmuje również użytkownika, który dokonał wkładu.
+      meta_details: Załaduj informacje o wszystkich wkładach w tym roku.
+      title: Wkłady
     title: JSON API
     users:
-      details: Load all users who have signed up to the site, ordered by how many contributions they have sent so far in December, also includes their organisation(s) and contributions.
-      specific: Load information for a specific user.
-      title: Users
+      details: Załaduj wszystkich użytkowników, którzy zarejestrowali się na stronie, uporządkowanych według liczby wysłanych dotychczas w grudniu wkładów, obejmuje również ich organizacje i wkłady.
+      specific: Załaduj informacje dla konkretnego użytkownika.
+      title: Użytkownicy
   application:
     ensure_logged_in:
       notice:
-        not_logged_in: You must be logged in to view this content.
-  cancel: Cancel
-  change: Change
-  claim: Claim
-  clear: Clear
+        not_logged_in: Musisz być zalogowany, aby zobaczyć tą zawartość.
+  cancel: Anuluj
+  change: Zmień
+  claim: Zażądaj
+  clear: Wyczyść
   contributions:
     new:
       form:
-        body: Description
-        body_placeholder: Describe the contribution you made to this open source project
-        created_at: Contribution Date
-        issue_url: Project URL
+        body: Opis
+        body_placeholder: Opisz swój wkład w ten projekt open source
+        created_at: Data wkładu
+        issue_url: URL projektu
         issue_url_placeholder: https://oss-project.io
-        repo_name: Project
-        repo_name_placeholder: Open source project name
-      save: Record your contribution
-      title: How did you contribute to open source today?
+        repo_name: Projekt
+        repo_name_placeholder: Nazwa projektu open source
+      save: Zapisz swój wkład
+      title: W jaki sposób przyczyniłeś się dzisiaj do open source?
   contributors:
-    title: Contributors
-  contributors_involved: Contributors already involved
-  contributors_involved_desc: Join everyone here and make open source better.
-  contributors_using_language: Contributors using %{language}
+    title: Współtwórcy
+  contributors_involved: Współtwórcy już zaangażowani
+  contributors_involved_desc: Dołącz do wszystkich tutaj i stwórz open source lepszym.
+  contributors_using_language: Współtwórcy używający %{language}
   dashboard:
-    christmas_activity: This is where you can see all the activity we’ve tracked for you in the run up to the holidays.
-    gift_it: Gift it!
-    give_a_gift: Looks like you haven’t gifted any code today. Would you like to gift your new contributions?
-    help_out: Can’t think of a project you’d like to help contribute to? We’ve put together a list of popular projects here.
-    no_pull_requests: You’ve not made any contributions, what are you waiting for?!
-    not_december: 24 Pull Requests runs from 1st-24th December, come back then!
-    pull_requests: Wonder what people are up to this holiday? Check out these contributions, or make a contribution now and find yours here!
-    synchronize: Synchronize Pull Requests
+    christmas_activity: Tutaj możesz zobaczyć całą aktywność, którą śledziliśmy dla ciebie w okresie poprzedzającym święta.
+    gift_it: Podaruj to!
+    give_a_gift: Wygląda na to, że nie podarowałeś dzisiaj żadnego kodu. Czy chciałbyś podarować swój nowy wkład?
+    help_out: Nie możesz wymyślić projektu, w którym chciałbyś pomóc? Zebraliśmy tutaj listę popularnych projektów.
+    no_pull_requests: Nie dokonałeś żadnych wkładów, na co czekasz?!
+    not_december: 24 Pull Requests działa od 1-24 grudnia, wróć wtedy!
+    pull_requests: Zastanawiasz się, jacy ludzie są do tego święta? Sprawdź te wkłady lub dokonaj wkładu teraz i znajdź swój tutaj!
+    synchronize: Synchronizuj Pull Requesty
     tweet_progress:
-      one: I’ve made 1 contribution in December! Join me in giving back to open source with @24pullrequests.
-      other: I’ve made %{count} contributions in December! Join me in giving back to open source with @24pullrequests.
-  deactivate: Deactivate
-  delete: Delete
+      one: Stworzyłem 1 wkład w grudniu! Dołącz do mnie w odwdzięczaniu się dla open source z @24pullrequests.
+      other: Stworzyłem %{count} wkładów w grudniu! Dołącz do mnie w odwdzięczaniu się dla open source z @24pullrequests.
+  deactivate: Dezaktywuj
+  delete: Usuń
   delete_account:
-    are_you_sure: We just wanted to make sure you really do wish to delete your account. This will remove your profile and all contributions from the site, although any suggested projects will remain.
-    cancel: I changed my mind, take me back!
-    confirm: Confirm Deletion
-    email_preferences_link: email preferences
-    notification_info: If you simply want to stop receiving email notifications you can change your  %{email_preferences_link}.
-    title: Delete your account
-  edit: Edit
-  email_preferences_link: Email preferences link
+    are_you_sure: Chcieliśmy się tylko upewnić, czy naprawdę chcesz usunąć swoje konto. Spowoduje to usunięcie twojego profilu i wszystkich wkładów z witryny, chociaż wszelkie sugerowane projekty pozostaną.
+    cancel: Zmieniłem zdanie, zabierz mnie z powrotem!
+    confirm: Potwierdź usunięcie
+    email_preferences_link: preferencje email
+    notification_info: Jeśli chcesz po prostu przestać otrzymywać powiadomienia e-mail, możesz zmienić swoje %{email_preferences_link}.
+    title: Usuń swoje konto
+  edit: Edytuj
+  email_preferences_link: Link do preferencji e-mail
   events:
     admin:
-      search: Search by GitHub repository
-      title: Manage Projects
-    details: You don’t have to hack alone this holiday season! Host a 24 Pull Requests hack event at your company, technology meetup, or in your local community. Or you can join a hack event and code together.
+      search: Szukaj według repozytorium GitHub
+      title: Zarządzaj projektami
+    details: Nie musisz sam kodować w te święta! Zorganizuj wydarzenie 24 Pull Requests w swojej firmie, na spotkaniu technologicznym lub w lokalnej społeczności. Możesz też dołączyć do takiego wydarzenia i razem kodować.
     edit:
-      title: Edit Event
+      title: Edytuj wydarzenie
     index:
-      host_an_event: Host an event
-      no_upcoming_events: No upcoming events
-      past_24_pull_requests_events: Past 24 Pull Requests Events
-      show_past_24_pull_requests_events: Show Past 24 Pull Requests Events
+      host_an_event: Zorganizuj wydarzenie
+      no_upcoming_events: Brak nadchodzących wydarzeń
+      past_24_pull_requests_events: Wcześniejsze wydarzenia 24 Pull Requests
+      show_past_24_pull_requests_events: Pokaż wcześniejsze wydarzenia 24 Pull Requests
     new:
       form:
         description: Description
