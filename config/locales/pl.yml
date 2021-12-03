@@ -116,52 +116,52 @@ pl:
       show_past_24_pull_requests_events: Pokaż wcześniejsze wydarzenia 24 Pull Requests
     new:
       form:
-        description: Description
-        description_placeholder: Give a little description of the group and event
-        location: Location
-        location_placeholder: e.g. Bristol, UK
-        map: Location marker
-        name: Event name
+        description: Opis
+        description_placeholder: Podaj krótki opis grupy i wydarzenia
+        location: Lokalizacja
+        location_placeholder: np. Bristol, UK
+        map: Znacznik lokalizacji
+        name: Nazwa wydarzenia
         name_placeholder: Bristol Ruby Group Pull-request-a-thon
-        start_time: When
+        start_time: Kiedy
         url: URL
-        url_placeholder: Your event page / registration
-      title: Host a 24 Pull Requests event
+        url_placeholder: Twoja strona wydarzenia / rejestracja
+      title: Zorganizuj wydarzenie 24 Pull Requests
     notice:
-      destroy_success: Event removed successfully!
-      edit_success: Event updated successfully!
-      new_success: Event created successfully!
-      not_authorized: You can only edit events that you have created
-      not_logged_in: You must be logged in to create or edit events
-    save_event: Save event
+      destroy_success: Wydarzenie zostało pomyślnie usunięte!
+      edit_success: Wydarzenie zostało pomyślnie zaktualizowane!
+      new_success: Wydarzenie pomyślnie utworzone!
+      not_authorized: Możesz edytować tylko te wydarzenia, które sam utworzyłeś
+      not_logged_in: Musisz być zalogowany, aby tworzyć lub edytować wydarzenia
+    save_event: Zapisz wydarzenie
     show:
-      confirm_destroy: Are you sure you want to remove this event?
-      destroy_event: Remove event
-      edit_event: Edit event
-      view_event_details: View event details
-    title: Events
-  everything: Everything
-  exempli_gratia: e.g.
-  featured_projects: Featured Projects
-  follow_user: Follow @%{twitter}
+      confirm_destroy: Czy na pewno chcesz usunąć to wydarzenie?
+      destroy_event: Usuń wydarzenie
+      edit_event: Edytuj wydarzenie
+      view_event_details: Zobacz szczegóły wydarzenia
+    title: Wydarzenia
+  everything: Wszystko
+  exempli_gratia: np.
+  featured_projects: Wyróżnione projekty
+  follow_user: Obserwuj @%{twitter}
   gifts:
-    calendar_link: public calendar
-    description: Here you can manage your contributions and select &amp; curate your own set of “24 Pull Requests”.
+    calendar_link: publiczny kalendarz
+    description: Tutaj możesz zarządzać swoimi wkładami i wybrać &amp; opiekuj się swoim własnym zestawem “24 Pull Requests”.
     form:
-      date: Date
-      gift_it: Gift it!
-      pull_requests: Contributions
-      tweet: Tweet about your gift!
-    give: Gift something meaningful to a project you love
-    link_twitter: Link Twitter account
-    link_twitter_desc: Want to share information about 24 Pull Requests and your gifts? %{link_twitter} and gift some code to open-source projects.
-    no_pull_requests: You don’t have any pull-requests
-    none: Nothing gifted yet.
-    title: Gifted Code
-    view_your_gifts: All your gifts will be shown on your %{calendar_link}.
-  happy_holidays: Happy Holidays
+      date: Data
+      gift_it: Podaruj to!
+      pull_requests: Wkłady
+      tweet: Tweetuj o swoim prezencie!
+    give: Podaruj coś znaczącego projektowi, który kochasz
+    link_twitter: Połącz konto na Twitterze
+    link_twitter_desc: Czy chcesz udostępnić informacje o 24 Pull Requests i swoich prezentach? %{link_twitter} i podaruj trochę kodu projektom open source.
+    no_pull_requests: Nie masz żadnych pull-requestów
+    none: Jeszcze nic nie podarowane.
+    title: Podarowany kod
+    view_your_gifts: Wszystkie twoje prezenty zostaną pokazane na twoim %{calendar_link}.
+  happy_holidays: Wesołych Świąt
   homepage:
-    about: What’s it all about?
+    about: O czym to jest?
     about_text: "<p>24 Pull Requests is a yearly initiative to encourage contributors around the world to send 24 pull requests between December 1st and December 24th.</p> <p>This is the site to help promote the project, highlighting why, how and where to send your contributions.</p><p>Log in with your GitHub account and we’ll track and highlight all your contributions and suggest projects to work on.</p>"
     description: Giving back to open source for the holidays
     event:
