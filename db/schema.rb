@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_23_153926) do
+ActiveRecord::Schema.define(version: 2021_12_02_055021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -166,6 +166,7 @@ ActiveRecord::Schema.define(version: 2018_11_23_153926) do
     t.decimal "lng", precision: 9, scale: 6
     t.string "ignored_organisations", default: [], array: true
     t.string "unsubscribe_token", null: false
+    t.string "time_zone"
     t.index ["nickname"], name: "index_users_on_nickname", unique: true
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
     t.index ["unsubscribe_token"], name: "index_users_on_unsubscribe_token", unique: true
