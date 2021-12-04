@@ -141,4 +141,36 @@ describe Contribution, type: :model do
       end
     end
   end
+
+  describe '.can_edit?' do
+    let(:contribution) { FactoryBot.build(:contribution) }
+
+    context 'for an admin' do
+      let(:user) { mock_model(User, admin?: true) }
+
+      it 'should return true' do
+        expect(contribution.can_edit?(user)).to be true
+      end
+    end
+
+    context 'when the user is not logged in' do
+      it 'should return false' do
+        expect(contribution.can_edit?(nil)).to be false
+      end
+    end
+
+    context 'when the user is the contribution owner logged in' do
+      it 'should return true' do
+        contribution.user_id = user.id
+        expect(contribution.can_edit?(user)).to be true
+      end
+    end
+
+    context 'when the user is not the contribution owner' do
+      it 'should return false' do
+        contribution.user_id = 2
+        expect(contribution.can_edit?(user)).to be false
+      end
+    end
+  end
 end

@@ -27,6 +27,11 @@
       <%= @contribution.created_at %>
     </abbr>
   </p>
+  <% if @contribution.can_edit?(current_user) && (not @contribution.pull_request?) %>
+    <br>
+    <%= link_to t("contributions.show.edit_contribution"), edit_contribution_path(@contribution), class: "btn btn-default" %>
+    <%= link_to t("contributions.show.destroy_contribution"), @contribution, data: { confirm: I18n.t("contributions.show.confirm_destroy") }, method: :delete, class: "btn btn-danger" %>
+  <% end %>
   <br>
   <p class="js-emoji">
     <%= simple_format @contribution.body %>

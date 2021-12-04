@@ -1,6 +1,10 @@
 <%= cache contribution do %>
   <div class="contribution row-fluid clearfix">
-    <div class="span12">
+    <% if contribution.can_edit?(current_user) %>
+      <div class="col-md-10">
+    <% else %>
+      <div class="col-md-12">
+    <% end %>
       <h4>
         <% if contribution.pull_request? %>
           <%= link_to contribution.title, contribution.issue_url, :target => :_blank %>
@@ -33,5 +37,11 @@
         </div>
       </p>
     </div>
+    <% if contribution.can_edit?(current_user) && (not contribution.pull_request?) %>
+      <div class="col-md-2">
+        <%= link_to t("contributions.show.edit_contribution"), edit_contribution_path(contribution), class: "btn btn-default contribution_action contribution_edit" %>
+        <%= link_to t("contributions.show.destroy_contribution"), contribution, data: { confirm: I18n.t("contributions.show.confirm_destroy") }, method: :delete, class: "btn btn-danger contribution_action" %>
+      </div>
+    <% end %>
   </div>
 <% end %>

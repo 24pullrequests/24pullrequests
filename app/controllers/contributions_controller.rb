@@ -21,8 +21,30 @@ class ContributionsController < ApplicationController
     end
   end
 
+  def edit
+    @contribution = current_user.contributions.find_by_id(params[:id])
+    redirect_to root_path, notice: t('contributions.notice.not_authorized') unless @contribution.present?
+  end
+
+  def update
+    @contribution = current_user.contributions.find_by_id(params[:id])
+    redirect_to root_path, notice: t('contributions.notice.not_authorized') unless @contribution.present?
+    if @contribution.update(contribution_params)
+      redirect_to @contribution, notice: t('contributions.notice.edit_success')
+    else
+      render :edit
+    end
+  end
+
   def show
     @contribution = Contribution.find(params[:id])
+  end
+
+  def destroy
+    @contribution = current_user.contributions.find_by_id(params[:id])
+    redirect_to root_path, notice: t('contributions.notice.not_authorized') unless @contribution.present?
+    @contribution.destroy!
+    redirect_back(fallback_location: root_path, notice: t('contributions.notice.destroy_success'))
   end
 
   def meta

@@ -57,6 +57,11 @@ class Contribution < ApplicationRecord
     end
   end
 
+  def can_edit?(user)
+    return false unless user.present?
+    user_id == user.id || user.admin?
+  end
+
   def pull_request?
     state.present?
   end
