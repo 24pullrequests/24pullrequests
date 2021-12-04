@@ -82,6 +82,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    commonmarker (0.23.2)
     concurrent-ruby (1.1.9)
     crack (0.4.5)
       rexml
@@ -296,7 +297,6 @@ GEM
       thor (>= 0.19.0, < 2.0)
     rainbow (3.0.0)
     rake (13.0.6)
-    redcarpet (3.5.1)
     regexp_parser (2.1.1)
     request_store (1.5.0)
       rack (>= 1.4)
@@ -429,6 +429,7 @@ DEPENDENCIES
   bugsnag
   christmas_tree_formatter
   coffee-rails
+  commonmarker (~> 0.23.2)
   dalli
   database_cleaner
   draper
@@ -454,7 +455,6 @@ DEPENDENCIES
   rack-google-analytics
   rails (= 5.2.6)
   rails-controller-testing
-  redcarpet (~> 3.5)
   responders
   rspec-activemodel-mocks
   rspec-collection_matchers

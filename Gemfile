@@ -64,4 +64,4 @@ group :production do
   gem 'rack-google-analytics'
 end
 
-gem "redcarpet", "~> 3.5"
+gem "commonmarker", "~> 0.23.2"

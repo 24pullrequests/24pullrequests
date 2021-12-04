@@ -28,5 +28,8 @@
     </abbr>
   </p>
   <br>
-  <%= simple_format Markdown.new(contribution.body).to_html.gsub(/(\\n)/, '<br>'), class: "js-emoji contibution-body", wrapper_tag: "div" %>
+  <div class="js-emoji contribution-body">
+
+  </div>
+  <%= format_markdown @contribution.body %>
 </div>

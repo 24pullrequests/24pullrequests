@@ -27,9 +27,9 @@
           <% end %>
         </span>
       </h4>
-      <p>
-      <%= simple_format Markdown.new(truncate contribution.body, :length => 300).to_html.gsub(/(\\n)/, '<br>'), class: "js-emoji contibution-body", wrapper_tag: "div" %>
-      </p>
+      <div class="js-emoji contribution-body">
+        <%= format_markdown (truncate contribution.body, :length => 300) %>
+      </div>
     </div>
   </div>
 <% end %>
