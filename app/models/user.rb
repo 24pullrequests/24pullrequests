@@ -209,7 +209,7 @@ class User < ApplicationRecord
   end
 
   def send_thank_you_email_on_24
-    return unless contributions_count >= 24 && !thank_you_email_sent
+    return unless email.present? && contributions_count >= 24 && !thank_you_email_sent
     ThankYouMailer.thank_you(self).deliver_later
     update_column(:thank_you_email_sent, true)
   end
