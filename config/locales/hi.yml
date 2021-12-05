@@ -216,6 +216,7 @@ hi:
     it: Italiano
     ja: 日本語
     nb: Norsk bokmål
+    pl: Polski
     pt_br: Português do Brasil
     ru: Русский
     ta: தமிழ்
@@ -268,6 +269,8 @@ hi:
     save: सहेजें
     save_and_continue: सहेजें और जारी रखें
     setup_help: 24 पुल अनुरोधों के साथ आरंभ करने के लिए, कृपया पहले निम्न फ़ॉर्म को भरें।
+    time_zone: Time Zone
+    time_zone_message: To correctly display your pull requests, please choose a time zone.
     title: अपनी व्यक्तिगत प्राथमिकताओं को सेट करें
     twitter: ट्विटर खाता
   preferred_languages: पसंदीदा भाषाएं

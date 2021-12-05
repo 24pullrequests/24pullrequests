@@ -216,6 +216,7 @@ zh_Hant:
     it: Italiano
     ja: 日本語
     nb: Norsk bokmål
+    pl: Polski
     pt_br: Português do Brasil
     ru: Русский
     ta: தமிழ்
@@ -266,6 +267,8 @@ zh_Hant:
     save: 儲存
     save_and_continue: 儲存並繼續
     setup_help: 在開始參與 24 Pull Requests 之前，請先設定個人偏好。
+    time_zone: Time Zone
+    time_zone_message: To correctly display your pull requests, please choose a time zone.
     title: 設定你的個人喜好
     twitter: Twitter 帳號
   preferred_languages: 語言偏好

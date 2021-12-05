@@ -216,6 +216,7 @@ ja:
     it: Italiano
     ja: 日本語
     nb: Norsk bokmål
+    pl: Polski
     pt_br: Português do Brasil
     ru: Русский
     ta: தமிழ்
@@ -266,6 +267,8 @@ ja:
     save: 保存
     save_and_continue: 保存後、続ける
     setup_help: 24 Pull Requests を始めるにあたり、まず最初に以下のフォームに記入してください。
+    time_zone: Time Zone
+    time_zone_message: To correctly display your pull requests, please choose a time zone.
     title: アカウントを設定してください
     twitter: Twitter アカウント
   preferred_languages: 好きな言語

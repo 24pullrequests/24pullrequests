@@ -216,6 +216,7 @@ zh_Hans:
     it: Italiano
     ja: 日本語
     nb: Norsk bokmål
+    pl: Polski
     pt_br: Português do Brasil
     ru: Русский
     ta: தமிழ்
@@ -266,6 +267,8 @@ zh_Hans:
     save: Save
     save_and_continue: 保存并继续
     setup_help: To get started with 24 Pull Requests, please first fill up the following form.
+    time_zone: Time Zone
+    time_zone_message: To correctly display your pull requests, please choose a time zone.
     title: 设置您的个人喜好
     twitter: 推特帐号
   preferred_languages: 首选语言

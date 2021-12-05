@@ -216,6 +216,7 @@ cs:
     it: Italiano
     ja: 日本語
     nb: Norsk bokmål
+    pl: Polski
     pt_br: Português do Brasil
     ru: Русский
     ta: தமிழ்
@@ -266,6 +267,8 @@ cs:
     save: Uložit
     save_and_continue: Uložit a pokračovat
     setup_help: Než začnete, prosím vyplňte tento formulář
+    time_zone: Time Zone
+    time_zone_message: To correctly display your pull requests, please choose a time zone.
     title: Nastavte si své osobní preference
     twitter: Twitter účet
   preferred_languages: Preferované jazyky

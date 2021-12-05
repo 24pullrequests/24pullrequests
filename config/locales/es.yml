@@ -216,6 +216,7 @@ es:
     it: Italiano
     ja: 日本語
     nb: Norsk bokmål
+    pl: Polski
     pt_br: Português do Brasil
     ru: Русский
     ta: தமிழ்
@@ -266,6 +267,8 @@ es:
     save: Guardar
     save_and_continue: Guardar y Continuar
     setup_help: Para comenzar con 24 Pull Requests, por favor, rellena el siguiente formulario.
+    time_zone: Time Zone
+    time_zone_message: To correctly display your pull requests, please choose a time zone.
     title: Establece tus Preferencias Personales
     twitter: Cuenta de Twitter
   preferred_languages: Lenguajes preferidos
