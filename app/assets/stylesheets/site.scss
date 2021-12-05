@@ -694,3 +694,10 @@ abbr[title] {
     float: none !important;
   }
 }
+
+.user_email {
+  .help-block {
+    @extend .col-md-8;
+    color: #a94442;
+  }
+}

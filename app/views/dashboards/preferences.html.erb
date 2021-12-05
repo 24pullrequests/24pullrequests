@@ -27,7 +27,7 @@
         </em>
       </p>
       <%= form.input :email_frequency, :label => t("preferences.form.email_frequency"), :collection => [[t("preferences.form.never"), 'none'], [t("preferences.form.daily"), 'daily'], [t("preferences.form.weekly"), 'weekly']], :selected => (form.object.email_frequency || 'daily') %>
-      <% if current_user.email.present? && !current_user.confirmed? %>
+      <% if current_user.email.present? && !current_user.confirmed? && !current_user.errors[:email].any? %>
         <%= form.input :email, hint: t("preferences.hint.confirm_email") %>
       <% else %>
         <%= form.input :email, :label => t("preferences.form.email") %>
