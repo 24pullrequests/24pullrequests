@@ -143,7 +143,7 @@ describe Contribution, type: :model do
   end
 
   describe '.can_edit?' do
-    let(:contribution) { FactoryBot.build(:contribution) }
+    let(:contribution) { create :contribution }
 
     context 'for an admin' do
       let(:user) { mock_model(User, admin?: true) }
@@ -160,9 +160,15 @@ describe Contribution, type: :model do
     end
 
     context 'when the user is the contribution owner logged in' do
-      it 'should return true' do
+      it 'should return true when created in the current year' do
         contribution.user_id = user.id
         expect(contribution.can_edit?(user)).to be true
+      end
+
+      it 'should return false when created in a previous year' do
+        contribution.user_id = user.id
+        contribution.created_at = Faker::Date.between_except(1.year.ago, Contribution::EARLIEST_PULL_DATE, Contribution::EARLIEST_PULL_DATE)
+        expect(contribution.can_edit?(user)).to be false
       end
     end
 

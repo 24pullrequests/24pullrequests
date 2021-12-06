@@ -23,12 +23,12 @@ class ContributionsController < ApplicationController
 
   def edit
     @contribution = current_user.contributions.find_by_id(params[:id])
-    redirect_to root_path, notice: t('contributions.notice.not_authorized') unless @contribution.present?
+    redirect_to root_path, notice: t('contributions.notice.not_authorized') unless @contribution.present? && @contribution.can_edit?(current_user)
   end
 
   def update
     @contribution = current_user.contributions.find_by_id(params[:id])
-    redirect_to root_path, notice: t('contributions.notice.not_authorized') unless @contribution.present?
+    redirect_to root_path, notice: t('contributions.notice.not_authorized') unless @contribution.present? && @contribution.can_edit?(current_user)
     if @contribution.update(contribution_params)
       redirect_to @contribution, notice: t('contributions.notice.edit_success')
     else
