@@ -27,11 +27,9 @@
           <% end %>
         </span>
       </h4>
-      <p>
-        <div class="js-emoji">
-          <%= truncate contribution.body, :length => 300 %>
-        </div>
-      </p>
+      <div class="js-emoji contribution-body">
+        <%= format_markdown (truncate contribution.body, :length => 300) %>
+      </div>
     </div>
   </div>
 <% end %>

@@ -533,6 +533,12 @@ footer {
     display: block;
     text-transform: uppercase;
   }
+
+  .contribution-body {
+    @media(min-width: $screen-md-min) {
+      margin-left: 95px;
+    }
+  }
 }
 
 hr {

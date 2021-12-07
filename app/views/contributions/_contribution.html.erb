@@ -28,8 +28,8 @@
         </small>
       </span>
     </h4>
-    <p class="js-emoji">
-      <%= truncate contribution.body, :length => 240 %>
-    </p>
+    <div class="js-emoji contribution-body">
+      <%= format_markdown (truncate contribution.body, :length => 240) %>
+    </div>
   </div>
 <% end %>

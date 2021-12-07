@@ -55,4 +55,8 @@ module ApplicationHelper
   def unconfirmed_email?
     logged_in? && current_user.unconfirmed?
   end
+
+  def format_markdown(str)
+    CommonMarker.render_html(str, :GITHUB_PRE_LANG, [:tagfilter, :autolink, :table, :strikethrough]).gsub(/(\\n|\\r)/, '<br>').html_safe
+  end
 end

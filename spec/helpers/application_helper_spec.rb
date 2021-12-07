@@ -60,4 +60,10 @@ describe ApplicationHelper, type: :helper do
       expect(helper.projects_in(last_year)).to eq(2)
     end
   end
+
+  describe '#format_markdown' do
+    it "replaces new line and carriage return characters with <br> tags" do
+      expect(helper.format_markdown('Test\nNew Line\rCarriage Return')).to eql("<p>Test<br>New Line<br>Carriage Return</p>\n")
+    end
+  end
 end

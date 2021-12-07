@@ -28,7 +28,7 @@
     </abbr>
   </p>
   <br>
-  <p class="js-emoji">
-    <%= simple_format @contribution.body %>
-  </p>
+  <div class="js-emoji contribution-body">
+    <%= format_markdown @contribution.body %>
+  </div>
 </div>

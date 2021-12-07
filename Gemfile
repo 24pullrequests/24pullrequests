@@ -28,6 +28,7 @@ gem 'rack-attack'
 gem 'bootsnap', require: false
 gem 'sprockets', '< 4.0.0'
 gem 'faraday', '1.7.0'
+gem "commonmarker", "~> 0.23.2"
 
 group :development do
   gem 'spring'
