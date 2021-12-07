@@ -63,6 +63,8 @@ zh_Hans:
   claim: 领取
   clear: 清除
   contributions:
+    edit:
+      title: Edit Contribution
     new:
       form:
         body: Description
@@ -74,6 +76,16 @@ zh_Hans:
         repo_name_placeholder: Open source project name
       save: Record your contribution
       title: How did you contribute to open source today?
+    notice:
+      destroy_success: Contribution removed successfully!
+      edit_success: Contribution updated successfully!
+      new_success: Contribution created successfully!
+      not_authorized: You can only edit contributions that you have created this year
+      not_logged_in: You must be logged in to create or edit contributions
+    show:
+      confirm_destroy: Are you sure you want to remove this contribution?
+      destroy_contribution: Remove Contribution
+      edit_contribution: Edit Contribution
   contributors:
     title: 主要贡献者
   contributors_involved: 开发者已经参与进来
@@ -89,8 +101,8 @@ zh_Hans:
     pull_requests: 下面列出了开发者们最新提交的 Pull Request。赶紧去提交 Pull Request 吧，就可以在这找到你自己了！
     synchronize: 同步合并请求(pull request)
     tweet_progress:
-      one:
-      other:
+      one: 
+      other: 
   deactivate: 失效
   delete: 删除
   delete_account:

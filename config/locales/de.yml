@@ -63,6 +63,8 @@ de:
   claim: Anspruch erheben
   clear: Leeren
   contributions:
+    edit:
+      title: Edit Contribution
     new:
       form:
         body: Description
@@ -74,6 +76,16 @@ de:
         repo_name_placeholder: Open source project name
       save: Record your contribution
       title: How did you contribute to open source today?
+    notice:
+      destroy_success: Contribution removed successfully!
+      edit_success: Contribution updated successfully!
+      new_success: Contribution created successfully!
+      not_authorized: You can only edit contributions that you have created this year
+      not_logged_in: You must be logged in to create or edit contributions
+    show:
+      confirm_destroy: Are you sure you want to remove this contribution?
+      destroy_contribution: Remove Contribution
+      edit_contribution: Edit Contribution
   contributors:
     title: Contributors
   contributors_involved: Entwickler*innen machen mit
@@ -89,8 +101,8 @@ de:
     pull_requests: Fragst du dich, was die Leute an den Feiertagen vorhaben? Schau dir diese Pull Requests an or reiche einen eigenen ein!
     synchronize: Pull Requests synchronisieren
     tweet_progress:
-      one:
-      other:
+      one: 
+      other: 
   deactivate: Deaktivieren
   delete: Löschen
   delete_account:
@@ -243,8 +255,8 @@ de:
   organisations:
     languages: Languages
     members:
-      one:
-      other:
+      one: 
+      other: 
     pull_requests: "%{count} pull requests submitted by members"
     title: "%{count} Organisations involved"
   organisations_involved_desc: Lade mehr Personen aus Deiner Organisation zur Teilnahme ein.

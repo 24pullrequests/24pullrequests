@@ -63,6 +63,8 @@ ru:
   claim: Заявка
   clear: Очистить
   contributions:
+    edit:
+      title: Edit Contribution
     new:
       form:
         body: Description
@@ -74,6 +76,16 @@ ru:
         repo_name_placeholder: Open source project name
       save: Record your contribution
       title: How did you contribute to open source today?
+    notice:
+      destroy_success: Contribution removed successfully!
+      edit_success: Contribution updated successfully!
+      new_success: Contribution created successfully!
+      not_authorized: You can only edit contributions that you have created this year
+      not_logged_in: You must be logged in to create or edit contributions
+    show:
+      confirm_destroy: Are you sure you want to remove this contribution?
+      destroy_contribution: Remove Contribution
+      edit_contribution: Edit Contribution
   contributors:
     title: Основные авторы
   contributors_involved: "— нас уже много"
@@ -89,8 +101,8 @@ ru:
     pull_requests: Интересно чем заняты люди в эти праздники? Проверьте эти пулл-реквесты, или пришлите ваш пулл-реквест и найдите здесь себя!
     synchronize: Синхронизировать
     tweet_progress:
-      one:
-      other:
+      one: 
+      other: 
   deactivate: Выключить
   delete: Удалить
   delete_account:

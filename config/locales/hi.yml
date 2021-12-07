@@ -63,6 +63,8 @@ hi:
   claim: दावा करें
   clear: स्पष्ट करें
   contributions:
+    edit:
+      title: Edit Contribution
     new:
       form:
         body: Description
@@ -74,6 +76,16 @@ hi:
         repo_name_placeholder: Open source project name
       save: Record your contribution
       title: How did you contribute to open source today?
+    notice:
+      destroy_success: Contribution removed successfully!
+      edit_success: Contribution updated successfully!
+      new_success: Contribution created successfully!
+      not_authorized: You can only edit contributions that you have created this year
+      not_logged_in: You must be logged in to create or edit contributions
+    show:
+      confirm_destroy: Are you sure you want to remove this contribution?
+      destroy_contribution: Remove Contribution
+      edit_contribution: Edit Contribution
   contributors:
     title: योगदानकर्ता
   contributors_involved: पहले से ही शामिल डेवलपर्स
@@ -261,7 +273,7 @@ hi:
       confirm_email: कृपया हमें आपके द्वारा भेजे गए लिंक का उपयोग करके अपने ईमेल पते की पुष्टि करें।
     ignore_organisations: 'यदि आप नियमित रूप से सार्वजनिक रिपॉजिटरी में योगदान देते हैं, जिसे आप इस साइट पर ट्रैक नहीं करना चाहते हैं, तो संगठन का नाम यहां जोड़ें आप कॉमा द्वारा अलग किए गए एकाधिक संगठन जोड़ सकते हैं। यह उपयोगी हो सकता है यदि आप काम पर खुले में कोड डालते हैं, या अपने आप को ओपन सोर्स रिपॉजिटरी को बनाए रख सकते हैं।
 
-      '
+'
     ignored_organisations: Ignored organisations
     information: आप हमेशा अपनी ईमेल प्राथमिकताएं बाद में बदल सकते हैं।
     languages: आप किन भाषाओं को पसंद करते हैं?

@@ -63,6 +63,8 @@ ja:
   claim: 主張
   clear: 削除
   contributions:
+    edit:
+      title: Edit Contribution
     new:
       form:
         body: 説明
@@ -74,6 +76,16 @@ ja:
         repo_name_placeholder: オープンソースプロジェクト名
       save: あなたの貢献を記録する
       title: あなたは今日どのようにオープンソースに貢献しましたか?
+    notice:
+      destroy_success: Contribution removed successfully!
+      edit_success: Contribution updated successfully!
+      new_success: Contribution created successfully!
+      not_authorized: You can only edit contributions that you have created this year
+      not_logged_in: You must be logged in to create or edit contributions
+    show:
+      confirm_destroy: Are you sure you want to remove this contribution?
+      destroy_contribution: Remove Contribution
+      edit_contribution: Edit Contribution
   contributors:
     title: 貢献者
   contributors_involved: 人の開発者が参加しました
@@ -89,8 +101,8 @@ ja:
     pull_requests: Wonder what people up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: Pull Requests を同期
     tweet_progress:
-      one:
-      other:
+      one: 
+      other: 
   deactivate: Deactivate
   delete: Delete
   delete_account:
