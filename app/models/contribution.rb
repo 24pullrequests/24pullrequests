@@ -5,6 +5,7 @@ class Contribution < ApplicationRecord
   after_destroy { if user then user.update_contribution_count end }
 
   validates :issue_url, uniqueness: { scope: :user_id }, if: :pull_request?
+  validates_format_of :issue_url, :with => URI::regexp(), allow_blank: true
 
   validates :body, presence: true, unless: :pull_request?
   validates :repo_name, presence: true, unless: :pull_request?

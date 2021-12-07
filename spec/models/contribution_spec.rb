@@ -12,11 +12,30 @@ describe Contribution, type: :model do
   end
 
   describe 'non-pull request validations' do
+    let(:contribution) { create(:contribution, user: user, state: nil) }
 
-    subject { build(:contribution, state: nil) }
+    subject { contribution }
     it { validate_presence_of(:body) }
     it { validate_presence_of(:repo_name) }
     it { validate_presence_of(:created_at) }
+
+    it 'allows valid url' do
+      contribution.issue_url = "https://24pullrequests.com/"
+      contribution.valid?
+      expect(contribution.errors[:issue_url].count).to eq 0
+    end
+
+    it 'allows empty url' do
+      contribution.issue_url = ""
+      contribution.valid?
+      expect(contribution.errors[:issue_url].count).to eq 0
+    end
+
+    it 'errors on invalid url' do
+      contribution.issue_url = "24pullrequests.com/"
+      contribution.valid?
+      expect(contribution.errors[:issue_url].count).to eq 1
+    end
   end
 
   describe '#create_from_github' do
