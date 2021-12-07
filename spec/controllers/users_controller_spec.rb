@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe UsersController, type: :controller do
+  render_views
   let(:user) { create :user }
 
   describe 'GET index' do
@@ -45,11 +46,19 @@ describe UsersController, type: :controller do
     end
 
     context 'as json' do
+      let(:contribution) { create :contribution, user: user }
+
       before do
+        contribution.user_id = user.id
         get :show, params: {id: user.nickname}, format: :json
       end
 
       it { expect(response.header['Content-Type']).to include 'application/json' }
+
+      it 'should have pull_requests' do
+        parsed_body = JSON.parse(response.body)
+        expect(parsed_body["pull_requests"].count).to be > 0
+      end
     end
   end
 
