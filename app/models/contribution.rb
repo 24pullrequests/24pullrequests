@@ -61,6 +61,11 @@ class Contribution < ApplicationRecord
     end
   end
 
+  def can_edit?(user)
+    return false unless user.present?
+    (user_id == user.id && created_at > EARLIEST_PULL_DATE) || user.admin?
+  end
+
   def pull_request?
     state.present?
   end
