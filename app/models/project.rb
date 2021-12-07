@@ -94,4 +94,15 @@ class Project < ApplicationRecord
   def url
     homepage.presence || github_url
   end
+
+  def community_profile(nickname, token, options)
+    GithubClient.new(nickname, token).community_profile(options)
+  end
+
+  def contrib_url(nickname, token)
+    repo = repo(nickname, token)
+    options = { owner: repo.owner.login, name: repo.name } if repo.present?
+    community_profile = community_profile(nickname, token, options)
+    community_profile.files.contributing.html_url if community_profile.present?
+  end
 end
