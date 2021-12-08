@@ -133,4 +133,17 @@ describe Project, type: :model do
       expect(project.url).to eq('https://github.com/24pullrequests/24pullrequests')
     end
   end
+
+  context '#contrib_url' do
+    let(:project) { FactoryBot.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests') }
+
+    it 'returns the github contributing doc url' do
+      client = double(:github_client)
+      expect(GithubClient).to receive(:new).twice.with('username', 'token').and_return(client)
+      expect(client).to receive(:repository).with("24pullrequests/24pullrequests")
+      expect(client).to receive(:community_profile)
+
+      project.contrib_url('username', 'token')
+    end
+  end
 end

@@ -90,7 +90,7 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:description, :github_url, :homepage, :name, :main_language, :contributions_url, label_ids: [])
+    params.require(:project).permit(:description, :github_url, :homepage, :name, :main_language, :contributing_url, label_ids: [])
   end
 
   def editable_project_params

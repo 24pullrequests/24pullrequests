@@ -78,4 +78,13 @@ describe GithubClient do
       github_client.labels(repository)
     end
   end
+
+  describe '#community_profile' do
+    it "returns a contributing doc" do
+      repository_info = { owner: '24pullrequests', name: '24pullrequests' }
+      expect(client).to receive(:get).with('/repos/24pullrequests/24pullrequests/community/profile')
+
+      github_client.community_profile(repository_info)
+    end
+  end
 end
