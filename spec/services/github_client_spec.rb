@@ -84,7 +84,7 @@ describe GithubClient do
       repository_info = { owner: '24pullrequests', name: '24pullrequests' }
       expect(client).to receive(:get).with('/repos/24pullrequests/24pullrequests/community/profile')
 
-      github_client.community_profile(repository_info)
+      github_client.community_profile("24pullrequests/24pullrequests", repository_info)
     end
   end
 end
