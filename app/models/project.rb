@@ -96,12 +96,12 @@ class Project < ApplicationRecord
   end
 
   def community_profile(nickname, token, options)
-    GithubClient.new(nickname, token).community_profile(options)
+    get_github_data('community_profile', nickname, token, 1, options)
   end
 
   def contrib_url(nickname, token)
     repo = repo(nickname, token)
-    options = { owner: repo.owner.login, name: repo.name } if repo.present?
+    options = { owner: repo[:owner][:login], name: repo[:name] } if repo.present?
     community_profile = community_profile(nickname, token, options)
     community_profile.files.contributing.html_url if community_profile.present?
   end

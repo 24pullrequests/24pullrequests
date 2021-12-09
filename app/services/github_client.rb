@@ -58,10 +58,10 @@ class GithubClient
     []
   end
 
-  def community_profile(options)
+  def community_profile(repository, options)
     client.get("/repos/#{options[:owner]}/#{options[:name]}/community/profile")
   rescue Octokit::Unauthorized, Octokit::RepositoryUnavailable, Faraday::ConnectionFailed
-    []
+    {}
   end
 
   private
