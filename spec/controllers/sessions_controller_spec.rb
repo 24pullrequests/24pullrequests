@@ -11,7 +11,7 @@ describe SessionsController, type: :controller do
 
   describe 'POST create' do
     before do
-      create :user, uid: 'uid', nickname: 'jane-doe', location: 'georgia'
+      @user = create :user, uid: 1024, nickname: 'jane-doe', location: 'georgia'
     end
 
     it "updates the user's particulars" do
@@ -45,7 +45,7 @@ end
 
 def session_spec_user_hash
   { 'provider'    => 'github',
-    'uid'         => 'uid',
+    'uid'         => 1024,
     'info'        => {
       'nickname' => 'jane-doe'
     },
