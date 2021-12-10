@@ -24,6 +24,11 @@ describe 'Projects', type: :request do
     end
 
     it 'allows the user to suggest a project to contribute to' do
+      client = double(:github_client)
+      expect(GithubClient).to receive(:new).twice.with(user.nickname, user.token).and_return(client)
+      expect(client).to receive(:repository).with("akira/24pullrequests")
+      expect(client).to receive(:community_profile)
+
       click_link 'Suggest a project'
       fill_in 'Name', with: Faker::Lorem.words.first
       fill_in 'GitHub URL', with: 'http://github.com/akira/24pullrequests'

@@ -57,7 +57,7 @@ class Project < ApplicationRecord
     github_url.gsub(/^(((https|http|git)?:\/\/(www\.)?)|git@)github.com(:|\/)/i, '').gsub(/(\.git|\/)$/i, '')
   end
 
-  def get_github_data(data_type, nickname, token, months_ago, options)
+  def get_github_data(data_type, nickname, token, months_ago, options = {})
     date = (Time.zone.now - months_ago.months).utc.iso8601
     options.merge! since: date
     GithubClient.new(nickname, token).send(data_type.to_sym, github_repository, options)
@@ -95,13 +95,13 @@ class Project < ApplicationRecord
     homepage.presence || github_url
   end
 
-  def community_profile(nickname, token, options)
+  def community_profile(nickname, token, options = {})
     get_github_data('community_profile', nickname, token, 1, options)
   end
 
   def contrib_url(nickname, token)
     repo = repo(nickname, token)
-    options = { owner: repo[:owner][:login], name: repo[:name] } if repo.present?
+    options = repo.present? ? { owner: repo[:owner][:login], name: repo[:name] } : {}
     community_profile = community_profile(nickname, token, options)
     community_profile.files.contributing.html_url if community_profile.present?
   end
