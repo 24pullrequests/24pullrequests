@@ -101,8 +101,8 @@ de:
     pull_requests: Fragst du dich, was die Leute an den Feiertagen vorhaben? Schau dir diese Pull Requests an or reiche einen eigenen ein!
     synchronize: Pull Requests synchronisieren
     tweet_progress:
-      one: 
-      other: 
+      one:
+      other:
   deactivate: Deaktivieren
   delete: Löschen
   delete_account:
@@ -255,8 +255,8 @@ de:
   organisations:
     languages: Languages
     members:
-      one: 
-      other: 
+      one:
+      other:
     pull_requests: "%{count} pull requests submitted by members"
     title: "%{count} Organisations involved"
   organisations_involved_desc: Lade mehr Personen aus Deiner Organisation zur Teilnahme ein.
@@ -289,6 +289,7 @@ de:
       search: Nach GitHub Repository suchen
       title: Projekte verwalten
     claim: Sind einige Deiner vorgeschlagenen Projekte noch nicht aufgeführt? Erhebe Anspruch!
+    contributing: Contributing Guide
     edit:
       title: Vorschlag bearbeiten
     filter_by_language: 'Nach Sprache filtern:'

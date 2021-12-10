@@ -12,6 +12,11 @@
     <p class="js-emoji">
       <%= project.description %>
     </p>
+    <% unless project.contributing_url.blank? %>
+      <p class="contributing-url">
+        <%= link_to t("projects.contributing"), project.contributing_url, target: "_blank" %>
+      </p>
+    <% end %>
   <% end %>
   <% project.labels.each do |label| %>
     <div class="project-label">

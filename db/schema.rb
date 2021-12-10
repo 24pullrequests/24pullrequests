@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_02_055021) do
+ActiveRecord::Schema.define(version: 2021_12_07_122354) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -118,6 +118,7 @@ ActiveRecord::Schema.define(version: 2021_12_02_055021) do
     t.string "avatar_url"
     t.integer "contribulator"
     t.string "homepage"
+    t.string "contributing_url"
   end
 
   create_table "pull_request_archives", id: :serial, force: :cascade do |t|

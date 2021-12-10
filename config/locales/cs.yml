@@ -101,8 +101,8 @@ cs:
     pull_requests: Zajímá vás co ostatní dělají tyto Vánoce? Podívejte se na tyhle pull requesty a nebo pošlete nějaké vlastní - najdete je pak zde!
     synchronize: Synchronizovat pull requesty
     tweet_progress:
-      one: 
-      other: 
+      one:
+      other:
   deactivate: Deactivate
   delete: Delete
   delete_account:
@@ -289,6 +289,7 @@ cs:
       search: Hledat v GitHub repozitích
       title: Spravovat projekty
     claim: Are any of the projects you suggested not listed? Claim them!
+    contributing: Contributing Guide
     edit:
       title: Spravovat návrhy
     filter_by_language: 'Filtrovat podle jazyka:'

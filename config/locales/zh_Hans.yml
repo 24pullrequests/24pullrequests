@@ -101,8 +101,8 @@ zh_Hans:
     pull_requests: 下面列出了开发者们最新提交的 Pull Request。赶紧去提交 Pull Request 吧，就可以在这找到你自己了！
     synchronize: 同步合并请求(pull request)
     tweet_progress:
-      one: 
-      other: 
+      one:
+      other:
   deactivate: 失效
   delete: 删除
   delete_account:
@@ -289,6 +289,7 @@ zh_Hans:
       search: 搜索GitHub的代码库
       title: 管理项目
     claim: 有哪些你建立的项目没有列出来？快来认领他们吧！
+    contributing: Contributing Guide
     edit:
       title: 编辑建议
     filter_by_language: '按语言分类:'

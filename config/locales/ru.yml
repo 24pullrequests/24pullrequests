@@ -101,8 +101,8 @@ ru:
     pull_requests: Интересно чем заняты люди в эти праздники? Проверьте эти пулл-реквесты, или пришлите ваш пулл-реквест и найдите здесь себя!
     synchronize: Синхронизировать
     tweet_progress:
-      one: 
-      other: 
+      one:
+      other:
   deactivate: Выключить
   delete: Удалить
   delete_account:
@@ -289,6 +289,7 @@ ru:
       search: Поиск на GitHub
       title: Управление проектами
     claim: Вы предложили проект, а его нет в списках? Оставьте заявку!
+    contributing: Contributing Guide
     edit:
       title: Редактировать рекомендацию
     filter_by_language: 'Фильтр по языкам:'

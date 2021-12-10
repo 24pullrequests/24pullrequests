@@ -101,8 +101,8 @@ fi:
     pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: Synkronoi vetopyynnöt
     tweet_progress:
-      one: 
-      other: 
+      one:
+      other:
   deactivate: Deactivate
   delete: Delete
   delete_account:
@@ -255,8 +255,8 @@ fi:
   organisations:
     languages: Languages
     members:
-      one: 
-      other: 
+      one:
+      other:
     pull_requests: "%{count} pull requests submitted by members"
     title: "%{count} Organisations involved"
   organisations_involved_desc: Invite more people from your organisation to participate.
@@ -289,6 +289,7 @@ fi:
       search: Hae GitHub repon mukaan
       title: Hallitse projekteja
     claim: Onko yhtään ehdottamistasi projekteista listaamatta? Lunasta ne!
+    contributing: Contributing Guide
     edit:
       title: Muokkaa Ehdotusta
     filter_by_language: 'Suodata kielen mukaan:'

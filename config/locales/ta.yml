@@ -101,8 +101,8 @@ ta:
     pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: Pull Request-களை ஒத்தியக்கம் செய்
     tweet_progress:
-      one: 
-      other: 
+      one:
+      other:
   deactivate: Deactivate
   delete: Delete
   delete_account:
@@ -289,6 +289,7 @@ ta:
       search: GitHub களஞ்சியத்‌தில் தேடவும்
       title: திட்டத்தை நிர்வகிக்கவும்
     claim: நீங்கள் கருத்து தெரிவித்த திட்டம் பெயர் விடுபட்டிருந்தால் அவர்களை கேளுங்கள்?
+    contributing: Contributing Guide
     edit:
       title: தொகுத்து அமைக்க கருத்து
     filter_by_language: 'மொழி மூலம் வடிகட்டி:'

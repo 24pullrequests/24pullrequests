@@ -23,6 +23,7 @@ class ProjectsController < ApplicationController
 
   def create
     @project = current_user.projects.build(project_params)
+    @project.contributing_url = @project.contrib_url(current_user.nickname, current_user.token)
     if @project.save
       redirect_to projects_path
     else
@@ -89,7 +90,7 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:description, :github_url, :homepage, :name, :main_language, label_ids: [])
+    params.require(:project).permit(:description, :github_url, :homepage, :name, :main_language, :contributing_url, label_ids: [])
   end
 
   def editable_project_params

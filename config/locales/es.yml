@@ -101,8 +101,8 @@ es:
     pull_requests: "¿Te preguntas lo que ha estado haciendo la gente durante estas vacaciones? Echa un vistazo a estos Pull Requests, o envia un Pull Request y verás el tuyo aquí."
     synchronize: Sincronizar Pull Requests
     tweet_progress:
-      one: 
-      other: 
+      one:
+      other:
   deactivate: Desactivar
   delete: Borrar
   delete_account:
@@ -289,6 +289,7 @@ es:
       search: Búsqueda por repositorios GitHub
       title: Administrar proyectos
     claim: "¿Hay proyectos que has sugerido y no que están en la lista? ¡Reclama!"
+    contributing: Contributing Guide
     edit:
       title: Editar Sugerencia
     filter_by_language: 'Filtrar por lenguaje:'
