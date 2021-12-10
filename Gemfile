@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.7.5'
+ruby '3.0.3'
 
 gem 'rails', '6.1.4.1'
 
@@ -47,7 +47,7 @@ group :development, :test, :cucumber do
   gem 'rspec-collection_matchers', require: false
   gem 'rspec-activemodel-mocks', require: false
   gem 'factory_bot_rails', '4.11.1'
-  gem 'faker', '1.9.6'
+  gem 'faker'
   gem 'brakeman'
   gem 'poltergeist'
 

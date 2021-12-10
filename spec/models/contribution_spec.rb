@@ -207,7 +207,7 @@ describe Contribution, type: :model do
 
       it 'should return false when created in a previous year' do
         contribution.user_id = user.id
-        contribution.created_at = Faker::Date.between_except(1.year.ago, Contribution::EARLIEST_PULL_DATE, Contribution::EARLIEST_PULL_DATE)
+        contribution.created_at = Faker::Date.between_except(from: 1.year.ago, to: Contribution::EARLIEST_PULL_DATE, excepted: Contribution::EARLIEST_PULL_DATE)
         expect(contribution.can_edit?(user)).to be false
       end
     end
