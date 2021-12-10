@@ -132,8 +132,8 @@ GEM
     factory_bot_rails (4.11.1)
       factory_bot (~> 4.11.1)
       railties (>= 3.0.0)
-    faker (1.9.6)
-      i18n (>= 0.7)
+    faker (2.19.0)
+      i18n (>= 1.6, < 2)
     faraday (1.7.0)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
@@ -261,7 +261,7 @@ GEM
       omniauth-oauth (~> 1.1)
       rack
     parallel (1.21.0)
-    parser (3.0.3.1)
+    parser (3.0.3.2)
       ast (~> 2.4.1)
     pg (1.2.3)
     poltergeist (1.18.1)
@@ -459,7 +459,7 @@ DEPENDENCIES
   database_cleaner
   draper
   factory_bot_rails (= 4.11.1)
-  faker (= 1.9.6)
+  faker
   faraday (= 1.7.0)
   foreman
   i18n-tasks
