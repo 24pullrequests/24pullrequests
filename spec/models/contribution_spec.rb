@@ -198,6 +198,8 @@ describe Contribution, type: :model do
     end
 
     context 'when the user is the contribution owner logged in' do
+      let(:user) { mock_model(User, admin?: false) }
+
       it 'should return true when created in the current year' do
         contribution.user_id = user.id
         expect(contribution.can_edit?(user)).to be true
@@ -211,6 +213,8 @@ describe Contribution, type: :model do
     end
 
     context 'when the user is not the contribution owner' do
+      let(:user) { mock_model(User, admin?: false) }
+
       it 'should return false' do
         contribution.user_id = 2
         expect(contribution.can_edit?(user)).to be false
