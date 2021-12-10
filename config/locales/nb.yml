@@ -101,8 +101,8 @@ nb:
     pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: Synkronisér pull requests
     tweet_progress:
-      one: 
-      other: 
+      one:
+      other:
   deactivate: Deactivate
   delete: Delete
   delete_account:
@@ -289,6 +289,7 @@ nb:
       search: Søk per GitHub repository
       title: Administrér prosjekter
     claim: Er noen av prosjektene du foreslo ikke listet? Krev dem!
+    contributing: Contributing Guide
     edit:
       title: Redigér forslag
     filter_by_language: 'Filtrér etter språk:'

@@ -289,6 +289,7 @@ pl:
       search: Szukaj według repozytorium GitHub
       title: Zarządzaj projektami
     claim: Czy któryś z sugerowanych przez Ciebie projektów nie znajduje się na liście? Zażądaj ich!
+    contributing: Contributing Guide
     edit:
       title: Edytuj sugestię
     filter_by_language: 'Filtruj według języka:'

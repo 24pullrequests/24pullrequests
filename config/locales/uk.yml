@@ -101,8 +101,8 @@ uk:
     pull_requests: Wonder what people are up to this holiday? Check out these pull requests, or submit a pull request now and find yours here!
     synchronize: Синхронізація пул реквестів
     tweet_progress:
-      one: 
-      other: 
+      one:
+      other:
   deactivate: Deactivate
   delete: Delete
   delete_account:
@@ -255,8 +255,8 @@ uk:
   organisations:
     languages: Languages
     members:
-      one: 
-      other: 
+      one:
+      other:
     pull_requests: "%{count} pull requests submitted by members"
     title: "%{count} Organisations involved"
   organisations_involved_desc: Invite more people from your organisation to participate.
@@ -289,6 +289,7 @@ uk:
       search: Шукати у Ґітхаб репозиторії
       title: Керувати проектами
     claim: Деяких запропонованих проектів немає у списку? Розкажіть про них!
+    contributing: Contributing Guide
     edit:
       title: Редаґувати пропозицію
     filter_by_language: Сортувати за мовою програмування
