@@ -1,5 +1,5 @@
 class ReminderMailer < ActionMailer::Base
-  add_template_helper(ApplicationHelper)
+  helper(ApplicationHelper)
 
   FREQUENCY = { daily: 'Daily', weekly: 'Weekly' }
 
