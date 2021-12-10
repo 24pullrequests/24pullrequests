@@ -57,6 +57,7 @@ module ApplicationHelper
   end
 
   def format_markdown(str)
+    return '' if str.blank?
     CommonMarker.render_html(str, :GITHUB_PRE_LANG, [:tagfilter, :autolink, :table, :strikethrough]).gsub(/(\\n|\\r)/, '<br>').html_safe
   end
 end
