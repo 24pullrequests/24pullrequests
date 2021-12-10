@@ -39,7 +39,7 @@ if Rails.env.development? || Rails.env.test?
     2.times { user.organisations << create(:organisation, avatar_url: "https://1.gravatar.com/avatar/#{org_gravatars.sample}") rescue nil }
 
     pull_requests.to_a.sample.times do |i|
-      date = Faker::Time.between(december_first, december_first + 23.days, :day)
+      date = Faker::Time.between(from: december_first, to: december_first + 23.days)
       create :contribution, user: user, created_at: date
     end
     user.gift_unspent_contributions!
@@ -58,10 +58,10 @@ if Rails.env.development? || Rails.env.test?
     Event.create name: event_name,
                  location: "#{Faker::Address.city}, #{Faker::Address.country}",
                  url: Faker::Internet.url,
-                 start_time:  Faker::Time.between(december_first, december_first + 23.days, :day),
+                 start_time:  Faker::Time.between(from: december_first, to: december_first + 23.days),
                  latitude: Faker::Address.latitude,
                  longitude: Faker::Address.longitude,
-                 description: Faker::Lorem.sentence(3),
+                 description: Faker::Lorem.sentence(word_count: 3),
                  user_id: User.take(1).first.id
   end
 
