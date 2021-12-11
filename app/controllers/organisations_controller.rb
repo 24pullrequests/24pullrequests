@@ -15,6 +15,6 @@ class OrganisationsController < ApplicationController
   protected
 
   def object_name
-    Organisation.find_by_login(params[:id]).try(:to_s)
+    Organisation.find_by_login(params[:id]).try(:login)
   end
 end

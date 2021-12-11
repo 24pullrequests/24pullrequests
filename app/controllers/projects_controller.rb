@@ -120,6 +120,6 @@ class ProjectsController < ApplicationController
   end
 
   def objectname
-    Project.find_by_id(params[:id]).try(:to_s)
+    Project.find_by_id(params[:id]).try(:name)
   end
 end
