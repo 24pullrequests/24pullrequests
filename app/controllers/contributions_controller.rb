@@ -63,6 +63,6 @@ class ContributionsController < ApplicationController
   end
 
   def object_name
-    Contribution.find(params[:id]).try(:repo_name)
+    Contribution.find_by_id(params[:id]).try(:repo_name)
   end
 end
