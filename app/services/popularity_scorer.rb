@@ -24,7 +24,7 @@ class PopularityScorer
   private
 
   def recent_activity
-    updated_at = @project.repo(@nickname, @token).updated_at
+    updated_at = @project.repository(@nickname, @token).updated_at
     if updated_at
       updated_at > Time.zone.today - MONTHS_OF_ACTIVITY ? 5 : 0
     else

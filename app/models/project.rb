@@ -79,7 +79,7 @@ class Project < ApplicationRecord
     get_github_data('commits', nickname, token, months_ago, options)
   end
 
-  def repo(nickname, token)
+  def repository(nickname, token)
     GithubClient.new(nickname, token).repository(github_repository)
   end
 
@@ -111,6 +111,21 @@ class Project < ApplicationRecord
     GithubClient.new('', ENV['GITHUB_KEY']).send(:client)
   end
 
+  def open_issues
+    @issues ||= github_client
+      .list_issues(repo_id, state: 'open')
+      .delete_if { |issue| issue.pull_request.present? } # Don’t list PRs
+      .first(5)
+  end
+
+  def has_issues?
+    repo['has_issues']
+  end
+
+  def repo
+    @repo ||= github_client.repo(repo_id)
+  end
+
   def url
     homepage.presence || github_url
   end
@@ -120,7 +135,7 @@ class Project < ApplicationRecord
   end
 
   def contrib_url(nickname, token)
-    repo = repo(nickname, token)
+    repo = repository(nickname, token)
     options = repo.present? ? { owner: repo[:owner][:login], name: repo[:name] } : {}
     community_profile = community_profile(nickname, token, options)
     community_profile.files.contributing.html_url if community_profile.present?
