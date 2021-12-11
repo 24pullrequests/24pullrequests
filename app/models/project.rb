@@ -99,10 +99,6 @@ class Project < ApplicationRecord
     false # TODO 
   end
 
-  def homepage
-    '' # TODO
-  end
-
   def github_id
     nil # TODO
   end
