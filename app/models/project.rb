@@ -83,16 +83,16 @@ class Project < ApplicationRecord
     GithubClient.new(nickname, token).repository(github_repository)
   end
 
-  def score(nickname, token)
-    PopularityScorer.new(nickname, token, self).score
+  def score(token)
+    ScoreCalculator.new(self, token).popularity_score
   end
 
-  def update_score
-    update contribulator: calculator.score, last_scored: Time.now
+  def update_score(token)
+    update contribulator: calculator(token).score, last_scored: Time.now
   end
 
-  def calculator
-    @calculator ||= ScoreCalculator.new(self)
+  def calculator(token)
+    @calculator ||= ScoreCalculator.new(self, token)
   end
 
   def repo_id
@@ -110,15 +110,13 @@ class Project < ApplicationRecord
       .first(5)
   end
 
-  def has_issues?
+  def has_issues?(token)
+    repo = github_client(token).repo(repo_id)
     repo['has_issues']
   end
 
-  def repo
-    @repo ||= github_client.repo(repo_id)
-  end
-
-  def update_from_github
+  def update_from_github(token)
+    repo = github_client(token).repo(repo_id)
     update(
     github_id:     repo[:id],
     name:          repo[:full_name],
@@ -127,7 +125,7 @@ class Project < ApplicationRecord
     fork:          repo[:fork],
     main_language: repo[:language]
     )
-    update_score
+    update_score(token)
   end
 
   def format_url(url)

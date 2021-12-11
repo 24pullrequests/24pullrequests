@@ -105,10 +105,10 @@ describe Project, type: :model do
     let(:project) { FactoryBot.create(:project) }
 
     it 'scores the project using the scorer' do
-      scorer = double(:popularity_scorer, score: 10)
-      expect(PopularityScorer).to receive(:new).with('username', 'token', project).and_return(scorer)
+      scorer = double(:score_calculator, popularity_score: 10)
+      expect(ScoreCalculator).to receive(:new).with(project, 'token').and_return(scorer)
 
-      expect(project.score('username', 'token')).to eq(10)
+      expect(project.score('token')).to eq(10)
     end
   end
 
