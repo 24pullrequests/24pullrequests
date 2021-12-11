@@ -39,6 +39,6 @@ class UsersController < ApplicationController
   protected
 
   def object_name
-    User.find_by_nickname!(params[:id).try(:to_s)
+    User.find_by_nickname!(params[:id]).try(:to_s)
   end
 end
