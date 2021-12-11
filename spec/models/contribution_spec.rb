@@ -36,6 +36,12 @@ describe Contribution, type: :model do
       contribution.valid?
       expect(contribution.errors[:issue_url].count).to eq 1
     end
+
+    it 'errors on long body' do
+      contribution.body = Faker::Lorem.paragraph_by_chars(number: 301)
+      contribution.valid?
+      expect(contribution.errors[:body].count).to eq 1
+    end
   end
 
   describe '#create_from_github' do
@@ -50,6 +56,17 @@ describe Contribution, type: :model do
     its(:merged)     { should eq json['payload']['pull_request']['merged'] }
     its(:repo_name)  { should eq json['repo']['name'] }
     its(:language)   { should eq json['repo']['language'] }
+  end
+
+  describe 'github body validation' do
+    let(:json) { mock_pull_request }
+
+    it 'allows long body' do
+      contribution = user.contributions.create_from_github(json)
+      contribution[:body] = Faker::Lorem.paragraph_by_chars(number: 301)
+      contribution.valid?
+      expect(contribution.errors[:body].count).to eq 0
+    end
   end
 
   describe 'created_at dates in proper time zones' do
