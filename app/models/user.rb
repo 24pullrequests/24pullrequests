@@ -18,6 +18,7 @@ class User < ApplicationRecord
   scope :by_language, ->(language) { joins(:skills).where('lower(language) = ?', language.downcase) }
   scope :with_any_contributions, -> { where('users.contributions_count > 0') }
   scope :random, -> { order(Arel.sql("RANDOM()")) }
+  scope :by_nickname, ->(nickname) { where(['lower(nickname) =?', nickname.try(:downcase)]) }
 
   paginates_per 96
 
@@ -32,7 +33,11 @@ class User < ApplicationRecord
   validates :unsubscribe_token, presence: true, uniqueness: true
 
   def self.find_by_nickname!(nickname)
-    where(['lower(nickname) =?', nickname.downcase]).first!
+    by_nickname(nickname).first!
+  end
+
+  def self.find_by_nickname(nickname)
+    by_nickname(nickname).first
   end
 
   def self.find_by_unsubscribe_token(token)

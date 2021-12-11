@@ -4,6 +4,7 @@ class Organisation < ApplicationRecord
 
   scope :with_any_contributions, -> { where('organisations.contribution_count > 0') }
   scope :random, -> { order(Arel.sql("RANDOM()")) }
+  scope :by_login, ->(login) { where(['lower(login) =?', login.try(:downcase)]) }
   scope :order_by_contributions, -> do
     order('organisations.contribution_count desc, organisations.login asc')
   end
@@ -21,7 +22,11 @@ class Organisation < ApplicationRecord
     end
 
     def find_by_login!(login)
-      where(['lower(login) =?', login.downcase]).first!
+      by_login(login).first!
+    end
+
+    def find_by_login(login)
+      by_login(login).first
     end
   end
 

@@ -48,4 +48,8 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(:name, :location, :url, :start_time, :description, :latitude, :longitude)
   end
+
+  def object_name
+    Event.find_by_id(params[:id]).try(:name)
+  end
 end

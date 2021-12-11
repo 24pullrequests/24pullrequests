@@ -118,4 +118,8 @@ class ProjectsController < ApplicationController
 
     redirect_to user_path(current_user), notice: 'You can only edit projects you have suggested!' unless @project.present?
   end
+
+  def objectname
+    Project.find_by_id(params[:id]).try(:to_s)
+  end
 end

@@ -35,4 +35,10 @@ class UsersController < ApplicationController
     end
     redirect_to root_path
   end
+
+  protected
+
+  def object_name
+    User.find_by_nickname(params[:id]).try(:to_s)
+  end
 end

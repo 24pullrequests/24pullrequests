@@ -11,4 +11,10 @@ class OrganisationsController < ApplicationController
     @organisation = Organisation.find_by_login!(params[:id])
     respond_with @organisation
   end
+
+  protected
+
+  def object_name
+    Organisation.find_by_login(params[:id]).try(:to_s)
+  end
 end

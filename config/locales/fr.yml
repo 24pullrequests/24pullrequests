@@ -237,6 +237,38 @@ fr:
     uk: Українська
     zh_Hans: 简体中文
     zh_Hant: 正體中文
+  meta_titles:
+    site_name: 24 Pull Requests
+    contributions:
+      edit: Edit
+      index: Contributions
+      new: New Contribution
+    dashboards:
+      show: Dashboard
+      preferences: Preferences
+    events:
+      edit: Edit
+      index: Events
+      new: New Event
+    gifts:
+      edit: Edit Gift
+      index: Gifted Code
+      new: New Gift
+    organisations:
+      index: Organisations
+    projects:
+      edit: Edit
+      index: Projects
+      new: New Project
+    static:
+      about: About
+      homepage: Home
+      humans: Humans
+    users:
+      index: Users
+      mergers: Mergers
+      projects: My Suggestions
+      unsubscribe: Unsubscribe
   more: Plus
   navigation:
     all_projects: Tous les projets
