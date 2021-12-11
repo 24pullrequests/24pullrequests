@@ -112,11 +112,6 @@ describe Project, type: :model do
     end
   end
 
-  it 'contribulator url' do
-    project = FactoryBot.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests')
-    expect(project.contribulator_url).to eq('https://contribulator.24pullrequests.com/24pullrequests/24pullrequests')
-  end
-
   context '#url' do
     it 'returns the homepage url when one is set' do
       project = FactoryBot.create(:project, homepage: 'https://homepage.24pullrequests.com')

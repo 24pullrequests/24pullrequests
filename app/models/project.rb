@@ -87,8 +87,32 @@ class Project < ApplicationRecord
     PopularityScorer.new(nickname, token, self).score
   end
 
-  def contribulator_url
-    "https://contribulator.24pullrequests.com/#{github_repository}"
+  def update_score
+    update contribulator: calculator.score, last_scored: Time.now
+  end
+
+  def calculator
+    @calculator ||= ScoreCalculator.new(self)
+  end
+
+  def fork?
+    false # TODO 
+  end
+
+  def homepage
+    '' # TODO
+  end
+
+  def github_id
+    nil # TODO
+  end
+
+  def repo_id
+    github_id || github_repository
+  end
+
+  def github_client
+    GithubClient.new('', ENV['GITHUB_KEY']).send(:client)
   end
 
   def url

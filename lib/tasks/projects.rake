@@ -65,20 +65,10 @@ namespace :projects do
     end
   end
 
-  desc 'Fetch contribulator scores'
+  desc 'Calculate contribulator scores'
   task :contribulator => :environment do
-    api = JsonApi::PaginatedCollection.new(
-      domain: 'https://contribulator.24pullrequests.com',
-      path:   '/api/projects'
-    )
-
-    api.fetch.each do |item|
-      github_url = "https://github.com/#{item['attributes']['name_with_owner']}"
-
-      if p = Project.find_by_github_repo(github_url)
-        p.update(contribulator: item['attributes']['score'].to_i)
-        puts "Updated #{p.name} contribulator #{p.contribulator}"
-      end
-    end
+    # for each project
+      # calculate contribulator score
+      # only need to recalc on new/updated projects
   end
 end
