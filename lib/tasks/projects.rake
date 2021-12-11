@@ -67,8 +67,6 @@ namespace :projects do
 
   desc 'Calculate contribulator scores'
   task :contribulator => :environment do
-    # for each project
-      # calculate contribulator score
-      # only need to recalc on new/updated projects
+    Project.order('last_scored ASC nulls first').limit(100).each(&:update_from_github)
   end
 end
