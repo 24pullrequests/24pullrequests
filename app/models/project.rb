@@ -95,14 +95,6 @@ class Project < ApplicationRecord
     @calculator ||= ScoreCalculator.new(self)
   end
 
-  def fork?
-    false # TODO 
-  end
-
-  def github_id
-    nil # TODO
-  end
-
   def repo_id
     github_id || github_repository
   end
@@ -124,6 +116,23 @@ class Project < ApplicationRecord
 
   def repo
     @repo ||= github_client.repo(repo_id)
+  end
+
+  def update_from_github
+    update(
+    github_id:     repo[:id],
+    name:          repo[:full_name],
+    description:   repo[:description],
+    homepage:      format_url(repo[:homepage]),
+    fork:          repo[:fork],
+    main_language: repo[:language]
+    )
+    update_score
+  end
+
+  def format_url(url)
+    return url if url.blank?
+    url[/^https?:\/\//] ? url : "http://#{url}"
   end
 
   def url

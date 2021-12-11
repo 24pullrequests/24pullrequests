@@ -120,6 +120,8 @@ ActiveRecord::Schema.define(version: 2021_12_11_155636) do
     t.string "homepage"
     t.string "contributing_url"
     t.datetime "last_scored"
+    t.boolean "fork"
+    t.bigint "github_id"
   end
 
   create_table "pull_request_archives", id: :serial, force: :cascade do |t|
