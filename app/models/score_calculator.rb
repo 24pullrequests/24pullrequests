@@ -134,7 +134,7 @@ class ScoreCalculator
     end
   
     def github_client
-      project.github_client
+      project.github_client(token)
     end
   
     def ls

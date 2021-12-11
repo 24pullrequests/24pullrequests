@@ -99,15 +99,8 @@ class Project < ApplicationRecord
     github_id || github_repository
   end
 
-  def github_client
-    GithubClient.new('', ENV['GITHUB_KEY']).send(:client)
-  end
-
-  def open_issues
-    @issues ||= github_client
-      .list_issues(repo_id, state: 'open')
-      .delete_if { |issue| issue.pull_request.present? } # Don’t list PRs
-      .first(5)
+  def github_client(token)
+    GithubClient.new('', token).send(:client)
   end
 
   def has_issues?(token)
