@@ -17,7 +17,7 @@ class ScoreCalculator
         changelog_present? ? 1 : 0,
         tests_present? ? 5 : 0,
         code_of_conduct_present? ? 5 : 0,
-        # open_issues_created_since(6.months.ago) > 10 ? 5 : 0,
+        open_issues_created_since(6) > 10 ? 5 : 0,
         commits_since(6.months.ago) > 10 ? 5 : 0,
         issues_enabled? ? 5 : 0
       ].sum
@@ -35,7 +35,7 @@ class ScoreCalculator
         tests_present: tests_present?,
         code_of_conduct_present: code_of_conduct_present?,
         issues_enabled: issues_enabled?,
-        # open_issues_last_6_months: open_issues_created_since(6.months.ago),
+        open_issues_last_6_months: open_issues_created_since(6),
         master_commits_last_6_months: commits_since(6.months.ago)
       }
     end
@@ -86,8 +86,10 @@ class ScoreCalculator
       project.has_issues?
     end
   
-    def open_issues_created_since(date)
-      project.issues.where(created_at: date.to_time.iso8601..Time.now.iso8601).count
+    def open_issues_created_since(months)
+      date = (Time.zone.now - months.months).utc.iso8601
+      options = { since: date, per_page: 20 }
+      github_client.issues(project.repo_id, options).size
     end
   
     def commits_since(date)
