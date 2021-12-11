@@ -35,4 +35,10 @@ class UsersController < ApplicationController
     end
     redirect_to root_path
   end
+
+  protected
+
+  def object_name
+    params[:id] rescue nil
+  end
 end

@@ -61,4 +61,8 @@ class ContributionsController < ApplicationController
   def contribution_params
     params.require(:contribution).permit(:body, :repo_name, :issue_url, :created_at)
   end
+
+  def object_name
+    Contribution.find(params[:id]).repo_name rescue nil
+  end
 end

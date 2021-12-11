@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   before_action :set_locale
   before_action :restrict_pages, if: :json_request?
+  before_action :title
 
   def set_locale
     I18n.locale = cookies[:locale] || I18n.default_locale
@@ -45,4 +46,16 @@ class ApplicationController < ActionController::Base
   def admin?
     current_user.admin?
   end
+
+  def title
+    meta_title = []
+    action = t("meta_titles.#{controller_name}.#{action_name}", default: nil)
+    meta_title.push(action) if action.present?
+    meta_title.push(object_name) if object_name.present?
+    meta_title.push("|") if meta_title.any?
+    meta_title.push(t("meta_titles.site_name", default: "24 Pull Requests"))
+    @title = meta_title.join(" ")
+  end
+
+  def object_name; end
 end

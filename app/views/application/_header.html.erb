@@ -3,7 +3,7 @@
   <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible"/>
   <!-- Facebook open graph api
   -->
-  <meta content="24 Pull Requests" property="og:title"/>
+  <meta content="<%= !@title.empty? ? @title : "24 Pull Requests" %>" property="og:title"/>
   <meta content="website" property="og:type"/>
   <meta content="<%= root_url %>" property="og:url"/>
   <meta content="<%= image_url('24-pr-open-graph.png') %>" property="og:image"/>
@@ -13,12 +13,12 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@24pullrequests">
   <meta name="twitter:creator" content="@teabass">
-  <meta name="twitter:title" content="24 Pull Requests">
+  <meta name="twitter:title" content="<%= !@title.empty? ? @title : "24 Pull Requests" %>">
   <meta name="twitter:description" content="24 Pull Requests is a yearly initiative to encourage contributors around the world to send 24 pull requests between December 1st and December 24th.">
   <meta name="twitter:image" content="<%= image_url('24-pr-open-graph.png') %>">
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-    <%= content_for?(:title) ? yield(:title) : "24 Pull Requests" %>
+    <%= !@title.empty? ? @title : "24 Pull Requests" %>
   </title>
   <%= csrf_meta_tags %>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400" rel="stylesheet" type="text/css">

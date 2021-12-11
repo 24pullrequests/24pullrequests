@@ -197,6 +197,38 @@ en:
     q_n_a: Questions & Answers
     title: 24 Pull Requests
   how_to_contribute: How to contribute?
+  meta_titles:
+    site_name: 24 Pull Requests
+    contributions:
+      edit: Edit
+      index: Contributions
+      new: New Contribution
+    dashboards:
+      show: Dashboard
+      preferences: Preferences
+    events:
+      edit: Edit
+      index: Events
+      new: New Event
+    gifts:
+      edit: Edit Gift
+      index: Gifted Code
+      new: New Gift
+    organisations:
+      index: Organisations
+    projects:
+      edit: Edit
+      index: Projects
+      new: New Project
+    static:
+      about: About
+      homepage: Home
+      humans: Humans
+    users:
+      index: Users
+      mergers: Mergers
+      projects: My Suggestions
+      unsubscribe: Unsubscribe
   information:
     codetriage: Give back to open source, one issue at a time, with CodeTriage. You’ll get one issue from your favorite repo per day to help you dig deeper, learn more, and stay involved with the code you rely on.
     get_ready: Get ready for 24 Pull Requests %{year} when we do it all again!
