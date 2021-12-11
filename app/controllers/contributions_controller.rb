@@ -63,6 +63,6 @@ class ContributionsController < ApplicationController
   end
 
   def object_name
-    Contribution.find(params[:id]).repo_name rescue nil
+    Contribution.find(params[:id]).try(:repo_name)
   end
 end
