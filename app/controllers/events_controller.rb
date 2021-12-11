@@ -50,6 +50,6 @@ class EventsController < ApplicationController
   end
 
   def object_name
-    Event.find(params[:id]).name rescue nil
+    Event.find(params[:id]).try(:name)
   end
 end
