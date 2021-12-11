@@ -119,6 +119,6 @@ class ProjectsController < ApplicationController
   end
 
   def objectname
-    Project.find_by_id(params[:id]) rescue nil
+    Project.find_by_id(params[:id]).try(:to_s)
   end
 end
