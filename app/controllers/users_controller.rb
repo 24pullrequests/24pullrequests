@@ -39,6 +39,6 @@ class UsersController < ApplicationController
   protected
 
   def object_name
-    params[:id] rescue nil
+    User.find_by_nickname!(params[:id).try(:to_s)
   end
 end
