@@ -2,7 +2,7 @@ namespace :pull_requests do
   desc 'Download new pull requests'
   task download_pull_requests: :environment do
     next unless Contribution.in_date_range?
-    User.all.find_each do |user|
+    User.active.find_each do |user|
       user.download_pull_requests(User.load_user.token) rescue nil
       user.gift_unspent_contributions! rescue nil
     end
