@@ -13,7 +13,7 @@ namespace :organisations do
   desc 'Download user organisations'
   task download_user_organisations: :environment do
     next unless Contribution.in_date_range?
-    User.all.find_each do |user|
+    User.active.find_each do |user|
       puts "Importing organisations for #{user.nickname}"
       user.download_user_organisations(User.load_user.token) rescue nil
     end
