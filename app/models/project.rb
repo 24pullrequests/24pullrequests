@@ -110,14 +110,15 @@ class Project < ApplicationRecord
 
   def update_from_github(token)
     repo = github_client(token).repo(repo_id)
-    update(
-    github_id:     repo[:id],
-    name:          repo[:full_name],
-    description:   repo[:description],
-    homepage:      format_url(repo[:homepage]),
-    fork:          repo[:fork],
-    main_language: repo[:language]
-    )
+    attrs = {
+      github_id:     repo[:id],
+      name:          repo[:full_name],
+      homepage:      format_url(repo[:homepage]),
+      fork:          repo[:fork],
+      main_language: repo[:language]
+    }
+    attrs[:description] = repo[:description] if repo[:description].present?
+    update(attrs)
     update_score(token)
   end
 
