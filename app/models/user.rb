@@ -19,6 +19,7 @@ class User < ApplicationRecord
   scope :with_any_contributions, -> { where('users.contributions_count > 0') }
   scope :random, -> { order(Arel.sql("RANDOM()")) }
   scope :by_nickname, ->(nickname) { where(['lower(nickname) =?', nickname.try(:downcase)]) }
+  scope :active, -> { where(invalid_token: false) }
 
   paginates_per 96
 
@@ -83,8 +84,12 @@ class User < ApplicationRecord
   end
 
   def self.load_user
-    user = User.order('created_at desc').limit(50).sample(1).first
+    user = User.active.order('created_at desc').limit(50).sample(1).first
+    return nil unless user
     return user if user.high_rate_limit?
+    load_user
+  rescue Octokit::Unauthorized
+    user.update(invalid_token: true)
     load_user
   end
 

@@ -32,7 +32,7 @@ class GithubClient
 
   def high_rate_limit?(rate_limit = 4000)
     client.rate_limit.remaining > rate_limit
-  rescue Octokit::Unauthorized, Faraday::ConnectionFailed
+  rescue Faraday::ConnectionFailed
     true
   end
 
