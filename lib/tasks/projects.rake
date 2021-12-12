@@ -7,7 +7,7 @@ namespace :projects do
     Project.active.all.find_each do |project|
       begin
         user = User.load_user
-        score = project.score(user.nickname, user.token)
+        score = project.popularity_score(user.token)
       rescue Octokit::NotFound, Octokit::InvalidRepository
         score = 0
       rescue Octokit::Unauthorized
@@ -31,7 +31,7 @@ namespace :projects do
     Project.where(inactive: true).find_each do |project|
       begin
         user = User.load_user
-        score = project.score(user.nickname, user.token)
+        score = project.score(user.token)
       rescue Octokit::NotFound, Octokit::InvalidRepository
         score = 0
       rescue Octokit::Unauthorized
@@ -65,20 +65,11 @@ namespace :projects do
     end
   end
 
-  desc 'Fetch contribulator scores'
+  desc 'Calculate contribulator scores'
   task :contribulator => :environment do
-    api = JsonApi::PaginatedCollection.new(
-      domain: 'https://contribulator.24pullrequests.com',
-      path:   '/api/projects'
-    )
-
-    api.fetch.each do |item|
-      github_url = "https://github.com/#{item['attributes']['name_with_owner']}"
-
-      if p = Project.find_by_github_repo(github_url)
-        p.update(contribulator: item['attributes']['score'].to_i)
-        puts "Updated #{p.name} contribulator #{p.contribulator}"
-      end
+    Project.order('last_scored ASC nulls first').limit(100).each do |project|
+      user = User.load_user
+      project.update_from_github(user.token)
     end
   end
 end

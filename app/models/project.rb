@@ -79,16 +79,51 @@ class Project < ApplicationRecord
     get_github_data('commits', nickname, token, months_ago, options)
   end
 
-  def repo(nickname, token)
+  def repository(nickname, token)
     GithubClient.new(nickname, token).repository(github_repository)
   end
 
-  def score(nickname, token)
-    PopularityScorer.new(nickname, token, self).score
+  def score(token)
+    ScoreCalculator.new(self, token).popularity_score
   end
 
-  def contribulator_url
-    "https://contribulator.24pullrequests.com/#{github_repository}"
+  def update_score(token)
+    update contribulator: calculator(token).score, last_scored: Time.now
+  end
+
+  def calculator(token)
+    @calculator ||= ScoreCalculator.new(self, token)
+  end
+
+  def repo_id
+    github_id || github_repository
+  end
+
+  def github_client(token)
+    GithubClient.new('', token).send(:client)
+  end
+
+  def has_issues?(token)
+    repo = github_client(token).repo(repo_id)
+    repo['has_issues']
+  end
+
+  def update_from_github(token)
+    repo = github_client(token).repo(repo_id)
+    update(
+    github_id:     repo[:id],
+    name:          repo[:full_name],
+    description:   repo[:description],
+    homepage:      format_url(repo[:homepage]),
+    fork:          repo[:fork],
+    main_language: repo[:language]
+    )
+    update_score(token)
+  end
+
+  def format_url(url)
+    return url if url.blank?
+    url[/^https?:\/\//] ? url : "http://#{url}"
   end
 
   def url
@@ -100,7 +135,7 @@ class Project < ApplicationRecord
   end
 
   def contrib_url(nickname, token)
-    repo = repo(nickname, token)
+    repo = repository(nickname, token)
     options = repo.present? ? { owner: repo[:owner][:login], name: repo[:name] } : {}
     community_profile = community_profile(nickname, token, options)
     community_profile.files.contributing.html_url if community_profile.present?
