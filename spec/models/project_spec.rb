@@ -132,13 +132,22 @@ describe Project, type: :model do
   context '#contrib_url' do
     let(:project) { FactoryBot.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests') }
 
+    it 'returns the github contributing doc url if present' do
+      client = double(:github_client)
+      expect(GithubClient).to receive(:new).twice.with('username', 'token').and_return(client)
+      expect(client).to receive(:repository).with("24pullrequests/24pullrequests")
+      expect(client).to receive(:community_profile).and_return(JSON.parse(file_fixture("profile.json").read, object_class: OpenStruct))
+
+      expect(project.contrib_url('username', 'token')).to eq(nil)
+    end
+
     it 'returns the github contributing doc url' do
       client = double(:github_client)
       expect(GithubClient).to receive(:new).twice.with('username', 'token').and_return(client)
       expect(client).to receive(:repository).with("24pullrequests/24pullrequests")
-      expect(client).to receive(:community_profile)
+      expect(client).to receive(:community_profile).and_return(JSON.parse(file_fixture("profile_with_contrib.json").read, object_class: OpenStruct))
 
-      project.contrib_url('username', 'token')
+      expect(project.contrib_url('username', 'token')).to eq('https://github.com/octobox/octobox/blob/master/docs/CONTRIBUTING.md')
     end
   end
 end
