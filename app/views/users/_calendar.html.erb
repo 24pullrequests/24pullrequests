@@ -14,7 +14,7 @@
         <%= date.mday %>
       </span>
       <% if gift.present? %>
-        <%= link_to gift.contribution_title, gift.contribution_issue_url, :target => :_blank %>
+        <%= link_to gift.contribution_title, gift.contribution_issue_url, :title => gift.contribution_title, :target => :_blank %>
       <% end %>
     </li>
   <% end %>
