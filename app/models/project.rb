@@ -120,6 +120,11 @@ class Project < ApplicationRecord
     attrs[:description] = repo[:description][0..200] if repo[:description].present?
     update(attrs)
     update_score(token)
+  rescue Octokit::NotFound, Octokit::RepositoryUnavailable, Octokit::InvalidRepository
+    # bad repository
+    update contribulator: 0, last_scored: Time.now
+  rescue Octokit::Unauthorized
+    # bad token
   end
 
   def format_url(url)
