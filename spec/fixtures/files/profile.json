@@ -1,0 +1,27 @@
+{
+    "health_percentage": 42,
+    "description": "Integrate Octobox directly into your GitHub workflow",
+    "documentation": null,
+    "files": {
+      "code_of_conduct": null,
+      "code_of_conduct_file": null,
+      "contributing": null,
+      "issue_template": null,
+      "pull_request_template": null,
+      "license": {
+        "key": "agpl-3.0",
+        "name": "GNU Affero General Public License v3.0",
+        "spdx_id": "AGPL-3.0",
+        "url": "https://api.github.com/licenses/agpl-3.0",
+        "node_id": "MDc6TGljZW5zZTE=",
+        "html_url": "https://github.com/octobox/extension/blob/main/LICENSE.txt"
+      },
+      "readme": {
+        "url": "https://api.github.com/repos/octobox/extension/contents/README.md",
+        "html_url": "https://github.com/octobox/extension/blob/main/README.md"
+      }
+    },
+    "updated_at": "2021-12-07T16:45:41Z",
+    "content_reports_enabled": false
+  }
+  

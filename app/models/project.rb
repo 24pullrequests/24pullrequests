@@ -138,6 +138,6 @@ class Project < ApplicationRecord
     repo = repository(nickname, token)
     options = repo.present? ? { owner: repo[:owner][:login], name: repo[:name] } : {}
     community_profile = community_profile(nickname, token, options)
-    community_profile.files.contributing.html_url if community_profile.present?
+    community_profile.files.contributing.try(:html_url) if community_profile.present?
   end
 end

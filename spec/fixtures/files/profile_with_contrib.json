@@ -1,0 +1,41 @@
+{
+    "health_percentage": 100,
+    "description": "📮Untangle your GitHub Notifications",
+    "documentation": "https://octobox.io",
+    "files": {
+      "code_of_conduct": {
+        "key": "contributor_covenant",
+        "name": "Contributor Covenant",
+        "html_url": "https://github.com/octobox/octobox/blob/master/docs/CODE_OF_CONDUCT.md",
+        "url": "https://api.github.com/repos/octobox/octobox/community/code_of_conduct"
+      },
+      "code_of_conduct_file": {
+        "url": "https://api.github.com/repos/octobox/octobox/contents/docs/CODE_OF_CONDUCT.md",
+        "html_url": "https://github.com/octobox/octobox/blob/master/docs/CODE_OF_CONDUCT.md"
+      },
+      "contributing": {
+        "url": "https://api.github.com/repos/octobox/octobox/contents/docs/CONTRIBUTING.md",
+        "html_url": "https://github.com/octobox/octobox/blob/master/docs/CONTRIBUTING.md"
+      },
+      "issue_template": {
+        "url": "https://api.github.com/repos/octobox/octobox/contents/.github/ISSUE_TEMPLATE.md",
+        "html_url": "https://github.com/octobox/octobox/blob/master/.github/ISSUE_TEMPLATE.md"
+      },
+      "pull_request_template": null,
+      "license": {
+        "key": "agpl-3.0",
+        "name": "GNU Affero General Public License v3.0",
+        "spdx_id": "AGPL-3.0",
+        "url": "https://api.github.com/licenses/agpl-3.0",
+        "node_id": "MDc6TGljZW5zZTE=",
+        "html_url": "https://github.com/octobox/octobox/blob/master/LICENSE.txt"
+      },
+      "readme": {
+        "url": "https://api.github.com/repos/octobox/octobox/contents/README.md",
+        "html_url": "https://github.com/octobox/octobox/blob/master/README.md"
+      }
+    },
+    "updated_at": "2021-12-01T18:50:54Z",
+    "content_reports_enabled": true
+  }
+  
