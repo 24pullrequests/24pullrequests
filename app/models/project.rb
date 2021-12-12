@@ -117,7 +117,7 @@ class Project < ApplicationRecord
       fork:          repo[:fork],
       main_language: repo[:language]
     }
-    attrs[:description] = repo[:description][0..200] if repo[:description].present?
+    attrs[:description] = repo[:description][0..199] if repo[:description].present?
     update(attrs)
     update_score(token)
   rescue Octokit::NotFound, Octokit::RepositoryUnavailable, Octokit::InvalidRepository
