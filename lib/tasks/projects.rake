@@ -7,7 +7,7 @@ namespace :projects do
     Project.active.all.find_each do |project|
       begin
         user = User.load_user
-        score = project.popularity_score(user.token)
+        score = project.score(user.token)
       rescue Octokit::NotFound, Octokit::InvalidRepository
         score = 0
       rescue Octokit::Unauthorized
