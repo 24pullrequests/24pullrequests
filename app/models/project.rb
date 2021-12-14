@@ -88,7 +88,7 @@ class Project < ApplicationRecord
   end
 
   def update_score(token)
-    update contribulator: calculator(token).score, last_scored: Time.now
+    update_columns contribulator: calculator(token).score, last_scored: Time.now
   end
 
   def calculator(token)
