@@ -17,7 +17,8 @@ class AuthHash
       gravatar_id: gravatar_id,
       name:        name,
       blog:        blog,
-      location:    location
+      location:    location,
+      invalid_token: false
     }
   end
 
