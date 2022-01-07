@@ -134,7 +134,7 @@ GEM
       railties (>= 3.0.0)
     faker (2.19.0)
       i18n (>= 1.6, < 2)
-    faraday (1.9.2)
+    faraday (1.9.3)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
@@ -150,13 +150,13 @@ GEM
     faraday-em_synchrony (1.0.0)
     faraday-excon (1.1.0)
     faraday-httpclient (1.0.1)
-    faraday-multipart (1.0.1)
+    faraday-multipart (1.0.2)
       multipart-post (>= 1.2, < 3)
     faraday-net_http (1.0.1)
     faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
-    faraday-retry (1.0.2)
+    faraday-retry (1.0.3)
     ffi (1.15.4)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
@@ -464,7 +464,7 @@ DEPENDENCIES
   draper
   factory_bot_rails (= 4.11.1)
   faker
-  faraday (= 1.9.2)
+  faraday (= 1.9.3)
   foreman
   i18n-tasks
   jquery-datetimepicker-rails
