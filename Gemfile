@@ -26,7 +26,7 @@ gem 'sassc-rails'
 gem 'puma'
 gem 'rack-attack'
 gem 'bootsnap', require: false
-gem 'sprockets', '< 4.0.0'
+gem 'sprockets', '< 5.0.0'
 gem 'faraday', '1.10.0'
 gem "commonmarker", "~> 0.23.2"
 
