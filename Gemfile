@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 ruby '3.1.1'
 
-gem 'rails', '7.0.2.2'
+gem 'rails', '7.0.2.3'
 
 gem 'jquery-rails'
-gem 'pg', '~> 1.3.2'
+gem 'pg', '~> 1.3.4'
 gem 'omniauth', '1.9.1'
 gem 'omniauth-github'
 gem 'omniauth-twitter'
@@ -28,7 +28,7 @@ gem 'rack-attack'
 gem 'bootsnap', require: false
 gem 'sprockets', '< 5.0.0'
 gem 'faraday', '1.10.0'
-gem "commonmarker", "~> 0.23.2"
+gem "commonmarker", "~> 0.23.4"
 
 group :development do
   gem 'spring'
