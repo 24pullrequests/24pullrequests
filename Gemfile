@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '3.0.3'
+ruby '3.1.1'
 
 gem 'rails', '7.0.2.3'
 
@@ -26,7 +26,7 @@ gem 'sassc-rails'
 gem 'puma'
 gem 'rack-attack'
 gem 'bootsnap', require: false
-gem 'sprockets', '< 4.0.0'
+gem 'sprockets', '< 5.0.0'
 gem 'faraday', '1.10.0'
 gem "commonmarker", "~> 0.23.4"
 
