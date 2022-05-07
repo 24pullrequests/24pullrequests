@@ -202,7 +202,6 @@ tr:
     get_ready: "%{year} yılında tekrar yaptığımızda 24 Pull Requests için hazır olun!"
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
     help_open_source: Bu arada bir projeye dahil olmak ister misiniz? Diğer başarılı girişimleri kontrol edin!
-    issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
     last_year_stats: "%{year} yılında 24 günün üzerinde, <b>%{contributors}</b> geliştirici kayıt oldu. <b>%{projects}</b> farklı açık kaynak projesine <b>%{pull_requests}</b> pull requests yapıldı."
     ovio: Easily filter through issues across 800+ contributor friendly projects and get curated recommendations.
     title: 24 Pull Requests %{year} yılında üzerimizde

@@ -202,7 +202,6 @@ hi:
     get_ready: 24 Pull Requests के लिए तैयार हो जाओ %{year} जब हम इसे फिर से करते हैं!
     happy_holidays_see_you: शुभ छुट्टियाँ और अगले साल आप सभी को देखेंगे जब हम इसे फिर से करेंगे!
     help_open_source: 'इस दौरान ओपन सोर्स परियोजनाओं के साथ मदद करना चाहते हैं? इन अन्य महान पहल देखें: '
-    issuehubio: ओपन-सोर्स में योगदान करें आपके लिए सही प्रोजेक्ट ढूंढने के लिए समस्याएं लेबल खोजें!
     last_year_stats: "%{year} में, 24 दिनों से अधिक, <b> %{contributors} </b> डेवलपर्स ने <b> %{pull_requests} </b> <b> %{projects} </b> के Requests को अलग-अलग खोलने के लिए Request को सबमिट किया स्रोत परियोजनाएं"
     ovio: Easily filter through issues across 800+ contributor friendly projects and get curated recommendations.
     title: 24 पुल अनुरोध %{year} हमारे लिए है

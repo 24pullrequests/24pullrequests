@@ -202,7 +202,6 @@ cs:
     get_ready: Připravte se na 24 Pull Requests %{year}, kdy to celé zopakujeme.
     happy_holidays_see_you: Veselé svátky a uvidíme se znovu za rok!
     help_open_source: 'Chceš mezitím pomoci open source projektům? Sleduj ostatní skvělé akce:'
-    issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
     last_year_stats: V roce %{year}, v průběhu dvaceti čtyř dnů, <b>%{contributors}</b> vývojářů poslalo <b>%{pull_requests}</b> pull requestů do <b>%{projects}</b> různých open source projektů.
     ovio: Easily filter through issues across 800+ contributor friendly projects and get curated recommendations.
     title: 24 Pull Requests %{year} je tu

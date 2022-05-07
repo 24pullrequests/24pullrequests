@@ -202,7 +202,6 @@ ta:
     get_ready: அதை இந்த முறையும் 24 Pull Requests %{year} மூலமாக செய்ய தயாராகுங்கள்!
     happy_holidays_see_you: விடுமுறை வாழ்த்துக்கள். நாம் அடுத்த ஆண்டு இது போன்று சந்திப்போம்!
     help_open_source: 'ஒபன்சோர்ஸ் பிரஜக்ட்களுக்கு உதவ வேண்டுமா? இந்த மற்ற பெரிய முயற்சிகளைப் பாருங்கள்:'
-    issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
     last_year_stats: "%{year}-ல் 24 நாட்களில் <b>%{contributors}</b> நிரலர்கள் <b>%{pull_requests}</b> pull request-களை <b>%{projects}</b> ஒபன்சோர்ஸ் பிராஜக்ட்களுக்கு கொடுத்தனர்."
     ovio: Easily filter through issues across 800+ contributor friendly projects and get curated recommendations.
     title: 24 Pull Requests %{year} வந்துவிட்டது
