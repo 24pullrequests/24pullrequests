@@ -202,7 +202,6 @@ es:
     get_ready: "¡Prepárate para 24 Pull Requests %{year} cuando lo volvamos a hacer!"
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
     help_open_source: "¿Quieres ayudar con proyectos de código abierto mientras tanto? Échale un vistazo a estas otras grandes iniciativas:"
-    issuehubio: Contribuye al Código Abierto. ¡Busca issues por etiquetas para encontrar aquellos proyectos perfectos para ti!
     last_year_stats: En el %{year}, durante 24 días, <b>%{contributors}</b> desarrolladores publicaron <b>%{pull_requests}</b> Pull Requests para <b>%{projects}</b> proyectos diferentes de código abierto.
     ovio: Easily filter through issues across 800+ contributor friendly projects and get curated recommendations.
     title: "¡24 Pull Requests %{year} ya está aquí!"

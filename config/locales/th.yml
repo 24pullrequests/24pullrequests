@@ -202,7 +202,6 @@ th:
     get_ready: เตรียมพร้อมสำหรับ 24 Pull Requests %{year} เมื่อมันเริ่มต้นอีกครั้ง
     happy_holidays_see_you: Happy Holidays and see you all next year when we do it all again!
     help_open_source: ถ้าคุณต้องการมีส่วนร่วมในการช่วยเหลือโครงการโอเพ่นซอร์สตอนนี้ นี่คือโครงการที่น่าสนใจ
-    issuehubio: Contribute to Open Source. Search issue labels to find the right project for you!
     last_year_stats: ในปี %{year} กว่า 24 วัน <b>%{contributors}</b> นักพัฒนาต่างส่ง <b>%{pull_requests}</b> pull request <b>%{projects}</b> ไปที่โครงการต่างๆ
     ovio: Easily filter through issues across 800+ contributor friendly projects and get curated recommendations.
     title: 24 Pull Requests %{year} ขึ้นอยู่กับเรา
