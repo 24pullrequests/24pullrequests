@@ -149,10 +149,10 @@ GEM
       railties (>= 3.0.0)
     faker (2.20.0)
       i18n (>= 1.8.11, < 2)
-    faraday (2.3.0)
+    faraday (2.4.0)
       faraday-net_http (~> 2.0)
       ruby2_keywords (>= 0.0.4)
-    faraday-net_http (2.0.3)
+    faraday-net_http (2.1.0)
     ffi (1.15.5)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
@@ -484,7 +484,7 @@ DEPENDENCIES
   draper
   factory_bot_rails (= 4.11.1)
   faker
-  faraday (= 2.3.0)
+  faraday (= 2.4.0)
   foreman
   i18n-tasks
   jquery-datetimepicker-rails
