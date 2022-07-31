@@ -27,7 +27,7 @@ gem 'puma'
 gem 'rack-attack'
 gem 'bootsnap', require: false
 gem 'sprockets', '< 5.0.0'
-gem 'faraday', '2.3.0'
+gem 'faraday', '2.4.0'
 gem "commonmarker", "~> 0.23.5"
 
 group :development do
