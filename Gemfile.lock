@@ -112,7 +112,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    commonmarker (0.23.5)
+    commonmarker (0.23.6)
     concurrent-ruby (1.1.10)
     crack (0.4.5)
       rexml
@@ -482,7 +482,7 @@ DEPENDENCIES
   bugsnag
   christmas_tree_formatter
   coffee-rails
-  commonmarker (~> 0.23.5)
+  commonmarker (~> 0.23.6)
   dalli
   database_cleaner
   draper
