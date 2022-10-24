@@ -190,7 +190,6 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
-    json (2.6.2)
     jwt (2.5.0)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
@@ -273,7 +272,6 @@ GEM
     omniauth-twitter (1.4.0)
       omniauth-oauth (~> 1.1)
       rack
-    parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
     pg (1.4.4)
@@ -366,19 +364,6 @@ GEM
       rspec-mocks (~> 3.11)
       rspec-support (~> 3.11)
     rspec-support (3.11.1)
-    rubocop (1.37.0)
-      json (~> 2.3)
-      parallel (~> 1.10)
-      parser (>= 3.1.2.1)
-      rainbow (>= 2.2.2, < 4.0)
-      regexp_parser (>= 1.8, < 3.0)
-      rexml (>= 3.2.5, < 4.0)
-      rubocop-ast (>= 1.22.0, < 2.0)
-      ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.23.0)
-      parser (>= 3.1.1.0)
-    ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -505,7 +490,6 @@ DEPENDENCIES
   rspec-collection_matchers
   rspec-its
   rspec-rails
-  rubocop
   sassc-rails
   shoulda-matchers (= 3.1.3)
   simple_form
