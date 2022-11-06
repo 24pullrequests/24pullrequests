@@ -29,7 +29,7 @@ describe ProjectsController, type: :controller do
       end
 
       it 'from params' do
-        allow(ProjectSearch).to receive(:new).with(languages: %w(Ruby), labels: [], page: nil).and_call_original
+        allow(ProjectSearch).to receive(:new).with({languages: %w(Ruby), labels: [], page: nil}).and_call_original
         get :index, params: {project: { languages: %w(Ruby) }}
         expect(assigns(:projects)).to match_array(ruby)
         expect(assigns(:has_more_projects)).to eq(false)
@@ -40,7 +40,7 @@ describe ProjectsController, type: :controller do
 
       it 'from session filter_options' do
         session[:filter_options] = { languages: %w(Ruby), labels: [] }
-        allow(ProjectSearch).to receive(:new).with(languages: %w(Ruby), labels: [], page: nil).and_call_original
+        allow(ProjectSearch).to receive(:new).with({languages: %w(Ruby), labels: [], page: nil}).and_call_original
         get :index
         expect(assigns(:projects)).to match_array(ruby)
         expect(assigns(:has_more_projects)).to eq(false)
