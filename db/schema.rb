@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_12_143544) do
-
+ActiveRecord::Schema[7.0].define(version: 2021_12_12_143544) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
@@ -19,8 +18,8 @@ ActiveRecord::Schema.define(version: 2021_12_12_143544) do
   create_table "aggregation_filters", id: :serial, force: :cascade do |t|
     t.integer "user_id"
     t.string "title_pattern"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["user_id"], name: "index_aggregation_filters_on_user_id"
   end
 
@@ -30,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_12_12_143544) do
     t.text "body"
     t.string "state"
     t.boolean "merged"
-    t.datetime "created_at"
+    t.datetime "created_at", precision: nil
     t.string "repo_name"
     t.integer "user_id"
     t.string "language"
@@ -43,7 +42,7 @@ ActiveRecord::Schema.define(version: 2021_12_12_143544) do
     t.text "body"
     t.string "state"
     t.boolean "merged"
-    t.datetime "created_at"
+    t.datetime "created_at", precision: nil
     t.string "repo_name"
     t.integer "user_id"
     t.string "language"
@@ -56,11 +55,11 @@ ActiveRecord::Schema.define(version: 2021_12_12_143544) do
     t.string "name"
     t.string "location"
     t.string "url"
-    t.datetime "start_time"
+    t.datetime "start_time", precision: nil
     t.decimal "latitude", precision: 10, scale: 6, default: "0.0"
     t.decimal "longitude", precision: 10, scale: 6, default: "0.0"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.text "description"
     t.integer "user_id"
     t.index ["start_time"], name: "index_events_on_start_time"
@@ -70,23 +69,23 @@ ActiveRecord::Schema.define(version: 2021_12_12_143544) do
     t.integer "user_id", null: false
     t.integer "contribution_id", null: false
     t.date "date", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["user_id", "contribution_id"], name: "index_gifts_on_user_id_and_contribution_id", unique: true
   end
 
   create_table "labels", id: :serial, force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
   end
 
   create_table "organisations", id: :serial, force: :cascade do |t|
     t.string "login"
     t.string "avatar_url"
     t.integer "github_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.integer "contribution_count", default: 0
     t.index ["login"], name: "index_organisations_on_login", unique: true
   end
@@ -99,8 +98,8 @@ ActiveRecord::Schema.define(version: 2021_12_12_143544) do
   create_table "project_labels", id: :serial, force: :cascade do |t|
     t.integer "project_id"
     t.integer "label_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["label_id"], name: "index_project_labels_on_label_id"
     t.index ["project_id"], name: "index_project_labels_on_project_id"
   end
@@ -110,8 +109,8 @@ ActiveRecord::Schema.define(version: 2021_12_12_143544) do
     t.text "description"
     t.string "github_url"
     t.string "main_language"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.integer "user_id"
     t.boolean "inactive"
     t.boolean "featured", default: false
@@ -119,7 +118,7 @@ ActiveRecord::Schema.define(version: 2021_12_12_143544) do
     t.integer "contribulator"
     t.string "homepage"
     t.string "contributing_url"
-    t.datetime "last_scored"
+    t.datetime "last_scored", precision: nil
     t.boolean "fork"
     t.bigint "github_id"
   end
@@ -130,7 +129,7 @@ ActiveRecord::Schema.define(version: 2021_12_12_143544) do
     t.text "body"
     t.string "state"
     t.boolean "merged"
-    t.datetime "created_at"
+    t.datetime "created_at", precision: nil
     t.string "repo_name"
     t.integer "user_id"
     t.string "language"
@@ -140,8 +139,8 @@ ActiveRecord::Schema.define(version: 2021_12_12_143544) do
   create_table "skills", id: :serial, force: :cascade do |t|
     t.integer "user_id"
     t.string "language"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.index ["user_id"], name: "index_skills_on_user_id"
   end
 
@@ -150,18 +149,18 @@ ActiveRecord::Schema.define(version: 2021_12_12_143544) do
     t.string "provider", null: false
     t.string "nickname", null: false
     t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
     t.string "gravatar_id"
     t.string "token"
     t.string "email_frequency"
     t.integer "contributions_count", default: 0
-    t.datetime "last_sent_at"
+    t.datetime "last_sent_at", precision: nil
     t.string "twitter_token"
     t.string "twitter_secret"
     t.string "twitter_nickname"
     t.string "confirmation_token"
-    t.datetime "confirmed_at"
+    t.datetime "confirmed_at", precision: nil
     t.string "name"
     t.string "blog"
     t.string "location"
