@@ -137,7 +137,7 @@ GEM
       ruby2_keywords
     equalizer (0.0.11)
     erubi (1.11.0)
-    ethon (0.15.0)
+    ethon (0.16.0)
       ffi (>= 1.15.0)
     execjs (2.8.1)
     factory_bot (4.11.1)
