@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Twitter', type: :request do
-  let(:user) { create :user, email_frequency: 'never' }
+  let(:user) { create :user, email_frequency: 'none' }
   subject { page }
 
   before do
@@ -25,14 +25,14 @@ describe 'Twitter', type: :request do
      end
 
      context 'when the user has already linked their twitter account' do
-       let(:user) { create :user, :email_frequency => 'never', :twitter_token => 'foo', :twitter_secret => 'bar' }
+       let(:user) { create :user, :email_frequency => 'none', :twitter_token => 'foo', :twitter_secret => 'bar' }
        it { should_not have_link('Link Your Twitter Account') }
      end
    end
 
    describe 'removing twitter account' do
      context 'when the user has linked their twitter account' do
-       let(:user) { create :user, :email_frequency => 'never',
+       let(:user) { create :user, :email_frequency => 'none',
                     :twitter_nickname => Faker::Lorem.word,
                     :twitter_token => SecureRandom.hex,
                     :twitter_secret => SecureRandom.hex }
