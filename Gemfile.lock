@@ -284,7 +284,7 @@ GEM
       capybara (>= 2.1, < 4)
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
-    public_suffix (5.0.0)
+    public_suffix (5.0.1)
     puma (6.0.0)
       nio4r (~> 2.0)
     rabl (0.16.1)
