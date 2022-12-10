@@ -60,7 +60,7 @@ Next, you'll need to make sure that you have PostgreSQL installed. This can be d
 
 ```bash
 brew install postgres
-brew install --cask phantomjs
+brew install chrome-cli
 ```
 
 On Debian-based Linux distributions you can use apt-get to install Postgres:
