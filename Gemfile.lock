@@ -289,7 +289,7 @@ GEM
       nio4r (~> 2.0)
     rabl (0.16.1)
       activesupport (>= 2.3.14)
-    racc (1.6.1)
+    racc (1.6.2)
     rack (2.2.4)
     rack-attack (6.6.1)
       rack (>= 1.0, < 3)
