@@ -1,6 +1,6 @@
 class Contribution < ApplicationRecord
-  belongs_to :user
-  belongs_to :merger, class_name: 'User', foreign_key: :merged_by_id, primary_key: :uid
+  belongs_to :user, optional: true
+  belongs_to :merger, class_name: 'User', foreign_key: :merged_by_id, primary_key: :uid, optional: true
   after_save { if user then user.update_contribution_count end }
   after_destroy { if user then user.update_contribution_count end }
 

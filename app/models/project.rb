@@ -23,7 +23,7 @@ class Project < ApplicationRecord
   has_many :project_labels
   has_many :labels, through: :project_labels
 
-  belongs_to :submitted_by, class_name: 'User', foreign_key: :user_id
+  belongs_to :submitted_by, class_name: 'User', foreign_key: :user_id, optional: true
 
   validates :description, :github_url, :name, :main_language, presence: true
   validates :github_url, format: { with: /\Ahttps?:\/\/github.com\/[\w-]+\/[\w\.-]+(\/)?\Z/i, message: 'Enter a valid GitHub URL.' }

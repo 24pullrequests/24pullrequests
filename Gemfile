@@ -29,6 +29,7 @@ gem 'bootsnap', require: false
 gem 'sprockets', '< 5.0.0'
 gem 'faraday', '2.7.2'
 gem "commonmarker", "~> 0.23.6"
+gem 'faraday-retry'
 
 group :development do
   gem 'spring'
