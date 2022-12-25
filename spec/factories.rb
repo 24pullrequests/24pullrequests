@@ -40,6 +40,7 @@ FactoryBot.define do
 
   factory :contribution do
     user
+    merger { user }
     title { Faker::Lorem.words.first }
     issue_url { Faker::Internet.url }
     body { Faker::Lorem.paragraphs.join('\n') }
