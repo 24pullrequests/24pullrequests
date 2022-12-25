@@ -49,7 +49,7 @@ group :development, :test, :cucumber do
   gem 'factory_bot_rails', '4.11.1'
   gem 'faker'
   gem 'brakeman'
-  gem 'poltergeist'
+  gem 'cuprite'
 
   gem 'database_cleaner'
   gem 'shoulda-matchers', '3.1.3'

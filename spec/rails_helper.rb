@@ -22,12 +22,12 @@ WebMock.disable_net_connect! allow_localhost: true
 
 FactoryBot.allow_class_lookup = false
 
-require 'capybara/poltergeist'
-Capybara.javascript_driver = :poltergeist
+require 'capybara/cuprite'
+Capybara.javascript_driver = :cuprite
 Capybara.default_max_wait_time = 10
 
-Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(app, window_size: [1280, 600])
+Capybara.register_driver :cuprite do |app|
+  Capybara::Cuprite::Driver.new(app, browser_options: { 'no-sandbox': nil })
 end
 
 # Requires supporting ruby files with custom matchers and macros, etc,
