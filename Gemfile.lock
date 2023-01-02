@@ -170,7 +170,7 @@ GEM
       activesupport (>= 5.0)
     hashdiff (1.0.1)
     hashie (5.0.0)
-    highline (2.0.3)
+    highline (2.1.0)
     http (4.4.1)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
