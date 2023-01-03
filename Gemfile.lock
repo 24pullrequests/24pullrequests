@@ -441,7 +441,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
-    unicode-display_width (2.3.0)
+    unicode-display_width (2.4.0)
     version_gem (1.1.1)
     web-console (4.2.0)
       actionview (>= 6.0.0)
