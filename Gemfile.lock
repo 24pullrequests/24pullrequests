@@ -231,7 +231,7 @@ GEM
     minitest (5.17.0)
     msgpack (1.6.0)
     multi_xml (0.6.0)
-    multipart-post (2.2.3)
+    multipart-post (2.3.0)
     naught (1.1.0)
     net-imap (0.3.4)
       date
