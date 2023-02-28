@@ -292,7 +292,7 @@ GEM
       ast (~> 2.4.1)
     pg (1.4.6)
     public_suffix (5.0.1)
-    puma (6.1.0)
+    puma (6.1.1)
       nio4r (~> 2.0)
     rabl (0.16.1)
       activesupport (>= 2.3.14)
