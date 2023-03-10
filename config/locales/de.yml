@@ -15,7 +15,7 @@ de:
       thanks: Vielen Dank an...
       title: Sponsoren
     title: Über 24 Pull Requests
-    where_to_find_us: Where to find us
+    where_to_find_us: Wo man uns findet
   about_us: Über uns
   activerecord:
     errors:
@@ -57,37 +57,37 @@ de:
   application:
     ensure_logged_in:
       notice:
-        not_logged_in: You must be logged in to view this content.
+        not_logged_in: Du musst angemeldet sein, um diesen Inhalt anzusehen.
   cancel: Abbrechen
   change: Ändern
   claim: Anspruch erheben
   clear: Leeren
   contributions:
     edit:
-      title: Edit Contribution
+      title: Beitrag bearbeiten
     new:
       form:
-        body: Description
-        body_placeholder: Describe the contribution you made to this open source project
+        body: Beschreibung
+        body_placeholder: Beschreibe den Beitrag, den du zu diesem Open-Source-Projekt gemacht hast
         created_at: Contribution Date
-        issue_url: Project URL
+        issue_url: Datum des Beitrags
         issue_url_placeholder: https://oss-project.io
-        repo_name: Project
-        repo_name_placeholder: Open source project name
-      save: Record your contribution
-      title: How did you contribute to open source today?
+        repo_name: Projekt
+        repo_name_placeholder: Name des Open-Source-Projekts
+      save: Beitrag speichern
+      title: Wie hast du heute zu Open Source beigetragen?
     notice:
-      destroy_success: Contribution removed successfully!
-      edit_success: Contribution updated successfully!
-      new_success: Contribution created successfully!
-      not_authorized: You can only edit contributions that you have created this year
-      not_logged_in: You must be logged in to create or edit contributions
+      destroy_success: Beitrag erfolgreich entfernt!
+      edit_success: Beitrag erfolgreich aktualisiert!
+      new_success: Beitrag erfolgreich erstellt!
+      not_authorized: Du kannst nur Beiträge bearbeiten, die du in diesem Jahr erstellt hast
+      not_logged_in: Du musst eingeloggt sein, um Beiträge zu erstellen oder zu bearbeiten
     show:
-      confirm_destroy: Are you sure you want to remove this contribution?
+      confirm_destroy: Bist du sicher, dass du diesen Beitrag entfernen möchtest?
       destroy_contribution: Remove Contribution
-      edit_contribution: Edit Contribution
+      edit_contribution: Beitrag bearbeiten
   contributors:
-    title: Contributors
+    title: Mitwirkende
   contributors_involved: Entwickler*innen machen mit
   contributors_involved_desc: Schließ Dich uns an und mach Open Source besser.
   contributors_using_language: Entwickler*innen, die %{language} verwenden
@@ -113,7 +113,7 @@ de:
     notification_info: Falls Du keine Benachrichtigungen mehr erhalten möchtest, ändere einfach Deine %{email_preferences_link}.
     title: Konto löschen
   edit: Bearbeiten
-  email_preferences_link: Email preferences link
+  email_preferences_link: E-Mail-Einstellungen
   events:
     admin:
       search: Suche nach GitHub Repository
@@ -123,7 +123,7 @@ de:
       title: Event bearbeiten
     index:
       host_an_event: Event veranstalten
-      no_upcoming_events: No upcoming events
+      no_upcoming_events: Keine anstehenden Events
       past_24_pull_requests_events: Vergangene 24 Pull Requests Events
       show_past_24_pull_requests_events: Zeige Vergangene 24 Pull Requests Events
     new:
@@ -157,15 +157,15 @@ de:
   featured_projects: Ausgewählte Projekte
   follow_user: Folge @%{twitter}
   gifts:
-    calendar_link: public calendar
+    calendar_link: öffentlicher Kalender
     description: Hier kannst Du Deine Pull Requests verwalten und Deine eigenen "24 Pull Requests" ausgewählen.
     form:
-      date: Date
-      gift_it: Gift it!
+      date: Datum
+      gift_it: Verschenke es!
       pull_requests: Beiträge
-      tweet: Tweet about your gift!
+      tweet: Tweete über dein Geschenk!
     give: Verschenke etwas Bedeutsames an ein Projekt das Du liebst
-    link_twitter: Link Twitter Account
+    link_twitter: Twitter-Account verlinken
     link_twitter_desc: Möchtest du Informationen zu 24 Pull Requests und deinen Geschenken teilen? %{link_twitter} und verschenke etwas Code an Open-Source Projekte.
     no_pull_requests: Du hast keine Pull Requests
     none: Noch nichts verschenkt.
@@ -184,7 +184,7 @@ de:
     give_to_open_source: Du hast das ganze Jahr über von anderen Open Source-Projekten profitiert. Jetzt ist es an der Zeit, den Maintainern dieser Projekte danke zu sagen &mdash; und ein kleiner Vogel hat mir geflüstert, dass sie Pull Requests lieben!
     greeting: Es ist die Zeit
     involved:
-      contributing_path: Here's our primer
+      contributing_path: Hier ist unser Leitfaden
       description: 'Es gibt viele Wege, sich an einem Open Source-Projekt zu beteiligen: Du kannst die Dokumentation verbessern, vorhandene Problemberichte bearbeiten, die Code-Qualität oder Testabdeckung verbessern oder auch neue Funktionen hinzufügen.'
       take_a_look: Schau nach, falls Du neu in Open Source bist.
       title: Mach mit
@@ -203,7 +203,7 @@ de:
     happy_holidays_see_you: Schöne Feiertage und wir sehen uns alle nächstes Jahr wenn wir alles nochmal machen!
     help_open_source: 'Möchtest Du in der Zwischenzeit weiterhin Open Source-Projekte unterstützen? Schau Dir diese grossartigen Initiativen an:'
     last_year_stats: "%{year} haben über 24 Tage <b>%{contributors}</b> Entwickler*innen <b>%{pull_requests}</b> Pull Requests an <b>%{projects}</b> verschiedene Open Source-Projekte versendet."
-    ovio: Easily filter through issues across 800+ contributor friendly projects and get curated recommendations.
+    ovio: Durchsuche ganz einfach über 800 beitragsorientierte Projekte nach Problemen und erhalte ausgewählte Empfehlungen.
     title: 24 Pull Requests %{year} ist da
   language:
     contributors:
@@ -232,42 +232,42 @@ de:
     ru: Русский
     ta: தமிழ்
     th: ไทย
-    translate: Translate into your language!
+    translate: Übersetze in deine Sprache!
     uk: Українська
     zh_Hans: 简体中文
     zh_Hant: 正體中文
   meta_titles:
     site_name: 24 Pull Requests
     contributions:
-      edit: Edit
-      index: Contributions
-      new: New Contribution
+      edit: Bearbeiten
+      index: Beiträge
+      new: Neuer Beitrag
     dashboards:
       show: Dashboard
-      preferences: Preferences
+      preferences: Einstellungen
     events:
-      edit: Edit
+      edit: Bearbeiten
       index: Events
       new: New Event
     gifts:
-      edit: Edit Gift
-      index: Gifted Code
-      new: New Gift
+      edit: Geschenk bearbeiten
+      index: Geschenkter Code
+      new: Neues Geschenk
     organisations:
-      index: Organisations
+      index: Organisationen
     projects:
-      edit: Edit
-      index: Projects
-      new: New Project
+      edit: Bearbeiten
+      index: Projekte
+      new: Neues Projekt
     static:
-      about: About
-      homepage: Home
-      humans: Humans
+      about: Über
+      homepage: Startseite
+      humans: Menschen
     users:
-      index: Users
+      index: Benutzer
       mergers: Mergers
-      projects: My Suggestions
-      unsubscribe: Unsubscribe
+      projects: Meine Vorschläge
+      unsubscribe: Abonnement kündigen
   more: Mehr
   navigation:
     all_projects: Meine Projekte
@@ -280,7 +280,7 @@ de:
     profile: Profil
   no_suggestions: Du hast bisher keine vorgeschlagenen Projekte
   nov_reminder:
-    how_to_contribute: to find out how to contribute 24 pull requests between December 1st and December 24th. Your contributions can be tiny, as simple as fixing a typo, to something incredible. Speed up Rails. Document Express. Fix a bug that you reported.
+    how_to_contribute: um herauszufinden, wie man im Advent 24 Pull Requests einreichen kann. Deine Beiträ
   open_source_yey: Open Source FTW!
   or: oder
   organisations:
@@ -302,16 +302,16 @@ de:
     frequency_message: Je nach Deinen Einstellungen senden wir Dir regelmässig hilfreiche Emails bis das Projekt vorüber ist. Dabei schlagen wir Dir Projekte vor, zu denen Du vielleicht etwas beitragen magst. Zusätzlich sind wir so frei und personalisieren Deine Vorschläge basierend auf Deinen Fähigkeiten, so wie wir sie über Dein GitHub-Profil und Deine GitHub-Repositories einsehen können. Alternativ kannst Du die Sprachen unten selbst auswählen.
     hint:
       confirm_email: Bitte bestätige Deine Emailadresse über den Link, den wir Dir zugeschickt haben.
-    ignore_organisations: If you regularly contribute to public repositories that you don't want to track on this site, add the organisation name here. You can add multiple organisations separated by commas. This can be useful if you code in the open at work, or maintain an open source repository yourself.
-    ignored_organisations: Ignored organisations
+    ignore_organisations: as getrennt hinzufügen. Dies kann nützlich sein, wenn du bei der Arbeit öffentlich programmierst oder selbst ein Open-Source-Repository verwaltest.
+    ignored_organisations: Ignorierte Organisationen
     information: Du kannst Deine Email-Einstellungen auch später noch bearbeiten.
     languages: Welche Sprachen beherrschst Du?
     remove: Konto löschen
     save: Speichern
     save_and_continue: Speichern und weiter
-    setup_help: To get started with 24 Pull Requests, please first fill up the following form.
-    time_zone: Time Zone
-    time_zone_message: To correctly display your pull requests, please choose a time zone.
+    setup_help: Um mit 24 Pull Requests zu beginnen, fülle bitte zuerst das folgende Formular aus.
+    time_zone: Zeitzone
+    time_zone_message: Um deine Pull Requests korrekt anzuzeigen, wähle bitte eine Zeitzone.
     title: Email-Einstellungen
     twitter: Twitter-Konto
   preferred_languages: Bevorzugte Sprachen
@@ -320,7 +320,7 @@ de:
       search: Nach GitHub Repository suchen
       title: Projekte verwalten
     claim: Sind einige Deiner vorgeschlagenen Projekte noch nicht aufgeführt? Erhebe Anspruch!
-    contributing: Contributing Guide
+    contributing: Leitfaden für Mitwirkende
     edit:
       title: Vorschlag bearbeiten
     filter_by_language: 'Nach Sprache filtern:'
@@ -329,10 +329,10 @@ de:
     new:
       form:
         github_url: GitHub URL
-        main_language: Main language
-        project_name: Project Name
-        submit_project: Submit Project
-        summary: Summary
+        main_language: Hauptsprache
+        project_name: Projektname
+        submit_project: Projekt einreichen
+        summary: Zusammenfassung
       info: Lass uns wissen, welche beliebten Projekte Hilfe benötigen. Wir haben unsere Favoriten ausgewählt, sind aber immer für Vorschläge offen. Hast Du ein paar Ideen? Sag uns bescheid!
       issue_link_text: sende uns einen Problembericht
       suggestion: Hast Du einen Vorschlag für dieses Projekt? Wir sind ganz Ohr! Falls Du etwas behoben haben möchtest, %{issue_link}.
@@ -353,14 +353,14 @@ de:
       count: Bereits %{count} Pull Requests in %{language} versendet!
     latest:
       count: Neueste Pull Requests (%{count} insgesamt)
-  reactivate: Reactivate
+  reactivate: Reaktivieren
   search: Suchen
   sponsored_by: Unterstützt von
   sponsors: Sponsoren
   suggest_project: Ein Projekt vorschlagen
   suggested_projects: Vorgeschlagene Projekte
   suggestions:
-    title: My Suggestions
+    title: Meine Vorschläge
   twitter:
     account_linked: Dein Twitter-Konto wurde verbunden! Wir werden für Dich twittern wann immer Du einen Pull Request eröffnest.
     account_removed: Dein Twitter-Konto wurde entfernt.
@@ -369,11 +369,11 @@ de:
       text: Verbinde Dein Twitter-Konto
       tooltip: Wenn Du Dein Twitter-Konto verbindest, werden wir für Dich twittern wann immer Du einen Pull Request eröffnest!
   unsubscribe:
-    invalid_token: Invalid subscription token
-    login: GitHub username or email address
-    success: You have successfully unsubscribed from our mailing list.
-    title: Unsubscribe From Our Mailing List
-    unsubscribe: Unsubscribe
+    invalid_token: Ungültiges Abonnement-Token
+    login: GitHub-Benutzername oder -E-Mail-Adresse
+    success: Du hast dich erfolgreich von unserer Mailingliste abgemeldet.
+    title: Von unserer Mailingliste abmelden
+    unsubscribe: Abbestellen
   user:
     contribution_count:
       one: "%{user} has made %{count} pull request so far in Christmas %{year}"
