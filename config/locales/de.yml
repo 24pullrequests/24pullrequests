@@ -32,28 +32,28 @@ de:
               required_for_confirmation: "%{attribute} ist zur Bestätigung notwendig"
   api:
     callback:
-      details: You can send a ?callback parameter to any GET call to have the results wrapped in a JSON function. This is typically used when browsers want to embed content in web pages by getting around cross domain issues. The response includes the same data output as the regular API.
-      title: JSON-P Callbacks
-    description: You may not know this, but 24 Pull Requests has its own JSON API. Details of each endpoint are described below.
+      details: Du kannst einen ?callback-Parameter an jede GET-Anfrage senden, um die Ergebnisse in eine JSON-Funktion zu verpacken. Dies wird in der Regel verwendet, wenn Browser Inhalte in Webseiten einbetten wollen, um domänenübergreifende Probleme zu umgehen. Die Antwort enthält dieselbe Datenausgabe wie bei der regulären API.
+      title: JSON-P Rückfragen
+    description: Du weißt es vielleicht nicht, aber 24 Pull Requests hat seine eigene JSON-API. Details zu jedem Endpunkt sind unten beschrieben.
     organisations:
-      details: Load all organisations that have signed up to the site, also includes the users that belong to each organisation.
-      specific: Load information for a specific organisation.
-      title: Organisations
+      details: Lädt alle Organisationen, die sich auf der Website angemeldet haben, und enthält auch die Nutzer, die zu den einzelnen Organisationen gehören.
+      specific: Lädt Informationen für eine bestimmte Organisation.
+      title: Organisationen
     pagination:
-      details: Requests that return multiple items will be paginated to 99 items by default. You can specify further pages with the ?page parameter.
-      title: Pagination
+      details: Anfragen, die mehrere Elemente zurückgeben, werden standardmäßig auf 99 Elemente umgebrochen. Du kannst weitere Seiten mit dem Parameter ?page angeben.
+      title: Umbruch
     projects:
-      details: All suggested projects on the site, ordered alphabetically.
-      title: Projects
+      details: Alle vorgeschlagenen Projekte auf der Website, alphabetisch geordnet.
+      title: Projekte
     pull_requests:
       details: Load all contributions by users of the site during December, ordered by newest first, also includes the user who made the contribution.
-      meta_details: Load information about all the contributions this year.
-      title: Contributions
-    title: JSON API
+      meta_details: Lädt Informationen über alle Beiträge dieses Jahres.
+      title: Beiträge
+    title: JSON-API
     users:
-      details: Load all users who have signed up to the site, ordered by how many contributions they have sent so far in December, also includes their organisation(s) and contributions.
-      specific: Load information for a specific user.
-      title: Users
+      details: Lädt alle Nutzer, die sich auf der Website angemeldet haben, geordnet nach der Anzahl der Beiträge, die sie im Dezember bisher gesendet haben, und enthält auch deren Organisation(en) und Beiträge.
+      specific: Lädt Informationen für einen bestimmten Benutzer.
+      title: Benutzer
   application:
     ensure_logged_in:
       notice:
@@ -84,7 +84,7 @@ de:
       not_logged_in: Du musst eingeloggt sein, um Beiträge zu erstellen oder zu bearbeiten
     show:
       confirm_destroy: Bist du sicher, dass du diesen Beitrag entfernen möchtest?
-      destroy_contribution: Remove Contribution
+      destroy_contribution: Beitrag löschen
       edit_contribution: Beitrag bearbeiten
   contributors:
     title: Mitwirkende
@@ -93,7 +93,7 @@ de:
   contributors_using_language: Entwickler*innen, die %{language} verwenden
   dashboard:
     christmas_activity: Hier kannst Du all Deine Aktivitäten sehen, die wir für Dich in der Adventszeit festgehalten haben.
-    gift_it: Gift it!
+    gift_it: Verschenke es!
     give_a_gift: Scheinbar hast Du heute noch keinen Code verschenkt. Möchtest Du diesen Pull Request verschenken?
     help_out: 'Dir fällt kein Projekt ein, dem Du helfen könntest? Hier ist eine Liste beliebter Projekte:'
     no_pull_requests: Du hast noch keine Pull Requests gesendet, worauf wartest Du!?
