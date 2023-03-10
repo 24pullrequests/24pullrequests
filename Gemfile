@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '3.1.3'
+ruby '3.2.1'
 
 gem 'rails', '7.0.4.2'
 
@@ -52,7 +52,7 @@ group :development, :test, :cucumber do
   gem 'cuprite'
 
   gem 'database_cleaner'
-  gem 'shoulda-matchers', '3.1.3'
+  gem 'shoulda-matchers'
   gem 'webmock', require: false
   gem 'timecop'
   gem 'christmas_tree_formatter'
