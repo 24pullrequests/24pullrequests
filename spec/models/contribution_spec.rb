@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Contribution, type: :model do
   let(:user) { create :user }
 
-  it { is_expected.to belong_to(:user) }
+  it { is_expected.to belong_to(:user).optional }
 
   describe 'pull request validations' do
     let(:json) { mock_pull_request }

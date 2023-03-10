@@ -9,7 +9,7 @@ describe Gift, type: :model do
   it { is_expected.to validate_presence_of(:user) }
   it { is_expected.to validate_presence_of(:contribution) }
   it { is_expected.to validate_presence_of(:date) }
-  it { is_expected.to validate_inclusion_of(:date).in_array(Gift.giftable_dates) }
+  it { is_expected.to validate_inclusion_of(:date).in_array(Gift.giftable_dates).with_message('your gift should be for the month of December.') }
 
   describe '#find' do
     subject { described_class.find(user, Time.zone.now.to_date) }
