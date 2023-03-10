@@ -79,6 +79,7 @@ describe 'Projects', type: :request do
         30.times do |i|
           create :project, name: "Ruby project #{i}", main_language: 'Ruby'
         end
+        Project.count
         visit projects_path
 
         click_on 'More'

@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   def show
     @user      = User.find_by_nickname!(params[:id])
     @calendar  = Calendar.new(Gift.giftable_dates(current_year), @user.gifts.year(current_year))
-    @merged_contributions = @user.merged_contributions.year(current_year).latest(nil)
+    @merged_contributions = @user.merged_contributions.excluding_organisations(@user.ignored_organisations).year(current_year).latest(nil)
     respond_with @user
   end
 
