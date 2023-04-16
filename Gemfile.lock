@@ -300,9 +300,9 @@ GEM
     rack (2.2.6.4)
     rack-attack (6.6.1)
       rack (>= 1.0, < 3)
-    rack-canonical-host (1.1.0)
+    rack-canonical-host (1.2.0)
       addressable (> 0, < 3)
-      rack (>= 1.0.0, < 3)
+      rack (>= 1, < 4)
     rack-google-analytics (1.2.0)
       actionpack
       activesupport
