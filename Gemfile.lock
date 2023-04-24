@@ -288,7 +288,7 @@ GEM
     omniauth-twitter (1.4.0)
       omniauth-oauth (~> 1.1)
       rack
-    parser (3.2.2.0)
+    parser (3.2.2.1)
       ast (~> 2.4.1)
     pg (1.4.6)
     public_suffix (5.0.1)
