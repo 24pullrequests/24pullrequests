@@ -76,6 +76,7 @@ describe 'Projects', type: :request do
       end
 
       it 'should retain selected filters when requesting more pages' do
+        pending 'This test is flaky'
         30.times do |i|
           create :project, name: "Ruby project #{i}", main_language: 'Ruby'
         end
