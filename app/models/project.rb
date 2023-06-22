@@ -7,7 +7,7 @@ class Project < ApplicationRecord
                'Eiffel', 'Elixir', 'Elm', 'Emacs Lisp', 'Erlang', 'F#',
                'Factor', 'Fancy', 'Fantom', 'Forth', 'FORTRAN', 'Go', 'Gosu',
                'Groovy', 'Haskell', 'Haxe', 'HTML', 'Io', 'Ioke', 'J', 'Java',
-               'JavaScript', 'Julia', 'Kotlin', 'Lasso', 'LiveScript', 'Logos',
+               'JavaScript', 'JSON', 'Julia', 'Kotlin', 'Lasso', 'LiveScript', 'Logos',
                'Logtalk', 'Lua', 'M', 'Markdown', 'Matlab', 'Max', 'Mirah',
                'Monkey', 'MoonScript', 'Nemerle', 'Nimrod', 'Nu',
                'Objective-C', 'Objective-J', 'OCaml', 'Omgrofl', 'ooc', 'Opa',
@@ -18,7 +18,7 @@ class Project < ApplicationRecord
                'Self', 'Shell', 'Slash', 'Smalltalk', 'Squirrel',
                'Standard ML', 'SuperCollider', 'SVG', 'Swift', 'Tcl', 'TeX', 'Turing', 'TXL',
                'TypeScript', 'Vala', 'Verilog', 'VHDL', 'VimL', 'Visual Basic',
-               'Volt', 'wisp', 'XC', 'XML', 'XProc', 'XQuery', 'XSLT', 'Xtend']
+               'Volt', 'wisp', 'XC', 'XML', 'XProc', 'XQuery', 'XSLT', 'Xtend', 'YAML']
 
   has_many :project_labels
   has_many :labels, through: :project_labels
