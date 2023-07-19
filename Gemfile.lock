@@ -90,7 +90,7 @@ GEM
       sassc (>= 2.0.0)
     brakeman (6.0.0)
     buftok (0.3.0)
-    bugsnag (6.25.2)
+    bugsnag (6.26.0)
       concurrent-ruby (~> 1.0)
     builder (3.2.4)
     capybara (3.39.2)
