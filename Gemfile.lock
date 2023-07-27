@@ -352,7 +352,7 @@ GEM
     responders (3.1.0)
       actionpack (>= 5.2)
       railties (>= 5.2)
-    rexml (3.2.5)
+    rexml (3.2.6)
     rspec-activemodel-mocks (1.1.0)
       activemodel (>= 3.0)
       activesupport (>= 3.0)
