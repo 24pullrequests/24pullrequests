@@ -35,19 +35,28 @@
             <% if flash.any? %>
               <div class="messages">
                 <% if flash[:alert] %>
-                  <div class="alert alert-danger">
+                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
                     <%= flash[:alert] %>
                   </div>
                 <% end %>
                 <% if flash[:notice] %>
-                  <div class="alert alert-info">
+                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
                     <%= flash[:notice] %>
                   </div>
                 <% end %>
               </div>
             <% end %>
             <% if unconfirmed_email? %>
-              <div class="alert alert-info">
+              <div class="alert alert-info danger alert-dismissible fade show" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
                 You must confirm your email address.
                 <%= link_to "Click here", resend_confirmation_path %>
                 to resend confirmation email.
