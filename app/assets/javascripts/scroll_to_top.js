@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const scrollToTopButton = $("#btn-back-to-top");
+  const scrollToTopButton = $("#scroll-to-top-button");
 
   $(window).scroll(function () {
     scrollFunction();
