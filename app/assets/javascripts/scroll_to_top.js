@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const mybutton = $("#btn-back-to-top");
+  const scrollToTopButton = $("#btn-back-to-top");
 
   $(window).scroll(function () {
     scrollFunction();
@@ -7,13 +7,13 @@ $(document).ready(function () {
 
   function scrollFunction() {
     if ($(document).scrollTop() > 500) {
-      mybutton.css("display", "block");
+      scrollToTopButton.css("display", "block");
     } else {
-      mybutton.css("display", "none");
+      scrollToTopButton.css("display", "none");
     }
   }
 
-  mybutton.click(function () {
+  scrollToTopButton.click(function () {
     $("body, html").scrollTop(0);
   });
 });
