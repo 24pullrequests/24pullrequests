@@ -30,7 +30,7 @@ This is the site to help promote the project, highlighting why, how and where to
 
 ## Contributors
 
-Over 234 different people have contributed to the project, you can see them all here: https://github.com/24pullrequests/24pullrequests/graphs/contributors
+Over hundreds of different people have contributed to the project, you can see them all here: https://github.com/24pullrequests/24pullrequests/graphs/contributors
 
 ## Development
 
