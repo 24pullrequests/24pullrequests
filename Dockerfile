@@ -1,7 +1,7 @@
 FROM ruby:3.2.2
 RUN \
     apt-get update \
-    && apt-get install -y --no-install-recommends netcat nodejs \
+    && apt-get install -y --no-install-recommends netcat-traditional nodejs \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # throw errors if Gemfile has been modified since Gemfile.lock
