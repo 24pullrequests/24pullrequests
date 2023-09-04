@@ -166,8 +166,8 @@ GEM
       ffi (>= 1.0.0)
       rake
     foreman (0.87.2)
-    globalid (1.1.0)
-      activesupport (>= 5.0)
+    globalid (1.2.0)
+      activesupport (>= 6.1)
     hashdiff (1.0.1)
     hashie (5.0.0)
     highline (2.1.0)
