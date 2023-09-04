@@ -18,5 +18,6 @@
 //= require jquery.datetimepicker
 //= require emojione
 //= require emoji
+//= require scroll_to_top
 //= require jquery.icheck
 //= require_tree .
