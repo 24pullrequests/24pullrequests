@@ -348,7 +348,7 @@ GEM
       zeitwerk (~> 2.5)
     rainbow (3.1.1)
     rake (13.0.6)
-    regexp_parser (2.8.1)
+    regexp_parser (2.8.2)
     request_store (1.5.1)
       rack (>= 1.4)
     responders (3.1.0)
