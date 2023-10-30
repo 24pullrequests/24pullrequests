@@ -84,7 +84,7 @@ GEM
       parser (>= 2.4)
       smart_properties
     bindex (0.8.1)
-    bootsnap (1.16.0)
+    bootsnap (1.17.0)
       msgpack (~> 1.2)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
