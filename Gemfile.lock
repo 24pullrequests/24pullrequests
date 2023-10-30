@@ -235,7 +235,7 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.3.0)
     naught (1.1.0)
-    net-imap (0.4.2)
+    net-imap (0.4.3)
       date
       net-protocol
     net-pop (0.1.2)
