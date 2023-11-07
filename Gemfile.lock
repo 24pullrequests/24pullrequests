@@ -425,7 +425,7 @@ GEM
     thread_safe (0.3.6)
     tilt (2.3.0)
     timecop (0.9.8)
-    timeout (0.4.0)
+    timeout (0.4.1)
     twitter (8.0.1)
       addressable (~> 2.3)
       buftok (~> 0.3.0)
