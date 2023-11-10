@@ -127,7 +127,7 @@ GEM
       activerecord (>= 5.a)
       database_cleaner-core (~> 2.0.0)
     database_cleaner-core (2.0.1)
-    date (3.3.3)
+    date (3.3.4)
     diff-lcs (1.5.0)
     docile (1.4.0)
     domain_name (0.5.20190701)
