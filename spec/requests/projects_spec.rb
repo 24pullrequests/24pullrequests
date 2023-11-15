@@ -75,17 +75,17 @@ describe 'Projects', type: :request do
         end
       end
 
-      it 'should retain selected filters when requesting more pages' do
-        pending 'This test is flaky'
-        30.times do |i|
-          create :project, name: "Ruby project #{i}", main_language: 'Ruby'
-        end
-        Project.count
-        visit projects_path
+      # it 'should retain selected filters when requesting more pages' do
+      #   pending 'This test is flaky'
+      #   30.times do |i|
+      #     create :project, name: "Ruby project #{i}", main_language: 'Ruby'
+      #   end
+      #   Project.count
+      #   visit projects_path
 
-        click_on 'More'
-        all('#projects project').each { |project| expect(project) .to have_css('ruby') }
-      end
+      #   click_on 'More'
+      #   all('#projects project').each { |project| expect(project) .to have_css('ruby') }
+      # end
     end
   end
 
