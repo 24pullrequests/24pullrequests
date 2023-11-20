@@ -156,11 +156,11 @@ GEM
     ethon (0.16.0)
       ffi (>= 1.15.0)
     execjs (2.9.1)
-    factory_bot (4.11.1)
-      activesupport (>= 3.0.0)
-    factory_bot_rails (4.11.1)
-      factory_bot (~> 4.11.1)
-      railties (>= 3.0.0)
+    factory_bot (6.4.1)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.4.0)
+      factory_bot (~> 6.4)
+      railties (>= 5.0.0)
     faker (3.2.2)
       i18n (>= 1.8.11, < 2)
     faraday (2.7.11)
@@ -261,14 +261,14 @@ GEM
     net-smtp (0.4.0)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.15.4)
+    nokogiri (1.15.5)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.15.4-arm64-darwin)
+    nokogiri (1.15.5-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.15.4-x86_64-darwin)
+    nokogiri (1.15.5-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.15.4-x86_64-linux)
+    nokogiri (1.15.5-x86_64-linux)
       racc (~> 1.4)
     oauth (1.1.0)
       oauth-tty (~> 1.0, >= 1.0.1)
@@ -509,7 +509,7 @@ DEPENDENCIES
   dalli
   database_cleaner
   draper
-  factory_bot_rails (= 4.11.1)
+  factory_bot_rails (= 6.4.0)
   faker
   faraday (= 2.7.11)
   faraday-retry
