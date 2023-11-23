@@ -163,7 +163,7 @@ GEM
       railties (>= 3.0.0)
     faker (3.2.2)
       i18n (>= 1.8.11, < 2)
-    faraday (2.7.11)
+    faraday (2.7.12)
       base64
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
@@ -511,7 +511,7 @@ DEPENDENCIES
   draper
   factory_bot_rails (= 4.11.1)
   faker
-  faraday (= 2.7.11)
+  faraday (= 2.7.12)
   faraday-retry
   foreman
   i18n-tasks
