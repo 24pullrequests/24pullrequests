@@ -1,0 +1,423 @@
+Skip to content
+
+Code
+Pull requests
+Directory actionsMore options
+Breadcrumbs24pullrequests-24pullrequests
+Latest commit
+ 
+History
+This branch is 1 commit ahead of 24pullrequests/24pullrequests:main.
+Breadcrumbs24pullrequests-24pullrequests
+Folders and files
+Name	Last commit date
+.github
+(Directory)
+8 months ago
+app
+(Directory)
+3 months ago
+bin
+(Directory)
+2 years ago
+config
+(Directory)
+now
+db
+(Directory)
+last year
+design
+(Directory)
+5 years ago
+docs
+(Directory)
+2 years ago
+lib
+(Directory)
+now
+public
+(Directory)
+6 years ago
+script
+(Directory)
+11 years ago
+spec
+(Directory)
+2 weeks ago
+test/mailers/previews
+(Directory)
+9 years ago
+vendor/assets/javascripts
+(Directory)
+5 years ago
+.editorconfig
+(File)
+9 years ago
+.gitignore
+(File)
+5 years ago
+.rspec
+(File)
+8 years ago
+.rubocop.yml
+(File)
+7 years ago
+.ruby-version
+(File)
+8 months ago
+.slugignore
+(File)
+9 years ago
+24pullrequests.md
+(File)
+now
+CODE_OF_CONDUCT.md
+(File)
+6 years ago
+CONTRIBUTING.md
+(File)
+2 years ago
+Dockerfile
+(File)
+3 months ago
+Gemfile
+(File)
+last week
+Gemfile.lock
+(File)
+4 days ago
+ISSUE_TEMPLATE.md
+(File)
+6 years ago
+LICENSE
+(File)
+2 years ago
+Procfile
+(File)
+5 years ago
+Rakefile
+(File)
+11 years ago
+Readme.md
+(File)
+3 months ago
+config.ru
+(File)
+2 years ago
+docker-compose.yml
+(File)
+7 years ago
+Readme.md
+24 Pull Requests
+🎄 Giving back little gifts of code
+
+24 Pull Requests is a yearly initiative to encourage contributors around the world to send 24 pull requests between December 1st and December 24th.
+
+This is the site to help promote the project, highlighting why, how and where to send your pull requests.
+
+Happy Holidays
+
+Table of Contents
+24 Pull Requests
+Table of Contents
+Get started
+Contributors
+Development
+Getting Started
+Installing a Local Server
+Tests
+Contributing
+Translations
+Code of Conduct
+Copyright
+Get started
+Explore projects to help
+Submit your project to get help
+Contributors
+Over hundreds of different people have contributed to the project, you can see them all here: https://github.com/24pullrequests/24pullrequests/graphs/contributors
+
+Development
+The source is hosted at GitHub.
+
+You can report issues/feature requests on GitHub Issues. You can use GitHub Discussions to ask questions, follow announcements, and to propose ideas for the 24pullrequests project. Follow the project on Twitter @24pullrequests.
+
+These instructions are for working on the the 24pullrequests.com website. If you just want to be a developer who contributes PRs during the holidays, you don't need to follow these instructions! Go to https://24pullrequests.com and get involved there.
+
+Getting Started
+Want to hack on the website? Awesome!
+
+New to Ruby? No worries! You can follow these instructions to install a local server, or you can use the included Vagrant setup.
+
+Installing a Local Server
+First things first, you'll need to install Ruby 3.2.2. I recommend using the excellent rbenv, and ruby-build.
+
+rbenv install 3.2.2
+rbenv global 3.2.2
+Next, you'll need to make sure that you have PostgreSQL installed. This can be done easily on macOS using Homebrew or by using https://postgresapp.com. Please see these further instructions for installing Postgres via Homebrew.
+
+brew install postgres
+brew install chrome-cli
+On Debian-based Linux distributions you can use apt-get to install Postgres:
+
+sudo apt-get install postgresql postgresql-contrib libpq-dev
+On Windows, you can use the Chocolatey package manager to install Postgres:
+
+choco install postgresql
+Clone this repository:
+
+git clone git@github.com:24pullrequests/24pullrequests.git
+Now, let's install the gems from the Gemfile ("Gems" are synonymous with libraries in other languages).
+
+gem install bundler && rbenv rehash
+bundle install
+Once all the gems are installed, we'll need to create the databases and tables. Rails makes this easy through the use of "Rake" tasks.
+
+bundle exec rake db:create:all
+bundle exec rake db:migrate
+And we can also add some sample data with the seed task.
+
+bundle exec rake db:seed
+If you are working on anything related to the email-generation code, you can use MailCatcher. Since we use Bundler, please read the following before using MailCatcher.
+
+Almost there! Now all we have to do is start up the Rails server and point our browser to http://localhost:3000
+
+bundle exec rails s
+Tests
+Standard RSpec/Capybara tests are used for testing the application. The tests can be run with bundle exec rake.
+
+You can set up the test environment with bundle exec rake db:test:prepare, which will create the test DB and populate its schema automatically. You don't need to do this for every test run, but it will let you easily keep up with migrations. If you find a large number of tests are failing you should probably run this.
+
+If you are using the omniauth environment variables (GITHUB_KEY, GITHUB_SECRET, TWITTER_KEY, TWITTER_SECRET) for another project, you will need to either
+
+unset them before running your tests or
+reset the omniauth environment variables after creating a GitHub (omniauth) application for this project
+as it will use it to learn more about the contributors and for pull requests.
+
+Contributing
+We are always looking for people to contribute! To find out how to help out, have a look at our Contributing Guide.
+
+Translations
+24 Pull Requests is available in twenty languages. Translations are managed on Transifex. Authentication is required to use Transifex. If you prefer to edit the translations directly you can use the standard Rails i18n framework. To get started:
+
+Fork the project.
+Create a copy of config/locales/en.yml within the locales folder.
+Amend the first line with the correct character set you'll be translating to.
+Translate the strings and submit a pull request for the new translation.
+Code of Conduct
+Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
+
+Copyright
+Copyright MIT © 2021 Andrew Nesbitt. See LICENSE for details.
+
+CopiedSkip to content
+
+Code
+Pull requests
+Directory actionsMore options
+Breadcrumbs24pullrequests-24pullrequests
+Latest commit
+ 
+History
+This branch is 1 commit ahead of 24pullrequests/24pullrequests:main.
+Breadcrumbs24pullrequests-24pullrequests
+Folders and files
+Name	Last commit date
+.github
+(Directory)
+8 months ago
+app
+(Directory)
+3 months ago
+bin
+(Directory)
+2 years ago
+config
+(Directory)
+now
+db
+(Directory)
+last year
+design
+(Directory)
+5 years ago
+docs
+(Directory)
+2 years ago
+lib
+(Directory)
+now
+public
+(Directory)
+6 years ago
+script
+(Directory)
+11 years ago
+spec
+(Directory)
+2 weeks ago
+test/mailers/previews
+(Directory)
+9 years ago
+vendor/assets/javascripts
+(Directory)
+5 years ago
+.editorconfig
+(File)
+9 years ago
+.gitignore
+(File)
+5 years ago
+.rspec
+(File)
+8 years ago
+.rubocop.yml
+(File)
+7 years ago
+.ruby-version
+(File)
+8 months ago
+.slugignore
+(File)
+9 years ago
+24pullrequests.md
+(File)
+now
+CODE_OF_CONDUCT.md
+(File)
+6 years ago
+CONTRIBUTING.md
+(File)
+2 years ago
+Dockerfile
+(File)
+3 months ago
+Gemfile
+(File)
+last week
+Gemfile.lock
+(File)
+4 days ago
+ISSUE_TEMPLATE.md
+(File)
+6 years ago
+LICENSE
+(File)
+2 years ago
+Procfile
+(File)
+5 years ago
+Rakefile
+(File)
+11 years ago
+Readme.md
+(File)
+3 months ago
+config.ru
+(File)
+2 years ago
+docker-compose.yml
+(File)
+7 years ago
+Readme.md
+24 Pull Requests
+🎄 Giving back little gifts of code
+
+24 Pull Requests is a yearly initiative to encourage contributors around the world to send 24 pull requests between December 1st and December 24th.
+
+This is the site to help promote the project, highlighting why, how and where to send your pull requests.
+
+Happy Holidays
+
+Table of Contents
+24 Pull Requests
+Table of Contents
+Get started
+Contributors
+Development
+Getting Started
+Installing a Local Server
+Tests
+Contributing
+Translations
+Code of Conduct
+Copyright
+Get started
+Explore projects to help
+Submit your project to get help
+Contributors
+Over hundreds of different people have contributed to the project, you can see them all here: https://github.com/24pullrequests/24pullrequests/graphs/contributors
+
+Development
+The source is hosted at GitHub.
+
+You can report issues/feature requests on GitHub Issues. You can use GitHub Discussions to ask questions, follow announcements, and to propose ideas for the 24pullrequests project. Follow the project on Twitter @24pullrequests.
+
+These instructions are for working on the the 24pullrequests.com website. If you just want to be a developer who contributes PRs during the holidays, you don't need to follow these instructions! Go to https://24pullrequests.com and get involved there.
+
+Getting Started
+Want to hack on the website? Awesome!
+
+New to Ruby? No worries! You can follow these instructions to install a local server, or you can use the included Vagrant setup.
+
+Installing a Local Server
+First things first, you'll need to install Ruby 3.2.2. I recommend using the excellent rbenv, and ruby-build.
+
+rbenv install 3.2.2
+rbenv global 3.2.2
+Next, you'll need to make sure that you have PostgreSQL installed. This can be done easily on macOS using Homebrew or by using https://postgresapp.com. Please see these further instructions for installing Postgres via Homebrew.
+
+brew install postgres
+brew install chrome-cli
+On Debian-based Linux distributions you can use apt-get to install Postgres:
+
+sudo apt-get install postgresql postgresql-contrib libpq-dev
+On Windows, you can use the Chocolatey package manager to install Postgres:
+
+choco install postgresql
+Clone this repository:
+
+git clone git@github.com:24pullrequests/24pullrequests.git
+Now, let's install the gems from the Gemfile ("Gems" are synonymous with libraries in other languages).
+
+gem install bundler && rbenv rehash
+bundle install
+Once all the gems are installed, we'll need to create the databases and tables. Rails makes this easy through the use of "Rake" tasks.
+
+bundle exec rake db:create:all
+bundle exec rake db:migrate
+And we can also add some sample data with the seed task.
+
+bundle exec rake db:seed
+If you are working on anything related to the email-generation code, you can use MailCatcher. Since we use Bundler, please read the following before using MailCatcher.
+
+Almost there! Now all we have to do is start up the Rails server and point our browser to http://localhost:3000
+
+bundle exec rails s
+Tests
+Standard RSpec/Capybara tests are used for testing the application. The tests can be run with bundle exec rake.
+
+You can set up the test environment with bundle exec rake db:test:prepare, which will create the test DB and populate its schema automatically. You don't need to do this for every test run, but it will let you easily keep up with migrations. If you find a large number of tests are failing you should probably run this.
+
+If you are using the omniauth environment variables (GITHUB_KEY, GITHUB_SECRET, TWITTER_KEY, TWITTER_SECRET) for another project, you will need to either
+
+unset them before running your tests or
+reset the omniauth environment variables after creating a GitHub (omniauth) application for this project
+as it will use it to learn more about the contributors and for pull requests.
+
+Contributing
+We are always looking for people to contribute! To find out how to help out, have a look at our Contributing Guide.
+
+Translations
+24 Pull Requests is available in twenty languages. Translations are managed on Transifex. Authentication is required to use Transifex. If you prefer to edit the translations directly you can use the standard Rails i18n framework. To get started:
+
+Fork the project.
+Create a copy of config/locales/en.yml within the locales folder.
+Amend the first line with the correct character set you'll be translating to.
+Translate the strings and submit a pull request for the new translation.
+Code of Conduct
+Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
+
+Copyright
+Copyright MIT © 2021 Andrew Nesbitt. See LICENSE for details.
+
+Copied! rizqshops@googlegroups.com
