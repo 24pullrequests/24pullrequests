@@ -8,7 +8,7 @@ fi:
     more_info: Sivusto tarjoaa myös suositeltuja projekteja joita auttaa, ohjeita miten avustaa ja korostaa hyviä vetopyyntökä päivittäin.
     on_github: 'Löydät tämän sivuston lähdekoodin GitHubista:'
     on_gitter: 'Chat with the community on Gitter:'
-    on_mastodon: 'Löydät meidät myös Twitteristä:'
+    on_mastodon: 'Löydät meidät myös Mastodon:'
     sponsors:
       details: 24 Pull Requestin teki mahdolliseksi avustukset ja lahjoitukset mahtavilta sponsoreilta.
       get_in_touch: 'Jos haluat olla yhteydessä sponsoroinnista tai mistä tahansa, lähetä meille sähköpostia:'
@@ -364,7 +364,7 @@ fi:
   twitter:
     account_linked: Twitter tilisi on yhdistetty! Lähetämme tweetin aina kun avaat vetopyynnön.
     account_removed: Twitter tilisi on poistettu.
-    auth_failed: Authorization with Twitter has failed.
+    auth_failed: Authorization has failed.
     link_account:
       text: Yhdistä Twitter tilisi
       tooltip: Jos yhdistät twitter tilisi, lähetämme tweetin aina kun avaat vetopyynnön!

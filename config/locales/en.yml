@@ -364,7 +364,7 @@ en:
   twitter:
     account_linked: Your Twitter account has been linked! We’ll post a tweet whenever you make a contribution.
     account_removed: Your Twitter account has been removed.
-    auth_failed: Authorization with Twitter has failed.
+    auth_failed: Authorization has failed.
     link_account:
       text: Link Your Twitter Account
       tooltip: If you link your Twitter account, we’ll post a tweet whenever you make a contribution!

@@ -364,7 +364,7 @@ ta:
   twitter:
     account_linked: உங்கள் ட்விட்டர் கணக்கு இணைக்கப்பட்டுவிட்டது! நீங்கள் ஒவ்வொரு 'pull request' கொடுக்கும்போது ட்வீட் செய்வோம்.
     account_removed: உங்கள் ட்விட்டர் கணக்கு நீக்கப்பட்டது.
-    auth_failed: Authorization with Twitter has failed.
+    auth_failed: Authorization has failed.
     link_account:
       text: ட்விட்டர் கணக்கை இணைத்திடுங்க
       tooltip: உங்கள் ட்விட்டர் கணக்கை இணைத்தால், நீங்கள் ஒவ்வொரு 'pull request' கொடுக்கும்போது ட்வீட் செய்வோம்

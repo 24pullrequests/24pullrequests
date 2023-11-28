@@ -8,7 +8,7 @@ nb:
     more_info: Siden gir også forslag til prosjekter man kan hjelpe, retningslinjer for å bidra og fremhever gode pull requests som blir gitt hver dag.
     on_github: 'Utviklingen av siden er open-source på GitHub:'
     on_gitter: 'Chat with the community on Gitter:'
-    on_mastodon: 'Vi er også på Twitter:'
+    on_mastodon: 'Vi er også på Mastodon:'
     sponsors:
       details: 24 Pull Requests er mulig takket være hjelpen og donasjonene fra noen flotte sponsorer.
       get_in_touch: 'Om du ønsker å ta kontakt med oss angående sponsing eller noe annet, legg igjen en epost:'
@@ -364,7 +364,7 @@ nb:
   twitter:
     account_linked: Twitter-kontoen din er linket opp! Vi legger ut en tweet når du åpner en pull request.
     account_removed: Twitter-kontoen din er fjernet.
-    auth_failed: Authorization with Twitter has failed.
+    auth_failed: Authorization has failed.
     link_account:
       text: Link opp din Twitter-konto
       tooltip: Om du linker opp Twitter-kontoen din så legger vi et en tweet når du åpner en pull request!

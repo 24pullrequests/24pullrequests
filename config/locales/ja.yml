@@ -364,7 +364,7 @@ ja:
   twitter:
     account_linked: あなたの Twitter アカウントとは既にリンクしています! あなたがOSSへの pull request をする度に私たちはツイートします。
     account_removed: あなたの Twitter アカウントとのリンクを削除しました。
-    auth_failed: Authorization with Twitter has failed.
+    auth_failed: Authorization has failed.
     link_account:
       text: あなたの Twitter アカウントとリンクしましょう
       tooltip: あなたの Twitter アカウントとリンクすると、あなたがOSSへの pull request をする度に私たちはツイートします!

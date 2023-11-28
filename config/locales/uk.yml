@@ -364,7 +364,7 @@ uk:
   twitter:
     account_linked: Ми прив'язали ваш твіттер акаунт! Тепер ми будемо твітити кожен раз, як ви відкриєте пул реквест.
     account_removed: Ми відв'язали ваш твіттер акаунт.
-    auth_failed: Authorization with Twitter has failed.
+    auth_failed: Authorization has failed.
     link_account:
       text: Добавте ваш твіттер акаунт
       tooltip: Якщо ваш твіттер акаунт буде прив'язано, ми зможемо постити в твіттер, кожен раз, як ви відкріваєте пул реквест!

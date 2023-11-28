@@ -364,7 +364,7 @@ zh_Hans:
   twitter:
     account_linked: 你的推特帐号已经成功绑定！我们会在你发起合并请求(pull request)时自动发一条信息。
     account_removed: 你的推特帐号已经成功断开绑定。
-    auth_failed: Authorization with Twitter has failed.
+    auth_failed: Authorization has failed.
     link_account:
       text: 与你的推特帐号绑定
       tooltip: 如果你绑定你的推特帐号，我们会在你发起合并请求(pull request)时自动发一条信息！

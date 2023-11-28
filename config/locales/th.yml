@@ -364,7 +364,7 @@ th:
   twitter:
     account_linked: เชื่อมต่อกับบัญชีทวิตเตอร์ของคุณแล้ว เราจะโพสทุกครั้งที่มีการส่ง pull request
     account_removed: ยกเลิกการเชื่อมต่อบัญชีทวิตเตอร์ของคุณแล้ว
-    auth_failed: Authorization with Twitter has failed.
+    auth_failed: Authorization has failed.
     link_account:
       text: เชื่อมต่อกับบัญชีทวิตเตอร์
       tooltip: ถ้าคุณเชื่อมต่อบัญชีทวิตเตอร์เราจะโพสทุกครั้งที่คุณส่ง pull request
