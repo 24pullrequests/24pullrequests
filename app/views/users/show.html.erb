@@ -15,27 +15,10 @@
             <%= t('dashboard.synchronize') %>
           <% end %>
         </div>
-        <div class="row pull-right">
-          <% if current_user.twitter_linked? %>
-            <%= link_to t("preferences.remove"), twitter_remove_path, method: :delete, class: 'btn btn-danger btn-sm' %>
-          <% else %>
-            <%= link_to t('twitter.link_account.text'), '/auth/twitter', :class => 'btn btn-info btn-sm', rel: 'tooltip', title: t('twitter.link_account.tooltip') %>
-          <% end %>
-        </div>
       </div>
     <% end %>
     <h2 class="username"><%= @user.nickname %></h2>
     <div class="profile-item">
-      <% if @user.twitter_nickname.present? %>
-        <a class="twitter-follow-button" href="https://twitter.com/<%= @user.twitter_nickname %>">
-          <%= t("follow_user", twitter: @user.twitter_nickname) %>
-        </a>
-        <script>
-
-          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-
-        </script>
-      <% end %>
       <%= github_button @user.nickname %>
     </div>
     <% if @user.skills.any? %>

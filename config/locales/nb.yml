@@ -8,7 +8,7 @@ nb:
     more_info: Siden gir også forslag til prosjekter man kan hjelpe, retningslinjer for å bidra og fremhever gode pull requests som blir gitt hver dag.
     on_github: 'Utviklingen av siden er open-source på GitHub:'
     on_gitter: 'Chat with the community on Gitter:'
-    on_twitter: 'Vi er også på Twitter:'
+    on_mastodon: 'Vi er også på Twitter:'
     sponsors:
       details: 24 Pull Requests er mulig takket være hjelpen og donasjonene fra noen flotte sponsorer.
       get_in_touch: 'Om du ønsker å ta kontakt med oss angående sponsing eller noe annet, legg igjen en epost:'

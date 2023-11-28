@@ -15,7 +15,7 @@ class Contribution < ApplicationRecord
 
   has_many :gifts
 
-  scope :year, -> (year) { where('EXTRACT(year FROM contributions.created_at) = ?', year) }
+  scope :year, -> (year) { where('EXTRACT(year FROM contributions.created_at) = ?', year).where('contributions.created_at > ?', Date.parse("01/12/#{year}").midnight) }
   scope :by_language, -> (language) { where('lower(language) = ?', language.downcase) }
   scope :latest, -> (limit) { order('created_at desc').limit(limit) }
   scope :for_aggregation, -> {
@@ -86,14 +86,6 @@ class Contribution < ApplicationRecord
       method: :post,
       body: self.to_json(include: { user: { only: [:uid, :nickname, :name, :blog, :location] } }),
       headers: { 'Content-Type' => 'application/json' }).run
-  end
-
-  def post_tweet
-    return unless created_at.year == Tfpullrequests::Application.current_year
-    user.twitter.update(I18n.t 'pull_request.twitter_message', issue_url: issue_url) if user && user.twitter_linked?
-  rescue => e
-    Rails.logger.error "likely a Twitter API error occurred:\n"\
-                       "#{e.inspect}"
   end
 
   def gifted_state

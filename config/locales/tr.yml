@@ -8,7 +8,7 @@ tr:
     more_info: Bu site ilgili projeleri de destekler ve her gün gönderilen pull request'ler ile onlar destek ve rehber olur.
     on_github: 'Bu sitenin geliştirilmesi GitHub üzerindedir:'
     on_gitter: 'Chat with the community on Gitter:'
-    on_twitter: 'Twitter''da da varız:'
+    on_mastodon: 'Twitter''da da varız:'
     sponsors:
       details: 24 Pull Requests sponsorlar ve bağış yapanlara teşekkürlerini sunar.
       get_in_touch: 'Eğer sponsorluk hakkında bizim ile iletişime geçmek istiyorsanız email adresimiz:'

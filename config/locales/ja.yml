@@ -8,7 +8,7 @@ ja:
     more_info: またこのサイトは、支援するプロジェクトの提案、貢献するためのガイド、毎日投稿される pull request の紹介も提供します。
     on_github: 'このサイトは GitHub 上でオープンソースとして開発されています:'
     on_gitter: 'Chat with the community on Gitter:'
-    on_twitter: 'Twitter アカウントもあります:'
+    on_mastodon: 'Twitter アカウントもあります:'
     sponsors:
       details: 24 Pull Requests はスポンサーのご支援、ご寄付によって成り立っています。
       get_in_touch: 'あなたがスポンサーシップや何か他のことについて連絡を取りたい場合は、私たちにメールを送ってください:'

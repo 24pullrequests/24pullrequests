@@ -8,7 +8,7 @@ it:
     more_info: Il sito segnala progetti sui quali lavorare, guide per contribuire e mette in rilievo ogni giorno le pull request più interessanti.
     on_github: 'Lo sviluppo di questo sito web è open source e disponibile su GitHub:'
     on_gitter: 'Chat with the community on Gitter:'
-    on_twitter: 'Siamo anche su Twitter:'
+    on_mastodon: 'Siamo anche su Twitter:'
     sponsors:
       details: 24 Pull Requests è reso possibile grazie al generoso aiuto e alle donazioni dei nostri sponsor.
       get_in_touch: 'Se vuoi diventare nostro sponsor o per qualsiasi altro inviaci una email:'

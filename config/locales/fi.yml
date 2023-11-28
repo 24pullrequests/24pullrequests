@@ -8,7 +8,7 @@ fi:
     more_info: Sivusto tarjoaa myös suositeltuja projekteja joita auttaa, ohjeita miten avustaa ja korostaa hyviä vetopyyntökä päivittäin.
     on_github: 'Löydät tämän sivuston lähdekoodin GitHubista:'
     on_gitter: 'Chat with the community on Gitter:'
-    on_twitter: 'Löydät meidät myös Twitteristä:'
+    on_mastodon: 'Löydät meidät myös Twitteristä:'
     sponsors:
       details: 24 Pull Requestin teki mahdolliseksi avustukset ja lahjoitukset mahtavilta sponsoreilta.
       get_in_touch: 'Jos haluat olla yhteydessä sponsoroinnista tai mistä tahansa, lähetä meille sähköpostia:'

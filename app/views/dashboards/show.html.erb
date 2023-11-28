@@ -44,12 +44,6 @@
             <span class="label label-info" id="pull-requests-count">
               <%= contributions.count %>
             </span>
-            <a class="twitter-share-button" data-url="<%= user_url(user) %>" data-hashtags="24pr" data-text="<%= t("dashboard.tweet_progress", count: contributions.count) %>" data-via="24pullrequests" href="https://twitter.com/share">Tweet</a>
-            <script>
-
-              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-
-            </script>
           <% end %>
         </h3>
       <% end %>

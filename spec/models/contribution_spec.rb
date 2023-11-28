@@ -88,35 +88,6 @@ describe Contribution, type: :model do
     end
   end
 
-  describe ".post_tweet" do
-    let(:twitter) { double(Twitter::REST::Client) }
-
-    before do
-      allow_any_instance_of(User).to receive(:twitter).and_return(twitter)
-    end
-
-    let(:issue_url) { 'http://github.com/my/issue/url' }
-    let(:contribution) { FactoryBot.create :contribution, :user => user, :issue_url => issue_url }
-
-    context 'if the user has authed their twitter account' do
-      let(:user) { create :user, :twitter_token => 'foo', :twitter_secret => 'bar' }
-
-      it 'tweets the pull request' do
-        expect(twitter).to receive(:update).with(I18n.t 'pull_request.twitter_message', :issue_url => issue_url)
-        contribution.post_tweet
-      end
-    end
-
-    context 'if the user has not authed their twitter account' do
-      let(:user) { create :user }
-
-      it 'silently does not tweet the pull request' do
-        expect(twitter).not_to receive(:update)
-        contribution.post_tweet
-      end
-    end
-  end
-
   describe '#autogift' do
     context 'when PR body contains "24 pull requests"' do
       it 'creates a gift' do

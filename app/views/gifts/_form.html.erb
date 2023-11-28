@@ -4,20 +4,6 @@
       <%= form.input :date, :label => t("gifts.form.date"), :collection => gift_form.giftable_dates %>
     <% end %>
     <%= form.input :contribution_id, :label => t("gifts.form.pull_requests"), :collection => gift_form.contributions_for_select %>
-    <% if @current_user.twitter_linked? %>
-      <div class="form-group">
-        <div class="col-md-offset-2 col-sm-10">
-          <%= form.input :tweet, as: :boolean, label: false, wrapper_html: { class: "checkbox" } do %>
-            <%= form.check_box :tweet, {}, "true", "false" %>
-            <%= t("gifts.form.tweet") %>
-          <% end %>
-        </div>
-      </div>
-    <% else %>
-      <p>
-        <%= t("gifts.link_twitter_desc", link_twitter: link_to(t("gifts.link_twitter"), user_path(current_user))).html_safe %>
-      </p>
-    <% end %>
     <div class="form-group">
       <div class="col-md-offset-2 col-sm-10">
         <%= form.button :submit, t("gifts.form.gift_it"), {class: "btn-success"} %>

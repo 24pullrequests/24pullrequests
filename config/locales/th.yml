@@ -8,7 +8,7 @@ th:
     more_info: เว็บไซน์นี้ยังแนะนำโครงการต่างๆสำหรับการมีส่วนร่วมและแสดง pull request ที่น่าสนใจที่ถูกส่งออกไปทุกๆวัน
     on_github: เว็บไซน์นี้โอเพ่นซอร์สอยู่บน GitHub
     on_gitter: 'Chat with the community on Gitter:'
-    on_twitter: 'พบเราบนทวิตเตอร์:'
+    on_mastodon: 'พบเราบนทวิตเตอร์:'
     sponsors:
       details: 24 Pull Requests สำเร็จได้เพราะผู้บริจาคและผู้สนับสนุนต่างๆ
       get_in_touch: ถ้าคุณอยากเป็นผู้สนับสนุนหลักหรือต้องการติดต่อกรุณาส่งเมลมาที่

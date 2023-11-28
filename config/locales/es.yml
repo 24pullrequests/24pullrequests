@@ -8,7 +8,7 @@ es:
     more_info: El sitio también ofrece una sugerencia de proyectos que necesitan nuestra ayuda, como guías para contribuir y además destacamos los mejores pull requests enviados cada día.
     on_github: 'El desarrollo de este sitio es de código abierto, y está disponible en GitHub:'
     on_gitter: 'Chat with the community on Gitter:'
-    on_twitter: 'También estamos en Twitter:'
+    on_mastodon: 'También estamos en Twitter:'
     sponsors:
       details: 24 Pull Requests es posible gracias a la ayuda y donaciones de nuestros grandes patrocinadores.
       get_in_touch: 'Si deseas estar en contacto con nosotros, acerca de patrocinio u otro tema, envíanos un email a:'

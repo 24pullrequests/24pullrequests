@@ -36,7 +36,7 @@ Over hundreds of different people have contributed to the project, you can see t
 
 The source is hosted at [GitHub](https://github.com/24pullrequests/24pullrequests).
 
-You can report issues/feature requests on [GitHub Issues](https://github.com/24pullrequests/24pullrequests/issues). You can use [GitHub Discussions](https://github.com/24pullrequests/24pullrequests/discussions) to ask questions, follow announcements, and to propose ideas for the 24pullrequests project. Follow the project on Twitter [@24pullrequests](https://twitter.com/24pullrequests).
+You can report issues/feature requests on [GitHub Issues](https://github.com/24pullrequests/24pullrequests/issues). You can use [GitHub Discussions](https://github.com/24pullrequests/24pullrequests/discussions) to ask questions, follow announcements, and to propose ideas for the 24pullrequests project. Follow the project on Mastodon [@24pullrequests](https://mastodon.social/@24pullrequests).
 
 These instructions are for working on the the [24pullrequests.com](https://24pullrequests.com) website. If you just want to be a developer who contributes PRs during the holidays, you don't need to follow these instructions! Go to https://24pullrequests.com and get involved there.
 
@@ -117,7 +117,7 @@ Standard RSpec/Capybara tests are used for testing the application. The tests ca
 
 You can set up the test environment with `bundle exec rake db:test:prepare`, which will create the test DB and populate its schema automatically. You don't need to do this for every test run, but it will let you easily keep up with migrations. If you find a large number of tests are failing you should probably run this.
 
-If you are using the [omniauth](https://github.com/omniauth/omniauth) environment variables (`GITHUB_KEY`, `GITHUB_SECRET`, `TWITTER_KEY`, `TWITTER_SECRET`) for **another** project, you will need to either
+If you are using the [omniauth](https://github.com/omniauth/omniauth) environment variables (`GITHUB_KEY`, `GITHUB_SECRET`) for **another** project, you will need to either
  * unset them before running your tests or
  * reset the omniauth environment variables after creating a GitHub (omniauth) application for this project
 
