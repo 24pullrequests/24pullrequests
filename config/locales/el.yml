@@ -8,7 +8,7 @@ el:
     more_info: Εκτός αυτού, η σελίδα εισηγείται projects τα οποία χρειάζονται βοήθεια, οδηγούς συμβολής και παρουσιάζει pull requests που υποβάλλονται καθημερινά.
     on_github: 'Το κτίσιμο της σελίδας είναι ανοικτό στη GitHub:'
     on_gitter: 'Chat with the community on Gitter:'
-    on_twitter: 'Μπορείτε να μας βρείτε και στο Twitter:'
+    on_mastodon: 'Μπορείτε να μας βρείτε και στο Mastodon:'
     sponsors:
       details: Το 24 Pull Requests έγινε δυνατό με τη βοήθεια και την προσφορά από τους φανταστικούς χορηγούς μας.
       get_in_touch: 'Αν θέλετε να επικοινωνήσετε μαζί μας για χορηγία ή για οτιδήποτε άλλο, στείλτε μας ένα email:'
@@ -364,7 +364,7 @@ el:
   twitter:
     account_linked: Ο λογαριασμός του twitter σου έχει συνδεθεί! Θα στέλνουμε ένα tweet κάθε φορά που ανοίγεις ένα καινούριο pull request.
     account_removed: Ο λογαριασμός του twitter σου έχει αφαιρεθεί.
-    auth_failed: Authorization with Twitter has failed.
+    auth_failed: Authorization has failed.
     link_account:
       text: Σύνδεσε το twitter σου
       tooltip: Αν συνδέσεις το λογαριασμό του twitter σου, θα στέλνουμε ένα tweet κάθε φορά που ανοίγεις ένα καινούριο pull request

@@ -8,7 +8,7 @@ zh_Hant:
     more_info: 24 Pull Requests 也提供一些值得參與的專案的建議、一些貢獻指南，並且展示每天使用者們所送出優秀的 Pull Requests。
     on_github: 我們網站的程式碼放在 GitHub 上：
     on_gitter: 'Chat with the community on Gitter:'
-    on_twitter: 還有個 Twitter 帳號：
+    on_mastodon: 還有個 Mastodon 帳號：
     sponsors:
       details: 24 Pull Requests 接受了他們的支持和幫助。
       get_in_touch: 接洽贊助事宜，請寄信到：
@@ -364,7 +364,7 @@ zh_Hant:
   twitter:
     account_linked: 你的 Twitter 帳號已經成功連結！我們會在你送出  Pull Request 時自動發送一則推文。
     account_removed: 你的 Twitter 帳號連結已經成功移除。
-    auth_failed: Authorization with Twitter has failed.
+    auth_failed: Authorization has failed.
     link_account:
       text: 連結你的 Twitter 帳號
       tooltip: 如果你選擇連結你的 Twitter 帳號，我們會在你送出 Pull Request 時自動發一則推文！

@@ -8,7 +8,7 @@ es:
     more_info: El sitio también ofrece una sugerencia de proyectos que necesitan nuestra ayuda, como guías para contribuir y además destacamos los mejores pull requests enviados cada día.
     on_github: 'El desarrollo de este sitio es de código abierto, y está disponible en GitHub:'
     on_gitter: 'Chat with the community on Gitter:'
-    on_twitter: 'También estamos en Twitter:'
+    on_mastodon: 'También estamos en Mastodon:'
     sponsors:
       details: 24 Pull Requests es posible gracias a la ayuda y donaciones de nuestros grandes patrocinadores.
       get_in_touch: 'Si deseas estar en contacto con nosotros, acerca de patrocinio u otro tema, envíanos un email a:'
@@ -364,7 +364,7 @@ es:
   twitter:
     account_linked: "¡Tu cuenta de Twitter ha sido vinculada! Publicaremos un tweet cada vez que envías un Pull Request."
     account_removed: Tu cuenta de Twitter ha sido desenlazada.
-    auth_failed: Authorization with Twitter has failed.
+    auth_failed: Authorization has failed.
     link_account:
       text: Vincular mi cuenta de Twitter
       tooltip: Si tu cuenta de Twitter está vinculada, publicaremos un tweet cada vez que envíes un Pull Request.

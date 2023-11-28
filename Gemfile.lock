@@ -100,7 +100,6 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
     brakeman (6.0.1)
-    buftok (0.3.0)
     bugsnag (6.26.0)
       concurrent-ruby (~> 1.0)
     builder (3.2.4)
@@ -141,7 +140,6 @@ GEM
     date (3.3.4)
     diff-lcs (1.5.0)
     docile (1.4.0)
-    domain_name (0.6.20231109)
     draper (4.0.2)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -151,7 +149,6 @@ GEM
       ruby2_keywords
     drb (2.2.0)
       ruby2_keywords
-    equalizer (0.0.11)
     erubi (1.12.0)
     ethon (0.16.0)
       ffi (>= 1.15.0)
@@ -176,23 +173,12 @@ GEM
       webrick (~> 1.7)
       websocket-driver (>= 0.6, < 0.8)
     ffi (1.16.3)
-    ffi-compiler (1.0.1)
-      ffi (>= 1.0.0)
-      rake
     foreman (0.87.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashdiff (1.0.1)
     hashie (5.0.0)
     highline (2.1.0)
-    http (5.1.1)
-      addressable (~> 2.8)
-      http-cookie (~> 1.0)
-      http-form_data (~> 2.2)
-      llhttp-ffi (~> 0.4.0)
-    http-cookie (1.0.5)
-      domain_name (~> 0.5)
-    http-form_data (2.3.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     i18n-tasks (1.0.13)
@@ -228,9 +214,6 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
-    llhttp-ffi (0.4.0)
-      ffi-compiler (~> 1.0)
-      rake (~> 13.0)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -241,16 +224,12 @@ GEM
       net-smtp
     marcel (1.0.2)
     matrix (0.4.2)
-    memoizable (0.4.2)
-      thread_safe (~> 0.3, >= 0.3.1)
     mini_mime (1.1.5)
     mini_portile2 (2.8.5)
     minitest (5.20.0)
     msgpack (1.7.2)
     multi_xml (0.6.0)
-    multipart-post (2.3.0)
     mutex_m (0.2.0)
-    naught (1.1.0)
     net-imap (0.4.6)
       date
       net-protocol
@@ -270,12 +249,6 @@ GEM
       racc (~> 1.4)
     nokogiri (1.15.5-x86_64-linux)
       racc (~> 1.4)
-    oauth (1.1.0)
-      oauth-tty (~> 1.0, >= 1.0.1)
-      snaky_hash (~> 2.0)
-      version_gem (~> 1.1)
-    oauth-tty (1.0.5)
-      version_gem (~> 1.1, >= 1.1.1)
     oauth2 (2.0.9)
       faraday (>= 0.17.3, < 3.0)
       jwt (>= 1.0, < 3.0)
@@ -297,15 +270,9 @@ GEM
     omniauth-github (1.4.0)
       omniauth (~> 1.5)
       omniauth-oauth2 (>= 1.4.0, < 2.0)
-    omniauth-oauth (1.2.0)
-      oauth
-      omniauth (>= 1.0, < 3)
     omniauth-oauth2 (1.7.3)
       oauth2 (>= 1.4, < 3)
       omniauth (>= 1.9, < 3)
-    omniauth-twitter (1.4.0)
-      omniauth-oauth (~> 1.1)
-      rack
     parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
@@ -426,7 +393,6 @@ GEM
     simple_form (5.3.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
-    simple_oauth (0.3.1)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -451,21 +417,9 @@ GEM
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
     thor (1.3.0)
-    thread_safe (0.3.6)
     tilt (2.3.0)
     timecop (0.9.8)
     timeout (0.4.1)
-    twitter (8.0.1)
-      addressable (~> 2.3)
-      buftok (~> 0.3.0)
-      equalizer (~> 0.0.11)
-      http (~> 5.1)
-      http-form_data (~> 2.3)
-      llhttp-ffi (~> 0.4.0)
-      memoizable (~> 0.4.0)
-      multipart-post (~> 2.0)
-      naught (~> 1.0)
-      simple_oauth (~> 0.3.0)
     typhoeus (1.4.1)
       ethon (>= 0.9.0)
     tzinfo (2.0.6)
@@ -522,7 +476,6 @@ DEPENDENCIES
   octokit
   omniauth (= 1.9.2)
   omniauth-github
-  omniauth-twitter
   pg (~> 1.5.4)
   puma
   rabl
@@ -544,7 +497,6 @@ DEPENDENCIES
   spring-commands-rspec
   sprockets (< 5.0.0)
   timecop
-  twitter
   typhoeus
   uglifier
   web-console

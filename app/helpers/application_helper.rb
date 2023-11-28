@@ -48,8 +48,8 @@ module ApplicationHelper
     @translations[I18n.locale].with_indifferent_access
   end
 
-  def twitter_url
-    'https://twitter.com/24pullrequests'
+  def mastodon_url
+    'https://mastodon.social/@24pullrequests'
   end
 
   def unconfirmed_email?

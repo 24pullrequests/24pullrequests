@@ -57,9 +57,6 @@ Tfpullrequests::Application.routes.draw do
 
   get '/contributors/map', to: 'contributor_map#show'
 
-  get '/auth/twitter/callback',    to: 'twitter#authorize'
-  delete '/twitter/remove',         to: 'twitter#remove'
-
   match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   get '/auth/failure',             to: 'sessions#failure'
 

@@ -8,7 +8,7 @@ tr:
     more_info: Bu site ilgili projeleri de destekler ve her gün gönderilen pull request'ler ile onlar destek ve rehber olur.
     on_github: 'Bu sitenin geliştirilmesi GitHub üzerindedir:'
     on_gitter: 'Chat with the community on Gitter:'
-    on_twitter: 'Twitter''da da varız:'
+    on_mastodon: 'Mastodon''da da varız:'
     sponsors:
       details: 24 Pull Requests sponsorlar ve bağış yapanlara teşekkürlerini sunar.
       get_in_touch: 'Eğer sponsorluk hakkında bizim ile iletişime geçmek istiyorsanız email adresimiz:'
@@ -364,7 +364,7 @@ tr:
   twitter:
     account_linked: Twitter hesabınız bağlandı! Bir pull request yapıtığız zaman bir tweet atacağız.
     account_removed: Twitter hesabınız kaldırıldı.
-    auth_failed: Authorization with Twitter has failed.
+    auth_failed: Authorization has failed.
     link_account:
       text: Twitter hesabınızı bağlayın.
       tooltip: Eğer Twitter hesabınızı bağlarsanız, Bir pull request yapıtığız zaman bir tweet atacağız!

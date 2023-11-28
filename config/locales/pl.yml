@@ -8,7 +8,7 @@ pl:
     more_info: Witryna sugeruje projekty open source, wyróżnia tickety, które są dobre dla nowych współtwórców, zapewnia <a href='/contributing'>przewodniki dotyczące współtworzenia</a> i promuje dobre wkłady wnoszone każdego dnia.
     on_github: 'Nasz kod znajduje się na GitHub:'
     on_gitter: 'Czatuj ze społecznością na Gitter:'
-    on_twitter: 'Jesteśmy też na Twitter:'
+    on_mastodon: 'Jesteśmy też na Mastodon:'
     sponsors:
       details: 24 Pull Requests było możliwe dzięki pomocy i darowiznom wspaniałych sponsorów.
       get_in_touch: 'Jeśli chcesz skontaktować się w sprawie sponsoringu lub czegokolwiek innego, napisz do nas e-mail:'
@@ -364,7 +364,7 @@ pl:
   twitter:
     account_linked: Twoje konto na Twitterze zostało połączone! Opublikujemy tweeta za każdym razem, gdy wniesiesz wkład.
     account_removed: Twoje konto na Twitterze zostało odłączone.
-    auth_failed: Autoryzacja na Twitterze nie powiodła się.
+    auth_failed: Autoryzacja nie powiodła się.
     link_account:
       text: Połącz swoje konto na Twitterze
       tooltip: Jeśli połączysz swoje konto na Twitterze, za każdym razem, gdy wniesiesz wkład, opublikujemy tweeta!

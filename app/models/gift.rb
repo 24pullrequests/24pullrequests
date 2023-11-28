@@ -3,8 +3,6 @@ class Gift < ApplicationRecord
     attr_writer :default_date
   end
 
-  attr_accessor :tweet
-
   belongs_to :user
   belongs_to :contribution
 

@@ -1,16 +1,4 @@
 module LoginHelpers
-  def mock_twitter_auth
-    OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new(
-      info:        {
-        nickname: Faker::Lorem.word
-      },
-      credentials: {
-        token:  SecureRandom.hex,
-        secret: SecureRandom.hex
-      }
-    )
-  end
-
   def mock_is_admin(admin = false)
     allow_any_instance_of(User).to receive(:admin?).and_return(admin)
   end

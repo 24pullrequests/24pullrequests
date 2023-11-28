@@ -8,7 +8,7 @@ en:
     more_info: The site suggests open projects, highlights tickets that are good for new contributors, provides <a href='/contributing'>guides for contributing</a> and promotes good contributions submitted each day.
     on_github: 'Our code is located on GitHub:'
     on_gitter: 'Chat with the community on Gitter:'
-    on_twitter: 'We are also on Twitter:'
+    on_mastodon: 'We are also on Mastodon:'
     sponsors:
       details: 24 Pull Requests was made possible thanks to the help and donations of some great sponsors.
       get_in_touch: 'If you’d like to get in touch about sponsorship or anything else, drop us an email:'
@@ -364,7 +364,7 @@ en:
   twitter:
     account_linked: Your Twitter account has been linked! We’ll post a tweet whenever you make a contribution.
     account_removed: Your Twitter account has been removed.
-    auth_failed: Authorization with Twitter has failed.
+    auth_failed: Authorization has failed.
     link_account:
       text: Link Your Twitter Account
       tooltip: If you link your Twitter account, we’ll post a tweet whenever you make a contribution!

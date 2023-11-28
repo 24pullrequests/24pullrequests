@@ -8,7 +8,7 @@ it:
     more_info: Il sito segnala progetti sui quali lavorare, guide per contribuire e mette in rilievo ogni giorno le pull request più interessanti.
     on_github: 'Lo sviluppo di questo sito web è open source e disponibile su GitHub:'
     on_gitter: 'Chat with the community on Gitter:'
-    on_twitter: 'Siamo anche su Twitter:'
+    on_mastodon: 'Siamo anche su Mastodon:'
     sponsors:
       details: 24 Pull Requests è reso possibile grazie al generoso aiuto e alle donazioni dei nostri sponsor.
       get_in_touch: 'Se vuoi diventare nostro sponsor o per qualsiasi altro inviaci una email:'
@@ -364,7 +364,7 @@ it:
   twitter:
     account_linked: Il tuo account Twitter è stato collegato! Posteremo un tweet ogni volta che apri una pull request.
     account_removed: Il tuo account Twitter è stato rimosso.
-    auth_failed: Authorization with Twitter has failed.
+    auth_failed: Authorization has failed.
     link_account:
       text: Collega il tuo account Twitter
       tooltip: Se colleghi il tuo account Twitter, posteremo ogni volta che aprirai una pull request!
