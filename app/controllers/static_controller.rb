@@ -4,7 +4,7 @@ class StaticController < ApplicationController
     @featured_projects = Project.includes(:labels).featured.order(Arel.sql("RANDOM()")).limit(6)
     @users = User.with_any_contributions.random.limit(24)
     @orgs = Organisation.with_any_contributions.random.limit(24)
-    @contributions = Contribution.year(current_year).order('created_at desc').limit(6)
+    @contributions = Contribution.year(current_year).where('created_at > ?', Contribution::EARLIEST_PULL_DATE).order('created_at desc').limit(6)
     @mergers = User.mergers(current_year).random.page(1).per(24)
   end
 
