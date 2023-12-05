@@ -8,6 +8,8 @@ services:
 
   app:
     image: tfpullrequests
+    volumes:
+      - .:/usr/src/app
     build:
       context: ./
       dockerfile: Dockerfile
