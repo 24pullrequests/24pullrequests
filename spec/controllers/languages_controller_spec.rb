@@ -33,6 +33,16 @@ describe LanguagesController, type: :controller do
             expect(assigns(:projects)).to eq([])
           end
         end
+
+        context 'when there are more than 20 projects with the language' do
+          let!(:active_projects) { FactoryBot.create_list(:project, 21, inactive:, main_language: language) }
+
+          it 'sets the @projects instance variable to the first 20 projects' do
+            show
+
+            expect(assigns(:projects).count).to eq(20)
+          end
+        end
       end
 
       context 'when there are no active projects' do
