@@ -90,6 +90,47 @@ describe LanguagesController, type: :controller do
           expect(assigns(:users)).to eq([])
         end
       end
+
+      # CONTRIBUTIONS
+      context 'when there exists contributions for the language' do
+        let!(:contribution1) { FactoryBot.create(:contribution, language:) }
+
+        context 'when the contribution is during the current year' do
+          it 'sets the @contributions instance variable sorted by contributions_count' do
+            show
+
+            expect(assigns(:contributions)).to match_array([contribution1])
+          end
+        end
+
+        context 'when the contribution is done during the previous year' do
+          before { contribution1.update(created_at: 2.year.ago) }
+
+          it 'sets the @contributions instance variable to empty' do
+            show
+
+            expect(assigns(:contributions)).to eq([])
+          end
+        end
+      end
+
+      context 'when there exists more than 5 contributions for the language' do
+        let!(:contributions) { FactoryBot.create_list(:contribution, 6, language:) }
+
+        it 'sets the @contributions instance variable to a latest 5 contributions' do
+          show
+
+          expect(assigns(:contributions).count).to eq(5)
+        end
+      end
+
+      context 'when there are no contributions for the language' do
+        it 'sets the @contributions instance variable to empty' do
+          show
+
+          expect(assigns(:contributions)).to eq([])
+        end
+      end
     end
 
     context 'when the language is invalid' do
