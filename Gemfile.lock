@@ -294,7 +294,7 @@ GEM
     rack-google-analytics (1.2.0)
       actionpack
       activesupport
-    rack-session (1.0.1)
+    rack-session (1.0.2)
       rack (< 3)
     rack-test (2.1.0)
       rack (>= 1.3)
