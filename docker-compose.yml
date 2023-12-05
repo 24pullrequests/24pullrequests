@@ -1,4 +1,4 @@
-version: '2'
+version: '3.8'
 services:
 
   database:
@@ -8,6 +8,8 @@ services:
 
   app:
     image: tfpullrequests
+    volumes:
+      - .:/usr/src/app
     build:
       context: ./
       dockerfile: Dockerfile
