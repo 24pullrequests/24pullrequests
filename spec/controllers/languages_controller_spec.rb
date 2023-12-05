@@ -52,6 +52,44 @@ describe LanguagesController, type: :controller do
           expect(assigns(:projects)).to eq([])
         end
       end
+
+      # USERS
+      context 'when there exists contributors for the language' do
+        let(:user1) { FactoryBot.create(:user, contributions_count: 200) }
+        let!(:skill1) { FactoryBot.create(:skill, user: user1, language:) }
+
+        let(:user2) { FactoryBot.create(:user, contributions_count: 230) }
+        let!(:skill2) { FactoryBot.create(:skill, user: user2, language:) }
+
+        it 'sets the @users instance variable sorted by contributions_count' do
+          show
+
+          expect(assigns(:users)).to match_array([user2, user1])
+        end
+      end
+
+      context 'when there exists more than 45 contributors for the language' do
+        let!(:users) do
+          FactoryBot.build_list(:user, 46).each_with_index do |user, _index|
+            FactoryBot.create(:skill, user:, language:)
+            user.save
+          end
+        end
+
+        it 'sets the @users instance variable to a random sample of 45 users' do
+          show
+
+          expect(assigns(:users).count).to eq(45)
+        end
+      end
+
+      context 'when there are no contributors for the language' do
+        it 'sets the @users instance variable to empty' do
+          show
+
+          expect(assigns(:users)).to eq([])
+        end
+      end
     end
 
     context 'when the language is invalid' do
