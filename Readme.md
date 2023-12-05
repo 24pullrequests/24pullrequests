@@ -123,6 +123,12 @@ If you are using the [omniauth](https://github.com/omniauth/omniauth) environmen
 
 as it will use it to learn more about the contributors and for pull requests.
 
+If you are using the Docker setup, you can run the tests:
+
+* Overall tests: `docker compose run app bundle exec rake`
+* Specific tests: `docker compose run app bundle exec rake SPEC=./spec/path/to/test_spec.rb`
+* Specific lines: `docker compose run app bundle exec rake SPEC=./spec/path/to/test_spec.rb:123`
+
 ### Contributing
 
 We are always looking for people to contribute! To find out how to help out, have a look at our [Contributing Guide](CONTRIBUTING.md).
