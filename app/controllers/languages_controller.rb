@@ -1,8 +1,11 @@
 class LanguagesController < ApplicationController
   before_action :set_language
 
+  # GET: /languages/:id
+  # filters the projects, users and contributions by language
+  # sets the @projects, @users and @contributions instance variable
   def show
-    @projects = Project.active.by_language(@language).limit(20)
+    @projects = Project.active.by_language(@language).distinct.limit(20)
     @users = User.order('contributions_count desc').by_language(@language).limit(200).sample(45)
     @contributions = Contribution.by_language(@language).year(current_year).latest(5)
   end
