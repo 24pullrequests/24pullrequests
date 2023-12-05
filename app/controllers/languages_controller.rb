@@ -31,7 +31,7 @@ class LanguagesController < ApplicationController
   def set_language
     @language = detect_language
 
-    fail(ActionController::RoutingError, "#{language} is not a valid language") if @language.nil?
+    raise(ActionController::RoutingError, "#{language} is not a valid language") if @language.nil?
   end
 
   def language
