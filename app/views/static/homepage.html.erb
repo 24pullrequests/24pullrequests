@@ -6,9 +6,11 @@
   </div>
 <% else %>
   <div class="container block intro">
+    <% unless Time.zone.today.between?(Date.new(Tfpullrequests::Application.current_year, 10, 30), Date.new(Tfpullrequests::Application.current_year, 12, 24)) %>
       <div class="row">
         <%= render :partial => 'finished' %>
       </div>
+    <% end %>
 
     <div class="row">
       <div class="col-md-4 intro-block">
