@@ -21,7 +21,7 @@
   <% project.labels.each do |label| %>
     <div class="project-label">
       <%= octicon "tag", :height => 10 %>
-      <%= link_to label.name, "#{project.url}/labels/#{label.name}", target: "_blank" %>
+      <%= link_to label.name, "https://github.com/#{project.github_repository}/labels/#{label.name}", target: "_blank" %>
     </div>
   <% end %>
   <% unless project.contribulator.blank? %>
