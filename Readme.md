@@ -17,6 +17,7 @@ This is the site to help promote the project, highlighting why, how and where to
   - [Development](#development)
     - [Getting Started](#getting-started)
       - [Installing a Local Server](#installing-a-local-server)
+      - [Installing using docker](#installing-using-docker)
     - [Tests](#tests)
     - [Contributing](#contributing)
     - [Translations](#translations)
@@ -110,6 +111,35 @@ Almost there! Now all we have to do is start up the Rails server and point our b
 ```bash
 bundle exec rails s
 ```
+#### Installing using docker
+
+To streamline the installation process and avoid manual setup, you can use Docker and Docker Compose.
+
+Before you begin, ensure you have the following installed:
+* [Docker](https://docs.docker.com/get-docker/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
+
+Clone this repository:
+
+```bash
+git clone git@github.com:24pullrequests/24pullrequests.git
+cd 24pullrequests
+```
+
+Build the docker image using the command below. This will install all the dependencies and create the database.
+
+```bash
+# Build the Docker image and install dependencies
+docker compose build
+```
+
+Once the image is built, you can start the server using the command below.
+
+```bash
+# Pulls PostgreSQL, creates/migrates the database, and starts the server
+docker compose up
+```
+The server is up and available at: http://localhost:3000
 
 ### Tests
 
@@ -122,6 +152,12 @@ If you are using the [omniauth](https://github.com/omniauth/omniauth) environmen
  * reset the omniauth environment variables after creating a GitHub (omniauth) application for this project
 
 as it will use it to learn more about the contributors and for pull requests.
+
+If you are using the Docker setup, you can run the tests:
+
+* Overall tests: `docker compose run app bundle exec rake`
+* Specific tests: `docker compose run app bundle exec rake SPEC=./spec/path/to/test_spec.rb`
+* Specific lines: `docker compose run app bundle exec rake SPEC=./spec/path/to/test_spec.rb:123`
 
 ### Contributing
 

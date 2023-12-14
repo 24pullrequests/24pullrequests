@@ -66,7 +66,6 @@ Tfpullrequests::Application.routes.draw do
   get 'humans', to: 'static#humans'
   get 'api', to: 'static#api'
   get 'contributing', to: 'static#contributing'
-  get '2018', to: 'static#2018'
 
   get '/unsubscribe', to: 'unsubscribes#new', as: :unsubscribe
   post '/unsubscribe', to: 'unsubscribes#create'
