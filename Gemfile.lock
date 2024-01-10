@@ -196,9 +196,9 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       terminal-table (>= 1.5.1)
     io-console (0.7.1)
-    irb (1.11.0)
+    irb (1.11.1)
       rdoc
-      reline (>= 0.3.8)
+      reline (>= 0.4.2)
     jquery-datetimepicker-rails (2.4.1.0)
     jquery-rails (4.6.0)
       rails-dom-testing (>= 1, < 3)
