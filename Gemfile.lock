@@ -102,7 +102,7 @@ GEM
       sassc (>= 2.0.0)
     brakeman (6.1.1)
       racc
-    bugsnag (6.26.1)
+    bugsnag (6.26.2)
       concurrent-ruby (~> 1.0)
     builder (3.2.4)
     capybara (3.39.2)
