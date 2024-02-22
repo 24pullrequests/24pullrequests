@@ -290,7 +290,7 @@ GEM
     rabl (0.16.1)
       activesupport (>= 2.3.14)
     racc (1.7.3)
-    rack (2.2.8)
+    rack (2.2.8.1)
     rack-attack (6.7.0)
       rack (>= 1.0, < 4)
     rack-canonical-host (1.2.0)
