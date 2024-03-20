@@ -85,7 +85,7 @@ GEM
     autoprefixer-rails (10.4.16.0)
       execjs (~> 2)
     base64 (0.2.0)
-    better_html (2.1.0)
+    better_html (2.1.1)
       actionview (>= 6.0)
       activesupport (>= 6.0)
       ast (~> 2.0)
