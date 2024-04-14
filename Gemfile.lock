@@ -173,7 +173,7 @@ GEM
       webrick (~> 1.7)
       websocket-driver (>= 0.6, < 0.8)
     ffi (1.16.3)
-    foreman (0.87.2)
+    foreman (0.88.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashdiff (1.1.0)
