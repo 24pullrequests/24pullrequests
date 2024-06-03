@@ -39,7 +39,6 @@ end
 group :development, :test, :cucumber do
   gem 'i18n-tasks'
   gem 'rspec-rails'
-  gem 'simplecov', require: false
   gem 'rails-controller-testing'
 
   gem 'rspec-its', require: false

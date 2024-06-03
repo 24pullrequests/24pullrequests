@@ -134,7 +134,6 @@ GEM
     database_cleaner-core (2.0.1)
     date (3.3.4)
     diff-lcs (1.5.1)
-    docile (1.4.0)
     draper (4.0.2)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -395,12 +394,6 @@ GEM
     simple_form (5.3.1)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
-    simplecov (0.22.0)
-      docile (~> 1.1)
-      simplecov-html (~> 0.11)
-      simplecov_json_formatter (~> 0.1)
-    simplecov-html (0.12.3)
-    simplecov_json_formatter (0.1.4)
     snaky_hash (2.0.1)
       hashie
       version_gem (~> 1.1, >= 1.1.1)
@@ -496,7 +489,6 @@ DEPENDENCIES
   sassc-rails
   shoulda-matchers
   simple_form
-  simplecov
   spring
   spring-commands-rspec
   sprockets (< 5.0.0)
