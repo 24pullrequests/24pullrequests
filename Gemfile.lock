@@ -252,6 +252,7 @@ GEM
       rack (>= 1.2, < 4)
       snaky_hash (~> 2.0)
       version_gem (~> 1.1)
+    observer (0.1.2)
     octicons (9.6.0)
       nokogiri (>= 1.6.3.1)
     octicons_helper (9.6.0)
@@ -471,6 +472,7 @@ DEPENDENCIES
   jquery-datetimepicker-rails
   jquery-rails
   kaminari
+  observer
   octicons_helper (= 9.6.0)
   octokit
   omniauth (= 1.9.2)
@@ -502,7 +504,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 3.2.2p185
+   ruby 3.3.2p78
 
 BUNDLED WITH
-   2.5.10
+   2.5.11
