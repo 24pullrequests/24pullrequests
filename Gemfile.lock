@@ -96,7 +96,7 @@ GEM
       racc
     bugsnag (6.27.0)
       concurrent-ruby (~> 1.0)
-    builder (3.2.4)
+    builder (3.3.0)
     capybara (3.40.0)
       addressable
       matrix
