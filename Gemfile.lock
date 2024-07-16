@@ -174,7 +174,8 @@ GEM
       activesupport (>= 6.1)
     hashdiff (1.1.0)
     hashie (5.0.0)
-    highline (3.0.1)
+    highline (3.1.0)
+      reline
     i18n (1.14.5)
       concurrent-ruby (~> 1.0)
     i18n-tasks (1.0.14)
