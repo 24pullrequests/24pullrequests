@@ -279,7 +279,7 @@ GEM
     psych (5.1.2)
       stringio
     public_suffix (6.0.1)
-    puma (6.4.2)
+    puma (6.4.3)
       nio4r (~> 2.0)
     rabl (0.16.1)
       activesupport (>= 2.3.14)
