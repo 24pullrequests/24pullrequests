@@ -122,7 +122,7 @@ GEM
       capybara (~> 3.0)
       ferrum (~> 0.15.0)
     dalli (3.2.8)
-    database_cleaner (2.0.2)
+    database_cleaner (2.1.0)
       database_cleaner-active_record (>= 2, < 3)
     database_cleaner-active_record (2.2.0)
       activerecord (>= 5.a)
