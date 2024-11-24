@@ -42,7 +42,15 @@ class Project < ApplicationRecord
   paginates_per 20
 
   def feature!(owner_id)
-    update(featured: true, avatar_url: "https://avatars.githubusercontent.com/u/#{owner_id}?v=3")
+    update(featured: true)
+  end
+
+  def owner_login
+    github_repository.split('/').first
+  end
+
+  def avatar_url
+    "https://github.com/#{owner_login}.png"
   end
 
   def self.find_by_github_repo(repository)
