@@ -146,7 +146,7 @@ GEM
       activerecord (>= 5.a)
       database_cleaner-core (~> 2.0.0)
     database_cleaner-core (2.0.1)
-    date (3.4.0)
+    date (3.4.1)
     diff-lcs (1.5.1)
     draper (4.0.2)
       actionpack (>= 5.0)
