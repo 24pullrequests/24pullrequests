@@ -62,6 +62,7 @@ module ApplicationHelper
     filtered_str = str.gsub(/<!--.*?-->/m, '')
     # Also filter out quoted text which is often used in PR templates
     filtered_str = filtered_str.gsub(/^>.+?$\n?/m, '')
+    # Then render the markdown and apply other transformations
     CommonMarker.render_html(filtered_str, :GITHUB_PRE_LANG, [:tagfilter, :autolink, :table, :strikethrough]).gsub(/(\\n|\\r)/, '<br>').html_safe
   end
 end
