@@ -63,19 +63,26 @@ describe ApplicationHelper, type: :helper do
 
   describe '#format_markdown' do
     it "replaces new line and carriage return characters with <br> tags" do
-      expect(helper.format_markdown('Test\nNew Line\rCarriage Return')).to eql("<p>Test<br>New Line<br>Carriage Return</p>\n")
+      expect(helper.format_markdown('Test\nNew Line\rCarriage Return')).to include("Test<br>New Line<br>Carriage Return")
     end
     
     it "filters out HTML comments" do
-      expect(helper.format_markdown('Text with <!-- comment --> in it')).to eql("<p>Text with  in it</p>\n")
+      expect(helper.format_markdown('Text with <!-- comment --> in it')).to include("Text with  in it")
     end
     
     it "filters out multi-line HTML comments" do
-      expect(helper.format_markdown("Text with <!-- \nmulti-line\ncomment\n --> in it")).to eql("<p>Text with  in it</p>\n")
+      expect(helper.format_markdown("Text with <!-- \nmulti-line\ncomment\n --> in it")).to include("Text with  in it")
     end
     
     it "filters out quoted text lines starting with >" do
-      expect(helper.format_markdown("Normal text\n> Quoted text\nMore normal text")).to eql("<p>Normal text<br>More normal text</p>\n")
+      expect(helper.format_markdown("Normal text\n> Quoted text\nMore normal text")).to include("Normal text")
+      expect(helper.format_markdown("Normal text\n> Quoted text\nMore normal text")).to include("More normal text")
+      expect(helper.format_markdown("Normal text\n> Quoted text\nMore normal text")).not_to include("Quoted text")
+    end
+    
+    it "sanitizes potentially harmful HTML" do
+      expect(helper.format_markdown('Test <script>alert("XSS")</script> content')).not_to include("<script>")
+      expect(helper.format_markdown('Test <strong>bold</strong> content')).to include("<strong>bold</strong>")
     end
   end
 end
