@@ -65,5 +65,17 @@ describe ApplicationHelper, type: :helper do
     it "replaces new line and carriage return characters with <br> tags" do
       expect(helper.format_markdown('Test\nNew Line\rCarriage Return')).to eql("<p>Test<br>New Line<br>Carriage Return</p>\n")
     end
+    
+    it "filters out HTML comments" do
+      expect(helper.format_markdown('Text with <!-- comment --> in it')).to eql("<p>Text with  in it</p>\n")
+    end
+    
+    it "filters out multi-line HTML comments" do
+      expect(helper.format_markdown("Text with <!-- \nmulti-line\ncomment\n --> in it")).to eql("<p>Text with  in it</p>\n")
+    end
+    
+    it "filters out quoted text lines starting with >" do
+      expect(helper.format_markdown("Normal text\n> Quoted text\nMore normal text")).to eql("<p>Normal text<br>More normal text</p>\n")
+    end
   end
 end

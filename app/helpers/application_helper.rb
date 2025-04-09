@@ -58,6 +58,10 @@ module ApplicationHelper
 
   def format_markdown(str)
     return '' if str.blank?
-    CommonMarker.render_html(str, :GITHUB_PRE_LANG, [:tagfilter, :autolink, :table, :strikethrough]).gsub(/(\\n|\\r)/, '<br>').html_safe
+    # Filter out GitHub comments (HTML comments) from PR descriptions
+    filtered_str = str.gsub(/<!--.*?-->/m, '')
+    # Also filter out quoted text which is often used in PR templates
+    filtered_str = filtered_str.gsub(/^>.+?$\n?/m, '')
+    CommonMarker.render_html(filtered_str, :GITHUB_PRE_LANG, [:tagfilter, :autolink, :table, :strikethrough]).gsub(/(\\n|\\r)/, '<br>').html_safe
   end
 end
