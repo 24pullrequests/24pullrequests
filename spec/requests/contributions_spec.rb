@@ -64,4 +64,35 @@ describe 'Contribution', type: :request do
       end
     end
   end
+  
+  describe 'deleting the only manual contribution', js: true do
+    let!(:user) { create :user }
+    let!(:contribution) { create :contribution, :user => user, :state => nil }
+    
+    before do
+      login user
+      # Ensure this is the only contribution
+      expect(user.contributions.count).to eq(1)
+    end
+    
+    it 'can view profile page after deleting manual contribution' do
+      # Delete the contribution
+      visit user_path(user)
+      
+      accept_confirm do
+        click_on "Remove Contribution"
+      end
+      
+      should have_content "Contribution removed successfully!"
+      
+      # Visit the profile page again - this should not cause a 500 error
+      visit user_path(user)
+      
+      # Check that we're on the profile page and it loaded properly
+      should have_content user.nickname
+      should_not have_content 'Edit Contribution'
+      # Check that the contribution count is now 0
+      should have_content "0 contributions"
+    end
+  end
 end

@@ -33,4 +33,9 @@ describe Calendar, type: :model do
     calendar = Calendar.new(giftable_dates, [])
     expect(calendar.start_padding).to eq(-1)
   end
+  
+  it 'returns 0 for start_padding when giftable_dates is empty' do
+    calendar = Calendar.new([], [])
+    expect(calendar.start_padding).to eq(0)
+  end
 end
