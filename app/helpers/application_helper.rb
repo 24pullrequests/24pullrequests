@@ -62,9 +62,12 @@ module ApplicationHelper
     filtered_str = str.gsub(/<!--.*?-->/m, '')
     # Also filter out quoted text which is often used in PR templates
     filtered_str = filtered_str.gsub(/^>.+?$\n?/m, '')
-    # Then render the markdown and apply other transformations
-    rendered_html = CommonMarker.render_html(filtered_str, [:GITHUB_PRE_LANG, :UNSAFE], [:tagfilter, :autolink, :table, :strikethrough]).gsub(/(\\n|\\r)/, '<br>')
-    # Use Rails sanitize to safely handle HTML
-    sanitize(rendered_html)
+    # Then render the markdown and apply other transformations (without UNSAFE flag for security)
+    rendered_html = CommonMarker.render_html(filtered_str, [:GITHUB_PRE_LANG], [:tagfilter, :autolink, :table, :strikethrough])
+    # Convert newlines to <br> tags for better readability
+    rendered_html = rendered_html.gsub(/\n(?!<\/(p|li|ul|ol|h1|h2|h3|h4|h5|h6|blockquote|pre|table|tr|th|td)>)/, '<br>')
+    # Use Rails sanitize with explicit allowed tags and attributes for security
+    sanitize(rendered_html, tags: %w(p br a ul ol li strong em h1 h2 h3 h4 h5 h6 blockquote pre code img table th tr td), 
+                           attributes: %w(href src alt title class))
   end
 end
