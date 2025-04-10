@@ -63,8 +63,6 @@ module ApplicationHelper
     # Also filter out quoted text which is often used in PR templates
     filtered_str = filtered_str.gsub(/^>.+?$\n?/m, '')
     # Then render the markdown and apply other transformations
-    rendered_html = CommonMarker.render_html(filtered_str, :GITHUB_PRE_LANG, [:tagfilter, :autolink, :table, :strikethrough])
-    # Fix newlines and return sanitized HTML
-    sanitize(rendered_html.gsub(/(\\n|\\r)/, '<br>'), tags: %w(p br a ul ol li strong em h1 h2 h3 h4 h5 h6 blockquote pre code img table th tr td), attributes: %w(href src alt title class))
+    CommonMarker.render_html(filtered_str, [:GITHUB_PRE_LANG, :UNSAFE], [:tagfilter, :autolink, :table, :strikethrough]).gsub(/(\\n|\\r)/, '<br>').html_safe
   end
 end
