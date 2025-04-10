@@ -64,10 +64,22 @@ module ApplicationHelper
     filtered_str = filtered_str.gsub(/^>.+?$\n?/m, '')
     # Then render the markdown and apply other transformations (without UNSAFE flag for security)
     rendered_html = CommonMarker.render_html(filtered_str, [:GITHUB_PRE_LANG], [:tagfilter, :autolink, :table, :strikethrough])
-    # Convert newlines to <br> tags for better readability
-    rendered_html = rendered_html.gsub(/\n(?!<\/(p|li|ul|ol|h1|h2|h3|h4|h5|h6|blockquote|pre|table|tr|th|td)>)/, '<br>')
+    # Convert newlines to <br> tags for better readability, but avoid adding them at the end
+    rendered_html = rendered_html.gsub(/\n(?!<\/(p|li|ul|ol|h1|h2|h3|h4|h5|h6|blockquote|pre|table|tr|th|td)>)(?!$)/, '<br>')
+    
     # Use Rails sanitize with explicit allowed tags and attributes for security
-    sanitize(rendered_html, tags: %w(p br a ul ol li strong em h1 h2 h3 h4 h5 h6 blockquote pre code img table th tr td), 
-                           attributes: %w(href src alt title class))
+    # Define specific allowed protocols for links to prevent javascript: URLs
+    sanitize(rendered_html, 
+             tags: %w(p br a ul ol li strong em h1 h2 h3 h4 h5 h6 blockquote pre code img table th tr td), 
+             attributes: {
+               'a' => %w(href title),
+               'img' => %w(src alt title),
+               'table' => %w(class),
+               'all' => %w(class)
+             },
+             protocols: {
+               'a' => {'href' => ['http', 'https', 'mailto']},
+               'img' => {'src' => ['http', 'https']}
+             })
   end
 end
