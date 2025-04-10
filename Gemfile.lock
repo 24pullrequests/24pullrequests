@@ -167,7 +167,7 @@ GEM
       railties (>= 3.0.0)
     faker (3.5.1)
       i18n (>= 1.8.11, < 2)
-    faraday (2.12.2)
+    faraday (2.13.0)
       faraday-net_http (>= 2.0, < 3.5)
       json
       logger
@@ -476,7 +476,7 @@ DEPENDENCIES
   draper
   factory_bot_rails (= 4.11.1)
   faker
-  faraday (= 2.12.2)
+  faraday (= 2.13.0)
   faraday-retry
   foreman
   i18n-tasks
