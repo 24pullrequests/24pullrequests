@@ -86,7 +86,13 @@
       </ul>
       <div class="tab-content">
         <div class="tab-pane" id="gifts">
-          <%= render :partial => 'calendar', :object => @calendar %>
+          <% if @calendar %>
+            <%= render :partial => 'calendar', :object => @calendar %>
+          <% else %>
+            <div class="alert alert-info">
+              No gifts to display in calendar view.
+            </div>
+          <% end %>
         </div>
         <div class="tab-pane" id="contributions">
           <%= render partial: 'users/contribution', collection: @user.contributions_ignoring_organisations.year(current_year).latest(nil), cache: true %>

@@ -43,6 +43,22 @@ describe UsersController, type: :controller do
 
         it { is_expected.to respond_with(200) }
       end
+      
+      context 'when user has no gifts' do
+        let(:user_without_gifts) { create :user }
+        
+        before do
+          # Ensure user has no gifts
+          expect(user_without_gifts.gifts.count).to eq(0)
+          get :show, params: {id: user_without_gifts.nickname}
+        end
+        
+        it { is_expected.to respond_with(200) }
+        
+        it 'assigns nil to calendar' do
+          expect(assigns(:calendar)).to be_nil
+        end
+      end
     end
 
     context 'as json' do

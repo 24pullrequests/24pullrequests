@@ -19,6 +19,7 @@ class Calendar
   alias_method :each_day, :each
 
   def start_padding
-    giftable_dates.first.wday - 1
+    return 0 if giftable_dates.empty?
+    giftable_dates.first.wday - 2
   end
 end
