@@ -98,7 +98,7 @@ GEM
     ast (2.4.3)
     autoprefixer-rails (10.4.21.0)
       execjs (~> 2)
-    base64 (0.2.0)
+    base64 (0.3.0)
     bigdecimal (3.2.0)
     bindex (0.8.1)
     bootsnap (1.18.6)
