@@ -287,10 +287,10 @@ GEM
     parser (3.3.9.0)
       ast (~> 2.4.1)
       racc
-    pg (1.6.0)
-    pg (1.6.0-arm64-darwin)
-    pg (1.6.0-x86_64-darwin)
-    pg (1.6.0-x86_64-linux)
+    pg (1.6.1)
+    pg (1.6.1-arm64-darwin)
+    pg (1.6.1-x86_64-darwin)
+    pg (1.6.1-x86_64-linux)
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
@@ -497,7 +497,7 @@ DEPENDENCIES
   octokit
   omniauth (= 1.9.2)
   omniauth-github
-  pg (~> 1.6.0)
+  pg (~> 1.6.1)
   puma
   rabl
   rack-attack
