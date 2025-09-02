@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '3.3.6'
+ruby '3.4.5'
 
 gem 'rails', '7.2.1.1'
 
@@ -29,6 +29,7 @@ gem 'faraday', '2.13.4'
 gem "commonmarker", "~> 0.23.9"
 gem 'faraday-retry'
 gem 'observer'
+gem 'ostruct'
 
 group :development do
   gem 'spring'
@@ -54,6 +55,8 @@ group :development, :test, :cucumber do
   gem 'webmock', require: false
   gem 'timecop'
   gem 'christmas_tree_formatter'
+  gem 'benchmark'
+
 end
 
 group :production do
