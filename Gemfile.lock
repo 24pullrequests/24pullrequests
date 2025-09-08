@@ -191,7 +191,7 @@ GEM
       thor (~> 1.4)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    hashdiff (1.2.0)
+    hashdiff (1.2.1)
     hashie (5.0.0)
     highline (3.1.2)
       reline
