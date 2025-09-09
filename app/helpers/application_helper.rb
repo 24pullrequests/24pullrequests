@@ -58,6 +58,23 @@ module ApplicationHelper
 
   def format_markdown(str)
     return '' if str.blank?
-    CommonMarker.render_html(str, :GITHUB_PRE_LANG, [:tagfilter, :autolink, :table, :strikethrough]).gsub(/(\\n|\\r)/, '<br>').html_safe
+    # Commonmarker 2.x has a new API
+    # Options are now passed differently
+    options = {
+      parse: {
+        smart: true
+      },
+      render: {
+        github_pre_lang: true,
+        unsafe: false
+      },
+      extension: {
+        tagfilter: true,
+        autolink: true,
+        table: true,
+        strikethrough: true
+      }
+    }
+    Commonmarker.to_html(str, options: options).gsub(/(\\n|\\r)/, '<br>').html_safe
   end
 end
