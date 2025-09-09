@@ -18,8 +18,6 @@ OmniAuth.config.test_mode = true
 
 WebMock.disable_net_connect! allow_localhost: true
 
-FactoryBot.allow_class_lookup = false
-
 require 'capybara/cuprite'
 Capybara.javascript_driver = :cuprite
 Capybara.default_max_wait_time = 10
