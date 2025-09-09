@@ -52,7 +52,7 @@ Tfpullrequests::Application.routes.draw do
   patch '/preferences/update', to: 'dashboards#update_preferences', as: 'update_preferences'
   get :my_suggestions, to: 'users#projects', as: :my_suggestions
 
-  get '/login',  to: 'sessions#new',     as: 'login'
+  match '/login',  to: 'sessions#new',     as: 'login', via: [:get, :post]
   get '/logout', to: 'sessions#destroy', as: 'logout'
 
   get '/contributors/map', to: 'contributor_map#show'

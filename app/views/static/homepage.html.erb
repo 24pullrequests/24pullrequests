@@ -52,11 +52,13 @@
       <div class="row">
         <div class="col-md-12">
           <div class="cta-block">
-            <%= link_to login_path, :class => 'btn cta' do %>
-              <%= octicon "mark-github", :height => 16 %>
-              <strong>
-                <%= t("homepage.login_with_github") %>
-              </strong>
+            <%= form_tag "/auth/#{Rails.application.config.default_provider}", method: :post do %>
+              <%= button_tag :class => 'btn cta', :type => 'submit' do %>
+                <%= octicon "mark-github", :height => 16 %>
+                <strong>
+                  <%= t("homepage.login_with_github") %>
+                </strong>
+              <% end %>
             <% end %>
           </div>
           <%= render :partial => 'shared/social_buttons' %>
