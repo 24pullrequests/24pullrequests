@@ -72,11 +72,11 @@ class Project < ApplicationRecord
   end
 
   def deactivate!
-    update_attribute(:inactive, true)
+    update_column(:inactive, true)
   end
 
   def reactivate!
-    update_attribute(:inactive, false)
+    update_column(:inactive, false)
   end
 
   def issues(nickname, token, months_ago = 6, options = {})

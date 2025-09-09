@@ -54,7 +54,7 @@ describe 'Users', type: :request do
         end
 
         context 'with ignored organisations' do
-          before { user.update_attribute(:ignored_organisations, %w{foo}) }
+          before { user.update_column(:ignored_organisations, %w{foo}) }
 
           it 'filters out repos for ignored organisations but still allows gifts' do
             click_on 'Profile'

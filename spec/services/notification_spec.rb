@@ -41,7 +41,7 @@ describe Notification do
 
       context '#weekly' do
         before do
-          user.update_attribute(:email_frequency, 'weekly')
+          user.update_column(:email_frequency, 'weekly')
         end
 
         it 'sends an email' do

@@ -223,7 +223,7 @@ class User < ApplicationRecord
   end
 
   def update_contribution_count
-    update_attribute(:contributions_count, contributions.year(Tfpullrequests::Application.current_year).for_aggregation.count)
+    update_column(:contributions_count, contributions.year(Tfpullrequests::Application.current_year).for_aggregation.count)
   end
 
   def ignored_organisations_string

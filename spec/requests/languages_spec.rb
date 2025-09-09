@@ -41,9 +41,9 @@ describe 'LanguagesRequests', type: :request do
 
   describe 'viewing a non existing language' do
 
-    it 'should raise an error' do
-      expect { visit language_path('Pugs') }
-        .to raise_error(ActionController::RoutingError, 'Pugs is not a valid language')
+    it 'should show a 404 error' do
+      visit language_path('Pugs')
+      expect(page.status_code).to eq(404)
     end
   end
 end

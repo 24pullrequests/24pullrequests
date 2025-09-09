@@ -1,10 +1,10 @@
 class ProjectsController < ApplicationController
-  before_action :ensure_logged_in, except: [:index, :filter]
+  before_action :ensure_logged_in, except: [:index]
   before_action :set_project, only: [:edit, :update, :destroy, :reactivate]
 
   respond_to :html
   respond_to :json, only: :index
-  respond_to :js, only: [:index, :filter]
+  respond_to :js, only: [:index]
 
   def index
     @labels = labels
@@ -64,7 +64,7 @@ class ProjectsController < ApplicationController
     project = Project.find_by_github_repo(github_url)
 
     if project.present? && project.submitted_by.nil?
-      project.update_attribute(:user_id, current_user.id)
+      project.update(user_id: current_user.id)
       message = "You have successfully claimed <b>#{github_url}</b>".html_safe
     else
       message = "This repository doesn't exist or belongs to someone else"

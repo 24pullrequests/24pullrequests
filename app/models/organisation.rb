@@ -43,6 +43,6 @@ class Organisation < ApplicationRecord
   end
 
   def update_contribution_count
-    update_attribute(:contribution_count, contributions.year(Tfpullrequests::Application.current_year).count)
+    update_column(:contribution_count, contributions.year(Tfpullrequests::Application.current_year).count)
   end
 end

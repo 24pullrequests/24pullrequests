@@ -183,7 +183,7 @@ describe User, type: :model do
     subject { user }
 
     before do
-      subject.update_attribute(:confirmation_token, nil)
+      subject.update_column(:confirmation_token, nil)
     end
 
     it 'generates a confirmation token' do
@@ -226,7 +226,7 @@ describe User, type: :model do
 
     context 'email did change' do
       before do
-        subject.update_attribute(:email, 'another@email.addr')
+        subject.update(email: 'another@email.addr')
       end
 
       it 'resets the confirmed_at field' do
@@ -242,7 +242,7 @@ describe User, type: :model do
         allow(stub_mailer).to receive(:deliver_now)
         expect(ConfirmationMailer).to receive(:confirmation).and_return(stub_mailer)
 
-        subject.update_attribute(:email, 'different@email.addr')
+        subject.update(email: 'different@email.addr')
       end
     end
   end

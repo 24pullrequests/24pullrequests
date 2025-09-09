@@ -41,7 +41,7 @@ namespace :projects do
       puts "#{project.name} - #{score}"
 
       if score > 5
-        project.update_attribute(:inactive, false)
+        project.update_column(:inactive, false)
         count += 1
       end
     end

@@ -4,22 +4,23 @@
 </div>
 
 <div class="alert alert-info">
+  <% year_to_show = Time.zone.today >= Date.new(Tfpullrequests::Application.current_year, 12, 25) ? Tfpullrequests::Application.current_year : Tfpullrequests::Application.current_year - 1 %>
   <h2>
     24 Pull Requests is finished for
-    <%= Tfpullrequests::Application.last_complete_year %>
+    <%= year_to_show %>
   </h2>
   <p>
-    In <%= Tfpullrequests::Application.last_complete_year %>, over 24 days,
+    In <%= year_to_show %>, over 24 days,
     <b>
-      <%= number_with_delimiter contributors_in(Tfpullrequests::Application.last_complete_year) %>
+      <%= number_with_delimiter contributors_in(year_to_show) %>
     </b>
     contributors submitted
     <b>
-      <%= number_with_delimiter contributions_in(Tfpullrequests::Application.last_complete_year) %>
+      <%= number_with_delimiter contributions_in(year_to_show) %>
     </b>
     contributions to
     <b>
-      <%= number_with_delimiter projects_in(Tfpullrequests::Application.last_complete_year) %>
+      <%= number_with_delimiter projects_in(year_to_show) %>
     </b>
     different open source projects.
   </p>
@@ -48,6 +49,6 @@
   </p>
   <hr/>
   See you on
-  <strong>December 1st, <%= Tfpullrequests::Application.last_complete_year+1 %></strong>,
+  <strong>December 1st, <%= year_to_show+1 %></strong>,
   Happy Hacking!
 </div>
