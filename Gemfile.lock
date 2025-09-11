@@ -449,7 +449,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     unicode-display_width (3.1.5)
       unicode-emoji (~> 4.0, >= 4.0.4)
-    unicode-emoji (4.0.4)
+    unicode-emoji (4.1.0)
     uri (1.0.3)
     useragent (0.16.11)
     version_gem (1.1.9)
