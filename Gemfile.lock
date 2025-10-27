@@ -291,7 +291,7 @@ GEM
       oauth2 (>= 1.4, < 3)
       omniauth (~> 2.0)
     ostruct (0.6.3)
-    parser (3.3.9.0)
+    parser (3.3.10.0)
       ast (~> 2.4.1)
       racc
     pg (1.6.2)
