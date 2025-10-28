@@ -1,4 +1,4 @@
-FROM ruby:3.4.5
+FROM ruby:3.4.7
 RUN \
     apt-get update \
     && apt-get install -y --no-install-recommends netcat-traditional nodejs \
