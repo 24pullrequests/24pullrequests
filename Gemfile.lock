@@ -368,7 +368,7 @@ GEM
       tsort (>= 0.2)
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
-    rake (13.3.0)
+    rake (13.3.1)
     rake-compiler-dock (1.9.1)
     rb_sys (0.9.117)
       rake-compiler-dock (= 1.9.1)
