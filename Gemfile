@@ -26,7 +26,7 @@ gem 'rack-attack'
 gem 'bootsnap', require: false
 gem 'sprockets', '< 5.0.0'
 gem 'faraday', '2.14.0'
-gem "commonmarker", "~> 2.5"
+gem "commonmarker", "~> 2.6"
 gem 'faraday-retry'
 gem 'observer'
 gem 'ostruct'
