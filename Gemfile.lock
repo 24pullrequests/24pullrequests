@@ -371,9 +371,9 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.3.1)
-    rake-compiler-dock (1.9.1)
-    rb_sys (0.9.117)
-      rake-compiler-dock (= 1.9.1)
+    rake-compiler-dock (1.10.0)
+    rb_sys (0.9.118)
+      rake-compiler-dock (= 1.10.0)
     rdoc (6.16.1)
       erb
       psych (>= 4.0.0)
