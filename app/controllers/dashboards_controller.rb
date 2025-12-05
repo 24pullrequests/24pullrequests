@@ -47,8 +47,11 @@ class DashboardsController < ApplicationController
   end
 
   def resend_confirmation_email
-    current_user.send_confirmation_email
-    redirect_back(fallback_location: dashboard_path, notice: 'Confirmation email sent. Please check your inbox.')
+    if current_user.send_confirmation_email
+      redirect_back(fallback_location: dashboard_path, notice: 'Confirmation email sent. Please check your inbox.')
+    else
+      redirect_back(fallback_location: dashboard_path, alert: 'Unable to send confirmation email. Please try again later.')
+    end
   end
 
   def confirm_email

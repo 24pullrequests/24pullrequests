@@ -244,6 +244,35 @@ describe User, type: :model do
 
         subject.update(email: 'different@email.addr')
       end
+
+      it 'still saves the user if email delivery fails' do
+        stub_mailer = double(ConfirmationMailer)
+        allow(stub_mailer).to receive(:deliver_now).and_raise(ArgumentError, 'SMTP-AUTH requested but missing user name')
+        allow(ConfirmationMailer).to receive(:confirmation).and_return(stub_mailer)
+
+        expect(subject.update(email: 'different@email.addr')).to be true
+        expect(subject.reload.email).to eq 'different@email.addr'
+      end
+    end
+  end
+
+  describe '.send_confirmation_email' do
+    subject { user }
+
+    it 'returns true on success' do
+      stub_mailer = double(ConfirmationMailer)
+      allow(stub_mailer).to receive(:deliver_now)
+      allow(ConfirmationMailer).to receive(:confirmation).and_return(stub_mailer)
+
+      expect(subject.send_confirmation_email).to be true
+    end
+
+    it 'returns false when email delivery fails' do
+      stub_mailer = double(ConfirmationMailer)
+      allow(stub_mailer).to receive(:deliver_now).and_raise(ArgumentError, 'SMTP-AUTH requested but missing user name')
+      allow(ConfirmationMailer).to receive(:confirmation).and_return(stub_mailer)
+
+      expect(subject.send_confirmation_email).to be false
     end
   end
 

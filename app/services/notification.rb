@@ -14,6 +14,8 @@ class Notification
 
     daily? ? ReminderMailer.daily(user).deliver_now : ReminderMailer.weekly(user).deliver_now
     user.update_column(:last_sent_at, Time.zone.now.utc)
+  rescue StandardError => e
+    Rails.logger.error "Failed to send reminder email to #{user.email}: #{e.message}"
   end
 
   private

@@ -160,6 +160,10 @@ class User < ApplicationRecord
     generate_confirmation_token
     save
     ConfirmationMailer.confirmation(self).deliver_now
+    true
+  rescue StandardError => e
+    Rails.logger.error "Failed to send confirmation email to #{email}: #{e.message}"
+    false
   end
 
   def new_gift(attrs = {})
@@ -258,7 +262,11 @@ class User < ApplicationRecord
     generate_confirmation_token
     self.confirmed_at = nil
 
-    ConfirmationMailer.confirmation(self).deliver_now
+    begin
+      ConfirmationMailer.confirmation(self).deliver_now
+    rescue StandardError => e
+      Rails.logger.error "Failed to send confirmation email to #{email}: #{e.message}"
+    end
   end
 
   def generate_unsubscribe_token
