@@ -25,6 +25,7 @@ module LoginHelpers
   def login(user)
     mock_github_auth(user)
     visit login_path
+    click_button I18n.t('homepage.login_with_github')
   end
 end
 

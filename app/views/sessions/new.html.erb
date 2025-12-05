@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="block text-center">
+      <h2><%= t("homepage.login_with_github") %></h2>
+      <p><%= t('.notice.not_logged_in', default: flash[:notice]) %></p>
+      <div class="cta-block">
+        <%= form_tag "/auth/#{Rails.application.config.default_provider}", method: :post do %>
+          <%= button_tag class: 'btn cta', type: 'submit' do %>
+            <%= octicon "mark-github", height: 16 %>
+            <strong><%= t("homepage.login_with_github") %></strong>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

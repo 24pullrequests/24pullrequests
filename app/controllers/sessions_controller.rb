@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def new
-    redirect_to "/auth/#{Rails.application.config.default_provider}"
+    render :new
   end
 
   def create

@@ -6,7 +6,7 @@ describe SessionsController, type: :controller do
       get :new
     end
 
-    it { is_expected.to redirect_to('/auth/github') }
+    it { is_expected.to render_template(:new) }
   end
 
   describe 'POST create' do
