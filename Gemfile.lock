@@ -241,8 +241,7 @@ GEM
     marcel (1.1.0)
     matrix (0.4.3)
     mini_mime (1.1.5)
-    minitest (6.0.0)
-      prism (~> 1.5)
+    minitest (5.27.0)
     msgpack (1.8.0)
     multi_xml (0.7.2)
       bigdecimal (~> 3.1)
@@ -513,6 +512,7 @@ DEPENDENCIES
   jquery-datetimepicker-rails
   jquery-rails
   kaminari!
+  minitest (< 6)
   observer
   octicons_helper (~> 19.0)
   octokit
