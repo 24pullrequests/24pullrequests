@@ -39,7 +39,7 @@ group :development do
 end
 
 group :development, :test, :cucumber do
-  gem 'minitest', '< 6'
+  gem 'minitest', '< 7'
   gem 'i18n-tasks'
   gem 'rspec-rails'
   gem 'rails-controller-testing'
