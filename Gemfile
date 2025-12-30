@@ -4,7 +4,7 @@ ruby '4.0.0'
 gem 'rails', '8.1.1'
 
 gem 'jquery-rails'
-gem 'pg', '~> 1.6.1'
+gem 'pg', '~> 1.6.3'
 gem 'omniauth', '~> 2.1'
 gem 'omniauth-github'
 gem 'omniauth-rails_csrf_protection'
