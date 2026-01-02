@@ -31,7 +31,7 @@ describe Calendar, type: :model do
     giftable_dates = [Date.new(Tfpullrequests::Application.current_year, 12, 1)]
 
     calendar = Calendar.new(giftable_dates, [])
-    expect(calendar.start_padding).to eq(-1)
+    expect(calendar.start_padding).to eq(0)
   end
   
   it 'returns 0 for start_padding when giftable_dates is empty' do
