@@ -134,8 +134,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    commonmarker (2.6.0)
-      rb_sys (~> 0.9)
     commonmarker (2.6.0-arm64-darwin)
     commonmarker (2.6.0-x86_64-darwin)
     commonmarker (2.6.0-x86_64-linux)
@@ -310,7 +308,7 @@ GEM
     psych (5.3.1)
       date
       stringio
-    public_suffix (7.0.1)
+    public_suffix (7.0.2)
     puma (7.1.0)
       nio4r (~> 2.0)
     rabl (0.17.0)
@@ -375,9 +373,6 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.3.1)
-    rake-compiler-dock (1.10.0)
-    rb_sys (0.9.123)
-      rake-compiler-dock (= 1.10.0)
     rdoc (7.0.3)
       erb
       psych (>= 4.0.0)
