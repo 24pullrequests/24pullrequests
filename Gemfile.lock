@@ -134,8 +134,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    commonmarker (2.6.0)
-      rb_sys (~> 0.9)
     commonmarker (2.6.0-arm64-darwin)
     commonmarker (2.6.0-x86_64-darwin)
     commonmarker (2.6.0-x86_64-linux)
@@ -375,9 +373,6 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.3.1)
-    rake-compiler-dock (1.10.0)
-    rb_sys (0.9.123)
-      rake-compiler-dock (= 1.10.0)
     rdoc (7.0.3)
       erb
       psych (>= 4.0.0)
@@ -433,7 +428,7 @@ GEM
     securerandom (0.4.1)
     shoulda-matchers (7.0.1)
       activesupport (>= 7.1)
-    simple_form (5.4.0)
+    simple_form (5.4.1)
       actionpack (>= 7.0)
       activemodel (>= 7.0)
     snaky_hash (2.0.3)
