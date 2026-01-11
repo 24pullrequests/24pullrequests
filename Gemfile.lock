@@ -454,7 +454,7 @@ GEM
     terminal-table (4.0.0)
       unicode-display_width (>= 1.1.1, < 4)
     thor (1.5.0)
-    tilt (2.6.1)
+    tilt (2.7.0)
     timecop (0.9.10)
     timeout (0.6.0)
     tsort (0.2.0)
