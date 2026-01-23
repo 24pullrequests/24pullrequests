@@ -113,7 +113,7 @@ GEM
       sassc (>= 2.0.0)
     brakeman (7.1.2)
       racc
-    bugsnag (6.28.0)
+    bugsnag (6.29.0)
       concurrent-ruby (~> 1.0)
     builder (3.3.0)
     capybara (3.40.0)
@@ -175,7 +175,7 @@ GEM
     factory_bot_rails (6.5.1)
       factory_bot (~> 6.5)
       railties (>= 6.1.0)
-    faker (3.5.3)
+    faker (3.6.0)
       i18n (>= 1.8.11, < 2)
     faraday (2.14.0)
       faraday-net_http (>= 2.0, < 3.5)
@@ -315,7 +315,7 @@ GEM
       date
       stringio
     public_suffix (7.0.2)
-    puma (7.1.0)
+    puma (7.2.0)
       nio4r (~> 2.0)
     rabl (0.17.0)
       activesupport (>= 2.3.14)
@@ -554,4 +554,4 @@ RUBY VERSION
   ruby 4.0.0
 
 BUNDLED WITH
-  4.0.3
+  4.0.4
