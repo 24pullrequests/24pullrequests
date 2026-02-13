@@ -40,7 +40,7 @@ nb:
       specific: Hent informasjon for en spesifikk organisasjon.
       title: Organisasjoner
     pagination:
-      details: Forespørsler som returnerer flere enheter vil bli paginert til 99 enheter som standard. Du kan kan spesifisere flere sider med ?page parameteren.
+      details: Forespørsler som returnerer flere enheter vil bli paginert til 99 enheter som standard. Du kan spesifisere flere sider med ?page parameteren.
       title: Paginering
     projects:
       details: Alle foreslåtte prosjekter på siden, sortert alfabetisk.
