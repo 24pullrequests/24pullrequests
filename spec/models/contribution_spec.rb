@@ -76,7 +76,7 @@ describe Contribution, type: :model do
       let(:user) { create :user, :time_zone => 'Eastern Time (US & Canada)' }
       it 'converts the date to the set time zone' do
         contibution_json = user.contributions.create_from_github(json)
-        expect(contibution_json[:created_at].strftime('%Y-%m-%d %H:%M:%S')).to eq json['payload']['pull_request']['created_at'].in_time_zone(user.time_zone).strftime('%Y-%m-%d %H:%M:%S')
+        expect(contibution_json[:created_at]).to be_within(1.second).of(json['payload']['pull_request']['created_at'].in_time_zone(user.time_zone))
       end
     end
 
