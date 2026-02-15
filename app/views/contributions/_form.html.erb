@@ -4,7 +4,7 @@
   <%= form.input :repo_name, label: t("contributions.new.form.repo_name"), placeholder: t("contributions.new.form.repo_name_placeholder"), required: true, disabled: !Contribution.in_date_range? %>
   <%= form.input :issue_url, label: t("contributions.new.form.issue_url"), placeholder: t("contributions.new.form.issue_url_placeholder"), disabled: !Contribution.in_date_range? %>
   <%= form.input :body, label: t("contributions.new.form.body"), placeholder: t("contributions.new.form.body_placeholder"), required: true, input_html: {rows: 5}, disabled: !Contribution.in_date_range? %>
-  <%= form.input :created_at, label: t("contributions.new.form.created_at"), as: :string, input_html: { class: "js-datetimepicker", value: form.object.created_at || Time.current.to_formatted_s(:db) }, required: true, disabled: !Contribution.in_date_range? %>
+  <%= form.input :created_at, label: t("contributions.new.form.created_at"), as: :string, input_html: { class: "js-contribution-datetimepicker", value: form.object.created_at || Time.current.to_formatted_s(:db) }, required: true, disabled: !Contribution.in_date_range? %>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10 col-md-4">
       <%= form.submit t("contributions.new.save"), class: "btn btn-success", disabled: !Contribution.in_date_range? %>

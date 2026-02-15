@@ -20,6 +20,10 @@ tr:
   activerecord:
     errors:
       models:
+        contribution:
+          attributes:
+            created_at:
+              invalid_date_range: "%{earliest} ile %{latest} arasında olmalıdır"
         event:
           attributes:
             start_time:

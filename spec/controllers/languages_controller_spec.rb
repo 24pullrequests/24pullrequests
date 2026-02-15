@@ -66,6 +66,29 @@ describe LanguagesController, type: :controller do
 
           expect(assigns(:users)).to match_array([user2, user1])
         end
+
+        it 'uses valid date range counts with aggregation filters applied' do
+          create :aggregation_filter, user: user1, title_pattern: 'Excluded title'
+          create :contribution,
+                 user: user1,
+                 language:,
+                 title: 'Excluded title',
+                 created_at: Date.new(Tfpullrequests::Application.current_year, 12, 24)
+          create :contribution,
+                 user: user1,
+                 language:,
+                 created_at: Date.new(Tfpullrequests::Application.current_year, 12, 25)
+          create :contribution,
+                 user: user2,
+                 language:,
+                 created_at: Date.new(Tfpullrequests::Application.current_year, 12, 10)
+
+          show
+
+          users = assigns(:users).index_by(&:id)
+          expect(users[user1.id].attributes['scoped_contributions_count'].to_i).to eq(0)
+          expect(users[user2.id].attributes['scoped_contributions_count'].to_i).to eq(1)
+        end
       end
 
       context 'when there exists more than 45 contributors for the language' do

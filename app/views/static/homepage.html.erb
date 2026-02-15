@@ -164,7 +164,7 @@
           <div class="title-block">
             <%= octicon "git-pull-request", :class => "mega-octicon", :height => 40 %>
             <h3 class="block-title">
-              <%= t("pull_requests.latest.count", count: number_with_delimiter(Contribution.year(current_year).count)) %>
+              <%= t("pull_requests.latest.count", count: number_with_delimiter(Contribution.valid_date_range(current_year).count)) %>
             </h3>
             <p>
               <%= t("dashboard.pull_requests") %>

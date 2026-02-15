@@ -42,6 +42,56 @@ describe Contribution, type: :model do
       contribution.valid?
       expect(contribution.errors[:body].count).to eq 1
     end
+
+    it 'allows date within valid range (December 1-24)' do
+      contribution.created_at = Date.new(Tfpullrequests::Application.current_year, 12, 10)
+      contribution.valid?
+      expect(contribution.errors[:created_at].count).to eq 0
+    end
+
+    it 'errors on date before December 1st' do
+      contribution.created_at = Date.new(Tfpullrequests::Application.current_year, 11, 30)
+      contribution.valid?
+      expect(contribution.errors[:created_at].count).to eq 1
+    end
+
+    it 'errors on date after December 24th' do
+      contribution.created_at = Date.new(Tfpullrequests::Application.current_year, 12, 25)
+      contribution.valid?
+      expect(contribution.errors[:created_at].count).to eq 1
+    end
+
+    it 'errors on date in a different year' do
+      contribution.created_at = Date.new(Tfpullrequests::Application.current_year - 1, 12, 10)
+      contribution.valid?
+      expect(contribution.errors[:created_at].count).to eq 1
+    end
+
+    it 'allows updating a historical record when created_at is unchanged' do
+      historical_contribution = build(
+        :contribution,
+        user: user,
+        state: nil,
+        created_at: Date.new(Tfpullrequests::Application.current_year - 1, 12, 10)
+      )
+      historical_contribution.save(validate: false)
+
+      historical_contribution.body = 'Updated body'
+      historical_contribution.valid?
+      expect(historical_contribution.errors[:created_at].count).to eq 0
+    end
+
+    it 'allows date on December 1st' do
+      contribution.created_at = Date.new(Tfpullrequests::Application.current_year, 12, 1)
+      contribution.valid?
+      expect(contribution.errors[:created_at].count).to eq 0
+    end
+
+    it 'allows date on December 24th' do
+      contribution.created_at = Date.new(Tfpullrequests::Application.current_year, 12, 24)
+      contribution.valid?
+      expect(contribution.errors[:created_at].count).to eq 0
+    end
   end
 
   describe '#create_from_github' do
@@ -120,6 +170,22 @@ describe Contribution, type: :model do
   end
 
   context '#scopes' do
+    describe '.year' do
+      let(:current_year) { Tfpullrequests::Application.current_year }
+      let!(:dec_1_midnight) { create :contribution, created_at: Date.new(current_year, 12, 1).midnight }
+      let!(:dec_2) { create :contribution, created_at: Date.new(current_year, 12, 2).midnight }
+      let!(:nov_30) { create :contribution, created_at: Date.new(current_year, 11, 30).midnight }
+      let!(:other_year_dec_1) { create :contribution, created_at: Date.new(current_year - 1, 12, 1).midnight }
+
+      it 'includes contributions created at midnight on December 1st' do
+        expect(Contribution.year(current_year)).to include(dec_1_midnight, dec_2)
+      end
+
+      it 'excludes contributions outside the selected year and date boundary' do
+        expect(Contribution.year(current_year)).not_to include(nov_30, other_year_dec_1)
+      end
+    end
+
     describe '.by_language' do
       let!(:contributions) { create_list(:contribution, 4, language: 'Haskell') }
 
@@ -143,7 +209,7 @@ describe Contribution, type: :model do
     describe '.active_users' do
       it 'finds users' do
         user = create :user, nickname: 'foo'
-        create(:contribution, user: user)
+        create(:contribution, user: user, created_at: Date.new(Tfpullrequests::Application.current_year, 12, 10))
 
         expect(Contribution.active_users(Tfpullrequests::Application.current_year).map(&:nickname)).to eq(%w(foo))
       end
@@ -151,7 +217,7 @@ describe Contribution, type: :model do
       it 'prevents nils' do
         nil_user = double('Contribution', user: nil)
         allow(nil_user).to receive(:user_id).and_return(nil)
-        allow(Contribution).to receive(:year).and_return([nil_user, nil_user])
+        allow(Contribution).to receive(:valid_date_range).and_return([nil_user, nil_user])
         expect(Contribution.active_users(Tfpullrequests::Application.current_year)).to eq([])
       end
     end
@@ -164,6 +230,42 @@ describe Contribution, type: :model do
 
       it 'excludes ignored organisations' do
         expect(Contribution.excluding_organisations(%w{fooinc quxinc})).to contain_exactly(bar, baz)
+      end
+    end
+
+    describe '.valid_date_range' do
+      let!(:valid_dec_1) { create :contribution, created_at: Date.new(Tfpullrequests::Application.current_year, 12, 1) }
+      let!(:valid_dec_15) { create :contribution, created_at: Date.new(Tfpullrequests::Application.current_year, 12, 15) }
+      let!(:valid_dec_24) { create :contribution, created_at: Date.new(Tfpullrequests::Application.current_year, 12, 24) }
+      let!(:invalid_nov_30) { create :contribution, created_at: Date.new(Tfpullrequests::Application.current_year, 11, 30) }
+      let!(:invalid_dec_25) { create :contribution, created_at: Date.new(Tfpullrequests::Application.current_year, 12, 25) }
+      let!(:invalid_dec_31) { create :contribution, created_at: Date.new(Tfpullrequests::Application.current_year, 12, 31) }
+
+      it 'returns only contributions within valid date range (Dec 1-24)' do
+        expect(Contribution.valid_date_range).to contain_exactly(valid_dec_1, valid_dec_15, valid_dec_24)
+      end
+
+      it 'excludes contributions before December 1st' do
+        expect(Contribution.valid_date_range).not_to include(invalid_nov_30)
+      end
+
+      it 'excludes contributions on or after December 25th' do
+        expect(Contribution.valid_date_range).not_to include(invalid_dec_25, invalid_dec_31)
+      end
+
+      it 'filters contributions correctly for a specified year' do
+        other_year = Tfpullrequests::Application.current_year - 1
+
+        in_range_other_year_1 = create :contribution, created_at: Date.new(other_year, 12, 5)
+        in_range_other_year_2 = create :contribution, created_at: Date.new(other_year, 12, 20)
+
+        before_range_other_year = create :contribution, created_at: Date.new(other_year, 11, 30)
+        after_range_other_year = create :contribution, created_at: Date.new(other_year, 12, 25)
+
+        results = Contribution.valid_date_range(other_year)
+
+        expect(results).to contain_exactly(in_range_other_year_1, in_range_other_year_2)
+        expect(results).not_to include(before_range_other_year, after_range_other_year, valid_dec_1)
       end
     end
   end

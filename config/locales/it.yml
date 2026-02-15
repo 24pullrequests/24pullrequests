@@ -20,6 +20,10 @@ it:
   activerecord:
     errors:
       models:
+        contribution:
+          attributes:
+            created_at:
+              invalid_date_range: deve essere compreso tra %{earliest} e %{latest}
         event:
           attributes:
             start_time:

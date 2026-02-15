@@ -80,6 +80,13 @@ $ ->
     allowTimes: allowTimes
   )
 
+  $('.js-contribution-datetimepicker').datetimepicker(
+    minDate: currentYear + '/12/01'
+    maxDate: currentYear + '/12/24'
+    startDate: currentYear + '/12/01'
+    allowTimes: allowTimes
+  )
+
   $('.map').each ->
 
     map = new Map(@)
