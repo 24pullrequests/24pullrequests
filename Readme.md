@@ -39,7 +39,7 @@ The source is hosted at [GitHub](https://github.com/24pullrequests/24pullrequest
 
 You can report issues/feature requests on [GitHub Issues](https://github.com/24pullrequests/24pullrequests/issues). You can use [GitHub Discussions](https://github.com/24pullrequests/24pullrequests/discussions) to ask questions, follow announcements, and to propose ideas for the 24pullrequests project. Follow the project on Mastodon [@24pullrequests](https://mastodon.social/@24pullrequests).
 
-These instructions are for working on the the [24pullrequests.com](https://24pullrequests.com) website. If you just want to be a developer who contributes PRs during the holidays, you don't need to follow these instructions! Go to https://24pullrequests.com and get involved there.
+These instructions are for working on the [24pullrequests.com](https://24pullrequests.com) website. If you just want to be a developer who contributes PRs during the holidays, you don't need to follow these instructions! Go to https://24pullrequests.com and get involved there.
 
 ### Getting Started
 
