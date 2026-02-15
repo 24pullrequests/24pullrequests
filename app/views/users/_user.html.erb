@@ -4,7 +4,7 @@
     <div class="username"><%= user.nickname %></div>
     <span class="pr-badge">
       <%= octicon "git-pull-request", :height => 9 %>
-      <%= user.contributions_count %>
+      <%= user.attributes['scoped_contributions_count'] || user.contributions_count %>
     </span>
   <% end %>
 </li>

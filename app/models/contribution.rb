@@ -10,14 +10,19 @@ class Contribution < ApplicationRecord
   validates :body, presence: true, length: { maximum: 300 }, unless: :pull_request?
   validates :repo_name, presence: true, unless: :pull_request?
   validates :created_at, presence: true, unless: :pull_request?
+  validate :created_at_within_valid_range, unless: :pull_request?
 
   after_create :autogift, :post_to_firehose
 
   has_many :gifts
 
-  scope :year, -> (year) { where('EXTRACT(year FROM contributions.created_at) = ?', year).where('contributions.created_at > ?', Date.parse("01/12/#{year}").midnight) }
+  scope :year, -> (year) { where('EXTRACT(year FROM contributions.created_at) = ?', year).where('contributions.created_at >= ?', Date.new(year, 12, 1).midnight) }
   scope :by_language, -> (language) { where('lower(language) = ?', language.downcase) }
   scope :latest, -> (limit) { order('created_at desc').limit(limit) }
+  scope :valid_date_range, -> (year = Tfpullrequests::Application.current_year) {
+    earliest, latest = campaign_date_bounds(year)
+    where('EXTRACT(year FROM contributions.created_at) = ? AND contributions.created_at >= ? AND contributions.created_at < ?', year, earliest, latest)
+  }
   scope :for_aggregation, -> {
     where(AggregationFilter.pull_request_filter)
   }
@@ -26,12 +31,18 @@ class Contribution < ApplicationRecord
     where.not("repo_name ~* ?", %{^(#{excluded_organisations.join("|")})/})
   }
 
-  EARLIEST_PULL_DATE = Date.parse("01/12/#{Tfpullrequests::Application.current_year}").midnight
-  LATEST_PULL_DATE   = Date.parse("25/12/#{Tfpullrequests::Application.current_year}").midnight
+  EARLIEST_PULL_DATE = Date.new(Tfpullrequests::Application.current_year, 12, 1).midnight
+  LATEST_PULL_DATE   = Date.new(Tfpullrequests::Application.current_year, 12, 25).midnight
 
   class << self
+    def campaign_date_bounds(year = Tfpullrequests::Application.current_year)
+      earliest = Date.new(year, 12, 1).midnight
+      latest = Date.new(year, 12, 25).midnight
+      [earliest, latest]
+    end
+
     def active_users(year)
-      User.where(id: Contribution.year(year).map(&:user_id).compact.uniq)
+      User.where(id: Contribution.valid_date_range(year).map(&:user_id).compact.uniq)
     end
 
     def create_from_github(json)
@@ -58,7 +69,8 @@ class Contribution < ApplicationRecord
 
     def in_date_range?
       return false if ENV['DISABLED'].present?
-      EARLIEST_PULL_DATE < Time.zone.now && Time.zone.now < LATEST_PULL_DATE
+      earliest, latest = campaign_date_bounds
+      earliest <= Time.zone.now && Time.zone.now < latest
     end
   end
 
@@ -101,5 +113,27 @@ class Contribution < ApplicationRecord
 
   def github_id
     issue_url.split('/').last
+  end
+
+  def created_at_within_valid_range
+    return unless created_at.present?
+
+    campaign_year =
+      if persisted? && !created_at_changed?
+        created_at.year
+      else
+        Tfpullrequests::Application.current_year
+      end
+    earliest, latest = self.class.campaign_date_bounds(campaign_year)
+    date_label_format = I18n.t('date.formats.long', default: '%B %d')
+
+    unless created_at >= earliest && created_at < latest
+      errors.add(
+        :created_at,
+        :invalid_date_range,
+        earliest: I18n.l(earliest.to_date, format: date_label_format),
+        latest: I18n.l((latest - 1.day).to_date, format: date_label_format)
+      )
+    end
   end
 end

@@ -20,6 +20,10 @@ ta:
   activerecord:
     errors:
       models:
+        contribution:
+          attributes:
+            created_at:
+              invalid_date_range: "%{earliest} மற்றும் %{latest} க்கு இடையில் இருக்க வேண்டும்"
         event:
           attributes:
             start_time:

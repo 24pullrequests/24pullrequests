@@ -20,6 +20,10 @@ zh_Hans:
   activerecord:
     errors:
       models:
+        contribution:
+          attributes:
+            created_at:
+              invalid_date_range: 必须介于 %{earliest} 和 %{latest} 之间
         event:
           attributes:
             start_time:

@@ -55,7 +55,7 @@ class ContributionsController < ApplicationController
   protected
 
   def pull_requests
-    Contribution.year(current_year).order('created_at desc').includes(:user)
+    Contribution.valid_date_range(current_year).order('created_at desc').includes(:user)
   end
 
   def contribution_params

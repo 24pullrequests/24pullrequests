@@ -20,6 +20,10 @@ uk:
   activerecord:
     errors:
       models:
+        contribution:
+          attributes:
+            created_at:
+              invalid_date_range: має бути між %{earliest} та %{latest}
         event:
           attributes:
             start_time:

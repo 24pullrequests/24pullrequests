@@ -20,6 +20,10 @@ fi:
   activerecord:
     errors:
       models:
+        contribution:
+          attributes:
+            created_at:
+              invalid_date_range: täytyy olla välillä %{earliest}–%{latest}
         event:
           attributes:
             start_time:
