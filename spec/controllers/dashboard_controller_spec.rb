@@ -1,6 +1,33 @@
 require 'rails_helper'
 
 describe DashboardsController, type: :controller do
+  describe '#today' do
+    let(:boundary_time) { Time.utc(2026, 1, 1, 0, 30, 0) }
+
+    it 'uses the default timezone date boundary' do
+      Timecop.travel(boundary_time) do
+        default_result = Time.use_zone(Time.zone_default) { Time.zone.now.to_date }
+        pacific_result = Time.use_zone('Pacific Time (US & Canada)') { controller.send(:today) }
+
+        expect(pacific_result).to eq(default_result)
+      end
+    end
+  end
+
+  describe '#giftable_range?' do
+    let(:current_year) { Tfpullrequests::Application.current_year }
+    let(:boundary_time) { Time.utc(current_year, 12, 24, 0, 30, 0) }
+
+    it 'uses the default timezone season boundary' do
+      Timecop.travel(boundary_time) do
+        default_result = Time.use_zone(Time.zone_default) { controller.send(:giftable_range?) }
+        pacific_result = Time.use_zone('Pacific Time (US & Canada)') { controller.send(:giftable_range?) }
+
+        expect(pacific_result).to eq(default_result)
+      end
+    end
+  end
+
   describe 'GET resend_confirmation_email' do
     let(:confirmation_message) do
       'Confirmation email sent. Please check your inbox.'

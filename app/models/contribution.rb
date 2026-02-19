@@ -16,7 +16,7 @@ class Contribution < ApplicationRecord
 
   has_many :gifts
 
-  scope :year, -> (year) { where('EXTRACT(year FROM contributions.created_at) = ?', year).where('contributions.created_at >= ?', Date.new(year, 12, 1).midnight) }
+  scope :year, -> (year) { where('EXTRACT(year FROM contributions.created_at) = ?', year).where('contributions.created_at >= ?', Contribution.season_start_time(year)) }
   scope :by_language, -> (language) { where('lower(language) = ?', language.downcase) }
   scope :latest, -> (limit) { order('created_at desc').limit(limit) }
   scope :valid_date_range, -> (year = Tfpullrequests::Application.current_year) {
@@ -36,9 +36,31 @@ class Contribution < ApplicationRecord
 
   class << self
     def campaign_date_bounds(year = Tfpullrequests::Application.current_year)
-      earliest = Date.new(year, 12, 1).midnight
-      latest = Date.new(year, 12, 25).midnight
+      earliest = season_start_time(year)
+      latest = season_end_time(year)
       [earliest, latest]
+    end
+
+    def season_start_time(year)
+      Time.use_zone(Time.zone_default) do
+        Time.zone.local(year.to_i, 12, 1).midnight
+      end
+    end
+
+    def season_end_time(year)
+      Time.use_zone(Time.zone_default) do
+        Time.zone.local(year.to_i, 12, 25).midnight
+      end
+    end
+
+    def current_time_in_season_zone
+      Time.use_zone(Time.zone_default) do
+        Time.zone.now
+      end
+    end
+
+    def current_date_in_season_zone
+      current_time_in_season_zone.to_date
     end
 
     def active_users(year)
@@ -46,11 +68,25 @@ class Contribution < ApplicationRecord
     end
 
     def create_from_github(json)
-      @new_contribution = create(initialize_from_github(json))
-      user_time_zone = if @new_contribution.user.time_zone.nil? then 'UTC' else @new_contribution.user.time_zone end
-      @new_contribution.update!(:created_at => @new_contribution.created_at.in_time_zone(user_time_zone).strftime('%Y-%m-%d %H:%M:%S'))
-      @new_contribution.save
-      return @new_contribution
+      attributes = initialize_from_github(json)
+      scoped_user_id = current_scope&.scope_for_create&.[]('user_id') || current_scope&.scope_for_create&.[](:user_id)
+      finder_attributes = { issue_url: attributes[:issue_url] }
+      finder_attributes[:user_id] = scoped_user_id if scoped_user_id.present?
+
+      new_contribution = find_or_initialize_by(finder_attributes)
+      new_contribution.assign_attributes(attributes)
+      new_contribution.user_id ||= scoped_user_id if scoped_user_id.present?
+
+      unless new_contribution.save
+        Rails.logger.warn(
+          "Failed to persist contribution from GitHub payload "\
+          "(user_id=#{new_contribution.user_id}, issue_url=#{attributes[:issue_url]}): "\
+          "#{new_contribution.errors.full_messages.join(', ')}"
+        )
+        return nil
+      end
+
+      return new_contribution
     end
 
     def initialize_from_github(json)
@@ -69,8 +105,9 @@ class Contribution < ApplicationRecord
 
     def in_date_range?
       return false if ENV['DISABLED'].present?
+      current_time = current_time_in_season_zone
       earliest, latest = campaign_date_bounds
-      earliest <= Time.zone.now && Time.zone.now < latest
+      earliest <= current_time && current_time < latest
     end
   end
 

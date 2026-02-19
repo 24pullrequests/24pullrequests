@@ -77,11 +77,12 @@ class DashboardsController < ApplicationController
   protected
 
   def today
-    Time.zone.now.to_date
+    Contribution.current_date_in_season_zone
   end
 
   def giftable_range?
-    today > Date.new(Tfpullrequests::Application.current_year, 12, 1) && today < Date.new(Tfpullrequests::Application.current_year, 12, 24)
+    season_today = Contribution.current_date_in_season_zone
+    season_today > Date.new(Tfpullrequests::Application.current_year, 12, 1) && season_today < Date.new(Tfpullrequests::Application.current_year, 12, 24)
   end
 
   def set_email_preferences

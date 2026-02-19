@@ -120,6 +120,37 @@ describe Contribution, type: :model do
     its(:merged)     { should eq json['payload']['pull_request']['merged'] }
     its(:repo_name)  { should eq json['repo']['name'] }
     its(:language)   { should eq json['repo']['language'] }
+
+    it 'is idempotent when the same pull request payload is imported twice' do
+      first_contribution = user.contributions.create_from_github(json)
+
+      expect {
+        duplicate_contribution = user.contributions.create_from_github(json)
+        expect(duplicate_contribution.id).to eq(first_contribution.id)
+      }.to_not change { user.contributions.count }
+    end
+
+    it 'keeps contributions isolated by user when issue_url matches' do
+      other_user = create(:user)
+      first_contribution = user.contributions.create_from_github(json)
+
+      expect {
+        other_contribution = other_user.contributions.create_from_github(json)
+        expect(other_contribution.user_id).to eq(other_user.id)
+        expect(other_contribution.id).to_not eq(first_contribution.id)
+      }.to change { other_user.contributions.count }.by(1)
+    end
+
+    it 'returns nil when persistence fails' do
+      contribution = user.contributions.build
+      errors = double(:errors, full_messages: ['test failure'])
+      allow(Contribution).to receive(:find_or_initialize_by).and_return(contribution)
+      allow(contribution).to receive(:save).and_return(false)
+      allow(contribution).to receive(:errors).and_return(errors)
+      expect(Rails.logger).to receive(:warn).with(/Failed to persist contribution from GitHub payload/)
+
+      expect(user.contributions.create_from_github(json)).to be_nil
+    end
   end
 
   describe 'github body validation' do
@@ -138,9 +169,9 @@ describe Contribution, type: :model do
 
     context 'if the user has set a time zone' do
       let(:user) { create :user, :time_zone => 'Eastern Time (US & Canada)' }
-      it 'converts the date to the set time zone' do
+      it 'keeps the timestamp as received from github' do
         contribution_json = user.contributions.create_from_github(json)
-        expect(contribution_json[:created_at].strftime('%Y-%m-%d %H:%M:%S')).to eq json['payload']['pull_request']['created_at'].in_time_zone(user.time_zone).strftime('%Y-%m-%d %H:%M:%S')
+        expect(contribution_json[:created_at]).to eq json['payload']['pull_request']['created_at']
       end
     end
 
@@ -148,6 +179,26 @@ describe Contribution, type: :model do
       it 'leaves the date as received from github' do
         contribution_json = user.contributions.create_from_github(json)
         expect(contribution_json[:created_at]).to eq json['payload']['pull_request']['created_at']
+      end
+    end
+
+    context 'if current Time.zone changes' do
+      around do |example|
+        original_zone = Time.zone
+        example.run
+        Time.zone = original_zone
+      end
+
+      it 'persists the same timestamp regardless of Time.zone' do
+        Time.zone = 'UTC'
+        contribution_in_utc = create(:user).contributions.create_from_github(json)
+
+        Time.zone = 'Pacific Time (US & Canada)'
+        contribution_in_pacific = create(:user).contributions.create_from_github(json)
+
+        expect(contribution_in_utc[:created_at]).to eq json['payload']['pull_request']['created_at']
+        expect(contribution_in_pacific[:created_at]).to eq json['payload']['pull_request']['created_at']
+        expect(contribution_in_pacific[:created_at]).to eq contribution_in_utc[:created_at]
       end
     end
   end
@@ -233,6 +284,34 @@ describe Contribution, type: :model do
         allow(nil_user).to receive(:user_id).and_return(nil)
         allow(Contribution).to receive(:valid_date_range).and_return([nil_user, nil_user])
         expect(Contribution.active_users(Tfpullrequests::Application.current_year)).to eq([])
+      end
+    end
+
+    describe '.year' do
+      let(:current_year) { Tfpullrequests::Application.current_year }
+      let!(:before_boundary) { create(:contribution, created_at: Time.utc(current_year, 11, 30, 23, 30, 0)) }
+      let!(:after_boundary) { create(:contribution, created_at: Time.utc(current_year, 12, 1, 0, 30, 0)) }
+
+      it 'uses the same season boundary regardless of Time.zone' do
+        utc_ids = Time.use_zone('UTC') { Contribution.year(current_year).pluck(:id) }
+        pacific_ids = Time.use_zone('Pacific Time (US & Canada)') { Contribution.year(current_year).pluck(:id) }
+
+        expect(utc_ids).to contain_exactly(after_boundary.id)
+        expect(pacific_ids).to eq(utc_ids)
+      end
+    end
+
+    describe '.in_date_range?' do
+      let(:current_year) { Tfpullrequests::Application.current_year }
+      let(:boundary_time) { Time.utc(current_year, 12, 24, 0, 30, 0) }
+
+      it 'uses the same season boundary regardless of Time.zone' do
+        Timecop.travel(boundary_time) do
+          default_result = Time.use_zone(Time.zone_default) { Contribution.in_date_range? }
+          pacific_result = Time.use_zone('Pacific Time (US & Canada)') { Contribution.in_date_range? }
+
+          expect(pacific_result).to eq(default_result)
+        end
       end
     end
 

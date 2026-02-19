@@ -4,7 +4,7 @@
 </div>
 
 <div class="alert alert-info">
-  <% year_to_show = Time.zone.today >= Date.new(Tfpullrequests::Application.current_year, 12, 25) ? Tfpullrequests::Application.current_year : Tfpullrequests::Application.current_year - 1 %>
+  <% year_to_show = Contribution.current_date_in_season_zone >= Date.new(Tfpullrequests::Application.current_year, 12, 25) ? Tfpullrequests::Application.current_year : Tfpullrequests::Application.current_year - 1 %>
   <h2>
     24 Pull Requests is finished for
     <%= year_to_show %>

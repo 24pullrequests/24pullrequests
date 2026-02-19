@@ -39,4 +39,27 @@ describe GiftFactory do
       end
     end
   end
+
+  describe 'timezone boundary behavior' do
+    let(:current_year) { Tfpullrequests::Application.current_year }
+
+    it 'uses the season gift sequence instead of request timezone current date' do
+      boundary_time = Time.utc(current_year, 12, 2, 0, 30, 0)
+      user.update!(time_zone: 'Pacific Time (US & Canada)')
+
+      Timecop.travel(boundary_time) do
+        previous_contribution = create(:contribution, user: user, created_at: Time.utc(current_year, 12, 1, 12, 0, 0))
+        target_contribution = create(:contribution, user: user, created_at: Time.utc(current_year, 12, 2, 12, 0, 0))
+        user.gifts.create!(user: user, contribution: previous_contribution, date: Date.new(current_year, 12, 1))
+
+        Time.use_zone('Pacific Time (US & Canada)') do
+          gift = GiftFactory.create!(user, gift_factory, contribution_id: target_contribution.id)
+
+          expect(gift.date).to eq(Date.new(current_year, 12, 2))
+          expect(gift.date).to eq(user.ungifted_dates.first)
+          expect(gift.date).to_not eq(Time.zone.now.to_date)
+        end
+      end
+    end
+  end
 end

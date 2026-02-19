@@ -93,6 +93,29 @@ describe User, type: :model do
     end
   end
 
+  describe '.time_zone validation' do
+    subject(:user) { create :user }
+
+    it 'allows a valid timezone when the timezone changes' do
+      user.time_zone = 'Pacific Time (US & Canada)'
+
+      expect(user).to be_valid
+    end
+
+    it 'rejects an invalid timezone when the timezone changes' do
+      user.time_zone = 'Invalid/Timezone'
+
+      expect(user).to_not be_valid
+      expect(user.errors[:time_zone]).to include('is invalid')
+    end
+
+    it 'allows updating other attributes when timezone has an existing invalid value' do
+      user.update_column(:time_zone, 'Invalid/Timezone')
+
+      expect(user.update(name: 'updated-name')).to be true
+    end
+  end
+
   describe '#admins' do
     let!(:user) { create :user, nickname: 'foobar' }
 
@@ -343,6 +366,32 @@ describe User, type: :model do
 
       it "should not include all the user's filtered requests in their aggregated count" do
         is_expected.to eq(user.contributions.all.count - 1)
+      end
+    end
+
+    context 'when current Time.zone changes around the season boundary' do
+      let(:current_year) { Tfpullrequests::Application.current_year }
+
+      before do
+        create(:contribution, user: user, created_at: Time.utc(current_year, 11, 30, 23, 30, 0))
+        create(:contribution, user: user, created_at: Time.utc(current_year, 12, 1, 0, 30, 0))
+      end
+
+      it 'keeps contribution count consistent across request timezones' do
+        Time.use_zone('UTC') do
+          user.update_contribution_count
+        end
+        utc_count = user.reload.contributions_count
+
+        user.update_column(:contributions_count, 0)
+
+        Time.use_zone('Pacific Time (US & Canada)') do
+          user.update_contribution_count
+        end
+        pacific_count = user.reload.contributions_count
+
+        expect(utc_count).to eq(1)
+        expect(pacific_count).to eq(utc_count)
       end
     end
   end

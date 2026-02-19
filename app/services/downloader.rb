@@ -32,7 +32,14 @@ class Downloader
           language:     pr['repo']['language']
         )
       else
-        user.contributions.create_from_github(pr)
+        new_contribution = user.contributions.create_from_github(pr)
+        next if new_contribution
+
+        issue_url = pr.dig('payload', 'pull_request', '_links', 'html', 'href')
+        Rails.logger.warn(
+          "Skipping pull request payload for user_id=#{user.id}, issue_url=#{issue_url} "\
+          "because it could not be persisted"
+        )
       end
     end
   end

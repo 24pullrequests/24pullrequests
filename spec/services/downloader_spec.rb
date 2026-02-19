@@ -64,6 +64,16 @@ describe Downloader do
       downloader.get_pull_requests
       expect(:gifttoday).to_not be_nil
     end
+
+    it 'logs a warning when pull request persistence fails' do
+      contributions = user.contributions
+      allow(user).to receive(:contributions).and_return(contributions)
+      allow(contributions).to receive(:create_from_github).and_return(nil)
+
+      expect(Rails.logger).to receive(:warn).with(/Skipping pull request payload/)
+
+      downloader.get_pull_requests
+    end
   end
 
   def double_organisation

@@ -44,7 +44,9 @@ module Tfpullrequests
     end
 
     def self.current_year_number
-      Time.zone.today.year
+      Time.use_zone(Time.zone_default) do
+        Time.zone.today.year
+      end
     end
 
     def self.last_complete_year

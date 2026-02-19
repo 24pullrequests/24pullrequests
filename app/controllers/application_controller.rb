@@ -4,11 +4,25 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?, :current_year, :admin?
 
   before_action :set_locale
+  before_action :set_timezone
   before_action :restrict_pages, if: :json_request?
   before_action :title
 
   def set_locale
     I18n.locale = cookies[:locale] || I18n.default_locale
+  end
+
+  def set_timezone
+    unless enable_user_timezone?
+      Time.zone = Time.zone_default
+      return
+    end
+
+    if logged_in?
+      Time.zone = Time.find_zone(current_user.time_zone) || Time.zone_default
+    else
+      Time.zone = Time.zone_default
+    end
   end
 
   def restrict_pages
@@ -21,6 +35,10 @@ class ApplicationController < ActionController::Base
 
   def json_request?
     request.format.json?
+  end
+
+  def enable_user_timezone?
+    ActiveModel::Type::Boolean.new.cast(ENV['ENABLE_USER_TIMEZONE'])
   end
 
   def ensure_logged_in

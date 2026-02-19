@@ -6,8 +6,12 @@ module Admin
 
     def new_pull_request
       user = User.find_by_nickname(params['actor']['login'])
-      user.contributions.create_from_github(params) if user
-      head :ok
+      return head :ok unless user
+
+      contribution = user.contributions.create_from_github(params)
+      return head :ok if contribution
+
+      render json: { error: 'Unable to persist pull request payload' }, status: :unprocessable_entity
     end
 
     private

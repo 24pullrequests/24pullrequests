@@ -30,6 +30,7 @@ class User < ApplicationRecord
   validates :email, presence: true, if: :send_regular_emails?
   validates :email, format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/, allow_blank: true, on: :update }
   validates :unsubscribe_token, presence: true, uniqueness: true
+  validate :time_zone_is_valid, if: :will_save_change_to_time_zone?
 
   def self.find_by_nickname!(nickname)
     by_nickname(nickname).first!
@@ -251,6 +252,13 @@ class User < ApplicationRecord
   end
 
   private
+
+  def time_zone_is_valid
+    return if time_zone.blank?
+    return if Time.find_zone(time_zone)
+
+    errors.add(:time_zone, :invalid)
+  end
 
   def repo_languages
     @repo_languages ||= github_client.user_repository_languages

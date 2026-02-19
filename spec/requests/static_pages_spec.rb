@@ -64,6 +64,31 @@ describe 'Static pages', type: :request do
     end
   end
 
+  describe 'homepage season boundary with user timezone enabled' do
+    let(:user) { create :user, time_zone: 'Pacific Time (US & Canada)' }
+
+    before do
+      mock_is_admin
+    end
+
+    around do |example|
+      original_flag = ENV['ENABLE_USER_TIMEZONE']
+      ENV['ENABLE_USER_TIMEZONE'] = 'true'
+      example.run
+    ensure
+      ENV['ENABLE_USER_TIMEZONE'] = original_flag
+    end
+
+    it 'uses default timezone for finished state rendering' do
+      Timecop.travel(Time.utc(Tfpullrequests::Application.current_year, 12, 25, 0, 30, 0)) do
+        login(user)
+        visit root_path
+
+        expect(page).to have_content("24 Pull Requests is finished for #{Tfpullrequests::Application.current_year}")
+      end
+    end
+  end
+
   describe 'humans.txt' do
     before do
       allow(User).to receive(:contributors).and_return([user])
