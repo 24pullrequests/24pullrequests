@@ -185,8 +185,11 @@ describe Contribution, type: :model do
     context 'if current Time.zone changes' do
       around do |example|
         original_zone = Time.zone
-        example.run
-        Time.zone = original_zone
+        begin
+          example.run
+        ensure
+          Time.zone = original_zone
+        end
       end
 
       it 'persists the same timestamp regardless of Time.zone' do

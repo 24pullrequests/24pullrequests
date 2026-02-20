@@ -19,6 +19,7 @@ This is the site to help promote the project, highlighting why, how and where to
       - [Installing a Local Server](#installing-a-local-server)
       - [Installing using docker](#installing-using-docker)
     - [Tests](#tests)
+    - [Timezone rollout](#timezone-rollout)
     - [Contributing](#contributing)
     - [Translations](#translations)
     - [Code of Conduct](#code-of-conduct)
@@ -158,6 +159,35 @@ If you are using the Docker setup, you can run the tests:
 * Overall tests: `docker compose run app bundle exec rake`
 * Specific tests: `docker compose run app bundle exec rake SPEC=./spec/path/to/test_spec.rb`
 * Specific lines: `docker compose run app bundle exec rake SPEC=./spec/path/to/test_spec.rb:123`
+
+### Timezone rollout
+
+User timezone handling is controlled by `ENABLE_USER_TIMEZONE`.
+
+* Default: disabled (`false`/unset)
+* Enabled: set `ENABLE_USER_TIMEZONE=true`
+* Season and contribution count boundaries remain on the default app timezone
+  (`Time.zone_default`) to keep request and background calculations consistent
+
+To normalize legacy `contributions.created_at` data before enabling the feature:
+
+```bash
+# Preview affected rows (no writes)
+bundle exec rake contributions:normalize_legacy_timestamps:dry_run MAX_ID=<legacy-max-id> YEAR=<year> USER_IDS=<user-id-list>
+
+# Apply changes (writes to DB)
+bundle exec rake contributions:normalize_legacy_timestamps:apply MAX_ID=<legacy-max-id> YEAR=<year> USER_IDS=<user-id-list> ASSUME_CURRENT_TIMEZONE=true BATCH_SIZE=1000
+```
+
+`MAX_ID` and `USER_IDS` are required for `apply` to avoid broad updates.
+`MAX_ID` must be a numeric contribution ID.
+`ASSUME_CURRENT_TIMEZONE=true` is required as an explicit acknowledgement that
+normalization uses each user's current timezone setting.
+Normalized rows are tracked and skipped on subsequent runs, so `apply` can be
+safely re-run after partial failures.
+
+Run `dry_run` first, then only apply to user IDs that have been manually
+verified.
 
 ### Contributing
 
