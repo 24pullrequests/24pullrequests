@@ -133,21 +133,22 @@ describe Contribution, type: :model do
     end
   end
 
-  describe 'created_at dates in proper time zones' do
+  describe 'created_at preserves the original github timestamp' do
     let(:json) { mock_pull_request }
 
-    context 'if the user has set a time zone' do
+    context 'when the user has a non-UTC time zone' do
       let(:user) { create :user, :time_zone => 'Eastern Time (US & Canada)' }
-      it 'converts the date to the set time zone' do
-        contribution_json = user.contributions.create_from_github(json)
-        expect(contribution_json[:created_at].strftime('%Y-%m-%d %H:%M:%S')).to eq json['payload']['pull_request']['created_at'].in_time_zone(user.time_zone).strftime('%Y-%m-%d %H:%M:%S')
+
+      it 'does not shift created_at to the user time zone' do
+        contribution = user.contributions.create_from_github(json)
+        expect(contribution[:created_at]).to eq json['payload']['pull_request']['created_at']
       end
     end
 
-    context 'if the user has not set a time zone' do
+    context 'when the user has no time zone set' do
       it 'leaves the date as received from github' do
-        contribution_json = user.contributions.create_from_github(json)
-        expect(contribution_json[:created_at]).to eq json['payload']['pull_request']['created_at']
+        contribution = user.contributions.create_from_github(json)
+        expect(contribution[:created_at]).to eq json['payload']['pull_request']['created_at']
       end
     end
   end
