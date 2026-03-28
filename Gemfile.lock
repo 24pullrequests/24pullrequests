@@ -304,7 +304,7 @@ GEM
       actionpack (>= 4.2)
       omniauth (~> 2.0)
     ostruct (0.6.3)
-    parser (3.3.11.0)
+    parser (3.3.11.1)
       ast (~> 2.4.1)
       racc
     pg (1.6.3-aarch64-linux)
