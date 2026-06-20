@@ -129,13 +129,6 @@ GEM
       xpath (~> 3.2)
     christmas_tree_formatter (0.1.0)
       rspec-core (~> 3.0)
-    coffee-rails (5.0.0)
-      coffee-script (>= 2.2.0)
-      railties (>= 5.2.0)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.12.2)
     commonmarker (2.8.2-aarch64-linux)
     commonmarker (2.8.2-arm64-darwin)
     commonmarker (2.8.2-x86_64-darwin)
@@ -508,7 +501,6 @@ DEPENDENCIES
   brakeman
   bugsnag
   christmas_tree_formatter
-  coffee-rails
   commonmarker (~> 2.8)
   cuprite
   dalli
