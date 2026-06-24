@@ -38,21 +38,20 @@
 
       this.map.addOverlay(this.pin);
 
-      this.setForm(latitude, longitude);
+      this.setForm(longitude, latitude);
 
       this.map.on("click", function(evt) {
-        console.log(evt);
         var coordinate = evt.coordinate;
         self.pin.setPosition(evt.coordinate);
-        var latlng = ol.proj.transform(coordinate, "EPSG:3857", "EPSG:4326");
-        self.setForm(latlng[0], latlng[1]);
+        var lonlat = ol.proj.transform(coordinate, "EPSG:3857", "EPSG:4326");
+        self.setForm(lonlat[0], lonlat[1]);
       });
     }
   };
 
-  EventMap.prototype.setForm = function(latitude, longitude) {
-    $("#event_longitude").val(latitude);
-    $("#event_latitude").val(longitude);
+  EventMap.prototype.setForm = function(longitude, latitude) {
+    $("#event_longitude").val(longitude);
+    $("#event_latitude").val(latitude);
   };
 
   EventMap.prototype.zoomTo = function(latitude, longitude, zoom) {

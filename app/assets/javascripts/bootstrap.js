@@ -8,7 +8,6 @@ window.languageAutocomplete = function() {
   var projectLanguages = $typeahead.data("source");
 
   $typeahead.typeahead({
-    name: $typeahead.attr("name"),
     local: projectLanguages
   });
 };
