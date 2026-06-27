@@ -1,2 +1,0 @@
-$ ->
-  $('abbr.timeago').timeago()
