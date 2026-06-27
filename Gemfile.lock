@@ -437,8 +437,8 @@ GEM
       addressable (>= 2.3.5)
       faraday (>= 0.17.3, < 3)
     securerandom (0.4.1)
-    shoulda-matchers (7.0.1)
-      activesupport (>= 7.1)
+    shoulda-matchers (8.0.1)
+      activesupport (>= 7.2)
     simple_form (5.4.1)
       actionpack (>= 7.0)
       activemodel (>= 7.0)
@@ -556,4 +556,4 @@ RUBY VERSION
   ruby 4.0.5
 
 BUNDLED WITH
-  4.0.13
+  4.0.15
