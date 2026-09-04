@@ -141,9 +141,9 @@ GEM
       bigdecimal
       rexml
     crass (1.0.7)
-    cuprite (0.17)
+    cuprite (0.18)
       capybara (~> 3.0)
-      ferrum (~> 0.17.0)
+      ferrum (~> 0.18.0)
     dalli (5.1.0)
       logger
     database_cleaner (2.1.0)
@@ -184,11 +184,10 @@ GEM
       net-http (~> 0.5)
     faraday-retry (2.4.0)
       faraday (~> 2.0)
-    ferrum (0.17.2)
+    ferrum (0.18.0)
       addressable (~> 2.5)
       base64 (~> 0.2)
       concurrent-ruby (~> 1.1)
-      webrick (~> 1.7)
       websocket-driver (~> 0.7)
     ffi (1.17.4-aarch64-linux-gnu)
     ffi (1.17.4-arm64-darwin)
@@ -484,7 +483,6 @@ GEM
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
-    webrick (1.9.2)
     websocket-driver (0.8.2)
       base64
       websocket-extensions (>= 0.1.0)
