@@ -190,7 +190,7 @@ uk:
     involved:
       contributing_path: Here's our primer
       description: 'Наразі є багато способів допомогти open source проекту: покращіть документацію, пофіксіть актуальні баги, покращіть код та тести, або додайте нову фічу.'
-      take_a_look: Якщо ви новачок в open source, переглянте це.
+      take_a_look: "Якщо ви новачок в open source, переглянте це. %{contributing_path}."
       title: Долучайся
     join_the_chat: Приєднуетсь к Gitter, %{link_to_chat}.
     login_with_github: Log in with GitHub

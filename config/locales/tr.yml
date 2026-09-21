@@ -190,7 +190,7 @@ tr:
     involved:
       contributing_path: özel sayfa
       description: 'Açık kaynak bir porjeye dahil olmanın bir çok yolu vardır: dökümantasyon içeriklerini geliştirmek, mevcut sorun ve bugları düzeltmek, kod kalitesini ve testlerin kapmasımını arttırmak ya da olmayan bir özellik eklemek.'
-      take_a_look: Eğer açık kaynak kodda yeniyseniz, bir göz atın.
+      take_a_look: "Eğer açık kaynak kodda yeniyseniz, bir göz atın. %{contributing_path}."
       title: Dahil olmak
     join_the_chat: Gitter de konuşmalara dahil olun %{link_to_chat}
     login_with_github: Log in with GitHub

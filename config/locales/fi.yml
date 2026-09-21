@@ -190,7 +190,7 @@ fi:
     involved:
       contributing_path: Here's our primer
       description: On olemassa tuhansia tapoja osallistua avoimen lähdekoodin projekteihin, paranna dokumentointia, auta korjaamaan olemassa olevia ongelmia ja bugeja, paranna koodin laatua ja testaa kattavuus, tai lisää puuttuvia ominaisuuksia.
-      take_a_look: Jos olet uusi avoimelle lähdekoodille, katso tämä.
+      take_a_look: "Jos olet uusi avoimelle lähdekoodille, katso tämä. %{contributing_path}."
       title: Osallistu
     join_the_chat: 'Liity keskusteluun Gitter: %{link_to_chat}.'
     login_with_github: Log in with GitHub

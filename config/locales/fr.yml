@@ -190,7 +190,7 @@ fr:
     involved:
       contributing_path: Here's our primer
       description: Il y a de nombreuses manières de s'impliquer dans un projet open source, améliorer la documentation, aider à corriger des bugs, améliorer la qualité du code et des tests, ou ajouter de nouvelles fonctionnalités.
-      take_a_look: Si l'open source est nouveau pour vous, vous pouvez y jeter un oeil.
+      take_a_look: "Si l'open source est nouveau pour vous, vous pouvez y jeter un oeil. %{contributing_path}."
       title: Participez
     join_the_chat: Rejoignez la discussion sur Gitter, %{link_to_chat}.
     login_with_github: Log in with GitHub

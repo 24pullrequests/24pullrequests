@@ -190,7 +190,7 @@ th:
     involved:
       contributing_path: Here's our primer
       description: คุณสามารถช่วยเหลือโครงการโอเพ่นซอร์สได้หลายวิธี อาทิเช่น การปรับปรุงข้อมูล แก้ไขบัค และเพิ่มลูกเล่นใหม่
-      take_a_look: ถ้าคุณไม่มีประสบการณ์ในโครงการโอเพ่นซอร์สคุณสามารถศึกษาข้อมูลได้จากลิ้งค์ข้างต้น
+      take_a_look: "ถ้าคุณไม่มีประสบการณ์ในโครงการโอเพ่นซอร์สคุณสามารถศึกษาข้อมูลได้จากลิ้งค์ข้างต้น %{contributing_path}"
       title: มีส่วนร่วม
     join_the_chat: พูดคุยได้ใน Gitter, %{link_to_chat}.
     login_with_github: Log in with GitHub

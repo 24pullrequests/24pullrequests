@@ -114,7 +114,7 @@ hi:
     cancel: मैंने अपना मन बदल लिया, मुझे वापस ले जाओ!
     confirm: मिटाने की पुष्टि करें
     email_preferences_link: email प्राथमिकताएं
-    notification_info: अगर आप केवल ईमेल नोटिस प्राप्त करना बंद करना चाहते हैं तो आप अपना %{email प्राथमिकताएं लिंक} बदल सकते हैं।
+    notification_info: अगर आप केवल ईमेल नोटिस प्राप्त करना बंद करना चाहते हैं तो आप अपना %{email_preferences_link} बदल सकते हैं।
     title: अपने खाते को नष्ट करो
   edit: संपादित करें
   email_preferences_link: Email preferences link
@@ -190,7 +190,7 @@ hi:
     involved:
       contributing_path: विशेष पृष्ठ
       description: 'ओपन सोर्स प्रोजेक्ट में शामिल होने के बहुत सारे तरीके हैं: दस्तावेज में सुधार, मुद्दों और बग फिक्सिंग, कोड की गुणवत्ता में सुधार और कवरेज का परीक्षण, या लापता सुविधाओं को जोड़ने के लिए।'
-      take_a_look: यदि आप स्रोत खोलने के लिए नए हैं, तो कृपया एक नज़र डालें।
+      take_a_look: "यदि आप स्रोत खोलने के लिए नए हैं, तो कृपया एक नज़र डालें। %{contributing_path}."
       title: शामिल हो जाएं
     join_the_chat: Gitter पर चैट में शामिल हों, %{link_to_chat}
     login_with_github: GitHub से प्रवेश करें
@@ -214,7 +214,7 @@ hi:
       count: "%{count} %{language} का उपयोग करने वाले डेवलपर्स"
     projects:
       count: "%{count} प्रोजेक्ट %{language} का उपयोग कर रहे हैं"
-      suggest: "%{Language} प्रोजेक्ट का सुझाव दें"
+      suggest: "%{language} प्रोजेक्ट का सुझाव दें"
     projects_count: "%{count} %{language} प्रोजेक्ट्स"
     pull_requests:
       latest:

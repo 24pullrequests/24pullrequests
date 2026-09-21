@@ -190,7 +190,7 @@ de:
     involved:
       contributing_path: Hier ist unser Leitfaden
       description: 'Es gibt viele Wege, sich an einem Open-Source-Projekt zu beteiligen: Du kannst die Dokumentation verbessern, vorhandene Problemberichte bearbeiten, die Code-Qualität oder Testabdeckung verbessern oder auch neue Funktionen hinzufügen.'
-      take_a_look: Schau nach, falls du neu in Open-Source bist.
+      take_a_look: "Schau nach, falls du neu in Open-Source bist. %{contributing_path}."
       title: Mach mit
     join_the_chat: Komm in den Chat im Gitter, %{link_to_chat}.
     login_with_github: Melde dich mit GitHub an

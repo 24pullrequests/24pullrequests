@@ -190,7 +190,7 @@ ru:
     involved:
       contributing_path: Here's our primer
       description: 'Есть множество способов помочь проектам с открытым исходным кодом: совершенствование документации, помощь в исправлении существующих проблем и ошибок, улучшение качества кода и покрытия тестами или добавление новых возможностей.'
-      take_a_look: Если вы новичок в open source, то это продлится недолго.
+      take_a_look: "Если вы новичок в open source, то это продлится недолго. %{contributing_path}."
       title: Примите участие
     join_the_chat: Заходите в наш Gitter чат, %{link_to_chat}.
     login_with_github: Войти через GitHub

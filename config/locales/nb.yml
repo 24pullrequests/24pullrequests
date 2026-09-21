@@ -190,7 +190,7 @@ nb:
     involved:
       contributing_path: spesiell side
       description: 'Det er masse måter du kan involvere deg i et open-source prosjekt på: forbedre dokumentasjon, hjelpe til med å fikse eksisterende problemer og bugs, forbedre kodekvalitet og testdekning, eller legge til manglende features.'
-      take_a_look: Om du er ny i open-source, ta gjerne en titt.
+      take_a_look: "Om du er ny i open-source, ta gjerne en titt. %{contributing_path}."
       title: Involvér deg
     join_the_chat: Bli med i chatten på Gitter, %{link_to_chat} (stort sett engelsk).
     login_with_github: Log in with GitHub
