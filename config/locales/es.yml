@@ -190,7 +190,7 @@ es:
     involved:
       contributing_path: página especial
       description: 'Hay un muchas formas de participar en un proyecto de código abierto: mejorando la documentación, ayudando a resolver los problemas y bugs existentes, mejorando la calidad del código y la cobertura de pruebas, o añadiendo características faltantes.'
-      take_a_look: Si eres nuevo en el mundo Open Source, por favor, échale un vistazo.
+      take_a_look: "Si eres nuevo en el mundo Open Source, por favor, échale un vistazo. %{contributing_path}."
       title: "¡Involúcrate!"
     join_the_chat: Únete al chat en Gitter, %{link_to_chat}.
     login_with_github: Identifícate con GitHub

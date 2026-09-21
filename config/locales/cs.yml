@@ -190,7 +190,7 @@ cs:
     involved:
       contributing_path: special page
       description: 'Je tu mnoho cest jak se zapojit do open source projektů: vylepšete dokumentaci, opravujte problémy a bugy, zlepšete kvalitu kódu a vylepšete testy, nebo přidejte chybějící funkci.'
-      take_a_look: Pokud jste noví v open source, prosím podívejte se.
+      take_a_look: "Pokud jste noví v open source, prosím podívejte se. %{contributing_path}."
       title: Zapojte se
     join_the_chat: Zapojte se do chatu na Gitteru, %{link_to_chat}.
     login_with_github: Log in with GitHub

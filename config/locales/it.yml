@@ -190,7 +190,7 @@ it:
     involved:
       contributing_path: pagina speciale
       description: 'Ci sono un sacco di modi per contribuire ai progetti open source: migliorare la documentazione, sistemare problemi e bugs, migliorare la qualità del codice e dei test o aggiungendo nuove funzionalità.'
-      take_a_look: Se sei nuovo nel mondo dell'open source, inizia da qui.
+      take_a_look: "Se sei nuovo nel mondo dell'open source, inizia da qui. %{contributing_path}."
       title: Partecipa
     join_the_chat: Raggiungici sulla chat Gitter, %{link_to_chat}.
     login_with_github: Log in with GitHub

@@ -190,7 +190,7 @@ ja:
     involved:
       contributing_path: 特別なページ
       description: オープンソースプロジェクトに貢献する方法はたくさんあります。例えば、ドキュメントを向上させる、バグや問題の解決を手助けする、コード品質を向上させたり、テストカバレッジを上げる、不足している機能を追加するなど様々です。
-      take_a_look: もし、新しいオープンソースを探しているようであれば、ぜひ覗いてみてください。
+      take_a_look: "もし、新しいオープンソースを探しているようであれば、ぜひ覗いてみてください。%{contributing_path}。"
       title: 参加しよう
     join_the_chat: Gitter に参加してください（英語）, %{link_to_chat}.
     login_with_github: Log in with GitHub

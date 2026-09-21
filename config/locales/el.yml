@@ -190,7 +190,7 @@ el:
     involved:
       contributing_path: Here's our primer
       description: Υπάρχουν πολλοί τρόποι που μπορείτε να βοηθήσετε ένα project ανοικτού κώδικα, βελτιώνοντας τις οδηγίες χρήσης, διορθώνοντας υπάρχοντα προβλήματα, βελτιώνοντας την ποιότητα του κώδικα και προσθέτοντας tests ή καινούργιες λειτουργίες.
-      take_a_look: Αν τώρα ξεκινάς με τον ανοικτό κώδικα, ρίξε μια ματιά.
+      take_a_look: "Αν τώρα ξεκινάς με τον ανοικτό κώδικα, ρίξε μια ματιά. %{contributing_path}."
       title: Βοηθησε!
     join_the_chat: Λάβε μέρος στη συζήτηση στο Gitter στο %{link_to_chat}.
     login_with_github: Log in with GitHub
