@@ -190,7 +190,7 @@ zh_Hant:
     involved:
       contributing_path: 貢獻指南
       description: 要貢獻開源專案有很多方法，例如：寫更好的教學文件、幫助修復專案中的 issues 和 bugs、改善程式碼品質、寫更多測試以提高覆蓋率，或開發缺少的功能。
-      take_a_look: 如果你是剛接觸開源，快去看看吧。
+      take_a_look: "如果你是剛接觸開源，快去看看吧。%{contributing_path}。"
       title: 共襄盛舉
     join_the_chat: 我們在 Gitter 上有個聊天室：%{link_to_chat}，歡迎你一起來和大家討論、分享。
     login_with_github: 透過 GitHub 登入

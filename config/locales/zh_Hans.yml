@@ -190,7 +190,7 @@ zh_Hans:
     involved:
       contributing_path: 贡献指南
       description: 有很多参与开源项目的途径：提高文档质量，帮助修复存在的问题(issues)和错误(bugs)，提高代码质量和测试覆盖率，或添加缺失的功能
-      take_a_look: 如果你是刚刚接触开源，快去看看吧
+      take_a_look: "如果你是刚刚接触开源，快去看看吧。%{contributing_path}。"
       title: 开始参与
     join_the_chat: 参与 Gitter 上的聊天 %{link_to_chat} 。
     login_with_github: 使用 GitHub 登录

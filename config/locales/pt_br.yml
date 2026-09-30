@@ -190,7 +190,7 @@ pt_br:
     involved:
       contributing_path: Here's our primer
       description: Existem várias maneiras de se envolver em um projeto open source, melhorando a documentação, ajudando a acertar problemas e bugs, melhorando a qualidade do código e a cobertura dos testes ou mesmo adicionardo uma funcionalidade nova
-      take_a_look: Se você é novo em projetos open source, por favor, dê uma olhada.
+      take_a_look: "Se você é novo em projetos open source, por favor, dê uma olhada. %{contributing_path}."
       title: Se envolva
     join_the_chat: Entre no chat no Gitter, %{link_to_chat}.
     login_with_github: Log in with GitHub
@@ -339,7 +339,7 @@ pt_br:
         summary: Índice
       info: Uma das maneiras de incentivar a participação da comunidade open source é deixar que os usuários saibam quais projetos valem a pena contribuir. Nós selecionamos os nossos favoritos, mas estamos sempre abertos a sugestões. Tem alguma ideia? Compartilhe conosco abaixo!
       issue_link_text: abrir um issue
-      suggestion: 'Tem uma sugestão para este projeto? Somos todo ouvidos! Se existe algo que você gostaria de ver acertado, fique a vontade para #{issue_link}.'
+      suggestion: 'Tem uma sugestão para este projeto? Somos todo ouvidos! Se existe algo que você gostaria de ver acertado, fique a vontade para %{issue_link}.'
       title: Sugerir um projeto
     suggest: Não existem projetos nesta linguagem ainda, Porque não %{suggest_link}
     suggest_link_text: Sugira um
