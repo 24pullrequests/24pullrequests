@@ -1,9 +1,16 @@
 require "yaml"
+require "i18n/tasks"
 
 RSpec.describe 'I18n' do
 
   it "has consistent locale files" do
     test_translations
+  end
+
+  it "uses the same interpolations as en in every locale" do
+    inconsistent = I18n::Tasks::BaseTask.new.inconsistent_interpolations
+    expect(inconsistent.leaves.to_a).to be_empty,
+      "#{inconsistent.leaves.count} translations drop or rename a %{variable}, run `i18n-tasks check-consistent-interpolations`"
   end
 
   def collect_combined_keys(hash, ns = nil)
