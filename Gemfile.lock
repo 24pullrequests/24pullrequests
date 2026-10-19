@@ -131,19 +131,21 @@ GEM
       xpath (~> 3.2)
     christmas_tree_formatter (0.1.0)
       rspec-core (~> 3.0)
-    commonmarker (2.10.0-aarch64-linux)
-    commonmarker (2.10.0-arm64-darwin)
-    commonmarker (2.10.0-x86_64-darwin)
-    commonmarker (2.10.0-x86_64-linux)
+    commonmarker (2.10.1)
+      rb_sys (~> 0.9)
+    commonmarker (2.10.1-aarch64-linux)
+    commonmarker (2.10.1-arm64-darwin)
+    commonmarker (2.10.1-x86_64-darwin)
+    commonmarker (2.10.1-x86_64-linux)
     concurrent-ruby (1.3.8)
     connection_pool (3.0.2)
     crack (1.0.1)
       bigdecimal
       rexml
     crass (1.0.7)
-    cuprite (0.18)
+    cuprite (0.19)
       capybara (~> 3.0)
-      ferrum (~> 0.18.0)
+      ferrum (~> 0.19.1)
     dalli (5.2.2)
       logger
     database_cleaner (2.1.0)
@@ -184,11 +186,12 @@ GEM
       net-http (~> 0.5)
     faraday-retry (2.4.0)
       faraday (~> 2.0)
-    ferrum (0.18.0)
+    ferrum (0.19.1)
       addressable (~> 2.5)
       base64 (~> 0.2)
       concurrent-ruby (~> 1.1)
       websocket-driver (~> 0.7)
+    ffi (1.17.4)
     ffi (1.17.4-aarch64-linux-gnu)
     ffi (1.17.4-arm64-darwin)
     ffi (1.17.4-x86_64-darwin)
@@ -243,6 +246,7 @@ GEM
     marcel (1.2.1)
     matrix (0.4.3)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.9)
     minitest (6.0.6)
       drb (~> 2.0)
       prism (~> 1.5)
@@ -262,6 +266,9 @@ GEM
     net-smtp (0.5.2)
       net-protocol
     nio4r (2.7.5)
+    nokogiri (1.19.4)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.19.4-aarch64-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.19.4-arm64-darwin)
@@ -307,6 +314,7 @@ GEM
     parser (3.3.12.0)
       ast (~> 2.4.1)
       racc
+    pg (1.7.0)
     pg (1.7.0-aarch64-linux)
     pg (1.7.0-arm64-darwin)
     pg (1.7.0-x86_64-darwin)
@@ -380,6 +388,9 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.4.2)
+    rake-compiler-dock (1.12.0)
+    rb_sys (0.9.130)
+      rake-compiler-dock (= 1.12.0)
     rbs (4.2.0)
       logger
       prism (>= 1.6.0)
@@ -480,7 +491,7 @@ GEM
       actionview (>= 8.0.0)
       bindex (>= 0.4.0)
       railties (>= 8.0.0)
-    webmock (3.30.0)
+    webmock (3.34.0)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
@@ -556,4 +567,4 @@ RUBY VERSION
   ruby 4.0.7
 
 BUNDLED WITH
-  4.0.15
+  4.1.0.beta2
