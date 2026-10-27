@@ -199,7 +199,7 @@ GEM
     globalid (1.4.0)
       activesupport (>= 6.1)
     hashdiff (1.2.1)
-    hashie (5.1.0)
+    hashie (5.2.0)
       logger
     highline (3.1.2)
       reline
