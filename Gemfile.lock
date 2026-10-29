@@ -131,8 +131,6 @@ GEM
       xpath (~> 3.2)
     christmas_tree_formatter (0.1.0)
       rspec-core (~> 3.0)
-    commonmarker (2.10.1)
-      rb_sys (~> 0.9)
     commonmarker (2.10.1-aarch64-linux)
     commonmarker (2.10.1-arm64-darwin)
     commonmarker (2.10.1-x86_64-darwin)
@@ -178,7 +176,7 @@ GEM
       railties (>= 6.1.0)
     faker (3.8.0)
       i18n (>= 1.8.11, < 2)
-    faraday (2.15.0)
+    faraday (2.15.1)
       faraday-net_http (>= 2.0, < 3.6)
       json
       logger
@@ -246,7 +244,6 @@ GEM
     marcel (1.2.1)
     matrix (0.4.3)
     mini_mime (1.1.5)
-    mini_portile2 (2.8.9)
     minitest (6.0.6)
       drb (~> 2.0)
       prism (~> 1.5)
@@ -266,9 +263,6 @@ GEM
     net-smtp (0.5.2)
       net-protocol
     nio4r (2.7.5)
-    nokogiri (1.19.4)
-      mini_portile2 (~> 2.8.2)
-      racc (~> 1.4)
     nokogiri (1.19.4-aarch64-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.19.4-arm64-darwin)
@@ -388,9 +382,6 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.4.2)
-    rake-compiler-dock (1.12.0)
-    rb_sys (0.9.130)
-      rake-compiler-dock (= 1.12.0)
     rbs (4.2.0)
       logger
       prism (>= 1.6.0)
@@ -523,7 +514,7 @@ DEPENDENCIES
   draper
   factory_bot_rails (= 6.5.1)
   faker
-  faraday (= 2.15.0)
+  faraday (= 2.15.1)
   faraday-retry
   foreman
   i18n-tasks
