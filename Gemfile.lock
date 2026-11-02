@@ -144,7 +144,7 @@ GEM
     cuprite (0.20)
       capybara (~> 3.0)
       ferrum (~> 0.20.1)
-    dalli (5.2.4)
+    dalli (5.2.5)
       logger
     database_cleaner (2.1.0)
       database_cleaner-active_record (>= 2, < 3)
