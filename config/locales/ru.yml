@@ -290,7 +290,7 @@ ru:
   organisations:
     languages: Languages
     members:
-      one: 1 Участник
+      one: "%{count} Участник"
       other: "%{count} Участников"
     pull_requests: "%{count} пулл-реквестов отправленных участниками"
     title: "%{count} приглашенных организаций"

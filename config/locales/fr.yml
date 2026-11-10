@@ -290,7 +290,7 @@ fr:
   organisations:
     languages: langage
     members:
-      one: 1 membre
+      one: "%{count} membre"
       other: "%{count} membres"
     pull_requests: "%{count} pull requests soumises par les membres"
     title: "%{count} organisations impliquées"

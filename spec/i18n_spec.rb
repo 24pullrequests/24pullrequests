@@ -13,6 +13,25 @@ RSpec.describe 'I18n' do
       "#{inconsistent.leaves.count} translations drop or rename a %{variable}, run `i18n-tasks check-consistent-interpolations`"
   end
 
+  [
+    ['fr', 'organisations.members', 0, '0 membre'],
+    ['hi', 'organisations.members', 0, '0 सदस्य'],
+    ['ru', 'organisations.members', 21, '21 Участник'],
+    ['hi', 'dashboard.tweet_progress', 0,
+     'I’ve sent 0 pull request in December! Join me in giving back to open source with @24pullrequests.']
+  ].each do |locale, key, count, expected|
+    it "interpolates #{count} in #{locale}.#{key} with its locale plural rule" do
+      backend = I18n::Backend::Simple.new.extend(I18n::Backend::Pluralization)
+      allow(I18n.config).to receive(:enforce_available_locales).and_return(false)
+      allow(I18n.config).to receive(:backend).and_return(backend)
+      pluralization_path = File.join(Gem::Specification.find_by_name('rails-i18n').gem_dir,
+                                    'rails', 'pluralization', "#{locale}.rb")
+      backend.load_translations(File.expand_path("../config/locales/#{locale}.yml", __dir__), pluralization_path)
+
+      expect(I18n.t(key, locale: locale, count: count)).to eq(expected)
+    end
+  end
+
   def collect_combined_keys(hash, ns = nil)
     hash.collect do |k, v|
       keys = []

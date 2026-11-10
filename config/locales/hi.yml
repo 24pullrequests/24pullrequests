@@ -105,7 +105,7 @@ hi:
     pull_requests: आश्चर्य है कि लोग इस छुट्टी के लिए क्या कर रहे हैं? इन पुल अनुरोधों को देखें, या एक Pull Request अभी सबमिट करें और यहां आपका पता लगाएं!
     synchronize: पुल अनुरोधों को समकालीन करें
     tweet_progress:
-      one: I’ve sent 1 pull request in December! Join me in giving back to open source with @24pullrequests.
+      one: I’ve sent %{count} pull request in December! Join me in giving back to open source with @24pullrequests.
       other: I’ve sent %{count} pull requests in December! Join me in giving back to open source with @24pullrequests.
   deactivate: निष्क्रिय करें
   delete: हटाऐं
@@ -290,7 +290,7 @@ hi:
   organisations:
     languages: बोली
     members:
-      one: 1 सदस्य
+      one: "%{count} सदस्य"
       other: "%{count} सदस्य"
     pull_requests: "%{count} सदस्यों द्वारा सबमिट किए गए Requests खींचें"
     title: "%{count} संगठन शामिल हैं"
