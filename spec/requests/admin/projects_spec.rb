@@ -6,7 +6,7 @@ describe 'Admin Projects', type: :request do
   subject { page }
 
   before do
-    mock_is_admin
+    mock_is_admin(true)
     login(user)
 
     visit admin_projects_path
@@ -46,6 +46,32 @@ describe 'Admin Projects', type: :request do
       first(:link, 'Deactivate').click
 
       is_expected.to have_content "#{projects.first.name} has been deactivated."
+    end
+  end
+
+  describe 'as a non-admin' do
+    let(:project) { projects.first }
+
+    before { mock_is_admin(false) }
+
+    it 'cannot view the index' do
+      visit admin_projects_path
+
+      expect(page.status_code).to eq(403)
+    end
+
+    it 'cannot update a project' do
+      page.driver.submit :patch, admin_project_path(project), project: { name: 'Hijacked' }
+
+      expect(page.status_code).to eq(403)
+      expect(project.reload.name).to eq('apples')
+    end
+
+    it 'cannot deactivate a project' do
+      page.driver.submit :delete, admin_project_path(project), {}
+
+      expect(page.status_code).to eq(403)
+      expect(project.reload.inactive).to be_falsey
     end
   end
 end

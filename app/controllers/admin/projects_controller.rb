@@ -45,7 +45,7 @@ module Admin
     end
 
     def ensure_admin
-      current_user.admin?
+      head :forbidden unless current_user.admin?
     end
   end
 end
