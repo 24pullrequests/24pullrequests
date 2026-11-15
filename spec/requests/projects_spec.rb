@@ -39,6 +39,21 @@ describe 'Projects', type: :request do
       click_on 'My Suggestions'
       is_expected.to have_content('akira/24pullrequests')
     end
+
+    it 'rejects a javascript homepage' do
+      client = double(:github_client, repository: nil, community_profile: nil)
+      allow(GithubClient).to receive(:new).and_return(client)
+
+      page.driver.submit :post, projects_path, project: {
+        name: 'akira/24pullrequests',
+        github_url: 'http://github.com/akira/24pullrequests',
+        description: Faker::Lorem.paragraphs.first[0..199],
+        main_language: 'Ruby',
+        homepage: 'javascript:alert(1)'
+      }
+
+      expect(Project.count).to eq(0)
+    end
   end
 
   describe 'filtering the project list', :js do
