@@ -39,6 +39,16 @@ describe Project, type: :model do
       project.github_url = 'https://github.com//'
       expect(project.valid?).to be false
     end
+
+    it 'should pass on http homepages' do
+      project.homepage = 'https://24pullrequests.com'
+      expect(project.valid?).to be true
+    end
+
+    it 'should not pass on non-http homepages' do
+      project.homepage = 'javascript:alert(1)'
+      expect(project.valid?).to be false
+    end
   end
 
   context '#scopes' do
@@ -124,6 +134,12 @@ describe Project, type: :model do
 
     it 'returns the github url when a homepage is an empty string' do
       project = FactoryBot.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests', homepage: '')
+      expect(project.url).to eq('https://github.com/24pullrequests/24pullrequests')
+    end
+
+    it 'returns the github url when a stored homepage is not http' do
+      project = FactoryBot.create(:project, github_url: 'https://github.com/24pullrequests/24pullrequests')
+      project.update_column(:homepage, 'javascript:alert(1)')
       expect(project.url).to eq('https://github.com/24pullrequests/24pullrequests')
     end
   end

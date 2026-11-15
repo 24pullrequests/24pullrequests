@@ -28,6 +28,7 @@ class Project < ApplicationRecord
   validates :description, :github_url, :name, presence: true
   validates :github_url, format: { with: /\Ahttps?:\/\/github.com\/[\w-]+\/[\w\.-]+(\/)?\Z/i, message: 'Enter a valid GitHub URL.' }
   validates :github_url, uniqueness: { case_sensitive: false, message: 'Project has already been suggested.' }
+  validates :homepage, format: { with: /\Ahttps?:\/\//i, message: 'Enter a valid URL.' }, allow_blank: true
   validates_length_of :description, within: 20..200
   validates_inclusion_of :main_language, in: LANGUAGES, message: 'must be a programming language'
 
@@ -141,7 +142,7 @@ class Project < ApplicationRecord
   end
 
   def url
-    homepage.presence || github_url
+    homepage.to_s[/\Ahttps?:\/\//i] ? homepage : github_url
   end
 
   def community_profile(nickname, token, options = {})
