@@ -6,7 +6,7 @@ Repo-specific commands, conventions, and gotchas for contributors and coding age
 
 Local prerequisites:
 
-- Ruby 4.0.9 (`.ruby-version`)
+- Ruby 4.0.10 (`.ruby-version`)
 - PostgreSQL
 - System libraries for `pg` (e.g., `libpq-dev` on Debian/Ubuntu)
 - A JavaScript runtime (Node is recommended and is used in the Docker image)
