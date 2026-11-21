@@ -39,6 +39,20 @@ describe 'Projects', type: :request do
       is_expected.to_not have_content 'Unrelated change'
     end
 
+    it 'only links to http(s) urls' do
+      project.update_columns(contributing_url: 'javascript:alert(1)', homepage: 'javascript:alert(2)')
+      visit project_path(project)
+      is_expected.to have_link 'View on GitHub'
+      is_expected.to_not have_link I18n.t('projects.contributing')
+      is_expected.to_not have_css 'a[href^="javascript:"]'
+    end
+
+    it 'links to the contributing guide when it is an http(s) url' do
+      project.update_columns(contributing_url: 'https://github.com/octocat/hello/blob/main/CONTRIBUTING.md')
+      visit project_path(project)
+      is_expected.to have_link I18n.t('projects.contributing'), href: 'https://github.com/octocat/hello/blob/main/CONTRIBUTING.md'
+    end
+
     it 'explains when there are no contributions yet' do
       visit project_path(project)
       is_expected.to have_content I18n.t('projects.show.no_pull_requests')

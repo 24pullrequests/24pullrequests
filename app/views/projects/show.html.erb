@@ -15,9 +15,13 @@
           </div>
         </span>
       <% end %>
-      <%= link_to t("projects.show.view_on_github"), @project.github_url, :target => "_blank", :class => "btn btn-default btn-sm" %>
-      <% if @project.url != @project.github_url %>
-        <%= link_to @project.homepage, @project.homepage, :target => "_blank", :class => "btn btn-default btn-sm" %>
+      <% github_url = safe_http_url(@project.github_url) %>
+      <% if github_url %>
+        <%= link_to t("projects.show.view_on_github"), github_url, :target => "_blank", :rel => "noopener", :class => "btn btn-default btn-sm" %>
+      <% end %>
+      <% homepage_url = safe_http_url(@project.homepage) %>
+      <% if homepage_url && homepage_url != github_url %>
+        <%= link_to homepage_url, homepage_url, :target => "_blank", :rel => "noopener", :class => "btn btn-default btn-sm" %>
       <% end %>
     </div>
     <% if @project.labels.any? %>
@@ -30,9 +34,10 @@
         <% end %>
       </div>
     <% end %>
-    <% if @project.contributing_url.present? %>
+    <% contributing_url = safe_http_url(@project.contributing_url) %>
+    <% if contributing_url %>
       <div class="profile-item">
-        <%= link_to t("projects.contributing"), @project.contributing_url, :target => "_blank" %>
+        <%= link_to t("projects.contributing"), contributing_url, :target => "_blank", :rel => "noopener" %>
       </div>
     <% end %>
     <% unless @project.contribulator.nil? %>
