@@ -355,6 +355,9 @@ en:
     count: "%{count} contributions already made!"
     language:
       count: "%{count} contributions already made in %{language}!"
+    empty:
+      description: Contributions made between December 1st and December 24th will show up here as soon as they are tracked. Check back then, or find a project to get ready.
+      title: No contributions yet this year!
     latest:
       count: Latest Contributions (%{count} total)
   reactivate: Reactivate

@@ -355,6 +355,9 @@ ta:
     count: " ஏற்கனவே, %{count} Pull Requests உருவக்கப்பட்டது!"
     language:
       count: ஏற்கனவே, %{count} pull requests %{language}-ல்  உருவக்கப்பட்டது!
+    empty:
+      description: Contributions made between December 1st and December 24th will show up here as soon as they are tracked. Check back then, or find a project to get ready.
+      title: No contributions yet this year!
     latest:
       count: சமீபத்திய  Pull Requests (மொத்தம் %{count})
   reactivate: Reactivate

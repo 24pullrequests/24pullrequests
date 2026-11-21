@@ -355,6 +355,9 @@ zh_Hans:
     count: "%{count} 次合并请求(pull request) 被发起!"
     language:
       count: "%{count} 次合并请求(pull request) 使用 %{language}!"
+    empty:
+      description: Contributions made between December 1st and December 24th will show up here as soon as they are tracked. Check back then, or find a project to get ready.
+      title: No contributions yet this year!
     latest:
       count: 最新的 合并请求(pull request) (总共 %{count} 次)
   reactivate: Reactivate

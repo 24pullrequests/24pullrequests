@@ -355,6 +355,9 @@ el:
     count: "%{count} Pull Requests εχουν ηδη γινει!"
     language:
       count: "%{count} pull requests στη %{language}!"
+    empty:
+      description: Contributions made between December 1st and December 24th will show up here as soon as they are tracked. Check back then, or find a project to get ready.
+      title: No contributions yet this year!
     latest:
       count: Τελευταια Pull Requests (%{count} συνολικα)
   reactivate: Reactivate
