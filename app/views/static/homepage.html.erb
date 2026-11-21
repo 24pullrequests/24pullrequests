@@ -178,7 +178,11 @@
           <% else %>
             <br/>
             <div class="well">
-              No contributions yet this year!
+              <strong><%= t("pull_requests.empty.title") %></strong>
+              <p>
+                <%= t("pull_requests.empty.description") %>
+                <%= link_to t("suggested_projects"), projects_path %>
+              </p>
             </div>
           <% end %>
         </div>
