@@ -341,6 +341,14 @@ tr:
       issue_link_text: Bir konu öner
       suggestion: Have a suggestion for this project? We're all ears! If there's something you'd like fixed, feel free to %{issue_link}.
       title: Bir proje öner
+    show:
+      contributors: Contributors (%{count})
+      details: Project details
+      last_scored: Last scored
+      no_pull_requests: No contributions to this project have been tracked yet.
+      pull_requests: Pull requests (%{count})
+      score: 'Contribulator score: %{score}'
+      view_on_github: View on GitHub
     suggest: Bu dilde henüz bir proje yok, acaba neden %{suggest_link}?
     suggest_link_text: Bir tane öner
     suggest_new: Proje önerebilir ya da listeye ekleyebilirsin. Kendi projen varsa yardım almak için öneri yapabilirsin.

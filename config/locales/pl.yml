@@ -341,6 +341,14 @@ pl:
       issue_link_text: zasugeruj issue
       suggestion: Masz sugestie dotyczące tego projektu? Wszyscy zamieniamy się w słuch! Jeśli jest coś, co chciałbyś naprawić, nie krępuj się %{issue_link}.
       title: Zaproponuj projekt
+    show:
+      contributors: Contributors (%{count})
+      details: Project details
+      last_scored: Last scored
+      no_pull_requests: No contributions to this project have been tracked yet.
+      pull_requests: Pull requests (%{count})
+      score: 'Contribulator score: %{score}'
+      view_on_github: View on GitHub
     suggest: Nie ma jeszcze projektów dla tego języka, dlaczego nie %{suggest_link}?
     suggest_link_text: zaproponuj jeden
     suggest_new: Możesz również zasugerować projekty, które warto dodać do listy lub dodać własny projekt, jeśli potrzebujesz pomocy.

@@ -341,6 +341,14 @@ fi:
       issue_link_text: issue
       suggestion: Onko sinulla ehdotus tähän projektiin? Olemme pelkkinä korvina! Jos siellä on jotain mitä haluaisit korjatuksi, jätä rohkeasti %{issue_link}.
       title: Ehdota projektia
+    show:
+      contributors: Contributors (%{count})
+      details: Project details
+      last_scored: Last scored
+      no_pull_requests: No contributions to this project have been tracked yet.
+      pull_requests: Pull requests (%{count})
+      score: 'Contribulator score: %{score}'
+      view_on_github: View on GitHub
     suggest: Tuolle kielelle ei ole vielä projekteja, Miksi ei %{suggest_link}
     suggest_link_text: suggest one
     suggest_new: Voit myös ehdottaa projektia joka pitäisi lisätä listaan, tai lisää oma projektisi jos haluaisit saada apua sen kanssa.

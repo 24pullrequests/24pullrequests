@@ -17,6 +17,40 @@ describe 'Projects', type: :request do
     it { is_expected.to have_content '2 Suggested Projects' }
   end
 
+  describe 'project show' do
+    let(:project) { create :project, name: 'octocat/hello', github_url: 'https://github.com/octocat/hello', contribulator: 17 }
+
+    it 'is visible to logged out visitors and shows the project details' do
+      visit project_path(project)
+      is_expected.to have_content 'octocat/hello'
+      is_expected.to have_content project.description
+      is_expected.to have_content 'Contribulator score: 17'
+      is_expected.to have_link 'View on GitHub', href: 'https://github.com/octocat/hello'
+    end
+
+    it 'lists the contributors and pull requests made to the project' do
+      contributor = create :user
+      create :contribution, user: contributor, repo_name: 'octocat/hello', title: 'Fix the typo'
+      create :contribution, repo_name: 'someone/else', title: 'Unrelated change'
+      visit project_path(project)
+      is_expected.to have_content 'Pull requests (1)'
+      is_expected.to have_link 'Fix the typo'
+      is_expected.to have_link href: user_path(contributor.nickname)
+      is_expected.to_not have_content 'Unrelated change'
+    end
+
+    it 'explains when there are no contributions yet' do
+      visit project_path(project)
+      is_expected.to have_content I18n.t('projects.show.no_pull_requests')
+    end
+
+    it 'is linked to from the project index' do
+      project
+      visit projects_path
+      click_link I18n.t('projects.show.details')
+      expect(page).to have_current_path(project_path(project))
+    end
+  end
   describe 'suggesting a new project' do
     before do
       login user

@@ -341,6 +341,14 @@ de:
       issue_link_text: sende uns einen Problembericht
       suggestion: Hast du einen Vorschlag für dieses Projekt? Wir sind ganz Ohr! Falls du etwas behoben haben möchtest, %{issue_link}.
       title: Schlag ein Projekt vor
+    show:
+      contributors: Contributors (%{count})
+      details: Project details
+      last_scored: Last scored
+      no_pull_requests: No contributions to this project have been tracked yet.
+      pull_requests: Pull requests (%{count})
+      score: 'Contribulator score: %{score}'
+      view_on_github: View on GitHub
     suggest: In dieser Sprache gibt es noch keine Projekte. %{suggest_link}
     suggest_link_text: Schlage eines vor
     suggest_new: Du kannst Projekte vorschlagen die zu dieser Liste hinzugefügt werden sollten &mdash; oder dein eigenes hinzufügen, falls du Hilfe brauchst.
