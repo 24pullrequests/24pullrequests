@@ -341,6 +341,14 @@ en:
       issue_link_text: suggest an issue
       suggestion: Have a suggestion for this project? We’re all ears! If there’s something you’d like fixed, feel free to %{issue_link}.
       title: Suggest a Project
+    show:
+      contributors: Contributors (%{count})
+      details: Project details
+      last_scored: Last scored
+      no_pull_requests: No contributions to this project have been tracked yet.
+      pull_requests: Pull requests (%{count})
+      score: 'Contribulator score: %{score}'
+      view_on_github: View on GitHub
     suggest: There are no projects for that language yet, why not %{suggest_link}?
     suggest_link_text: suggest one
     suggest_new: You can also suggest projects that should be added to the list, or add your own project if you would like some help with it.

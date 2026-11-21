@@ -1,0 +1,82 @@
+<div class="title-block profile-title-block row">
+  <div class="col-sm-3">
+    <%= image_tag(@project.avatar_url, :alt => @project.owner_login, :class => "profile-avatar", :width => 200, :height => 200) %>
+  </div>
+  <div class="col-sm-9 profile-details">
+    <h2 class="username"><%= @project.name %></h2>
+    <div class="profile-item">
+      <div class="js-emoji"><%= @project.description %></div>
+    </div>
+    <div class="profile-item">
+      <% if @project.main_language.present? %>
+        <span class="<%= parameterize_language(@project.main_language) %>">
+          <div class="label label-info language">
+            <%= link_to @project.main_language, language_path(@project.main_language.downcase) %>
+          </div>
+        </span>
+      <% end %>
+      <% github_url = safe_http_url(@project.github_url) %>
+      <% if github_url %>
+        <%= link_to t("projects.show.view_on_github"), github_url, :target => "_blank", :rel => "noopener", :class => "btn btn-default btn-sm" %>
+      <% end %>
+      <% homepage_url = safe_http_url(@project.homepage) %>
+      <% if homepage_url && homepage_url != github_url %>
+        <%= link_to homepage_url, homepage_url, :target => "_blank", :rel => "noopener", :class => "btn btn-default btn-sm" %>
+      <% end %>
+    </div>
+    <% if @project.labels.any? %>
+      <div class="profile-item">
+        <% @project.labels.each do |label| %>
+          <div class="project-label">
+            <%= octicon "tag", :height => 10 %>
+            <%= link_to label.name, "https://github.com/#{@project.github_repository}/labels/#{label.name}", :target => "_blank" %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    <% contributing_url = safe_http_url(@project.contributing_url) %>
+    <% if contributing_url %>
+      <div class="profile-item">
+        <%= link_to t("projects.contributing"), contributing_url, :target => "_blank", :rel => "noopener" %>
+      </div>
+    <% end %>
+    <% unless @project.contribulator.nil? %>
+      <div class="profile-item">
+        <%= octicon "pulse", :height => 14 %>
+        <span class="contribulator"><%= t("projects.show.score", score: @project.contribulator) %></span>
+        <% if @project.last_scored.present? %>
+          <small>
+            <%= t("projects.show.last_scored") %>
+            <abbr class="timeago" title="<%= @project.last_scored.iso8601 %>"><%= @project.last_scored %></abbr>
+          </small>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <% if @contributions.any? %>
+      <div class="profile-item">
+        <span class="tiny-title">
+          <%= t("projects.show.contributors", count: @contributors.size) %>
+        </span>
+        <ul class="avatar-list avatar-list-xs">
+          <% @contributors.each do |contributor| %>
+            <li class="avatar-cell">
+              <%= link_to user_path(contributor.nickname), class: "avatar-link", rel: "tooltip", title: contributor.nickname, data: { placement: "bottom" } do %>
+                <%= image_tag(contributor.avatar_url, alt: contributor.nickname, class: "avatar-img") %>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <h3><%= t("projects.show.pull_requests", count: @contributions_count) %></h3>
+      <%= render partial: "contributions/contribution", collection: @contributions, as: :contribution %>
+    <% else %>
+      <div class="alert alert-info">
+        <%= t("projects.show.no_pull_requests") %>
+      </div>
+    <% end %>
+  </div>
+</div>

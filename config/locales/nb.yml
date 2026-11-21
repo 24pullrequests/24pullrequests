@@ -341,6 +341,14 @@ nb:
       issue_link_text: lag gjerne et issue
       suggestion: Har du et forslag for dette prosjektet? Vi lytter! Er det noe du gjerne vil ha fikset, %{issue_link}.
       title: Foreslå et prosjekt
+    show:
+      contributors: Contributors (%{count})
+      details: Project details
+      last_scored: Last scored
+      no_pull_requests: No contributions to this project have been tracked yet.
+      pull_requests: Pull requests (%{count})
+      score: 'Contribulator score: %{score}'
+      view_on_github: View on GitHub
     suggest: Det er ingen prosjekter i det språket enda. Hvorfor ikke %{suggest_link}?
     suggest_link_text: foreslå et
     suggest_new: Du kan også foreslå prosjekter som bør legges til i listen, eller legge til ditt eget prosjekt om du kunne tenke deg litt hjelp med det.

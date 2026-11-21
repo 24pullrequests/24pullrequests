@@ -30,4 +30,8 @@
       <span class='contribulator'>Contribulator score: <%= project.contribulator %></span>
     </div>
   <% end %>
+  <div class="project-label">
+    <%= octicon "info", :height => 10 %>
+    <%= link_to t("projects.show.details"), project_path(project) %>
+  </div>
 </div>
