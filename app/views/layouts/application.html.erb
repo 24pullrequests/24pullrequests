@@ -35,7 +35,7 @@
             <% if flash.any? %>
               <div class="messages">
                 <% if flash[:alert] %>
-                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <div class="alert alert-danger alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -43,7 +43,7 @@
                   </div>
                 <% end %>
                 <% if flash[:notice] %>
-                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <div class="alert alert-danger alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -53,7 +53,7 @@
               </div>
             <% end %>
             <% if unconfirmed_email? %>
-              <div class="alert alert-info danger alert-dismissible fade show" role="alert">
+              <div class="alert alert-info danger alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
