@@ -165,6 +165,7 @@ describe Project, type: :model do
       expect(project.contrib_url('username', 'token')).to eq('https://github.com/octobox/octobox/blob/master/docs/CONTRIBUTING.md')
     end
   end
+
   describe '#contributions' do
     it 'returns contributions to the project repository, ignoring case' do
       project = create :project, github_url: 'https://github.com/Octocat/Hello'

@@ -17,12 +17,12 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:id])
+    @project = Project.active.find(params[:id])
     project_contributions = @project.contributions
-    @contributions_count = project_contributions.count
-    @contributions = project_contributions.includes(:user).latest(30)
+    @contributions = project_contributions.includes(:user).order(created_at: :desc).page(params[:page])
     @contributors = User.where(id: project_contributions.select(:user_id)).order(:nickname)
   end
+
   def new
     @project = Project.new
     @project.main_language = language if language

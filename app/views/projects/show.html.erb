@@ -56,7 +56,7 @@
 </div>
 <div class="row">
   <div class="col-sm-12">
-    <% if @contributions.any? %>
+    <% if @contributions.total_count > 0 %>
       <div class="profile-item">
         <span class="tiny-title">
           <%= t("projects.show.contributors", count: @contributors.size) %>
@@ -71,8 +71,9 @@
           <% end %>
         </ul>
       </div>
-      <h3><%= t("projects.show.pull_requests", count: @contributions_count) %></h3>
+      <h3><%= t("projects.show.pull_requests", count: @contributions.total_count) %></h3>
       <%= render partial: "contributions/contribution", collection: @contributions, as: :contribution %>
+      <%= paginate @contributions %>
     <% else %>
       <div class="alert alert-info">
         <%= t("projects.show.no_pull_requests") %>

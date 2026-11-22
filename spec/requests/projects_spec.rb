@@ -53,6 +53,31 @@ describe 'Projects', type: :request do
       is_expected.to have_link I18n.t('projects.contributing'), href: 'https://github.com/octocat/hello/blob/main/CONTRIBUTING.md'
     end
 
+    it 'returns a 404 for a project that has been deactivated' do
+      project.deactivate!
+      visit project_path(project)
+      expect(page.status_code).to eq(404)
+    end
+
+    it 'returns a 404 for a project that does not exist' do
+      visit project_path(id: 0)
+      expect(page.status_code).to eq(404)
+    end
+
+    it 'paginates the pull requests' do
+      (1..26).each do |i|
+        create :contribution, repo_name: 'octocat/hello', title: format('Fix-%02d', i), created_at: i.days.ago
+      end
+      visit project_path(project)
+      is_expected.to have_content 'Pull requests (26)'
+      is_expected.to have_link 'Fix-01'
+      is_expected.to_not have_link 'Fix-26'
+      is_expected.to have_css '.pagination'
+      visit project_path(project, page: 2)
+      is_expected.to have_link 'Fix-26'
+      is_expected.to_not have_link 'Fix-01'
+    end
+
     it 'explains when there are no contributions yet' do
       visit project_path(project)
       is_expected.to have_content I18n.t('projects.show.no_pull_requests')
@@ -65,6 +90,7 @@ describe 'Projects', type: :request do
       expect(page).to have_current_path(project_path(project))
     end
   end
+
   describe 'suggesting a new project' do
     before do
       login user
