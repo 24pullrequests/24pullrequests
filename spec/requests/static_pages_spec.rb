@@ -32,6 +32,16 @@ describe 'Static pages', type: :request do
     end
   end
 
+  context "homepage when there are no contributions yet" do
+    before { visit root_path }
+
+    it "explains why the contributions box is empty" do
+      is_expected.to have_content(I18n.t('pull_requests.empty.title'))
+      is_expected.to have_content('Check back then, or find a project to get ready.')
+      is_expected.to have_link(I18n.t('pull_requests.empty.link'), href: projects_path)
+    end
+  end
+
   describe 'homepage in different dates' do
     context "during December" do
       it "doesnt show the finished partial on the first day" do

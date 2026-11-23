@@ -365,6 +365,10 @@ hi:
     count: "%{count} पुल अनुरोध पहले ही बनाये गये हैं!"
     language:
       count: "%{count} पुल पहले से ही %{language} में किए गए अनुरोध खींचें!"
+    empty:
+      description_html: Contributions made between December 1st and December 24th will show up here as soon as they are tracked. Check back then, or %{link} to get ready.
+      link: find a project
+      title: No contributions yet this year!
     latest:
       count: नवीनतम पुल अनुरोध (%{count} total)
   reactivate: Reactivate
