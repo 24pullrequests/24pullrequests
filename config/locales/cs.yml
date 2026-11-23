@@ -341,6 +341,14 @@ cs:
       issue_link_text: nahlásit problém
       suggestion: Našli jste problém na těchto stránkách? Jsme jedno velké ucho. Pokud jde chcete něco opravit, nebojte se %{issue_link}.
       title: Navrhnout projekt
+    show:
+      contributors: Contributors (%{count})
+      details: Project details
+      last_scored: Last scored
+      no_pull_requests: No contributions to this project have been tracked yet.
+      pull_requests: Pull requests (%{count})
+      score: 'Contribulator score: %{score}'
+      view_on_github: View on GitHub
     suggest: Zatím zde není žádný projekt pro tento jazyk, proč %{suggest_link}?
     suggest_link_text: navrhnout také jeden?
     suggest_new: Můžete také navrhnout projekt, který by měl být přidán do seznamu. Případně můžete přidat svůj projekt - pokud potřebujete pomoci.

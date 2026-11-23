@@ -341,6 +341,14 @@ fr:
       issue_link_text: rapport
       suggestion: Vous avez une suggestion pour ce projet ? Nous sommes à l'écoute! Si vous voyez quelque chose que vous aimeriez voir corrigé, n'hésitez pas à ouvrir un %{issue_link}.
       title: Suggérer un projet
+    show:
+      contributors: Contributors (%{count})
+      details: Project details
+      last_scored: Last scored
+      no_pull_requests: No contributions to this project have been tracked yet.
+      pull_requests: Pull requests (%{count})
+      score: 'Contribulator score: %{score}'
+      view_on_github: View on GitHub
     suggest: Il n'y a pas de projet pour ce langage pour le moment, pourquoi ne pas %{suggest_link}
     suggest_link_text: en suggérer un
     suggest_new: Vous pouvez aussi suggérer des projets qui devraient être ajoutés à la liste, ou ajouter votre propre projet si vous ameriez avoir de l'aide.

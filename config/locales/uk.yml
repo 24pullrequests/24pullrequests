@@ -341,6 +341,14 @@ uk:
       issue_link_text: представити вашу пропозицію до питання
       suggestion: Є пропозиція для цього проекту? Ми дуже уважно прислухаэмось до вас! Якщо є щось, що вам не подобається, то не соромтеся %{issue_link}.
       title: Запропонувати проект
+    show:
+      contributors: Contributors (%{count})
+      details: Project details
+      last_scored: Last scored
+      no_pull_requests: No contributions to this project have been tracked yet.
+      pull_requests: Pull requests (%{count})
+      score: 'Contribulator score: %{score}'
+      view_on_github: View on GitHub
     suggest: На жаль, для цієї мови програмування немає проектів, чому б не спробувати %{suggest_link}?
     suggest_link_text: Запропонувати
     suggest_new: Ви також можете запропонувати проекти, які повинні бути додані в список, або, якщо вам потрібна допомога, додати свій власний проект.

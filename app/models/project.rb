@@ -62,6 +62,10 @@ class Project < ApplicationRecord
     Project.where('github_url like ?', "%#{repository}%")
   end
 
+  def contributions
+    Contribution.where('lower(repo_name) = ?', github_repository.downcase)
+  end
+
   def github_repository
     github_url.gsub(/^(((https|http|git)?:\/\/(www\.)?)|git@)github.com(:|\/)/i, '').gsub(/(\.git|\/)$/i, '')
   end

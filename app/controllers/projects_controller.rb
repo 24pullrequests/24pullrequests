@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :ensure_logged_in, except: [:index]
+  before_action :ensure_logged_in, except: [:index, :show]
   before_action :set_project, only: [:edit, :update, :destroy, :reactivate]
 
   respond_to :html
@@ -14,6 +14,13 @@ class ProjectsController < ApplicationController
     @projects = search.call.includes(:labels)
     @has_more_projects = search.more?
     respond_with @projects
+  end
+
+  def show
+    @project = Project.active.find(params[:id])
+    project_contributions = @project.contributions
+    @contributions = project_contributions.includes(:user).order(created_at: :desc).page(params[:page])
+    @contributors = User.where(id: project_contributions.select(:user_id)).order(:nickname)
   end
 
   def new

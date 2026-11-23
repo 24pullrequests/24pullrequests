@@ -341,6 +341,14 @@ zh_Hant:
       issue_link_text: 新增一個 Issue
       suggestion: 對 24 Pull Requests 有建議嗎？我們非常歡迎。請到 GitHub 上%{issue_link}。
       title: 推薦專案
+    show:
+      contributors: Contributors (%{count})
+      details: Project details
+      last_scored: Last scored
+      no_pull_requests: No contributions to this project have been tracked yet.
+      pull_requests: Pull requests (%{count})
+      score: 'Contribulator score: %{score}'
+      view_on_github: View on GitHub
     suggest: 還沒有這個語言的專案呢，到 %{suggest_link} 推薦一個？
     suggest_link_text: 新增專案頁面
     suggest_new: 你可以建議你支持的專案，也可以把你自己需要幫助的專案列上去。

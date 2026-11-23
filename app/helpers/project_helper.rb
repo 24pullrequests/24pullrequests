@@ -20,4 +20,10 @@ module ProjectHelper
   def avatar_url(project)
     project.avatar_url || 'https://avatars.githubusercontent.com/u/10137?v=3'
   end
+
+  # Returns the url only when it is an http(s) url, so stored values such as
+  # "javascript:..." are never used as a link href.
+  def safe_http_url(url)
+    url.to_s if url.to_s.match?(/\Ahttps?:\/\//i)
+  end
 end

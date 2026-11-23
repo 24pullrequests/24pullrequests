@@ -341,6 +341,14 @@ ta:
       issue_link_text: பிரச்சினை பற்றி கருத்து தெரிவிக்கவும்
       suggestion: இந்த திட்டத்திற்கு தாங்கள் ஏதேனும் கருத்து கூற விரும்புகிறீர்களா? If there's something you'd like fixed, feel free to %{issue_link}.
       title: திட்டம் பற்றி கருத்து தெரிவிக்கவும்
+    show:
+      contributors: Contributors (%{count})
+      details: Project details
+      last_scored: Last scored
+      no_pull_requests: No contributions to this project have been tracked yet.
+      pull_requests: Pull requests (%{count})
+      score: 'Contribulator score: %{score}'
+      view_on_github: View on GitHub
     suggest: அந்த மொழி திட்டங்கள் எதுவும் இல்‌லை. why not %{suggest_link}?
     suggest_link_text: ஒன்றை பரிந்துரை செய்யவும்
     suggest_new: பட்டியலில் சேர்ப்பதற்கான திட்டங்களை நீங்களும் கூறலாம் அல்லது தங்களது சொந்த திட்டங்களை பகிர்ந்து உங்களுக்கு தேவயான உதவிகளை பெற்றுக்கொள்ளலாம்.

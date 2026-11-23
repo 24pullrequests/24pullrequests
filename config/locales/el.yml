@@ -341,6 +341,14 @@ el:
       issue_link_text: ένα ζήτημα
       suggestion: Έχεις κάποια εισήγηση για το 24pullrequests; Είμαστε όλο αυτιά! Αν πρόσεξες κάτι που χρειάζεται διόρθωση, υπόβαλε %{issue_link}.
       title: Εισηγησου ενα Project
+    show:
+      contributors: Contributors (%{count})
+      details: Project details
+      last_scored: Last scored
+      no_pull_requests: No contributions to this project have been tracked yet.
+      pull_requests: Pull requests (%{count})
+      score: 'Contribulator score: %{score}'
+      view_on_github: View on GitHub
     suggest: Δεν υπάρχουν projects για αυτή τη γλώσσα, γιατί δεν %{suggest_link}
     suggest_link_text: suggest one
     suggest_new: Μπορείς να εισηγηθείς projects για τη λίστα μας ή ακόμη να προσθέσεις το δικό σου project αν χρειάζεσαι κάποια βοήθεια.

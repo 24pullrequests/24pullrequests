@@ -343,6 +343,14 @@ hi:
       issue_link_text: एक समस्या का सुझाव दें
       suggestion: 'इस परियोजना के लिए कोई सुझाव है? हम सब कान हैं! यदि आप कुछ निश्चित चाहते हैं, तो %{issue_link} के लिए नि: शुल्क लगें।'
       title: एक परियोजना का सुझाव दें
+    show:
+      contributors: Contributors (%{count})
+      details: Project details
+      last_scored: Last scored
+      no_pull_requests: No contributions to this project have been tracked yet.
+      pull_requests: Pull requests (%{count})
+      score: 'Contribulator score: %{score}'
+      view_on_github: View on GitHub
     suggest: उस भाषा के लिए अभी तक कोई परियोजनाएं नहीं हैं, क्यों नहीं %{suggest_link}?
     suggest_link_text: एक सुझाव दें
     suggest_new: आप उन परियोजनाओं का भी सुझाव दे सकते हैं, जिन्हें सूची में जोड़ा जाना चाहिए, या यदि आप इसके साथ कुछ मदद चाहते हैं तो अपनी खुद की परियोजना जोड़ें।

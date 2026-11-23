@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2021_12_12_143544) do
+ActiveRecord::Schema[7.1].define(version: 2026_11_21_120000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
@@ -48,6 +48,7 @@ ActiveRecord::Schema[7.1].define(version: 2021_12_12_143544) do
     t.string "language"
     t.integer "comments_count", default: 0
     t.integer "merged_by_id"
+    t.index "lower((repo_name)::text)", name: "index_contributions_on_lower_repo_name"
     t.index ["user_id"], name: "index_contributions_on_user_id"
   end
 
