@@ -119,6 +119,18 @@ describe ProjectsController, type: :controller do
       end
     end
 
+    describe 'claim without a repository name' do
+      it 'does not claim an unowned project' do
+        unclaimed_project
+
+        ['', '%'].each do |input|
+          post :claim, params: {project: { github_url: input }}
+          expect(flash[:notice]).to eq "This repository doesn't exist or belongs to someone else"
+        end
+        expect(unclaimed_project.reload.submitted_by).to be_nil
+      end
+    end
+
     describe 'failed claim' do
       it 'should fail when claiming an already claimed project' do
         post :claim, params: {project: { github_url: claimed_project.github_url }}
