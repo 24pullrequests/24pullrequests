@@ -95,6 +95,8 @@ RSpec.configure do |config|
 
   config.include FactoryBot::Syntax::Methods
   config.include Capybara::DSL
+  # Without these, not_to have_content waits the full timeout in JS specs.
+  config.include Capybara::RSpecMatchers, type: :request
 
   # 10/1/2015: Needed for shoulda-matchers 3.0.
   Shoulda::Matchers.configure do |config|

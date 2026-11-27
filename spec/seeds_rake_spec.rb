@@ -7,7 +7,9 @@ describe 'db:seeds' do
     Rake::Task['db:seed'].invoke
   end
 
-  it 'db:seeds should eq 50' do
-    expect(User.count).to eq(50)
+  it 'creates users with contributions and projects' do
+    expect(User.count).to eq(5)
+    expect(Project.count).to eq(5)
+    expect(Contribution.count).to be >= 15
   end
 end
