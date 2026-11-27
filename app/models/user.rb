@@ -72,7 +72,9 @@ class User < ApplicationRecord
 
   def self.contributors
     @contributors ||= begin
-      contribs = load_user.github_client.contributors('24pullrequests/24pullrequests')
+      user = load_user
+      return [] unless user
+      contribs = user.github_client.contributors('24pullrequests/24pullrequests')
       where_nickname_in(contribs.map(&:login))
     end
   end
@@ -92,7 +94,9 @@ class User < ApplicationRecord
   end
 
   def self.organization_members
-    load_user.github_client.organization_members('24pullrequests')
+    user = load_user
+    return [] unless user
+    user.github_client.organization_members('24pullrequests')
   end
 
   def self.where_nickname_in(nicknames)
