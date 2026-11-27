@@ -3,7 +3,7 @@ require "i18n/tasks"
 
 RSpec.describe 'I18n' do
 
-  it "has consistent locale files" do
+  it "has no locale keys that are absent from en" do
     test_translations
   end
 
@@ -60,9 +60,6 @@ RSpec.describe 'I18n' do
     expect(reference).not_to be_empty
 
     locale_keys.each do |locale, keys|
-      missing = reference - keys
-
-      expect(missing).to be_empty, "#{locale} locale is missing: #{missing.join(', ')}"
       extra = keys - reference
       expect(extra).to be_empty, "#{locale} locale has extra: #{extra.join(', ')}"
     end

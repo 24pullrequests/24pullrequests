@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_11_21_120000) do
+ActiveRecord::Schema[8.1].define(version: 2026_11_27_120000) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension "pg_catalog.plpgsql"
   enable_extension "uuid-ossp"
 
   create_table "aggregation_filters", id: :serial, force: :cascade do |t|
@@ -172,6 +172,7 @@ ActiveRecord::Schema[7.1].define(version: 2026_11_21_120000) do
     t.string "unsubscribe_token", null: false
     t.string "time_zone"
     t.boolean "invalid_token", default: false
+    t.datetime "pledged_at"
     t.index ["nickname"], name: "index_users_on_nickname", unique: true
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
     t.index ["unsubscribe_token"], name: "index_users_on_unsubscribe_token", unique: true

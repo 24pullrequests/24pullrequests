@@ -11,6 +11,16 @@ describe User, type: :model do
 
   it { should respond_to :unsubscribe_token }
 
+  describe '#pledge!' do
+    let(:user) { create :user, pledged_at: nil }
+
+    it 'records when the user pledged' do
+      expect(user).not_to be_pledged
+      user.pledge!
+      expect(user.reload).to be_pledged
+    end
+  end
+
   describe 'callbacks' do
     describe 'before_save' do
       describe '.check_email_changed' do

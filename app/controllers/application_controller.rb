@@ -24,11 +24,21 @@ class ApplicationController < ActionController::Base
   end
 
   def ensure_logged_in
-    return true if logged_in?
+    return ensure_pledged if logged_in?
     session[:pre_login_destination] = "http://#{request.host_with_port}#{request.path}"
     redirect_to login_path,
                 notice: t('.notice.not_logged_in',
                           default: 'You must be logged in to view this content.')
+  end
+
+  def ensure_pledged
+    return true if current_user.pledged? || pledge_exempt?
+    session[:pre_pledge_destination] = request.fullpath if request.get?
+    redirect_to pledge_path
+  end
+
+  def pledge_exempt?
+    false
   end
 
   def current_year

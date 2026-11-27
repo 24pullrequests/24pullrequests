@@ -44,6 +44,7 @@ Tfpullrequests::Application.routes.draw do
     end
   end
   resource :pull_request_download, only: :create
+  resource :pledge, only: [:show, :create]
 
   get '/resend_confirmation', to: 'dashboards#resend_confirmation_email', as: 'resend_confirmation'
   get '/confirm/:confirmation_token', to: 'dashboards#confirm_email', as: 'confirm_email'

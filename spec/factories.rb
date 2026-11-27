@@ -31,6 +31,7 @@ FactoryBot.define do
     gravatar_id { Faker::Internet.email }
     token { SecureRandom.hex }
     unsubscribe_token { SecureRandom.uuid }
+    pledged_at { Time.current }
   end
 
   factory :skill do

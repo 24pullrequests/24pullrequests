@@ -1,0 +1,14 @@
+<p>
+  <%= t("guidelines.intro") %>
+</p>
+<p>
+  <%= t("guidelines.request") %>
+</p>
+<ol class="guidelines">
+  <% %w[projects_you_use read_rules agree_first one_pull_request small_tested ai_tools patient].each do |item| %>
+    <li><%= t("guidelines.items.#{item}") %></li>
+  <% end %>
+</ol>
+<% %w[context assignment review ai_tools waiting other_contributions].each do |paragraph| %>
+  <p><%= t("guidelines.explanations.#{paragraph}") %></p>
+<% end %>

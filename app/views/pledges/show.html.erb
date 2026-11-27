@@ -1,0 +1,24 @@
+<% needs_pledge = logged_in? && !current_user.pledged? %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="block">
+      <h1><%= needs_pledge ? t("pledge.title") : t("pledge.public_title") %></h1>
+      <%= render "guidelines" %>
+      <% if needs_pledge %>
+        <%= form_tag pledge_path, method: :post do %>
+          <div class="checkbox">
+            <label>
+              <%= check_box_tag :agree, '1', false, required: true %>
+              <strong><%= t("pledge.agree") %></strong>
+            </label>
+          </div>
+          <%= submit_tag t("pledge.continue"), class: "btn btn-success" %>
+        <% end %>
+      <% elsif logged_in? %>
+        <p>
+          <strong><%= t("pledge.agreed") %></strong>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>

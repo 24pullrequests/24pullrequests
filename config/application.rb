@@ -39,6 +39,8 @@ module Tfpullrequests
     # Custom directories with classes and modules you want to be autoloadable.
     config.autoload_paths += %W(#{config.root}/app/services)
 
+    config.i18n.fallbacks = true
+
     def self.current_year
       @current_year ||= current_year_number
     end
