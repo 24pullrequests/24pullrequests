@@ -44,7 +44,7 @@ class User < ApplicationRecord
   end
 
   def self.find_by_login(login)
-    where(['lower(nickname) =? OR lower(email) =?', login.downcase, login.downcase]).take
+    where('lower(nickname) = :login OR lower(email) = :login', login: login.downcase).take
   end
 
   def self.create_from_auth_hash(hash)
