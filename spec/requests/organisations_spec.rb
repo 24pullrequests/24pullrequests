@@ -10,6 +10,13 @@ describe 'Organisations', type: :request do
     is_expected.to have_content '3 Organisations involved'
   end
 
+  it 'links an organisation to its GitHub page' do
+    organisation = create :organisation, login: 'octo-org'
+    visit organisation_path(organisation)
+
+    is_expected.to have_link 'octo-org on GitHub', href: 'https://github.com/octo-org'
+  end
+
   # it "viewing an organization" do
   #   organisation = create(:organisation)
   #   sleep 6

@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-10">
     <h2><%= @organisation.login %></h2>
-    <%= link_to "#{@organisation.login} on GitHub", "https://github.com/#{@organisation.login}", class: 'btn btn-default' %>
+    <%= link_to "#{@organisation.login} on GitHub", "https://github.com/#{ERB::Util.url_encode(@organisation.login)}", class: 'btn btn-default' %>
   </div>
   <div class="col-md-2">
     <div class="avatar">
