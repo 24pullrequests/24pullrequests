@@ -115,7 +115,7 @@ describe ProjectsController, type: :controller do
       it 'should successfully claim ownership of an unclaimed project' do
         post :claim, params: {project: { github_url: unclaimed_project.github_url }}
         expect(flash[:notice]).not_to be_nil
-        expect(flash[:notice]).to eq "You have successfully claimed <b>#{unclaimed_project.github_url}</b>"
+        expect(flash[:notice]).to eq "You have successfully claimed this repository"
       end
     end
 

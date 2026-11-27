@@ -72,7 +72,7 @@ class ProjectsController < ApplicationController
 
     if project.present? && project.submitted_by.nil?
       project.update(user_id: current_user.id)
-      message = "You have successfully claimed <b>#{github_url}</b>".html_safe
+      message = "You have successfully claimed this repository"
     else
       message = "This repository doesn't exist or belongs to someone else"
     end

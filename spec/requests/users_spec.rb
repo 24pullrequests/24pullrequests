@@ -115,7 +115,7 @@ describe 'Users', type: :request do
           fill_in 'project_github_url', with: '24pullrequests/24pullrequests'
           click_on 'Claim'
 
-          is_expected.to have_content 'You have successfully claimed 24pullrequests/24pullrequests'
+          is_expected.to have_content 'You have successfully claimed this repository'
         end
 
         it 'with an owner' do
