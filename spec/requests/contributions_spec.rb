@@ -12,6 +12,20 @@ describe 'Contribution', type: :request do
     it { is_expected.to have_content '5 contributions already made!' }
   end
 
+  describe 'paging through the list' do
+    before do
+      26.times { create :contribution }
+      visit pull_requests_path
+    end
+
+    it 'links to the next page' do
+      is_expected.to have_css '.pagination'
+      click_link 'Next'
+
+      expect(page).to have_css '.contribution', count: 1
+    end
+  end
+
   describe 'Users' do
     before do
       user = create :user
