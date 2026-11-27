@@ -1,0 +1,7 @@
+.git
+.github
+.bundle
+.env
+log
+tmp
+design
