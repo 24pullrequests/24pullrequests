@@ -207,7 +207,6 @@ de:
     happy_holidays_see_you: Schöne Feiertage und wir sehen uns alle nächstes Jahr wenn wir alles nochmal machen!
     help_open_source: 'Möchtest du in der Zwischenzeit weiterhin Open-Source-Projekte unterstützen? Schau dir diese grossartigen Initiativen an:'
     last_year_stats: "%{year} haben über 24 Tage <b>%{contributors}</b> Entwickler*innen <b>%{pull_requests}</b> Pull Requests an <b>%{projects}</b> verschiedene Open-Source-Projekte versendet."
-    ovio: Durchsuche ganz einfach über 800 beitragsorientierte Projekte nach Problemen und erhalte ausgewählte Empfehlungen.
     title: 24 Pull Requests %{year} ist da
   language:
     contributors:
