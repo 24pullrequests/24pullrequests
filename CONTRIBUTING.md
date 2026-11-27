@@ -6,6 +6,7 @@ Want to contribute to 24 Pull Requests? That's great! Here are a couple of guide
 
 - [Contributing to 24 Pull Requests](#contributing-to-24-pull-requests)
       - [Overview](#overview)
+  - [Contributor pledge](#contributor-pledge)
   - [Contribution workflow](#contribution-workflow)
   - [Setup instructions](#setup-instructions)
   - [Reporting a bug](#reporting-a-bug)
@@ -14,6 +15,34 @@ Want to contribute to 24 Pull Requests? That's great! Here are a couple of guide
     - [Making your contribution](#making-your-contribution)
   - [Our labels](#our-labels)
   - [Additional info](#additional-info)
+
+## Contributor pledge
+
+Everyone who takes part in 24 Pull Requests agrees to this pledge when they sign in to the site, and it applies to contributions to this repository too.
+
+Most open source projects are looked after by a few people, many of them volunteers who fit the work around jobs and families. Their time and attention are precious, and everything you send takes part of somebody's evening to read.
+
+Maintainers did not sign up for 24 Pull Requests, and most already have more to review than they have time for. Please be respectful of that, and make each contribution something they will be glad to receive.
+
+1. Start with projects you already use.
+2. Read the project's contributing guide, code of conduct and AI policy before you start, and follow them.
+3. Agree on the change with a maintainer before writing code, unless the contributing guide or an existing issue already invites it.
+4. Keep one open pull request per project at a time.
+5. Send small, tested changes that you understand and can explain.
+6. Disclose any substantial use of AI tools, and open issues and pull requests yourself rather than through an agent.
+7. Be patient and kind, and respect the maintainer's decision, whatever it is.
+
+Maintainers often have context that is only visible from inside the project, such as a rewrite in progress or a feature that was removed on purpose. Discussing the change in an issue first lets the maintainer tell you whether they would merge it before you write it. Issues the project has labelled for contributors, such as "help wanted", can usually be picked up without asking first.
+
+A "please assign this to me" comment adds noise to the issue, and maintainers are often reluctant to assign work to someone they have not seen in the project before. If the issue is open to contributors, look for an open pull request that already addresses it, and if there is none, open yours.
+
+Reviewing a change can take longer than writing it, particularly when it comes from someone new to the project, and five pull requests from one contributor can use up a maintainer's whole weekend. Wait for the first to be merged or closed, and use the feedback on the next one.
+
+Check each project's AI policy first: some require disclosure of AI-assisted contributions and others ban them. You are responsible for everything you submit, including anything AI tools generated, so reply to review comments in your own words. Read and run the change yourself before opening the pull request, because the maintainer should not be the first person to test it.
+
+If you have proposed a change, wait for an answer before starting work, even though maintainers may take weeks to reply over the holidays. Whether you are waiting on an issue or a review, send at most one polite follow-up after a week or two. A pull request counts on your dashboard from the day you open it, so there is no need to chase a merge before Christmas.
+
+Reproducing a reported bug, reviewing pull requests, answering questions, testing a release candidate and sponsoring a maintainer all help a project too. Each can be recorded on your dashboard alongside pull requests.
 
 ## Contribution workflow
 
