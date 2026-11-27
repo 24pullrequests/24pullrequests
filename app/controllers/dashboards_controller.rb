@@ -1,6 +1,6 @@
 class DashboardsController < ApplicationController
   before_action :ensure_logged_in, except: [:confirm_email, :locale]
-  before_action :set_email_preferences, except: [:preferences, :update_preferences, :confirm_email, :locale]
+  before_action :set_email_preferences, except: [:preferences, :update_preferences, :confirm_email, :locale, :delete, :destroy]
 
   def show
     contributions = current_user
@@ -75,6 +75,10 @@ class DashboardsController < ApplicationController
   end
 
   protected
+
+  def pledge_exempt?
+    %w[delete destroy].include?(action_name)
+  end
 
   def today
     Time.zone.now.to_date

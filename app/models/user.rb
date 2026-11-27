@@ -216,6 +216,14 @@ class User < ApplicationRecord
     contributions_ignoring_organisations.year(Tfpullrequests::Application.current_year).reject { |pr| gifted_contributions.include?(pr) }
   end
 
+  def pledged?
+    pledged_at.present?
+  end
+
+  def pledge!
+    update_column(:pledged_at, Time.current)
+  end
+
   def needs_setup?
     email_frequency.nil?
   end

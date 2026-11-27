@@ -7,7 +7,7 @@ describe DashboardsController, type: :controller do
     end
 
     before do
-      user = instance_double('User', send_confirmation_email: true, email_frequency: 'daily')
+      user = instance_double('User', send_confirmation_email: true, email_frequency: 'daily', pledged?: true)
       allow(controller).to receive(:current_user).and_return(user)
     end
 
@@ -27,7 +27,7 @@ describe DashboardsController, type: :controller do
 
     context 'when email delivery fails' do
       before do
-        user = instance_double('User', send_confirmation_email: false, email_frequency: 'daily')
+        user = instance_double('User', send_confirmation_email: false, email_frequency: 'daily', pledged?: true)
         allow(controller).to receive(:current_user).and_return(user)
       end
 

@@ -23,7 +23,7 @@ describe 'Local developer login', type: :request do
     visit logout_path
     login_as 'local-dev'
 
-    expect(current_path).to eq preferences_path
+    expect(current_path).to eq pledge_path
     expect(User.where(nickname: 'local-dev').count).to eq 1
   end
 

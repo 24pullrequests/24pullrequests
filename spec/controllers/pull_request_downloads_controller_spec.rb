@@ -4,7 +4,7 @@ describe PullRequestDownloadsController, type: :controller do
 
   describe "POST 'create'" do
     let(:contributions) { double(:contribution, year: double(:contribution, order: [])) }
-    let(:user) { double(:user, id: 1, contributions: contributions) }
+    let(:user) { double(:user, id: 1, contributions: contributions, pledged?: true) }
 
     before do
       session[:user_id] = user.id

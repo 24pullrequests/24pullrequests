@@ -83,4 +83,12 @@ describe 'Static pages', type: :request do
 
     it { is_expected.to have_content('CONTRIBUTORS') }
   end
+
+  describe 'contributing page' do
+    before { visit contributing_path }
+
+    it { is_expected.to have_content(I18n.t('guidelines.title')) }
+    it { is_expected.to have_content(I18n.t('guidelines.items.agree_first')) }
+    it { is_expected.to have_content(I18n.t('guidelines.explanations.assignment')) }
+  end
 end
