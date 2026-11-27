@@ -15,7 +15,6 @@ gem 'kaminari', github: 'keithyoder/kaminari', branch: 'deprecator-notify'
 gem 'bootstrap-sass'
 gem 'jquery-datetimepicker-rails'
 gem 'simple_form'
-gem 'uglifier'
 gem 'octicons_helper', '~> 19.43'
 gem 'rack-canonical-host'
 gem 'draper'
@@ -29,7 +28,6 @@ gem 'sprockets', '< 5.0.0'
 gem 'faraday', '2.15.1'
 gem "commonmarker", "~> 2.10"
 gem 'faraday-retry'
-gem 'observer'
 gem 'ostruct'
 
 group :development do
@@ -57,13 +55,8 @@ group :development, :test, :cucumber do
   gem 'webmock', require: false
   gem 'timecop'
   gem 'christmas_tree_formatter'
-  gem 'benchmark'
-
 end
 
 group :production do
-  gem 'foreman'
-  gem 'dalli'
   gem 'bugsnag'
-  gem 'rack-google-analytics'
 end
