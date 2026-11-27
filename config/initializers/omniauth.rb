@@ -1,6 +1,11 @@
 module OmniAuth
   module Strategies
     class Developer2 < Developer
+      # users.uid is an integer, so derive a stable one from the nickname.
+      uid do
+        Zlib.crc32(request.params[options.uid_field.to_s].to_s) & 0x7fffffff
+      end
+
       credentials do
         { 'token' => request.params[options.uid_field.to_s] }
       end
