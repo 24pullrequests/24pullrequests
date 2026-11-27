@@ -207,7 +207,6 @@ pl:
     happy_holidays_see_you: Wesołych Świąt i do zobaczenia w przyszłym roku, kiedy zrobimy to wszystko ponownie!
     help_open_source: 'Chcesz w międzyczasie pomóc w projektach open source? Sprawdź te inne wspaniałe inicjatywy:'
     last_year_stats: W %{year}, ponad 24 dni, <b>%{contributors}</b> współtwórcy stworzyli <b>%{pull_requests}</b> wkłady do <b>%{projects}</b> różnych projektów open source.
-    ovio: Łatwo filtruj issue w ponad 800 projektach przyjaznych dla współtwórców i otrzymuj wyselekcjonowane rekomendacje.
     title: Przed nami 24 Pull Requests %{year}
   language:
     contributors:
