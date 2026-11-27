@@ -58,7 +58,7 @@ if Rails.env.development? || Rails.env.test?
     Event.create name: event_name,
                  location: "#{Faker::Address.city}, #{Faker::Address.country}",
                  url: Faker::Internet.url,
-                 start_time:  Faker::Time.between(from: december_first, to: december_first + 23.days),
+                 start_time:  Faker::Time.between(from: [december_first, Time.zone.now].max, to: december_first + 23.days),
                  latitude: Faker::Address.latitude,
                  longitude: Faker::Address.longitude,
                  description: Faker::Lorem.sentence(word_count: 3),
