@@ -15,6 +15,7 @@ require 'webmock'
 require 'webmock/rspec'
 
 OmniAuth.config.test_mode = true
+OmniAuth.config.logger = Rails.logger
 
 WebMock.disable_net_connect! allow_localhost: true
 
