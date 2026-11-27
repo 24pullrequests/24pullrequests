@@ -73,6 +73,15 @@ describe Project, type: :model do
       project = create :project, github_url: 'http://github.com/elfs/presents'
 
       expect(Project.find_by_github_repo('elfs/presents')).to eq(project)
+      expect(Project.find_by_github_repo('https://github.com/Elfs/Presents/')).to eq(project)
+    end
+
+    it '#find_by_github_repo only matches the whole repository name' do
+      create :project, github_url: 'http://github.com/elfs/presents'
+
+      ['', '%', 'elfs', 'elfs/pres', 'lfs/presents', 'elfs/presents-extra', nil].each do |input|
+        expect(Project.find_by_github_repo(input)).to be_nil
+      end
     end
   end
 

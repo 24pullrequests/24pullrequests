@@ -55,7 +55,15 @@ class Project < ApplicationRecord
   end
 
   def self.find_by_github_repo(repository)
-    filter_by_repository(repository).first
+    name = repository_name(repository.to_s.strip)
+    return nil unless name.match?(/\A[\w-]+\/[\w.-]+\z/)
+
+    urls = %w[http https].flat_map { |scheme| ["#{scheme}://github.com/#{name}", "#{scheme}://github.com/#{name}/"] }
+    where('lower(github_url) IN (?)', urls.map(&:downcase)).first
+  end
+
+  def self.repository_name(url)
+    url.gsub(/^(((https|http|git)?:\/\/(www\.)?)|git@)github.com(:|\/)/i, '').gsub(/(\.git|\/)$/i, '')
   end
 
   def self.filter_by_repository(repository)
@@ -67,7 +75,7 @@ class Project < ApplicationRecord
   end
 
   def github_repository
-    github_url.gsub(/^(((https|http|git)?:\/\/(www\.)?)|git@)github.com(:|\/)/i, '').gsub(/(\.git|\/)$/i, '')
+    self.class.repository_name(github_url)
   end
 
   def get_github_data(data_type, nickname, token, months_ago, options = {})
