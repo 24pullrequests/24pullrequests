@@ -4,7 +4,7 @@ module CountHelper
   end
 
   def contribution_count_for_language
-    Contribution.valid_date_range(year_for_count).by_language(@language).count
+    Contribution.publicly_visible.valid_date_range(year_for_count).by_language(@language).count
   end
 
   def user_count_for_language
@@ -13,7 +13,7 @@ module CountHelper
 
   def contribution_count
     return contribution_count_for_language if @language
-    Contribution.valid_date_range(year_for_count).count
+    Contribution.publicly_visible.valid_date_range(year_for_count).count
   end
 
   def user_count

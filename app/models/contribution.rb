@@ -31,7 +31,14 @@ class Contribution < ApplicationRecord
     where.not("repo_name ~* ?", %{^(#{excluded_organisations.join("|")})/})
   }
 
-  EARLIEST_PULL_DATE = Date.new(Tfpullrequests::Application.current_year, 12, 1).midnight
+  PLEDGE_INTRODUCED = Time.utc(2026, 12, 1)
+
+  # Contributions made since the pledge was introduced are hidden until their author has pledged.
+  scope :publicly_visible, -> {
+    where('contributions.created_at < ? OR EXISTS (SELECT 1 FROM users pledged_users WHERE pledged_users.id = contributions.user_id AND pledged_users.pledged_at IS NOT NULL)', PLEDGE_INTRODUCED)
+  }
+
+  EARLIEST_PULL_DATE =Date.new(Tfpullrequests::Application.current_year, 12, 1).midnight
   LATEST_PULL_DATE   = Date.new(Tfpullrequests::Application.current_year, 12, 25).midnight
 
   class << self
@@ -89,6 +96,7 @@ class Contribution < ApplicationRecord
 
   def post_to_firehose
     return unless Rails.env.production?
+    return unless user&.pledged?
     return unless created_at.year == Tfpullrequests::Application.current_year
     Typhoeus::Request.new(ENV['FIREHOSE_URL'],
       method: :post,

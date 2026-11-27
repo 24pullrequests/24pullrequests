@@ -108,6 +108,30 @@ describe Contribution, type: :model do
     end
   end
 
+  describe '.publicly_visible' do
+    let(:pledged_user) { create :user }
+    let(:unpledged_user) { create :user, pledged_at: nil }
+
+    it 'includes contributions from users who have pledged' do
+      contribution = create :contribution, user: pledged_user
+
+      expect(Contribution.publicly_visible).to include(contribution)
+    end
+
+    it 'excludes contributions from users who have not pledged' do
+      contribution = create :contribution, user: unpledged_user
+
+      expect(Contribution.publicly_visible).not_to include(contribution)
+    end
+
+    it 'includes contributions made before the pledge was introduced' do
+      contribution = create :contribution, user: unpledged_user
+      contribution.update_column(:created_at, Contribution::PLEDGE_INTRODUCED - 1.year)
+
+      expect(Contribution.publicly_visible).to include(contribution)
+    end
+  end
+
   describe '#create_from_github' do
     let(:json) { mock_pull_request }
 

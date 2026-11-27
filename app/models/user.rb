@@ -54,6 +54,7 @@ class User < ApplicationRecord
   def self.mergers(year = Tfpullrequests::Application.current_year)
     joins(:merged_contributions).
       where('EXTRACT(year FROM contributions.created_at) = ?', year).
+      merge(Contribution.publicly_visible).
       group('users.id').
       select("users.*, count(contributions.id) AS merged_contributions_count")
   end
@@ -222,6 +223,8 @@ class User < ApplicationRecord
 
   def pledge!
     update_column(:pledged_at, Time.current)
+    update_contribution_count
+    organisations.each(&:update_contribution_count)
   end
 
   def needs_setup?
@@ -239,7 +242,7 @@ class User < ApplicationRecord
   end
 
   def update_contribution_count
-    update_column(:contributions_count, contributions.year(Tfpullrequests::Application.current_year).for_aggregation.count)
+    update_column(:contributions_count, contributions.year(Tfpullrequests::Application.current_year).for_aggregation.publicly_visible.count)
   end
 
   def ignored_organisations_string
@@ -255,6 +258,10 @@ class User < ApplicationRecord
 
   def contributions_ignoring_organisations
     contributions.excluding_organisations(ignored_organisations)
+  end
+
+  def public_contributions
+    contributions_ignoring_organisations.publicly_visible
   end
 
   def unsubscribe!

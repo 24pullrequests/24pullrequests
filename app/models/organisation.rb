@@ -1,6 +1,6 @@
 class Organisation < ApplicationRecord
   has_and_belongs_to_many :users
-  has_many :contributions, -> { order('created_at desc').for_aggregation }, through: :users
+  has_many :contributions, -> { order('created_at desc').for_aggregation.publicly_visible }, through: :users
 
   scope :with_any_contributions, -> { where('organisations.contribution_count > 0') }
   scope :random, -> { order(Arel.sql("RANDOM()")) }

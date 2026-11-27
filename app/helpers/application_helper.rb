@@ -22,15 +22,15 @@ module ApplicationHelper
   end
 
   def contributors_in(year)
-    Contribution.year(year).load.map(&:user_id).uniq.length
+    Contribution.publicly_visible.year(year).load.map(&:user_id).uniq.length
   end
 
   def contributions_in(year)
-    Contribution.year(year).count
+    Contribution.publicly_visible.year(year).count
   end
 
   def projects_in(year)
-    Contribution.year(year).select(:repo_name).map(&:repo_name).uniq.count
+    Contribution.publicly_visible.year(year).select(:repo_name).map(&:repo_name).uniq.count
   end
 
   def current_path(locale = nil)

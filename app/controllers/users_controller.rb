@@ -12,15 +12,15 @@ class UsersController < ApplicationController
   def show
     @user      = User.find_by_nickname!(params[:id])
     giftable_dates = Gift.giftable_dates(current_year)
-    user_gifts = @user.gifts.year(current_year)
+    @gifts = @user.gifts.year(current_year).where(contribution_id: Contribution.publicly_visible.select(:id))
     
-    if giftable_dates.any? && user_gifts.any?
-      @calendar = Calendar.new(giftable_dates, user_gifts)
+    if giftable_dates.any? && @gifts.any?
+      @calendar = Calendar.new(giftable_dates, @gifts)
     else
       @calendar = nil
     end
     
-    @merged_contributions = @user.merged_contributions.excluding_organisations(@user.ignored_organisations).year(current_year).latest(nil)
+    @merged_contributions = @user.merged_contributions.publicly_visible.excluding_organisations(@user.ignored_organisations).year(current_year).latest(nil)
     respond_with @user
   end
 

@@ -7,7 +7,7 @@ class LanguagesController < ApplicationController
   def show
     @projects = Project.active.by_language(@language).distinct.limit(20)
     @users = users_with_valid_date_range_counts.limit(200).sample(45)
-    @contributions = Contribution.by_language(@language).valid_date_range(current_year).latest(5)
+    @contributions = Contribution.publicly_visible.by_language(@language).valid_date_range(current_year).latest(5)
   end
 
   def projects
@@ -15,7 +15,7 @@ class LanguagesController < ApplicationController
   end
 
   def pull_requests
-    @contributions = Contribution.by_language(@language).valid_date_range(current_year).page(params[:page])
+    @contributions = Contribution.publicly_visible.by_language(@language).valid_date_range(current_year).page(params[:page])
 
     render 'contributions/index'
   end
@@ -48,6 +48,7 @@ class LanguagesController < ApplicationController
 
   def users_with_valid_date_range_counts
     contribution_counts_sql = Contribution
+      .publicly_visible
       .valid_date_range(current_year)
       .for_aggregation
       .select('contributions.user_id, COUNT(contributions.id) AS scoped_contributions_count')
