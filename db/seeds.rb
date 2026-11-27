@@ -25,9 +25,9 @@ if Rails.env.development? || Rails.env.test?
 
   org_gravatars = %w(02cd37c898f360f7bdff82b151f419f3 30f39a09e233e8369dddf6feb4be0308 fd542381031aa84dca86628ece84fc07 61024896f291303615bcd4f7a0dcfb74 406cc3bbacd9ebf8d0b8740c8d957a64 99c8b0fafa035a0a3a7f8c00e3e0fbfc)
 
-  users = 50
+  users = Rails.env.test? ? 5 : 50
   pull_requests = (3..20)
-  projects = 50
+  projects = Rails.env.test? ? 5 : 50
   december_first = Time.parse("1/12/#{Tfpullrequests::Application.current_year}")
 
   events = ['PullRequest-a-thon', '24 Pull Requests Hack event', 'Open Source Hackday', 'Christmas Bugmash']
