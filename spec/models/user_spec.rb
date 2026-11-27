@@ -105,6 +105,20 @@ describe User, type: :model do
     it { is_expected.to eq [user] }
   end
 
+  describe '.contributors' do
+    it 'is empty when no user has a usable GitHub token' do
+      allow(User).to receive(:load_user).and_return(nil)
+      expect(User.contributors).to eq []
+    end
+  end
+
+  describe '.organization_members' do
+    it 'is empty when no user has a usable GitHub token' do
+      allow(User).to receive(:load_user).and_return(nil)
+      expect(User.organization_members).to eq []
+    end
+  end
+
   describe '.confirmed?' do
     subject { user }
 
