@@ -18,7 +18,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.active.find(params[:id])
-    project_contributions = @project.contributions
+    project_contributions = @project.contributions.publicly_visible
     @contributions = project_contributions.includes(:user).order(created_at: :desc).page(params[:page])
     @contributors = User.where(id: project_contributions.select(:user_id)).order(:nickname)
   end

@@ -37,7 +37,7 @@ class ContributionsController < ApplicationController
   end
 
   def show
-    @contribution = Contribution.find(params[:id])
+    @contribution = Contribution.publicly_visible.find(params[:id])
   end
 
   def destroy
@@ -55,7 +55,7 @@ class ContributionsController < ApplicationController
   protected
 
   def pull_requests
-    Contribution.valid_date_range(current_year).order('created_at desc').includes(:user)
+    Contribution.publicly_visible.valid_date_range(current_year).order('created_at desc').includes(:user)
   end
 
   def contribution_params
@@ -63,6 +63,6 @@ class ContributionsController < ApplicationController
   end
 
   def object_name
-    Contribution.find_by_id(params[:id]).try(:repo_name)
+    Contribution.publicly_visible.find_by_id(params[:id]).try(:repo_name)
   end
 end
