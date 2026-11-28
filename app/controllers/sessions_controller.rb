@@ -18,6 +18,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete(:user_id)
+    session.delete(:pre_login_destination)
     redirect_to root_path
   end
 
@@ -28,6 +29,6 @@ class SessionsController < ApplicationController
   private
 
   def pre_login_destination
-    session[:pre_login_destination]
+    @pre_login_destination ||= session.delete(:pre_login_destination)
   end
 end
