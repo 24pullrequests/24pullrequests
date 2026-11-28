@@ -161,7 +161,7 @@ If you are using the Docker setup, you can run the tests:
 
 ### Contributing
 
-We are always looking for people to contribute! To find out how to help out, have a look at our [Contributing Guide](CONTRIBUTING.md).
+We are always looking for people to contribute! To find out how to help out, have a look at our [Contributing Guide](CONTRIBUTING.md). Please read the [contributor pledge](CONTRIBUTING.md#contributor-pledge) before opening an issue or pull request.
 
 ### Translations
 
